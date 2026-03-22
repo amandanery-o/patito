@@ -39,7 +39,7 @@ export default function App() {
   const [sessionXP, setSessionXP] = useState(0)
   const [finalStars, setFinalStars] = useState(0)
   const [finalXP, setFinalXP] = useState(0)
-  const [examForm, setExamForm] = useState({ subject: 'matematica', type: 'prova', date: '', time: '', content: '', notes: '' })
+  const [examForm, setExamForm] = useState({ subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '' })
   const [editingExamId, setEditingExamId] = useState(null)
 
   const { user, exams, updateTopicProgress, getTopicProgress, getSubjectProgress, addExam, updateExam, removeExam, getUpcomingExams } = useProgress()
@@ -92,7 +92,7 @@ export default function App() {
     } else {
       addExam(examForm)
     }
-    setExamForm({ subject: 'matematica', type: 'prova', date: '', time: '', content: '', notes: '' })
+    setExamForm({ subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '' })
   }
 
   function startEditExam(exam) {
@@ -297,17 +297,32 @@ export default function App() {
                   ))}
                 </select>
               </div>
-              <div>
-                <label className="text-sm text-gray-500 block mb-1">Tipo</label>
-                <select
-                  value={examForm.type}
-                  onChange={e => setExamForm(f => ({ ...f, type: e.target.value }))}
-                  className="w-full border border-gray-200 rounded-xl p-3 text-base bg-white"
-                >
-                  {EXAM_TYPES.map(t => (
-                    <option key={t.id} value={t.id}>{t.label}</option>
-                  ))}
-                </select>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="text-sm text-gray-500 block mb-1">Tipo</label>
+                  <select
+                    value={examForm.type}
+                    onChange={e => setExamForm(f => ({ ...f, type: e.target.value }))}
+                    className="w-full border border-gray-200 rounded-xl p-3 text-base bg-white"
+                  >
+                    {EXAM_TYPES.map(t => (
+                      <option key={t.id} value={t.id}>{t.label}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label className="text-sm text-gray-500 block mb-1">Peso</label>
+                  <input
+                    type="number"
+                    step="0.5"
+                    min="0"
+                    max="10"
+                    placeholder="Ex: 2,0"
+                    value={examForm.weight}
+                    onChange={e => setExamForm(f => ({ ...f, weight: e.target.value }))}
+                    className="w-full border border-gray-200 rounded-xl p-3 text-base"
+                  />
+                </div>
               </div>
               <div className="grid grid-cols-2 gap-3">
                 <div>
@@ -362,7 +377,7 @@ export default function App() {
                     type="button"
                     onClick={() => {
                       setEditingExamId(null)
-                      setExamForm({ subject: 'matematica', type: 'prova', date: '', time: '', content: '', notes: '' })
+                      setExamForm({ subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '' })
                     }}
                     className="px-4 py-3 bg-gray-100 text-gray-600 font-bold rounded-xl active:scale-95 transition-all hover:bg-gray-200"
                   >
@@ -394,7 +409,7 @@ export default function App() {
                           {subj?.icon || '📚'}
                         </div>
                         <div className="flex-1">
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-2 flex-wrap">
                             <p className="font-semibold text-gray-800">{subj?.name || exam.subject}</p>
                             {exam.type && (() => {
                               const et = EXAM_TYPES.find(t => t.id === exam.type)
@@ -402,6 +417,11 @@ export default function App() {
                                 <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${et.badge}`}>{et.label}</span>
                               ) : null
                             })()}
+                            {exam.weight && (
+                              <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">
+                                Peso {exam.weight}
+                              </span>
+                            )}
                           </div>
                           <p className="text-xs text-gray-500">
                             {formatDate(exam.date)}{exam.time ? ` às ${exam.time}` : ''}

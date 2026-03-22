@@ -5,9 +5,10 @@ const STORAGE_KEY = 'patito_data'
 
 function applySeed(data) {
   if ((data.seedVersion || 0) >= SEED_VERSION) return data
-  const existingIds = new Set((data.exams || []).map(e => e.id))
-  const newExams = SEMESTER_EXAMS.filter(e => !existingIds.has(e.id))
-  return { ...data, exams: [...(data.exams || []), ...newExams], seedVersion: SEED_VERSION }
+  const seedIds = new Set(SEMESTER_EXAMS.map(e => e.id))
+  // Mantém provas adicionadas pelo usuário (ids não são seed-*) e substitui as do seed pela versão atualizada
+  const userExams = (data.exams || []).filter(e => !seedIds.has(e.id))
+  return { ...data, exams: [...SEMESTER_EXAMS, ...userExams], seedVersion: SEED_VERSION }
 }
 
 function loadData() {
