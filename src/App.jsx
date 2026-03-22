@@ -4,6 +4,7 @@ import SubjectCard from './components/SubjectCard'
 import ExerciseCard from './components/ExerciseCard'
 import ResultScreen from './components/ResultScreen'
 import CalendarMonth from './components/CalendarMonth'
+import CalendarIcon from './components/CalendarIcon'
 import { useProgress } from './hooks/useProgress'
 import { shuffle } from './utils/shuffle'
 import { calcStars, calcXP } from './utils/scoring'
@@ -146,7 +147,7 @@ export default function App() {
                 const subj = SUBJECTS.find(s => s.id === exam.subject)
                 return (
                   <div key={exam.id} className="bg-blue-50 border border-blue-200 rounded-2xl p-3 flex items-center gap-3">
-                    <span className="text-2xl">📅</span>
+                    <CalendarIcon size="sm" />
                     <p className="text-sm font-medium text-blue-800 flex-1">
                       {EXAM_TYPES.find(t => t.id === exam.type)?.label || 'Prova'} de {subj?.name || exam.subject} em {days === 0 ? 'hoje!' : `${days} dia${days > 1 ? 's' : ''}!`} Vamos estudar? 🐥
                     </p>
@@ -281,7 +282,7 @@ export default function App() {
       <div className="min-h-screen bg-gray-50">
         <div className="bg-white shadow-sm px-4 py-3 flex items-center gap-3 sticky top-0 z-10">
           <button onClick={() => setView(VIEWS.HOME)} className="text-2xl">‹</button>
-          <span className="text-xl">📅</span>
+          <CalendarIcon size="sm" />
           <h1 className="font-bold text-gray-800 text-lg flex-1">Calendário de Provas</h1>
           {/* Toggle Lista / Mês */}
           <div className="flex bg-gray-100 rounded-xl p-0.5 text-sm font-semibold">
@@ -468,7 +469,7 @@ export default function App() {
               />
             </div>
             <button type="submit" className="w-full btn-duo-blue">
-              {editingExamId ? 'Salvar alterações ✏️' : 'Adicionar 📅'}
+              {editingExamId ? 'Salvar alterações ✏️' : 'Adicionar'}
             </button>
           </form>
         </main>
