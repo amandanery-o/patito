@@ -3,6 +3,7 @@ import Header from './components/Header'
 import SubjectCard from './components/SubjectCard'
 import ExerciseCard from './components/ExerciseCard'
 import ResultScreen from './components/ResultScreen'
+import CalendarMonth from './components/CalendarMonth'
 import { useProgress } from './hooks/useProgress'
 import { shuffle } from './utils/shuffle'
 import { calcStars, calcXP } from './utils/scoring'
@@ -41,6 +42,7 @@ export default function App() {
   const [finalXP, setFinalXP] = useState(0)
   const [examForm, setExamForm] = useState({ subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '' })
   const [editingExamId, setEditingExamId] = useState(null)
+  const [calendarView, setCalendarView] = useState('month')
 
   const { user, exams, updateTopicProgress, getTopicProgress, getSubjectProgress, addExam, updateExam, removeExam, getUpcomingExams } = useProgress()
 
@@ -278,10 +280,37 @@ export default function App() {
         <div className="bg-white shadow-sm px-4 py-3 flex items-center gap-3 sticky top-0 z-10">
           <button onClick={() => setView(VIEWS.HOME)} className="text-2xl">‹</button>
           <span className="text-xl">📅</span>
-          <h1 className="font-bold text-gray-800 text-lg">Calendário de Provas</h1>
+          <h1 className="font-bold text-gray-800 text-lg flex-1">Calendário de Provas</h1>
+          {/* Toggle Lista / Mês */}
+          <div className="flex bg-gray-100 rounded-xl p-0.5 text-sm font-semibold">
+            <button
+              onClick={() => setCalendarView('month')}
+              className={`px-3 py-1.5 rounded-lg transition-all ${calendarView === 'month' ? 'bg-white shadow text-blue-600' : 'text-gray-500'}`}
+            >
+              Mês
+            </button>
+            <button
+              onClick={() => setCalendarView('list')}
+              className={`px-3 py-1.5 rounded-lg transition-all ${calendarView === 'list' ? 'bg-white shadow text-blue-600' : 'text-gray-500'}`}
+            >
+              Lista
+            </button>
+          </div>
         </div>
         <main className="max-w-lg mx-auto px-4 py-5 space-y-5">
-          {/* Formulário de cadastro */}
+          {/* Visão mensal */}
+          {calendarView === 'month' && (
+            <CalendarMonth
+              exams={exams}
+              subjects={SUBJECTS}
+              examTypes={EXAM_TYPES}
+              onEdit={startEditExam}
+              onRemove={removeExam}
+            />
+          )}
+
+          {/* Formulário e lista — visão de lista */}
+          {calendarView === 'list' && <div className="space-y-5">
           <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
             <h2 className="font-bold text-gray-700 mb-3">{editingExamId ? 'Editar Atividade' : 'Adicionar Atividade'}</h2>
             <form onSubmit={handleAddExam} className="space-y-3">
@@ -452,6 +481,7 @@ export default function App() {
               </div>
             )}
           </div>
+          </div>}
         </main>
       </div>
     )
