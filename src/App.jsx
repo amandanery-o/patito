@@ -145,13 +145,24 @@ export default function App() {
               {upcomingExams.slice(0, 2).map(exam => {
                 const days = daysUntil(exam.date)
                 const subj = SUBJECTS.find(s => s.id === exam.subject)
+                const canStudy = subj && !subj.calendarOnly
                 return (
-                  <div key={exam.id} className="bg-blue-50 border border-blue-200 rounded-2xl p-3 flex items-center gap-3">
+                  <button
+                    key={exam.id}
+                    onClick={() => {
+                      if (!canStudy) return
+                      setSelectedSubject(subj)
+                      setView(VIEWS.SUBJECT)
+                    }}
+                    className={`w-full bg-blue-50 border border-blue-200 rounded-2xl p-3 flex items-center gap-3 text-left transition-all
+                      ${canStudy ? 'active:scale-95 hover:bg-blue-100 hover:border-blue-300' : 'cursor-default'}`}
+                  >
                     <CalendarIcon size="sm" />
-                    <p className="text-sm font-medium text-blue-800 flex-1">
+                    <p className="text-sm font-bold text-blue-800 flex-1">
                       {EXAM_TYPES.find(t => t.id === exam.type)?.label || 'Prova'} de {subj?.name || exam.subject} em {days === 0 ? 'hoje!' : `${days} dia${days > 1 ? 's' : ''}!`} Vamos estudar? 🐥
                     </p>
-                  </div>
+                    {canStudy && <span className="text-blue-400 text-lg">›</span>}
+                  </button>
                 )
               })}
             </div>
