@@ -25,16 +25,10 @@ export default function ResultScreen({ stars, xp, correct, total, onContinue, on
       </div>
 
       <div className="flex flex-col gap-3 w-full max-w-xs">
-        <button
-          onClick={onContinue}
-          className="w-full py-4 bg-green-500 text-white font-bold text-lg rounded-2xl active:scale-95 transition-all shadow-sm hover:bg-green-600"
-        >
+        <button onClick={onContinue} className="w-full text-lg btn-duo-green">
           Continuar 🚀
         </button>
-        <button
-          onClick={onHome}
-          className="w-full py-3 bg-white text-gray-600 font-semibold text-base rounded-2xl border border-gray-200 active:scale-95 transition-all hover:bg-gray-50"
-        >
+        <button onClick={onHome} className="w-full btn-duo-gray">
           Início 🏠
         </button>
       </div>

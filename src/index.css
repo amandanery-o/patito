@@ -7,7 +7,32 @@
 }
 
 body {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
   background-color: #f9fafb;
   min-height: 100dvh;
+}
+
+/* Botão estilo Duolingo — efeito 3D */
+@layer components {
+  .btn-duo {
+    @apply relative font-extrabold rounded-2xl px-6 py-3 transition-all active:translate-y-1 select-none;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+  }
+  .btn-duo:active {
+    border-bottom-width: 2px;
+  }
+
+  .btn-duo-blue {
+    @apply btn-duo bg-blue-500 text-white;
+    border-bottom-color: #1d6fb8;
+  }
+  .btn-duo-green {
+    @apply btn-duo bg-green-500 text-white;
+    border-bottom-color: #1a8a3c;
+  }
+  .btn-duo-gray {
+    @apply btn-duo bg-gray-100 text-gray-600;
+    border-bottom-color: #b0b8c4;
+  }
 }

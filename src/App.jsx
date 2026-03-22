@@ -467,10 +467,7 @@ export default function App() {
                 className="w-full border border-gray-200 rounded-xl p-3 text-base"
               />
             </div>
-            <button
-              type="submit"
-              className="w-full py-3 bg-blue-500 text-white font-bold rounded-xl active:scale-95 transition-all hover:bg-blue-600"
-            >
+            <button type="submit" className="w-full btn-duo-blue">
               {editingExamId ? 'Salvar alterações ✏️' : 'Adicionar 📅'}
             </button>
           </form>
