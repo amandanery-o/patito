@@ -39,7 +39,7 @@ export default function App() {
   const [sessionXP, setSessionXP] = useState(0)
   const [finalStars, setFinalStars] = useState(0)
   const [finalXP, setFinalXP] = useState(0)
-  const [examForm, setExamForm] = useState({ subject: 'matematica', type: 'prova', date: '', time: '', notes: '' })
+  const [examForm, setExamForm] = useState({ subject: 'matematica', type: 'prova', date: '', time: '', content: '', notes: '' })
 
   const { user, exams, updateTopicProgress, getTopicProgress, getSubjectProgress, addExam, removeExam, getUpcomingExams } = useProgress()
 
@@ -86,7 +86,7 @@ export default function App() {
     e.preventDefault()
     if (!examForm.date) return
     addExam(examForm)
-    setExamForm({ subject: 'matematica', type: 'prova', date: '', time: '', notes: '' })
+    setExamForm({ subject: 'matematica', type: 'prova', date: '', time: '', content: '', notes: '' })
   }
 
   function formatDate(dateStr) {
@@ -312,10 +312,20 @@ export default function App() {
                 </div>
               </div>
               <div>
+                <label className="text-sm text-gray-500 block mb-1">O que vai cair (opcional)</label>
+                <textarea
+                  placeholder="Ex: Frações, medidas de comprimento, capítulos 4 e 5"
+                  value={examForm.content}
+                  onChange={e => setExamForm(f => ({ ...f, content: e.target.value }))}
+                  rows={3}
+                  className="w-full border border-gray-200 rounded-xl p-3 text-base resize-none"
+                />
+              </div>
+              <div>
                 <label className="text-sm text-gray-500 block mb-1">Observações (opcional)</label>
                 <input
                   type="text"
-                  placeholder="Ex: Capítulos 1-3"
+                  placeholder="Ex: Trazer régua e compasso"
                   value={examForm.notes}
                   onChange={e => setExamForm(f => ({ ...f, notes: e.target.value }))}
                   className="w-full border border-gray-200 rounded-xl p-3 text-base"
@@ -364,7 +374,8 @@ export default function App() {
                             {formatDate(exam.date)}{exam.time ? ` às ${exam.time}` : ''}
                             {days === 0 ? ' — hoje!' : days > 0 ? ` — em ${days} dia${days > 1 ? 's' : ''}` : ' — passou'}
                           </p>
-                          {exam.notes && <p className="text-xs text-gray-400 mt-0.5">{exam.notes}</p>}
+                          {exam.content && <p className="text-xs text-gray-500 mt-0.5">{exam.content}</p>}
+                          {exam.notes && <p className="text-xs text-gray-400 mt-0.5">📌 {exam.notes}</p>}
                         </div>
                         <button
                           onClick={() => removeExam(exam.id)}
