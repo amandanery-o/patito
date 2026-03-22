@@ -27,7 +27,7 @@ const EXAM_TYPES = [
   { id: 'recuperacao', label: 'Recuperação',   badge: 'bg-orange-100 text-orange-700' },
 ]
 
-const VIEWS = { HOME: 'home', SUBJECT: 'subject', SESSION: 'session', RESULT: 'result', CALENDAR: 'calendar' }
+const VIEWS = { HOME: 'home', SUBJECT: 'subject', SESSION: 'session', RESULT: 'result', CALENDAR: 'calendar', ADD_EXAM: 'add_exam' }
 
 export default function App() {
   const [view, setView] = useState(VIEWS.HOME)
@@ -43,7 +43,6 @@ export default function App() {
   const [examForm, setExamForm] = useState({ subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '' })
   const [editingExamId, setEditingExamId] = useState(null)
   const [calendarView, setCalendarView] = useState('month')
-  const [showExamForm, setShowExamForm] = useState(false)
 
   const { user, exams, updateTopicProgress, getTopicProgress, getSubjectProgress, addExam, updateExam, removeExam, getUpcomingExams } = useProgress()
 
@@ -96,7 +95,7 @@ export default function App() {
       addExam(examForm)
     }
     setExamForm({ subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '' })
-    setShowExamForm(false)
+    setView(VIEWS.CALENDAR)
   }
 
   function startEditExam(exam) {
@@ -110,8 +109,7 @@ export default function App() {
       notes: exam.notes || '',
     })
     setEditingExamId(exam.id)
-    setShowExamForm(true)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    setView(VIEWS.ADD_EXAM)
   }
 
   function formatDate(dateStr) {
@@ -305,7 +303,7 @@ export default function App() {
             onClick={() => {
               setEditingExamId(null)
               setExamForm({ subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '' })
-              setShowExamForm(true)
+              setView(VIEWS.ADD_EXAM)
             }}
             className="w-9 h-9 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl flex items-center justify-center text-xl active:scale-95 transition-all"
             aria-label="Adicionar atividade"
@@ -325,111 +323,6 @@ export default function App() {
             />
           )}
 
-          {/* Formulário — abre ao clicar em + ou editar */}
-          {showExamForm && <div className="bg-white rounded-2xl p-4 shadow-sm border border-blue-100">
-            <h2 className="font-bold text-gray-700 mb-3">{editingExamId ? 'Editar Atividade' : 'Adicionar Atividade'}</h2>
-            <form onSubmit={handleAddExam} className="space-y-3">
-              <div>
-                <label className="text-sm text-gray-500 block mb-1">Matéria</label>
-                <select
-                  value={examForm.subject}
-                  onChange={e => setExamForm(f => ({ ...f, subject: e.target.value }))}
-                  className="w-full border border-gray-200 rounded-xl p-3 text-base bg-white"
-                >
-                  {SUBJECTS.map(s => (
-                    <option key={s.id} value={s.id}>{s.icon} {s.name}</option>
-                  ))}
-                </select>
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="text-sm text-gray-500 block mb-1">Tipo</label>
-                  <select
-                    value={examForm.type}
-                    onChange={e => setExamForm(f => ({ ...f, type: e.target.value }))}
-                    className="w-full border border-gray-200 rounded-xl p-3 text-base bg-white"
-                  >
-                    {EXAM_TYPES.map(t => (
-                      <option key={t.id} value={t.id}>{t.label}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label className="text-sm text-gray-500 block mb-1">Peso</label>
-                  <input
-                    type="number"
-                    step="0.5"
-                    min="0"
-                    max="10"
-                    placeholder="Ex: 2,0"
-                    value={examForm.weight}
-                    onChange={e => setExamForm(f => ({ ...f, weight: e.target.value }))}
-                    className="w-full border border-gray-200 rounded-xl p-3 text-base"
-                  />
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-3">
-                <div>
-                  <label className="text-sm text-gray-500 block mb-1">Data</label>
-                  <input
-                    type="date"
-                    required
-                    value={examForm.date}
-                    onChange={e => setExamForm(f => ({ ...f, date: e.target.value }))}
-                    className="w-full border border-gray-200 rounded-xl p-3 text-base"
-                  />
-                </div>
-                <div>
-                  <label className="text-sm text-gray-500 block mb-1">Hora (opcional)</label>
-                  <input
-                    type="time"
-                    value={examForm.time}
-                    onChange={e => setExamForm(f => ({ ...f, time: e.target.value }))}
-                    className="w-full border border-gray-200 rounded-xl p-3 text-base"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="text-sm text-gray-500 block mb-1">O que vai cair (opcional)</label>
-                <textarea
-                  placeholder="Ex: Frações, medidas de comprimento, capítulos 4 e 5"
-                  value={examForm.content}
-                  onChange={e => setExamForm(f => ({ ...f, content: e.target.value }))}
-                  rows={3}
-                  className="w-full border border-gray-200 rounded-xl p-3 text-base resize-none"
-                />
-              </div>
-              <div>
-                <label className="text-sm text-gray-500 block mb-1">Observações (opcional)</label>
-                <input
-                  type="text"
-                  placeholder="Ex: Trazer régua e compasso"
-                  value={examForm.notes}
-                  onChange={e => setExamForm(f => ({ ...f, notes: e.target.value }))}
-                  className="w-full border border-gray-200 rounded-xl p-3 text-base"
-                />
-              </div>
-              <div className="flex gap-2">
-                <button
-                  type="submit"
-                  className="flex-1 py-3 bg-blue-500 text-white font-bold rounded-xl active:scale-95 transition-all hover:bg-blue-600"
-                >
-                  {editingExamId ? 'Salvar alterações ✏️' : 'Adicionar 📅'}
-                </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setEditingExamId(null)
-                      setExamForm({ subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '' })
-                      setShowExamForm(false)
-                    }}
-                    className="px-4 py-3 bg-gray-100 text-gray-600 font-bold rounded-xl active:scale-95 transition-all hover:bg-gray-200"
-                  >
-                    Cancelar
-                  </button>
-              </div>
-            </form>
-          </div>}
 
           {/* Lista de provas — visão de lista */}
           {calendarView === 'list' && <div>
@@ -477,6 +370,110 @@ export default function App() {
               </div>
             )}
           </div>}
+        </main>
+      </div>
+    )
+  }
+
+  // ADD_EXAM — tela de adicionar / editar atividade
+  if (view === VIEWS.ADD_EXAM) {
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <div className="bg-white shadow-sm px-4 py-3 flex items-center gap-3 sticky top-0 z-10">
+          <button onClick={() => { setEditingExamId(null); setView(VIEWS.CALENDAR) }} className="text-2xl">‹</button>
+          <h1 className="font-bold text-gray-800 text-lg">
+            {editingExamId ? 'Editar Atividade' : 'Nova Atividade'}
+          </h1>
+        </div>
+        <main className="max-w-lg mx-auto px-4 py-5">
+          <form onSubmit={handleAddExam} className="space-y-4">
+            <div>
+              <label className="text-sm text-gray-500 block mb-1">Matéria</label>
+              <select
+                value={examForm.subject}
+                onChange={e => setExamForm(f => ({ ...f, subject: e.target.value }))}
+                className="w-full border border-gray-200 rounded-xl p-3 text-base bg-white"
+              >
+                {SUBJECTS.map(s => (
+                  <option key={s.id} value={s.id}>{s.icon} {s.name}</option>
+                ))}
+              </select>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="text-sm text-gray-500 block mb-1">Tipo</label>
+                <select
+                  value={examForm.type}
+                  onChange={e => setExamForm(f => ({ ...f, type: e.target.value }))}
+                  className="w-full border border-gray-200 rounded-xl p-3 text-base bg-white"
+                >
+                  {EXAM_TYPES.map(t => (
+                    <option key={t.id} value={t.id}>{t.label}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="text-sm text-gray-500 block mb-1">Peso</label>
+                <input
+                  type="number"
+                  step="0.5"
+                  min="0"
+                  max="10"
+                  placeholder="Ex: 2"
+                  value={examForm.weight}
+                  onChange={e => setExamForm(f => ({ ...f, weight: e.target.value }))}
+                  className="w-full border border-gray-200 rounded-xl p-3 text-base"
+                />
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="text-sm text-gray-500 block mb-1">Data</label>
+                <input
+                  type="date"
+                  required
+                  value={examForm.date}
+                  onChange={e => setExamForm(f => ({ ...f, date: e.target.value }))}
+                  className="w-full border border-gray-200 rounded-xl p-3 text-base"
+                />
+              </div>
+              <div>
+                <label className="text-sm text-gray-500 block mb-1">Hora (opcional)</label>
+                <input
+                  type="time"
+                  value={examForm.time}
+                  onChange={e => setExamForm(f => ({ ...f, time: e.target.value }))}
+                  className="w-full border border-gray-200 rounded-xl p-3 text-base"
+                />
+              </div>
+            </div>
+            <div>
+              <label className="text-sm text-gray-500 block mb-1">O que vai cair (opcional)</label>
+              <textarea
+                placeholder="Ex: Frações, medidas de comprimento, capítulos 4 e 5"
+                value={examForm.content}
+                onChange={e => setExamForm(f => ({ ...f, content: e.target.value }))}
+                rows={3}
+                className="w-full border border-gray-200 rounded-xl p-3 text-base resize-none"
+              />
+            </div>
+            <div>
+              <label className="text-sm text-gray-500 block mb-1">Observações (opcional)</label>
+              <input
+                type="text"
+                placeholder="Ex: Trazer régua e compasso"
+                value={examForm.notes}
+                onChange={e => setExamForm(f => ({ ...f, notes: e.target.value }))}
+                className="w-full border border-gray-200 rounded-xl p-3 text-base"
+              />
+            </div>
+            <button
+              type="submit"
+              className="w-full py-3 bg-blue-500 text-white font-bold rounded-xl active:scale-95 transition-all hover:bg-blue-600"
+            >
+              {editingExamId ? 'Salvar alterações ✏️' : 'Adicionar 📅'}
+            </button>
+          </form>
         </main>
       </div>
     )
