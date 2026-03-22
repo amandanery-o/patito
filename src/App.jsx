@@ -43,6 +43,7 @@ export default function App() {
   const [examForm, setExamForm] = useState({ subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '' })
   const [editingExamId, setEditingExamId] = useState(null)
   const [calendarView, setCalendarView] = useState('month')
+  const [showExamForm, setShowExamForm] = useState(false)
 
   const { user, exams, updateTopicProgress, getTopicProgress, getSubjectProgress, addExam, updateExam, removeExam, getUpcomingExams } = useProgress()
 
@@ -95,18 +96,21 @@ export default function App() {
       addExam(examForm)
     }
     setExamForm({ subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '' })
+    setShowExamForm(false)
   }
 
   function startEditExam(exam) {
     setExamForm({
       subject: exam.subject,
       type: exam.type || 'prova',
+      weight: exam.weight || '',
       date: exam.date,
       time: exam.time || '',
       content: exam.content || '',
       notes: exam.notes || '',
     })
     setEditingExamId(exam.id)
+    setShowExamForm(true)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
@@ -296,6 +300,18 @@ export default function App() {
               Lista
             </button>
           </div>
+          {/* Botão + */}
+          <button
+            onClick={() => {
+              setEditingExamId(null)
+              setExamForm({ subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '' })
+              setShowExamForm(true)
+            }}
+            className="w-9 h-9 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl flex items-center justify-center text-xl active:scale-95 transition-all"
+            aria-label="Adicionar atividade"
+          >
+            +
+          </button>
         </div>
         <main className="max-w-lg mx-auto px-4 py-5 space-y-5">
           {/* Visão mensal */}
@@ -309,9 +325,8 @@ export default function App() {
             />
           )}
 
-          {/* Formulário e lista — visão de lista */}
-          {calendarView === 'list' && <div className="space-y-5">
-          <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
+          {/* Formulário — abre ao clicar em + ou editar */}
+          {showExamForm && <div className="bg-white rounded-2xl p-4 shadow-sm border border-blue-100">
             <h2 className="font-bold text-gray-700 mb-3">{editingExamId ? 'Editar Atividade' : 'Adicionar Atividade'}</h2>
             <form onSubmit={handleAddExam} className="space-y-3">
               <div>
@@ -401,24 +416,23 @@ export default function App() {
                 >
                   {editingExamId ? 'Salvar alterações ✏️' : 'Adicionar 📅'}
                 </button>
-                {editingExamId && (
                   <button
                     type="button"
                     onClick={() => {
                       setEditingExamId(null)
                       setExamForm({ subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '' })
+                      setShowExamForm(false)
                     }}
                     className="px-4 py-3 bg-gray-100 text-gray-600 font-bold rounded-xl active:scale-95 transition-all hover:bg-gray-200"
                   >
                     Cancelar
                   </button>
-                )}
               </div>
             </form>
-          </div>
+          </div>}
 
-          {/* Lista de provas */}
-          <div>
+          {/* Lista de provas — visão de lista */}
+          {calendarView === 'list' && <div>
             <h2 className="font-bold text-gray-700 mb-3">Suas Provas</h2>
             {exams.length === 0 ? (
               <div className="text-center py-10 space-y-2">
@@ -442,15 +456,9 @@ export default function App() {
                             <p className="font-semibold text-gray-800">{subj?.name || exam.subject}</p>
                             {exam.type && (() => {
                               const et = EXAM_TYPES.find(t => t.id === exam.type)
-                              return et ? (
-                                <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${et.badge}`}>{et.label}</span>
-                              ) : null
+                              return et ? <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${et.badge}`}>{et.label}</span> : null
                             })()}
-                            {exam.weight && (
-                              <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">
-                                Peso {exam.weight}
-                              </span>
-                            )}
+                            {exam.weight && <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">Peso {exam.weight}</span>}
                           </div>
                           <p className="text-xs text-gray-500">
                             {formatDate(exam.date)}{exam.time ? ` às ${exam.time}` : ''}
@@ -460,27 +468,14 @@ export default function App() {
                           {exam.notes && <p className="text-xs text-gray-400 mt-0.5">📌 {exam.notes}</p>}
                         </div>
                         <div className="flex gap-2">
-                          <button
-                            onClick={() => startEditExam(exam)}
-                            className="text-gray-300 hover:text-blue-400 text-lg transition-colors"
-                            aria-label="Editar"
-                          >
-                            ✏️
-                          </button>
-                          <button
-                            onClick={() => removeExam(exam.id)}
-                            className="text-gray-300 hover:text-red-400 text-xl transition-colors"
-                            aria-label="Remover"
-                          >
-                            ✕
-                          </button>
+                          <button onClick={() => startEditExam(exam)} className="text-gray-300 hover:text-blue-400 text-lg transition-colors" aria-label="Editar">✏️</button>
+                          <button onClick={() => removeExam(exam.id)} className="text-gray-300 hover:text-red-400 text-xl transition-colors" aria-label="Remover">✕</button>
                         </div>
                       </div>
                     )
                   })}
               </div>
             )}
-          </div>
           </div>}
         </main>
       </div>
