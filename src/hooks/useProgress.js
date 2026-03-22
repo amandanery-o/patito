@@ -1,13 +1,25 @@
 import { useState } from 'react'
+import { SEMESTER_EXAMS, SEED_VERSION } from '../data/semesterExams'
 
 const STORAGE_KEY = 'patito_data'
+
+function applySeed(data) {
+  if ((data.seedVersion || 0) >= SEED_VERSION) return data
+  const existingIds = new Set((data.exams || []).map(e => e.id))
+  const newExams = SEMESTER_EXAMS.filter(e => !existingIds.has(e.id))
+  return { ...data, exams: [...(data.exams || []), ...newExams], seedVersion: SEED_VERSION }
+}
 
 function loadData() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    if (raw) return JSON.parse(raw)
+    if (raw) {
+      const data = applySeed(JSON.parse(raw))
+      saveData(data)
+      return data
+    }
   } catch {}
-  return {
+  const initial = {
     user: {
       name: 'Estudante',
       avatar: '🦁',
@@ -16,8 +28,11 @@ function loadData() {
       trophies: [],
     },
     progress: {},
-    exams: [],
+    exams: SEMESTER_EXAMS,
+    seedVersion: SEED_VERSION,
   }
+  saveData(initial)
+  return initial
 }
 
 function saveData(data) {
