@@ -35,4 +35,8 @@ body {
     @apply btn-duo bg-gray-100 text-gray-600;
     border-bottom-color: #b0b8c4;
   }
+  .btn-duo-red {
+    @apply btn-duo bg-red-500 text-white;
+    border-bottom-color: #b91c1c;
+  }
 }

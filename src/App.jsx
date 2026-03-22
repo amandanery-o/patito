@@ -5,55 +5,123 @@ import ExerciseCard from './components/ExerciseCard'
 import ResultScreen from './components/ResultScreen'
 import CalendarMonth from './components/CalendarMonth'
 import CalendarIcon from './components/CalendarIcon'
+import Mascot from './components/Mascot'
+import ConfirmModal from './components/ConfirmModal'
 import { useProgress } from './hooks/useProgress'
 import { shuffle } from './utils/shuffle'
 import { calcStars, calcXP } from './utils/scoring'
+import { daysUntil, formatDate } from './utils/dates'
 import { matematica } from './data/matematica'
 
+// ---------------------------------------------------------------------------
+// Dados estáticos
+// ---------------------------------------------------------------------------
+
 const SUBJECTS = [
-  { id: 'portugues',        name: 'Português',       icon: '📝', color: 'bg-blue-500',   topics: [],                calendarOnly: false },
-  { id: 'matematica',       name: 'Matemática',      icon: '🔢', color: 'bg-green-500',  topics: matematica.topics, calendarOnly: false },
-  { id: 'geografia',        name: 'Geografia',       icon: '🌍', color: 'bg-orange-500', topics: [],                calendarOnly: false },
-  { id: 'ingles',           name: 'Inglês',          icon: '🇬🇧', color: 'bg-purple-500', topics: [],                calendarOnly: false },
-  { id: 'ciencias',         name: 'Ciências',        icon: '🔬', color: 'bg-cyan-500',   topics: [],                calendarOnly: false },
-  { id: 'historia',         name: 'História',        icon: '📜', color: 'bg-amber-700',  topics: [],                calendarOnly: false },
-  { id: 'ensino-religioso', name: 'Ens. Religioso',  icon: '✨', color: 'bg-yellow-500', topics: [],                calendarOnly: false },
-  { id: 'educacao-fisica',  name: 'Educ. Física',    icon: '⚽', color: 'bg-red-500',    topics: [],                calendarOnly: true  },
-  { id: 'arte',             name: 'Arte',            icon: '🎨', color: 'bg-pink-500',   topics: [],                calendarOnly: true  },
+  { id: 'portugues',        name: 'Português',      icon: '📝', color: 'bg-blue-500',   topics: [],                calendarOnly: false },
+  { id: 'matematica',       name: 'Matemática',     icon: '🔢', color: 'bg-green-500',  topics: matematica.topics, calendarOnly: false },
+  { id: 'geografia',        name: 'Geografia',      icon: '🌍', color: 'bg-orange-500', topics: [],                calendarOnly: false },
+  { id: 'ingles',           name: 'Inglês',         icon: '🇬🇧', color: 'bg-purple-500', topics: [],                calendarOnly: false },
+  { id: 'ciencias',         name: 'Ciências',       icon: '🔬', color: 'bg-cyan-500',   topics: [],                calendarOnly: false },
+  { id: 'historia',         name: 'História',       icon: '📜', color: 'bg-amber-700',  topics: [],                calendarOnly: false },
+  { id: 'ensino-religioso', name: 'Ens. Religioso', icon: '✨', color: 'bg-yellow-500', topics: [],                calendarOnly: false },
+  { id: 'educacao-fisica',  name: 'Educ. Física',   icon: '⚽', color: 'bg-red-500',    topics: [],                calendarOnly: true  },
+  { id: 'arte',             name: 'Arte',           icon: '🎨', color: 'bg-pink-500',   topics: [],                calendarOnly: true  },
 ]
 
 const EXAM_TYPES = [
-  { id: 'trabalho',    label: 'Trabalho (T)',  badge: 'bg-blue-100 text-blue-700'   },
-  { id: 'prova',       label: 'Prova (P)',     badge: 'bg-green-100 text-green-700' },
-  { id: 'recuperacao', label: 'Recuperação',   badge: 'bg-orange-100 text-orange-700' },
+  { id: 'trabalho',    label: 'Trabalho (T)', badge: 'bg-blue-100 text-blue-700'     },
+  { id: 'prova',       label: 'Prova (P)',    badge: 'bg-green-100 text-green-700'   },
+  { id: 'recuperacao', label: 'Recuperação',  badge: 'bg-orange-100 text-orange-700' },
 ]
 
-const VIEWS = { HOME: 'home', SUBJECT: 'subject', SESSION: 'session', RESULT: 'result', CALENDAR: 'calendar', ADD_EXAM: 'add_exam' }
+const VIEWS = {
+  HOME:     'home',
+  SUBJECT:  'subject',
+  SESSION:  'session',
+  RESULT:   'result',
+  CALENDAR: 'calendar',
+  ADD_EXAM: 'add_exam',
+}
+
+const EMPTY_EXAM_FORM = {
+  subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '',
+}
+
+// Matérias que aparecem no grid de estudo da home (exclui calendarOnly)
+const STUDY_SUBJECTS = SUBJECTS.filter(s => !s.calendarOnly)
+
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
+
+/** Gera o estado (mood + mensagem) do mascote na home. */
+function getMascotState(userName, streak, upcomingCount) {
+  if (streak > 0) {
+    return {
+      mood: 'feliz',
+      message: `Dia ${streak} de sequência, ${userName}! Continue assim! 🔥`,
+    }
+  }
+  if (upcomingCount > 0) {
+    return {
+      mood: 'neutro',
+      message: `Oi, ${userName}! Bora se preparar para as provas? 💪`,
+    }
+  }
+  return {
+    mood: 'feliz',
+    message: `Oi, ${userName}! Que matéria estudamos hoje? 📚`,
+  }
+}
+
+/** Texto do alerta de prova/trabalho na home. */
+function examAlertText(exam, subjName, days) {
+  const typeLabel = EXAM_TYPES.find(t => t.id === exam.type)?.label || 'Prova'
+  const daysText = days === 0 ? 'hoje!' : `em ${days} dia${days > 1 ? 's' : ''}!`
+
+  if (exam.type === 'prova') {
+    return `${typeLabel} de ${subjName} ${daysText} Bora revisar? 🐥`
+  }
+  return `${typeLabel} de ${subjName} ${daysText} Fique atento! 📌`
+}
+
+// ---------------------------------------------------------------------------
+// Componente principal
+// ---------------------------------------------------------------------------
 
 export default function App() {
-  const [view, setView] = useState(VIEWS.HOME)
+  const [view, setView]                     = useState(VIEWS.HOME)
   const [selectedSubject, setSelectedSubject] = useState(null)
-  const [selectedTopic, setSelectedTopic] = useState(null)
+  const [selectedTopic, setSelectedTopic]   = useState(null)
   const [sessionQuestions, setSessionQuestions] = useState([])
-  const [questionIndex, setQuestionIndex] = useState(0)
-  const [correct, setCorrect] = useState(0)
-  const [lives, setLives] = useState(3)
-  const [sessionXP, setSessionXP] = useState(0)
-  const [finalStars, setFinalStars] = useState(0)
-  const [finalXP, setFinalXP] = useState(0)
-  const [examForm, setExamForm] = useState({ subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '' })
-  const [editingExamId, setEditingExamId] = useState(null)
-  const [calendarView, setCalendarView] = useState('month')
+  const [questionIndex, setQuestionIndex]   = useState(0)
+  const [correct, setCorrect]               = useState(0)
+  const [lives, setLives]                   = useState(3)
+  const [sessionXP, setSessionXP]           = useState(0)
+  const [finalStars, setFinalStars]         = useState(0)
+  const [finalXP, setFinalXP]               = useState(0)
+  const [examForm, setExamForm]             = useState(EMPTY_EXAM_FORM)
+  const [editingExamId, setEditingExamId]   = useState(null)
+  const [calendarView, setCalendarView]     = useState('month')
+  const [confirmExamId, setConfirmExamId]   = useState(null)
 
-  const { user, exams, updateTopicProgress, getTopicProgress, getSubjectProgress, addExam, updateExam, removeExam, getUpcomingExams } = useProgress()
+  const {
+    user, exams,
+    updateTopicProgress, getTopicProgress, getSubjectProgress,
+    addExam, updateExam, removeExam, getUpcomingExams,
+  } = useProgress()
 
   const upcomingExams = getUpcomingExams(7)
 
+  // -------------------------------------------------------------------------
+  // Handlers de sessão
+  // -------------------------------------------------------------------------
+
   function startSession(subject, topic) {
-    const questions = shuffle(topic.questions).slice(0, 10)
     setSelectedSubject(subject)
     setSelectedTopic(topic)
-    setSessionQuestions(questions)
+    setSessionQuestions(shuffle(topic.questions).slice(0, 10))
     setQuestionIndex(0)
     setCorrect(0)
     setLives(3)
@@ -63,20 +131,20 @@ export default function App() {
 
   function handleAnswer(isCorrect) {
     const newCorrect = isCorrect ? correct + 1 : correct
-    const newLives = isCorrect ? lives : lives - 1
-    const newXP = isCorrect ? sessionXP + 10 : sessionXP
+    const newLives   = isCorrect ? lives : lives - 1
+    const newXP      = isCorrect ? sessionXP + 10 : sessionXP
 
     setCorrect(newCorrect)
     setLives(newLives)
     setSessionXP(newXP)
 
-    const nextIndex = questionIndex + 1
+    const nextIndex      = questionIndex + 1
     const isLastQuestion = nextIndex >= sessionQuestions.length
-    const outOfLives = newLives <= 0
+    const outOfLives     = newLives <= 0
 
     if (isLastQuestion || outOfLives) {
       const stars = calcStars(newCorrect, sessionQuestions.length)
-      const xp = calcXP(newCorrect, sessionQuestions.length)
+      const xp    = calcXP(newCorrect, sessionQuestions.length)
       setFinalStars(stars)
       setFinalXP(xp)
       updateTopicProgress(selectedSubject.id, selectedTopic.id, stars, xp)
@@ -85,6 +153,10 @@ export default function App() {
       setQuestionIndex(nextIndex)
     }
   }
+
+  // -------------------------------------------------------------------------
+  // Handlers de exames
+  // -------------------------------------------------------------------------
 
   function handleAddExam(e) {
     e.preventDefault()
@@ -95,57 +167,62 @@ export default function App() {
     } else {
       addExam(examForm)
     }
-    setExamForm({ subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '' })
+    setExamForm(EMPTY_EXAM_FORM)
     setView(VIEWS.CALENDAR)
   }
 
   function startEditExam(exam) {
     setExamForm({
       subject: exam.subject,
-      type: exam.type || 'prova',
-      weight: exam.weight || '',
-      date: exam.date,
-      time: exam.time || '',
+      type:    exam.type    || 'prova',
+      weight:  exam.weight  || '',
+      date:    exam.date,
+      time:    exam.time    || '',
       content: exam.content || '',
-      notes: exam.notes || '',
+      notes:   exam.notes   || '',
     })
     setEditingExamId(exam.id)
     setView(VIEWS.ADD_EXAM)
   }
 
-  function formatDate(dateStr) {
-    const [y, m, d] = dateStr.split('-')
-    return `${d}/${m}/${y}`
+  function openAddExam() {
+    setEditingExamId(null)
+    setExamForm(EMPTY_EXAM_FORM)
+    setView(VIEWS.ADD_EXAM)
   }
 
-  function daysUntil(dateStr) {
-    const today = new Date()
-    today.setHours(0, 0, 0, 0)
-    const d = new Date(dateStr)
-    return Math.ceil((d - today) / (1000 * 60 * 60 * 24))
+  function cancelAddExam() {
+    setEditingExamId(null)
+    setView(VIEWS.CALENDAR)
   }
 
-  // HOME
+  // -------------------------------------------------------------------------
+  // VIEW: HOME
+  // -------------------------------------------------------------------------
+
   if (view === VIEWS.HOME) {
+    const { mood, message } = getMascotState(user.name, user.streak.current, upcomingExams.length)
+
     return (
       <div className="min-h-screen bg-gray-50">
         <Header user={user} onCalendarClick={() => setView(VIEWS.CALENDAR)} />
+
         <main className="max-w-lg mx-auto px-4 py-5 space-y-4">
-          {/* Mascote / Boas-vindas */}
+          {/* Mascote / boas-vindas personalizado */}
           <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-4 flex items-center gap-3">
-            <span className="text-4xl">🐥</span>
-            <p className="text-sm font-medium text-yellow-800">
-              Olá! Vamos estudar hoje? Escolha uma matéria! 📚
-            </p>
+            <Mascot mood={mood} size="sm" />
+            <p className="text-sm font-medium text-yellow-800">{message}</p>
           </div>
 
-          {/* Lembretes de provas */}
+          {/* Alertas de provas e trabalhos próximos */}
           {upcomingExams.length > 0 && (
             <div className="space-y-2">
               {upcomingExams.slice(0, 2).map(exam => {
-                const days = daysUntil(exam.date)
-                const subj = SUBJECTS.find(s => s.id === exam.subject)
-                const canStudy = subj && !subj.calendarOnly
+                const days     = daysUntil(exam.date)
+                const subj     = SUBJECTS.find(s => s.id === exam.subject)
+                const isProva  = exam.type === 'prova'
+                const canStudy = isProva && subj && !subj.calendarOnly
+
                 return (
                   <button
                     key={exam.id}
@@ -159,7 +236,7 @@ export default function App() {
                   >
                     <CalendarIcon size="sm" />
                     <p className="text-sm font-bold text-blue-800 flex-1">
-                      {EXAM_TYPES.find(t => t.id === exam.type)?.label || 'Prova'} de {subj?.name || exam.subject} em {days === 0 ? 'hoje!' : `${days} dia${days > 1 ? 's' : ''}!`} Vamos estudar? 🐥
+                      {examAlertText(exam, subj?.name || exam.subject, days)}
                     </p>
                     {canStudy && <span className="text-blue-400 text-lg">›</span>}
                   </button>
@@ -168,16 +245,18 @@ export default function App() {
             </div>
           )}
 
-          {/* Grid de matérias */}
+          {/* Grid de matérias — apenas as que têm conteúdo de estudo */}
           <h2 className="font-bold text-gray-700 text-base">Matérias</h2>
           <div className="grid grid-cols-1 gap-3">
-            {SUBJECTS.map(subject => {
-              const progress = getSubjectProgress(subject.id, subject.topics.length || 1)
+            {STUDY_SUBJECTS.map(subject => {
+              const hasContent = subject.topics.length > 0
+              const progress   = getSubjectProgress(subject.id, subject.topics.length)
               return (
                 <SubjectCard
                   key={subject.id}
                   subject={subject}
                   progress={progress}
+                  hasContent={hasContent}
                   onClick={() => {
                     setSelectedSubject(subject)
                     setView(VIEWS.SUBJECT)
@@ -191,20 +270,24 @@ export default function App() {
     )
   }
 
-  // SUBJECT — lista de tópicos
+  // -------------------------------------------------------------------------
+  // VIEW: SUBJECT — lista de tópicos
+  // -------------------------------------------------------------------------
+
   if (view === VIEWS.SUBJECT) {
     const subject = selectedSubject
     return (
       <div className="min-h-screen bg-gray-50">
         <div className="bg-white shadow-sm px-4 py-3 flex items-center gap-3 sticky top-0 z-10">
-          <button onClick={() => setView(VIEWS.HOME)} className="text-2xl">‹</button>
+          <button onClick={() => setView(VIEWS.HOME)} className="text-2xl" aria-label="Voltar">‹</button>
           <span className="text-2xl">{subject.icon}</span>
           <h1 className="font-bold text-gray-800 text-lg">{subject.name}</h1>
         </div>
+
         <main className="max-w-lg mx-auto px-4 py-5 space-y-3">
           {subject.topics.length === 0 ? (
-            <div className="text-center py-16 space-y-3">
-              <span className="text-5xl">🐥</span>
+            <div className="text-center py-16 space-y-3 flex flex-col items-center">
+              <Mascot mood="surpreso" size="lg" />
               <p className="text-gray-500">Conteúdo em breve! Estamos preparando as questões.</p>
             </div>
           ) : (
@@ -243,13 +326,16 @@ export default function App() {
     )
   }
 
-  // SESSION — exercícios
+  // -------------------------------------------------------------------------
+  // VIEW: SESSION — exercícios
+  // -------------------------------------------------------------------------
+
   if (view === VIEWS.SESSION) {
     const question = sessionQuestions[questionIndex]
     return (
       <div className="min-h-screen bg-gray-50">
         <div className="bg-white shadow-sm px-4 py-3 flex items-center gap-3 sticky top-0 z-10">
-          <button onClick={() => setView(VIEWS.SUBJECT)} className="text-2xl">✕</button>
+          <button onClick={() => setView(VIEWS.SUBJECT)} className="text-2xl" aria-label="Fechar sessão">✕</button>
           <span className="text-base font-semibold text-gray-700 flex-1">{selectedTopic.title}</span>
         </div>
         <main className="max-w-lg mx-auto px-4 py-5">
@@ -266,7 +352,10 @@ export default function App() {
     )
   }
 
-  // RESULT
+  // -------------------------------------------------------------------------
+  // VIEW: RESULT
+  // -------------------------------------------------------------------------
+
   if (view === VIEWS.RESULT) {
     return (
       <div className="min-h-screen bg-gray-50">
@@ -287,42 +376,47 @@ export default function App() {
     )
   }
 
-  // CALENDAR — calendário de provas
+  // -------------------------------------------------------------------------
+  // VIEW: CALENDAR — calendário de provas
+  // -------------------------------------------------------------------------
+
   if (view === VIEWS.CALENDAR) {
     return (
       <div className="min-h-screen bg-gray-50">
-        <div className="bg-white shadow-sm px-4 py-3 flex items-center gap-3 sticky top-0 z-10">
-          <button onClick={() => setView(VIEWS.HOME)} className="text-2xl">‹</button>
-          <CalendarIcon size="sm" />
-          <h1 className="font-bold text-gray-800 text-lg flex-1">Calendário de Provas</h1>
-          {/* Toggle Lista / Mês */}
-          <div className="flex bg-gray-100 rounded-xl p-0.5 text-sm font-semibold">
+        {/* Header compacto + tab bar em container sticky único */}
+        <div className="bg-white shadow-sm sticky top-0 z-10">
+          <div className="px-4 py-3 flex items-center gap-3">
+            <button onClick={() => setView(VIEWS.HOME)} className="text-2xl" aria-label="Voltar">‹</button>
+            <CalendarIcon size="sm" />
+            <h1 className="font-bold text-gray-800 text-lg flex-1">Provas</h1>
             <button
-              onClick={() => setCalendarView('month')}
-              className={`px-3 py-1.5 rounded-lg transition-all ${calendarView === 'month' ? 'bg-white shadow text-blue-600' : 'text-gray-500'}`}
+              onClick={openAddExam}
+              className="w-9 h-9 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl flex items-center justify-center text-xl active:scale-95 transition-all"
+              aria-label="Adicionar atividade"
             >
-              Mês
-            </button>
-            <button
-              onClick={() => setCalendarView('list')}
-              className={`px-3 py-1.5 rounded-lg transition-all ${calendarView === 'list' ? 'bg-white shadow text-blue-600' : 'text-gray-500'}`}
-            >
-              Lista
+              +
             </button>
           </div>
-          {/* Botão + */}
-          <button
-            onClick={() => {
-              setEditingExamId(null)
-              setExamForm({ subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '' })
-              setView(VIEWS.ADD_EXAM)
-            }}
-            className="w-9 h-9 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl flex items-center justify-center text-xl active:scale-95 transition-all"
-            aria-label="Adicionar atividade"
-          >
-            +
-          </button>
+
+          {/* Toggle Mês / Lista */}
+          <div className="px-4 pb-2 border-t border-gray-50">
+            <div className="flex bg-gray-100 rounded-xl p-0.5 text-sm font-semibold w-fit">
+              <button
+                onClick={() => setCalendarView('month')}
+                className={`px-4 py-1.5 rounded-lg transition-all ${calendarView === 'month' ? 'bg-white shadow text-blue-600' : 'text-gray-500'}`}
+              >
+                Mês
+              </button>
+              <button
+                onClick={() => setCalendarView('list')}
+                className={`px-4 py-1.5 rounded-lg transition-all ${calendarView === 'list' ? 'bg-white shadow text-blue-600' : 'text-gray-500'}`}
+              >
+                Lista
+              </button>
+            </div>
+          </div>
         </div>
+
         <main className="max-w-lg mx-auto px-4 py-5 space-y-5">
           {/* Visão mensal */}
           {calendarView === 'month' && (
@@ -335,68 +429,105 @@ export default function App() {
             />
           )}
 
-
-          {/* Lista de provas — visão de lista */}
-          {calendarView === 'list' && <div>
-            <h2 className="font-bold text-gray-700 mb-3">Suas Provas</h2>
-            {exams.length === 0 ? (
-              <div className="text-center py-10 space-y-2">
-                <span className="text-4xl">🐥</span>
-                <p className="text-gray-400 text-sm">Nenhuma prova cadastrada ainda!</p>
-              </div>
-            ) : (
-              <div className="space-y-2">
-                {[...exams]
-                  .sort((a, b) => new Date(a.date) - new Date(b.date))
-                  .map(exam => {
-                    const subj = SUBJECTS.find(s => s.id === exam.subject)
-                    const days = daysUntil(exam.date)
-                    return (
-                      <div key={exam.id} className={`bg-white rounded-2xl p-4 shadow-sm border flex items-center gap-3 ${days <= 1 ? 'border-red-200' : days <= 3 ? 'border-yellow-200' : 'border-gray-100'}`}>
-                        <div className={`w-10 h-10 ${subj?.color || 'bg-gray-400'} rounded-xl flex items-center justify-center text-xl`}>
-                          {subj?.icon || '📚'}
-                        </div>
-                        <div className="flex-1">
-                          <div className="flex items-center gap-2 flex-wrap">
-                            <p className="font-semibold text-gray-800">{subj?.name || exam.subject}</p>
-                            {exam.type && (() => {
-                              const et = EXAM_TYPES.find(t => t.id === exam.type)
-                              return et ? <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${et.badge}`}>{et.label}</span> : null
-                            })()}
-                            {exam.weight && <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">Peso {exam.weight}</span>}
+          {/* Visão de lista */}
+          {calendarView === 'list' && (
+            <div>
+              <h2 className="font-bold text-gray-700 mb-3">Suas Atividades</h2>
+              {exams.length === 0 ? (
+                <div className="text-center py-10 space-y-2 flex flex-col items-center">
+                  <Mascot mood="neutro" size="md" />
+                  <p className="text-gray-400 text-sm">Nenhuma atividade cadastrada ainda!</p>
+                </div>
+              ) : (
+                <div className="space-y-2">
+                  {[...exams]
+                    .sort((a, b) => new Date(a.date) - new Date(b.date))
+                    .map(exam => {
+                      const subj = SUBJECTS.find(s => s.id === exam.subject)
+                      const days = daysUntil(exam.date)
+                      const et   = EXAM_TYPES.find(t => t.id === exam.type)
+                      return (
+                        <div
+                          key={exam.id}
+                          className={`bg-white rounded-2xl p-4 shadow-sm border flex gap-3
+                            ${days <= 1 ? 'border-red-200' : days <= 3 ? 'border-yellow-200' : 'border-gray-100'}`}
+                        >
+                          {/* Ícone da matéria */}
+                          <div className={`w-10 h-10 shrink-0 ${subj?.color || 'bg-gray-400'} rounded-xl flex items-center justify-center text-xl`}>
+                            {subj?.icon || '📚'}
                           </div>
-                          <p className="text-xs text-gray-500">
-                            {formatDate(exam.date)}{exam.time ? ` às ${exam.time}` : ''}
-                            {days === 0 ? ' — hoje!' : days > 0 ? ` — em ${days} dia${days > 1 ? 's' : ''}` : ' — passou'}
-                          </p>
-                          {exam.content && <p className="text-xs text-gray-500 mt-0.5">{exam.content}</p>}
-                          {exam.notes && <p className="text-xs text-gray-400 mt-0.5">📌 {exam.notes}</p>}
+
+                          {/* Conteúdo */}
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <p className="font-semibold text-gray-800">{subj?.name || exam.subject}</p>
+                              {et && (
+                                <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${et.badge}`}>
+                                  {et.label}
+                                </span>
+                              )}
+                              {exam.weight && (
+                                <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">
+                                  Peso {exam.weight}
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-xs text-gray-500">
+                              {formatDate(exam.date)}{exam.time ? ` às ${exam.time}` : ''}
+                              {days === 0 ? ' — hoje!' : days > 0 ? ` — em ${days} dia${days > 1 ? 's' : ''}` : ' — passou'}
+                            </p>
+                            {exam.content && <p className="text-xs text-gray-500 mt-0.5">{exam.content}</p>}
+                            {exam.notes && <p className="text-xs text-gray-400 mt-0.5">📌 {exam.notes}</p>}
+                          </div>
+
+                          {/* Ações */}
+                          <div className="flex gap-2 shrink-0 items-start">
+                            <button
+                              onClick={() => startEditExam(exam)}
+                              className="text-gray-300 hover:text-blue-400 text-lg transition-colors"
+                              aria-label="Editar"
+                            >✏️</button>
+                            <button
+                              onClick={() => setConfirmExamId(exam.id)}
+                              className="text-gray-300 hover:text-red-400 text-xl transition-colors"
+                              aria-label="Remover"
+                            >✕</button>
+                          </div>
                         </div>
-                        <div className="flex gap-2">
-                          <button onClick={() => startEditExam(exam)} className="text-gray-300 hover:text-blue-400 text-lg transition-colors" aria-label="Editar">✏️</button>
-                          <button onClick={() => removeExam(exam.id)} className="text-gray-300 hover:text-red-400 text-xl transition-colors" aria-label="Remover">✕</button>
-                        </div>
-                      </div>
-                    )
-                  })}
-              </div>
-            )}
-          </div>}
+                      )
+                    })}
+                </div>
+              )}
+            </div>
+          )}
         </main>
+
+        {/* Confirmação de remoção (lista) */}
+        {confirmExamId && (
+          <ConfirmModal
+            message="Remover esta atividade do calendário?"
+            onConfirm={() => { removeExam(confirmExamId); setConfirmExamId(null) }}
+            onCancel={() => setConfirmExamId(null)}
+          />
+        )}
       </div>
     )
   }
 
-  // ADD_EXAM — tela de adicionar / editar atividade
+  // -------------------------------------------------------------------------
+  // VIEW: ADD_EXAM — adicionar / editar atividade
+  // -------------------------------------------------------------------------
+
   if (view === VIEWS.ADD_EXAM) {
     return (
       <div className="min-h-screen bg-gray-50">
         <div className="bg-white shadow-sm px-4 py-3 flex items-center gap-3 sticky top-0 z-10">
-          <button onClick={() => { setEditingExamId(null); setView(VIEWS.CALENDAR) }} className="text-2xl">‹</button>
+          <button onClick={cancelAddExam} className="text-2xl" aria-label="Voltar">‹</button>
           <h1 className="font-bold text-gray-800 text-lg">
             {editingExamId ? 'Editar Atividade' : 'Nova Atividade'}
           </h1>
         </div>
+
         <main className="max-w-lg mx-auto px-4 py-5">
           <form onSubmit={handleAddExam} className="space-y-4">
             <div>
@@ -411,6 +542,7 @@ export default function App() {
                 ))}
               </select>
             </div>
+
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <label className="text-sm text-gray-500 block mb-1">Tipo</label>
@@ -438,27 +570,18 @@ export default function App() {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              <div>
-                <label className="text-sm text-gray-500 block mb-1">Data</label>
-                <input
-                  type="date"
-                  required
-                  value={examForm.date}
-                  onChange={e => setExamForm(f => ({ ...f, date: e.target.value }))}
-                  className="w-full border border-gray-200 rounded-xl p-3 text-base"
-                />
-              </div>
-              <div>
-                <label className="text-sm text-gray-500 block mb-1">Hora (opcional)</label>
-                <input
-                  type="time"
-                  value={examForm.time}
-                  onChange={e => setExamForm(f => ({ ...f, time: e.target.value }))}
-                  className="w-full border border-gray-200 rounded-xl p-3 text-base"
-                />
-              </div>
+
+            <div>
+              <label className="text-sm text-gray-500 block mb-1">Data</label>
+              <input
+                type="date"
+                required
+                value={examForm.date}
+                onChange={e => setExamForm(f => ({ ...f, date: e.target.value }))}
+                className="w-full border border-gray-200 rounded-xl p-3 text-base"
+              />
             </div>
+
             <div>
               <label className="text-sm text-gray-500 block mb-1">O que vai cair (opcional)</label>
               <textarea
@@ -469,6 +592,7 @@ export default function App() {
                 className="w-full border border-gray-200 rounded-xl p-3 text-base resize-none"
               />
             </div>
+
             <div>
               <label className="text-sm text-gray-500 block mb-1">Observações (opcional)</label>
               <input
@@ -479,6 +603,7 @@ export default function App() {
                 className="w-full border border-gray-200 rounded-xl p-3 text-base"
               />
             </div>
+
             <button type="submit" className="w-full btn-duo-blue">
               {editingExamId ? 'Salvar alterações ✏️' : 'Adicionar'}
             </button>
