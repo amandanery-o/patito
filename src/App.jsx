@@ -9,13 +9,21 @@ import { calcStars, calcXP } from './utils/scoring'
 import { matematica } from './data/matematica'
 
 const SUBJECTS = [
-  { id: 'portugues',        name: 'Português',       icon: '📝', color: 'bg-blue-500',   topics: [] },
-  { id: 'matematica',       name: 'Matemática',      icon: '🔢', color: 'bg-green-500',  topics: matematica.topics },
-  { id: 'geografia',        name: 'Geografia',       icon: '🌍', color: 'bg-orange-500', topics: [] },
-  { id: 'ingles',           name: 'Inglês',          icon: '🇬🇧', color: 'bg-purple-500', topics: [] },
-  { id: 'ciencias',         name: 'Ciências',        icon: '🔬', color: 'bg-cyan-500',   topics: [] },
-  { id: 'historia',         name: 'História',        icon: '📜', color: 'bg-amber-700',  topics: [] },
-  { id: 'ensino-religioso', name: 'Ens. Religioso',  icon: '✨', color: 'bg-yellow-500', topics: [] },
+  { id: 'portugues',        name: 'Português',       icon: '📝', color: 'bg-blue-500',   topics: [],                calendarOnly: false },
+  { id: 'matematica',       name: 'Matemática',      icon: '🔢', color: 'bg-green-500',  topics: matematica.topics, calendarOnly: false },
+  { id: 'geografia',        name: 'Geografia',       icon: '🌍', color: 'bg-orange-500', topics: [],                calendarOnly: false },
+  { id: 'ingles',           name: 'Inglês',          icon: '🇬🇧', color: 'bg-purple-500', topics: [],                calendarOnly: false },
+  { id: 'ciencias',         name: 'Ciências',        icon: '🔬', color: 'bg-cyan-500',   topics: [],                calendarOnly: false },
+  { id: 'historia',         name: 'História',        icon: '📜', color: 'bg-amber-700',  topics: [],                calendarOnly: false },
+  { id: 'ensino-religioso', name: 'Ens. Religioso',  icon: '✨', color: 'bg-yellow-500', topics: [],                calendarOnly: false },
+  { id: 'educacao-fisica',  name: 'Educ. Física',    icon: '⚽', color: 'bg-red-500',    topics: [],                calendarOnly: true  },
+  { id: 'arte',             name: 'Arte',            icon: '🎨', color: 'bg-pink-500',   topics: [],                calendarOnly: true  },
+]
+
+const EXAM_TYPES = [
+  { id: 'trabalho',    label: 'Trabalho (T)',  badge: 'bg-blue-100 text-blue-700'   },
+  { id: 'prova',       label: 'Prova (P)',     badge: 'bg-green-100 text-green-700' },
+  { id: 'recuperacao', label: 'Recuperação',   badge: 'bg-orange-100 text-orange-700' },
 ]
 
 const VIEWS = { HOME: 'home', SUBJECT: 'subject', SESSION: 'session', RESULT: 'result', CALENDAR: 'calendar' }
@@ -31,7 +39,7 @@ export default function App() {
   const [sessionXP, setSessionXP] = useState(0)
   const [finalStars, setFinalStars] = useState(0)
   const [finalXP, setFinalXP] = useState(0)
-  const [examForm, setExamForm] = useState({ subject: 'matematica', date: '', time: '', notes: '' })
+  const [examForm, setExamForm] = useState({ subject: 'matematica', type: 'prova', date: '', time: '', notes: '' })
 
   const { user, exams, updateTopicProgress, getTopicProgress, getSubjectProgress, addExam, removeExam, getUpcomingExams } = useProgress()
 
@@ -78,7 +86,7 @@ export default function App() {
     e.preventDefault()
     if (!examForm.date) return
     addExam(examForm)
-    setExamForm({ subject: 'matematica', date: '', time: '', notes: '' })
+    setExamForm({ subject: 'matematica', type: 'prova', date: '', time: '', notes: '' })
   }
 
   function formatDate(dateStr) {
@@ -117,7 +125,7 @@ export default function App() {
                   <div key={exam.id} className="bg-blue-50 border border-blue-200 rounded-2xl p-3 flex items-center gap-3">
                     <span className="text-2xl">📅</span>
                     <p className="text-sm font-medium text-blue-800 flex-1">
-                      Prova de {subj?.name || exam.subject} em {days === 0 ? 'hoje!' : `${days} dia${days > 1 ? 's' : ''}!`} Vamos estudar? 🐥
+                      {EXAM_TYPES.find(t => t.id === exam.type)?.label || 'Prova'} de {subj?.name || exam.subject} em {days === 0 ? 'hoje!' : `${days} dia${days > 1 ? 's' : ''}!`} Vamos estudar? 🐥
                     </p>
                   </div>
                 )
@@ -270,6 +278,18 @@ export default function App() {
                   ))}
                 </select>
               </div>
+              <div>
+                <label className="text-sm text-gray-500 block mb-1">Tipo</label>
+                <select
+                  value={examForm.type}
+                  onChange={e => setExamForm(f => ({ ...f, type: e.target.value }))}
+                  className="w-full border border-gray-200 rounded-xl p-3 text-base bg-white"
+                >
+                  {EXAM_TYPES.map(t => (
+                    <option key={t.id} value={t.id}>{t.label}</option>
+                  ))}
+                </select>
+              </div>
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label className="text-sm text-gray-500 block mb-1">Data</label>
@@ -331,7 +351,15 @@ export default function App() {
                           {subj?.icon || '📚'}
                         </div>
                         <div className="flex-1">
-                          <p className="font-semibold text-gray-800">{subj?.name || exam.subject}</p>
+                          <div className="flex items-center gap-2">
+                            <p className="font-semibold text-gray-800">{subj?.name || exam.subject}</p>
+                            {exam.type && (() => {
+                              const et = EXAM_TYPES.find(t => t.id === exam.type)
+                              return et ? (
+                                <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${et.badge}`}>{et.label}</span>
+                              ) : null
+                            })()}
+                          </div>
                           <p className="text-xs text-gray-500">
                             {formatDate(exam.date)}{exam.time ? ` às ${exam.time}` : ''}
                             {days === 0 ? ' — hoje!' : days > 0 ? ` — em ${days} dia${days > 1 ? 's' : ''}` : ' — passou'}
