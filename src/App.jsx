@@ -40,8 +40,9 @@ export default function App() {
   const [finalStars, setFinalStars] = useState(0)
   const [finalXP, setFinalXP] = useState(0)
   const [examForm, setExamForm] = useState({ subject: 'matematica', type: 'prova', date: '', time: '', content: '', notes: '' })
+  const [editingExamId, setEditingExamId] = useState(null)
 
-  const { user, exams, updateTopicProgress, getTopicProgress, getSubjectProgress, addExam, removeExam, getUpcomingExams } = useProgress()
+  const { user, exams, updateTopicProgress, getTopicProgress, getSubjectProgress, addExam, updateExam, removeExam, getUpcomingExams } = useProgress()
 
   const upcomingExams = getUpcomingExams(7)
 
@@ -85,8 +86,26 @@ export default function App() {
   function handleAddExam(e) {
     e.preventDefault()
     if (!examForm.date) return
-    addExam(examForm)
+    if (editingExamId) {
+      updateExam(editingExamId, examForm)
+      setEditingExamId(null)
+    } else {
+      addExam(examForm)
+    }
     setExamForm({ subject: 'matematica', type: 'prova', date: '', time: '', content: '', notes: '' })
+  }
+
+  function startEditExam(exam) {
+    setExamForm({
+      subject: exam.subject,
+      type: exam.type || 'prova',
+      date: exam.date,
+      time: exam.time || '',
+      content: exam.content || '',
+      notes: exam.notes || '',
+    })
+    setEditingExamId(exam.id)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   function formatDate(dateStr) {
@@ -264,7 +283,7 @@ export default function App() {
         <main className="max-w-lg mx-auto px-4 py-5 space-y-5">
           {/* Formulário de cadastro */}
           <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100">
-            <h2 className="font-bold text-gray-700 mb-3">Adicionar Prova</h2>
+            <h2 className="font-bold text-gray-700 mb-3">{editingExamId ? 'Editar Atividade' : 'Adicionar Atividade'}</h2>
             <form onSubmit={handleAddExam} className="space-y-3">
               <div>
                 <label className="text-sm text-gray-500 block mb-1">Matéria</label>
@@ -331,12 +350,26 @@ export default function App() {
                   className="w-full border border-gray-200 rounded-xl p-3 text-base"
                 />
               </div>
-              <button
-                type="submit"
-                className="w-full py-3 bg-blue-500 text-white font-bold rounded-xl active:scale-95 transition-all hover:bg-blue-600"
-              >
-                Salvar Prova 📅
-              </button>
+              <div className="flex gap-2">
+                <button
+                  type="submit"
+                  className="flex-1 py-3 bg-blue-500 text-white font-bold rounded-xl active:scale-95 transition-all hover:bg-blue-600"
+                >
+                  {editingExamId ? 'Salvar alterações ✏️' : 'Adicionar 📅'}
+                </button>
+                {editingExamId && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setEditingExamId(null)
+                      setExamForm({ subject: 'matematica', type: 'prova', date: '', time: '', content: '', notes: '' })
+                    }}
+                    className="px-4 py-3 bg-gray-100 text-gray-600 font-bold rounded-xl active:scale-95 transition-all hover:bg-gray-200"
+                  >
+                    Cancelar
+                  </button>
+                )}
+              </div>
             </form>
           </div>
 
@@ -377,13 +410,22 @@ export default function App() {
                           {exam.content && <p className="text-xs text-gray-500 mt-0.5">{exam.content}</p>}
                           {exam.notes && <p className="text-xs text-gray-400 mt-0.5">📌 {exam.notes}</p>}
                         </div>
-                        <button
-                          onClick={() => removeExam(exam.id)}
-                          className="text-gray-300 hover:text-red-400 text-xl transition-colors"
-                          aria-label="Remover prova"
-                        >
-                          ✕
-                        </button>
+                        <div className="flex gap-2">
+                          <button
+                            onClick={() => startEditExam(exam)}
+                            className="text-gray-300 hover:text-blue-400 text-lg transition-colors"
+                            aria-label="Editar"
+                          >
+                            ✏️
+                          </button>
+                          <button
+                            onClick={() => removeExam(exam.id)}
+                            className="text-gray-300 hover:text-red-400 text-xl transition-colors"
+                            aria-label="Remover"
+                          >
+                            ✕
+                          </button>
+                        </div>
                       </div>
                     )
                   })}

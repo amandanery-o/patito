@@ -76,6 +76,14 @@ export function useProgress() {
     })
   }
 
+  function updateExam(id, changes) {
+    setData(prev => {
+      const next = { ...prev, exams: prev.exams.map(e => e.id === id ? { ...e, ...changes } : e) }
+      saveData(next)
+      return next
+    })
+  }
+
   function removeExam(id) {
     setData(prev => {
       const next = { ...prev, exams: prev.exams.filter(e => e.id !== id) }
@@ -103,6 +111,7 @@ export function useProgress() {
     getTopicProgress,
     getSubjectProgress,
     addExam,
+    updateExam,
     removeExam,
     getUpcomingExams,
   }
