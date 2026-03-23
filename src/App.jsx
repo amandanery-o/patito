@@ -268,22 +268,20 @@ export default function App() {
             const firstIncompleteTopic = heroSubject.topics.find(t => !getTopicProgress(heroSubject.id, t.id).completed)
               ?? heroSubject.topics[0]
             return (
-              <div className={`${heroSubject.color} rounded-3xl p-5 sm:p-8 shadow-lg text-white`}>
-                <div className="flex items-center gap-4 sm:gap-6 mb-3 sm:mb-5">
-                  <Mascot mood="neutro" size="md" />
-                  <div>
-                    <p className="text-xs sm:text-sm font-bold uppercase tracking-wide text-white/70">Estudar agora</p>
-                    <p className="text-xl sm:text-3xl font-extrabold">{heroSubject.name}</p>
-                  </div>
+              <div className={`${heroSubject.color} rounded-3xl px-5 sm:px-10 pt-6 sm:pt-10 pb-5 sm:pb-8 shadow-lg text-white`}>
+                {/* Mascote centrado em destaque */}
+                <div className="flex justify-center mb-3 sm:mb-5">
+                  <Mascot mood="neutro" size="lg" />
                 </div>
-                {firstIncompleteTopic && (
-                  <p className="text-sm sm:text-base text-white/80 mb-3 sm:mb-5">📖 {firstIncompleteTopic.title}</p>
-                )}
+                <div className="text-center mb-3 sm:mb-5">
+                  <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-white/70 mb-1">Estudar agora</p>
+                  <p className="text-2xl sm:text-4xl font-extrabold">{heroSubject.name}</p>
+                  {firstIncompleteTopic && (
+                    <p className="text-sm sm:text-base text-white/80 mt-1">📖 {firstIncompleteTopic.title}</p>
+                  )}
+                </div>
                 <div className="w-full h-3 sm:h-4 bg-white/30 rounded-full overflow-hidden mb-4 sm:mb-6">
-                  <div
-                    className="h-full bg-white rounded-full transition-all"
-                    style={{ width: `${progress.percent}%` }}
-                  />
+                  <div className="h-full bg-white rounded-full transition-all" style={{ width: `${progress.percent}%` }} />
                 </div>
                 <button
                   onClick={() => { setSelectedSubject(heroSubject); setView(VIEWS.SUBJECT) }}

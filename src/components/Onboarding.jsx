@@ -13,17 +13,17 @@ export default function Onboarding({ onComplete }) {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-white flex flex-col items-center justify-center px-6 py-12 animate-slide-up">
-      <Mascot mood="celebrando" size="xl" className="mb-2" />
+      <Mascot mood="celebrando" size="hero" className="mb-2" />
 
-      <h1 className="text-3xl font-extrabold text-gray-800 mt-4 text-center leading-tight">
+      <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-800 mt-4 text-center leading-tight">
         Bem-vindo ao<br />
         <span className="text-patito-gold">Patito! 🐥</span>
       </h1>
-      <p className="text-gray-500 text-base mt-2 text-center">
+      <p className="text-gray-500 text-base sm:text-xl mt-2 text-center">
         Seu companheiro de estudos do 4º ano
       </p>
 
-      <form onSubmit={handleSubmit} className="w-full max-w-xs mt-10 space-y-4">
+      <form onSubmit={handleSubmit} className="w-full max-w-xs sm:max-w-sm md:max-w-md mt-10 space-y-4">
         <div>
           <label className="block text-sm font-bold text-gray-600 mb-1.5">
             Qual é o seu nome?

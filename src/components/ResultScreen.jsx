@@ -25,19 +25,19 @@ export default function ResultScreen({ stars, xp, correct, total, onContinue, on
   }, [stars])
 
   return (
-    <div className="relative flex flex-col items-center gap-6 py-10 px-4 text-center overflow-hidden">
+    <div className="relative flex flex-col items-center gap-6 sm:gap-8 py-10 sm:py-16 px-4 sm:px-10 text-center overflow-hidden">
       {stars === 3 && <Confetti />}
 
       <Mascot mood={MOOD[stars] || 'neutro'} size="xl" className={stars === 3 ? 'animate-bounce' : ''} />
 
-      <p className="text-2xl font-extrabold text-gray-800">{msg}</p>
+      <p className="text-2xl sm:text-4xl font-extrabold text-gray-800">{msg}</p>
 
       {/* Estrelas com animação escalonada */}
-      <div className="flex gap-3 items-center">
+      <div className="flex gap-3 sm:gap-5 items-center">
         {[1, 2, 3].map(s => (
           <span
             key={s}
-            className={`text-5xl transition-all duration-300
+            className={`text-5xl sm:text-7xl transition-all duration-300
               ${s <= visibleStars ? 'animate-star-pop' : 'opacity-20 grayscale'}`}
             style={{ animationDelay: `${(s - 1) * 0.3}s` }}
           >
@@ -47,16 +47,16 @@ export default function ResultScreen({ stars, xp, correct, total, onContinue, on
       </div>
 
       {/* XP */}
-      <div className="bg-yellow-50 rounded-2xl px-10 py-5 border-2 border-yellow-200 shadow-sm">
-        <p className="text-4xl font-extrabold text-yellow-500">+{xp} XP ⚡</p>
-        <p className="text-sm font-semibold text-gray-500 mt-1">{correct} de {total} corretas</p>
+      <div className="bg-yellow-50 rounded-2xl px-10 sm:px-16 py-5 sm:py-7 border-2 border-yellow-200 shadow-sm">
+        <p className="text-4xl sm:text-6xl font-extrabold text-yellow-500">+{xp} XP ⚡</p>
+        <p className="text-sm sm:text-lg font-semibold text-gray-500 mt-1">{correct} de {total} corretas</p>
       </div>
 
-      <div className="flex flex-col gap-3 w-full max-w-xs">
-        <button onClick={onContinue} className="w-full text-lg btn-duo-green">
+      <div className="flex flex-col gap-3 w-full max-w-xs sm:max-w-sm md:max-w-md">
+        <button onClick={onContinue} className="w-full text-lg sm:text-xl btn-duo-green">
           Continuar 🚀
         </button>
-        <button onClick={onHome} className="w-full btn-duo-gray">
+        <button onClick={onHome} className="w-full sm:text-lg btn-duo-gray">
           Início 🏠
         </button>
       </div>

@@ -6,15 +6,15 @@ export default function FeedbackPanel({ correct, explanation, onContinue }) {
       className={`fixed bottom-0 left-0 right-0 z-50 animate-slide-up
         ${correct ? 'bg-green-500' : 'bg-red-500'}`}
     >
-      <div className="max-w-lg mx-auto px-4 pt-4 pb-8 flex flex-col gap-3">
-        <div className="flex items-center gap-3">
-          <Mascot mood={correct ? 'feliz' : 'triste'} size="sm" />
+      <div className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-8 pt-4 sm:pt-6 pb-8 sm:pb-10 flex flex-col gap-3 sm:gap-4">
+        <div className="flex items-center gap-3 sm:gap-5">
+          <Mascot mood={correct ? 'feliz' : 'triste'} size="md" />
           <div>
-            <p className="font-extrabold text-white text-lg">
+            <p className="font-extrabold text-white text-lg sm:text-2xl">
               {correct ? 'Arrasou! 🎉' : 'Quase lá! 💪'}
             </p>
             {explanation && (
-              <p className="text-white/90 text-sm leading-snug">{explanation}</p>
+              <p className="text-white/90 text-sm sm:text-base leading-snug">{explanation}</p>
             )}
           </div>
         </div>
