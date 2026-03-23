@@ -228,7 +228,7 @@ export default function App() {
 
           {/* Boas-vindas — mascote hero proporcional à tela */}
           <div className="bg-yellow-50 border border-yellow-100 rounded-3xl px-4 sm:px-8 pt-4 sm:pt-6 pb-5 sm:pb-7 flex flex-col items-center text-center gap-1">
-            <Mascot mood={mood} size="hero" className="scale-110 sm:scale-125 my-2" />
+            <Mascot mood={mood} size="hero" className="my-2" />
             <p className="text-lg sm:text-2xl md:text-3xl font-extrabold text-yellow-900 leading-snug mt-2">{message}</p>
             {user.streak.current > 0 && (
               <div className="flex items-center gap-1.5 bg-orange-100 rounded-full px-4 py-1.5 mt-1">
@@ -265,10 +265,10 @@ export default function App() {
                       const colors = SUBJECT_COLORS[colorKey] || SUBJECT_COLORS[lesson.subject] || { bg: 'bg-gray-100', text: 'text-gray-700' }
                       const shortName = lesson.subject.replace('Língua ', '').replace('Ensino ', '')
                       return (
-                        <div key={i} className={`shrink-0 rounded-xl px-3 py-2 flex flex-col items-center gap-0.5 ${colors.bg}`}>
-                          <span className={`text-xs font-extrabold ${colors.text}`} style={{ fontSize: 10 }}>{lesson.time}</span>
-                          <span className={`text-xs font-bold text-center leading-tight ${colors.text}`} style={{ fontSize: 11, maxWidth: 64 }}>{shortName}</span>
-                          {lesson.quinzenal && <span className="text-gray-400 font-bold" style={{ fontSize: 8 }}>quinz.</span>}
+                        <div key={i} className={`shrink-0 rounded-xl px-3 py-2.5 min-h-[56px] flex flex-col items-center justify-center gap-0.5 ${colors.bg}`}>
+                          <span className={`text-[10px] sm:text-xs font-extrabold ${colors.text}`}>{lesson.time}</span>
+                          <span className={`text-[11px] sm:text-xs font-bold text-center leading-tight ${colors.text} max-w-[72px]`}>{shortName}</span>
+                          {lesson.quinzenal && <span className="text-[9px] sm:text-[10px] text-gray-400 font-bold">quinz.</span>}
                         </div>
                       )
                     })}
@@ -314,7 +314,7 @@ export default function App() {
               <div className={`${heroSubject.color} rounded-3xl px-5 sm:px-10 pt-6 sm:pt-10 pb-5 sm:pb-8 shadow-lg text-white`}>
                 {/* Mascote centrado em destaque */}
                 <div className="flex justify-center mb-3 sm:mb-5">
-                  <Mascot mood="neutro" size="lg" />
+                  <Mascot mood="neutro" size="xl" />
                 </div>
                 <div className="text-center mb-3 sm:mb-5">
                   <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-white/70 mb-1">Estudar agora</p>
@@ -390,13 +390,13 @@ export default function App() {
     return (
       <div className="min-h-screen bg-gray-50 pb-6">
         {/* Header colorido */}
-        <div className={`${subject.color} px-4 py-4 flex items-center gap-3 sticky top-0 z-10`}>
-          <button onClick={() => setView(VIEWS.HOME)} className="text-white text-2xl font-bold" aria-label="Voltar">‹</button>
-          <span className="text-2xl">{subject.icon}</span>
-          <h1 className="font-extrabold text-white text-lg flex-1">{subject.name}</h1>
+        <div className={`${subject.color} px-4 sm:px-6 py-4 sm:py-5 flex items-center gap-3 sticky top-0 z-10`}>
+          <button onClick={() => setView(VIEWS.HOME)} className="text-white text-2xl sm:text-3xl font-bold" aria-label="Voltar">‹</button>
+          <span className="text-2xl sm:text-3xl">{subject.icon}</span>
+          <h1 className="font-extrabold text-white text-lg sm:text-xl md:text-2xl flex-1">{subject.name}</h1>
         </div>
 
-        <main className="max-w-lg mx-auto pt-6">
+        <main className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto pt-6">
           {subject.topics.length === 0 ? (
             <div className="text-center py-16 space-y-3 flex flex-col items-center px-4">
               <Mascot mood="surpreso" size="lg" />
@@ -427,7 +427,7 @@ export default function App() {
           <button onClick={() => setView(VIEWS.SUBJECT)} className="text-2xl" aria-label="Fechar sessão">✕</button>
           <span className="text-base font-semibold text-gray-700 flex-1">{selectedTopic.title}</span>
         </div>
-        <main className="max-w-lg sm:max-w-xl md:max-w-2xl mx-auto px-4 sm:px-8 py-5 sm:py-8 pb-40">
+        <main className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-8 md:px-10 py-5 sm:py-8 pb-40">
           <ExerciseCard
             question={question}
             current={questionIndex + 1}
@@ -451,7 +451,7 @@ export default function App() {
         <div className="bg-white shadow-sm px-4 py-3">
           <h1 className="font-bold text-gray-800 text-center">Resultado</h1>
         </div>
-        <main className="max-w-lg mx-auto">
+        <main className="max-w-lg sm:max-w-xl md:max-w-2xl mx-auto">
           <ResultScreen
             stars={finalStars}
             xp={finalXP}
@@ -506,7 +506,7 @@ export default function App() {
           </div>
         </div>
 
-        <main className="max-w-lg mx-auto px-4 py-5 space-y-5">
+        <main className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-6 py-5 space-y-5">
           {/* Visão mensal */}
           {calendarView === 'month' && (
             <CalendarMonth
@@ -651,7 +651,7 @@ export default function App() {
           </h1>
         </div>
 
-        <main className="max-w-lg mx-auto px-4 py-5">
+        <main className="max-w-lg sm:max-w-xl md:max-w-2xl mx-auto px-4 sm:px-6 py-5">
           <form onSubmit={handleAddExam} className="space-y-4">
             <div>
               <label className="text-sm text-gray-500 block mb-1">Matéria</label>

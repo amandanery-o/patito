@@ -42,7 +42,7 @@ export default function MultipleChoice({ question, onSelect }) {
             disabled={selected !== null}
             className={`flex items-center gap-3 w-full text-left p-4 rounded-2xl border-2 font-semibold transition-all duration-200 shadow-sm ${getStyle(i)}`}
           >
-            <span className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-extrabold text-sm transition-all ${getLabelStyle(i)}`}>
+            <span className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-extrabold text-sm transition-all ${getLabelStyle(i)}`}>
               {LABELS[i]}
             </span>
             <span className="text-base sm:text-lg">{opt}</span>

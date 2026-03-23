@@ -28,7 +28,7 @@ export default function ResultScreen({ stars, xp, correct, total, onContinue, on
     <div className="relative flex flex-col items-center gap-6 sm:gap-8 py-10 sm:py-16 px-4 sm:px-10 text-center overflow-hidden">
       {stars === 3 && <Confetti />}
 
-      <Mascot mood={MOOD[stars] || 'neutro'} size="xl" className={stars === 3 ? 'animate-bounce' : ''} />
+      <Mascot mood={MOOD[stars] || 'neutro'} size="hero" className={stars === 3 ? 'animate-bounce' : ''} />
 
       <p className="text-2xl sm:text-4xl font-extrabold text-gray-800">{msg}</p>
 

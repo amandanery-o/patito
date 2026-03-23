@@ -31,7 +31,7 @@ export default function FillBlank({ question, onSelect }) {
         </span>
         {parts[1]}
       </p>
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {question.options.map((opt, i) => (
           <button
             key={i}

@@ -13,7 +13,7 @@ export default function Header({ user, onCalendarClick }) {
           <Mascot mood="neutro" size="sm" />
           <div>
             <p className="text-xs sm:text-sm text-gray-400 leading-none">Olá,</p>
-            <p className="font-bold sm:text-lg text-gray-800 leading-tight">{user.name}</p>
+            <p className="font-bold sm:text-lg md:text-xl text-gray-800 leading-tight">{user.name}</p>
           </div>
         </div>
 
@@ -43,7 +43,7 @@ export default function Header({ user, onCalendarClick }) {
       {/* XP level bar */}
       <div className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-6 md:px-10 pb-2 sm:pb-3 flex items-center gap-2">
         <span className="text-xs sm:text-sm font-extrabold text-blue-600 shrink-0">Nv {level}</span>
-        <div className="flex-1 h-1.5 sm:h-2 bg-gray-100 rounded-full overflow-hidden">
+        <div className="flex-1 h-1.5 sm:h-2 md:h-2.5 bg-gray-100 rounded-full overflow-hidden">
           <div
             className="h-full bg-blue-400 rounded-full transition-all duration-500"
             style={{ width: `${xpInLevel}%` }}

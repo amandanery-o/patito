@@ -15,7 +15,7 @@ export default function TopicTrail({ subject, topics, getTopicProgress, onStart 
         const locked    = index > 0 && !prevTp?.completed
 
         return (
-          <div key={topic.id} className="flex flex-col items-center w-full max-w-xs sm:max-w-sm">
+          <div key={topic.id} className="flex flex-col items-center w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
             {/* Linha de conexão acima (exceto primeiro) */}
             {index > 0 && (
               <div className={`w-1 h-8 rounded-full ${completed ? 'bg-green-400' : 'bg-gray-200'}`} />
@@ -25,7 +25,7 @@ export default function TopicTrail({ subject, topics, getTopicProgress, onStart 
             <div className="flex items-center gap-4 w-full px-4">
               {/* Nó circular */}
               <div
-                className={`w-14 h-14 shrink-0 rounded-full border-4 flex items-center justify-center text-xl shadow-md transition-all
+                className={`w-14 h-14 md:w-16 md:h-16 shrink-0 rounded-full border-4 flex items-center justify-center text-xl md:text-2xl shadow-md transition-all
                   ${completed
                     ? `${subject.color} border-white text-white shadow-lg`
                     : locked
@@ -46,7 +46,7 @@ export default function TopicTrail({ subject, topics, getTopicProgress, onStart 
                 onClick={() => !locked && onStart(topic)}
                 disabled={locked}
                 title={locked ? 'Complete o tópico anterior para liberar' : undefined}
-                className={`flex-1 rounded-2xl p-4 text-left transition-all
+                className={`flex-1 rounded-2xl p-4 md:p-5 text-left transition-all
                   ${completed
                     ? 'bg-green-50 border-2 border-green-200 hover:bg-green-100 active:scale-95'
                     : locked
@@ -54,7 +54,7 @@ export default function TopicTrail({ subject, topics, getTopicProgress, onStart 
                       : 'bg-white border-2 border-blue-200 hover:border-blue-400 hover:shadow-md shadow-sm active:scale-95'
                   }`}
               >
-                <p className={`font-extrabold text-base ${completed ? 'text-green-700' : locked ? 'text-gray-400' : 'text-gray-800'}`}>
+                <p className={`font-extrabold text-base md:text-lg ${completed ? 'text-green-700' : locked ? 'text-gray-400' : 'text-gray-800'}`}>
                   {topic.title}
                 </p>
                 <div className="flex items-center gap-2 mt-1">
