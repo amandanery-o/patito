@@ -1,82 +1,109 @@
-import { SCHEDULE, SUBJECT_COLORS, DAY_SHORT } from '../data/schedule'
+import { useState } from 'react'
+import { SCHEDULE, SUBJECT_COLORS, DAY_SHORT, DAY_NAMES } from '../data/schedule'
 
-const TIMES = ['13h30', '14h20', '15h10', '16h20', '17h10']
-const WEEKDAYS = [1, 2, 3, 4, 5] // Seg→Sex
+const WEEKDAYS = [1, 2, 3, 4, 5]
 
-function subjectColor(subject) {
-  const base = subject?.split('/')[0]
-  return SUBJECT_COLORS[base] || SUBJECT_COLORS[subject] || { bg: 'bg-gray-100', text: 'text-gray-700' }
+const SUBJECT_ICONS = {
+  'Língua Portuguesa':  '📝',
+  'Educação Física':    '⚽',
+  'Língua Inglesa':     '🇬🇧',
+  'Matemática':         '🔢',
+  'Ciências':           '🔬',
+  'História':           '📜',
+  'Arte':               '🎨',
+  'Geografia':          '🌍',
+  'Ensino Religioso':   '✨',
+  'Laboratório':        '🧪',
+  'Robótica/Matemática':'🤖',
 }
 
-function SubjectCell({ lesson, isToday }) {
-  if (!lesson) return <div className="h-full bg-gray-50 rounded-lg" />
-  const { bg, text } = subjectColor(lesson.subject)
-  const name = lesson.subject.replace('Língua ', '').replace('Ensino ', '')
-  return (
-    <div className={`rounded-lg px-1 py-1.5 text-center h-full flex flex-col items-center justify-center gap-0.5
-      ${bg} ${isToday ? 'ring-2 ring-offset-1 ring-blue-400' : ''}`}>
-      <span className={`text-xs font-extrabold leading-tight ${text}`} style={{ fontSize: 10 }}>
-        {name}
-      </span>
-      {lesson.quinzenal && (
-        <span className="text-gray-400 font-bold leading-none" style={{ fontSize: 8 }}>quinz.</span>
-      )}
-    </div>
-  )
+function getColors(subject) {
+  const key = subject?.split('/')[0]
+  return SUBJECT_COLORS[key] || SUBJECT_COLORS[subject] || { bg: 'bg-gray-100', text: 'text-gray-700', dot: '#9CA3AF' }
 }
 
 export default function ScheduleView() {
-  const today = new Date().getDay() // 0–6
+  const todayDay = new Date().getDay()
+  const defaultDay = WEEKDAYS.includes(todayDay) ? todayDay : 1
+  const [selectedDay, setSelectedDay] = useState(defaultDay)
+
+  const lessons = SCHEDULE[selectedDay] || []
 
   return (
-    <div className="px-4 sm:px-6 pb-6">
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
-        {/* Header */}
-        <div className="grid grid-cols-6 bg-gray-50 border-b border-gray-100">
-          <div className="py-2 px-1" />
-          {WEEKDAYS.map(d => (
-            <div key={d} className={`py-2 text-center text-xs font-extrabold
-              ${d === today ? 'text-blue-600' : 'text-gray-500'}`}>
-              {DAY_SHORT[d]}
-              {d === today && <div className="mx-auto mt-0.5 w-1.5 h-1.5 rounded-full bg-blue-500" />}
-            </div>
-          ))}
-        </div>
+    <div className="px-4 sm:px-6 pb-6 space-y-4">
 
-        {/* Linhas de horário */}
-        {TIMES.map(time => (
-          <div key={time} className="grid grid-cols-6 border-b border-gray-50 last:border-0" style={{ minHeight: 52 }}>
-            {/* Horário */}
-            <div className="flex items-center justify-center px-1 py-1">
-              <span className="text-gray-400 font-bold" style={{ fontSize: 9 }}>{time}</span>
-            </div>
-            {/* Células por dia */}
-            {WEEKDAYS.map(d => {
-              const lesson = SCHEDULE[d]?.find(l => l.time === time)
-              return (
-                <div key={d} className="p-0.5">
-                  <SubjectCell lesson={lesson} isToday={d === today} />
-                </div>
-              )
-            })}
-          </div>
-        ))}
-      </div>
-
-      {/* Legenda */}
-      <div className="mt-4 flex flex-wrap gap-2">
-        {Object.entries(SUBJECT_COLORS).map(([name, { bg, text }]) => {
-          const shortName = name.replace('Língua ', '').replace('Ensino ', '')
+      {/* Abas de dias */}
+      <div className="flex gap-2 overflow-x-auto pb-1">
+        {WEEKDAYS.map(d => {
+          const isToday = d === todayDay
+          const isActive = d === selectedDay
           return (
-            <span key={name} className={`text-xs font-bold px-2 py-0.5 rounded-full ${bg} ${text}`}>
-              {shortName}
-            </span>
+            <button
+              key={d}
+              onClick={() => setSelectedDay(d)}
+              className={`shrink-0 flex flex-col items-center px-4 py-2 rounded-2xl font-extrabold transition-all
+                ${isActive
+                  ? 'bg-blue-500 text-white shadow-md'
+                  : 'bg-white border border-gray-200 text-gray-500 hover:border-blue-300'
+                }`}
+            >
+              <span className="text-sm">{DAY_SHORT[d]}</span>
+              {isToday && (
+                <span className={`text-xs font-bold mt-0.5 ${isActive ? 'text-blue-100' : 'text-blue-500'}`}>
+                  hoje
+                </span>
+              )}
+            </button>
           )
         })}
-        <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-gray-100 text-gray-500">
-          quinz. = quinzenal
-        </span>
       </div>
+
+      {/* Título do dia */}
+      <div className="flex items-center gap-2">
+        <h2 className="font-extrabold text-gray-800 text-lg">{DAY_NAMES[selectedDay]}</h2>
+        <span className="text-sm text-gray-400 font-semibold">{lessons.length} aulas</span>
+      </div>
+
+      {/* Lista de aulas */}
+      <div className="space-y-3">
+        {lessons.map((lesson, i) => {
+          const colors = getColors(lesson.subject)
+          const icon = SUBJECT_ICONS[lesson.subject] || '📚'
+          return (
+            <div
+              key={i}
+              className={`flex items-center gap-4 rounded-2xl p-4 border-2 ${colors.bg}
+                border-transparent shadow-sm`}
+            >
+              {/* Horário */}
+              <div className="shrink-0 text-center">
+                <p className={`text-sm font-extrabold ${colors.text}`}>{lesson.time}</p>
+              </div>
+
+              {/* Divisor */}
+              <div className={`w-0.5 h-10 rounded-full opacity-30 ${colors.text} bg-current`} />
+
+              {/* Matéria */}
+              <div className="flex items-center gap-3 flex-1">
+                <span className="text-2xl">{icon}</span>
+                <div>
+                  <p className={`font-extrabold text-base leading-tight ${colors.text}`}>
+                    {lesson.subject}
+                  </p>
+                  {lesson.quinzenal && (
+                    <span className="text-xs font-bold text-gray-400">⚠️ Quinzenal</span>
+                  )}
+                </div>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+
+      {/* Nota de rodapé */}
+      <p className="text-xs text-gray-400 text-center font-semibold pt-2">
+        Turno da tarde · 13h30 às 18h00 · Turma 43
+      </p>
     </div>
   )
 }
