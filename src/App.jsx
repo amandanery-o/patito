@@ -15,6 +15,8 @@ import { shuffle } from './utils/shuffle'
 import { calcStars, calcXP } from './utils/scoring'
 import { daysUntil, formatDate } from './utils/dates'
 import { matematica } from './data/matematica'
+import { SCHEDULE, SUBJECT_COLORS, DAY_NAMES } from './data/schedule'
+import ScheduleView from './components/ScheduleView'
 
 // ---------------------------------------------------------------------------
 // Dados estáticos
@@ -45,6 +47,7 @@ const VIEWS = {
   RESULT:   'result',
   CALENDAR: 'calendar',
   ADD_EXAM: 'add_exam',
+  SCHEDULE: 'schedule',
 }
 
 const EMPTY_EXAM_FORM = {
@@ -235,6 +238,46 @@ export default function App() {
             )}
           </div>
 
+          {/* Aulas de hoje */}
+          {(() => {
+            const todayDay = new Date().getDay()
+            const todayLessons = SCHEDULE[todayDay] || []
+            const isWeekend = todayDay === 0 || todayDay === 6
+            return (
+              <div className="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm">
+                <div className="flex items-center justify-between mb-3">
+                  <p className="font-extrabold text-gray-800 text-sm">
+                    📚 {isWeekend ? 'Sem aulas hoje' : `Aulas de ${DAY_NAMES[todayDay]}`}
+                  </p>
+                  <button
+                    onClick={() => setView(VIEWS.SCHEDULE)}
+                    className="text-xs font-bold text-blue-500 hover:text-blue-700"
+                  >
+                    Ver semana →
+                  </button>
+                </div>
+                {isWeekend ? (
+                  <p className="text-sm text-gray-400 font-semibold">Aproveite para estudar! 🐥</p>
+                ) : (
+                  <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1">
+                    {todayLessons.map((lesson, i) => {
+                      const colorKey = lesson.subject.split('/')[0]
+                      const colors = SUBJECT_COLORS[colorKey] || SUBJECT_COLORS[lesson.subject] || { bg: 'bg-gray-100', text: 'text-gray-700' }
+                      const shortName = lesson.subject.replace('Língua ', '').replace('Ensino ', '')
+                      return (
+                        <div key={i} className={`shrink-0 rounded-xl px-3 py-2 flex flex-col items-center gap-0.5 ${colors.bg}`}>
+                          <span className={`text-xs font-extrabold ${colors.text}`} style={{ fontSize: 10 }}>{lesson.time}</span>
+                          <span className={`text-xs font-bold text-center leading-tight ${colors.text}`} style={{ fontSize: 11, maxWidth: 64 }}>{shortName}</span>
+                          {lesson.quinzenal && <span className="text-gray-400 font-bold" style={{ fontSize: 8 }}>quinz.</span>}
+                        </div>
+                      )
+                    })}
+                  </div>
+                )}
+              </div>
+            )
+          })()}
+
           {/* Alertas de provas */}
           {upcomingExams.length > 0 && (
             <div className="space-y-2">
@@ -331,6 +374,7 @@ export default function App() {
         <BottomNav
           activeView="home"
           onHome={() => setView(VIEWS.HOME)}
+          onSchedule={() => setView(VIEWS.SCHEDULE)}
           onCalendar={() => setView(VIEWS.CALENDAR)}
         />
       </div>
@@ -559,6 +603,34 @@ export default function App() {
         <BottomNav
           activeView="calendar"
           onHome={() => setView(VIEWS.HOME)}
+          onSchedule={() => setView(VIEWS.SCHEDULE)}
+          onCalendar={() => setView(VIEWS.CALENDAR)}
+        />
+      </div>
+    )
+  }
+
+  // -------------------------------------------------------------------------
+  // VIEW: SCHEDULE — grade semanal de aulas
+  // -------------------------------------------------------------------------
+
+  if (view === VIEWS.SCHEDULE) {
+    return (
+      <div className="min-h-screen bg-gray-50 pb-20">
+        <div className="bg-white shadow-sm px-4 py-3 flex items-center gap-3 sticky top-0 z-10">
+          <button onClick={() => setView(VIEWS.HOME)} className="text-2xl" aria-label="Voltar">‹</button>
+          <h1 className="font-bold text-gray-800 text-lg">Horário da Turma 43</h1>
+        </div>
+        <div className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto pt-5 sm:pt-8">
+          <p className="px-4 sm:px-6 text-xs text-gray-400 font-semibold mb-3">
+            Turno da tarde · 13h30 às 18h00 · *Robótica é quinzenal nas quartas
+          </p>
+          <ScheduleView />
+        </div>
+        <BottomNav
+          activeView="schedule"
+          onHome={() => setView(VIEWS.HOME)}
+          onSchedule={() => setView(VIEWS.SCHEDULE)}
           onCalendar={() => setView(VIEWS.CALENDAR)}
         />
       </div>
