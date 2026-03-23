@@ -221,16 +221,16 @@ export default function App() {
       <div className="min-h-screen bg-gray-50 pb-20">
         <Header user={user} onCalendarClick={() => setView(VIEWS.CALENDAR)} />
 
-        <main className="max-w-lg mx-auto px-4 py-5 space-y-5">
+        <main className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-6 md:px-10 py-5 sm:py-8 space-y-5 sm:space-y-6">
 
           {/* Boas-vindas — mascote em destaque */}
-          <div className="bg-yellow-50 border border-yellow-100 rounded-3xl px-4 pt-4 pb-3 flex flex-col items-center text-center gap-1">
+          <div className="bg-yellow-50 border border-yellow-100 rounded-3xl px-4 sm:px-8 pt-5 sm:pt-8 pb-4 sm:pb-6 flex flex-col items-center text-center gap-1">
             <Mascot mood={mood} size="lg" />
-            <p className="text-base font-extrabold text-yellow-900 leading-snug mt-1">{message}</p>
+            <p className="text-base sm:text-xl md:text-2xl font-extrabold text-yellow-900 leading-snug mt-2">{message}</p>
             {user.streak.current > 0 && (
-              <div className="flex items-center gap-1 bg-orange-100 rounded-full px-3 py-0.5 mt-1">
-                <span className="text-lg leading-none">🔥</span>
-                <span className="text-sm font-extrabold text-orange-600">{user.streak.current} dias seguidos</span>
+              <div className="flex items-center gap-1.5 bg-orange-100 rounded-full px-3 sm:px-4 py-1 mt-2">
+                <span className="text-lg sm:text-2xl leading-none">🔥</span>
+                <span className="text-sm sm:text-base font-extrabold text-orange-600">{user.streak.current} dias seguidos</span>
               </div>
             )}
           </div>
@@ -268,19 +268,18 @@ export default function App() {
             const firstIncompleteTopic = heroSubject.topics.find(t => !getTopicProgress(heroSubject.id, t.id).completed)
               ?? heroSubject.topics[0]
             return (
-              <div className={`${heroSubject.color} rounded-3xl p-5 shadow-lg text-white`}>
-                <div className="flex items-center gap-4 mb-3">
+              <div className={`${heroSubject.color} rounded-3xl p-5 sm:p-8 shadow-lg text-white`}>
+                <div className="flex items-center gap-4 sm:gap-6 mb-3 sm:mb-5">
                   <Mascot mood="neutro" size="md" />
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-wide text-white/70">Estudar agora</p>
-                    <p className="text-xl font-extrabold">{heroSubject.name}</p>
+                    <p className="text-xs sm:text-sm font-bold uppercase tracking-wide text-white/70">Estudar agora</p>
+                    <p className="text-xl sm:text-3xl font-extrabold">{heroSubject.name}</p>
                   </div>
                 </div>
                 {firstIncompleteTopic && (
-                  <p className="text-sm text-white/80 mb-3">📖 {firstIncompleteTopic.title}</p>
+                  <p className="text-sm sm:text-base text-white/80 mb-3 sm:mb-5">📖 {firstIncompleteTopic.title}</p>
                 )}
-                {/* Barra de progresso branca */}
-                <div className="w-full h-3 bg-white/30 rounded-full overflow-hidden mb-4">
+                <div className="w-full h-3 sm:h-4 bg-white/30 rounded-full overflow-hidden mb-4 sm:mb-6">
                   <div
                     className="h-full bg-white rounded-full transition-all"
                     style={{ width: `${progress.percent}%` }}
@@ -288,7 +287,7 @@ export default function App() {
                 </div>
                 <button
                   onClick={() => { setSelectedSubject(heroSubject); setView(VIEWS.SUBJECT) }}
-                  className="w-full bg-white text-gray-800 font-extrabold rounded-2xl py-3 text-base border-b-4 active:border-b-2 active:translate-y-0.5 transition-all select-none"
+                  className="w-full bg-white text-gray-800 font-extrabold rounded-2xl py-3 sm:py-4 text-base sm:text-xl border-b-4 active:border-b-2 active:translate-y-0.5 transition-all select-none"
                   style={{ borderBottomColor: 'rgba(0,0,0,0.20)' }}
                 >
                   Jogar agora 🎮
