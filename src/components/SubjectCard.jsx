@@ -1,45 +1,33 @@
 /**
- * Card de matéria na home.
- * Quando `hasContent` é false, exibe estado "Em breve" e desabilita interação.
+ * Card de matéria com fundo colorido (estilo Duolingo).
+ * Só é renderizado para matérias com conteúdo (hasContent = true).
  */
-export default function SubjectCard({ subject, progress, hasContent, onClick }) {
+export default function SubjectCard({ subject, progress, onClick }) {
   const { completed, total, percent } = progress
 
   return (
     <button
-      onClick={hasContent ? onClick : undefined}
-      className={`w-full bg-white rounded-2xl p-4 shadow-sm flex flex-col gap-3 transition-all duration-150 text-left
-        ${hasContent
-          ? 'border border-gray-100 active:scale-95 hover:shadow-md cursor-pointer'
-          : 'border border-dashed border-gray-200 opacity-60 cursor-default'
-        }`}
+      onClick={onClick}
+      className={`w-full ${subject.color} rounded-2xl p-4 shadow-md flex flex-col gap-3 transition-all duration-150 text-left active:scale-95 active:brightness-90 hover:brightness-105`}
     >
       <div className="flex items-center gap-3">
-        <div className={`w-12 h-12 ${subject.color} rounded-xl flex items-center justify-center text-2xl shadow-sm
-          ${!hasContent ? 'grayscale' : ''}`}>
+        <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl">
           {subject.icon}
         </div>
         <div className="flex-1 min-w-0">
-          <p className="font-bold text-gray-800 text-base leading-tight truncate">{subject.name}</p>
-          {hasContent ? (
-            <p className="text-xs text-gray-400 mt-0.5">{completed}/{total} tópicos</p>
-          ) : (
-            <span className="inline-block text-xs font-semibold px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 mt-0.5">
-              Em breve
-            </span>
-          )}
+          <p className="font-extrabold text-white text-base leading-tight">{subject.name}</p>
+          <p className="text-xs text-white/80 mt-0.5">{completed}/{total} tópicos</p>
         </div>
-        {hasContent && <span className="text-gray-300 text-lg">›</span>}
+        <span className="text-white/70 text-2xl font-bold">›</span>
       </div>
 
-      {hasContent && (
-        <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
-          <div
-            className={`h-full ${subject.color} rounded-full transition-all duration-500`}
-            style={{ width: `${percent}%` }}
-          />
-        </div>
-      )}
+      {/* Barra de progresso branca */}
+      <div className="w-full h-2.5 bg-white/30 rounded-full overflow-hidden">
+        <div
+          className="h-full bg-white rounded-full transition-all duration-500"
+          style={{ width: `${percent}%` }}
+        />
+      </div>
     </button>
   )
 }

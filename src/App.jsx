@@ -7,6 +7,8 @@ import CalendarMonth from './components/CalendarMonth'
 import CalendarIcon from './components/CalendarIcon'
 import Mascot from './components/Mascot'
 import ConfirmModal from './components/ConfirmModal'
+import BottomNav from './components/BottomNav'
+import TopicTrail from './components/TopicTrail'
 import { useProgress } from './hooks/useProgress'
 import { shuffle } from './utils/shuffle'
 import { calcStars, calcXP } from './utils/scoring'
@@ -202,19 +204,29 @@ export default function App() {
 
   if (view === VIEWS.HOME) {
     const { mood, message } = getMascotState(user.name, user.streak.current, upcomingExams.length)
+    const subjectsWithContent = STUDY_SUBJECTS.filter(s => s.topics.length > 0)
+    const subjectsComingSoon  = STUDY_SUBJECTS.filter(s => s.topics.length === 0)
+    const heroSubject = subjectsWithContent[0] || null
 
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 pb-20">
         <Header user={user} onCalendarClick={() => setView(VIEWS.CALENDAR)} />
 
-        <main className="max-w-lg mx-auto px-4 py-5 space-y-4">
-          {/* Mascote / boas-vindas personalizado */}
-          <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-4 flex items-center gap-3">
+        <main className="max-w-lg mx-auto px-4 py-5 space-y-5">
+
+          {/* Boas-vindas + mascote inline */}
+          <div className="flex items-center gap-3 bg-yellow-50 border border-yellow-100 rounded-2xl px-4 py-3">
             <Mascot mood={mood} size="sm" />
-            <p className="text-sm font-medium text-yellow-800">{message}</p>
+            <p className="text-sm font-bold text-yellow-800 leading-snug flex-1">{message}</p>
+            {user.streak.current > 0 && (
+              <div className="flex flex-col items-center shrink-0">
+                <span className="text-2xl leading-none">🔥</span>
+                <span className="text-xs font-extrabold text-orange-500">{user.streak.current}</span>
+              </div>
+            )}
           </div>
 
-          {/* Alertas de provas e trabalhos próximos */}
+          {/* Alertas de provas */}
           {upcomingExams.length > 0 && (
             <div className="space-y-2">
               {upcomingExams.slice(0, 2).map(exam => {
@@ -226,11 +238,7 @@ export default function App() {
                 return (
                   <button
                     key={exam.id}
-                    onClick={() => {
-                      if (!canStudy) return
-                      setSelectedSubject(subj)
-                      setView(VIEWS.SUBJECT)
-                    }}
+                    onClick={() => { if (!canStudy) return; setSelectedSubject(subj); setView(VIEWS.SUBJECT) }}
                     className={`w-full bg-blue-50 border border-blue-200 rounded-2xl p-3 flex items-center gap-3 text-left transition-all
                       ${canStudy ? 'active:scale-95 hover:bg-blue-100 hover:border-blue-300' : 'cursor-default'}`}
                   >
@@ -238,34 +246,87 @@ export default function App() {
                     <p className="text-sm font-bold text-blue-800 flex-1">
                       {examAlertText(exam, subj?.name || exam.subject, days)}
                     </p>
-                    {canStudy && <span className="text-blue-400 text-lg">›</span>}
+                    {canStudy && <span className="text-blue-400 text-xl font-bold">›</span>}
                   </button>
                 )
               })}
             </div>
           )}
 
-          {/* Grid de matérias — apenas as que têm conteúdo de estudo */}
-          <h2 className="font-bold text-gray-700 text-base">Matérias</h2>
-          <div className="grid grid-cols-1 gap-3">
-            {STUDY_SUBJECTS.map(subject => {
-              const hasContent = subject.topics.length > 0
-              const progress   = getSubjectProgress(subject.id, subject.topics.length)
-              return (
-                <SubjectCard
-                  key={subject.id}
-                  subject={subject}
-                  progress={progress}
-                  hasContent={hasContent}
-                  onClick={() => {
-                    setSelectedSubject(subject)
-                    setView(VIEWS.SUBJECT)
-                  }}
-                />
-              )
-            })}
-          </div>
+          {/* Hero card — primeira matéria com conteúdo */}
+          {heroSubject && (() => {
+            const progress = getSubjectProgress(heroSubject.id, heroSubject.topics.length)
+            const firstIncompleteTopic = heroSubject.topics.find(t => !getTopicProgress(heroSubject.id, t.id).completed)
+              ?? heroSubject.topics[0]
+            return (
+              <div className={`${heroSubject.color} rounded-3xl p-5 shadow-lg text-white`}>
+                <div className="flex items-center gap-3 mb-3">
+                  <Mascot mood="neutro" size="sm" />
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-wide text-white/70">Estudar agora</p>
+                    <p className="text-xl font-extrabold">{heroSubject.name}</p>
+                  </div>
+                </div>
+                {firstIncompleteTopic && (
+                  <p className="text-sm text-white/80 mb-3">📖 {firstIncompleteTopic.title}</p>
+                )}
+                {/* Barra de progresso branca */}
+                <div className="w-full h-3 bg-white/30 rounded-full overflow-hidden mb-4">
+                  <div
+                    className="h-full bg-white rounded-full transition-all"
+                    style={{ width: `${progress.percent}%` }}
+                  />
+                </div>
+                <button
+                  onClick={() => { setSelectedSubject(heroSubject); setView(VIEWS.SUBJECT) }}
+                  className="w-full bg-white text-gray-800 font-extrabold rounded-2xl py-3 text-base border-b-4 active:border-b-2 active:translate-y-0.5 transition-all select-none"
+                  style={{ borderBottomColor: 'rgba(0,0,0,0.20)' }}
+                >
+                  Jogar agora 🎮
+                </button>
+              </div>
+            )
+          })()}
+
+          {/* Outras matérias com conteúdo */}
+          {subjectsWithContent.length > 1 && (
+            <div className="space-y-3">
+              <h2 className="font-extrabold text-gray-700 text-sm uppercase tracking-wide">Outras matérias</h2>
+              {subjectsWithContent.slice(1).map(subject => {
+                const progress = getSubjectProgress(subject.id, subject.topics.length)
+                return (
+                  <SubjectCard
+                    key={subject.id}
+                    subject={subject}
+                    progress={progress}
+                    onClick={() => { setSelectedSubject(subject); setView(VIEWS.SUBJECT) }}
+                  />
+                )
+              })}
+            </div>
+          )}
+
+          {/* Em breve — chips horizontais */}
+          {subjectsComingSoon.length > 0 && (
+            <div className="space-y-2">
+              <h2 className="font-extrabold text-gray-700 text-sm uppercase tracking-wide">Em breve</h2>
+              <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1 scrollbar-hide">
+                {subjectsComingSoon.map(s => (
+                  <div key={s.id} className="subject-chip shrink-0">
+                    <span>{s.icon}</span>
+                    <span>{s.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </main>
+
+        <BottomNav
+          activeView="home"
+          onHome={() => setView(VIEWS.HOME)}
+          onCalendar={() => setView(VIEWS.CALENDAR)}
+        />
       </div>
     )
   }
@@ -277,49 +338,27 @@ export default function App() {
   if (view === VIEWS.SUBJECT) {
     const subject = selectedSubject
     return (
-      <div className="min-h-screen bg-gray-50">
-        <div className="bg-white shadow-sm px-4 py-3 flex items-center gap-3 sticky top-0 z-10">
-          <button onClick={() => setView(VIEWS.HOME)} className="text-2xl" aria-label="Voltar">‹</button>
+      <div className="min-h-screen bg-gray-50 pb-6">
+        {/* Header colorido */}
+        <div className={`${subject.color} px-4 py-4 flex items-center gap-3 sticky top-0 z-10`}>
+          <button onClick={() => setView(VIEWS.HOME)} className="text-white text-2xl font-bold" aria-label="Voltar">‹</button>
           <span className="text-2xl">{subject.icon}</span>
-          <h1 className="font-bold text-gray-800 text-lg">{subject.name}</h1>
+          <h1 className="font-extrabold text-white text-lg flex-1">{subject.name}</h1>
         </div>
 
-        <main className="max-w-lg mx-auto px-4 py-5 space-y-3">
+        <main className="max-w-lg mx-auto pt-6">
           {subject.topics.length === 0 ? (
-            <div className="text-center py-16 space-y-3 flex flex-col items-center">
+            <div className="text-center py-16 space-y-3 flex flex-col items-center px-4">
               <Mascot mood="surpreso" size="lg" />
-              <p className="text-gray-500">Conteúdo em breve! Estamos preparando as questões.</p>
+              <p className="text-gray-500 font-semibold">Conteúdo em breve! Estamos preparando as questões. 🐥</p>
             </div>
           ) : (
-            subject.topics.map(topic => {
-              const tp = getTopicProgress(subject.id, topic.id)
-              return (
-                <button
-                  key={topic.id}
-                  onClick={() => startSession(subject, topic)}
-                  className="w-full bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-center gap-4 active:scale-95 transition-all hover:shadow-md text-left"
-                >
-                  <div className={`w-10 h-10 ${subject.color} rounded-xl flex items-center justify-center`}>
-                    {tp.completed ? (
-                      <span className="text-lg">
-                        {tp.stars === 3 ? '⭐' : tp.stars === 2 ? '🌟' : '✅'}
-                      </span>
-                    ) : (
-                      <span className="text-white font-bold text-sm">{topic.id.split('-')[1]}</span>
-                    )}
-                  </div>
-                  <div className="flex-1">
-                    <p className="font-semibold text-gray-800">{topic.title}</p>
-                    <p className="text-xs text-gray-400">{topic.questions.length} questões</p>
-                  </div>
-                  <div className="flex gap-0.5">
-                    {[1, 2, 3].map(s => (
-                      <span key={s} className={s <= tp.stars ? 'text-yellow-400' : 'text-gray-200'}>⭐</span>
-                    ))}
-                  </div>
-                </button>
-              )
-            })
+            <TopicTrail
+              subject={subject}
+              topics={subject.topics}
+              getTopicProgress={getTopicProgress}
+              onStart={(topic) => startSession(subject, topic)}
+            />
           )}
         </main>
       </div>
@@ -338,7 +377,7 @@ export default function App() {
           <button onClick={() => setView(VIEWS.SUBJECT)} className="text-2xl" aria-label="Fechar sessão">✕</button>
           <span className="text-base font-semibold text-gray-700 flex-1">{selectedTopic.title}</span>
         </div>
-        <main className="max-w-lg mx-auto px-4 py-5">
+        <main className="max-w-lg mx-auto px-4 py-5 pb-40">
           <ExerciseCard
             question={question}
             current={questionIndex + 1}
@@ -382,7 +421,7 @@ export default function App() {
 
   if (view === VIEWS.CALENDAR) {
     return (
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50 pb-20">
         {/* Header compacto + tab bar em container sticky único */}
         <div className="bg-white shadow-sm sticky top-0 z-10">
           <div className="px-4 py-3 flex items-center gap-3">
@@ -510,6 +549,12 @@ export default function App() {
             onCancel={() => setConfirmExamId(null)}
           />
         )}
+
+        <BottomNav
+          activeView="calendar"
+          onHome={() => setView(VIEWS.HOME)}
+          onCalendar={() => setView(VIEWS.CALENDAR)}
+        />
       </div>
     )
   }
