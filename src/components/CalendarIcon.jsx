@@ -1,7 +1,7 @@
 const MONTHS_SHORT = ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ']
 
-export default function CalendarIcon({ size = 'md' }) {
-  const today = new Date()
+export default function CalendarIcon({ size = 'md', date }) {
+  const today = date ? new Date(date) : new Date()
   const sizes = {
     sm: { wrapper: 'w-7 h-7', month: 7, day: 12 },
     md: { wrapper: 'w-9 h-9', month: 8, day: 14 },

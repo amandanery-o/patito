@@ -294,7 +294,7 @@ export default function App() {
                     className={`w-full bg-blue-50 border border-blue-200 rounded-2xl p-3 flex items-center gap-3 text-left transition-all
                       ${canStudy ? 'active:scale-95 hover:bg-blue-100 hover:border-blue-300' : 'cursor-default'}`}
                   >
-                    <CalendarIcon size="sm" />
+                    <CalendarIcon size="sm" date={exam.date} />
                     <p className="text-sm font-bold text-blue-800 flex-1">
                       {examAlertText(exam, subj?.name || exam.subject, days)}
                     </p>
