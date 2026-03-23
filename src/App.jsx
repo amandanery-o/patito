@@ -223,13 +223,13 @@ export default function App() {
 
         <main className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-6 md:px-10 py-5 sm:py-8 space-y-5 sm:space-y-6">
 
-          {/* Boas-vindas — mascote em destaque */}
-          <div className="bg-yellow-50 border border-yellow-100 rounded-3xl px-4 sm:px-8 pt-5 sm:pt-8 pb-4 sm:pb-6 flex flex-col items-center text-center gap-1">
-            <Mascot mood={mood} size="lg" />
-            <p className="text-base sm:text-xl md:text-2xl font-extrabold text-yellow-900 leading-snug mt-2">{message}</p>
+          {/* Boas-vindas — mascote hero proporcional à tela */}
+          <div className="bg-yellow-50 border border-yellow-100 rounded-3xl px-6 sm:px-10 pt-6 sm:pt-10 pb-5 sm:pb-8 flex flex-col items-center text-center gap-2">
+            <Mascot mood={mood} size="hero" />
+            <p className="text-lg sm:text-2xl md:text-3xl font-extrabold text-yellow-900 leading-snug mt-3">{message}</p>
             {user.streak.current > 0 && (
-              <div className="flex items-center gap-1.5 bg-orange-100 rounded-full px-3 sm:px-4 py-1 mt-2">
-                <span className="text-lg sm:text-2xl leading-none">🔥</span>
+              <div className="flex items-center gap-1.5 bg-orange-100 rounded-full px-4 py-1.5 mt-1">
+                <span className="text-xl leading-none">🔥</span>
                 <span className="text-sm sm:text-base font-extrabold text-orange-600">{user.streak.current} dias seguidos</span>
               </div>
             )}

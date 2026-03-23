@@ -6,11 +6,14 @@ import surpreso from '../assets/patito-surpreso.png'
 
 const IMAGES = { neutro, feliz, celebrando, triste, surpreso }
 
+// Tamanhos fixos para uso em componentes pequenos (header, cards)
 const SIZES = {
-  sm: 'w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24',
-  md: 'w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40',
-  lg: 'w-36 h-36 sm:w-48 sm:h-48 md:w-60 md:h-60 lg:w-72 lg:h-72',
-  xl: 'w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80',
+  sm: 'w-14 h-14 sm:w-16 sm:h-16',
+  md: 'w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28',
+  lg: 'w-32 h-32 sm:w-44 sm:h-44 md:w-52 md:h-52',
+  xl: 'w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64',
+  // hero: ocupa a largura do container e escala com a tela
+  hero: 'w-full max-w-[180px] sm:max-w-xs md:max-w-sm lg:max-w-md h-auto',
 }
 
 export default function Mascot({ mood = 'neutro', size = 'md', className = '' }) {
