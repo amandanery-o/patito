@@ -1,386 +1,662 @@
-import { useState, useCallback } from 'react'
+import { useState } from 'react'
 import Header from './components/Header'
 import SubjectCard from './components/SubjectCard'
 import ExerciseCard from './components/ExerciseCard'
 import ResultScreen from './components/ResultScreen'
-import TrophyModal from './components/TrophyModal'
-import ProgressBar from './components/ProgressBar'
+import CalendarMonth from './components/CalendarMonth'
+import CalendarIcon from './components/CalendarIcon'
+import Mascot from './components/Mascot'
+import ConfirmModal from './components/ConfirmModal'
+import BottomNav from './components/BottomNav'
+import TopicTrail from './components/TopicTrail'
 import { useProgress } from './hooks/useProgress'
-import { useStreak } from './hooks/useStreak'
-import { useXP } from './hooks/useXP'
-import { calculateStars, calculateXP, getEncouragementMessage } from './utils/scoring'
 import { shuffle } from './utils/shuffle'
+import { calcStars, calcXP } from './utils/scoring'
+import { daysUntil, formatDate } from './utils/dates'
+import { matematica } from './data/matematica'
 
-// Data imports
-import { subject as portugues } from './data/portugues'
-import { subject as matematica } from './data/matematica'
-import { subject as geografia } from './data/geografia'
-import { subject as ingles } from './data/ingles'
-import { subject as ciencias } from './data/ciencias'
-import { subject as historia } from './data/historia'
-import { subject as ensinoReligioso } from './data/ensino-religioso'
+// ---------------------------------------------------------------------------
+// Dados estáticos
+// ---------------------------------------------------------------------------
 
-const SUBJECTS = [portugues, matematica, geografia, ingles, ciencias, historia, ensinoReligioso]
+const SUBJECTS = [
+  { id: 'portugues',        name: 'Português',      icon: '📝', color: 'bg-blue-500',   topics: [],                calendarOnly: false },
+  { id: 'matematica',       name: 'Matemática',     icon: '🔢', color: 'bg-green-500',  topics: matematica.topics, calendarOnly: false },
+  { id: 'geografia',        name: 'Geografia',      icon: '🌍', color: 'bg-orange-500', topics: [],                calendarOnly: false },
+  { id: 'ingles',           name: 'Inglês',         icon: '🇬🇧', color: 'bg-purple-500', topics: [],                calendarOnly: false },
+  { id: 'ciencias',         name: 'Ciências',       icon: '🔬', color: 'bg-cyan-500',   topics: [],                calendarOnly: false },
+  { id: 'historia',         name: 'História',       icon: '📜', color: 'bg-amber-700',  topics: [],                calendarOnly: false },
+  { id: 'ensino-religioso', name: 'Ens. Religioso', icon: '✨', color: 'bg-yellow-500', topics: [],                calendarOnly: false },
+  { id: 'educacao-fisica',  name: 'Educ. Física',   icon: '⚽', color: 'bg-red-500',    topics: [],                calendarOnly: true  },
+  { id: 'arte',             name: 'Arte',           icon: '🎨', color: 'bg-pink-500',   topics: [],                calendarOnly: true  },
+]
 
-const colorConfig = {
-  blue: { header: 'bg-blue-500', light: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-700', btn: 'bg-blue-500 hover:bg-blue-600' },
-  green: { header: 'bg-green-500', light: 'bg-green-50', border: 'border-green-200', text: 'text-green-700', btn: 'bg-green-500 hover:bg-green-600' },
-  orange: { header: 'bg-orange-500', light: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-700', btn: 'bg-orange-500 hover:bg-orange-600' },
-  purple: { header: 'bg-purple-500', light: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-700', btn: 'bg-purple-500 hover:bg-purple-600' },
-  cyan: { header: 'bg-cyan-500', light: 'bg-cyan-50', border: 'border-cyan-200', text: 'text-cyan-700', btn: 'bg-cyan-500 hover:bg-cyan-600' },
-  amber: { header: 'bg-amber-600', light: 'bg-amber-50', border: 'border-amber-200', text: 'text-amber-700', btn: 'bg-amber-600 hover:bg-amber-700' },
-  yellow: { header: 'bg-yellow-400', light: 'bg-yellow-50', border: 'border-yellow-200', text: 'text-yellow-700', btn: 'bg-yellow-400 hover:bg-yellow-500' },
+const EXAM_TYPES = [
+  { id: 'trabalho',    label: 'Trabalho (T)', badge: 'bg-blue-100 text-blue-700'     },
+  { id: 'prova',       label: 'Prova (P)',    badge: 'bg-green-100 text-green-700'   },
+  { id: 'recuperacao', label: 'Recuperação',  badge: 'bg-orange-100 text-orange-700' },
+]
+
+const VIEWS = {
+  HOME:     'home',
+  SUBJECT:  'subject',
+  SESSION:  'session',
+  RESULT:   'result',
+  CALENDAR: 'calendar',
+  ADD_EXAM: 'add_exam',
 }
 
-// ========================
-// Home Screen
-// ========================
-function HomeScreen({ onSubjectSelect, progress, xpData, streak, trophyList }) {
-  return (
-    <div className="min-h-screen bg-gray-50 pb-8">
-      <div className="max-w-2xl mx-auto px-4 pt-6">
-        {/* Welcome banner */}
-        <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl p-5 mb-6 text-white shadow-md">
-          <h1 className="text-2xl font-bold mb-1">Olá, vamos estudar! 📚</h1>
-          <p className="text-blue-100 text-sm">Escolha uma matéria para começar</p>
-        </div>
+const EMPTY_EXAM_FORM = {
+  subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '',
+}
 
-        {/* Subject grid */}
-        <h2 className="text-lg font-bold text-gray-700 mb-3">Matérias</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          {SUBJECTS.map(subject => {
-            const pct = progress.getSubjectProgress(subject.id, subject.topics)
-            return (
-              <SubjectCard
-                key={subject.id}
-                subject={subject}
-                progress={pct}
-                onClick={() => onSubjectSelect(subject)}
-              />
-            )
-          })}
-        </div>
+// Matérias que aparecem no grid de estudo da home (exclui calendarOnly)
+const STUDY_SUBJECTS = SUBJECTS.filter(s => !s.calendarOnly)
 
-        {/* Trophies section if any */}
-        {xpData.trophies?.length > 0 && (
-          <div className="mt-6">
-            <h2 className="text-lg font-bold text-gray-700 mb-3">Meus Troféus 🏆</h2>
-            <div className="flex flex-wrap gap-2">
-              {xpData.trophies.map(trophyId => {
-                const trophy = trophyList?.find(t => t.id === trophyId)
-                if (!trophy) return null
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
+
+/** Gera o estado (mood + mensagem) do mascote na home. */
+function getMascotState(userName, streak, upcomingCount) {
+  if (streak > 0) {
+    return {
+      mood: 'feliz',
+      message: `Dia ${streak} de sequência, ${userName}! Continue assim! 🔥`,
+    }
+  }
+  if (upcomingCount > 0) {
+    return {
+      mood: 'neutro',
+      message: `Oi, ${userName}! Bora se preparar para as provas? 💪`,
+    }
+  }
+  return {
+    mood: 'feliz',
+    message: `Oi, ${userName}! Que matéria estudamos hoje? 📚`,
+  }
+}
+
+/** Texto do alerta de prova/trabalho na home. */
+function examAlertText(exam, subjName, days) {
+  const typeLabel = EXAM_TYPES.find(t => t.id === exam.type)?.label || 'Prova'
+  const daysText = days === 0 ? 'hoje!' : `em ${days} dia${days > 1 ? 's' : ''}!`
+
+  if (exam.type === 'prova') {
+    return `${typeLabel} de ${subjName} ${daysText} Bora revisar? 🐥`
+  }
+  return `${typeLabel} de ${subjName} ${daysText} Fique atento! 📌`
+}
+
+// ---------------------------------------------------------------------------
+// Componente principal
+// ---------------------------------------------------------------------------
+
+export default function App() {
+  const [view, setView]                     = useState(VIEWS.HOME)
+  const [selectedSubject, setSelectedSubject] = useState(null)
+  const [selectedTopic, setSelectedTopic]   = useState(null)
+  const [sessionQuestions, setSessionQuestions] = useState([])
+  const [questionIndex, setQuestionIndex]   = useState(0)
+  const [correct, setCorrect]               = useState(0)
+  const [lives, setLives]                   = useState(3)
+  const [sessionXP, setSessionXP]           = useState(0)
+  const [finalStars, setFinalStars]         = useState(0)
+  const [finalXP, setFinalXP]               = useState(0)
+  const [examForm, setExamForm]             = useState(EMPTY_EXAM_FORM)
+  const [editingExamId, setEditingExamId]   = useState(null)
+  const [calendarView, setCalendarView]     = useState('month')
+  const [confirmExamId, setConfirmExamId]   = useState(null)
+
+  const {
+    user, exams,
+    updateTopicProgress, getTopicProgress, getSubjectProgress,
+    addExam, updateExam, removeExam, getUpcomingExams,
+  } = useProgress()
+
+  const upcomingExams = getUpcomingExams(7)
+
+  // -------------------------------------------------------------------------
+  // Handlers de sessão
+  // -------------------------------------------------------------------------
+
+  function startSession(subject, topic) {
+    setSelectedSubject(subject)
+    setSelectedTopic(topic)
+    setSessionQuestions(shuffle(topic.questions).slice(0, 10))
+    setQuestionIndex(0)
+    setCorrect(0)
+    setLives(3)
+    setSessionXP(0)
+    setView(VIEWS.SESSION)
+  }
+
+  function handleAnswer(isCorrect) {
+    const newCorrect = isCorrect ? correct + 1 : correct
+    const newLives   = isCorrect ? lives : lives - 1
+    const newXP      = isCorrect ? sessionXP + 10 : sessionXP
+
+    setCorrect(newCorrect)
+    setLives(newLives)
+    setSessionXP(newXP)
+
+    const nextIndex      = questionIndex + 1
+    const isLastQuestion = nextIndex >= sessionQuestions.length
+    const outOfLives     = newLives <= 0
+
+    if (isLastQuestion || outOfLives) {
+      const stars = calcStars(newCorrect, sessionQuestions.length)
+      const xp    = calcXP(newCorrect, sessionQuestions.length)
+      setFinalStars(stars)
+      setFinalXP(xp)
+      updateTopicProgress(selectedSubject.id, selectedTopic.id, stars, xp)
+      setView(VIEWS.RESULT)
+    } else {
+      setQuestionIndex(nextIndex)
+    }
+  }
+
+  // -------------------------------------------------------------------------
+  // Handlers de exames
+  // -------------------------------------------------------------------------
+
+  function handleAddExam(e) {
+    e.preventDefault()
+    if (!examForm.date) return
+    if (editingExamId) {
+      updateExam(editingExamId, examForm)
+      setEditingExamId(null)
+    } else {
+      addExam(examForm)
+    }
+    setExamForm(EMPTY_EXAM_FORM)
+    setView(VIEWS.CALENDAR)
+  }
+
+  function startEditExam(exam) {
+    setExamForm({
+      subject: exam.subject,
+      type:    exam.type    || 'prova',
+      weight:  exam.weight  || '',
+      date:    exam.date,
+      time:    exam.time    || '',
+      content: exam.content || '',
+      notes:   exam.notes   || '',
+    })
+    setEditingExamId(exam.id)
+    setView(VIEWS.ADD_EXAM)
+  }
+
+  function openAddExam() {
+    setEditingExamId(null)
+    setExamForm(EMPTY_EXAM_FORM)
+    setView(VIEWS.ADD_EXAM)
+  }
+
+  function cancelAddExam() {
+    setEditingExamId(null)
+    setView(VIEWS.CALENDAR)
+  }
+
+  // -------------------------------------------------------------------------
+  // VIEW: HOME
+  // -------------------------------------------------------------------------
+
+  if (view === VIEWS.HOME) {
+    const { mood, message } = getMascotState(user.name, user.streak.current, upcomingExams.length)
+    const subjectsWithContent = STUDY_SUBJECTS.filter(s => s.topics.length > 0)
+    const subjectsComingSoon  = STUDY_SUBJECTS.filter(s => s.topics.length === 0)
+    const heroSubject = subjectsWithContent[0] || null
+
+    return (
+      <div className="min-h-screen bg-gray-50 pb-20">
+        <Header user={user} onCalendarClick={() => setView(VIEWS.CALENDAR)} />
+
+        <main className="max-w-lg mx-auto px-4 py-5 space-y-5">
+
+          {/* Boas-vindas + mascote inline */}
+          <div className="flex items-center gap-3 bg-yellow-50 border border-yellow-100 rounded-2xl px-4 py-3">
+            <Mascot mood={mood} size="sm" />
+            <p className="text-sm font-bold text-yellow-800 leading-snug flex-1">{message}</p>
+            {user.streak.current > 0 && (
+              <div className="flex flex-col items-center shrink-0">
+                <span className="text-2xl leading-none">🔥</span>
+                <span className="text-xs font-extrabold text-orange-500">{user.streak.current}</span>
+              </div>
+            )}
+          </div>
+
+          {/* Alertas de provas */}
+          {upcomingExams.length > 0 && (
+            <div className="space-y-2">
+              {upcomingExams.slice(0, 2).map(exam => {
+                const days     = daysUntil(exam.date)
+                const subj     = SUBJECTS.find(s => s.id === exam.subject)
+                const isProva  = exam.type === 'prova'
+                const canStudy = isProva && subj && !subj.calendarOnly
+
                 return (
-                  <div key={trophyId} className="bg-white border border-yellow-200 rounded-xl px-3 py-2 flex items-center gap-2">
-                    <span>{trophy.icon}</span>
-                    <span className="text-sm font-medium text-gray-700">{trophy.name}</span>
-                  </div>
+                  <button
+                    key={exam.id}
+                    onClick={() => { if (!canStudy) return; setSelectedSubject(subj); setView(VIEWS.SUBJECT) }}
+                    className={`w-full bg-blue-50 border border-blue-200 rounded-2xl p-3 flex items-center gap-3 text-left transition-all
+                      ${canStudy ? 'active:scale-95 hover:bg-blue-100 hover:border-blue-300' : 'cursor-default'}`}
+                  >
+                    <CalendarIcon size="sm" />
+                    <p className="text-sm font-bold text-blue-800 flex-1">
+                      {examAlertText(exam, subj?.name || exam.subject, days)}
+                    </p>
+                    {canStudy && <span className="text-blue-400 text-xl font-bold">›</span>}
+                  </button>
                 )
               })}
             </div>
-          </div>
-        )}
-      </div>
-    </div>
-  )
-}
+          )}
 
-// ========================
-// Subject Screen
-// ========================
-function SubjectScreen({ subject, onBack, onStartTopic, progress }) {
-  const colors = colorConfig[subject.color] || colorConfig.blue
-
-  return (
-    <div className="min-h-screen bg-gray-50 pb-8">
-      {/* Subject header */}
-      <div className={`${colors.header} text-white px-4 pt-4 pb-6 shadow-md`}>
-        <div className="max-w-2xl mx-auto">
-          <button
-            onClick={onBack}
-            className="flex items-center gap-2 text-white text-opacity-80 hover:text-opacity-100 mb-3 text-sm font-medium"
-          >
-            ← Voltar
-          </button>
-          <div className="flex items-center gap-3">
-            <span className="text-4xl">{subject.icon}</span>
-            <div>
-              <h1 className="text-2xl font-bold">{subject.name}</h1>
-              <p className="text-white text-opacity-80 text-sm">
-                {subject.topics?.length} tópicos disponíveis
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Topics list */}
-      <div className="max-w-2xl mx-auto px-4 pt-5 space-y-3">
-        {subject.topics?.map((topic, index) => {
-          const topicProg = progress.getTopicProgress(subject.id, topic.id)
-          const isLocked = index > 0 && !progress.getTopicProgress(subject.id, subject.topics[index - 1].id).completed
-
-          return (
-            <div
-              key={topic.id}
-              className={`bg-white rounded-2xl p-4 border-2 ${isLocked ? 'border-gray-100 opacity-60' : `${colors.border}`} shadow-sm`}
-            >
-              <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-sm font-medium text-gray-500">Tópico {index + 1}</span>
-                    {isLocked && <span className="text-gray-400 text-sm">🔒</span>}
-                  </div>
-                  <h3 className="font-bold text-gray-800 text-base">{topic.title}</h3>
-                  <p className="text-gray-500 text-sm">{topic.questions?.length} questões</p>
-
-                  {/* Stars */}
-                  <div className="flex gap-1 mt-1">
-                    {[1, 2, 3].map(n => (
-                      <span key={n} className={`text-lg ${topicProg.stars >= n ? 'text-yellow-400' : 'text-gray-200'}`}>⭐</span>
-                    ))}
+          {/* Hero card — primeira matéria com conteúdo */}
+          {heroSubject && (() => {
+            const progress = getSubjectProgress(heroSubject.id, heroSubject.topics.length)
+            const firstIncompleteTopic = heroSubject.topics.find(t => !getTopicProgress(heroSubject.id, t.id).completed)
+              ?? heroSubject.topics[0]
+            return (
+              <div className={`${heroSubject.color} rounded-3xl p-5 shadow-lg text-white`}>
+                <div className="flex items-center gap-3 mb-3">
+                  <Mascot mood="neutro" size="sm" />
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-wide text-white/70">Estudar agora</p>
+                    <p className="text-xl font-extrabold">{heroSubject.name}</p>
                   </div>
                 </div>
-
-                {!isLocked && (
-                  <button
-                    onClick={() => onStartTopic(topic)}
-                    className={`${colors.btn} text-white font-bold px-5 py-2.5 rounded-xl text-sm transition-all active:scale-95`}
-                    style={{ minHeight: '44px' }}
-                  >
-                    {topicProg.completed ? 'Repetir' : 'Começar'}
-                  </button>
+                {firstIncompleteTopic && (
+                  <p className="text-sm text-white/80 mb-3">📖 {firstIncompleteTopic.title}</p>
                 )}
+                {/* Barra de progresso branca */}
+                <div className="w-full h-3 bg-white/30 rounded-full overflow-hidden mb-4">
+                  <div
+                    className="h-full bg-white rounded-full transition-all"
+                    style={{ width: `${progress.percent}%` }}
+                  />
+                </div>
+                <button
+                  onClick={() => { setSelectedSubject(heroSubject); setView(VIEWS.SUBJECT) }}
+                  className="w-full bg-white text-gray-800 font-extrabold rounded-2xl py-3 text-base border-b-4 active:border-b-2 active:translate-y-0.5 transition-all select-none"
+                  style={{ borderBottomColor: 'rgba(0,0,0,0.20)' }}
+                >
+                  Jogar agora 🎮
+                </button>
+              </div>
+            )
+          })()}
+
+          {/* Outras matérias com conteúdo */}
+          {subjectsWithContent.length > 1 && (
+            <div className="space-y-3">
+              <h2 className="font-extrabold text-gray-700 text-sm uppercase tracking-wide">Outras matérias</h2>
+              {subjectsWithContent.slice(1).map(subject => {
+                const progress = getSubjectProgress(subject.id, subject.topics.length)
+                return (
+                  <SubjectCard
+                    key={subject.id}
+                    subject={subject}
+                    progress={progress}
+                    onClick={() => { setSelectedSubject(subject); setView(VIEWS.SUBJECT) }}
+                  />
+                )
+              })}
+            </div>
+          )}
+
+          {/* Em breve — chips horizontais */}
+          {subjectsComingSoon.length > 0 && (
+            <div className="space-y-2">
+              <h2 className="font-extrabold text-gray-700 text-sm uppercase tracking-wide">Em breve</h2>
+              <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1 scrollbar-hide">
+                {subjectsComingSoon.map(s => (
+                  <div key={s.id} className="subject-chip shrink-0">
+                    <span>{s.icon}</span>
+                    <span>{s.name}</span>
+                  </div>
+                ))}
               </div>
             </div>
-          )
-        })}
+          )}
+        </main>
+
+        <BottomNav
+          activeView="home"
+          onHome={() => setView(VIEWS.HOME)}
+          onCalendar={() => setView(VIEWS.CALENDAR)}
+        />
       </div>
-    </div>
-  )
-}
-
-// ========================
-// Exercise Screen
-// ========================
-function ExerciseScreen({ subject, topic, onComplete, onBack }) {
-  const [questions] = useState(() => shuffle([...topic.questions]))
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [answers, setAnswers] = useState([])
-  const [lives, setLives] = useState(3)
-  const [sessionXP, setSessionXP] = useState(0)
-
-  const colors = colorConfig[subject.color] || colorConfig.blue
-  const currentQuestion = questions[currentIndex]
-  const totalQuestions = questions.length
-  const correctCount = answers.filter(Boolean).length
-
-  function handleAnswer(isCorrect) {
-    const newAnswers = [...answers, isCorrect]
-    setAnswers(newAnswers)
-
-    if (isCorrect) {
-      setSessionXP(prev => prev + 10)
-    } else {
-      setLives(prev => Math.max(0, prev - 1))
-    }
-
-    const nextIndex = currentIndex + 1
-    if (nextIndex >= totalQuestions || (!isCorrect && lives <= 1)) {
-      // Session complete
-      const finalCorrect = newAnswers.filter(Boolean).length
-      const finalTotal = newAnswers.length
-      setTimeout(() => onComplete(finalCorrect, finalTotal, newAnswers), 500)
-    } else {
-      setCurrentIndex(nextIndex)
-    }
+    )
   }
 
-  return (
-    <div className="min-h-screen bg-gray-50 pb-8">
-      {/* Exercise header */}
-      <div className={`${colors.header} text-white px-4 pt-3 pb-4`}>
-        <div className="max-w-2xl mx-auto">
-          <div className="flex items-center justify-between mb-3">
-            <button onClick={onBack} className="text-white text-opacity-80 hover:text-opacity-100 text-sm font-medium">
-              ✕
-            </button>
-            <span className="text-sm font-medium">{topic.title}</span>
-            {/* Session XP */}
-            <div className="bg-white bg-opacity-20 rounded-full px-3 py-1 text-sm font-bold">
-              ⭐ {sessionXP} XP
+  // -------------------------------------------------------------------------
+  // VIEW: SUBJECT — lista de tópicos
+  // -------------------------------------------------------------------------
+
+  if (view === VIEWS.SUBJECT) {
+    const subject = selectedSubject
+    return (
+      <div className="min-h-screen bg-gray-50 pb-6">
+        {/* Header colorido */}
+        <div className={`${subject.color} px-4 py-4 flex items-center gap-3 sticky top-0 z-10`}>
+          <button onClick={() => setView(VIEWS.HOME)} className="text-white text-2xl font-bold" aria-label="Voltar">‹</button>
+          <span className="text-2xl">{subject.icon}</span>
+          <h1 className="font-extrabold text-white text-lg flex-1">{subject.name}</h1>
+        </div>
+
+        <main className="max-w-lg mx-auto pt-6">
+          {subject.topics.length === 0 ? (
+            <div className="text-center py-16 space-y-3 flex flex-col items-center px-4">
+              <Mascot mood="surpreso" size="lg" />
+              <p className="text-gray-500 font-semibold">Conteúdo em breve! Estamos preparando as questões. 🐥</p>
             </div>
+          ) : (
+            <TopicTrail
+              subject={subject}
+              topics={subject.topics}
+              getTopicProgress={getTopicProgress}
+              onStart={(topic) => startSession(subject, topic)}
+            />
+          )}
+        </main>
+      </div>
+    )
+  }
+
+  // -------------------------------------------------------------------------
+  // VIEW: SESSION — exercícios
+  // -------------------------------------------------------------------------
+
+  if (view === VIEWS.SESSION) {
+    const question = sessionQuestions[questionIndex]
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <div className="bg-white shadow-sm px-4 py-3 flex items-center gap-3 sticky top-0 z-10">
+          <button onClick={() => setView(VIEWS.SUBJECT)} className="text-2xl" aria-label="Fechar sessão">✕</button>
+          <span className="text-base font-semibold text-gray-700 flex-1">{selectedTopic.title}</span>
+        </div>
+        <main className="max-w-lg mx-auto px-4 py-5 pb-40">
+          <ExerciseCard
+            question={question}
+            current={questionIndex + 1}
+            total={sessionQuestions.length}
+            lives={lives}
+            xp={sessionXP}
+            onAnswer={handleAnswer}
+          />
+        </main>
+      </div>
+    )
+  }
+
+  // -------------------------------------------------------------------------
+  // VIEW: RESULT
+  // -------------------------------------------------------------------------
+
+  if (view === VIEWS.RESULT) {
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <div className="bg-white shadow-sm px-4 py-3">
+          <h1 className="font-bold text-gray-800 text-center">Resultado</h1>
+        </div>
+        <main className="max-w-lg mx-auto">
+          <ResultScreen
+            stars={finalStars}
+            xp={finalXP}
+            correct={correct}
+            total={sessionQuestions.length}
+            onContinue={() => setView(VIEWS.SUBJECT)}
+            onHome={() => setView(VIEWS.HOME)}
+          />
+        </main>
+      </div>
+    )
+  }
+
+  // -------------------------------------------------------------------------
+  // VIEW: CALENDAR — calendário de provas
+  // -------------------------------------------------------------------------
+
+  if (view === VIEWS.CALENDAR) {
+    return (
+      <div className="min-h-screen bg-gray-50 pb-20">
+        {/* Header compacto + tab bar em container sticky único */}
+        <div className="bg-white shadow-sm sticky top-0 z-10">
+          <div className="px-4 py-3 flex items-center gap-3">
+            <button onClick={() => setView(VIEWS.HOME)} className="text-2xl" aria-label="Voltar">‹</button>
+            <CalendarIcon size="sm" />
+            <h1 className="font-bold text-gray-800 text-lg flex-1">Provas</h1>
+            <button
+              onClick={openAddExam}
+              className="w-9 h-9 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl flex items-center justify-center text-xl active:scale-95 transition-all"
+              aria-label="Adicionar atividade"
+            >
+              +
+            </button>
           </div>
 
-          {/* Progress bar */}
-          <div className="mb-2">
-            <ProgressBar value={currentIndex} max={totalQuestions} color="white" height="h-2" />
-          </div>
-
-          <div className="flex items-center justify-between text-white text-opacity-80 text-xs">
-            <span>{currentIndex + 1}/{totalQuestions}</span>
-            {/* Lives */}
-            <div className="flex gap-1">
-              {[1, 2, 3].map(n => (
-                <span key={n} className={`text-lg ${lives >= n ? '' : 'opacity-20'}`}>❤️</span>
-              ))}
+          {/* Toggle Mês / Lista */}
+          <div className="px-4 pb-2 border-t border-gray-50">
+            <div className="flex bg-gray-100 rounded-xl p-0.5 text-sm font-semibold w-fit">
+              <button
+                onClick={() => setCalendarView('month')}
+                className={`px-4 py-1.5 rounded-lg transition-all ${calendarView === 'month' ? 'bg-white shadow text-blue-600' : 'text-gray-500'}`}
+              >
+                Mês
+              </button>
+              <button
+                onClick={() => setCalendarView('list')}
+                className={`px-4 py-1.5 rounded-lg transition-all ${calendarView === 'list' ? 'bg-white shadow text-blue-600' : 'text-gray-500'}`}
+              >
+                Lista
+              </button>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Exercise content */}
-      <div className="max-w-2xl mx-auto px-4 pt-5">
-        {currentQuestion && (
-          <ExerciseCard
-            key={`${topic.id}-${currentIndex}`}
-            question={currentQuestion}
-            onAnswer={handleAnswer}
+        <main className="max-w-lg mx-auto px-4 py-5 space-y-5">
+          {/* Visão mensal */}
+          {calendarView === 'month' && (
+            <CalendarMonth
+              exams={exams}
+              subjects={SUBJECTS}
+              examTypes={EXAM_TYPES}
+              onEdit={startEditExam}
+              onRemove={removeExam}
+            />
+          )}
+
+          {/* Visão de lista */}
+          {calendarView === 'list' && (
+            <div>
+              <h2 className="font-bold text-gray-700 mb-3">Suas Atividades</h2>
+              {exams.length === 0 ? (
+                <div className="text-center py-10 space-y-2 flex flex-col items-center">
+                  <Mascot mood="neutro" size="md" />
+                  <p className="text-gray-400 text-sm">Nenhuma atividade cadastrada ainda!</p>
+                </div>
+              ) : (
+                <div className="space-y-2">
+                  {[...exams]
+                    .sort((a, b) => new Date(a.date) - new Date(b.date))
+                    .map(exam => {
+                      const subj = SUBJECTS.find(s => s.id === exam.subject)
+                      const days = daysUntil(exam.date)
+                      const et   = EXAM_TYPES.find(t => t.id === exam.type)
+                      return (
+                        <div
+                          key={exam.id}
+                          className={`bg-white rounded-2xl p-4 shadow-sm border flex gap-3
+                            ${days <= 1 ? 'border-red-200' : days <= 3 ? 'border-yellow-200' : 'border-gray-100'}`}
+                        >
+                          {/* Ícone da matéria */}
+                          <div className={`w-10 h-10 shrink-0 ${subj?.color || 'bg-gray-400'} rounded-xl flex items-center justify-center text-xl`}>
+                            {subj?.icon || '📚'}
+                          </div>
+
+                          {/* Conteúdo */}
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <p className="font-semibold text-gray-800">{subj?.name || exam.subject}</p>
+                              {et && (
+                                <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${et.badge}`}>
+                                  {et.label}
+                                </span>
+                              )}
+                              {exam.weight && (
+                                <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">
+                                  Peso {exam.weight}
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-xs text-gray-500">
+                              {formatDate(exam.date)}{exam.time ? ` às ${exam.time}` : ''}
+                              {days === 0 ? ' — hoje!' : days > 0 ? ` — em ${days} dia${days > 1 ? 's' : ''}` : ' — passou'}
+                            </p>
+                            {exam.content && <p className="text-xs text-gray-500 mt-0.5">{exam.content}</p>}
+                            {exam.notes && <p className="text-xs text-gray-400 mt-0.5">📌 {exam.notes}</p>}
+                          </div>
+
+                          {/* Ações */}
+                          <div className="flex gap-2 shrink-0 items-start">
+                            <button
+                              onClick={() => startEditExam(exam)}
+                              className="text-gray-300 hover:text-blue-400 text-lg transition-colors"
+                              aria-label="Editar"
+                            >✏️</button>
+                            <button
+                              onClick={() => setConfirmExamId(exam.id)}
+                              className="text-gray-300 hover:text-red-400 text-xl transition-colors"
+                              aria-label="Remover"
+                            >✕</button>
+                          </div>
+                        </div>
+                      )
+                    })}
+                </div>
+              )}
+            </div>
+          )}
+        </main>
+
+        {/* Confirmação de remoção (lista) */}
+        {confirmExamId && (
+          <ConfirmModal
+            message="Remover esta atividade do calendário?"
+            onConfirm={() => { removeExam(confirmExamId); setConfirmExamId(null) }}
+            onCancel={() => setConfirmExamId(null)}
           />
         )}
+
+        <BottomNav
+          activeView="calendar"
+          onHome={() => setView(VIEWS.HOME)}
+          onCalendar={() => setView(VIEWS.CALENDAR)}
+        />
       </div>
-    </div>
-  )
-}
-
-// ========================
-// Main App
-// ========================
-export default function App() {
-  const [screen, setScreen] = useState('home') // 'home' | 'subject' | 'exercise' | 'result'
-  const [selectedSubject, setSelectedSubject] = useState(null)
-  const [selectedTopic, setSelectedTopic] = useState(null)
-  const [resultData, setResultData] = useState(null)
-  const [newTrophies, setNewTrophies] = useState([])
-
-  const progress = useProgress()
-  const { streak, recordStudy } = useStreak()
-  const { xpData, addXP, calculateSessionXP, TROPHIES } = useXP()
-
-  function handleSubjectSelect(subject) {
-    setSelectedSubject(subject)
-    setScreen('subject')
+    )
   }
 
-  function handleStartTopic(topic) {
-    setSelectedTopic(topic)
-    setScreen('exercise')
+  // -------------------------------------------------------------------------
+  // VIEW: ADD_EXAM — adicionar / editar atividade
+  // -------------------------------------------------------------------------
+
+  if (view === VIEWS.ADD_EXAM) {
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <div className="bg-white shadow-sm px-4 py-3 flex items-center gap-3 sticky top-0 z-10">
+          <button onClick={cancelAddExam} className="text-2xl" aria-label="Voltar">‹</button>
+          <h1 className="font-bold text-gray-800 text-lg">
+            {editingExamId ? 'Editar Atividade' : 'Nova Atividade'}
+          </h1>
+        </div>
+
+        <main className="max-w-lg mx-auto px-4 py-5">
+          <form onSubmit={handleAddExam} className="space-y-4">
+            <div>
+              <label className="text-sm text-gray-500 block mb-1">Matéria</label>
+              <select
+                value={examForm.subject}
+                onChange={e => setExamForm(f => ({ ...f, subject: e.target.value }))}
+                className="w-full border border-gray-200 rounded-xl p-3 text-base bg-white"
+              >
+                {SUBJECTS.map(s => (
+                  <option key={s.id} value={s.id}>{s.icon} {s.name}</option>
+                ))}
+              </select>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="text-sm text-gray-500 block mb-1">Tipo</label>
+                <select
+                  value={examForm.type}
+                  onChange={e => setExamForm(f => ({ ...f, type: e.target.value }))}
+                  className="w-full border border-gray-200 rounded-xl p-3 text-base bg-white"
+                >
+                  {EXAM_TYPES.map(t => (
+                    <option key={t.id} value={t.id}>{t.label}</option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label className="text-sm text-gray-500 block mb-1">Peso</label>
+                <input
+                  type="number"
+                  step="0.5"
+                  min="0"
+                  max="10"
+                  placeholder="Ex: 2"
+                  value={examForm.weight}
+                  onChange={e => setExamForm(f => ({ ...f, weight: e.target.value }))}
+                  className="w-full border border-gray-200 rounded-xl p-3 text-base"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="text-sm text-gray-500 block mb-1">Data</label>
+              <input
+                type="date"
+                required
+                value={examForm.date}
+                onChange={e => setExamForm(f => ({ ...f, date: e.target.value }))}
+                className="w-full border border-gray-200 rounded-xl p-3 text-base"
+              />
+            </div>
+
+            <div>
+              <label className="text-sm text-gray-500 block mb-1">O que vai cair (opcional)</label>
+              <textarea
+                placeholder="Ex: Frações, medidas de comprimento, capítulos 4 e 5"
+                value={examForm.content}
+                onChange={e => setExamForm(f => ({ ...f, content: e.target.value }))}
+                rows={3}
+                className="w-full border border-gray-200 rounded-xl p-3 text-base resize-none"
+              />
+            </div>
+
+            <div>
+              <label className="text-sm text-gray-500 block mb-1">Observações (opcional)</label>
+              <input
+                type="text"
+                placeholder="Ex: Trazer régua e compasso"
+                value={examForm.notes}
+                onChange={e => setExamForm(f => ({ ...f, notes: e.target.value }))}
+                className="w-full border border-gray-200 rounded-xl p-3 text-base"
+              />
+            </div>
+
+            <button type="submit" className="w-full btn-duo-blue">
+              {editingExamId ? 'Salvar alterações ✏️' : 'Adicionar'}
+            </button>
+          </form>
+        </main>
+      </div>
+    )
   }
 
-  function handleExerciseComplete(correctAnswers, totalQuestions) {
-    const stars = calculateStars(correctAnswers, totalQuestions)
-    const { total: xpEarned, isPerfect } = calculateXP(correctAnswers, totalQuestions)
-    const message = getEncouragementMessage(correctAnswers, totalQuestions)
-
-    // Update progress
-    progress.updateTopicProgress(selectedSubject.id, selectedTopic.id, {
-      stars,
-      score: correctAnswers,
-      total: totalQuestions
-    })
-
-    // Record streak
-    recordStudy()
-
-    // Add XP and check for trophies
-    const earned = addXP(xpEarned, {
-      isPerfect,
-      streak: streak.current + 1,
-      subjectsWithCompletion: Object.keys(xpData).length,
-      totalTopicsCompleted: Object.values(progress.progress).reduce((acc, s) => {
-        return acc + Object.values(s).filter(t => t.completed).length
-      }, 0)
-    })
-
-    if (earned && earned.length > 0) {
-      setNewTrophies(earned)
-    }
-
-    setResultData({ stars, xpEarned, message, correctAnswers, totalQuestions })
-    setScreen('result')
-  }
-
-  function handleContinue() {
-    // Go to next topic in same subject
-    if (selectedSubject && selectedTopic) {
-      const topicIndex = selectedSubject.topics.findIndex(t => t.id === selectedTopic.id)
-      if (topicIndex < selectedSubject.topics.length - 1) {
-        const nextTopic = selectedSubject.topics[topicIndex + 1]
-        setSelectedTopic(nextTopic)
-        setScreen('exercise')
-        return
-      }
-    }
-    setScreen('subject')
-  }
-
-  function handleGoHome() {
-    setScreen('home')
-    setSelectedSubject(null)
-    setSelectedTopic(null)
-  }
-
-  // Resolve trophy objects from IDs
-  const resolvedTrophies = newTrophies.length > 0 ? newTrophies : []
-
-  return (
-    <>
-      {/* Global header - only on home and subject screens */}
-      {(screen === 'home' || screen === 'subject') && (
-        <Header
-          user={{ name: 'Estudante', avatar: '🦁' }}
-          xp={xpData.totalXP}
-          streak={streak}
-        />
-      )}
-
-      {/* Screens */}
-      {screen === 'home' && (
-        <HomeScreen
-          onSubjectSelect={handleSubjectSelect}
-          progress={progress}
-          xpData={xpData}
-          streak={streak}
-          trophyList={TROPHIES}
-        />
-      )}
-
-      {screen === 'subject' && selectedSubject && (
-        <SubjectScreen
-          subject={selectedSubject}
-          onBack={() => setScreen('home')}
-          onStartTopic={handleStartTopic}
-          progress={progress}
-        />
-      )}
-
-      {screen === 'exercise' && selectedSubject && selectedTopic && (
-        <ExerciseScreen
-          subject={selectedSubject}
-          topic={selectedTopic}
-          onComplete={handleExerciseComplete}
-          onBack={() => setScreen('subject')}
-        />
-      )}
-
-      {screen === 'result' && resultData && (
-        <ResultScreen
-          stars={resultData.stars}
-          xpEarned={resultData.xpEarned}
-          message={resultData.message}
-          correctAnswers={resultData.correctAnswers}
-          totalQuestions={resultData.totalQuestions}
-          onContinue={handleContinue}
-          onHome={handleGoHome}
-        />
-      )}
-
-      {/* Trophy modal */}
-      {resolvedTrophies.length > 0 && (
-        <TrophyModal
-          trophies={resolvedTrophies}
-          onClose={() => setNewTrophies([])}
-        />
-      )}
-    </>
-  )
+  return null
 }

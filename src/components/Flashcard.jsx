@@ -1,81 +1,62 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export default function Flashcard({ question, onAnswer }) {
   const [flipped, setFlipped] = useState(false)
-  const [answered, setAnswered] = useState(false)
 
-  function handleFlip() {
-    if (!answered) setFlipped(true)
-  }
-
-  function handleAnswer(isCorrect) {
-    if (answered) return
-    setAnswered(true)
-    setTimeout(() => {
-      onAnswer(isCorrect)
-      setFlipped(false)
-      setAnswered(false)
-    }, 300)
-  }
+  useEffect(() => {
+    setFlipped(false)
+  }, [question.id])
 
   return (
     <div className="space-y-4">
-      {/* Flip Card */}
-      <div className="flip-card w-full" style={{ height: '200px' }} onClick={!flipped ? handleFlip : undefined}>
-        <div className={`flip-card-inner ${flipped ? 'flipped' : ''}`}>
-          {/* Front */}
-          <div className="flip-card-front bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex flex-col items-center justify-center p-6 cursor-pointer shadow-lg">
-            <span className="text-white text-opacity-80 text-sm mb-2 font-medium">PERGUNTA</span>
-            <p className="text-white text-center text-lg font-bold leading-snug">
-              {question.question}
-            </p>
-            {!flipped && (
-              <p className="text-blue-100 text-sm mt-4 animate-pulse">
-                Toque para virar o cartão 👆
-              </p>
-            )}
-          </div>
+      <p className="text-sm text-gray-500 text-center">Toque no cartão para ver a resposta</p>
 
-          {/* Back */}
-          <div className="flip-card-back bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex flex-col items-center justify-center p-6 shadow-lg">
-            <span className="text-white text-opacity-80 text-sm mb-2 font-medium">RESPOSTA</span>
-            <p className="text-white text-center text-base font-medium leading-relaxed">
-              {question.correct}
-            </p>
+      <div
+        className="relative w-full cursor-pointer"
+        style={{ perspective: '1000px', height: '220px' }}
+        onClick={() => setFlipped(f => !f)}
+      >
+        <div
+          className="absolute inset-0 transition-transform duration-500"
+          style={{
+            transformStyle: 'preserve-3d',
+            transform: flipped ? 'rotateY(180deg)' : 'rotateY(0deg)',
+          }}
+        >
+          {/* Frente */}
+          <div
+            className="absolute inset-0 bg-white border-2 border-blue-200 rounded-2xl flex flex-col items-center justify-center p-6 text-center shadow-md"
+            style={{ backfaceVisibility: 'hidden' }}
+          >
+            <span className="text-5xl mb-3">🃏</span>
+            <p className="text-lg font-semibold text-gray-800">{question.question}</p>
+          </div>
+          {/* Verso */}
+          <div
+            className="absolute inset-0 bg-blue-50 border-2 border-blue-400 rounded-2xl flex flex-col items-center justify-center p-6 text-center shadow-md"
+            style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
+          >
+            <span className="text-5xl mb-3">💡</span>
+            <p className="text-lg font-semibold text-blue-800">{question.answer}</p>
           </div>
         </div>
       </div>
 
-      {/* Self-assessment buttons (shown after flip) */}
-      {flipped && !answered && (
-        <div className="grid grid-cols-2 gap-3">
+      {flipped && (
+        <div className="grid grid-cols-2 gap-3 mt-2">
           <button
-            onClick={() => handleAnswer(false)}
-            className="flex items-center justify-center gap-2 bg-red-50 border-2 border-red-300 hover:bg-red-100 text-red-700 font-bold py-4 rounded-xl transition-all"
-            style={{ minHeight: '56px' }}
+            onClick={() => onAnswer(false)}
+            className="p-4 rounded-xl border-2 border-red-300 bg-red-50 text-red-700 font-bold text-base active:scale-95 transition-all"
           >
-            <span className="text-2xl">😅</span>
-            <span className="text-base">Errei</span>
+            😕 Errei
           </button>
           <button
-            onClick={() => handleAnswer(true)}
-            className="flex items-center justify-center gap-2 bg-green-50 border-2 border-green-300 hover:bg-green-100 text-green-700 font-bold py-4 rounded-xl transition-all"
-            style={{ minHeight: '56px' }}
+            onClick={() => onAnswer(true)}
+            className="p-4 rounded-xl border-2 border-green-300 bg-green-50 text-green-700 font-bold text-base active:scale-95 transition-all"
           >
-            <span className="text-2xl">🎉</span>
-            <span className="text-base">Acertei!</span>
+            😄 Acertei
           </button>
         </div>
-      )}
-
-      {!flipped && (
-        <button
-          onClick={handleFlip}
-          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 rounded-xl transition-all"
-          style={{ minHeight: '48px' }}
-        >
-          Ver resposta
-        </button>
       )}
     </div>
   )

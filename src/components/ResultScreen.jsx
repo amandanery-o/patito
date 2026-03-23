@@ -1,106 +1,64 @@
 import { useEffect, useState } from 'react'
+import Mascot from './Mascot'
+import Confetti from './Confetti'
 
-function Star({ filled, delay = 0 }) {
-  const [visible, setVisible] = useState(false)
+const MOOD = { 3: 'celebrando', 2: 'feliz', 1: 'triste' }
+
+const MESSAGES = {
+  3: ['Perfeito! 🎉', 'Incrível! Você é demais!', 'Mandou muito bem! 🏆'],
+  2: ['Boa! Continue assim!', 'Quase perfeito! 💪', 'Você está arrasando!'],
+  1: ['Bom esforço! Tente de novo!', 'Você consegue! Pratique mais!', 'Continue estudando! 📚'],
+}
+
+export default function ResultScreen({ stars, xp, correct, total, onContinue, onHome }) {
+  const [visibleStars, setVisibleStars] = useState(0)
+  const msg = MESSAGES[stars][Math.floor(Math.random() * 3)]
 
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(true), delay)
-    return () => clearTimeout(timer)
-  }, [delay])
+    let i = 0
+    const t = setInterval(() => {
+      i++
+      setVisibleStars(i)
+      if (i >= stars) clearInterval(t)
+    }, 300)
+    return () => clearInterval(t)
+  }, [stars])
 
   return (
-    <span
-      className={`text-5xl transition-all duration-300 ${visible ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}
-      style={{ display: 'inline-block' }}
-    >
-      {filled ? '⭐' : '☆'}
-    </span>
-  )
-}
-
-function Confetti() {
-  const pieces = Array.from({ length: 12 }, (_, i) => ({
-    id: i,
-    color: ['bg-red-400', 'bg-blue-400', 'bg-green-400', 'bg-yellow-400', 'bg-purple-400', 'bg-pink-400'][i % 6],
-    left: `${8 + i * 7}%`,
-    delay: `${i * 0.1}s`,
-    duration: `${1.5 + (i % 3) * 0.3}s`
-  }))
-
-  return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-      {pieces.map(piece => (
-        <div
-          key={piece.id}
-          className={`confetti-piece absolute w-3 h-3 rounded-sm ${piece.color}`}
-          style={{
-            left: piece.left,
-            animationDelay: piece.delay,
-            animationDuration: piece.duration,
-            top: '-20px'
-          }}
-        />
-      ))}
-    </div>
-  )
-}
-
-export default function ResultScreen({ stars, xpEarned, message, correctAnswers, totalQuestions, onContinue, onHome }) {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex flex-col items-center justify-center p-6 relative">
+    <div className="relative flex flex-col items-center gap-6 py-10 px-4 text-center overflow-hidden">
       {stars === 3 && <Confetti />}
 
-      <div className="relative z-10 w-full max-w-md space-y-6 text-center">
-        {/* Trophy/Result icon */}
-        <div className="text-7xl animate-bounce-in">
-          {stars === 3 ? '🏆' : stars === 2 ? '🌟' : '👍'}
-        </div>
+      <Mascot mood={MOOD[stars] || 'neutro'} size="xl" className={stars === 3 ? 'animate-bounce' : ''} />
 
-        {/* Stars */}
-        <div className="flex justify-center gap-2">
-          <Star filled={stars >= 1} delay={200} />
-          <Star filled={stars >= 2} delay={400} />
-          <Star filled={stars >= 3} delay={600} />
-        </div>
+      <p className="text-2xl font-extrabold text-gray-800">{msg}</p>
 
-        {/* Score */}
-        <div className="bg-white rounded-2xl p-5 shadow-md border border-gray-100">
-          <p className="text-gray-500 text-sm mb-1">Resultado</p>
-          <p className="text-4xl font-bold text-gray-800">
-            {correctAnswers}/{totalQuestions}
-          </p>
-          <p className="text-gray-600 mt-1">questões corretas</p>
-        </div>
-
-        {/* XP earned */}
-        <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-4 flex items-center justify-center gap-3">
-          <span className="text-3xl">⭐</span>
-          <div>
-            <p className="font-bold text-yellow-700 text-xl">+{xpEarned} XP</p>
-            <p className="text-yellow-600 text-sm">ganhos nesta sessão</p>
-          </div>
-        </div>
-
-        {/* Encouragement */}
-        <p className="text-gray-700 text-lg font-medium">{message}</p>
-
-        {/* Buttons */}
-        <div className="space-y-3">
-          <button
-            onClick={onContinue}
-            className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 rounded-2xl text-lg transition-all active:scale-95"
-            style={{ minHeight: '56px' }}
+      {/* Estrelas com animação escalonada */}
+      <div className="flex gap-3 items-center">
+        {[1, 2, 3].map(s => (
+          <span
+            key={s}
+            className={`text-5xl transition-all duration-300
+              ${s <= visibleStars ? 'animate-star-pop' : 'opacity-20 grayscale'}`}
+            style={{ animationDelay: `${(s - 1) * 0.3}s` }}
           >
-            Continuar 🚀
-          </button>
-          <button
-            onClick={onHome}
-            className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold py-3 rounded-2xl transition-all active:scale-95"
-            style={{ minHeight: '48px' }}
-          >
-            Ir para o Início 🏠
-          </button>
-        </div>
+            ⭐
+          </span>
+        ))}
+      </div>
+
+      {/* XP */}
+      <div className="bg-yellow-50 rounded-2xl px-10 py-5 border-2 border-yellow-200 shadow-sm">
+        <p className="text-4xl font-extrabold text-yellow-500">+{xp} XP ⚡</p>
+        <p className="text-sm font-semibold text-gray-500 mt-1">{correct} de {total} corretas</p>
+      </div>
+
+      <div className="flex flex-col gap-3 w-full max-w-xs">
+        <button onClick={onContinue} className="w-full text-lg btn-duo-green">
+          Continuar 🚀
+        </button>
+        <button onClick={onHome} className="w-full btn-duo-gray">
+          Início 🏠
+        </button>
       </div>
     </div>
   )

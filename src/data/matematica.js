@@ -1,254 +1,252 @@
-export const subject = {
+export const matematica = {
   id: 'matematica',
   name: 'Matemática',
   icon: '🔢',
-  color: 'green',
+  color: 'bg-green-500',
+  colorHex: '#22c55e',
   topics: [
     {
-      id: 'topico-1',
-      title: 'Multiplicação e Divisão',
+      id: 'mat-1',
+      title: 'Números até 100.000',
       questions: [
         {
-          id: 'q1',
-          type: 'fill-blank',
-          question: 'O resultado de 7 × 8 é ___.',
+          id: 'mat-1-q1',
+          type: 'multipleChoice',
+          question: 'Qual é o valor do algarismo 7 no número 47.382?',
+          options: ['7', '70', '7.000', '700'],
+          correctIndex: 2,
+          explanation: 'O algarismo 7 está na posição dos milhares, então vale 7.000.',
+        },
+        {
+          id: 'mat-1-q2',
+          type: 'trueFalse',
+          question: 'O número 50.000 é maior que 49.999.',
+          correct: true,
+          explanation: 'Verdadeiro! 50.000 é maior que 49.999 porque tem 5 dezenas de milhar.',
+        },
+        {
+          id: 'mat-1-q3',
+          type: 'fillBlank',
+          question: 'O número vinte e três mil e quinhentos se escreve ___',
+          options: ['32.500', '23.500', '23.050', '2.350'],
+          correctIndex: 1,
+          explanation: 'Vinte e três mil = 23.000, mais quinhentos = 23.500.',
+        },
+        {
+          id: 'mat-1-q4',
+          type: 'multipleChoice',
+          question: 'Quantas dezenas de milhar tem o número 80.000?',
+          options: ['8', '80', '800', '8.000'],
+          correctIndex: 0,
+          explanation: '80.000 tem 8 dezenas de milhar (8 × 10.000 = 80.000).',
+        },
+        {
+          id: 'mat-1-q5',
+          type: 'trueFalse',
+          question: 'O número 10.000 tem 5 algarismos.',
+          correct: true,
+          explanation: 'Verdadeiro! 1-0-0-0-0 são exatamente 5 algarismos.',
+        },
+        {
+          id: 'mat-1-q6',
+          type: 'flashcard',
+          question: 'Como se lê o número 35.720?',
+          answer: 'Trinta e cinco mil, setecentos e vinte',
+        },
+        {
+          id: 'mat-1-q7',
+          type: 'multipleChoice',
+          question: 'Qual desses números é o maior?',
+          options: ['9.999', '10.001', '9.998', '10.000'],
+          correctIndex: 1,
+          explanation: '10.001 é o maior porque tem 5 algarismos enquanto 9.999 tem 4.',
+        },
+        {
+          id: 'mat-1-q8',
+          type: 'fillBlank',
+          question: 'O número 62.045 tem ___ unidades de milhar.',
+          options: ['6', '2', '62', '60'],
+          correctIndex: 2,
+          explanation: '62.045 tem 62 unidades de milhar (62 × 1.000 = 62.000).',
+        },
+        {
+          id: 'mat-1-q9',
+          type: 'trueFalse',
+          question: 'Ordenando do menor para o maior: 1.500, 15.000, 1.050. A ordem correta é 1.050, 1.500, 15.000.',
+          correct: true,
+          explanation: 'Verdadeiro! 1.050 < 1.500 < 15.000.',
+        },
+        {
+          id: 'mat-1-q10',
+          type: 'multipleChoice',
+          question: 'Qual é o predecessor de 20.000?',
+          options: ['20.001', '21.000', '19.999', '19.000'],
+          correctIndex: 2,
+          explanation: 'O predecessor é o número imediatamente anterior: 20.000 − 1 = 19.999.',
+        },
+      ],
+    },
+    {
+      id: 'mat-2',
+      title: 'Adição e Subtração com Reserva',
+      questions: [
+        {
+          id: 'mat-2-q1',
+          type: 'multipleChoice',
+          question: 'Quanto é 3.456 + 2.789?',
+          options: ['6.145', '6.245', '6.145', '6.245'],
+          correctIndex: 1,
+          explanation: '3.456 + 2.789 = 6.245. Somamos coluna a coluna com as reservas.',
+        },
+        {
+          id: 'mat-2-q2',
+          type: 'trueFalse',
+          question: '8.000 − 3.456 = 4.544',
+          correct: true,
+          explanation: 'Verdadeiro! 8.000 − 3.456 = 4.544.',
+        },
+        {
+          id: 'mat-2-q3',
+          type: 'fillBlank',
+          question: '567 + 348 = ___',
+          options: ['815', '905', '915', '905'],
+          correctIndex: 2,
+          explanation: '7+8=15 (escrevo 5, reservo 1); 6+4+1=11 (escrevo 1, reservo 1); 5+3+1=9. Resultado: 915.',
+        },
+        {
+          id: 'mat-2-q4',
+          type: 'multipleChoice',
+          question: 'Uma escola tem 1.248 alunos. Saíram 396. Quantos ficaram?',
+          options: ['952', '852', '862', '952'],
+          correctIndex: 1,
+          explanation: '1.248 − 396 = 852 alunos.',
+        },
+        {
+          id: 'mat-2-q5',
+          type: 'trueFalse',
+          question: '4.500 + 500 = 5.000',
+          correct: true,
+          explanation: 'Verdadeiro! 4.500 + 500 = 5.000.',
+        },
+        {
+          id: 'mat-2-q6',
+          type: 'flashcard',
+          question: 'Qual é a "reserva" na adição?',
+          answer: 'É o valor que "sobra" quando a soma de uma coluna passa de 9, e que adicionamos à próxima coluna à esquerda.',
+        },
+        {
+          id: 'mat-2-q7',
+          type: 'multipleChoice',
+          question: 'Qual é o resultado de 10.000 − 1?',
+          options: ['10.001', '9.999', '9.990', '9.909'],
+          correctIndex: 1,
+          explanation: '10.000 − 1 = 9.999.',
+        },
+        {
+          id: 'mat-2-q8',
+          type: 'fillBlank',
+          question: 'Ana tinha R$ 2.500 e gastou R$ 867. Ficou com R$ ___',
+          options: ['R$ 1.533', 'R$ 1.633', 'R$ 1.733', 'R$ 1.433'],
+          correctIndex: 1,
+          explanation: '2.500 − 867 = 1.633.',
+        },
+        {
+          id: 'mat-2-q9',
+          type: 'trueFalse',
+          question: 'A soma de dois números de 4 algarismos sempre dá um número de 4 algarismos.',
+          correct: false,
+          explanation: 'Falso! Por exemplo: 9.999 + 1 = 10.000, que tem 5 algarismos.',
+        },
+        {
+          id: 'mat-2-q10',
+          type: 'multipleChoice',
+          question: 'Pedro colecionou 4.320 figurinhas. João tem 1.980 a menos. Quantas figurinhas João tem?',
+          options: ['2.440', '2.340', '2.340', '2.540'],
+          correctIndex: 1,
+          explanation: '4.320 − 1.980 = 2.340 figurinhas.',
+        },
+      ],
+    },
+    {
+      id: 'mat-3',
+      title: 'Multiplicação',
+      questions: [
+        {
+          id: 'mat-3-q1',
+          type: 'multipleChoice',
+          question: 'Quanto é 7 × 8?',
           options: ['54', '56', '63', '48'],
-          correct: 1,
-          explanation: '7 × 8 = 56. Você pode calcular: 7 × 8 = 7 + 7 + 7 + 7 + 7 + 7 + 7 + 7 = 56.'
+          correctIndex: 1,
+          explanation: '7 × 8 = 56. Pense: 7 grupos de 8 = 56.',
         },
         {
-          id: 'q2',
-          type: 'multiple-choice',
-          question: 'Qual é o resultado de 9 × 6?',
-          options: ['48', '54', '56', '63'],
-          correct: 1,
-          explanation: '9 × 6 = 54. A tabuada do 9: 9×6 = 54.'
-        },
-        {
-          id: 'q3',
-          type: 'true-false',
-          question: 'O resultado de 8 × 8 é igual a 64.',
+          id: 'mat-3-q2',
+          type: 'trueFalse',
+          question: '6 × 9 = 54',
           correct: true,
-          explanation: 'Sim! 8 × 8 = 64. A tabuada do 8 no 8 dá 64.'
+          explanation: 'Verdadeiro! 6 × 9 = 54.',
         },
         {
-          id: 'q4',
-          type: 'multiple-choice',
-          question: 'Quantos é 48 ÷ 6?',
-          options: ['6', '7', '8', '9'],
-          correct: 2,
-          explanation: '48 ÷ 6 = 8, porque 6 × 8 = 48.'
+          id: 'mat-3-q3',
+          type: 'fillBlank',
+          question: 'Uma cartela tem 12 chocolates. Quantos chocolates há em 5 cartelas? ___',
+          options: ['50', '55', '60', '65'],
+          correctIndex: 2,
+          explanation: '5 × 12 = 60 chocolates.',
         },
         {
-          id: 'q5',
-          type: 'fill-blank',
-          question: 'Se tenho 36 balas para dividir em 4 crianças, cada uma recebe ___ balas.',
-          options: ['8', '9', '7', '6'],
-          correct: 1,
-          explanation: '36 ÷ 4 = 9. Cada criança recebe 9 balas.'
-        },
-        {
-          id: 'q6',
-          type: 'true-false',
-          question: '5 × 12 = 60',
-          correct: true,
-          explanation: 'Sim! 5 × 12 = 60. Ou seja, 5 doze vezes = 60.'
-        },
-        {
-          id: 'q7',
-          type: 'multiple-choice',
-          question: 'Uma fazenda tem 7 currais com 9 vacas cada. Quantas vacas há no total?',
-          options: ['56', '54', '63', '72'],
-          correct: 2,
-          explanation: '7 × 9 = 63. Multiplicamos o número de currais pelo número de vacas em cada um.'
-        },
-        {
-          id: 'q8',
-          type: 'fill-blank',
-          question: '72 ÷ 9 = ___',
-          options: ['7', '8', '9', '6'],
-          correct: 1,
-          explanation: '72 ÷ 9 = 8, porque 9 × 8 = 72.'
-        },
-        {
-          id: 'q9',
-          type: 'true-false',
-          question: 'O resultado de 6 × 7 é maior que 40.',
-          correct: true,
-          explanation: 'Sim! 6 × 7 = 42, que é maior que 40.'
-        },
-        {
-          id: 'q10',
+          id: 'mat-3-q4',
           type: 'flashcard',
-          question: 'O que é divisão com resto?',
-          correct: 'É quando não conseguimos dividir igualmente e sobra um número menor que o divisor. Por exemplo: 17 ÷ 5 = 3 com resto 2.',
-          explanation: 'Divisão com resto acontece quando o dividendo não é múltiplo do divisor.'
-        }
-      ]
+          question: '9 × 9 = ?',
+          answer: '81 — Noves fora: 9 × 9 = 81',
+        },
+        {
+          id: 'mat-3-q5',
+          type: 'multipleChoice',
+          question: 'Qual é o resultado de 4 × 25?',
+          options: ['80', '90', '100', '120'],
+          correctIndex: 2,
+          explanation: '4 × 25 = 100. É igual a 4 × 25 = (4 × 20) + (4 × 5) = 80 + 20 = 100.',
+        },
+        {
+          id: 'mat-3-q6',
+          type: 'trueFalse',
+          question: '3 × 4 = 4 × 3',
+          correct: true,
+          explanation: 'Verdadeiro! A multiplicação tem a propriedade comutativa: a ordem não muda o resultado.',
+        },
+        {
+          id: 'mat-3-q7',
+          type: 'fillBlank',
+          question: 'Uma fazenda tem 6 currais com 15 vacas cada. Total de vacas: ___',
+          options: ['80', '85', '90', '95'],
+          correctIndex: 2,
+          explanation: '6 × 15 = 90 vacas.',
+        },
+        {
+          id: 'mat-3-q8',
+          type: 'multipleChoice',
+          question: 'Quanto é 8 × 7?',
+          options: ['54', '58', '56', '64'],
+          correctIndex: 2,
+          explanation: '8 × 7 = 56.',
+        },
+        {
+          id: 'mat-3-q9',
+          type: 'trueFalse',
+          question: 'Qualquer número multiplicado por 0 é igual a 0.',
+          correct: true,
+          explanation: 'Verdadeiro! 5 × 0 = 0, 100 × 0 = 0. Sempre dá zero!',
+        },
+        {
+          id: 'mat-3-q10',
+          type: 'multipleChoice',
+          question: 'Uma caixa tem 3 fileiras com 9 ovos cada. Quantos ovos no total?',
+          options: ['21', '24', '27', '30'],
+          correctIndex: 2,
+          explanation: '3 × 9 = 27 ovos.',
+        },
+      ],
     },
-    {
-      id: 'topico-2',
-      title: 'Frações',
-      questions: [
-        {
-          id: 'q1',
-          type: 'multiple-choice',
-          question: 'Se uma pizza foi cortada em 4 pedaços iguais e você comeu 1 pedaço, que fração você comeu?',
-          options: ['1/2', '1/3', '1/4', '2/4'],
-          correct: 2,
-          explanation: '1/4 = um quarto. Você comeu 1 de 4 partes iguais.'
-        },
-        {
-          id: 'q2',
-          type: 'true-false',
-          question: '1/2 é maior que 1/4.',
-          correct: true,
-          explanation: 'Sim! Um meio (1/2) é maior que um quarto (1/4). Quanto maior o denominador, menor a fração.'
-        },
-        {
-          id: 'q3',
-          type: 'fill-blank',
-          question: 'A metade de 20 é ___.',
-          options: ['5', '8', '10', '15'],
-          correct: 2,
-          explanation: 'A metade de 20 = 20 ÷ 2 = 10.'
-        },
-        {
-          id: 'q4',
-          type: 'multiple-choice',
-          question: 'Qual fração representa três quartos?',
-          options: ['3/2', '1/4', '3/4', '4/3'],
-          correct: 2,
-          explanation: 'Três quartos é escrito como 3/4. O numerador (3) indica as partes e o denominador (4) o total.'
-        },
-        {
-          id: 'q5',
-          type: 'true-false',
-          question: '2/4 é igual a 1/2.',
-          correct: true,
-          explanation: 'Sim! 2/4 = 1/2 são frações equivalentes. Dividindo numerador e denominador por 2: 2÷2 = 1 e 4÷2 = 2.'
-        },
-        {
-          id: 'q6',
-          type: 'multiple-choice',
-          question: 'Qual é o terço de 12?',
-          options: ['2', '3', '4', '6'],
-          correct: 2,
-          explanation: '1/3 de 12 = 12 ÷ 3 = 4.'
-        },
-        {
-          id: 'q7',
-          type: 'fill-blank',
-          question: 'Uma barra de chocolate tem 8 quadradinhos. Se você comer 4, você comeu ___ da barra.',
-          options: ['1/4', '1/3', '1/2', '3/4'],
-          correct: 2,
-          explanation: '4/8 = 1/2. Você comeu metade da barra de chocolate.'
-        },
-        {
-          id: 'q8',
-          type: 'true-false',
-          question: '3/3 é igual a 1 inteiro.',
-          correct: true,
-          explanation: 'Sim! Quando o numerador e o denominador são iguais, a fração equivale a 1 inteiro.'
-        },
-        {
-          id: 'q9',
-          type: 'multiple-choice',
-          question: 'Em uma turma de 20 alunos, 1/4 faltou. Quantos alunos faltaram?',
-          options: ['4', '5', '8', '10'],
-          correct: 1,
-          explanation: '1/4 de 20 = 20 ÷ 4 = 5 alunos faltaram.'
-        },
-        {
-          id: 'q10',
-          type: 'flashcard',
-          question: 'O que é o denominador de uma fração?',
-          correct: 'O denominador é o número de baixo da fração. Ele indica em quantas partes iguais o todo foi dividido.',
-          explanation: 'Em 3/4, o 4 é o denominador — significa que o todo foi dividido em 4 partes iguais.'
-        }
-      ]
-    },
-    {
-      id: 'topico-3',
-      title: 'Medidas e Geometria',
-      questions: [
-        {
-          id: 'q1',
-          type: 'multiple-choice',
-          question: 'Quantos centímetros tem 1 metro?',
-          options: ['10', '100', '1000', '50'],
-          correct: 1,
-          explanation: '1 metro = 100 centímetros. O prefixo "centi" significa centésima parte.'
-        },
-        {
-          id: 'q2',
-          type: 'true-false',
-          question: 'Um quilômetro é maior que um metro.',
-          correct: true,
-          explanation: 'Sim! 1 km = 1.000 metros. O quilômetro é muito maior que o metro.'
-        },
-        {
-          id: 'q3',
-          type: 'fill-blank',
-          question: 'Uma figura com 3 lados é chamada de ___.',
-          options: ['Quadrado', 'Triângulo', 'Pentágono', 'Hexágono'],
-          correct: 1,
-          explanation: 'O triângulo tem 3 lados e 3 ângulos. "Tri" significa três.'
-        },
-        {
-          id: 'q4',
-          type: 'multiple-choice',
-          question: 'Qual é a figura geométrica com 4 lados iguais e 4 ângulos retos?',
-          options: ['Retângulo', 'Losango', 'Quadrado', 'Trapézio'],
-          correct: 2,
-          explanation: 'O quadrado tem 4 lados iguais e 4 ângulos retos (90°).'
-        },
-        {
-          id: 'q5',
-          type: 'true-false',
-          question: '1 quilograma = 1000 gramas.',
-          correct: true,
-          explanation: 'Sim! 1 kg = 1.000 g. O prefixo "kilo" significa mil.'
-        },
-        {
-          id: 'q6',
-          type: 'multiple-choice',
-          question: 'Qual é a unidade de medida de capacidade?',
-          options: ['Metro', 'Quilo', 'Litro', 'Segundo'],
-          correct: 2,
-          explanation: 'O litro (L) é a unidade de medida de capacidade. Usamos para medir líquidos.'
-        },
-        {
-          id: 'q7',
-          type: 'fill-blank',
-          question: 'Um cubo tem ___ faces.',
-          options: ['4', '6', '8', '12'],
-          correct: 1,
-          explanation: 'O cubo tem 6 faces, todas quadradas e iguais.'
-        },
-        {
-          id: 'q8',
-          type: 'true-false',
-          question: 'O círculo é uma figura geométrica plana.',
-          correct: true,
-          explanation: 'Sim! O círculo é uma figura plana (2D) com todos os pontos à mesma distância do centro.'
-        },
-        {
-          id: 'q9',
-          type: 'multiple-choice',
-          question: 'Quantos mililitros tem 1 litro?',
-          options: ['10', '100', '500', '1000'],
-          correct: 3,
-          explanation: '1 litro = 1.000 mililitros. O prefixo "mili" significa milésima parte.'
-        },
-        {
-          id: 'q10',
-          type: 'flashcard',
-          question: 'Qual é a diferença entre figuras planas e figuras espaciais?',
-          correct: 'Figuras planas (2D) têm apenas comprimento e largura, como quadrado e círculo. Figuras espaciais (3D) têm comprimento, largura e altura, como cubo e esfera.',
-          explanation: 'Planas = 2 dimensões. Espaciais = 3 dimensões.'
-        }
-      ]
-    }
-  ]
+  ],
 }

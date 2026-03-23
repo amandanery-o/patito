@@ -351,3 +351,68 @@ Comece pelo seguinte:
 
 Após cada etapa, rode npm run dev e confirme que está funcionando antes de avançar.
 ```
+
+---
+
+## 13. Mascote — Patito 🐥
+
+O app tem um mascote oficial: **Patito**, um patinho amarelo (🐥), análogo à coruja do Duolingo.
+
+### Usos do Patito
+- **Feedback positivo:** Patito comemora com animação ao acertar questões
+- **Encorajamento:** Patito aparece na tela de resultado com mensagem animada
+- **Streak:** Patito fica triste (😢) quando o streak é quebrado, alegre (🎉) nos milestones
+- **Onboarding:** Patito dá as boas-vindas ao usuário na primeira visita
+- **Erro/Dica:** Patito explica a resposta correta após erros
+
+### Representação Visual (v1)
+- Usar emoji 🐥 como representação do mascote (sem assets externos necessários)
+- Futuramente pode ser substituído por ilustração SVG personalizada
+
+### Personalidade
+- Animado, encorajador, nunca punitivo
+- Fala com a criança em linguagem simples e divertida
+- Frases de exemplo: "Boa! 🐥", "Quase lá! Você consegue!", "Incrível! Você é demais!"
+
+---
+
+## 14. Calendário de Provas 📅
+
+### Visão Geral
+O aluno pode registrar as datas das provas e receber lembretes do Patito quando estiver próximo de uma avaliação.
+
+### 14.1 Cadastro de Provas
+Duas formas de entrada:
+- **Manual:** formulário com campos: matéria (dropdown das 7 matérias), data, hora (opcional), observações
+- **PDF:** upload de arquivo PDF com o cronograma escolar → parsing automático das datas e matérias
+
+### 14.2 Lembretes (in-app apenas)
+- Verificação das datas ao abrir o app (sem push notifications — v1)
+- Exibe banner do Patito no topo da Home quando há prova em ≤7 dias
+- Exemplos: "📅 Prova de Matemática em 2 dias! Vamos estudar? 🐥"
+- Push notifications ficam para v2
+
+### 14.3 Calendário
+- Tela dedicada acessível pelo header (ícone 📅)
+- Visualização mensal com marcadores nas datas de prova
+- Cores das matérias (da seção 2) identificam cada prova no calendário
+- Ao clicar na data: detalhes da prova + sugestão "Estudar agora 📚"
+
+### 14.4 Schema localStorage (extensão da seção 8)
+```json
+"exams": [
+  {
+    "id": "exam-1",
+    "subject": "matematica",
+    "date": "2026-03-20",
+    "time": "09:00",
+    "notes": "Capítulos 1-3"
+  }
+]
+```
+
+### 14.5 Parsing de PDF (v1 simplificado)
+- Usar biblioteca `pdfjs-dist` para extrair texto do PDF
+- Buscar padrões de data (dd/mm/aaaa) e nomes de matérias no texto extraído
+- Apresentar resultado para confirmação manual antes de salvar
+- Fallback: se parsing falhar, mostrar texto extraído para o usuário inserir manualmente
