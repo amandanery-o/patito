@@ -224,9 +224,9 @@ export default function App() {
         <main className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-6 md:px-10 py-5 sm:py-8 space-y-5 sm:space-y-6">
 
           {/* Boas-vindas — mascote hero proporcional à tela */}
-          <div className="bg-yellow-50 border border-yellow-100 rounded-3xl px-6 sm:px-10 pt-6 sm:pt-10 pb-5 sm:pb-8 flex flex-col items-center text-center gap-2">
-            <Mascot mood={mood} size="hero" />
-            <p className="text-lg sm:text-2xl md:text-3xl font-extrabold text-yellow-900 leading-snug mt-3">{message}</p>
+          <div className="bg-yellow-50 border border-yellow-100 rounded-3xl px-4 sm:px-8 pt-4 sm:pt-6 pb-5 sm:pb-7 flex flex-col items-center text-center gap-1">
+            <Mascot mood={mood} size="hero" className="scale-110 sm:scale-125 my-2" />
+            <p className="text-lg sm:text-2xl md:text-3xl font-extrabold text-yellow-900 leading-snug mt-2">{message}</p>
             {user.streak.current > 0 && (
               <div className="flex items-center gap-1.5 bg-orange-100 rounded-full px-4 py-1.5 mt-1">
                 <span className="text-xl leading-none">🔥</span>
@@ -383,7 +383,7 @@ export default function App() {
           <button onClick={() => setView(VIEWS.SUBJECT)} className="text-2xl" aria-label="Fechar sessão">✕</button>
           <span className="text-base font-semibold text-gray-700 flex-1">{selectedTopic.title}</span>
         </div>
-        <main className="max-w-lg mx-auto px-4 py-5 pb-40">
+        <main className="max-w-lg sm:max-w-xl md:max-w-2xl mx-auto px-4 sm:px-8 py-5 sm:py-8 pb-40">
           <ExerciseCard
             question={question}
             current={questionIndex + 1}

@@ -50,7 +50,7 @@ export default function ExerciseCard({ question, current, total, lives, xp, onAn
         <ProgressBar current={current} total={total} />
 
         {/* Card da questão */}
-        <div className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+        <div className="bg-white rounded-2xl p-5 sm:p-7 shadow-lg border border-gray-100">
           {renderExercise()}
         </div>
 
