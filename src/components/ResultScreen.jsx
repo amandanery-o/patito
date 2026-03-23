@@ -52,7 +52,7 @@ export default function ResultScreen({ stars, xp, correct, total, onContinue, on
         <p className="text-sm sm:text-lg font-semibold text-gray-500 mt-1">{correct} de {total} corretas</p>
       </div>
 
-      <div className="flex flex-col gap-3 w-full max-w-xs sm:max-w-sm md:max-w-md">
+      <div className="flex flex-col gap-3 w-full">
         <button onClick={onContinue} className="w-full text-lg sm:text-xl btn-duo-green">
           Continuar 🚀
         </button>

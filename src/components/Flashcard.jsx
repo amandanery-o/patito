@@ -12,8 +12,8 @@ export default function Flashcard({ question, onAnswer }) {
       <p className="text-sm text-gray-500 text-center">Toque no cartão para ver a resposta</p>
 
       <div
-        className="relative w-full cursor-pointer"
-        style={{ perspective: '1000px', height: '220px' }}
+        className="relative w-full cursor-pointer h-52 sm:h-56"
+        style={{ perspective: '1000px' }}
         onClick={() => setFlipped(f => !f)}
       >
         <div

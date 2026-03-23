@@ -41,7 +41,7 @@ export default function ScheduleView() {
             <button
               key={d}
               onClick={() => setSelectedDay(d)}
-              className={`shrink-0 flex flex-col items-center justify-center px-4 h-[52px] rounded-2xl font-extrabold transition-all
+              className={`shrink-0 flex flex-col items-center justify-center px-4 py-3 rounded-2xl font-extrabold transition-all
                 ${isActive
                   ? 'bg-blue-500 text-white shadow-md'
                   : 'bg-white border border-gray-200 text-gray-500 hover:border-blue-300'

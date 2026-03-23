@@ -130,7 +130,7 @@ export default function CalendarMonth({ exams, subjects, examTypes, onEdit, onRe
                           />
                         ))}
                         {dayExams.length > 3 && (
-                          <span className="text-gray-400" style={{ fontSize: 8 }}>
+                          <span className="text-gray-400 text-[8px] leading-none">
                             +{dayExams.length - 3}
                           </span>
                         )}

@@ -15,7 +15,7 @@ export default function TopicTrail({ subject, topics, getTopicProgress, onStart 
         const locked    = index > 0 && !prevTp?.completed
 
         return (
-          <div key={topic.id} className="flex flex-col items-center w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+          <div key={topic.id} className="flex flex-col items-center w-full">
             {/* Linha de conexão acima (exceto primeiro) */}
             {index > 0 && (
               <div className={`w-1 h-8 rounded-full ${completed ? 'bg-green-400' : 'bg-gray-200'}`} />

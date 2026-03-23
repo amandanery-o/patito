@@ -13,7 +13,7 @@ export default function TrophyModal({ trophies = [], onClose }) {
   const trophy = trophies[0]
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4" onClick={onClose}>
+    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4" onClick={onClose}>
       <div
         className="bg-white rounded-3xl p-8 max-w-sm w-full text-center shadow-2xl animate-bounce-in"
         onClick={e => e.stopPropagation()}
