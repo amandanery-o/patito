@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  background-color: #f3f4f6;
+  min-height: 100dvh;
+}
+
+@layer components {
+  /* Botão Duolingo 3D */
+  .btn-duo {
+    @apply relative font-extrabold rounded-2xl px-6 py-3 transition-all active:translate-y-1 select-none;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+  }
+  .btn-duo:active { border-bottom-width: 2px; }
+
+  .btn-duo-blue   { @apply btn-duo bg-blue-500 text-white;   border-bottom-color: #1d6fb8; }
+  .btn-duo-green  { @apply btn-duo bg-green-500 text-white;  border-bottom-color: #1a8a3c; }
+  .btn-duo-gray   { @apply btn-duo bg-gray-100 text-gray-600; border-bottom-color: #b0b8c4; }
+  .btn-duo-red    { @apply btn-duo bg-red-500 text-white;    border-bottom-color: #b91c1c; }
+  .btn-duo-yellow { @apply btn-duo bg-yellow-400 text-yellow-900; border-bottom-color: #b45309; }
+
+  /* Barra de progresso com shimmer */
+  .progress-shimmer {
+    background: linear-gradient(
+      90deg,
+      #4ade80 0%,
+      #22c55e 40%,
+      #86efac 50%,
+      #22c55e 60%,
+      #4ade80 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s linear infinite;
+  }
+
+  /* Chip de matéria Em breve */
+  .subject-chip {
+    @apply flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold bg-white border border-gray-200 text-gray-500 whitespace-nowrap;
+  }
+}
