@@ -59,11 +59,12 @@ export default function CalendarMonth({ exams, subjects, examTypes, onEdit, onRe
   const selectedKey = selectedDay ? dayKey(selectedDay) : null
   const selectedExams = selectedKey ? (examsByDay[selectedKey] || []) : []
 
-  // Matérias com exames neste mês — para a legenda
-  const monthPrefix = `${year}-${String(month + 1).padStart(2, '0')}`
-  const legendSubjects = subjects.filter(s =>
-    exams.some(e => e.subject === s.id && e.date.startsWith(monthPrefix))
-  )
+  // Cores dos dots por tipo de avaliação
+  const TYPE_DOT = {
+    trabalho:    'bg-blue-500',
+    prova:       'bg-green-500',
+    recuperacao: 'bg-orange-500',
+  }
 
   return (
     <div className="space-y-3">
@@ -122,15 +123,12 @@ export default function CalendarMonth({ exams, subjects, examTypes, onEdit, onRe
                     </span>
                     {dayExams.length > 0 && (
                       <div className="flex gap-0.5 mt-0.5 flex-wrap justify-center px-1">
-                        {dayExams.slice(0, 3).map(exam => {
-                          const subj = subjects.find(s => s.id === exam.subject)
-                          return (
-                            <span
-                              key={exam.id}
-                              className={`w-1.5 h-1.5 rounded-full ${subj?.color || 'bg-gray-400'}`}
-                            />
-                          )
-                        })}
+                        {dayExams.slice(0, 3).map(exam => (
+                          <span
+                            key={exam.id}
+                            className={`w-1.5 h-1.5 rounded-full ${TYPE_DOT[exam.type] || 'bg-gray-400'}`}
+                          />
+                        ))}
                         {dayExams.length > 3 && (
                           <span className="text-gray-400" style={{ fontSize: 8 }}>
                             +{dayExams.length - 3}
@@ -146,17 +144,19 @@ export default function CalendarMonth({ exams, subjects, examTypes, onEdit, onRe
         </div>
       </div>
 
-      {/* Legenda de matérias com eventos neste mês */}
-      {legendSubjects.length > 0 && (
-        <div className="flex flex-wrap gap-x-3 gap-y-1.5 px-1">
-          {legendSubjects.map(s => (
-            <div key={s.id} className="flex items-center gap-1.5">
-              <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${s.color}`} />
-              <span className="text-xs text-gray-500">{s.name}</span>
-            </div>
-          ))}
-        </div>
-      )}
+      {/* Legenda fixa por tipo de avaliação */}
+      <div className="flex flex-wrap gap-x-4 gap-y-1.5 px-1">
+        {[
+          { type: 'trabalho',    label: 'Trabalho',    dot: 'bg-blue-500' },
+          { type: 'prova',       label: 'Prova',       dot: 'bg-green-500' },
+          { type: 'recuperacao', label: 'Recuperação', dot: 'bg-orange-500' },
+        ].map(({ type, label, dot }) => (
+          <div key={type} className="flex items-center gap-1.5">
+            <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${dot}`} />
+            <span className="text-xs text-gray-500">{label}</span>
+          </div>
+        ))}
+      </div>
 
       {/* Detalhes do dia selecionado */}
       {selectedDay && (

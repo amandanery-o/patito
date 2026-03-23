@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Header from './components/Header'
+import Onboarding from './components/Onboarding'
 import SubjectCard from './components/SubjectCard'
 import ExerciseCard from './components/ExerciseCard'
 import ResultScreen from './components/ResultScreen'
@@ -111,7 +112,7 @@ export default function App() {
   const {
     user, exams,
     updateTopicProgress, getTopicProgress, getSubjectProgress,
-    addExam, updateExam, removeExam, getUpcomingExams,
+    addExam, updateExam, removeExam, getUpcomingExams, setUserName,
   } = useProgress()
 
   const upcomingExams = getUpcomingExams(7)
@@ -196,6 +197,14 @@ export default function App() {
   function cancelAddExam() {
     setEditingExamId(null)
     setView(VIEWS.CALENDAR)
+  }
+
+  // -------------------------------------------------------------------------
+  // ONBOARDING — primeira vez (nome ainda é o padrão)
+  // -------------------------------------------------------------------------
+
+  if (user.name === 'Estudante') {
+    return <Onboarding onComplete={setUserName} />
   }
 
   // -------------------------------------------------------------------------

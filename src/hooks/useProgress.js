@@ -85,6 +85,14 @@ export function useProgress() {
     })
   }
 
+  function setUserName(name) {
+    setData(prev => {
+      const next = { ...prev, user: { ...prev.user, name } }
+      saveData(next)
+      return next
+    })
+  }
+
   function removeExam(id) {
     setData(prev => {
       const next = { ...prev, exams: prev.exams.filter(e => e.id !== id) }
@@ -115,5 +123,6 @@ export function useProgress() {
     updateExam,
     removeExam,
     getUpcomingExams,
+    setUserName,
   }
 }
