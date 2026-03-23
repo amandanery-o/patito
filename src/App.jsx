@@ -223,14 +223,14 @@ export default function App() {
 
         <main className="max-w-lg mx-auto px-4 py-5 space-y-5">
 
-          {/* Boas-vindas + mascote inline */}
-          <div className="flex items-center gap-3 bg-yellow-50 border border-yellow-100 rounded-2xl px-4 py-3">
-            <Mascot mood={mood} size="sm" />
-            <p className="text-sm font-bold text-yellow-800 leading-snug flex-1">{message}</p>
+          {/* Boas-vindas — mascote em destaque */}
+          <div className="bg-yellow-50 border border-yellow-100 rounded-3xl px-4 pt-4 pb-3 flex flex-col items-center text-center gap-1">
+            <Mascot mood={mood} size="lg" />
+            <p className="text-base font-extrabold text-yellow-900 leading-snug mt-1">{message}</p>
             {user.streak.current > 0 && (
-              <div className="flex flex-col items-center shrink-0">
-                <span className="text-2xl leading-none">🔥</span>
-                <span className="text-xs font-extrabold text-orange-500">{user.streak.current}</span>
+              <div className="flex items-center gap-1 bg-orange-100 rounded-full px-3 py-0.5 mt-1">
+                <span className="text-lg leading-none">🔥</span>
+                <span className="text-sm font-extrabold text-orange-600">{user.streak.current} dias seguidos</span>
               </div>
             )}
           </div>
@@ -269,8 +269,8 @@ export default function App() {
               ?? heroSubject.topics[0]
             return (
               <div className={`${heroSubject.color} rounded-3xl p-5 shadow-lg text-white`}>
-                <div className="flex items-center gap-3 mb-3">
-                  <Mascot mood="neutro" size="sm" />
+                <div className="flex items-center gap-4 mb-3">
+                  <Mascot mood="neutro" size="md" />
                   <div>
                     <p className="text-xs font-bold uppercase tracking-wide text-white/70">Estudar agora</p>
                     <p className="text-xl font-extrabold">{heroSubject.name}</p>
