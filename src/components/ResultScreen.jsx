@@ -47,7 +47,7 @@ export default function ResultScreen({ stars, xp, correct, total, onContinue, on
       </div>
 
       {/* XP */}
-      <div className="bg-yellow-50 rounded-2xl px-10 sm:px-16 py-5 sm:py-7 border-2 border-yellow-200 shadow-sm">
+      <div className="bg-yellow-50 rounded-2xl px-6 sm:px-10 py-4 sm:py-6 border-2 border-yellow-200 shadow-sm w-fit mx-auto">
         <p className="text-4xl sm:text-6xl font-extrabold text-yellow-500">+{xp} XP ⚡</p>
         <p className="text-sm sm:text-lg font-semibold text-gray-500 mt-1">{correct} de {total} corretas</p>
       </div>

@@ -41,7 +41,7 @@ export default function ScheduleView() {
             <button
               key={d}
               onClick={() => setSelectedDay(d)}
-              className={`shrink-0 flex flex-col items-center px-4 py-2 rounded-2xl font-extrabold transition-all
+              className={`shrink-0 flex flex-col items-center justify-center px-4 h-[52px] rounded-2xl font-extrabold transition-all
                 ${isActive
                   ? 'bg-blue-500 text-white shadow-md'
                   : 'bg-white border border-gray-200 text-gray-500 hover:border-blue-300'
@@ -49,9 +49,7 @@ export default function ScheduleView() {
             >
               <span className="text-sm">{DAY_SHORT[d]}</span>
               {isToday && (
-                <span className={`text-xs font-bold mt-0.5 ${isActive ? 'text-blue-100' : 'text-blue-500'}`}>
-                  hoje
-                </span>
+                <span className={`w-1.5 h-1.5 rounded-full mt-1 ${isActive ? 'bg-blue-200' : 'bg-blue-500'}`} />
               )}
             </button>
           )

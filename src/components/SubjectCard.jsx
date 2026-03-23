@@ -18,7 +18,7 @@ export default function SubjectCard({ subject, progress, onClick }) {
           <p className="font-extrabold text-white text-base leading-tight">{subject.name}</p>
           <p className="text-xs text-white/80 mt-0.5">{completed}/{total} tópicos</p>
         </div>
-        <span className="text-white/70 text-2xl font-bold">›</span>
+        <span className="text-white/50 text-xl font-bold">›</span>
       </div>
 
       {/* Barra de progresso branca */}

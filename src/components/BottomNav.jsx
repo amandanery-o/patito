@@ -22,12 +22,11 @@ function NavTab({ active, onClick, icon, label, useCustomIcon }) {
   return (
     <button
       onClick={onClick}
-      className={`flex-1 flex flex-col items-center gap-1 py-3 text-xs font-bold transition-colors
-        ${active ? 'text-blue-600' : 'text-gray-400 hover:text-gray-600'}`}
+      className={`flex-1 flex flex-col items-center gap-1 py-3 text-xs font-bold transition-colors border-t-2
+        ${active ? 'text-blue-600 border-blue-600' : 'text-gray-400 hover:text-gray-600 border-transparent'}`}
     >
       {useCustomIcon ? icon : <span className="text-2xl leading-none">{icon}</span>}
       <span>{label}</span>
-      {active && <div className="w-1 h-1 rounded-full bg-blue-600" />}
     </button>
   )
 }

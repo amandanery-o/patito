@@ -30,17 +30,17 @@ export default function TrueFalse({ question, onSelect }) {
         <button
           onClick={() => handleSelect(true)}
           disabled={selected !== null}
-          className={`flex flex-col items-center justify-center gap-2 p-6 rounded-2xl border-2 font-bold shadow-sm transition-all duration-200 ${getStyle(true)}`}
+          className={`flex flex-col items-center justify-center gap-2 p-4 sm:p-5 rounded-2xl border-2 font-bold shadow-sm transition-all duration-200 ${getStyle(true)}`}
         >
-          <span className="text-4xl">✅</span>
+          <span className="text-3xl">✅</span>
           <span className="text-base sm:text-lg text-gray-700">Verdadeiro</span>
         </button>
         <button
           onClick={() => handleSelect(false)}
           disabled={selected !== null}
-          className={`flex flex-col items-center justify-center gap-2 p-6 rounded-2xl border-2 font-bold shadow-sm transition-all duration-200 ${getStyle(false)}`}
+          className={`flex flex-col items-center justify-center gap-2 p-4 sm:p-5 rounded-2xl border-2 font-bold shadow-sm transition-all duration-200 ${getStyle(false)}`}
         >
-          <span className="text-4xl">❌</span>
+          <span className="text-3xl">❌</span>
           <span className="text-base sm:text-lg text-gray-700">Falso</span>
         </button>
       </div>

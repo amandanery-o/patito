@@ -227,7 +227,7 @@ export default function App() {
         <main className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-6 md:px-10 py-5 sm:py-8 space-y-5 sm:space-y-6">
 
           {/* Boas-vindas — mascote hero proporcional à tela */}
-          <div className="bg-yellow-50 border border-yellow-100 rounded-3xl px-4 sm:px-8 pt-4 sm:pt-6 pb-5 sm:pb-7 flex flex-col items-center text-center gap-1">
+          <div className="bg-yellow-50 shadow-sm rounded-3xl px-4 sm:px-8 pt-4 sm:pt-6 pb-5 sm:pb-7 flex flex-col items-center text-center gap-1">
             <Mascot mood={mood} size="hero" className="my-2" />
             <p className="text-lg sm:text-2xl md:text-3xl font-extrabold text-yellow-900 leading-snug mt-2">{message}</p>
             {user.streak.current > 0 && (
@@ -245,41 +245,41 @@ export default function App() {
             const isWeekend = todayDay === 0 || todayDay === 6
             return (
               <div className="bg-white border border-gray-100 rounded-2xl p-4 shadow-sm">
-                <div className="flex items-center justify-between mb-3">
-                  <p className="font-extrabold text-gray-800 text-sm">
-                    📚 {isWeekend ? 'Sem aulas hoje' : `Aulas de ${DAY_NAMES[todayDay]}`}
-                  </p>
-                  <button
-                    onClick={() => setView(VIEWS.SCHEDULE)}
-                    className="text-xs font-bold text-blue-500 hover:text-blue-700"
-                  >
-                    Ver semana →
-                  </button>
-                </div>
+                <p className="font-extrabold text-gray-700 text-sm uppercase tracking-wide mb-3">
+                  {isWeekend ? 'Sem aulas hoje' : `Aulas de ${DAY_NAMES[todayDay]}`}
+                </p>
                 {isWeekend ? (
                   <p className="text-sm text-gray-400 font-semibold">Aproveite para estudar! 🐥</p>
                 ) : (
-                  <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1">
-                    {todayLessons.map((lesson, i) => {
-                      const colorKey = lesson.subject.split('/')[0]
-                      const colors = SUBJECT_COLORS[colorKey] || SUBJECT_COLORS[lesson.subject] || { bg: 'bg-gray-100', text: 'text-gray-700' }
-                      const SHORT_NAMES = {
-                        'Língua Portuguesa':   'Português',
-                        'Língua Inglesa':      'Inglês',
-                        'Educação Física':     'Ed. Física',
-                        'Ensino Religioso':    'Religioso',
-                        'Robótica/Matemática': 'Robótica',
-                      }
-                      const shortName = SHORT_NAMES[lesson.subject] || lesson.subject
-                      return (
-                        <div key={i} className={`shrink-0 w-[68px] h-[68px] rounded-xl flex flex-col items-center justify-center gap-0.5 ${colors.bg}`}>
-                          <span className={`text-[10px] sm:text-xs font-extrabold ${colors.text}`}>{lesson.time}</span>
-                          <span className={`text-[11px] sm:text-xs font-bold text-center leading-tight ${colors.text}`}>{shortName}</span>
-                          {lesson.quinzenal && <span className="text-[9px] text-gray-400 font-bold">quinz.</span>}
-                        </div>
-                      )
-                    })}
-                  </div>
+                  <>
+                    <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1">
+                      {todayLessons.map((lesson, i) => {
+                        const colorKey = lesson.subject.split('/')[0]
+                        const colors = SUBJECT_COLORS[colorKey] || SUBJECT_COLORS[lesson.subject] || { bg: 'bg-gray-100', text: 'text-gray-700' }
+                        const SHORT_NAMES = {
+                          'Língua Portuguesa':   'Português',
+                          'Língua Inglesa':      'Inglês',
+                          'Educação Física':     'Ed. Física',
+                          'Ensino Religioso':    'Religioso',
+                          'Robótica/Matemática': 'Robótica',
+                        }
+                        const shortName = SHORT_NAMES[lesson.subject] || lesson.subject
+                        return (
+                          <div key={i} className={`shrink-0 w-[68px] h-[68px] rounded-xl flex flex-col items-center justify-center gap-0.5 ${colors.bg}`}>
+                            <span className={`text-[10px] sm:text-xs font-extrabold ${colors.text}`}>{lesson.time}</span>
+                            <span className={`text-[11px] sm:text-xs font-bold text-center leading-tight ${colors.text}`}>{shortName}</span>
+                            {lesson.quinzenal && <span className="text-[9px] text-gray-400 font-bold">quinz.</span>}
+                          </div>
+                        )
+                      })}
+                    </div>
+                    <button
+                      onClick={() => setView(VIEWS.SCHEDULE)}
+                      className="mt-3 text-xs font-bold text-blue-500 hover:text-blue-700 w-full text-right"
+                    >
+                      Ver semana completa →
+                    </button>
+                  </>
                 )}
               </div>
             )
@@ -324,7 +324,6 @@ export default function App() {
                   <Mascot mood="neutro" size="xl" />
                 </div>
                 <div className="text-center mb-3 sm:mb-5">
-                  <p className="text-xs sm:text-sm font-bold uppercase tracking-widest text-white/70 mb-1">Estudar agora</p>
                   <p className="text-2xl sm:text-4xl font-extrabold">{heroSubject.name}</p>
                   {firstIncompleteTopic && (
                     <p className="text-sm sm:text-base text-white/80 mt-1">📖 {firstIncompleteTopic.title}</p>

@@ -55,7 +55,7 @@ export default function ExerciseCard({ question, current, total, lives, xp, onAn
         </div>
 
         {/* Espaço para o painel de feedback não cobrir o conteúdo */}
-        {feedback && <div className="h-40" />}
+        {feedback && <div className="h-44 sm:h-48" />}
       </div>
 
       {/* Toast de XP */}

@@ -9,7 +9,7 @@ export default function ProgressBar({ current, total, showLabel = true }) {
           <span>{percent}%</span>
         </div>
       )}
-      <div className="h-4 bg-gray-200 rounded-full overflow-hidden">
+      <div className="h-2.5 bg-gray-200 rounded-full overflow-hidden">
         <div
           className="h-full rounded-full progress-shimmer transition-all duration-500"
           style={{ width: `${percent}%` }}

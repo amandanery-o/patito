@@ -23,7 +23,7 @@ export default function Onboarding({ onComplete }) {
         Seu companheiro de estudos do 4º ano
       </p>
 
-      <form onSubmit={handleSubmit} className="w-full max-w-xs sm:max-w-sm md:max-w-md mt-10 space-y-4">
+      <form onSubmit={handleSubmit} className="w-full max-w-xs sm:max-w-sm md:max-w-md mt-6 space-y-4">
         <div>
           <label className="block text-sm font-bold text-gray-600 mb-1.5">
             Qual é o seu nome?

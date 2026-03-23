@@ -72,7 +72,7 @@ export default function CalendarMonth({ exams, subjects, examTypes, onEdit, onRe
       <div className="flex items-center justify-between px-1">
         <button
           onClick={prevMonth}
-          className="w-9 h-9 flex items-center justify-center rounded-xl bg-gray-100 hover:bg-gray-200 active:scale-95 transition-all text-gray-600 font-bold"
+          className="w-11 h-11 flex items-center justify-center rounded-xl bg-gray-100 hover:bg-gray-200 active:scale-95 transition-all text-gray-600 font-bold"
           aria-label="Mês anterior"
         >
           ‹
@@ -80,7 +80,7 @@ export default function CalendarMonth({ exams, subjects, examTypes, onEdit, onRe
         <span className="font-bold text-gray-800 text-base">{MONTHS[month]} {year}</span>
         <button
           onClick={nextMonth}
-          className="w-9 h-9 flex items-center justify-center rounded-xl bg-gray-100 hover:bg-gray-200 active:scale-95 transition-all text-gray-600 font-bold"
+          className="w-11 h-11 flex items-center justify-center rounded-xl bg-gray-100 hover:bg-gray-200 active:scale-95 transition-all text-gray-600 font-bold"
           aria-label="Próximo mês"
         >
           ›
