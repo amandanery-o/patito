@@ -263,12 +263,19 @@ export default function App() {
                     {todayLessons.map((lesson, i) => {
                       const colorKey = lesson.subject.split('/')[0]
                       const colors = SUBJECT_COLORS[colorKey] || SUBJECT_COLORS[lesson.subject] || { bg: 'bg-gray-100', text: 'text-gray-700' }
-                      const shortName = lesson.subject.replace('Língua ', '').replace('Ensino ', '')
+                      const SHORT_NAMES = {
+                        'Língua Portuguesa':   'Português',
+                        'Língua Inglesa':      'Inglês',
+                        'Educação Física':     'Ed. Física',
+                        'Ensino Religioso':    'Religioso',
+                        'Robótica/Matemática': 'Robótica',
+                      }
+                      const shortName = SHORT_NAMES[lesson.subject] || lesson.subject
                       return (
-                        <div key={i} className={`shrink-0 rounded-xl px-3 py-2.5 min-h-[56px] flex flex-col items-center justify-center gap-0.5 ${colors.bg}`}>
+                        <div key={i} className={`shrink-0 w-[68px] h-[68px] rounded-xl flex flex-col items-center justify-center gap-0.5 ${colors.bg}`}>
                           <span className={`text-[10px] sm:text-xs font-extrabold ${colors.text}`}>{lesson.time}</span>
-                          <span className={`text-[11px] sm:text-xs font-bold text-center leading-tight ${colors.text} max-w-[72px]`}>{shortName}</span>
-                          {lesson.quinzenal && <span className="text-[9px] sm:text-[10px] text-gray-400 font-bold">quinz.</span>}
+                          <span className={`text-[11px] sm:text-xs font-bold text-center leading-tight ${colors.text}`}>{shortName}</span>
+                          {lesson.quinzenal && <span className="text-[9px] text-gray-400 font-bold">quinz.</span>}
                         </div>
                       )
                     })}
