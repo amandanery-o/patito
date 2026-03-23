@@ -17,7 +17,7 @@ export default function Onboarding({ onComplete }) {
 
       <h1 className="text-3xl sm:text-5xl font-extrabold text-gray-800 mt-4 text-center leading-tight">
         Bem-vindo ao<br />
-        <span className="text-patito-gold">Patito! 🐥</span>
+        <span className="text-patito-gold">Patito!</span>
       </h1>
       <p className="text-gray-500 text-base sm:text-xl mt-2 text-center">
         Seu companheiro de estudos do 4º ano
