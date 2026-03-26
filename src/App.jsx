@@ -26,7 +26,7 @@ import ScheduleView from './components/ScheduleView'
 const SUBJECTS = [
   { id: 'portugues',        name: 'Português',      icon: '📝', color: 'bg-blue-500',    topics: [],                calendarOnly: false },
   { id: 'matematica',       name: 'Matemática',     icon: '🔢', color: 'bg-green-500',   topics: matematica.topics, calendarOnly: false },
-  { id: 'obict',            name: 'Olimpíada de Inovação (OBICT)', icon: '🚀', color: 'bg-violet-600',  topics: obict.topics,      calendarOnly: false },
+  { id: 'obict',            name: 'Olimpíada Brasileira de Inovação, Ciência e Tecnologia (OBICT)', icon: '🚀', color: 'bg-violet-600',  topics: obict.topics,      calendarOnly: false },
   { id: 'geografia',        name: 'Geografia',      icon: '🌍', color: 'bg-orange-500',  topics: [],                calendarOnly: false },
   { id: 'ingles',           name: 'Inglês',         icon: '🇬🇧', color: 'bg-purple-500',  topics: [],                calendarOnly: false },
   { id: 'ciencias',         name: 'Ciências',       icon: '🔬', color: 'bg-cyan-500',    topics: [],                calendarOnly: false },
@@ -86,8 +86,13 @@ function getMascotState(userName, streak, upcomingCount) {
 /** Texto do alerta de prova/trabalho na home. */
 function examAlertText(exam, subjName, days) {
   const typeLabel = EXAM_TYPES.find(t => t.id === exam.type)?.label || 'Prova'
+  // Evento com período: mostra prazo até endDate
+  if (exam.endDate) {
+    const deadline = daysUntil(exam.endDate)
+    const daysText = deadline === 0 ? 'hoje — último dia!' : `prazo: ${deadline} dia${deadline > 1 ? 's' : ''}!`
+    return `${subjName} em andamento — ${daysText} Bora estudar? 🚀`
+  }
   const daysText = days === 0 ? 'hoje!' : `em ${days} dia${days > 1 ? 's' : ''}!`
-
   if (exam.type === 'prova') {
     return `${typeLabel} de ${subjName} ${daysText} Bora revisar? 🐥`
   }
@@ -290,7 +295,7 @@ export default function App() {
           {/* Alertas de provas */}
           {upcomingExams.length > 0 && (
             <div className="space-y-2">
-              {upcomingExams.slice(0, 2).map(exam => {
+              {upcomingExams.slice(0, 3).map(exam => {
                 const days     = daysUntil(exam.date)
                 const subj     = SUBJECTS.find(s => s.id === exam.subject)
                 const isProva  = exam.type === 'prova'
@@ -303,7 +308,7 @@ export default function App() {
                     className={`w-full bg-blue-50 border border-blue-200 rounded-2xl p-3 flex items-center gap-3 text-left transition-all
                       ${canStudy ? 'active:scale-95 hover:bg-blue-100 hover:border-blue-300' : 'cursor-default'}`}
                   >
-                    <CalendarIcon size="sm" date={exam.date} />
+                    <CalendarIcon size="sm" date={exam.endDate || exam.date} />
                     <p className="text-sm font-bold text-blue-800 flex-1">
                       {examAlertText(exam, subj?.name || exam.subject, days)}
                     </p>

@@ -54,6 +54,19 @@ export const SEMESTER_EXAMS = [
     notes: '',
   },
 
+  // ── OBICT ──────────────────────────────────────────────────────────────────
+  {
+    id: 'seed-obict-1',
+    subject: 'obict',
+    type: 'prova',
+    weight: '',
+    date: '2026-03-23',
+    endDate: '2026-04-05',
+    time: '',
+    content: '1ª Fase — janela de realização: 23/03 a 05/04',
+    notes: 'Realizar online no site da OBICT até 05/04',
+  },
+
   // ── ABRIL ──────────────────────────────────────────────────────────────────
   {
     id: 'seed-6',
@@ -303,4 +316,4 @@ export const SEMESTER_EXAMS = [
   },
 ]
 
-export const SEED_VERSION = 2
+export const SEED_VERSION = 3

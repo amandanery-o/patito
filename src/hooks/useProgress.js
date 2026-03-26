@@ -106,11 +106,22 @@ export function useProgress() {
     today.setHours(0, 0, 0, 0)
     return data.exams
       .filter(e => {
-        const d = new Date(e.date)
-        const diff = Math.ceil((d - today) / (1000 * 60 * 60 * 24))
+        const start = new Date(e.date)
+        const end   = e.endDate ? new Date(e.endDate) : start
+        // Evento com período: ativo se hoje está dentro do intervalo
+        if (e.endDate) return today >= start && today <= end
+        // Evento simples: dentro dos próximos N dias
+        const diff = Math.ceil((start - today) / (1000 * 60 * 60 * 24))
         return diff >= 0 && diff <= daysAhead
       })
-      .sort((a, b) => new Date(a.date) - new Date(b.date))
+      .sort((a, b) => {
+        // Provas e eventos com período aparecem primeiro
+        const priority = { prova: 0, recuperacao: 1, trabalho: 2 }
+        const pa = a.endDate ? 0 : (priority[a.type] ?? 2)
+        const pb = b.endDate ? 0 : (priority[b.type] ?? 2)
+        if (pa !== pb) return pa - pb
+        return new Date(a.endDate || a.date) - new Date(b.endDate || b.date)
+      })
   }
 
   return {
