@@ -15,6 +15,7 @@ import { shuffle } from './utils/shuffle'
 import { calcStars, calcXP } from './utils/scoring'
 import { daysUntil, formatDate } from './utils/dates'
 import { matematica } from './data/matematica'
+import { obict } from './data/obict'
 import { SCHEDULE, SUBJECT_COLORS, DAY_NAMES } from './data/schedule'
 import ScheduleView from './components/ScheduleView'
 
@@ -23,15 +24,16 @@ import ScheduleView from './components/ScheduleView'
 // ---------------------------------------------------------------------------
 
 const SUBJECTS = [
-  { id: 'portugues',        name: 'Português',      icon: '📝', color: 'bg-blue-500',   topics: [],                calendarOnly: false },
-  { id: 'matematica',       name: 'Matemática',     icon: '🔢', color: 'bg-green-500',  topics: matematica.topics, calendarOnly: false },
-  { id: 'geografia',        name: 'Geografia',      icon: '🌍', color: 'bg-orange-500', topics: [],                calendarOnly: false },
-  { id: 'ingles',           name: 'Inglês',         icon: '🇬🇧', color: 'bg-purple-500', topics: [],                calendarOnly: false },
-  { id: 'ciencias',         name: 'Ciências',       icon: '🔬', color: 'bg-cyan-500',   topics: [],                calendarOnly: false },
-  { id: 'historia',         name: 'História',       icon: '📜', color: 'bg-amber-700',  topics: [],                calendarOnly: false },
-  { id: 'ensino-religioso', name: 'Ens. Religioso', icon: '✨', color: 'bg-yellow-500', topics: [],                calendarOnly: false },
-  { id: 'educacao-fisica',  name: 'Educ. Física',   icon: '⚽', color: 'bg-red-500',    topics: [],                calendarOnly: true  },
-  { id: 'arte',             name: 'Arte',           icon: '🎨', color: 'bg-pink-500',   topics: [],                calendarOnly: true  },
+  { id: 'portugues',        name: 'Português',      icon: '📝', color: 'bg-blue-500',    topics: [],                calendarOnly: false },
+  { id: 'matematica',       name: 'Matemática',     icon: '🔢', color: 'bg-green-500',   topics: matematica.topics, calendarOnly: false },
+  { id: 'obict',            name: 'OBICT',          icon: '🚀', color: 'bg-violet-600',  topics: obict.topics,      calendarOnly: false },
+  { id: 'geografia',        name: 'Geografia',      icon: '🌍', color: 'bg-orange-500',  topics: [],                calendarOnly: false },
+  { id: 'ingles',           name: 'Inglês',         icon: '🇬🇧', color: 'bg-purple-500',  topics: [],                calendarOnly: false },
+  { id: 'ciencias',         name: 'Ciências',       icon: '🔬', color: 'bg-cyan-500',    topics: [],                calendarOnly: false },
+  { id: 'historia',         name: 'História',       icon: '📜', color: 'bg-amber-700',   topics: [],                calendarOnly: false },
+  { id: 'ensino-religioso', name: 'Ens. Religioso', icon: '✨', color: 'bg-yellow-500',  topics: [],                calendarOnly: false },
+  { id: 'educacao-fisica',  name: 'Educ. Física',   icon: '⚽', color: 'bg-red-500',     topics: [],                calendarOnly: true  },
+  { id: 'arte',             name: 'Arte',           icon: '🎨', color: 'bg-pink-500',    topics: [],                calendarOnly: true  },
 ]
 
 const EXAM_TYPES = [
