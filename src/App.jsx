@@ -16,6 +16,7 @@ import { calcStars, calcXP } from './utils/scoring'
 import { daysUntil, formatDate } from './utils/dates'
 import { matematica } from './data/matematica'
 import { obict } from './data/obict'
+import { obli } from './data/obli'
 import { SCHEDULE, SUBJECT_COLORS, DAY_NAMES } from './data/schedule'
 import ScheduleView from './components/ScheduleView'
 
@@ -29,6 +30,7 @@ const SUBJECTS = [
   { id: 'obict',            name: 'Olimpíada Brasileira de Inovação, Ciência e Tecnologia (OBICT)', icon: '🚀', color: 'bg-violet-600',  topics: obict.topics,      calendarOnly: false },
   { id: 'geografia',        name: 'Geografia',      icon: '🌍', color: 'bg-orange-500',  topics: [],                calendarOnly: false },
   { id: 'ingles',           name: 'Inglês',         icon: '🇬🇧', color: 'bg-purple-500',  topics: [],                calendarOnly: false },
+  { id: 'obli',             name: 'Olimpíada de Língua Inglesa (OBLI)', icon: '🏅', color: 'bg-blue-600',    topics: obli.topics,       calendarOnly: false },
   { id: 'ciencias',         name: 'Ciências',       icon: '🔬', color: 'bg-cyan-500',    topics: [],                calendarOnly: false },
   { id: 'historia',         name: 'História',       icon: '📜', color: 'bg-amber-700',   topics: [],                calendarOnly: false },
   { id: 'ensino-religioso', name: 'Ens. Religioso', icon: '✨', color: 'bg-yellow-500',  topics: [],                calendarOnly: false },
