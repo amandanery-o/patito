@@ -26,7 +26,7 @@ import ScheduleView from './components/ScheduleView'
 const SUBJECTS = [
   { id: 'portugues',        name: 'Português',      icon: '📝', color: 'bg-blue-500',    topics: [],                calendarOnly: false },
   { id: 'matematica',       name: 'Matemática',     icon: '🔢', color: 'bg-green-500',   topics: matematica.topics, calendarOnly: false },
-  { id: 'obict',            name: 'OBICT',          icon: '🚀', color: 'bg-violet-600',  topics: obict.topics,      calendarOnly: false },
+  { id: 'obict',            name: 'Olimpíada OBICT', icon: '🚀', color: 'bg-violet-600',  topics: obict.topics,      calendarOnly: false },
   { id: 'geografia',        name: 'Geografia',      icon: '🌍', color: 'bg-orange-500',  topics: [],                calendarOnly: false },
   { id: 'ingles',           name: 'Inglês',         icon: '🇬🇧', color: 'bg-purple-500',  topics: [],                calendarOnly: false },
   { id: 'ciencias',         name: 'Ciências',       icon: '🔬', color: 'bg-cyan-500',    topics: [],                calendarOnly: false },
