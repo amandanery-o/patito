@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const LABELS = ['A', 'B', 'C', 'D']
+const LABELS = ['A', 'B', 'C', 'D', 'E']
 
 export default function MultipleChoice({ question, onSelect }) {
   const [selected, setSelected] = useState(null)
