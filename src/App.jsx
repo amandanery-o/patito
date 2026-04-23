@@ -13,7 +13,7 @@ import TopicTrail from './components/TopicTrail'
 import { useProgress } from './hooks/useProgress'
 import { shuffle } from './utils/shuffle'
 import { calcStars, calcXP } from './utils/scoring'
-import { daysUntil, formatDate } from './utils/dates'
+import { daysUntil, formatDate, parseLocalDate } from './utils/dates'
 import { portugues } from './data/portugues'
 import { matematica } from './data/matematica'
 import { geografia } from './data/geografia'
@@ -571,7 +571,7 @@ export default function App() {
               ) : (
                 <div className="space-y-2">
                   {[...exams]
-                    .sort((a, b) => new Date(a.date) - new Date(b.date))
+                    .sort((a, b) => parseLocalDate(a.date) - parseLocalDate(b.date))
                     .map(exam => {
                       const subj = SUBJECTS.find(s => s.id === exam.subject)
                       const days = daysUntil(exam.date)

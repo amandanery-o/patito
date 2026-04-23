@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { SEMESTER_EXAMS, SEED_VERSION } from '../data/semesterExams'
+import { parseLocalDate } from '../utils/dates'
 
 const STORAGE_KEY = 'patito_data'
 
@@ -106,8 +107,8 @@ export function useProgress() {
     today.setHours(0, 0, 0, 0)
     return data.exams
       .filter(e => {
-        const start = new Date(e.date)
-        const end   = e.endDate ? new Date(e.endDate) : start
+        const start = parseLocalDate(e.date)
+        const end   = e.endDate ? parseLocalDate(e.endDate) : start
         // Evento com período: ativo se hoje está dentro do intervalo
         if (e.endDate) return today >= start && today <= end
         // Evento simples: dentro dos próximos N dias
@@ -120,7 +121,7 @@ export function useProgress() {
         const pa = a.endDate ? 0 : (priority[a.type] ?? 2)
         const pb = b.endDate ? 0 : (priority[b.type] ?? 2)
         if (pa !== pb) return pa - pb
-        return new Date(a.endDate || a.date) - new Date(b.endDate || b.date)
+        return parseLocalDate(a.endDate || a.date) - parseLocalDate(b.endDate || b.date)
       })
   }
 
