@@ -145,7 +145,7 @@ export default function App() {
   function startSession(subject, topic) {
     setSelectedSubject(subject)
     setSelectedTopic(topic)
-    setSessionQuestions(shuffle(topic.questions).slice(0, 10))
+    setSessionQuestions(shuffle(topic.questions))
     setQuestionIndex(0)
     setCorrect(0)
     setLives(3)

@@ -73,7 +73,7 @@ export default function TopicTrail({ subject, topics, getTopicProgress, onStart 
                     {locked
                       ? <span className="text-xs text-gray-400">Complete o anterior para liberar</span>
                       : <>
-                          <span className="text-xs text-gray-400">{Math.min(10, topic.questions.length)} questões por sessão</span>
+                          <span className="text-xs text-gray-400">{topic.questions.length} questões</span>
                           {completed && (
                             <div className="flex gap-0.5">
                               {[1, 2, 3].map(s => (
