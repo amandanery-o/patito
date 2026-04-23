@@ -9,7 +9,7 @@ import ProgressBar from './ProgressBar'
 import FeedbackPanel from './FeedbackPanel'
 import XPToast from './XPToast'
 
-export default function ExerciseCard({ question, current, total, lives, xp, onAnswer }) {
+export default function ExerciseCard({ question, current, total, lives, xp, onAnswer, onReport }) {
   const [feedback, setFeedback] = useState(null)   // { correct, explanation }
   const [xpToast, setXpToast]   = useState(null)   // number | null
 
@@ -71,6 +71,7 @@ export default function ExerciseCard({ question, current, total, lives, xp, onAn
           correct={feedback.correct}
           explanation={feedback.explanation}
           onContinue={handleContinue}
+          onReport={onReport}
         />
       )}
     </>

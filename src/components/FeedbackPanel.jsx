@@ -1,6 +1,14 @@
+import { useState } from 'react'
 import Mascot from './Mascot'
 
-export default function FeedbackPanel({ correct, explanation, onContinue }) {
+export default function FeedbackPanel({ correct, explanation, onContinue, onReport }) {
+  const [reported, setReported] = useState(false)
+
+  function handleReport() {
+    onReport?.()
+    setReported(true)
+  }
+
   return (
     <div
       className={`fixed bottom-0 left-0 right-0 z-50 animate-slide-up
@@ -27,6 +35,13 @@ export default function FeedbackPanel({ correct, explanation, onContinue }) {
             }`}
         >
           Continuar
+        </button>
+        <button
+          onClick={handleReport}
+          disabled={reported}
+          className="text-white/60 text-xs text-center py-1 disabled:opacity-40 transition-opacity"
+        >
+          {reported ? '🚩 Erro reportado — obrigado!' : '🚩 Reportar erro nesta questão'}
         </button>
       </div>
     </div>

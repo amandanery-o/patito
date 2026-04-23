@@ -11,6 +11,7 @@ import ConfirmModal from './components/ConfirmModal'
 import BottomNav from './components/BottomNav'
 import TopicTrail from './components/TopicTrail'
 import { useProgress } from './hooks/useProgress'
+import { useReports } from './hooks/useReports'
 import { shuffle } from './utils/shuffle'
 import { calcStars, calcXP } from './utils/scoring'
 import { daysUntil, formatDate, parseLocalDate } from './utils/dates'
@@ -134,6 +135,9 @@ export default function App() {
 
   const upcomingExams = getUpcomingExams(7)
 
+  const { reports, addReport, clearReports } = useReports()
+  const [showReports, setShowReports] = useState(false)
+
   // -------------------------------------------------------------------------
   // Handlers de sessão
   // -------------------------------------------------------------------------
@@ -250,6 +254,14 @@ export default function App() {
     return (
       <div className="min-h-screen bg-gray-50 pb-20">
         <Header user={user} onCalendarClick={() => setView(VIEWS.CALENDAR)} />
+        {reports.length > 0 && (
+          <button
+            onClick={() => setShowReports(true)}
+            className="mx-auto flex items-center gap-2 bg-orange-100 border border-orange-300 text-orange-700 text-sm font-semibold px-4 py-2 rounded-full mt-2 block"
+          >
+            🚩 {reports.length} erro{reports.length > 1 ? 's' : ''} reportado{reports.length > 1 ? 's' : ''}
+          </button>
+        )}
 
         <main className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-6 md:px-10 py-5 sm:py-8 space-y-5 sm:space-y-6">
 
@@ -418,6 +430,34 @@ export default function App() {
           onSchedule={() => setView(VIEWS.SCHEDULE)}
           onCalendar={() => setView(VIEWS.CALENDAR)}
         />
+
+        {showReports && (
+          <div className="fixed inset-0 z-50 bg-black/50 flex items-end sm:items-center justify-center p-4">
+            <div className="bg-white rounded-3xl w-full max-w-lg max-h-[80vh] flex flex-col shadow-2xl">
+              <div className="flex items-center justify-between px-5 pt-5 pb-3 border-b border-gray-100">
+                <h2 className="font-extrabold text-gray-800 text-lg">🚩 Erros reportados</h2>
+                <button onClick={() => setShowReports(false)} className="text-gray-400 text-2xl leading-none">✕</button>
+              </div>
+              <div className="overflow-y-auto flex-1 p-4 space-y-3">
+                {reports.map(r => (
+                  <div key={r.questionId} className="bg-orange-50 border border-orange-200 rounded-2xl p-3">
+                    <p className="text-xs font-bold text-orange-500 uppercase tracking-wide">{r.subjectName} · {r.topicTitle}</p>
+                    <p className="text-sm text-gray-700 mt-1">{r.question}</p>
+                    <p className="text-xs text-gray-400 mt-1">ID: {r.questionId}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="p-4 border-t border-gray-100">
+                <button
+                  onClick={() => { clearReports(); setShowReports(false) }}
+                  className="w-full py-3 rounded-2xl bg-gray-100 text-gray-600 font-bold text-sm"
+                >
+                  Limpar todos
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     )
   }
@@ -476,6 +516,12 @@ export default function App() {
             lives={lives}
             xp={sessionXP}
             onAnswer={handleAnswer}
+            onReport={() => addReport({
+              questionId: question.id,
+              question: question.question,
+              subjectName: selectedSubject.name,
+              topicTitle: selectedTopic.title,
+            })}
           />
         </main>
       </div>
