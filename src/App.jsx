@@ -31,7 +31,7 @@ import ScheduleView from './components/ScheduleView'
 // ---------------------------------------------------------------------------
 
 const SUBJECTS = [
-  { id: 'portugues',        name: 'Português',      icon: '📝', color: 'bg-blue-500',   topics: portugues.topics,        calendarOnly: false, lastUpdated: null        },
+  { id: 'portugues',        name: 'Português',      icon: '📝', color: 'bg-blue-500',   topics: portugues.topics,        calendarOnly: false, lastUpdated: '2026-04-22' },
   { id: 'matematica',       name: 'Matemática',     icon: '🔢', color: 'bg-green-500',  topics: matematica.topics,       calendarOnly: false, lastUpdated: null        },
   { id: 'obict',            name: 'Olimpíada Brasileira de Inovação, Ciência e Tecnologia (OBICT)', icon: '🚀', color: 'bg-violet-600', topics: obict.topics, calendarOnly: false, lastUpdated: null },
   { id: 'geografia',        name: 'Geografia',      icon: '🌍', color: 'bg-orange-500', topics: geografia.topics,        calendarOnly: false, lastUpdated: null        },
@@ -238,12 +238,12 @@ export default function App() {
     const NEW_THRESHOLD_DAYS = 7
     const hasQuestions = s => s.topics.some(t => t.questions.length > 0)
     const isNew = s => s.lastUpdated &&
-      (TODAY_MS - new Date(s.lastUpdated).getTime()) / 86400000 <= NEW_THRESHOLD_DAYS
+      (TODAY_MS - parseLocalDate(s.lastUpdated).getTime()) / 86400000 <= NEW_THRESHOLD_DAYS
 
     const subjectsWithContent = STUDY_SUBJECTS
       .filter(hasQuestions)
       .sort((a, b) => {
-        if (a.lastUpdated && b.lastUpdated) return new Date(b.lastUpdated) - new Date(a.lastUpdated)
+        if (a.lastUpdated && b.lastUpdated) return parseLocalDate(b.lastUpdated) - parseLocalDate(a.lastUpdated)
         if (a.lastUpdated) return -1
         if (b.lastUpdated) return 1
         return 0
