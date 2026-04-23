@@ -3,38 +3,43 @@ import { SEMESTER_EXAMS, SEED_VERSION } from '../data/semesterExams'
 import { parseLocalDate } from '../utils/dates'
 
 const STORAGE_KEY = 'patito_data'
+const STORAGE_VERSION = 2
 
-function applySeed(data) {
-  if ((data.seedVersion || 0) >= SEED_VERSION) return data
-  const seedIds = new Set(SEMESTER_EXAMS.map(e => e.id))
-  // Mantém provas adicionadas pelo usuário (ids não são seed-*) e substitui as do seed pela versão atualizada
-  const userExams = (data.exams || []).filter(e => !seedIds.has(e.id))
-  return { ...data, exams: [...SEMESTER_EXAMS, ...userExams], seedVersion: SEED_VERSION }
+function freshState(base = {}) {
+  return {
+    user: base.user || { name: 'Estudante', avatar: '🦁', xp: 0, streak: { current: 0, lastStudyDate: null, best: 0 }, trophies: [] },
+    progress: base.progress || {},
+    exams: SEMESTER_EXAMS,
+    seedVersion: SEED_VERSION,
+    storageVersion: STORAGE_VERSION,
+  }
 }
 
 function loadData() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     if (raw) {
-      const data = applySeed(JSON.parse(raw))
-      saveData(data)
-      return data
+      const parsed = JSON.parse(raw)
+      // Versão de storage mudou: reseta exams mas preserva progresso e XP
+      if ((parsed.storageVersion || 0) < STORAGE_VERSION) {
+        const data = freshState(parsed)
+        saveData(data)
+        return data
+      }
+      // Seed atualizado: substitui só as provas do seed, mantém as do usuário
+      if ((parsed.seedVersion || 0) < SEED_VERSION) {
+        const seedIds = new Set(SEMESTER_EXAMS.map(e => e.id))
+        const userExams = (parsed.exams || []).filter(e => !seedIds.has(e.id))
+        const data = { ...parsed, exams: [...SEMESTER_EXAMS, ...userExams], seedVersion: SEED_VERSION }
+        saveData(data)
+        return data
+      }
+      return parsed
     }
   } catch {}
-  const initial = {
-    user: {
-      name: 'Estudante',
-      avatar: '🦁',
-      xp: 0,
-      streak: { current: 0, lastStudyDate: null, best: 0 },
-      trophies: [],
-    },
-    progress: {},
-    exams: SEMESTER_EXAMS,
-    seedVersion: SEED_VERSION,
-  }
-  saveData(initial)
-  return initial
+  const data = freshState()
+  saveData(data)
+  return data
 }
 
 function saveData(data) {
