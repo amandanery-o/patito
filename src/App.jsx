@@ -31,7 +31,7 @@ import ScheduleView from './components/ScheduleView'
 // ---------------------------------------------------------------------------
 
 const SUBJECTS = [
-  { id: 'portugues',        name: 'Português',      icon: '📝', color: 'bg-blue-500',   topics: portugues.topics,        calendarOnly: false, lastUpdated: '2026-04-22' },
+  { id: 'portugues',        name: 'Português',      icon: '📝', color: 'bg-blue-500',   topics: portugues.topics,        calendarOnly: false, lastUpdated: '2026-04-23' },
   { id: 'matematica',       name: 'Matemática',     icon: '🔢', color: 'bg-green-500',  topics: matematica.topics,       calendarOnly: false, lastUpdated: null        },
   { id: 'obict',            name: 'Olimpíada Brasileira de Inovação, Ciência e Tecnologia (OBICT)', icon: '🚀', color: 'bg-violet-600', topics: obict.topics, calendarOnly: false, lastUpdated: null },
   { id: 'geografia',        name: 'Geografia',      icon: '🌍', color: 'bg-orange-500', topics: geografia.topics,        calendarOnly: false, lastUpdated: null        },
