@@ -343,10 +343,10 @@ export const portugues = {
         {
           id: 'pt029',
           type: 'fillBlank',
-          question: "Na frase 'Vou pedir dicas a ___ técnico' (referindo-se a um técnico próximo de quem ouve), o pronome correto é:",
+          question: "Na frase 'Vou pedir dicas a ___ técnico' (referindo-se a um técnico próximo de quem fala), o pronome correto é:",
           options: ['este', 'esse', 'aquele', 'aquilo'],
-          correctIndex: 1,
-          explanation: "'Esse' é usado para algo próximo de quem ouve.",
+          correctIndex: 0,
+          explanation: "'Este' é usado para o que está próximo de quem fala.",
         },
         {
           id: 'pt030',
