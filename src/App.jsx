@@ -155,7 +155,7 @@ export default function App() {
 
   function handleAnswer(isCorrect) {
     const newCorrect = isCorrect ? correct + 1 : correct
-    const newLives   = isCorrect ? lives : lives - 1
+    const newLives   = isCorrect ? lives : Math.max(0, lives - 1)
     const newXP      = isCorrect ? sessionXP + 10 : sessionXP
 
     setCorrect(newCorrect)
@@ -164,9 +164,8 @@ export default function App() {
 
     const nextIndex      = questionIndex + 1
     const isLastQuestion = nextIndex >= sessionQuestions.length
-    const outOfLives     = newLives <= 0
 
-    if (isLastQuestion || outOfLives) {
+    if (isLastQuestion) {
       const stars = calcStars(newCorrect, sessionQuestions.length)
       const xp    = calcXP(newCorrect, sessionQuestions.length)
       setFinalStars(stars)
