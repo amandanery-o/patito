@@ -1,7 +1,9 @@
+import { parseLocalDate } from '../utils/dates'
+
 const MONTHS_SHORT = ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ']
 
 export default function CalendarIcon({ size = 'md', date }) {
-  const today = date ? new Date(date) : new Date()
+  const today = date ? parseLocalDate(date) : new Date()
   const sizes = {
     sm: { wrapper: 'w-7 h-7', month: 'text-[7px]', day: 'text-xs' },
     md: { wrapper: 'w-9 h-9', month: 'text-[8px]', day: 'text-sm' },
