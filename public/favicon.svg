@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- corpo -->
+  <ellipse cx="32" cy="40" rx="18" ry="14" fill="#facc15"/>
+  <!-- cabeça -->
+  <circle cx="44" cy="26" r="10" fill="#facc15"/>
+  <!-- bico -->
+  <ellipse cx="54" cy="27" rx="5" ry="3" fill="#f97316"/>
+  <!-- olho -->
+  <circle cx="46" cy="23" r="2" fill="#1e293b"/>
+  <circle cx="46.8" cy="22.2" r="0.6" fill="white"/>
+  <!-- asa -->
+  <ellipse cx="26" cy="40" rx="8" ry="5" fill="#fbbf24" transform="rotate(-15 26 40)"/>
+</svg>
