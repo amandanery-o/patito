@@ -3,6 +3,8 @@ import MultipleChoice from './MultipleChoice'
 import TrueFalse from './TrueFalse'
 import FillBlank from './FillBlank'
 import Flashcard from './Flashcard'
+import OrderQuestion from './OrderQuestion'
+import MatchColumns from './MatchColumns'
 import ProgressBar from './ProgressBar'
 import FeedbackPanel from './FeedbackPanel'
 import XPToast from './XPToast'
@@ -29,6 +31,8 @@ export default function ExerciseCard({ question, current, total, lives, xp, onAn
       case 'trueFalse':      return <TrueFalse {...props} />
       case 'fillBlank':      return <FillBlank {...props} />
       case 'flashcard':      return <Flashcard question={question} onAnswer={onAnswer} />
+      case 'orderSteps':     return <OrderQuestion {...props} />
+      case 'matchColumns':   return <MatchColumns {...props} />
       default: return <p className="text-red-500">Tipo desconhecido: {question.type}</p>
     }
   }

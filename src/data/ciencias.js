@@ -1,177 +1,232 @@
-export const subject = {
+// Nautas - Ciências - 4º ano (courseware id=249)
+// Colégio Salesiano Dom Bosco — Turma 43 — 2026
+//
+// Avaliações 1º semestre:
+//   T1 (01/04 peso 2): Cap. 1 — Alimentação dos seres vivos
+//   P1 (29/04 peso 2): Cap. 1 — Alimentação dos seres vivos; Cap. 2 — Fungos
+//   P2 (17/06 peso 3): Cap. 5 — Vírus; Cap. 6 — Prevenção de doenças
+//   Rec (08/07 peso 5): Caps. 1, 2, 5 e 6
+
+export const ciencias = {
   id: 'ciencias',
   name: 'Ciências',
   icon: '🔬',
-  color: 'cyan',
+  color: 'bg-cyan-500',
+  colorHex: '#06b6d4',
   topics: [
     {
-      id: 'topico-1',
-      title: 'Sistema Solar',
-      questions: [
-        {
-          id: 'q1',
-          type: 'multiple-choice',
-          question: 'Qual planeta fica mais próximo do Sol?',
-          options: ['Terra', 'Marte', 'Mercúrio', 'Vênus'],
-          correct: 2,
-          explanation: 'Mercúrio é o planeta mais próximo do Sol. Por isso é muito quente durante o dia.'
-        },
-        {
-          id: 'q2',
-          type: 'true-false',
-          question: 'A Terra é o único planeta do sistema solar.',
-          correct: false,
-          explanation: 'Não! O sistema solar tem 8 planetas: Mercúrio, Vênus, Terra, Marte, Júpiter, Saturno, Urano e Netuno.'
-        },
-        {
-          id: 'q3',
-          type: 'fill-blank',
-          question: 'O planeta com os anéis famosos é ___.',
-          options: ['Júpiter', 'Marte', 'Saturno', 'Urano'],
-          correct: 2,
-          explanation: 'Saturno é famoso por seus anéis brilhantes, feitos de gelo e poeira.'
-        },
-        {
-          id: 'q4',
-          type: 'multiple-choice',
-          question: 'Quantos planetas tem o sistema solar?',
-          options: ['7', '8', '9', '10'],
-          correct: 1,
-          explanation: 'O sistema solar tem 8 planetas. Plutão foi reclassificado como planeta anão em 2006.'
-        },
-        {
-          id: 'q5',
-          type: 'true-false',
-          question: 'O Sol é uma estrela.',
-          correct: true,
-          explanation: 'Sim! O Sol é uma estrela — uma enorme bola de gás que produz luz e calor por fusão nuclear.'
-        },
-        {
-          id: 'q6',
-          type: 'multiple-choice',
-          question: 'Qual é o maior planeta do sistema solar?',
-          options: ['Saturno', 'Terra', 'Júpiter', 'Netuno'],
-          correct: 2,
-          explanation: 'Júpiter é o maior planeta do sistema solar. Ele é tão grande que caberiam mais de 1.000 Terras dentro dele!'
-        },
-        {
-          id: 'q7',
-          type: 'fill-blank',
-          question: 'A Terra leva ___ para dar uma volta completa ao redor do Sol.',
-          options: ['1 dia', '1 mês', '1 semana', '1 ano'],
-          correct: 3,
-          explanation: 'A Terra leva 365 dias (1 ano) para completar uma volta ao redor do Sol. Isso é chamado de translação.'
-        },
-        {
-          id: 'q8',
-          type: 'true-false',
-          question: 'A Lua é um satélite natural da Terra.',
-          correct: true,
-          explanation: 'Sim! A Lua é o satélite natural da Terra. Ela orbita a Terra e causa as marés nos oceanos.'
-        },
-        {
-          id: 'q9',
-          type: 'multiple-choice',
-          question: 'O que causa o dia e a noite na Terra?',
-          options: ['A órbita ao redor do Sol', 'A rotação da Terra em torno de si mesma', 'As fases da Lua', 'As estações do ano'],
-          correct: 1,
-          explanation: 'O dia e a noite são causados pela rotação da Terra em torno de si mesma, levando 24 horas.'
-        },
-        {
-          id: 'q10',
-          type: 'flashcard',
-          question: 'O que é um eclipse solar?',
-          correct: 'Um eclipse solar acontece quando a Lua passa entre a Terra e o Sol, bloqueando parcialmente ou totalmente a luz do Sol.',
-          explanation: 'O eclipse solar ocorre durante o dia quando a Lua cobre o Sol.'
-        }
-      ]
+      id: 'cie-cap-1',
+      title: 'Cap. 1 — Alimentação dos seres vivos',
+      questions: [],
     },
     {
-      id: 'topico-2',
-      title: 'Seres Vivos e Meio Ambiente',
+      id: 'cie-cap-2',
+      title: 'Cap. 2 — Fungos',
       questions: [
+        // ── Conhecendo os fungos ─────────────────────────────────────────────
         {
-          id: 'q1',
-          type: 'multiple-choice',
-          question: 'O que as plantas produzem durante a fotossíntese?',
-          options: ['Água e sal', 'Glicose e oxigênio', 'Dióxido de carbono', 'Nitrogênio'],
-          correct: 1,
-          explanation: 'As plantas produzem glicose (alimento) e oxigênio durante a fotossíntese, usando luz solar, água e CO₂.'
-        },
-        {
-          id: 'q2',
-          type: 'true-false',
-          question: 'Todos os animais são vertebrados.',
-          correct: false,
-          explanation: 'Não! Existem animais vertebrados (com espinha dorsal) e invertebrados (sem espinha dorsal), como minhocas e insetos.'
-        },
-        {
-          id: 'q3',
-          type: 'fill-blank',
-          question: 'Na cadeia alimentar, as plantas são chamadas de ___.',
-          options: ['Consumidores', 'Decompositores', 'Produtores', 'Predadores'],
-          correct: 2,
-          explanation: 'As plantas são chamadas de produtores porque produzem seu próprio alimento através da fotossíntese.'
-        },
-        {
-          id: 'q4',
-          type: 'multiple-choice',
-          question: 'Qual órgão do corpo humano é responsável por bombear o sangue?',
-          options: ['Pulmão', 'Estômago', 'Coração', 'Fígado'],
-          correct: 2,
-          explanation: 'O coração é o órgão responsável por bombear o sangue para todo o corpo, fazendo parte do sistema circulatório.'
-        },
-        {
-          id: 'q5',
-          type: 'true-false',
-          question: 'A água pode existir nos estados sólido, líquido e gasoso.',
-          correct: true,
-          explanation: 'Sim! A água pode ser gelo (sólido), água líquida e vapor d\'água (gasoso), dependendo da temperatura.'
-        },
-        {
-          id: 'q6',
-          type: 'multiple-choice',
-          question: 'O que os pulmões fazem no corpo humano?',
-          options: ['Digerem os alimentos', 'Fazem a troca gasosa (respiração)', 'Filtram o sangue', 'Produzem bile'],
-          correct: 1,
-          explanation: 'Os pulmões realizam a troca gasosa: absorvem oxigênio do ar e eliminam dióxido de carbono.'
-        },
-        {
-          id: 'q7',
-          type: 'fill-blank',
-          question: 'O ciclo da água começa com a ___ da água dos oceanos pelo calor do Sol.',
-          options: ['Precipitação', 'Infiltração', 'Evaporação', 'Condensação'],
-          correct: 2,
-          explanation: 'O ciclo da água começa com a evaporação: o Sol aquece a água e ela se transforma em vapor.'
-        },
-        {
-          id: 'q8',
-          type: 'true-false',
-          question: 'Os fungos são vegetais.',
-          correct: false,
-          explanation: 'Não! Os fungos formam um reino separado (Reino Fungi). Eles não fazem fotossíntese e se alimentam de matéria orgânica.'
-        },
-        {
-          id: 'q9',
-          type: 'multiple-choice',
-          question: 'Qual é a principal causa do aquecimento global?',
+          id: 'cie-cap2-q01',
+          type: 'multipleChoice',
+          question: 'Os fungos se alimentam de matéria orgânica e a transformam em quê?',
           options: [
-            'Erupções vulcânicas',
-            'Emissão de gases de efeito estufa pelo ser humano',
-            'Tempestades no oceano',
-            'Atividade solar'
+            'Matéria inorgânica, como água, gases e minerais',
+            'Fotossíntese e luz solar',
+            'Proteínas e vitaminas',
+            'Sementes e flores',
           ],
-          correct: 1,
-          explanation: 'A principal causa do aquecimento global é a emissão de gases de efeito estufa, como CO₂, pela queima de combustíveis fósseis.'
+          correctIndex: 0,
+          explanation: 'Os fungos são decompositores: transformam matéria orgânica em matéria inorgânica, como água, gases e minerais.',
         },
         {
-          id: 'q10',
-          type: 'flashcard',
-          question: 'O que é a cadeia alimentar?',
-          correct: 'A cadeia alimentar mostra a relação de alimentação entre os seres vivos: começa nos produtores (plantas), passa pelos consumidores (herbívoros, carnívoros) e termina nos decompositores (fungos e bactérias).',
-          explanation: 'A cadeia alimentar representa o fluxo de energia entre os seres vivos de um ecossistema.'
-        }
-      ]
-    }
-  ]
+          id: 'cie-cap2-q02',
+          type: 'trueFalse',
+          question: 'Os fungos são muito parecidos com as plantas.',
+          correct: false,
+          explanation: 'Muitos estudiosos afirmam que os fungos não são nada parecidos com as plantas — eles são seres decompositores.',
+        },
+        {
+          id: 'cie-cap2-q03a',
+          type: 'fillBlank',
+          question: 'Os fungos são feitos de ___, que se espalham pelo substrato onde o fungo se desenvolve.',
+          options: ['hifas', 'esporos', 'cogumelos', 'raízes'],
+          correctIndex: 0,
+          explanation: 'As hifas são as ramificações dos fungos responsáveis por absorver e distribuir nutrientes.',
+        },
+        {
+          id: 'cie-cap2-q03b',
+          type: 'fillBlank',
+          question: 'As ___ absorvem nutrientes para todo o fungo.',
+          options: ['hifas', 'esporos', 'cogumelos', 'raízes'],
+          correctIndex: 0,
+          explanation: 'As hifas são as estruturas responsáveis pela absorção de nutrientes no fungo.',
+        },
+        {
+          id: 'cie-cap2-q14',
+          type: 'multipleChoice',
+          question: 'Em que tipo de ambiente os fungos costumam ser encontrados?',
+          options: [
+            'Ambientes com pouca luz e muita umidade',
+            'Ambientes com muito sol e pouca água',
+            'Apenas dentro do mar',
+            'Somente em regiões frias e secas',
+          ],
+          correctIndex: 0,
+          explanation: 'Os fungos costumam ser encontrados em ambientes com pouca luz e muita umidade, condições ideais para o seu crescimento.',
+        },
+
+        // ── Reprodução dos fungos ────────────────────────────────────────────
+        {
+          id: 'cie-cap2-q04',
+          type: 'multipleChoice',
+          question: 'Qual é o nome da reprodução em que partes do corpo do fungo produzem partículas minúsculas que se espalham no substrato?',
+          options: [
+            'Reprodução por esporos',
+            'Fragmentação',
+            'Germinação',
+            'Fotossíntese',
+          ],
+          correctIndex: 0,
+          explanation: 'A reprodução por esporos acontece quando partes do fungo produzem partículas minúsculas chamadas esporos, que germinam e formam novos indivíduos.',
+        },
+        {
+          id: 'cie-cap2-q05',
+          type: 'orderSteps',
+          question: 'Coloque as etapas da formação de um cogumelo na ordem correta:',
+          steps: [
+            'Os esporos são liberados no ambiente',
+            'Ocorre a germinação dos esporos e crescimento das hifas',
+            'As hifas se ramificam e formam o micélio',
+            'Na fase de reprodução, o cogumelo cresce',
+            'O cogumelo se desenvolve e libera novos esporos',
+          ],
+          explanation: 'Primeiro os esporos são liberados, depois germinam, formam o micélio, o cogumelo cresce e, por fim, libera novos esporos.',
+        },
+        {
+          id: 'cie-cap2-q15a',
+          type: 'fillBlank',
+          question: 'Quando as hifas se ramificam formando uma rede, esse conjunto recebe o nome de ___.',
+          options: ['micélio', 'cogumelos', 'esporos', 'hifas'],
+          correctIndex: 0,
+          explanation: 'O micélio é a rede densa formada pelas hifas de um fungo.',
+        },
+        {
+          id: 'cie-cap2-q15b',
+          type: 'fillBlank',
+          question: 'Os fungos que possuem ___ usam essa estrutura para liberar esporos.',
+          options: ['micélio', 'cogumelos', 'esporos', 'hifas'],
+          correctIndex: 1,
+          explanation: 'Os cogumelos são as estruturas reprodutoras dos fungos, responsáveis por liberar esporos no ambiente.',
+        },
+
+        // ── Doenças causadas por fungos ──────────────────────────────────────
+        {
+          id: 'cie-cap2-q06',
+          type: 'multipleChoice',
+          question: 'O sapinho é uma micose que aparece na boca. Como ela se manifesta?',
+          options: [
+            'Manchas brancas na língua e outras regiões da boca',
+            'Descamações esbranquiçadas na cabeça',
+            'Unhas amareladas e quebradiças',
+            'Manchas avermelhadas nos pés',
+          ],
+          correctIndex: 0,
+          explanation: 'A candidíase (sapinho) se manifesta por manchas brancas na língua e em outras regiões da boca.',
+        },
+        {
+          id: 'cie-cap2-q07',
+          type: 'matchColumns',
+          question: 'Relacione cada parte do corpo com o tipo de micose que pode ocorrer:',
+          pairs: [
+            { left: 'Cabeça',  right: 'Caspa e descamações esbranquiçadas' },
+            { left: 'Unhas',   right: 'Unhas amareladas e quebradiças' },
+            { left: 'Boca',    right: 'Manchas brancas na língua (sapinho)' },
+            { left: 'Pés',     right: 'Frieiras entre os dedos' },
+          ],
+          explanation: 'Cada parte do corpo pode ser afetada por um tipo diferente de micose causada por fungos.',
+        },
+        {
+          id: 'cie-cap2-q08',
+          type: 'trueFalse',
+          question: 'Compartilhar toalhas com outras pessoas ajuda a prevenir as micoses.',
+          correct: false,
+          explanation: 'Compartilhar toalhas facilita a transmissão de micoses — devemos evitar esse hábito.',
+        },
+
+        // ── Importância dos fungos ───────────────────────────────────────────
+        {
+          id: 'cie-cap2-q09',
+          type: 'multipleChoice',
+          question: 'A levedura Saccharomyces cerevisiae é usada para fazer o pão crescer. O que ela produz ao fermentar o amido?',
+          options: [
+            'Bolhas de gás carbônico',
+            'Esporos coloridos',
+            'Vitaminas e proteínas',
+            'Água e sal',
+          ],
+          correctIndex: 0,
+          explanation: 'Ao fermentar o amido, a levedura produz milhões de pequenas bolhas de gás carbônico, que fazem o pão crescer.',
+        },
+        {
+          id: 'cie-cap2-q10a',
+          type: 'fillBlank',
+          question: 'A ___ é uma molécula produzida por um fungo do gênero Penicillium.',
+          options: ['penicilina', 'bacterianas', 'virais', 'fúngicas'],
+          correctIndex: 0,
+          explanation: 'A penicilina foi descoberta por Alexander Fleming a partir do fungo Penicillium.',
+        },
+        {
+          id: 'cie-cap2-q10b',
+          type: 'fillBlank',
+          question: 'A penicilina é usada para combater infecções ___.',
+          options: ['penicilina', 'bacterianas', 'virais', 'fúngicas'],
+          correctIndex: 1,
+          explanation: 'A penicilina salva muitas vidas combatendo infecções bacterianas.',
+        },
+        {
+          id: 'cie-cap2-q12',
+          type: 'matchColumns',
+          question: 'Relacione cada uso dos fungos com o produto ou resultado correspondente:',
+          pairs: [
+            { left: 'Levedura no pão',      right: 'Faz o pão crescer' },
+            { left: 'Levedura na indústria', right: 'Produz etanol (combustível)' },
+            { left: 'Penicillium',           right: 'Produz penicilina' },
+            { left: 'Cogumelo shitake',      right: 'Usado na culinária' },
+          ],
+          explanation: 'Os fungos têm usos variados: na alimentação, na indústria de combustíveis e na produção de remédios.',
+        },
+
+        // ── Propagação e curiosidades ────────────────────────────────────────
+        {
+          id: 'cie-cap2-q11',
+          type: 'multipleChoice',
+          question: 'No experimento do livro, as crianças colocaram um frasco com alimento na geladeira e outro fora dela. O que elas queriam descobrir?',
+          options: [
+            'Se o frio ajuda a preservar os alimentos e impede o crescimento de fungos',
+            'Se a luz do sol acelera a decomposição',
+            'Se a água faz os fungos crescerem mais rápido',
+            'Se os alimentos mudam de cor na geladeira',
+          ],
+          correctIndex: 0,
+          explanation: 'O experimento comparava o alimento na geladeira com o de fora para verificar se o frio ajuda a preservar os alimentos impedindo o crescimento de fungos.',
+        },
+        {
+          id: 'cie-cap2-q13',
+          type: 'trueFalse',
+          question: 'Existem fungos que brilham no escuro. Esse brilho pode atrair organismos que ajudam na reprodução do fungo.',
+          correct: true,
+          explanation: 'Existem mais de 100 tipos de fungos bioluminescentes. Acredita-se que sua luz atrai organismos que auxiliam na reprodução ou afastam predadores.',
+        },
+      ],
+    },
+    {
+      id: 'cie-cap-5',
+      title: 'Cap. 5 — Vírus',
+      questions: [],
+    },
+    {
+      id: 'cie-cap-6',
+      title: 'Cap. 6 — Prevenção de doenças',
+      questions: [],
+    },
+  ],
 }

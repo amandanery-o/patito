@@ -93,7 +93,7 @@ export const SEMESTER_EXAMS = [
     subject: 'portugues',
     type: 'prova',
     weight: '2',
-    date: '2026-04-20',
+    date: '2026-04-23',
     time: '',
     content: 'Leitura e interpretação; Ditongo; Artigo; Trás, atrás e traz; Pronomes demonstrativos',
     notes: '',
@@ -123,7 +123,7 @@ export const SEMESTER_EXAMS = [
     subject: 'historia',
     type: 'prova',
     weight: '2',
-    date: '2026-04-23',
+    date: '2026-04-30',
     time: '',
     content: 'Da África para o mundo — Cap. 2; O processo de sedentarização — Cap. 3',
     notes: '',
@@ -155,7 +155,7 @@ export const SEMESTER_EXAMS = [
     weight: '2',
     date: '2026-04-29',
     time: '',
-    content: 'Fungos — Cap. 2; Bactérias — Cap. 3',
+    content: 'Alimentação dos seres vivos — Cap. 1; Fungos — Cap. 2',
     notes: '',
   },
 
@@ -316,4 +316,4 @@ export const SEMESTER_EXAMS = [
   },
 ]
 
-export const SEED_VERSION = 3
+export const SEED_VERSION = 6

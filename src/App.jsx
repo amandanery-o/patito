@@ -14,7 +14,12 @@ import { useProgress } from './hooks/useProgress'
 import { shuffle } from './utils/shuffle'
 import { calcStars, calcXP } from './utils/scoring'
 import { daysUntil, formatDate } from './utils/dates'
+import { portugues } from './data/portugues'
 import { matematica } from './data/matematica'
+import { geografia } from './data/geografia'
+import { historia } from './data/historia'
+import { ciencias } from './data/ciencias'
+import { ensinoReligioso } from './data/ensino-religioso'
 import { obict } from './data/obict'
 import { obli } from './data/obli'
 import { SCHEDULE, SUBJECT_COLORS, DAY_NAMES } from './data/schedule'
@@ -25,17 +30,17 @@ import ScheduleView from './components/ScheduleView'
 // ---------------------------------------------------------------------------
 
 const SUBJECTS = [
-  { id: 'portugues',        name: 'Português',      icon: '📝', color: 'bg-blue-500',    topics: [],                calendarOnly: false },
-  { id: 'matematica',       name: 'Matemática',     icon: '🔢', color: 'bg-green-500',   topics: matematica.topics, calendarOnly: false },
-  { id: 'obict',            name: 'Olimpíada Brasileira de Inovação, Ciência e Tecnologia (OBICT)', icon: '🚀', color: 'bg-violet-600',  topics: obict.topics,      calendarOnly: false },
-  { id: 'geografia',        name: 'Geografia',      icon: '🌍', color: 'bg-orange-500',  topics: [],                calendarOnly: false },
-  { id: 'ingles',           name: 'Inglês',         icon: '🇬🇧', color: 'bg-purple-500',  topics: [],                calendarOnly: false },
-  { id: 'obli',             name: 'Olimpíada de Língua Inglesa (OBLI)', icon: '🏅', color: 'bg-blue-600',    topics: obli.topics,       calendarOnly: false },
-  { id: 'ciencias',         name: 'Ciências',       icon: '🔬', color: 'bg-cyan-500',    topics: [],                calendarOnly: false },
-  { id: 'historia',         name: 'História',       icon: '📜', color: 'bg-amber-700',   topics: [],                calendarOnly: false },
-  { id: 'ensino-religioso', name: 'Ens. Religioso', icon: '✨', color: 'bg-yellow-500',  topics: [],                calendarOnly: false },
-  { id: 'educacao-fisica',  name: 'Educ. Física',   icon: '⚽', color: 'bg-red-500',     topics: [],                calendarOnly: true  },
-  { id: 'arte',             name: 'Arte',           icon: '🎨', color: 'bg-pink-500',    topics: [],                calendarOnly: true  },
+  { id: 'portugues',        name: 'Português',      icon: '📝', color: 'bg-blue-500',   topics: portugues.topics,        calendarOnly: false, lastUpdated: null        },
+  { id: 'matematica',       name: 'Matemática',     icon: '🔢', color: 'bg-green-500',  topics: matematica.topics,       calendarOnly: false, lastUpdated: null        },
+  { id: 'obict',            name: 'Olimpíada Brasileira de Inovação, Ciência e Tecnologia (OBICT)', icon: '🚀', color: 'bg-violet-600', topics: obict.topics, calendarOnly: false, lastUpdated: null },
+  { id: 'geografia',        name: 'Geografia',      icon: '🌍', color: 'bg-orange-500', topics: geografia.topics,        calendarOnly: false, lastUpdated: null        },
+  { id: 'ingles',           name: 'Inglês',         icon: '🇬🇧', color: 'bg-purple-500', topics: [],                      calendarOnly: false, lastUpdated: null        },
+  { id: 'obli',             name: 'Olimpíada de Língua Inglesa (OBLI)', icon: '🏅', color: 'bg-blue-600', topics: obli.topics, calendarOnly: false, lastUpdated: null },
+  { id: 'ciencias',         name: 'Ciências',       icon: '🔬', color: 'bg-cyan-500',   topics: ciencias.topics,         calendarOnly: false, lastUpdated: '2026-04-14' },
+  { id: 'historia',         name: 'História',       icon: '📜', color: 'bg-amber-700',  topics: historia.topics,         calendarOnly: false, lastUpdated: null        },
+  { id: 'ensino-religioso', name: 'Ens. Religioso', icon: '✨', color: 'bg-yellow-500', topics: ensinoReligioso.topics,  calendarOnly: false, lastUpdated: null        },
+  { id: 'educacao-fisica',  name: 'Educ. Física',   icon: '⚽', color: 'bg-red-500',    topics: [],                      calendarOnly: true,  lastUpdated: null        },
+  { id: 'arte',             name: 'Arte',           icon: '🎨', color: 'bg-pink-500',   topics: [],                      calendarOnly: true,  lastUpdated: null        },
 ]
 
 const EXAM_TYPES = [
@@ -225,8 +230,21 @@ export default function App() {
 
   if (view === VIEWS.HOME) {
     const { mood, message } = getMascotState(user.name, user.streak.current, upcomingExams.length)
-    const subjectsWithContent = STUDY_SUBJECTS.filter(s => s.topics.length > 0)
-    const subjectsComingSoon  = STUDY_SUBJECTS.filter(s => s.topics.length === 0)
+    const TODAY_MS = Date.now()
+    const NEW_THRESHOLD_DAYS = 7
+    const hasQuestions = s => s.topics.some(t => t.questions.length > 0)
+    const isNew = s => s.lastUpdated &&
+      (TODAY_MS - new Date(s.lastUpdated).getTime()) / 86400000 <= NEW_THRESHOLD_DAYS
+
+    const subjectsWithContent = STUDY_SUBJECTS
+      .filter(hasQuestions)
+      .sort((a, b) => {
+        if (a.lastUpdated && b.lastUpdated) return new Date(b.lastUpdated) - new Date(a.lastUpdated)
+        if (a.lastUpdated) return -1
+        if (b.lastUpdated) return 1
+        return 0
+      })
+    const subjectsComingSoon  = STUDY_SUBJECTS.filter(s => !hasQuestions(s))
     const heroSubject = subjectsWithContent[0] || null
 
     return (
@@ -333,7 +351,14 @@ export default function App() {
                   <Mascot mood="neutro" size="xl" />
                 </div>
                 <div className="text-center mb-3 sm:mb-5">
-                  <p className="text-2xl sm:text-4xl font-extrabold">{heroSubject.name}</p>
+                  <div className="flex items-center justify-center gap-2">
+                    <p className="text-2xl sm:text-4xl font-extrabold">{heroSubject.name}</p>
+                    {isNew(heroSubject) && (
+                      <span className="text-xs font-extrabold bg-white/30 text-white px-2 py-0.5 rounded-full uppercase tracking-wide">
+                        Novo
+                      </span>
+                    )}
+                  </div>
                   {firstIncompleteTopic && (
                     <p className="text-sm sm:text-base text-white/80 mt-1">📖 {firstIncompleteTopic.title}</p>
                   )}
@@ -363,6 +388,7 @@ export default function App() {
                     key={subject.id}
                     subject={subject}
                     progress={progress}
+                    isNew={isNew(subject)}
                     onClick={() => { setSelectedSubject(subject); setView(VIEWS.SUBJECT) }}
                   />
                 )

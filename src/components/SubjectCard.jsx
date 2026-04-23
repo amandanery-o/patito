@@ -2,7 +2,7 @@
  * Card de matéria com fundo colorido (estilo Duolingo).
  * Só é renderizado para matérias com conteúdo (hasContent = true).
  */
-export default function SubjectCard({ subject, progress, onClick }) {
+export default function SubjectCard({ subject, progress, onClick, isNew }) {
   const { completed, total, percent } = progress
 
   return (
@@ -15,7 +15,14 @@ export default function SubjectCard({ subject, progress, onClick }) {
           {subject.icon}
         </div>
         <div className="flex-1 min-w-0">
-          <p className="font-extrabold text-white text-base leading-tight">{subject.name}</p>
+          <div className="flex items-center gap-2">
+            <p className="font-extrabold text-white text-base leading-tight">{subject.name}</p>
+            {isNew && (
+              <span className="text-[10px] font-extrabold bg-white/30 text-white px-1.5 py-0.5 rounded-full uppercase tracking-wide shrink-0">
+                Novo
+              </span>
+            )}
+          </div>
           <p className="text-xs text-white/80 mt-0.5">{completed}/{total} tópicos</p>
         </div>
         <span className="text-white/50 text-xl font-bold">›</span>
