@@ -12,7 +12,7 @@ export default defineConfig({
         clientsClaim: true,
       },
       manifest: {
-        name: 'Patito — Estudos 4º Ano',
+        name: 'Patito — Estudos 4º Ano — v2',
         short_name: 'Patito',
         description: 'App de estudos para o 4º ano',
         theme_color: '#facc15',

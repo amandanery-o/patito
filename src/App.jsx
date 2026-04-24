@@ -249,7 +249,6 @@ export default function App() {
         return 0
       })
     const subjectsComingSoon  = STUDY_SUBJECTS.filter(s => !hasQuestions(s))
-    const heroSubject = subjectsWithContent[0] || null
 
     return (
       <div className="min-h-screen bg-gray-50 pb-20">
@@ -351,49 +350,10 @@ export default function App() {
             </div>
           )}
 
-          {/* Hero card — primeira matéria com conteúdo */}
-          {heroSubject && (() => {
-            const progress = getSubjectProgress(heroSubject.id, heroSubject.topics.length)
-            const firstIncompleteTopic = heroSubject.topics.find(t => !getTopicProgress(heroSubject.id, t.id).completed)
-              ?? heroSubject.topics[0]
-            return (
-              <div className={`${heroSubject.color} rounded-3xl px-5 sm:px-10 pt-6 sm:pt-10 pb-5 sm:pb-8 shadow-lg text-white`}>
-                {/* Mascote centrado em destaque */}
-                <div className="flex justify-center mb-3 sm:mb-5">
-                  <Mascot mood="neutro" size="xl" />
-                </div>
-                <div className="text-center mb-3 sm:mb-5">
-                  <div className="flex items-center justify-center gap-2">
-                    <p className="text-2xl sm:text-4xl font-extrabold">{heroSubject.name}</p>
-                    {isNew(heroSubject) && (
-                      <span className="text-xs font-extrabold bg-white/30 text-white px-2 py-0.5 rounded-full uppercase tracking-wide">
-                        Novo
-                      </span>
-                    )}
-                  </div>
-                  {firstIncompleteTopic && (
-                    <p className="text-sm sm:text-base text-white/80 mt-1">📖 {firstIncompleteTopic.title}</p>
-                  )}
-                </div>
-                <div className="w-full h-3 sm:h-4 bg-white/30 rounded-full overflow-hidden mb-4 sm:mb-6">
-                  <div className="h-full bg-white rounded-full transition-all" style={{ width: `${progress.percent}%` }} />
-                </div>
-                <button
-                  onClick={() => { setSelectedSubject(heroSubject); setView(VIEWS.SUBJECT) }}
-                  className="w-full bg-white text-gray-800 font-extrabold rounded-2xl py-3 sm:py-4 text-base sm:text-xl border-b-4 active:border-b-2 active:translate-y-0.5 transition-all select-none"
-                  style={{ borderBottomColor: 'rgba(0,0,0,0.20)' }}
-                >
-                  Jogar agora 🎮
-                </button>
-              </div>
-            )
-          })()}
-
-          {/* Outras matérias com conteúdo */}
-          {subjectsWithContent.length > 1 && (
+          {/* Matérias com conteúdo */}
+          {subjectsWithContent.length > 0 && (
             <div className="space-y-3">
-              <h2 className="font-extrabold text-gray-700 text-sm uppercase tracking-wide">Outras matérias</h2>
-              {subjectsWithContent.slice(1).map(subject => {
+              {subjectsWithContent.map(subject => {
                 const progress = getSubjectProgress(subject.id, subject.topics.length)
                 return (
                   <SubjectCard
