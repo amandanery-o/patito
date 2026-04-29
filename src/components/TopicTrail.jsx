@@ -11,10 +11,7 @@ export default function TopicTrail({ subject, topics, getTopicProgress, onStart 
         const completed = tp.completed
         const stars     = tp.stars || 0
         const isEmpty   = topic.questions.length === 0
-        // Um tópico está bloqueado se não for o primeiro e o anterior não foi completado
-        const prevTp    = index > 0 ? getTopicProgress(subject.id, topics[index - 1].id) : null
-        const prevHasQuestions = index > 0 && topics[index - 1].questions.length > 0
-        const locked    = prevHasQuestions && !prevTp?.completed
+        const locked    = false
 
         return (
           <div key={topic.id} className="flex flex-col items-center w-full">
