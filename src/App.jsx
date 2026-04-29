@@ -38,7 +38,7 @@ const SUBJECTS = [
   { id: 'geografia',        name: 'Geografia',      icon: '🌍', color: 'bg-orange-500', topics: geografia.topics,        calendarOnly: false, lastUpdated: '2026-04-22' },
   { id: 'ingles',           name: 'Inglês',         icon: '🇬🇧', color: 'bg-purple-500', topics: ingles.topics,           calendarOnly: false, lastUpdated: '2026-04-23' },
   { id: 'obli',             name: 'Olimpíada de Língua Inglesa (OBLI)', icon: '🏅', color: 'bg-blue-600', topics: obli.topics, calendarOnly: false, lastUpdated: null },
-  { id: 'ciencias',         name: 'Ciências',       icon: '🔬', color: 'bg-cyan-500',   topics: ciencias.topics,         calendarOnly: false, lastUpdated: '2026-04-14' },
+  { id: 'ciencias',         name: 'Ciências',       icon: '🔬', color: 'bg-cyan-500',   topics: ciencias.topics,         calendarOnly: false, lastUpdated: '2026-04-29' },
   { id: 'historia',         name: 'História',       icon: '📜', color: 'bg-amber-700',  topics: historia.topics,         calendarOnly: false, lastUpdated: null        },
   { id: 'ensino-religioso', name: 'Ens. Religioso', icon: '✨', color: 'bg-yellow-500', topics: ensinoReligioso.topics,  calendarOnly: false, lastUpdated: null        },
   { id: 'educacao-fisica',  name: 'Educ. Física',   icon: '⚽', color: 'bg-red-500',    topics: [],                      calendarOnly: true,  lastUpdated: null        },
