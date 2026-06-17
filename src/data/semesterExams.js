@@ -336,4 +336,4 @@ export const SEMESTER_EXAMS = [
   },
 ]
 
-export const SEED_VERSION = 7
+export const SEED_VERSION = 8
