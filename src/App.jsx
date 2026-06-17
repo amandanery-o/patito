@@ -49,6 +49,7 @@ const EXAM_TYPES = [
   { id: 'trabalho',    label: 'Trabalho (T)', badge: 'bg-blue-100 text-blue-700'     },
   { id: 'prova',       label: 'Prova (P)',    badge: 'bg-green-100 text-green-700'   },
   { id: 'recuperacao', label: 'Recuperação',  badge: 'bg-orange-100 text-orange-700' },
+  { id: 'evento',      label: 'Evento',       badge: 'bg-teal-100 text-teal-700'     },
 ]
 
 const VIEWS = {

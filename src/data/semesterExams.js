@@ -193,13 +193,23 @@ export const SEMESTER_EXAMS = [
     notes: 'Aplicação entre 15 e 20/06',
   },
   {
+    id: 'seed-saida-estudos',
+    subject: 'ciencias',
+    type: 'evento',
+    weight: '',
+    date: '2026-06-15',
+    time: '',
+    content: 'Museu de Paleontologia — UFRGS',
+    notes: 'Lembrar de entregar a autorização!',
+  },
+  {
     id: 'seed-18',
     subject: 'portugues',
     type: 'prova',
     weight: '3',
-    date: '2026-06-15',
+    date: '2026-06-18',
     time: '',
-    content: 'Leitura e interpretação; Ortografia U/L; Pontuação (travessão, dois-pontos, ?, !); Numeral',
+    content: 'Leitura e interpretação; Ortografia U/L; Pontuação (travessão, dois-pontos, ?, !); Parágrafo; Sentido denotativo e conotativo; Numeral',
     notes: '',
   },
   {
@@ -314,6 +324,16 @@ export const SEMESTER_EXAMS = [
     content: 'Poderes que governam; Regiões do Brasil; Relevo; Clima — Caps. 2 a 5',
     notes: '',
   },
+  {
+    id: 'seed-partilha',
+    subject: 'arte',
+    type: 'evento',
+    weight: '',
+    date: '2026-06-27',
+    time: '',
+    content: 'Partilha de conhecimento',
+    notes: '',
+  },
 ]
 
-export const SEED_VERSION = 6
+export const SEED_VERSION = 7

@@ -4,8 +4,9 @@
 // Avaliações 1º semestre:
 //   P1 (23/04 peso 2): Leitura e interpretação; Ditongo; Artigo;
 //                       Trás/atrás/traz; Pronomes demonstrativos
-//   P2 (15/06 peso 3): Leitura e interpretação; Ortografia U/L;
-//                       Pontuação (travessão, dois-pontos, ?, !); Numeral
+//   P2 (18/06 peso 3): Leitura e interpretação; Ortografia U/L;
+//                       Pontuação (travessão, dois-pontos, ?, !);
+//                       Parágrafo; Sentido denotativo e conotativo; Numeral
 //   Rec (06/07 peso 5): Todo o conteúdo de P1 e P2
 
 export const portugues = {
@@ -85,7 +86,7 @@ export const portugues = {
     // ── P2 ──────────────────────────────────────────────────────────────────
     {
       id: 'por-p2',
-      title: 'Revisão P2 — 15/06',
+      title: 'Revisão P2 — 18/06',
       questions: [
         { id: 'pt061', type: 'multipleChoice', question: 'O que é um numeral?', options: ['Uma palavra que indica uma ação', 'Uma palavra que indica quantidade, ordem ou fração', 'Uma palavra que substitui o substantivo', 'Uma palavra que descreve o substantivo'], correctIndex: 1, explanation: 'O numeral é a palavra que indica quantidade (um, dois, três), ordem (primeiro, segundo, terceiro), fração (metade, terço) ou multiplicação (dobro, triplo).' },
         { id: 'pt062', type: 'multipleChoice', question: 'Os numerais que indicam ORDEM (1º, 2º, 3º...) são chamados de:', options: ['Cardinais', 'Multiplicativos', 'Ordinais', 'Fracionários'], correctIndex: 2, explanation: 'Os numerais ORDINAIS indicam ordem ou posição: primeiro, segundo, terceiro, quarto... Eles respondem à pergunta "qual a posição?"' },
@@ -117,6 +118,18 @@ export const portugues = {
         { id: 'pt088', type: 'multipleChoice', question: "Qual é a sequência correta de numerais ordinais?", options: ['Primeiro, segundo, quarto, terceiro', 'Primeiro, segundo, terceiro, quarto', 'Um, dois, três, quatro', 'Décimo, primeiro, segundo, vigésimo'], correctIndex: 1, explanation: 'A sequência correta dos ordinais é: PRIMEIRO (1º), SEGUNDO (2º), TERCEIRO (3º), QUARTO (4º), QUINTO (5º)...' },
         { id: 'pt089', type: 'trueFalse', question: "Pode-se usar '?!' no final de uma pergunta com emoção forte, como '— Isso é sério?!'", correct: true, explanation: 'Verdadeiro! Em textos informais e histórias, é possível combinar ? e ! para mostrar que a fala é ao mesmo tempo pergunta e expressão de emoção forte.' },
         { id: 'pt090', type: 'fillBlank', question: 'A metade de 10 é ___. Para indicar isso, usamos o numeral ___.', options: ['5 / fracionário', '2 / cardinal', '10 / ordinal', '1 / multiplicativo'], correctIndex: 0, explanation: 'METADE é um numeral FRACIONÁRIO que indica uma das partes iguais. A metade de 10 é 5.' },
+        // Parágrafo
+        { id: 'pt091', type: 'multipleChoice', question: 'O que é um parágrafo?', options: ['Uma palavra com muitas sílabas', 'Um trecho do texto que desenvolve uma ideia, iniciado com recuo', 'O título de um texto', 'Uma frase com mais de dez palavras'], correctIndex: 1, explanation: 'O parágrafo é uma unidade do texto que desenvolve uma ideia. Começa com um pequeno espaço (recuo) e termina quando a ideia muda.' },
+        { id: 'pt092', type: 'trueFalse', question: 'Ao começar um novo parágrafo, escrevemos um pouco afastado da margem esquerda. Esse espaço se chama recuo.', correct: true, explanation: 'Verdadeiro! O recuo indica o início de um novo parágrafo. É uma convenção da escrita para organizar as ideias do texto.' },
+        { id: 'pt093', type: 'fillBlank', question: 'Cada parágrafo de um texto deve desenvolver ___ ideia principal.', options: ['uma', 'várias', 'nenhuma', 'dez'], correctIndex: 0, explanation: 'A regra do parágrafo: UMA ideia por parágrafo. Quando a ideia muda, começa um novo parágrafo. Isso torna o texto mais organizado e fácil de ler.' },
+        { id: 'pt094', type: 'multipleChoice', question: 'Para que serve dividir um texto em parágrafos?', options: ['Para encher mais linhas na folha', 'Para organizar as ideias, facilitando a leitura e compreensão', 'Para que o texto fique mais bonito visualmente', 'Para usar mais pontuação'], correctIndex: 1, explanation: 'Os parágrafos organizam as ideias do texto. Cada parágrafo trata de um assunto, tornando o texto mais claro e fácil de acompanhar.' },
+        // Sentido denotativo e conotativo
+        { id: 'pt095', type: 'multipleChoice', question: 'Quando usamos uma palavra no seu sentido LITERAL (real, de dicionário), dizemos que ela está sendo usada no sentido:', options: ['Conotativo', 'Figurado', 'Denotativo', 'Implícito'], correctIndex: 2, explanation: 'O sentido DENOTATIVO é o significado exato e objetivo da palavra — o que encontramos no dicionário. Exemplo: "O leão é um animal feroz."' },
+        { id: 'pt096', type: 'multipleChoice', question: 'Na frase "Meu pai é um leão quando fica bravo", a palavra "leão" está usada no sentido:', options: ['Denotativo — o pai virou um animal', 'Conotativo — o pai é comparado ao leão por ser bravo e corajoso', 'Literal — o pai é um leão de verdade', 'Cardinal — indica quantidade'], correctIndex: 1, explanation: 'O pai não é literalmente um leão! A palavra é usada de forma figurada, comparando a braveza do pai com a do leão. Isso é sentido CONOTATIVO.' },
+        { id: 'pt097', type: 'trueFalse', question: 'O sentido conotativo é quando a palavra é usada de forma figurada, ganhando um significado diferente do seu sentido literal.', correct: true, explanation: 'Verdadeiro! O sentido CONOTATIVO usa as palavras de forma criativa e figurada. É muito usado em poesias e expressões populares.' },
+        { id: 'pt098', type: 'fillBlank', question: 'Na frase "Ela tem um coração de ouro", a palavra "ouro" está no sentido ___.', options: ['conotativo', 'denotativo', 'cardinal', 'ordinal'], correctIndex: 0, explanation: 'O coração não é de ouro literalmente! "Coração de ouro" é uma expressão que significa que a pessoa é muito bondosa. Isso é sentido CONOTATIVO.' },
+        { id: 'pt099', type: 'multipleChoice', question: 'Qual frase usa a palavra "fogo" no sentido DENOTATIVO?', options: ['"Aquela cantora tem fogo no olhar."', '"Os bombeiros apagaram o fogo na floresta."', '"Ele tem fogo nas veias — nunca para!"', '"A discussão estava com muito fogo."'], correctIndex: 1, explanation: '"Os bombeiros apagaram o fogo na floresta" usa FOGO no sentido literal (a chama real). Nas outras frases, fogo é figurado (sentido conotativo).' },
+        { id: 'pt100', type: 'trueFalse', question: 'A frase "Você tem uma voz de ouro!" usa a palavra "ouro" no sentido denotativo.', correct: false, explanation: 'Falso! "Voz de ouro" é uma expressão figurada que significa que a voz é muito bonita. Isso é sentido CONOTATIVO — a voz não é literalmente feita de ouro.' },
       ],
     },
   ],

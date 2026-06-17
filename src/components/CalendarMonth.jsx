@@ -64,6 +64,7 @@ export default function CalendarMonth({ exams, subjects, examTypes, onEdit, onRe
     trabalho:    'bg-blue-500',
     prova:       'bg-green-500',
     recuperacao: 'bg-orange-500',
+    evento:      'bg-teal-500',
   }
 
   return (
@@ -150,6 +151,7 @@ export default function CalendarMonth({ exams, subjects, examTypes, onEdit, onRe
           { type: 'trabalho',    label: 'Trabalho',    dot: 'bg-blue-500' },
           { type: 'prova',       label: 'Prova',       dot: 'bg-green-500' },
           { type: 'recuperacao', label: 'Recuperação', dot: 'bg-orange-500' },
+          { type: 'evento',      label: 'Evento',      dot: 'bg-teal-500' },
         ].map(({ type, label, dot }) => (
           <div key={type} className="flex items-center gap-1.5">
             <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${dot}`} />
