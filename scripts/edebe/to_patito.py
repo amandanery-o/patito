@@ -82,7 +82,7 @@ def generate_questions(text, count, claude_client):
     """Chama Claude API para gerar questões a partir do texto."""
     prompt = QUESTION_PROMPT.format(count=count, text=text)
     resp = claude_client.messages.create(
-        model="claude-haiku-4-5-20251001",
+        model="claude-sonnet-4-6",
         max_tokens=4096,
         messages=[{"role": "user", "content": prompt}]
     )
