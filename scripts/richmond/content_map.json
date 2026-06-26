@@ -1,0 +1,1416 @@
+[
+  {
+    "node_id": "f83f196a-4fed-441a-a68a-e9992453724d",
+    "title": "English Experience - Hello Unit",
+    "ric_id": "ric-prod_170444",
+    "content_uuid": "19d8d321-c2fb-4444-9d01-e0a0d35fb0c0",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "5bcba0dd-f4d7-45fe-95ee-7b3620998f62",
+    "title": "English Experience - Unit 1",
+    "ric_id": "ric-prod_170442",
+    "content_uuid": "bfc9da6f-ba88-441c-92bc-b21515160ed0",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "b84fb6d6-5968-401b-8820-2f74194f94c7",
+    "title": "Hello - pages 10 and 11, track 1 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_198943",
+    "content_uuid": "406f9b48-2ba8-4340-b66a-c6533f3514bf",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "bd009cd0-611a-4844-b196-c2e67ad7f531",
+    "title": "Unit 1 - page 14, activity 1, track 2 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_270514",
+    "content_uuid": "58f165a4-d044-4a56-885f-1583427ba6fc",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "6761d6b2-e52d-47de-bf2c-a0c3d4f47d83",
+    "title": "Unit 1 - page 14, activity 2, track 3 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_270517",
+    "content_uuid": "38333845-9efc-4682-8100-4d89de90bca4",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "f5fca6c3-d30c-42ec-85a8-63f02d6a7d69",
+    "title": "Unit 1 - page 14, activity 3, track 4",
+    "ric_id": "ric-prod_270552",
+    "content_uuid": "a609b4bd-21ac-4b9d-adbf-338c130fa98e",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "4c283165-de10-4df9-b990-fb97ffdeb6c4",
+    "title": "Unit 1 - page 14, activity 4",
+    "ric_id": "ric-prod_270560",
+    "content_uuid": "27f222d3-d406-44c8-b1b6-3d395a81d28f",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "8893c58f-275b-4539-a211-5472c2e40656",
+    "title": "Unit 1 - page 15, Explore, track 5 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_177605",
+    "content_uuid": "806ed643-e42d-4706-92a6-5f6fa0be191f",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "025a2da6-8baf-47c2-b7db-931e52c59800",
+    "title": "Unit 1 - page 15, activity 5, track 6",
+    "ric_id": "ric-prod_270581",
+    "content_uuid": "17a18019-7a55-4038-beaa-29ba129387ab",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "5db80c94-8e5d-45b6-8857-fe4e3a24dd3f",
+    "title": "Unit 1 - page 16, Explore, track 7 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_177608",
+    "content_uuid": "2687c3f6-901d-4593-bb08-3278163b4c2c",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "1a762655-ac2e-4d21-83fa-6a4cf499f07c",
+    "title": "Unit 1 - page 16, activity 7",
+    "ric_id": "ric-prod_270599",
+    "content_uuid": "08f600a8-5421-41d1-a753-0c5cc61cf8a5",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "fdc98dba-3286-4f09-bbe9-8a457518e0ee",
+    "title": "Unit 1 - page 17, activity 8, track 8 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_177613",
+    "content_uuid": "c99c02f2-d6d6-40c6-a1b8-ac96f4a75695",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "8e8c4f7b-3dc1-42b2-996e-9c9e75214345",
+    "title": "Unit 1 - page 18, activity 10",
+    "ric_id": "ric-prod_270621",
+    "content_uuid": "430b5128-a674-4a55-8157-8bf2fc07eecf",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "d33ca434-7333-4bec-9e11-2da12590ecc4",
+    "title": "Unit 1 - page 18, activity 11",
+    "ric_id": "ric-prod_270806",
+    "content_uuid": "293fb26c-c891-465c-bfa1-eddcfec229e4",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "a19ce594-ce8d-4560-b013-36aa7f408405",
+    "title": "Unit 1 - page 18, activity 12, track 9 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_198946",
+    "content_uuid": "667d84f9-5f3e-416d-97ad-a7c87ace2c0b",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "43b3457e-1fe5-4929-9ce9-d8ce76e32a0e",
+    "title": "Unit 1 - page 19, activity 13",
+    "ric_id": "ric-prod_270811",
+    "content_uuid": "177e067f-a115-447b-8b45-3a0c9f7b35dc",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "2bd10b32-ac1e-4567-b7d0-bfee09b20ed4",
+    "title": "Unit 1 - page 19, activity 14",
+    "ric_id": "ric-prod_270813",
+    "content_uuid": "3f454c59-5c35-44b0-be87-b03950c403bb",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "ca9923be-d438-469d-a88e-13f5671977fe",
+    "title": "Unit 1 - page 20, activity 16",
+    "ric_id": "ric-prod_270815",
+    "content_uuid": "e0e63b55-eccb-4bf7-94b4-bddd460aa710",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "fa07359a-9f3b-40db-81cf-71cca9bcec98",
+    "title": "Workbook & Review 1, 4A",
+    "ric_id": "ric-prod_195099",
+    "content_uuid": "09aa7a7f-594b-4159-a81f-48f402d58f10",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "a38e5c22-58bf-43bd-a77e-508c4bbb2773",
+    "title": "Workbook - page 22, activity 1",
+    "ric_id": "ric-prod_177626",
+    "content_uuid": "23f2ba32-8748-4721-a4a0-cc7589ac4d6a",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "c4898be4-e970-4365-9c31-12d23d537f4d",
+    "title": "Workbook - page 22, activity 2",
+    "ric_id": "ric-prod_177627",
+    "content_uuid": "98c47c3e-4d52-4918-9ec0-4ed43d5a55fb",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "ebf2e3eb-3489-4752-82e6-e40237e3118c",
+    "title": "Workbook - page 23, activity 3",
+    "ric_id": "ric-prod_177628",
+    "content_uuid": "5a23db3e-76dd-4e37-96b0-3360696909e1",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "ff89c17f-a9e3-46d9-abf2-be0ac2f7d78f",
+    "title": "Workbook - page 23, activity 4",
+    "ric_id": "ric-prod_177629",
+    "content_uuid": "1938501e-79ae-4335-bc8f-449bfd1c23da",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "b41cb6b3-8de3-4a21-a9bd-41d91d9a4f48",
+    "title": "Review - page 24, activity 1",
+    "ric_id": "ric-prod_177630",
+    "content_uuid": "c16dadaa-2b24-4256-992b-93af0dfaf27e",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "024d271b-bf15-443e-a7e7-f0c2dc69bb62",
+    "title": "Review - page 24, activity 2",
+    "ric_id": "ric-prod_177631",
+    "content_uuid": "75da33fd-0de4-4864-bd7c-90cce5457771",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "9b4da3dc-f0e5-42f3-860f-4e1fe680ddf7",
+    "title": "English Experience - CLIL Project - Starting Point",
+    "ric_id": "ric-prod_170349",
+    "content_uuid": "550a85a0-76d7-450d-87c8-0a3c7607a906",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "d906daa6-1fd9-44f4-a65f-d4ece56accaa",
+    "title": "English Experience - Unit 2",
+    "ric_id": "ric-prod_170447",
+    "content_uuid": "729df8d4-e24a-4a75-bd5b-e31cf5b913dc",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "6c2f5d28-1352-49e8-8a2a-f410144eb404",
+    "title": "Unit 2 - page 36, activity 1",
+    "ric_id": "ric-prod_270903",
+    "content_uuid": "e3364d76-f468-44b8-9b16-24e70629f420",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "2156e723-0b1b-42e2-926d-c6d2a8ba37bc",
+    "title": "Unit 2 - page 36, activity 2, track 10 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_177641",
+    "content_uuid": "b1b071cf-c203-465b-a70d-1c96a23a1344",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "2bf88c1e-9b39-401c-9518-449401182f67",
+    "title": "Unit 2 - page 36, activity 3, track 11 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_177642",
+    "content_uuid": "d2435813-0329-49e8-aac3-e29d99ea27c3",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "f020b95f-3ee9-498b-a112-7b44060ccdd9",
+    "title": "Unit 2 - page 37, activity 5, track 12 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_177646",
+    "content_uuid": "8e17b1ef-34ef-4b77-a5ed-943cb20f45a5",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "3b79894a-1f61-47ea-95d3-a987c889e6c0",
+    "title": "Unit 2 - page 37, activity 6, track 13",
+    "ric_id": "ric-prod_271130",
+    "content_uuid": "1247ed78-1ec0-4e77-8ef1-01d5178dd36e",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "1cbac98a-eedd-4f6f-bdd3-3304e8d15f20",
+    "title": "Unit 2 - page 37, activity 7",
+    "ric_id": "ric-prod_271140",
+    "content_uuid": "b1dee4d7-816f-4a9a-a881-a39053188d53",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "8c88097c-f0ba-4997-8458-737b6b6e4a94",
+    "title": "Unit 2 - page 38, activity 8, track 14 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_177654",
+    "content_uuid": "dcdd5d8f-7b5b-4c71-a322-fdfebeb82f08",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "a64545c7-962e-4f7a-b374-d74cb8e831e9",
+    "title": "Unit 2 - page 38, activity 9, track 15",
+    "ric_id": "ric-prod_271146",
+    "content_uuid": "dfa08e19-96b0-4a7a-a7fa-c20f544546b9",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "47392449-185d-4425-8c2a-bfd665032f91",
+    "title": "Unit 2 - page 39, activity 10, track 16 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_177657",
+    "content_uuid": "c79565e7-cd44-48fa-916c-d278450d278c",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "92554aed-18eb-4be0-8ebb-910f7fd97f99",
+    "title": "Unit 2 - page 40, activity 11",
+    "ric_id": "ric-prod_271159",
+    "content_uuid": "dfca6613-0355-41bc-b555-08691226884e",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "ef535871-e028-48c4-bce5-ff6a613daa18",
+    "title": "Unit 2 - page 40, activity 12",
+    "ric_id": "ric-prod_271198",
+    "content_uuid": "0244be8b-8796-4cf2-b322-f14efec12bb2",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "86b99585-0c02-4090-8d83-125da873bcbb",
+    "title": "Unit 2 - page 40, activity 13",
+    "ric_id": "ric-prod_271208",
+    "content_uuid": "9be842a4-ebee-449b-a8cc-e99eaadd4211",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "693d69e2-a110-4a8d-b5a9-40cf6fbcfcf8",
+    "title": "Unit 2 - page 40, activity 14, track 17 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_177661",
+    "content_uuid": "f49f5915-5cf1-4498-ae96-a76c31d6bfb4",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "a59b9fd0-093f-4eb0-82f9-4270d6afcd12",
+    "title": "Unit 2 - page 41, activity 15",
+    "ric_id": "ric-prod_271211",
+    "content_uuid": "628a5222-95f6-473c-a30b-d9227b7e4711",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "87b23d0b-4c10-4c91-8b8f-3077a1c9d031",
+    "title": "Unit 2 - page 41, activity 16",
+    "ric_id": "ric-prod_271457",
+    "content_uuid": "815607fb-7097-40b2-9d70-d116c1ece31c",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "f6d4a235-efef-45d2-b9db-9e14b9bc3be7",
+    "title": "Unit 2 - page 42, activity 17",
+    "ric_id": "ric-prod_271460",
+    "content_uuid": "b011bf65-fd81-4990-9fa5-53a1410fd9a3",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "8296738d-e72b-4491-8de9-cfd26edf4e69",
+    "title": "Unit 2 - page 42, activity 18",
+    "ric_id": "ric-prod_271462",
+    "content_uuid": "1565a2d7-06a8-4b05-9ddf-06cf56277b2d",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "4cf1cbf8-258d-4bc2-9cda-f509ccd58881",
+    "title": "Workbook & Review 2, 4A",
+    "ric_id": "ric-prod_195101",
+    "content_uuid": "6a79e4bb-f6f5-4489-822c-443dc0d35f7e",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "00f90e85-2c19-4c1c-942f-e08f5dc913a1",
+    "title": "Workbook - page 44, activity 1",
+    "ric_id": "ric-prod_177667",
+    "content_uuid": "690a49cd-3c66-4257-97b7-2a201854b19b",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "a83e12b2-ddd3-4708-9854-c9f21c90bda8",
+    "title": "Workbook - page 44, activity 2",
+    "ric_id": "ric-prod_177669",
+    "content_uuid": "038bbc50-cc32-4bcc-bb14-ba59b22fc672",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "ffa95121-8c96-4e2c-a1db-1a39a7973716",
+    "title": "Workbook - page 45, activity 3",
+    "ric_id": "ric-prod_177670",
+    "content_uuid": "dafe7a68-d249-4b8c-ab4c-da446b603d23",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "9608153d-7665-4082-af0e-b4f89c41815f",
+    "title": "Workbook - page 45, activity 4",
+    "ric_id": "ric-prod_177671",
+    "content_uuid": "df7c84ff-8ffc-4066-8a4e-09160a2afb21",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "5a4447c2-c397-4ada-9150-3b202dc00524",
+    "title": "Review - page 46, activity 1",
+    "ric_id": "ric-prod_177672",
+    "content_uuid": "2b6ce13a-95e8-4c6b-9c64-60fa2d0fa5c2",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "cb225fc2-09b8-4f78-b01e-a72211f159df",
+    "title": "Review - page 46, activity 2",
+    "ric_id": "ric-prod_177673",
+    "content_uuid": "6230efaf-7907-4625-b0a4-dd21ae8eb8c9",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "b3f2539c-0ffc-4e98-bf94-41ab39495c63",
+    "title": "English Experience - CLIL Project - Task 1",
+    "ric_id": "ric-prod_170350",
+    "content_uuid": "1f38ee44-dfcb-4d86-a9d4-708535307da2",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "17976601-d2b9-4103-99f5-864e5bd9505e",
+    "title": "English Experience - Unit 3",
+    "ric_id": "ric-prod_170454",
+    "content_uuid": "482e83d4-a00e-4bbe-8407-9c35df109309",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "78434f90-83fb-42b2-a2e9-9b73dc79c402",
+    "title": "Unit 3 - page 56, activity 1, track 18 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_199644",
+    "content_uuid": "3eea6965-e110-464c-825f-423b80ccd6ef",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "9d181554-32f7-493a-b34e-9e98c4dc1c88",
+    "title": "Unit 3 - page 56, activity 2, track 19",
+    "ric_id": "ric-prod_270825",
+    "content_uuid": "83a0cac0-6339-4fc4-8111-bcca66e71891",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "cd9bec95-135b-486c-8a1a-315a0184b3f0",
+    "title": "Unit 3 - page 57, Explore, track 20 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_199661",
+    "content_uuid": "2da970f1-b97a-4b6d-8764-94dafe0be325",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "f21934a0-18e8-46bf-9435-6fc1e6c5cda7",
+    "title": "Unit 3 - page 57, activity 4, track 21",
+    "ric_id": "ric-prod_271450",
+    "content_uuid": "7c6aafd9-4222-474a-9815-625e164b938e",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "09bdd68a-ccf5-4177-a3ba-3ebbb112b83b",
+    "title": "Unit 3 - page 58, activity 5, track 22 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_199668",
+    "content_uuid": "f2208b0b-3a8b-4b37-8edd-beb3ddbdca18",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "caa81001-50e3-4a0e-a320-57852b5fd548",
+    "title": "Unit 3 - page 58, activity 6",
+    "ric_id": "ric-prod_270939",
+    "content_uuid": "f5b85833-96f9-4740-a86e-77cb658661fc",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "75ea1fa1-f1d3-441a-a74d-be982c397eb4",
+    "title": "Unit 3 - page 59, activity 7, track 23 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_199670",
+    "content_uuid": "c709de2e-6a63-444c-ae8c-eaf7ee4e4266",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "5e2d5d72-0913-4ebf-be48-ece37b98ffa6",
+    "title": "Unit 3 - page 60, activity 8",
+    "ric_id": "ric-prod_270993",
+    "content_uuid": "2c603d1c-e5a1-4786-b737-5361b4c7778d",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "19e0fc9e-fe11-49bd-87b5-6dc001934105",
+    "title": "Unit 3 - page 60, activity 9",
+    "ric_id": "ric-prod_271004",
+    "content_uuid": "0d1bc5f6-3df8-4f6f-b883-a81f3e08f704",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "cd290027-9653-4f90-87db-d10a233d50c7",
+    "title": "Unit 3 - page 60, activity 10, track 24",
+    "ric_id": "ric-prod_271306",
+    "content_uuid": "36b4e38c-f1a1-4b45-856c-e43d4ffd35d7",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "5f6e9681-e897-4d44-b6b7-fc1878b69f3b",
+    "title": "Unit 3 - page 61, activity 11",
+    "ric_id": "ric-prod_271453",
+    "content_uuid": "d5a361e9-1691-462b-9224-45b244944460",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "471ae9b4-99dc-41c9-9efc-52713d9579f0",
+    "title": "Unit 3 - page 61, activity 12",
+    "ric_id": "ric-prod_271459",
+    "content_uuid": "4e8bd992-76c3-4451-a1f2-c36d2f3a9caf",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "28ffdaba-9d68-4761-8605-1acdd39f28c4",
+    "title": "Unit 3 - page 62, activity 13",
+    "ric_id": "ric-prod_271461",
+    "content_uuid": "cded33d4-92eb-4a72-ba7a-679c57f63bc5",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "94885bd6-5a85-42f8-a547-3b11673b7c12",
+    "title": "Unit 3 - page 62, activity 14",
+    "ric_id": "ric-prod_271476",
+    "content_uuid": "f489cc7c-ab63-45e2-93cb-6509038fcf93",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "361823da-398f-4b3c-944e-726b0065be3c",
+    "title": "Workbook & Review 3, 4A",
+    "ric_id": "ric-prod_195102",
+    "content_uuid": "f95bf7ea-e47d-4a34-90a7-9653901ea55d",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "69a4c8c4-25b8-453f-89ed-a54d7f242202",
+    "title": "Workbook - page 64, activity 1",
+    "ric_id": "ric-prod_193311",
+    "content_uuid": "349d1a4a-a46f-43c8-9100-d1017e9c8b25",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "ff27e09f-a4ff-442c-ad6a-e02b9d570cd2",
+    "title": "Workbook - page 64, activity 2",
+    "ric_id": "ric-prod_194035",
+    "content_uuid": "8f4af4cc-fbe9-4039-9c1b-c18d491c1276",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "8acff410-f257-4475-bd52-794c4b719b19",
+    "title": "Workbook - page 65, activity 3",
+    "ric_id": "ric-prod_193312",
+    "content_uuid": "c1d6cd9d-2095-47ef-862e-ff13d6665883",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "aa4f63ce-1a1c-4c10-8b98-98eb67cff62c",
+    "title": "Workbook - page 65, activity 4",
+    "ric_id": "ric-prod_194014",
+    "content_uuid": "35d011b4-0727-4f5d-8d21-1a6c00e6ef1b",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "593be7f3-1b2e-476c-a2d1-03412443cb24",
+    "title": "Review - page 66, activity 1, track 25",
+    "ric_id": "ric-prod_194055",
+    "content_uuid": "b7da133b-ece8-4f5c-a946-14a81397a23f",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "c8c3b29a-74f4-4fa6-bc70-9b6f39ea00e5",
+    "title": "Review - page 66, activity 2",
+    "ric_id": "ric-prod_204226",
+    "content_uuid": "762934b6-295c-4295-8567-6371a2129d7f",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "f0300298-adea-4af4-b44a-0e7ec0432562",
+    "title": "English Experience - CLIL Project - Task 2",
+    "ric_id": "ric-prod_170351",
+    "content_uuid": "b7dc4566-00bf-4cd2-9aa7-94e753c36a05",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "1766abbf-a828-4856-90c7-c725543ed0cf",
+    "title": "English Experience - Unit 4",
+    "ric_id": "ric-prod_170464",
+    "content_uuid": "f80b1d31-b2bc-4112-8d29-66657a652a4d",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "1843d8f2-c3a1-4ade-bfef-2a8531a17ea9",
+    "title": "Unit 4 - page 76, activity 1, track 26 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_199700",
+    "content_uuid": "a65c9b25-5380-4104-89fb-17a3b920db13",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "7e67bd6c-94cf-441c-93ed-d4642f455edf",
+    "title": "Unit 4 - page 76, activity 2, track 27",
+    "ric_id": "ric-prod_273377",
+    "content_uuid": "4b4c3e15-3cfb-4fb8-85eb-535a00181160",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "6cde3d93-135e-4f2c-b8e0-975f7a4b3acc",
+    "title": "Unit 4 - page 77, Explore, track 28 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_199713",
+    "content_uuid": "f5080130-07be-49a3-8b59-f74b024f9701",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "b4a7af00-78fb-4adc-afd1-fb80c891a5f0",
+    "title": "Unit 4 - page 77, activity 4, track 29",
+    "ric_id": "ric-prod_273378",
+    "content_uuid": "d8188581-8d80-4aab-a4fd-060fc3c57f5b",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "7d58bcec-fd3e-4327-8203-8ea03be76cc2",
+    "title": "Unit 4 - page 77, activity 5",
+    "ric_id": "ric-prod_273379",
+    "content_uuid": "5f9f5d40-98d2-4420-a95f-f4a87c3a97a0",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "cd699336-95a1-4745-8982-0b091e442a80",
+    "title": "Unit 4 - page 78, activity 6",
+    "ric_id": "ric-prod_273395",
+    "content_uuid": "9b9d6d5a-abf8-4fb7-b19d-ddb5544744ed",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "128866c3-ba46-47e1-9726-27d98bbb4c33",
+    "title": "Unit 4 - page 78, activity 7, track 30 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_199749",
+    "content_uuid": "af8595ac-1bab-489a-8e39-8bc3d57c773d",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "13063729-cdf8-44db-aa4c-1ed1ec756a23",
+    "title": "Unit 4 - page 79, activity 8, track 31 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_199751",
+    "content_uuid": "fe9f55ff-f573-4823-830e-256cd530e4a3",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "8e9a882c-efc5-45c2-b8c9-e2c3544e81e9",
+    "title": "Unit 4 - page 80, activity 10",
+    "ric_id": "ric-prod_273397",
+    "content_uuid": "31f5826f-518f-452d-a59b-bcb175431b2b",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "757390eb-cea9-4e4d-8133-e04b83d6e7a5",
+    "title": "Unit 4 - page 80, activity 11, track 32",
+    "ric_id": "ric-prod_273406",
+    "content_uuid": "463c651c-7eff-4b6c-9e6b-26a1c9509b39",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "f3cae53b-fce9-4faa-8042-c2116a71b8aa",
+    "title": "Unit 4 - page 81, activity 12",
+    "ric_id": "ric-prod_273409",
+    "content_uuid": "44ba55e2-e30d-4d12-b0e3-4f4f366217ec",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "157f7fba-5377-45ab-ab94-ad3a3188912e",
+    "title": "Unit 4 - page 81, activity 13",
+    "ric_id": "ric-prod_273412",
+    "content_uuid": "dc20061e-a909-458c-87f0-76c37f080df8",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "40b10c54-18ee-41e1-9dad-f1b85279ebfa",
+    "title": "Unit 4 - page 82, activity 15, track 33",
+    "ric_id": "ric-prod_273417",
+    "content_uuid": "c693090f-f660-40a0-96f4-977039987cd2",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "f84fdefa-791d-423d-9de1-50ce8b6c7743",
+    "title": "Unit 4 - page 82, activity 16",
+    "ric_id": "ric-prod_273419",
+    "content_uuid": "c7377c34-0418-4c47-9263-467a24acd896",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "54a2917e-9cf8-40f0-bb4a-797008f32709",
+    "title": "Workbook & Review 4, 4A",
+    "ric_id": "ric-prod_195104",
+    "content_uuid": "1d5e19bf-ca4a-4d20-a66f-7d62d75463d9",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "bc94eb8d-97ca-4ffc-accf-65b1903e0df2",
+    "title": "Workbook - page 84, activity 1",
+    "ric_id": "ric-prod_195175",
+    "content_uuid": "1af8ff1d-183f-4458-9800-1c61caef5f5a",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "c2bef8da-1307-49b8-a90b-d4ab84d2af07",
+    "title": "Workbook - page 85, activity 3",
+    "ric_id": "ric-prod_194814",
+    "content_uuid": "b1e01325-d68e-494b-aad2-26ff9c7e0b8e",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "77808101-ede3-4c56-8e01-fc1ed39d80ba",
+    "title": "Review - page 86, activity 1",
+    "ric_id": "ric-prod_195105",
+    "content_uuid": "bd35ba32-0848-41b8-ad7a-df2be474e69e",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "9eb58a7a-3fdd-4f95-a25f-44fb5a75fa70",
+    "title": "Review - page 86, activity 2",
+    "ric_id": "ric-prod_195241",
+    "content_uuid": "a70d3e32-a3ab-4d7a-81e9-0b50f74503bc",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "2a8fec2c-7767-44fe-a102-6eb4773a89c0",
+    "title": "English Experience - CLIL Project - Task 3",
+    "ric_id": "ric-prod_170352",
+    "content_uuid": "e81b05fb-8b39-4bf3-bb7e-2158c4c5e01e",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "83c3dbed-0e20-47d0-b39b-e72179d42d77",
+    "title": "English Experience - CLIL Project - Task 4",
+    "ric_id": "ric-prod_170353",
+    "content_uuid": "abd9a009-0f94-4aa4-a912-a18fad4fabf9",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "266dfd55-61cb-4fe4-b81e-8235b716f073",
+    "title": "English Experience - CLIL Project - Task 5",
+    "ric_id": "ric-prod_170357",
+    "content_uuid": "9dccc80e-6b73-4065-b586-7f200003764a",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "ba72da3d-7be4-4880-b742-67e82e0052c9",
+    "title": "English Experience - CLIL Project - The final event",
+    "ric_id": "ric-prod_170364",
+    "content_uuid": "31d59485-1aff-4058-83eb-6af895aa20d0",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "6e4d9c90-897b-4459-b140-f91c3ef24d8e",
+    "title": "English Experience - CLIL Project - Project review",
+    "ric_id": "ric-prod_170361",
+    "content_uuid": "ea6679a4-f9dd-4d6e-8c71-61b6c55b1b41",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "7db33576-e68d-4f9e-9b3e-b3209e00cf65",
+    "title": "English Experience - My word bank",
+    "ric_id": "ric-prod_170367",
+    "content_uuid": "26ff9dcb-2acc-4263-8495-992301d7fd94",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "e6faf43c-bec2-48a8-ac75-594296df92cc",
+    "title": "English Experience - Unit 5",
+    "ric_id": "ric-prod_218434",
+    "content_uuid": "ea104490-418b-4b38-b65c-f5644dcea7e4",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "0f425f5f-6c71-4c52-90f1-4ba754d25706",
+    "title": "Unit 5 - page 8, activity 1, track 34 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_235547",
+    "content_uuid": "7a533303-ff4a-4eb9-a6ec-c12610888696",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "592fb686-3010-4882-8773-af2ff63bfe77",
+    "title": "Unit 5 - page 8, activity 2, track 35",
+    "ric_id": "ric-prod_235553",
+    "content_uuid": "73006c55-2d3c-4bdb-b0d6-39772d67418d",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "f84b9190-2a06-471a-9f29-1a00a142d437",
+    "title": "Unit 5 - page 8, activity 3",
+    "ric_id": "ric-prod_349385",
+    "content_uuid": "ccc59efb-4c20-4595-9292-a3d031a50d3b",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "8291023c-f8ac-4313-bb8f-deaf938fc999",
+    "title": "Unit 5 - page 9, Explore, track 36 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_235554",
+    "content_uuid": "049b89d3-08c0-4449-a78e-c1c592986ea1",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "f6229138-be03-4344-92e9-561be17809f4",
+    "title": "Unit 5 - page 9, activity 4",
+    "ric_id": "ric-prod_349423",
+    "content_uuid": "e4bd8ae4-41e6-4271-9734-366b28a4a16d",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "182f9093-1791-4897-8bc0-df4039518994",
+    "title": "Unit 5 - page 10, activity 5",
+    "ric_id": "ric-prod_352828",
+    "content_uuid": "7c1e76cd-72cf-4d1a-be8c-9545db9d3ccf",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "599c3c76-0c93-4823-84ea-8e00b7190c1a",
+    "title": "Unit 5 - page 10, activity 6, track 37 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_235557",
+    "content_uuid": "7cffd17b-17c9-4f08-bf33-d31c4a9d504b",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "c6100eb5-8274-400a-8e34-b47095770225",
+    "title": "Unit 5 - page 11, activity 7, track 38 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_235559",
+    "content_uuid": "3d327ecb-747f-4b3d-a92a-baa0efbb5ee1",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "f245ac4d-6fc2-4439-97bc-f89af37f5fa9",
+    "title": "Unit 5 - page 12, activity 8",
+    "ric_id": "ric-prod_352838",
+    "content_uuid": "41b37d54-c7fc-4e71-a381-3b6b9b37d60c",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "1f5e94f9-1df4-42f1-ba81-83dc00bf6120",
+    "title": "Unit 5 - page 12, activity 9",
+    "ric_id": "ric-prod_353106",
+    "content_uuid": "8b0b85d3-e0bf-4f03-b7b4-192368f24403",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "dc90f885-d186-48e1-bd43-97833ac737b3",
+    "title": "Unit 5 - page 12, activity 10, track 39 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_235560",
+    "content_uuid": "5dc1dc30-2e81-4d98-94ab-ac1fc05033c5",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "995986a0-44d6-4625-a929-5d0d73a7ff37",
+    "title": "Unit 5 - page 13, activity 11",
+    "ric_id": "ric-prod_353753",
+    "content_uuid": "b8b3a287-0657-4e73-89be-83d33360212e",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "7a37632f-7951-413d-b894-02ddfaae48c7",
+    "title": "Unit 5 - page 13, activity 12",
+    "ric_id": "ric-prod_353300",
+    "content_uuid": "b4fc475e-461f-4ba9-be9f-6c354e0b54e0",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "8f3cf1b0-4b8b-4b28-9398-4dded87256b0",
+    "title": "Unit 5 - page 14, activity 13, track 40 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_235566",
+    "content_uuid": "a63a2598-0caf-475a-ba4f-c82362c5687b",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "74a0ed4e-d397-4883-9e7f-3e9d386ae9ad",
+    "title": "Unit 5 - page 14, activity 14",
+    "ric_id": "ric-prod_349486",
+    "content_uuid": "b6c09991-a1c0-4e53-8219-84ad51d10a59",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "e17c8adb-0dc2-446c-b73c-94a59678672d",
+    "title": "Workbook & Review 5, 4B",
+    "ric_id": "ric-prod_218438",
+    "content_uuid": "c0fdb3d7-069b-4aa2-a036-235f4d3a782f",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "b1b52e86-cb56-4aaf-ac8a-b6801f122194",
+    "title": "Workbook - page 16, activity 1",
+    "ric_id": "ric-prod_223279",
+    "content_uuid": "0103dfdf-d88a-4284-b1a5-e41aaff60864",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "470bb13b-73b3-4e62-8b08-c69d018860e2",
+    "title": "Workbook - page 17, activity 2",
+    "ric_id": "ric-prod_223517",
+    "content_uuid": "bbc1de68-5c1f-4f9a-8b37-ad5f48859b51",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "9ff3f162-578e-4146-a8c5-5a336615ae8f",
+    "title": "Workbook - page 17, activity 3",
+    "ric_id": "ric-prod_223522",
+    "content_uuid": "e78b9472-52f2-40c3-ae93-092d708dcb51",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "bd2dcced-fe96-4abb-a16d-90e280f5309f",
+    "title": "Review - page 18, activity 1",
+    "ric_id": "ric-prod_223908",
+    "content_uuid": "2385a3f1-b74d-4796-95da-67519dae9329",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "32001771-4b18-4981-9612-83048879410a",
+    "title": "Review - page 18, activity 2",
+    "ric_id": "ric-prod_223928",
+    "content_uuid": "960cc510-29ce-4eec-b673-0c32cceef7bd",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "55b9a1a5-e6cf-4398-bea4-143fd1dde284",
+    "title": "English Experience - CLIL Project - Starting Point",
+    "ric_id": "ric-prod_218451",
+    "content_uuid": "6d2bbe3b-e424-4ee5-a9ea-46090fd71eb4",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "2a7d7c63-a615-4136-84db-b3d61f2f231b",
+    "title": "English Experience - Unit 6",
+    "ric_id": "ric-prod_218435",
+    "content_uuid": "bf3fc80e-832b-4d0e-b6b3-622a53796fb5",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "d8038bb5-c65a-4a69-98fb-47b61a673c42",
+    "title": "Unit 6 - page 30, activity 1, track 41",
+    "ric_id": "ric-prod_366509",
+    "content_uuid": "50ef9857-1ed6-4cc9-8d0a-dab02738916e",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "e28dda07-ec99-4968-aeec-1a7f5293ff57",
+    "title": "Unit 6 - page 30, activity 2, track 42",
+    "ric_id": "ric-prod_366594",
+    "content_uuid": "8907d7a6-0b7c-4165-b3ec-090cbeb347a9",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "e4ce3d15-8eb9-406e-9003-ac428c395d94",
+    "title": "Unit 6 - page 31, Explore, track 43 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_241838",
+    "content_uuid": "8e17ece0-ed37-440c-81eb-4dbfc2554a0c",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "1894cf45-bed5-49e9-bc0c-b5d63d7241cf",
+    "title": "Unit 6 - page 31, activity 4",
+    "ric_id": "ric-prod_366608",
+    "content_uuid": "9b87fe03-1fe6-4070-959e-06449c9d2972",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "a1040739-ebf4-46c4-9360-5662c419cfc3",
+    "title": "Unit 6 - page 32, Explore, track 44 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_241839",
+    "content_uuid": "2cbeb51e-2edc-489a-b5f1-1ac0de3005b9",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "d2cba488-df43-48c6-b8a8-fc860b86205f",
+    "title": "Unit 6 - page 32, activity 5",
+    "ric_id": "ric-prod_366652",
+    "content_uuid": "7b89cc62-6002-4934-bd34-63a552a48aa5",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "05107aba-59a7-46c4-b713-be1e5b501314",
+    "title": "Unit 6 - page 32, activity 6, track 45 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_241841",
+    "content_uuid": "ba50d7d2-40ee-4c41-a495-0a952d73d4f7",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "ec2f1378-ea11-4018-ac32-1d15b6885474",
+    "title": "Unit 6 - page 33, activity 7, track 46 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_241842",
+    "content_uuid": "b94abbb7-1fca-4460-9c5e-979de9a238cf",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "030caffe-e9d4-4dc0-975d-8517c38bd4b3",
+    "title": "Unit 6 - page 34, activity 8",
+    "ric_id": "ric-prod_366663",
+    "content_uuid": "097aee3d-a9f2-41c6-9cd9-3c2eaf023979",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "329edab2-0765-4b86-a1c5-1d884774a904",
+    "title": "Unit 6 - page 34, activity 9",
+    "ric_id": "ric-prod_367068",
+    "content_uuid": "f9ce6f6a-f94a-4c7e-aa54-5ef6b6c5ddd3",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "357e49c8-3ebb-4834-9858-795172e8ef4e",
+    "title": "Unit 6 - page 34, activity 10, track 47 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_241843",
+    "content_uuid": "e71e5f38-8f3f-4957-806b-997973b033f1",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "84418e21-98bc-4feb-a90f-5516a1d4c5ab",
+    "title": "Unit 6 - page 35, activity 11",
+    "ric_id": "ric-prod_367080",
+    "content_uuid": "c7833c75-4d33-42a9-bc2a-20585c5c58b5",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "bc4aedf7-d9cc-4620-921d-ba4b3213e39f",
+    "title": "Unit 6 - page 35, activity 12, track 48",
+    "ric_id": "ric-prod_241845",
+    "content_uuid": "02ee0a81-32da-46c7-bfbc-fb2d9bd114e1",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "1fb18623-8e5c-4a37-a4f5-aa27b06c08b4",
+    "title": "Unit 6 - page 36, activity 14",
+    "ric_id": "ric-prod_367088",
+    "content_uuid": "0a5eb7cb-d26b-448f-b6fe-4330a67b5f9a",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "3e64e822-3097-4252-b215-421eab06676f",
+    "title": "Workbook & Review 6, 4B",
+    "ric_id": "ric-prod_218439",
+    "content_uuid": "c1e72c94-5255-4974-beae-61059acafec6",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "0e6f4228-4805-4f22-ab22-5bfbe8408065",
+    "title": "Workbook - page 38, activity 1",
+    "ric_id": "ric-prod_234486",
+    "content_uuid": "dff0ca30-b5ff-4a81-8590-f78c5266d270",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "f40fcd5f-f0fe-4eb6-9c01-0e24a78ea122",
+    "title": "Workbook - page 38, activity 2",
+    "ric_id": "ric-prod_233992",
+    "content_uuid": "b191c319-4fa7-41e2-baf8-fcc4dddc2d47",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "50168733-f196-4d61-8409-bf2768fec2ee",
+    "title": "Workbook - page 39, activity 3",
+    "ric_id": "ric-prod_230592",
+    "content_uuid": "9ee7d557-4222-4015-b80f-e26797463cdd",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "67786967-4467-4744-84df-c8508ed2f956",
+    "title": "Workbook - page 39, activity 4",
+    "ric_id": "ric-prod_232976",
+    "content_uuid": "f4009f04-e100-4baa-8e8b-058bc8b16c2e",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "d3ff33df-a280-4ece-b557-6e54e4b6c4a0",
+    "title": "Review - page 40, activity 1",
+    "ric_id": "ric-prod_232988",
+    "content_uuid": "e40826ac-10c9-455a-a027-8e47c474c926",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "d5977e24-ac1f-4d03-9474-2a5af724a429",
+    "title": "Review - page 40, activity 2",
+    "ric_id": "ric-prod_233041",
+    "content_uuid": "70f83fad-e36b-40e8-a271-468694a1061f",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "767a4b2b-dce2-4e1c-ae97-94d4f70cb203",
+    "title": "English Experience - CLIL Project - Task 1",
+    "ric_id": "ric-prod_218443",
+    "content_uuid": "d4d84c47-0c31-4d7a-bf0e-77954645c1b4",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "48a799ce-9d32-4ee4-8605-82365f5d4ed1",
+    "title": "English Experience - Unit 7",
+    "ric_id": "ric-prod_218436",
+    "content_uuid": "5d181ec0-4df3-4410-9a3a-b0bbc09bc545",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "4761bbf0-acbb-4c40-bef9-1223c8dbc473",
+    "title": "Unit 7 - page 52, activity 1, track 51",
+    "ric_id": "ric-prod_242389",
+    "content_uuid": "ae8dd1db-3e77-4c37-9d66-de9a4ee2c69b",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "c4faff17-e2d1-486e-a57f-c61ae803d449",
+    "title": "Unit 7 - page 52, activity 2, track 52",
+    "ric_id": "ric-prod_347845",
+    "content_uuid": "a7fb667a-71ea-4ce0-941a-ec91692d88dc",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "82473f1b-4d49-4f00-a3e5-8d9b55ff1168",
+    "title": "Unit 7 - page 52, activity 3, track 53",
+    "ric_id": "ric-prod_347853",
+    "content_uuid": "fd6bb0d3-9ba7-4513-a346-1b591c5d9ae5",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "4c78d541-f756-4d1f-9d56-60c5274fe791",
+    "title": "Unit 7 - page 52, activity 4",
+    "ric_id": "ric-prod_348220",
+    "content_uuid": "f9dfc946-98a7-4748-8a6c-d5ad50ef466a",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "9e81f176-ddae-45a8-9b16-987109cec772",
+    "title": "Unit 7 - page 53, Explore, track 54 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_242395",
+    "content_uuid": "288bd7bb-f086-4320-9d62-9eea9c4fb083",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "61d9c3b1-282d-4ade-bbec-938410b8a318",
+    "title": "Unit 7 - page 53, activity 5",
+    "ric_id": "ric-prod_348218",
+    "content_uuid": "c253e591-68b5-4b6f-bf3e-b29b755da5b9",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "24d7851f-89fd-4f19-bd23-c650dae27a7a",
+    "title": "Unit 7 - page 53, activity 6",
+    "ric_id": "ric-prod_348217",
+    "content_uuid": "9b51c99b-3364-4b9b-a493-2e5468c4a95e",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "567db7ac-a271-4b01-8d08-f21c1ffa365f",
+    "title": "Unit 7 - page 54, activity 7",
+    "ric_id": "ric-prod_348177",
+    "content_uuid": "42cc71e8-9648-441c-a880-b678dd91abf2",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "6c072a36-813a-4309-b515-721946ddb36f",
+    "title": "Unit 7 - page 54, activity 8, track 55 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_242396",
+    "content_uuid": "a9656adc-af29-4559-bebb-87817709b2be",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "ad885b40-9f23-438e-9ce0-df649c4df7ed",
+    "title": "Unit 7 - page 55, activity 9, track 56 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_242400",
+    "content_uuid": "ae11a6a1-8d80-4046-b8d2-15889b7d6148",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "78bf1898-77bf-4d95-ac81-20866e35254d",
+    "title": "Unit 7 - page 56, activity 10",
+    "ric_id": "ric-prod_348142",
+    "content_uuid": "a0abd945-49e6-4288-90b1-5720d91953c1",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "3e124506-0ee0-44a5-9f83-a35d7fe7d33f",
+    "title": "Unit 7 - page 56, activity 11",
+    "ric_id": "ric-prod_348135",
+    "content_uuid": "923c0e52-98fd-4ef2-8f22-7ca54606b7b1",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "845dd620-f022-4cce-9641-a61111af6e20",
+    "title": "Unit 7 - page 56, activity 12, track 57",
+    "ric_id": "ric-prod_348222",
+    "content_uuid": "81363c55-85ad-4f16-b059-4b53684781ee",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "cca69643-545f-49f5-9aea-be13e234d146",
+    "title": "Unit 7 - page 57, activity 13",
+    "ric_id": "ric-prod_348120",
+    "content_uuid": "af6fe89d-3312-473b-8740-9e01e4189627",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "3d64710a-2898-4171-9170-eba874963c70",
+    "title": "Unit 7 - page 57, activity 14",
+    "ric_id": "ric-prod_348114",
+    "content_uuid": "b63c716a-6f55-4f76-9232-0d3275273e48",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "8667a14f-3124-4609-8dd2-c0e01bf15d42",
+    "title": "Unit 7 - page 58, activity 15",
+    "ric_id": "ric-prod_348102",
+    "content_uuid": "e2aef241-7b22-44dd-b8ee-11b909c02df0",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "e3c05432-2ae7-489f-9e71-197e2eea7452",
+    "title": "Unit 7 - page 58, activity 16, track 58 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_242402",
+    "content_uuid": "b4bcffee-413c-4c0c-8745-7a1ceb66eb60",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "0fed1ef0-faff-4a7b-a96c-4e47514f9567",
+    "title": "Workbook & Review 7, 4B",
+    "ric_id": "ric-prod_218441",
+    "content_uuid": "319a3d30-67a4-43e5-b936-f39532d296fa",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "b6c36241-267b-4b3e-af1c-f9cb8243e2ab",
+    "title": "Workbook - page 60, activity 1",
+    "ric_id": "ric-prod_230110",
+    "content_uuid": "33dad948-7aeb-4bd1-a0da-d7ce1c8d0a4e",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "29cb625f-991a-491c-a5ef-8524109b2ce9",
+    "title": "Workbook - page 60, activity 2",
+    "ric_id": "ric-prod_230114",
+    "content_uuid": "1e0e386e-615c-483f-b67c-176d6de7ca2a",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "c9c528de-a9c0-4286-82d3-cfb7caaadc2b",
+    "title": "Workbook - page 61, activity 3",
+    "ric_id": "ric-prod_230116",
+    "content_uuid": "d277ca34-ed27-408b-b106-076bb5716389",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "6a967b89-ad4e-4e0a-8c85-7611728d4a0d",
+    "title": "Workbook - page 61, activity 4",
+    "ric_id": "ric-prod_230117",
+    "content_uuid": "a641d720-29f5-4c1c-bf18-233dafecf273",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "d420d04f-2b2e-463c-8c96-683d6aeda80e",
+    "title": "Review - page 62, activity 1",
+    "ric_id": "ric-prod_230659",
+    "content_uuid": "4947ee13-4f12-48ea-bd58-741ef8ec486e",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "21fe8bcc-1e25-44ea-8a5d-8ce5e95b6b2f",
+    "title": "Review - page 62, activity 2",
+    "ric_id": "ric-prod_230134",
+    "content_uuid": "2e90131a-3f50-44b2-8a27-2c24a68ae654",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "20fcedf3-fd79-4f77-94a9-4b7152d50147",
+    "title": "English Experience - CLIL Project - Task 2",
+    "ric_id": "ric-prod_218445",
+    "content_uuid": "fb8beb9c-637a-43ca-b3ad-0d83f26afd99",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "65c4cf68-d793-4029-ac55-f3a1d0f8e60a",
+    "title": "English Experience - Unit 8",
+    "ric_id": "ric-prod_218437",
+    "content_uuid": "63491992-fa97-4eaa-b770-da9078d7e944",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "2f8dae20-c21f-4145-93bd-b5ffdafd9099",
+    "title": "English Experience - Goodbye Unit",
+    "ric_id": "ric-prod_243298",
+    "content_uuid": "d8659ba4-f9c7-4010-b4cd-82f1d444614d",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "e064e2d8-1644-47e7-be77-e502d0098e66",
+    "title": "Unit 8 - page 74, activity 1, track 60 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_242681",
+    "content_uuid": "5ee118b2-cbd5-4244-9ac5-e0d9aaec8bd0",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "53a642a8-ded7-4124-9f7b-5edabbd1ee3b",
+    "title": "Unit 8 - page 74, activity 2, track 61",
+    "ric_id": "ric-prod_242684",
+    "content_uuid": "8b503e26-051d-4251-b0de-5adf52cc36e0",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "73568567-9cf9-421a-93bb-40340415d7ee",
+    "title": "Unit 8 - page 74, activity 3",
+    "ric_id": "ric-prod_354111",
+    "content_uuid": "9ded631a-26a3-48fd-909b-b9965ade946c",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "fd9b8d86-8344-4b75-8f5f-a4ff41fcf901",
+    "title": "Unit 8 - page 74, activity 4",
+    "ric_id": "ric-prod_356015",
+    "content_uuid": "bc5dcd81-a605-409f-85bd-ba2de977a62c",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "66a606c1-1c34-4ce3-aaa6-de338a2357a3",
+    "title": "Unit 8 - page 75, activity 5",
+    "ric_id": "ric-prod_354117",
+    "content_uuid": "e117dd5e-a789-47a4-97d7-586a7aaab23f",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "9efd1a0c-b029-42ab-9d4c-30412e707531",
+    "title": "Unit 8 - page 75, activity 6, track 62",
+    "ric_id": "ric-prod_354346",
+    "content_uuid": "e6f3b137-6a4a-446f-a8a3-d1f3cc24663c",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "9283700c-95c4-4233-b8a1-cca619ee49a6",
+    "title": "Unit 8 - page 76, activity 7",
+    "ric_id": "ric-prod_355988",
+    "content_uuid": "4c914652-2656-4823-8aba-bedca5dbd38e",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "9b6f2a65-ff90-4ecb-af7e-e994e6a41da8",
+    "title": "Unit 8 - page 76, activity 8, track 63 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_242688",
+    "content_uuid": "94e8a2f3-5a93-4534-bdd6-a566c0006402",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "fe951723-2124-40d7-96b9-38d0af8df3f9",
+    "title": "Unit 8 - page 77, activity 9, track 64 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_242690",
+    "content_uuid": "e81cef9e-02d8-44d4-bd95-136254fa684e",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "9c1b73ce-bf71-4272-bb5e-2ec2be7b8309",
+    "title": "Unit 8 - page 78, activity 11",
+    "ric_id": "ric-prod_356026",
+    "content_uuid": "bd4c2403-ec76-4623-94b4-60d0b8009868",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "e245fb55-7186-4685-86b3-1923dd863e4e",
+    "title": "Unit 8 - page 78, activity 12, track 65 (non-interactive/non-assignable activity)",
+    "ric_id": "ric-prod_242693",
+    "content_uuid": "0cbd398d-c013-4de0-a252-aaa2543bd283",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "0f526bd5-4022-4555-b694-411e13ceaa90",
+    "title": "Unit 8 - page 79, activity 13",
+    "ric_id": "ric-prod_354113",
+    "content_uuid": "80711f62-43de-45bd-b3da-3d11f8bad462",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "a8fbc2aa-eb6b-4992-80a0-439ed55f04f0",
+    "title": "Unit 8 - page 79, activity 14",
+    "ric_id": "ric-prod_354455",
+    "content_uuid": "cc8cb731-4320-4131-a5be-713d92041be3",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "c13623de-77c9-45e2-9f3a-ac6f6522c39b",
+    "title": "Unit 8 - page 79, activity 15",
+    "ric_id": "ric-prod_354114",
+    "content_uuid": "b319b52b-3116-4531-915e-6ea532ce6ef2",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "1c81f18f-b92f-437b-b62c-bbda89f59375",
+    "title": "Unit 7 - page 80, activity 16",
+    "ric_id": "ric-prod_354410",
+    "content_uuid": "6a6f01e7-c668-4af9-956b-6f43c763b561",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "fb17d3f0-e583-4d4f-aa7f-c5b415a1641f",
+    "title": "Unit 8 - page 80, activity 17",
+    "ric_id": "ric-prod_354448",
+    "content_uuid": "749961d3-4e97-4103-96d7-efb5d815e1c1",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "422535d7-9145-496b-84c9-164ac1e75e6a",
+    "title": "Workbook & Review 8, 4B",
+    "ric_id": "ric-prod_218442",
+    "content_uuid": "5787e02a-4950-4c00-8ebe-3a13dcd2f4de",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "4af6b3d3-d429-4f2c-a0d8-5b6340aa5c22",
+    "title": "Workbook - page 82, activity 1",
+    "ric_id": "ric-prod_235074",
+    "content_uuid": "4bf6df0b-9887-4b76-ac08-74356cbdb013",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "5163bf6b-1d4f-417f-9a0c-5d82ca13fef2",
+    "title": "Workbook - page 82, activity 2",
+    "ric_id": "ric-prod_235075",
+    "content_uuid": "3a2fc577-2d46-4c8c-8dd3-2dc6c48f4b6c",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "46e0e5cc-930f-45d4-9944-cae2878dc5f2",
+    "title": "Workbook - page 83, activity 3",
+    "ric_id": "ric-prod_235076",
+    "content_uuid": "5e2d2952-1131-45a6-8910-f36444e3a886",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "da33b220-da33-4109-9c89-b7a06e592705",
+    "title": "Review - page 84, activity 1",
+    "ric_id": "ric-prod_235754",
+    "content_uuid": "f46f586e-3da1-4f52-b6b4-9d41b231719e",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "a9aa1567-7a05-459a-bc05-271435319f43",
+    "title": "Review - page 84, activity 2",
+    "ric_id": "ric-prod_236067",
+    "content_uuid": "8473d8d9-8646-4317-b0a0-6cedd4e17f3b",
+    "content_type": "Unity::Core::Interactive"
+  },
+  {
+    "node_id": "336c537d-9154-4df2-aa09-afc0ef478e6d",
+    "title": "English Experience - CLIL Project - Task 3",
+    "ric_id": "ric-prod_218446",
+    "content_uuid": "a912f7e9-681d-477c-8a2b-ab1bbb7e4c7c",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "dab9d6b2-a43b-44d7-a396-19a709118829",
+    "title": "English Experience - CLIL Project - Task 4",
+    "ric_id": "ric-prod_218447",
+    "content_uuid": "2ebcd86a-3a1c-438b-a403-9e6ea5ffd16b",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "f87e2580-ba3e-4b41-981e-03c354eb92e6",
+    "title": "English Experience - CLIL Project - The final event",
+    "ric_id": "ric-prod_218449",
+    "content_uuid": "f4e0ab1d-b7e4-4405-8b4e-53695f0b7b00",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "5717a15e-ab29-4afd-9498-618a0e222d14",
+    "title": "English Experience - CLIL Project - Project review",
+    "ric_id": "ric-prod_218450",
+    "content_uuid": "dda5552f-b776-49fb-a677-bf1c4acdae36",
+    "content_type": "Unity::Core::DigitalBook"
+  },
+  {
+    "node_id": "1e3c35d9-d5e2-4f93-9307-759766c8bfed",
+    "title": "English Experience - My word bank",
+    "ric_id": "ric-prod_219262",
+    "content_uuid": "a0eba450-9b8c-49c8-b53a-061ca690865e",
+    "content_type": "Unity::Core::DigitalBook"
+  }
+]

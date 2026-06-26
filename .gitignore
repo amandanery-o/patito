@@ -5,3 +5,4 @@ dist/
 .vite/
 .claude/
 .vercel
+scripts/richmond/.cache/
