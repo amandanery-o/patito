@@ -6,3 +6,4 @@ dist/
 .claude/
 .vercel
 scripts/richmond/.cache/
+scripts/edebe/.cache/
