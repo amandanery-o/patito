@@ -1,11 +1,11 @@
 import CalendarIcon from './CalendarIcon'
 
-export default function BottomNav({ activeView, onHome, onSchedule, onCalendar }) {
+export default function BottomNav({ activeView, onHome, onSchedule, onCalendar, onLeaderboard }) {
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 safe-area-inset-bottom">
       <div className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto flex">
-        <NavTab active={activeView === 'home'}     onClick={onHome}     icon="🏠" label="Início" />
-        <NavTab active={activeView === 'schedule'} onClick={onSchedule} icon="📋" label="Horário" />
+        <NavTab active={activeView === 'home'}        onClick={onHome}        icon="🏠" label="Início" />
+        <NavTab active={activeView === 'schedule'}    onClick={onSchedule}    icon="📋" label="Horário" />
         <NavTab
           active={activeView === 'calendar'}
           onClick={onCalendar}
@@ -13,6 +13,7 @@ export default function BottomNav({ activeView, onHome, onSchedule, onCalendar }
           label="Provas"
           useCustomIcon
         />
+        <NavTab active={activeView === 'leaderboard'} onClick={onLeaderboard} icon="🏆" label="Ranking" />
       </div>
     </nav>
   )

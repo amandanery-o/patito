@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { registerSW } from 'virtual:pwa-register'
 import './index.css'
 import App from './App.jsx'
+import { AuthProvider } from './contexts/AuthContext.jsx'
 
 // Recarrega a página automaticamente quando um novo SW assume o controle
 registerSW({ immediate: true, onRegisteredSW() {}, onOfflineReady() {} })
@@ -13,6 +14,8 @@ navigator.serviceWorker?.addEventListener('controllerchange', () => {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <AuthProvider>
+      <App />
+    </AuthProvider>
   </StrictMode>,
 )

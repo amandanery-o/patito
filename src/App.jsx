@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import Onboarding from './components/Onboarding'
+import LoginScreen from './components/LoginScreen'
+import Leaderboard from './components/Leaderboard'
+import { useAuth } from './contexts/AuthContext'
 import SubjectCard from './components/SubjectCard'
 import ExerciseCard from './components/ExerciseCard'
 import ResultScreen from './components/ResultScreen'
@@ -53,13 +56,14 @@ const EXAM_TYPES = [
 ]
 
 const VIEWS = {
-  HOME:     'home',
-  SUBJECT:  'subject',
-  SESSION:  'session',
-  RESULT:   'result',
-  CALENDAR: 'calendar',
-  ADD_EXAM: 'add_exam',
-  SCHEDULE: 'schedule',
+  HOME:        'home',
+  SUBJECT:     'subject',
+  SESSION:     'session',
+  RESULT:      'result',
+  CALENDAR:    'calendar',
+  ADD_EXAM:    'add_exam',
+  SCHEDULE:    'schedule',
+  LEADERBOARD: 'leaderboard',
 }
 
 const EMPTY_EXAM_FORM = {
@@ -114,6 +118,27 @@ function examAlertText(exam, subjName, days) {
 // ---------------------------------------------------------------------------
 
 export default function App() {
+  const { session, syncXp } = useAuth()
+
+  // Supabase ativo e ainda carregando sessão → spinner
+  if (session === undefined) {
+    return (
+      <div className="min-h-screen bg-yellow-50 flex items-center justify-center">
+        <div className="w-10 h-10 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin" />
+      </div>
+    )
+  }
+
+  // Supabase ativo mas não logado → tela de login
+  if (session === null && typeof window !== 'undefined' &&
+      import.meta.env.VITE_SUPABASE_URL) {
+    return <LoginScreen />
+  }
+
+  return <AppInner syncXp={syncXp} session={session} />
+}
+
+function AppInner({ syncXp, session }) {
   const [view, setView]                     = useState(VIEWS.HOME)
   const [selectedSubject, setSelectedSubject] = useState(null)
   const [selectedTopic, setSelectedTopic]   = useState(null)
@@ -173,6 +198,8 @@ export default function App() {
       setFinalStars(stars)
       setFinalXP(xp)
       updateTopicProgress(selectedSubject.id, selectedTopic.id, stars, xp)
+      // Sincroniza XP total com Supabase (fire-and-forget)
+      syncXp?.(user.xp + xp, user.streak.current, user.streak.best)
       setView(VIEWS.RESULT)
     } else {
       setQuestionIndex(nextIndex)
@@ -219,6 +246,14 @@ export default function App() {
   function cancelAddExam() {
     setEditingExamId(null)
     setView(VIEWS.CALENDAR)
+  }
+
+  // -------------------------------------------------------------------------
+  // VIEW: LEADERBOARD
+  // -------------------------------------------------------------------------
+
+  if (view === VIEWS.LEADERBOARD) {
+    return <Leaderboard onBack={() => setView(VIEWS.HOME)} />
   }
 
   // -------------------------------------------------------------------------
@@ -390,6 +425,7 @@ export default function App() {
           onHome={() => setView(VIEWS.HOME)}
           onSchedule={() => setView(VIEWS.SCHEDULE)}
           onCalendar={() => setView(VIEWS.CALENDAR)}
+          onLeaderboard={() => setView(VIEWS.LEADERBOARD)}
         />
 
         {showReports && (
@@ -653,6 +689,7 @@ export default function App() {
           onHome={() => setView(VIEWS.HOME)}
           onSchedule={() => setView(VIEWS.SCHEDULE)}
           onCalendar={() => setView(VIEWS.CALENDAR)}
+          onLeaderboard={() => setView(VIEWS.LEADERBOARD)}
         />
       </div>
     )
@@ -680,6 +717,7 @@ export default function App() {
           onHome={() => setView(VIEWS.HOME)}
           onSchedule={() => setView(VIEWS.SCHEDULE)}
           onCalendar={() => setView(VIEWS.CALENDAR)}
+          onLeaderboard={() => setView(VIEWS.LEADERBOARD)}
         />
       </div>
     )
