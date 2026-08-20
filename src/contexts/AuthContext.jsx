@@ -6,6 +6,8 @@ const AuthContext = createContext(null)
 export function AuthProvider({ children }) {
   const [session, setSession]   = useState(undefined) // undefined = carregando
   const [profile, setProfile]   = useState(undefined)
+  const userId = session?.user?.id
+  const userName = session?.user?.user_metadata?.name
 
   useEffect(() => {
     if (!supabase) { setSession(null); setProfile(null); return }
@@ -20,14 +22,25 @@ export function AuthProvider({ children }) {
   }, [])
 
   useEffect(() => {
-    if (!session?.user?.id || !supabase) return
+    if (!userId || !supabase) return
     supabase
       .from('profiles')
-      .select('*')
-      .eq('id', session.user.id)
+      .select('id, name, avatar, created_at')
+      .eq('id', userId)
       .single()
-      .then(({ data }) => setProfile(data || null))
-  }, [session?.user?.id])
+      .then(({ data, error }) => {
+        if (error) {
+          console.error('Não foi possível carregar o perfil do aluno.', error)
+          setProfile({
+            id: userId,
+            name: userName || 'Estudante',
+            avatar: '🦆',
+          })
+          return
+        }
+        setProfile(data)
+      })
+  }, [userId, userName])
 
   async function signIn(email, password) {
     const { error } = await supabase.auth.signInWithPassword({ email, password })
@@ -35,17 +48,18 @@ export function AuthProvider({ children }) {
   }
 
   async function signUp(email, password, name) {
-    const { data, error } = await supabase.auth.signUp({
+    const { error } = await supabase.auth.signUp({
       email,
       password,
       options: { data: { name } },
     })
-    if (error) return error
-    // Atualizar o nome no perfil (o trigger já criou o registro)
-    if (data.user) {
-      await supabase.from('profiles').upsert({ id: data.user.id, name })
-    }
-    return null
+    return error
+  }
+
+  async function resetPassword(email) {
+    const redirectTo = `${window.location.origin}/`
+    const { error } = await supabase.auth.resetPasswordForEmail(email, { redirectTo })
+    return error
   }
 
   async function signOut() {
@@ -69,7 +83,7 @@ export function AuthProvider({ children }) {
   }
 
   return (
-    <AuthContext.Provider value={{ session, profile, signIn, signUp, signOut, syncXp, updateProfileName }}>
+    <AuthContext.Provider value={{ session, profile, signIn, signUp, resetPassword, signOut, syncXp, updateProfileName }}>
       {children}
     </AuthContext.Provider>
   )

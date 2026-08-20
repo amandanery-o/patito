@@ -1,6 +1,6 @@
 # Modelo de dados proposto
 
-Status: desenho técnico para `F001`, `F002`, `F006` e `F007`. Nenhuma migração foi aplicada.
+Status: implementado em `supabase/schema.sql`; aplicação no ambiente Supabase ainda pendente.
 
 ## Princípios
 

@@ -1,10 +1,11 @@
 import { useState } from 'react'
 import { useAuth } from '../contexts/AuthContext'
+import { friendlyAuthError } from '../utils/authErrors'
 import Mascot from './Mascot'
 
 export default function LoginScreen() {
-  const { signIn, signUp } = useAuth()
-  const [mode, setMode]       = useState('login') // 'login' | 'signup'
+  const { signIn, signUp, resetPassword } = useAuth()
+  const [mode, setMode]       = useState('login') // 'login' | 'signup' | 'recovery'
   const [email, setEmail]     = useState('')
   const [password, setPassword] = useState('')
   const [name, setName]       = useState('')
@@ -19,7 +20,7 @@ export default function LoginScreen() {
     let err
     if (mode === 'login') {
       err = await signIn(email, password)
-    } else {
+    } else if (mode === 'signup') {
       if (!name.trim()) { setError('Digite seu nome'); setLoading(false); return }
       err = await signUp(email, password, name.trim())
       if (!err) {
@@ -28,11 +29,16 @@ export default function LoginScreen() {
         setMode('login')
         return
       }
+    } else {
+      err = await resetPassword(email)
+      if (!err) {
+        setError('Enviamos um link para você criar uma nova senha!')
+        setLoading(false)
+        return
+      }
     }
 
-    if (err) setError(err.message === 'Invalid login credentials'
-      ? 'E-mail ou senha incorretos.'
-      : err.message)
+    if (err) setError(friendlyAuthError(err))
     setLoading(false)
   }
 
@@ -45,7 +51,9 @@ export default function LoginScreen() {
           <Mascot mood="feliz" size="lg" />
           <h1 className="text-3xl font-extrabold text-yellow-900">patito</h1>
           <p className="text-sm text-yellow-700 font-semibold">
-            {mode === 'login' ? 'Entre na sua conta para estudar!' : 'Crie sua conta para começar!'}
+            {mode === 'login' && 'Entre na sua conta para estudar!'}
+            {mode === 'signup' && 'Crie sua conta para começar!'}
+            {mode === 'recovery' && 'Vamos ajudar você a voltar!'}
           </p>
         </div>
 
@@ -65,7 +73,7 @@ export default function LoginScreen() {
             </div>
           )}
 
-          <div>
+          {mode !== 'recovery' && <div>
             <label className="text-sm font-bold text-gray-600 block mb-1">E-mail</label>
             <input
               type="email"
@@ -76,7 +84,7 @@ export default function LoginScreen() {
               className="w-full border border-gray-200 rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-yellow-400"
               autoFocus={mode === 'login'}
             />
-          </div>
+          </div>}
 
           <div>
             <label className="text-sm font-bold text-gray-600 block mb-1">Senha</label>
@@ -93,7 +101,7 @@ export default function LoginScreen() {
 
           {error && (
             <p className={`text-sm font-semibold rounded-xl px-3 py-2 ${
-              error.startsWith('Confirme') ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-600'
+              (error.startsWith('Confirme') || error.startsWith('Enviamos')) ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-600'
             }`}>
               {error}
             </p>
@@ -104,13 +112,23 @@ export default function LoginScreen() {
             disabled={loading}
             className="w-full bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-extrabold py-3.5 rounded-2xl text-base transition-all active:scale-95 disabled:opacity-60"
           >
-            {loading ? '...' : mode === 'login' ? 'Entrar 🐥' : 'Criar conta'}
+            {loading ? '...' : mode === 'login' ? 'Entrar 🐥' : mode === 'signup' ? 'Criar conta' : 'Enviar link'}
           </button>
+
+          {mode === 'login' && (
+            <button
+              type="button"
+              onClick={() => { setMode('recovery'); setError('') }}
+              className="w-full text-sm font-bold text-yellow-700 hover:underline"
+            >
+              Esqueci minha senha
+            </button>
+          )}
         </form>
 
         {/* Toggle */}
         <p className="text-center text-sm text-gray-500">
-          {mode === 'login' ? 'Ainda não tem conta?' : 'Já tem conta?'}{' '}
+          {mode === 'login' ? 'Ainda não tem conta?' : mode === 'signup' ? 'Já tem conta?' : 'Lembrou sua senha?'}{' '}
           <button
             onClick={() => { setMode(m => m === 'login' ? 'signup' : 'login'); setError('') }}
             className="font-bold text-yellow-700 hover:underline"

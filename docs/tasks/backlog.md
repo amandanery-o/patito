@@ -11,19 +11,19 @@ Status: proposto, aguardando aprovação de priorização.
 
 ## F001 — Conta do aluno com Supabase Auth
 
-- `TASK-005` Revisar e completar o schema de perfil ligado ao Supabase Auth.
-- `TASK-006` Ajustar cadastro e login padrão com nome, e-mail e senha.
-- `TASK-007` Implementar encerramento de sessão e recuperação de senha por e-mail.
-- `TASK-008` Criar RLS e testes de isolamento entre alunos.
+- `TASK-005` ✅ Revisar e completar o schema de perfil ligado ao Supabase Auth.
+- `TASK-006` ✅ Ajustar cadastro e login padrão com nome, e-mail e senha.
+- `TASK-007` ✅ Implementar encerramento de sessão e recuperação de senha por e-mail.
+- `TASK-008` ✅ Criar RLS e testes de isolamento entre alunos.
 - `TASK-009` Migrar identidades Supabase existentes quando aplicável.
 
 ## F002 — Sincronização de progresso
 
-- `TASK-010` Modelar sessões, respostas, progresso e eventos de utilização conforme `docs/architecture/data-model.md`.
-- `TASK-011` Criar migrações, índices, constraints e políticas RLS idempotentes.
-- `TASK-012` Implementar funções transacionais idempotentes para resposta e conclusão de sessão.
+- `TASK-010` ✅ Modelar sessões, respostas, progresso e eventos de utilização conforme `docs/architecture/data-model.md`.
+- `TASK-011` ✅ Criar migrações, índices, constraints e políticas RLS idempotentes.
+- `TASK-012` ✅ Implementar funções transacionais idempotentes para resposta e conclusão de sessão.
 - `TASK-013` Implementar corte versionado que ignora dados locais do primeiro semestre sem importação automática.
-- `TASK-014` Implementar repositório cliente e estados loading/saving/saved/error/stale.
+- `TASK-014` 🟡 Implementar repositório cliente e estados loading/saving/saved/error/stale (falta detecção explícita de estado stale).
 - `TASK-015` Testar recarga, duas abas, troca de dispositivo, RLS e repetição de requisições.
 
 ## F003 — Sessão de estudos v2
