@@ -5,7 +5,6 @@ dist/
 .vite/
 playwright-report/
 test-results/
-.claude/
 .vercel
 scripts/richmond/.cache/
 scripts/edebe/.cache/

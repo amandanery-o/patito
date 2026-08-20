@@ -1,0 +1,4 @@
+interface:
+  display_name: "Planejar Produto"
+  short_description: "Transforma requisitos em PRD, features e tasks"
+  default_prompt: "Use $plan-product-work para organizar estes requisitos em PRD, features e tasks rastreáveis."
