@@ -6,5 +6,6 @@ dist/
 playwright-report/
 test-results/
 .vercel
+editorial/drafts/
 scripts/richmond/.cache/
 scripts/edebe/.cache/

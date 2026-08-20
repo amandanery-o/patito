@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "editorial:generate:geografia-p1": "node scripts/editorial/generate-questions.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.4",
