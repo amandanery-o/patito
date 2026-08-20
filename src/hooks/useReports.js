@@ -2,28 +2,29 @@ import { useState } from 'react'
 
 const STORAGE_KEY = 'patito_reports'
 
-function load() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [] } catch { return [] }
+function load(storageKey) {
+  try { return JSON.parse(localStorage.getItem(storageKey)) || [] } catch { return [] }
 }
 
-function save(reports) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(reports))
+function save(storageKey, reports) {
+  localStorage.setItem(storageKey, JSON.stringify(reports))
 }
 
-export function useReports() {
-  const [reports, setReports] = useState(load)
+export function useReports(userId = null) {
+  const storageKey = `${STORAGE_KEY}:${userId || 'offline'}`
+  const [reports, setReports] = useState(() => load(storageKey))
 
   function addReport({ questionId, question, subjectName, topicTitle }) {
     setReports(prev => {
       if (prev.some(r => r.questionId === questionId)) return prev
       const next = [{ questionId, question, subjectName, topicTitle, reportedAt: new Date().toISOString() }, ...prev]
-      save(next)
+      save(storageKey, next)
       return next
     })
   }
 
   function clearReports() {
-    save([])
+    save(storageKey, [])
     setReports([])
   }
 

@@ -1,29 +1,42 @@
-import { useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { SEMESTER_EXAMS, SEED_VERSION } from '../data/semesterExams'
 import { parseLocalDate } from '../utils/dates'
 
 const STORAGE_KEY = 'patito_data'
 const STORAGE_VERSION = 2
 
-function freshState(base = {}) {
+function freshState(base = {}, profile = null) {
   return {
-    user: base.user || { name: 'Estudante', avatar: '🦁', xp: 0, streak: { current: 0, lastStudyDate: null, best: 0 }, trophies: [] },
+    user: {
+      name: profile?.name || 'Estudante',
+      avatar: profile?.avatar || '🦁',
+      xp: profile?.xp || 0,
+      streak: {
+        current: profile?.streak_current || 0,
+        lastStudyDate: null,
+        best: profile?.streak_best || 0,
+      },
+      trophies: [],
+      ...(base.user || {}),
+    },
     progress: base.progress || {},
-    exams: SEMESTER_EXAMS,
+    exams: base.exams || SEMESTER_EXAMS,
     seedVersion: SEED_VERSION,
     storageVersion: STORAGE_VERSION,
   }
 }
 
-function loadData() {
+function loadData(storageKey, profile) {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY)
+    const raw = localStorage.getItem(storageKey) ||
+      (storageKey.endsWith(':offline') ? localStorage.getItem(STORAGE_KEY) : null)
     if (raw) {
       const parsed = JSON.parse(raw)
+      if (!localStorage.getItem(storageKey)) saveData(storageKey, parsed)
       // Versão de storage mudou: reseta exams mas preserva progresso e XP
       if ((parsed.storageVersion || 0) < STORAGE_VERSION) {
-        const data = freshState(parsed)
-        saveData(data)
+        const data = freshState(parsed, profile)
+        saveData(storageKey, data)
         return data
       }
       // Seed atualizado: substitui só as provas do seed, mantém as do usuário
@@ -31,38 +44,92 @@ function loadData() {
         const seedIds = new Set(SEMESTER_EXAMS.map(e => e.id))
         const userExams = (parsed.exams || []).filter(e => !seedIds.has(e.id))
         const data = { ...parsed, exams: [...SEMESTER_EXAMS, ...userExams], seedVersion: SEED_VERSION }
-        saveData(data)
+        saveData(storageKey, data)
         return data
       }
       return parsed
     }
   } catch {}
-  const data = freshState()
-  saveData(data)
+  const data = freshState({}, profile)
+  saveData(storageKey, data)
   return data
 }
 
-function saveData(data) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
+function saveData(storageKey, data) {
+  localStorage.setItem(storageKey, JSON.stringify(data))
 }
 
-export function useProgress() {
-  const [data, setData] = useState(loadData)
+function nextStreak(streak = {}) {
+  const today = new Date()
+  const todayKey = today.toLocaleDateString('en-CA')
+  if (streak.lastStudyDate === todayKey) return streak
+
+  const yesterday = new Date(today)
+  yesterday.setDate(yesterday.getDate() - 1)
+  const yesterdayKey = yesterday.toLocaleDateString('en-CA')
+  const current = streak.lastStudyDate === yesterdayKey ? (streak.current || 0) + 1 : 1
+  return { current, best: Math.max(streak.best || 0, current), lastStudyDate: todayKey }
+}
+
+export function useProgress({ userId = null, profile = null } = {}) {
+  const storageKey = useMemo(() => `${STORAGE_KEY}:${userId || 'offline'}`, [userId])
+  const [data, setData] = useState(() => loadData(storageKey, profile))
+
+  useEffect(() => {
+    setData(loadData(storageKey, profile))
+  }, [storageKey, profile])
+
+  useEffect(() => {
+    if (!profile) return
+    setData(prev => {
+      const isUntouched = prev.user.name === 'Estudante' && prev.user.xp === 0
+      if (!isUntouched) return prev
+      const next = {
+        ...prev,
+        user: {
+          ...prev.user,
+          name: profile.name || prev.user.name,
+          avatar: profile.avatar || prev.user.avatar,
+          xp: profile.xp || 0,
+          streak: {
+            ...prev.user.streak,
+            current: profile.streak_current || 0,
+            best: profile.streak_best || 0,
+          },
+        },
+      }
+      saveData(storageKey, next)
+      return next
+    })
+  }, [profile, storageKey])
 
   function updateTopicProgress(subjectId, topicId, stars, xpEarned) {
+    const updatedUser = {
+      ...data.user,
+      xp: data.user.xp + xpEarned,
+      streak: nextStreak(data.user.streak),
+    }
     setData(prev => {
-      const next = { ...prev }
-      if (!next.progress[subjectId]) next.progress[subjectId] = {}
-      const existing = next.progress[subjectId][topicId] || { stars: 0, completed: false, bestScore: 0 }
-      next.progress[subjectId][topicId] = {
+      const subjectProgress = { ...(prev.progress[subjectId] || {}) }
+      const existing = subjectProgress[topicId] || { stars: 0, completed: false, bestScore: 0 }
+      subjectProgress[topicId] = {
         stars: Math.max(existing.stars, stars),
         completed: true,
         bestScore: Math.max(existing.bestScore, stars),
       }
-      next.user = { ...next.user, xp: next.user.xp + xpEarned }
-      saveData(next)
+      const next = {
+        ...prev,
+        progress: { ...prev.progress, [subjectId]: subjectProgress },
+        user: {
+          ...prev.user,
+          xp: prev.user.xp + xpEarned,
+          streak: nextStreak(prev.user.streak),
+        },
+      }
+      saveData(storageKey, next)
       return next
     })
+    return updatedUser
   }
 
   function getTopicProgress(subjectId, topicId) {
@@ -78,7 +145,7 @@ export function useProgress() {
   function addExam(exam) {
     setData(prev => {
       const next = { ...prev, exams: [...prev.exams, { ...exam, id: `exam-${Date.now()}` }] }
-      saveData(next)
+      saveData(storageKey, next)
       return next
     })
   }
@@ -86,7 +153,7 @@ export function useProgress() {
   function updateExam(id, changes) {
     setData(prev => {
       const next = { ...prev, exams: prev.exams.map(e => e.id === id ? { ...e, ...changes } : e) }
-      saveData(next)
+      saveData(storageKey, next)
       return next
     })
   }
@@ -94,7 +161,7 @@ export function useProgress() {
   function setUserName(name) {
     setData(prev => {
       const next = { ...prev, user: { ...prev.user, name } }
-      saveData(next)
+      saveData(storageKey, next)
       return next
     })
   }
@@ -102,7 +169,7 @@ export function useProgress() {
   function removeExam(id) {
     setData(prev => {
       const next = { ...prev, exams: prev.exams.filter(e => e.id !== id) }
-      saveData(next)
+      saveData(storageKey, next)
       return next
     })
   }

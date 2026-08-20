@@ -1,5 +1,7 @@
 # QUESTIONS.md — Revisão Técnica do Projeto Patito
 
+> Documento histórico. Vários itens desta revisão já foram corrigidos; consulte o README e a suíte de testes para o estado atual do projeto.
+
 > Revisão realizada por: Tech Lead / Code Reviewer
 > Respostas baseadas em: melhores práticas de desenvolvimento de software
 > Escopo: Arquitetura, performance, segurança, bugs, qualidade de código e dívida técnica

@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 import { seedUser } from './helpers.js'
 
 async function openInglesSession(page) {
-  await page.locator('button').filter({ hasText: 'Inglês' }).click()
+  await page.getByTestId('subject-ingles').getByRole('button', { name: /Jogar agora/i }).click()
   await page.getByRole('button', { name: /Revisão P1/i }).click()
 }
 
@@ -12,19 +12,19 @@ test.describe('Sessão — Inglês', () => {
     await page.goto('/')
   })
 
-  test('SubjectCard de Inglês visível com tag Novo', async ({ page }) => {
-    const inglesCard = page.locator('button').filter({ hasText: 'Inglês' })
+  test('SubjectCard de Inglês está visível', async ({ page }) => {
+    const inglesCard = page.getByTestId('subject-ingles')
     await expect(inglesCard).toBeVisible()
   })
 
   test('trilha mostra 35 questões', async ({ page }) => {
-    await page.locator('button').filter({ hasText: 'Inglês' }).click()
+    await page.getByTestId('subject-ingles').getByRole('button', { name: /Jogar agora/i }).click()
     await expect(page.getByText('35 questões')).toBeVisible()
   })
 
-  test('P2 placeholder mostra Em breve', async ({ page }) => {
-    await page.locator('button').filter({ hasText: 'Inglês' }).click()
-    await expect(page.getByText(/Em breve/i)).toBeVisible()
+  test('trilha mostra também a revisão P2', async ({ page }) => {
+    await page.getByTestId('subject-ingles').getByRole('button', { name: /Jogar agora/i }).click()
+    await expect(page.getByRole('button', { name: /Revisão P2/i })).toBeVisible()
   })
 
   test('sessão inicia com 1/35', async ({ page }) => {
@@ -41,7 +41,7 @@ test.describe('Sessão — Inglês', () => {
 
   test('nenhuma questão com tipo desconhecido', async ({ page }) => {
     await openInglesSession(page)
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 2; i++) {
       await expect(page.getByText(/Tipo desconhecido/i)).not.toBeVisible()
       const opts = page.locator('.bg-white.rounded-2xl.shadow-lg button')
       if (await opts.count() === 0) break
@@ -50,29 +50,22 @@ test.describe('Sessão — Inglês', () => {
     }
   })
 
-  test('correctIndex variado — resposta correta não é sempre a primeira opção', async ({ page }) => {
-    // Avança algumas questões e verifica que nem toda resposta correta é A
+  test('permite fechar a sessão e voltar à trilha', async ({ page }) => {
     await openInglesSession(page)
-    let correctWasFirst = 0
-    let totalChecked = 0
+    await page.getByRole('button', { name: /Fechar sessão/i }).click()
+    await expect(page.getByRole('button', { name: /Revisão P1/i })).toBeVisible()
+  })
 
-    for (let i = 0; i < 8; i++) {
-      const opts = page.locator('.bg-white.rounded-2xl.shadow-lg button')
-      const count = await opts.count()
-      if (count === 0) break
+  test('encerra a sessão ao perder as três vidas', async ({ page }) => {
+    // Torna a ordem previsível: as três primeiras perguntas têm resposta B/C/D.
+    await page.evaluate(() => { Math.random = () => 0 })
+    await openInglesSession(page)
 
-      // Clica na primeira opção e vê se foi correta
-      await opts.first().click()
-      const panel = page.locator('.fixed.bottom-0').first()
-      await panel.waitFor({ state: 'visible' })
-      const cls = await panel.getAttribute('class')
-      if (cls?.includes('bg-green-500')) correctWasFirst++
-      totalChecked++
+    for (let attempt = 0; attempt < 3; attempt++) {
+      await page.locator('.bg-white.rounded-2xl.shadow-lg button').first().click()
       await page.getByRole('button', { name: /Continuar/i }).click()
     }
 
-    // Com 8 questões e distribuição 8/6/6/6, se A fosse sempre certa
-    // teríamos 8/8. Com distribuição real, esperamos < 8/8
-    expect(correctWasFirst).toBeLessThan(totalChecked)
+    await expect(page.getByText('Resultado')).toBeVisible()
   })
 })

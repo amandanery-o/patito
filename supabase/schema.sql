@@ -18,13 +18,30 @@ create table if not exists public.profiles (
 -- RLS
 alter table public.profiles enable row level security;
 
--- Qualquer aluno logado vê todos os perfis (para o ranking)
+-- Evita recursão de RLS ao descobrir a turma do usuário atual.
+create or replace function public.current_user_class_code()
+returns text
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  select class_code from public.profiles where id = auth.uid();
+$$;
+
+revoke all on function public.current_user_class_code() from public;
+grant execute on function public.current_user_class_code() to authenticated;
+
+drop policy if exists "profiles_select" on public.profiles;
+
+-- Cada aluno vê apenas os perfis da própria turma (para o ranking).
 create policy "profiles_select"
   on public.profiles for select
   to authenticated
-  using (true);
+  using (id = auth.uid() or class_code = public.current_user_class_code());
 
 -- Cada aluno só edita o próprio perfil
+drop policy if exists "profiles_upsert" on public.profiles;
 create policy "profiles_upsert"
   on public.profiles for all
   to authenticated

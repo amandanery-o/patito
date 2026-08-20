@@ -5,22 +5,23 @@ import { useAuth } from '../contexts/AuthContext'
 const MEDALS = ['🥇', '🥈', '🥉']
 
 export default function Leaderboard({ onBack }) {
-  const { session } = useAuth()
+  const { session, profile } = useAuth()
   const [rows, setRows]       = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     if (!supabase) { setLoading(false); return }
-    supabase
+    let query = supabase
       .from('profiles')
       .select('id, name, avatar, xp, streak_current')
       .order('xp', { ascending: false })
       .limit(50)
-      .then(({ data }) => {
+    if (profile?.class_code) query = query.eq('class_code', profile.class_code)
+    query.then(({ data }) => {
         setRows(data || [])
         setLoading(false)
       })
-  }, [])
+  }, [profile?.class_code])
 
   const myId = session?.user?.id
 

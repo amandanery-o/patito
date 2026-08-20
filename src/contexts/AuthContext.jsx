@@ -5,16 +5,16 @@ const AuthContext = createContext(null)
 
 export function AuthProvider({ children }) {
   const [session, setSession]   = useState(undefined) // undefined = carregando
-  const [profile, setProfile]   = useState(null)
+  const [profile, setProfile]   = useState(undefined)
 
   useEffect(() => {
-    if (!supabase) { setSession(null); return }
+    if (!supabase) { setSession(null); setProfile(null); return }
 
     supabase.auth.getSession().then(({ data }) => setSession(data.session))
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_, s) => {
       setSession(s)
-      if (!s) setProfile(null)
+      setProfile(s ? undefined : null)
     })
     return () => subscription.unsubscribe()
   }, [])
@@ -26,7 +26,7 @@ export function AuthProvider({ children }) {
       .select('*')
       .eq('id', session.user.id)
       .single()
-      .then(({ data }) => { if (data) setProfile(data) })
+      .then(({ data }) => setProfile(data || null))
   }, [session?.user?.id])
 
   async function signIn(email, password) {
@@ -35,7 +35,11 @@ export function AuthProvider({ children }) {
   }
 
   async function signUp(email, password, name) {
-    const { data, error } = await supabase.auth.signUp({ email, password })
+    const { data, error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: { data: { name } },
+    })
     if (error) return error
     // Atualizar o nome no perfil (o trigger já criou o registro)
     if (data.user) {
@@ -71,6 +75,7 @@ export function AuthProvider({ children }) {
   )
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useAuth() {
   return useContext(AuthContext)
 }

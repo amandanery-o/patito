@@ -1,13 +1,11 @@
-import { useState } from 'react'
+import { lazy, Suspense, useState } from 'react'
 import Header from './components/Header'
 import Onboarding from './components/Onboarding'
 import LoginScreen from './components/LoginScreen'
-import Leaderboard from './components/Leaderboard'
 import { useAuth } from './contexts/AuthContext'
 import SubjectCard from './components/SubjectCard'
 import ExerciseCard from './components/ExerciseCard'
 import ResultScreen from './components/ResultScreen'
-import CalendarMonth from './components/CalendarMonth'
 import CalendarIcon from './components/CalendarIcon'
 import Mascot from './components/Mascot'
 import ConfirmModal from './components/ConfirmModal'
@@ -18,99 +16,26 @@ import { useReports } from './hooks/useReports'
 import { shuffle } from './utils/shuffle'
 import { calcStars, calcXP } from './utils/scoring'
 import { daysUntil, formatDate, parseLocalDate } from './utils/dates'
-import { portugues } from './data/portugues'
-import { matematica } from './data/matematica'
-import { geografia } from './data/geografia'
-import { historia } from './data/historia'
-import { ciencias } from './data/ciencias'
-import { ensinoReligioso } from './data/ensino-religioso'
-import { ingles } from './data/ingles'
-import { obict } from './data/obict'
-import { obli } from './data/obli'
 import { SCHEDULE, SUBJECT_COLORS, DAY_NAMES } from './data/schedule'
-import ScheduleView from './components/ScheduleView'
+import {
+  EMPTY_EXAM_FORM, EXAM_TYPES, STUDY_SUBJECTS, SUBJECTS, VIEWS,
+  examAlertText, getMascotState,
+} from './data/appConfig'
 
-// ---------------------------------------------------------------------------
-// Dados estáticos
-// ---------------------------------------------------------------------------
+const Leaderboard = lazy(() => import('./components/Leaderboard'))
+const CalendarMonth = lazy(() => import('./components/CalendarMonth'))
+const ScheduleView = lazy(() => import('./components/ScheduleView'))
 
-const SUBJECTS = [
-  { id: 'portugues',        name: 'Português',      icon: '📝', color: 'bg-blue-500',   topics: portugues.topics,        calendarOnly: false, lastUpdated: '2026-06-17' },
-  { id: 'matematica',       name: 'Matemática',     icon: '🔢', color: 'bg-green-500',  topics: matematica.topics,       calendarOnly: false, lastUpdated: '2026-06-17' },
-  { id: 'obict',            name: 'Olimpíada Brasileira de Inovação, Ciência e Tecnologia (OBICT)', icon: '🚀', color: 'bg-violet-600', topics: obict.topics, calendarOnly: false, lastUpdated: null },
-  { id: 'geografia',        name: 'Geografia',      icon: '🌍', color: 'bg-orange-500', topics: geografia.topics,        calendarOnly: false, lastUpdated: null },
-  { id: 'ingles',           name: 'Inglês',         icon: '🇬🇧', color: 'bg-purple-500', topics: ingles.topics,           calendarOnly: false, lastUpdated: null },
-  { id: 'obli',             name: 'Olimpíada de Língua Inglesa (OBLI)', icon: '🏅', color: 'bg-blue-600', topics: obli.topics, calendarOnly: false, lastUpdated: null },
-  { id: 'ciencias',         name: 'Ciências',       icon: '🔬', color: 'bg-cyan-500',   topics: ciencias.topics,         calendarOnly: false, lastUpdated: '2026-06-17' },
-  { id: 'historia',         name: 'História',       icon: '📜', color: 'bg-amber-700',  topics: historia.topics,         calendarOnly: false, lastUpdated: null },
-  { id: 'ensino-religioso', name: 'Ens. Religioso', icon: '✨', color: 'bg-yellow-500', topics: ensinoReligioso.topics,  calendarOnly: false, lastUpdated: null        },
-  { id: 'educacao-fisica',  name: 'Educ. Física',   icon: '⚽', color: 'bg-red-500',    topics: [],                      calendarOnly: true,  lastUpdated: null        },
-  { id: 'arte',             name: 'Arte',           icon: '🎨', color: 'bg-pink-500',   topics: [],                      calendarOnly: true,  lastUpdated: null        },
-]
-
-const EXAM_TYPES = [
-  { id: 'trabalho',    label: 'Trabalho (T)', badge: 'bg-blue-100 text-blue-700'     },
-  { id: 'prova',       label: 'Prova (P)',    badge: 'bg-green-100 text-green-700'   },
-  { id: 'recuperacao', label: 'Recuperação',  badge: 'bg-orange-100 text-orange-700' },
-  { id: 'evento',      label: 'Evento',       badge: 'bg-teal-100 text-teal-700'     },
-]
-
-const VIEWS = {
-  HOME:        'home',
-  SUBJECT:     'subject',
-  SESSION:     'session',
-  RESULT:      'result',
-  CALENDAR:    'calendar',
-  ADD_EXAM:    'add_exam',
-  SCHEDULE:    'schedule',
-  LEADERBOARD: 'leaderboard',
-}
-
-const EMPTY_EXAM_FORM = {
-  subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '',
-}
-
-// Matérias que aparecem no grid de estudo da home (exclui calendarOnly)
-const STUDY_SUBJECTS = SUBJECTS.filter(s => !s.calendarOnly)
-
-// ---------------------------------------------------------------------------
-// Helpers
-// ---------------------------------------------------------------------------
-
-/** Gera o estado (mood + mensagem) do mascote na home. */
-function getMascotState(userName, streak, upcomingCount) {
-  if (streak > 0) {
-    return {
-      mood: 'feliz',
-      message: `Dia ${streak} de sequência, ${userName}! Continue assim! 🔥`,
-    }
-  }
-  if (upcomingCount > 0) {
-    return {
-      mood: 'neutro',
-      message: `Oi, ${userName}! Bora se preparar para as provas? 💪`,
-    }
-  }
-  return {
-    mood: 'feliz',
-    message: `Oi, ${userName}! Que matéria estudamos hoje? 📚`,
-  }
-}
-
-/** Texto do alerta de prova/trabalho na home. */
-function examAlertText(exam, subjName, days) {
-  const typeLabel = EXAM_TYPES.find(t => t.id === exam.type)?.label || 'Prova'
-  // Evento com período: mostra prazo até endDate
-  if (exam.endDate) {
-    const deadline = daysUntil(exam.endDate)
-    const daysText = deadline === 0 ? 'hoje — último dia!' : `prazo: ${deadline} dia${deadline > 1 ? 's' : ''}!`
-    return `${subjName} em andamento — ${daysText} Bora estudar? 🚀`
-  }
-  const daysText = days === 0 ? 'hoje!' : `em ${days} dia${days > 1 ? 's' : ''}!`
-  if (exam.type === 'prova') {
-    return `${typeLabel} de ${subjName} ${daysText} Bora revisar? 🐥`
-  }
-  return `${typeLabel} de ${subjName} ${daysText} Fique atento! 📌`
+function ViewLoader({ children }) {
+  return (
+    <Suspense fallback={(
+      <div className="min-h-screen bg-yellow-50 flex items-center justify-center">
+        <div className="w-10 h-10 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin" />
+      </div>
+    )}>
+      {children}
+    </Suspense>
+  )
 }
 
 // ---------------------------------------------------------------------------
@@ -118,10 +43,18 @@ function examAlertText(exam, subjName, days) {
 // ---------------------------------------------------------------------------
 
 export default function App() {
-  const { session, syncXp } = useAuth()
+  const { session, profile, syncXp, updateProfileName, signOut } = useAuth()
 
   // Supabase ativo e ainda carregando sessão → spinner
   if (session === undefined) {
+    return (
+      <div className="min-h-screen bg-yellow-50 flex items-center justify-center">
+        <div className="w-10 h-10 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin" />
+      </div>
+    )
+  }
+
+  if (session && profile === undefined) {
     return (
       <div className="min-h-screen bg-yellow-50 flex items-center justify-center">
         <div className="w-10 h-10 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin" />
@@ -135,10 +68,19 @@ export default function App() {
     return <LoginScreen />
   }
 
-  return <AppInner syncXp={syncXp} session={session} />
+  return (
+    <AppInner
+      key={session?.user?.id || 'offline'}
+      syncXp={syncXp}
+      updateProfileName={updateProfileName}
+      signOut={signOut}
+      session={session}
+      profile={profile}
+    />
+  )
 }
 
-function AppInner({ syncXp, session }) {
+function AppInner({ syncXp, updateProfileName, signOut, session, profile }) {
   const [view, setView]                     = useState(VIEWS.HOME)
   const [selectedSubject, setSelectedSubject] = useState(null)
   const [selectedTopic, setSelectedTopic]   = useState(null)
@@ -158,11 +100,11 @@ function AppInner({ syncXp, session }) {
     user, exams,
     updateTopicProgress, getTopicProgress, getSubjectProgress,
     addExam, updateExam, removeExam, getUpcomingExams, setUserName,
-  } = useProgress()
+  } = useProgress({ userId: session?.user?.id, profile })
 
   const upcomingExams = getUpcomingExams(7)
 
-  const { reports, addReport, clearReports } = useReports()
+  const { reports, addReport, clearReports } = useReports(session?.user?.id)
   const [showReports, setShowReports] = useState(false)
 
   // -------------------------------------------------------------------------
@@ -191,15 +133,16 @@ function AppInner({ syncXp, session }) {
 
     const nextIndex      = questionIndex + 1
     const isLastQuestion = nextIndex >= sessionQuestions.length
+    const isOutOfLives = newLives === 0
 
-    if (isLastQuestion) {
+    if (isLastQuestion || isOutOfLives) {
       const stars = calcStars(newCorrect, sessionQuestions.length)
       const xp    = calcXP(newCorrect, sessionQuestions.length)
       setFinalStars(stars)
       setFinalXP(xp)
-      updateTopicProgress(selectedSubject.id, selectedTopic.id, stars, xp)
+      const updatedUser = updateTopicProgress(selectedSubject.id, selectedTopic.id, stars, xp)
       // Sincroniza XP total com Supabase (fire-and-forget)
-      syncXp?.(user.xp + xp, user.streak.current, user.streak.best)
+      syncXp?.(updatedUser.xp, updatedUser.streak.current, updatedUser.streak.best)
       setView(VIEWS.RESULT)
     } else {
       setQuestionIndex(nextIndex)
@@ -253,7 +196,7 @@ function AppInner({ syncXp, session }) {
   // -------------------------------------------------------------------------
 
   if (view === VIEWS.LEADERBOARD) {
-    return <Leaderboard onBack={() => setView(VIEWS.HOME)} />
+    return <ViewLoader><Leaderboard onBack={() => setView(VIEWS.HOME)} /></ViewLoader>
   }
 
   // -------------------------------------------------------------------------
@@ -261,7 +204,10 @@ function AppInner({ syncXp, session }) {
   // -------------------------------------------------------------------------
 
   if (user.name === 'Estudante') {
-    return <Onboarding onComplete={setUserName} />
+    return <Onboarding onComplete={(name) => {
+      setUserName(name)
+      updateProfileName?.(name)
+    }} />
   }
 
   // -------------------------------------------------------------------------
@@ -288,7 +234,11 @@ function AppInner({ syncXp, session }) {
 
     return (
       <div className="min-h-screen bg-gray-50 pb-20">
-        <Header user={user} onCalendarClick={() => setView(VIEWS.CALENDAR)} />
+        <Header
+          user={user}
+          onCalendarClick={() => setView(VIEWS.CALENDAR)}
+          onSignOut={session ? signOut : null}
+        />
         {reports.length > 0 && (
           <button
             onClick={() => setShowReports(true)}
@@ -593,13 +543,13 @@ function AppInner({ syncXp, session }) {
         <main className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-6 py-5 space-y-5">
           {/* Visão mensal */}
           {calendarView === 'month' && (
-            <CalendarMonth
+            <ViewLoader><CalendarMonth
               exams={exams}
               subjects={SUBJECTS}
               examTypes={EXAM_TYPES}
               onEdit={startEditExam}
               onRemove={removeExam}
-            />
+            /></ViewLoader>
           )}
 
           {/* Visão de lista */}
@@ -710,7 +660,7 @@ function AppInner({ syncXp, session }) {
           <p className="px-4 sm:px-6 text-xs text-gray-400 font-semibold mb-3">
             Turno da tarde · 13h30 às 18h00 · *Robótica é quinzenal nas quartas
           </p>
-          <ScheduleView />
+          <ViewLoader><ScheduleView /></ViewLoader>
         </div>
         <BottomNav
           activeView="schedule"

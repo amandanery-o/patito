@@ -1,7 +1,7 @@
 import CalendarIcon from './CalendarIcon'
 import Mascot from './Mascot'
 
-export default function Header({ user, onCalendarClick }) {
+export default function Header({ user, onCalendarClick, onSignOut }) {
   const hasStreak = user.streak.current > 0
   const level = Math.floor((user.xp || 0) / 100) + 1
   const xpInLevel = (user.xp || 0) % 100
@@ -25,6 +25,17 @@ export default function Header({ user, onCalendarClick }) {
           >
             <CalendarIcon />
           </button>
+
+          {onSignOut && (
+            <button
+              onClick={onSignOut}
+              className="text-sm font-bold text-gray-500 hover:text-gray-800 px-2 py-1"
+              aria-label="Sair da conta"
+              title="Sair da conta"
+            >
+              Sair
+            </button>
+          )}
 
           {hasStreak && (
             <div className="flex items-center gap-1 bg-orange-50 px-2 sm:px-3 py-1 rounded-lg">

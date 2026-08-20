@@ -12,7 +12,7 @@ export default function MatchColumns({ question, onSelect }) {
     setActiveLeft(null)
     setMatches({})
     setSubmitted(false)
-  }, [question.id])
+  }, [question])
 
   function handleLeftTap(leftIndex) {
     if (submitted || matches[leftIndex] !== undefined) return

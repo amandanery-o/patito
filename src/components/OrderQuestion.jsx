@@ -13,7 +13,7 @@ export default function OrderQuestion({ question, onSelect }) {
     setItems(shuffled)
     setSequence([])
     setSubmitted(false)
-  }, [question.id])
+  }, [question])
 
   function handleTap(itemIndex) {
     if (submitted) return

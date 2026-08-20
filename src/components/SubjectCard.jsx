@@ -2,7 +2,7 @@ export default function SubjectCard({ subject, progress, onClick, isNew }) {
   const { completed, total, percent } = progress
 
   return (
-    <div className={`w-full ${subject.color} rounded-2xl p-4 shadow-md flex flex-col gap-3`}>
+    <div data-testid={`subject-${subject.id}`} className={`w-full ${subject.color} rounded-2xl p-4 shadow-md flex flex-col gap-3`}>
       <div className="flex items-center gap-3">
         <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl">
           {subject.icon}
