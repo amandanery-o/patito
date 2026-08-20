@@ -3,7 +3,7 @@
  * Cada nó é um círculo; nós completos ficam cheios, incompletos vazados.
  * Conectados por uma linha vertical.
  */
-export default function TopicTrail({ subject, topics, getTopicProgress, onStart }) {
+export default function TopicTrail({ subject, topics, getTopicProgress, onStart, onReview }) {
   return (
     <div className="flex flex-col items-center gap-0 pb-8">
       {topics.map((topic, index) => {
@@ -45,10 +45,17 @@ export default function TopicTrail({ subject, topics, getTopicProgress, onStart 
 
               {/* Card do tópico */}
               {isEmpty ? (
-                <div className="flex-1 rounded-2xl p-4 md:p-5 text-left bg-yellow-50 border-2 border-yellow-100">
+                <button
+                  type="button"
+                  onClick={() => topic.summarySections?.length && onReview(topic)}
+                  disabled={!topic.summarySections?.length}
+                  className="flex-1 rounded-2xl p-4 md:p-5 text-left bg-yellow-50 border-2 border-yellow-100 disabled:cursor-default"
+                >
                   <p className="font-extrabold text-base md:text-lg text-yellow-700">{topic.title}</p>
-                  <p className="text-xs text-yellow-500 mt-1">Em breve 🐥 — questões chegando!</p>
-                </div>
+                  <p className="text-xs text-yellow-600 mt-1">
+                    {topic.summarySections?.length ? 'Resumo disponível · questões em breve 🐥' : 'Em breve 🐥 — questões chegando!'}
+                  </p>
+                </button>
               ) : (
                 <button
                   onClick={() => !locked && onStart(topic)}

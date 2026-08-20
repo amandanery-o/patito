@@ -1,9 +1,10 @@
 import { daysUntil } from '../utils/dates'
+import { GEOGRAPHY_TOPICS } from './geografia'
 
 export const SUBJECTS = [
   { id: 'portugues', name: 'Português', icon: '📝', color: 'bg-blue-500', topics: [], calendarOnly: false, lastUpdated: null },
   { id: 'matematica', name: 'Matemática', icon: '🔢', color: 'bg-green-500', topics: [], calendarOnly: false, lastUpdated: null },
-  { id: 'geografia', name: 'Geografia', icon: '🌍', color: 'bg-orange-500', topics: [], calendarOnly: false, lastUpdated: null },
+  { id: 'geografia', name: 'Geografia', icon: '🌍', color: 'bg-orange-500', topics: GEOGRAPHY_TOPICS, calendarOnly: false, lastUpdated: '2026-08-20' },
   { id: 'ingles', name: 'Inglês', icon: '🇬🇧', color: 'bg-purple-500', topics: [], calendarOnly: false, lastUpdated: null },
   { id: 'ciencias', name: 'Ciências', icon: '🔬', color: 'bg-cyan-500', topics: [], calendarOnly: false, lastUpdated: null },
   { id: 'historia', name: 'História', icon: '📜', color: 'bg-amber-700', topics: [], calendarOnly: false, lastUpdated: null },
@@ -23,6 +24,7 @@ export const EXAM_TYPES = [
 
 export const VIEWS = {
   HOME: 'home', SUBJECT: 'subject', SESSION: 'session', RESULT: 'result',
+  REVIEW: 'review',
   CALENDAR: 'calendar', SCHEDULE: 'schedule', LEADERBOARD: 'leaderboard',
   HOMEWORK: 'homework',
 }

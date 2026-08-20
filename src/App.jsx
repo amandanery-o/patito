@@ -12,6 +12,7 @@ import BottomNav from './components/BottomNav'
 import TopicTrail from './components/TopicTrail'
 import HomeworkView from './components/HomeworkView'
 import ProblemReportModal from './components/ProblemReportModal'
+import ContentReview from './components/ContentReview'
 import { useProgress } from './hooks/useProgress'
 import { useStudySession } from './hooks/useStudySession'
 import { useHomework } from './hooks/useHomework'
@@ -219,6 +220,16 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
     )
   }
 
+  if (view === VIEWS.REVIEW) {
+    return (
+      <ContentReview
+        topic={selectedTopic}
+        onBack={() => setView(VIEWS.SUBJECT)}
+        onStart={() => startSession(selectedSubject, selectedTopic)}
+      />
+    )
+  }
+
   // -------------------------------------------------------------------------
   // ONBOARDING — primeira vez (nome ainda é o padrão)
   // -------------------------------------------------------------------------
@@ -238,19 +249,20 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
     const { mood, message } = getMascotState(user.name, upcomingExams.length)
     const TODAY_MS = Date.now()
     const NEW_THRESHOLD_DAYS = 7
-    const hasQuestions = s => s.topics.some(t => t.questions.length > 0)
+    const hasStudyContent = subject => subject.topics.some(topic =>
+      topic.questions.length > 0 || topic.summarySections?.length > 0)
     const isNew = s => s.lastUpdated &&
       (TODAY_MS - parseLocalDate(s.lastUpdated).getTime()) / 86400000 <= NEW_THRESHOLD_DAYS
 
     const subjectsWithContent = STUDY_SUBJECTS
-      .filter(hasQuestions)
+      .filter(hasStudyContent)
       .sort((a, b) => {
         if (a.lastUpdated && b.lastUpdated) return parseLocalDate(b.lastUpdated) - parseLocalDate(a.lastUpdated)
         if (a.lastUpdated) return -1
         if (b.lastUpdated) return 1
         return 0
       })
-    const subjectsComingSoon  = STUDY_SUBJECTS.filter(s => !hasQuestions(s))
+    const subjectsComingSoon  = STUDY_SUBJECTS.filter(subject => !hasStudyContent(subject))
 
     return (
       <div className="min-h-screen bg-gray-50 pb-20">
@@ -421,6 +433,10 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
               topics={subject.topics}
               getTopicProgress={getTopicProgress}
               onStart={(topic) => startSession(subject, topic)}
+              onReview={(topic) => {
+                setSelectedTopic(topic)
+                setView(VIEWS.REVIEW)
+              }}
             />
           )}
         </main>

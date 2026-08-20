@@ -1,5 +1,6 @@
 export default function SubjectCard({ subject, progress, onClick, isNew }) {
   const { completed, total, percent } = progress
+  const hasQuestions = subject.topics?.some(topic => topic.questions.length > 0)
 
   return (
     <div data-testid={`subject-${subject.id}`} className={`w-full ${subject.color} rounded-2xl p-4 shadow-md flex flex-col gap-3`}>
@@ -32,7 +33,7 @@ export default function SubjectCard({ subject, progress, onClick, isNew }) {
         className="w-full bg-white text-gray-800 font-extrabold rounded-xl py-2.5 text-sm border-b-4 active:border-b-2 active:translate-y-0.5 transition-all select-none hover:brightness-95"
         style={{ borderBottomColor: 'rgba(0,0,0,0.15)' }}
       >
-        Jogar agora 🎮
+        {hasQuestions ? 'Jogar agora 🎮' : 'Revisar agora 📖'}
       </button>
     </div>
   )
