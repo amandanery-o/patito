@@ -40,5 +40,45 @@ export const GEOGRAPHY_TOPICS = [
     ],
     questions: [],
   },
+  {
+    id: 'geografia-8-atividades-economicas-urbanas',
+    title: 'Atividades econômicas do espaço urbano',
+    chapter: 8,
+    source: {
+      provider: 'edebe',
+      resourceId: 'courseware-252-content-579',
+      pages: '80–87',
+      version: '2024',
+    },
+    summarySections: [
+      {
+        title: 'Indústria',
+        text: 'A indústria transforma matérias-primas e produz itens para outras empresas ou para os consumidores. A indústria de base fornece materiais processados; a de bens intermediários fabrica máquinas, peças e equipamentos; e a de bens de consumo produz aquilo que a população utiliza.',
+      },
+      {
+        title: 'Bens de consumo',
+        text: 'Produtos duráveis podem ser usados por muitos anos, como automóveis. Os semiduráveis se desgastam com o uso, como roupas e sapatos. Os não duráveis são consumidos rapidamente, como alimentos e produtos de higiene.',
+      },
+      {
+        title: 'Comércio',
+        text: 'É a compra, a venda ou a troca de mercadorias. O atacado vende grandes quantidades, geralmente para revenda, enquanto o varejo atende o consumidor final em quantidades menores. O comércio também pode ser interno ou envolver produtos de outros países.',
+      },
+      {
+        title: 'Prestação de serviços',
+        text: 'Nos serviços, o trabalhador realiza uma atividade para atender uma necessidade, sem entregar necessariamente um produto físico. Transporte, educação, saúde, segurança, comunicação, energia, cultura e lazer são exemplos importantes nas cidades.',
+      },
+      {
+        title: 'Campo e cidade conectados',
+        text: 'As atividades rurais e urbanas dependem umas das outras. O campo fornece alimentos e matérias-primas; as cidades concentram indústrias, comércio e muitos serviços, além de fornecerem máquinas e equipamentos usados na produção rural.',
+      },
+    ],
+    keyIdeas: [
+      'Cada tipo de indústria ocupa uma etapa diferente da produção.',
+      'Atacado e varejo se diferenciam principalmente pela quantidade vendida e por quem compra.',
+      'Comércio envolve mercadorias; serviço envolve a realização de uma atividade.',
+      'Cidades maiores costumam oferecer maior variedade de serviços.',
+      'Campo e cidade participam de uma rede de produção, circulação e consumo.',
+    ],
+    questions: [],
+  },
 ]
-
