@@ -19,14 +19,14 @@ export function useStudySession(repository = createStudyRepository()) {
     setStatus(SYNC_STATUS.LOADING)
     setError(null)
     try {
-      let active = await repository.findActiveSession(contentId)
+      let active = await repository.findOpenSession(contentId)
       if (!active) {
         try {
           active = await repository.createSession({ userId, subjectId, contentId, questionIds })
         } catch (creationError) {
           // Duas abas podem criar ao mesmo tempo. A constraint escolhe a canônica.
           if (creationError.code !== '23505') throw creationError
-          active = await repository.findActiveSession(contentId)
+          active = await repository.findOpenSession(contentId)
         }
       }
       const savedAnswers = await repository.listAnswers(active.id)

@@ -34,11 +34,11 @@ grant execute on function public.current_user_class_code() to authenticated;
 
 drop policy if exists "profiles_select" on public.profiles;
 
--- Cada aluno vê apenas os perfis da própria turma (para o ranking).
+-- O perfil completo é privado. O ranking usa uma função de campos mínimos.
 create policy "profiles_select"
   on public.profiles for select
   to authenticated
-  using (id = auth.uid() or class_code = public.current_user_class_code());
+  using (id = auth.uid());
 
 -- Cada aluno só edita o próprio perfil
 drop policy if exists "profiles_upsert" on public.profiles;
@@ -92,8 +92,10 @@ create table if not exists public.study_sessions (
   check ((status = 'completed') = (completed_at is not null))
 );
 
-create unique index if not exists study_sessions_one_active_content
-  on public.study_sessions(user_id, content_id) where status = 'active';
+drop index if exists public.study_sessions_one_active_content;
+drop index if exists public.study_sessions_one_open_content;
+create unique index study_sessions_one_open_content
+  on public.study_sessions(user_id, content_id) where status in ('active', 'review');
 create index if not exists study_sessions_user_status_updated
   on public.study_sessions(user_id, status, updated_at desc);
 
@@ -258,3 +260,55 @@ revoke all on function public.save_session_answer(uuid, uuid, text, jsonb, boole
 revoke all on function public.complete_study_session(uuid) from public;
 grant execute on function public.save_session_answer(uuid, uuid, text, jsonb, boolean) to authenticated;
 grant execute on function public.complete_study_session(uuid) to authenticated;
+
+-- Ranking por utilização: 1 ponto por questão e 10 por sessão, limitado a
+-- 60 questões e duas sessões por aluno/dia. Acertos nunca entram no cálculo.
+create or replace function public.get_usage_ranking()
+returns table (
+  position bigint,
+  name text,
+  avatar text,
+  questions_count bigint,
+  sessions_count bigint,
+  activity_points bigint,
+  is_current_user boolean
+)
+language sql stable security definer set search_path = public
+as $$
+  with daily as (
+    select
+      user_id,
+      study_date,
+      least(count(*) filter (where event_type = 'question_answered'), 60)::bigint as questions,
+      least(count(*) filter (where event_type = 'session_completed'), 2)::bigint as sessions
+    from public.usage_events
+    group by user_id, study_date
+  ), totals as (
+    select user_id, sum(questions)::bigint as questions, sum(sessions)::bigint as sessions
+    from daily group by user_id
+  ), ranked as (
+    select
+      p.id,
+      split_part(trim(p.name), ' ', 1) as display_name,
+      p.avatar,
+      coalesce(t.questions, 0)::bigint as questions,
+      coalesce(t.sessions, 0)::bigint as sessions,
+      (coalesce(t.questions, 0) + coalesce(t.sessions, 0) * 10)::bigint as points
+    from public.profiles p
+    join totals t on t.user_id = p.id
+  )
+  select
+    row_number() over (order by points desc, sessions desc, questions desc, display_name),
+    display_name,
+    avatar,
+    questions,
+    sessions,
+    points,
+    id = auth.uid()
+  from ranked
+  order by points desc, sessions desc, questions desc, display_name
+  limit 50;
+$$;
+
+revoke all on function public.get_usage_ranking() from public;
+grant execute on function public.get_usage_ranking() to authenticated;

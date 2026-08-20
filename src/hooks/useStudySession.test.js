@@ -9,7 +9,7 @@ const input = {
 describe('useStudySession', () => {
   it('retoma sessão e respostas existentes', async () => {
     const repository = {
-      findActiveSession: vi.fn().mockResolvedValue({ id: 'session-1', current_index: 1 }),
+      findOpenSession: vi.fn().mockResolvedValue({ id: 'session-1', current_index: 1 }),
       createSession: vi.fn(),
       listAnswers: vi.fn().mockResolvedValue([{ question_id: 'q1' }]),
     }
@@ -25,7 +25,7 @@ describe('useStudySession', () => {
   it('recupera a sessão canônica quando duas abas criam juntas', async () => {
     const canonical = { id: 'canonical' }
     const repository = {
-      findActiveSession: vi.fn().mockResolvedValueOnce(null).mockResolvedValueOnce(canonical),
+      findOpenSession: vi.fn().mockResolvedValueOnce(null).mockResolvedValueOnce(canonical),
       createSession: vi.fn().mockRejectedValue({ code: '23505' }),
       listAnswers: vi.fn().mockResolvedValue([]),
     }
@@ -34,12 +34,12 @@ describe('useStudySession', () => {
     await act(() => result.current.startOrResume(input))
 
     expect(result.current.session).toEqual(canonical)
-    expect(repository.findActiveSession).toHaveBeenCalledTimes(2)
+    expect(repository.findOpenSession).toHaveBeenCalledTimes(2)
   })
 
   it('mantém o erro visível quando o servidor não confirma', async () => {
     const repository = {
-      findActiveSession: vi.fn().mockRejectedValue(new Error('network')),
+      findOpenSession: vi.fn().mockRejectedValue(new Error('network')),
     }
     const { result } = renderHook(() => useStudySession(repository))
 

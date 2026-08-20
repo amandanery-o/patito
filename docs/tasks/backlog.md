@@ -28,10 +28,10 @@ Status: proposto, aguardando aprovação de priorização.
 
 ## F003 — Sessão de estudos v2
 
-- `TASK-016` Remover vidas e formatos fora do escopo da experiência ativa.
-- `TASK-017` Persistir ordem aleatória, posição e respostas da sessão.
-- `TASK-018` Implementar retorno à página inicial e retomada.
-- `TASK-019` Implementar revisão de erros ao final.
+- `TASK-016` ✅ Remover vidas e formatos fora do escopo da experiência ativa.
+- `TASK-017` ✅ Persistir ordem aleatória, posição e respostas da sessão.
+- `TASK-018` ✅ Implementar retorno à página inicial e retomada.
+- `TASK-019` ✅ Implementar revisão de erros ao final.
 - `TASK-020` Cobrir conclusão, abandono, retomada e nova tentativa com E2E.
 
 ## F004 — Conteúdo do segundo semestre
@@ -57,10 +57,10 @@ Status: proposto, aguardando aprovação de priorização.
 
 ## F007 — Ranking por utilização
 
-- `TASK-033` Definir pesos de questão e sessão dentro dos limites aprovados.
-- `TASK-034` Implementar eventos idempotentes e agregação diária.
-- `TASK-035` Aplicar teto de 60 questões e duas sessões por dia.
-- `TASK-036` Atualizar ranking para remover métricas de desempenho.
+- `TASK-033` ✅ Definir pesos de questão e sessão dentro dos limites aprovados.
+- `TASK-034` ✅ Implementar eventos idempotentes e agregação diária.
+- `TASK-035` ✅ Aplicar teto de 60 questões e duas sessões por dia.
+- `TASK-036` ✅ Atualizar ranking para remover métricas de desempenho.
 - `TASK-037` Testar duplicação, virada do dia e uso após o limite.
 
 ## F008 — Relato de problemas

@@ -66,16 +66,6 @@ export function AuthProvider({ children }) {
     await supabase.auth.signOut()
   }
 
-  async function syncXp(totalXp, streakCurrent, streakBest) {
-    if (!session?.user?.id || !supabase) return
-    await supabase.from('profiles').upsert({
-      id: session.user.id,
-      xp: totalXp,
-      streak_current: streakCurrent,
-      streak_best: streakBest,
-    })
-  }
-
   async function updateProfileName(name) {
     if (!session?.user?.id || !supabase) return
     await supabase.from('profiles').upsert({ id: session.user.id, name })
@@ -83,7 +73,7 @@ export function AuthProvider({ children }) {
   }
 
   return (
-    <AuthContext.Provider value={{ session, profile, signIn, signUp, resetPassword, signOut, syncXp, updateProfileName }}>
+    <AuthContext.Provider value={{ session, profile, signIn, signUp, resetPassword, signOut, updateProfileName }}>
       {children}
     </AuthContext.Provider>
   )

@@ -1,55 +1,43 @@
 import { useState, useCallback } from 'react'
 import MultipleChoice from './MultipleChoice'
-import TrueFalse from './TrueFalse'
-import FillBlank from './FillBlank'
-import Flashcard from './Flashcard'
-import OrderQuestion from './OrderQuestion'
 import MatchColumns from './MatchColumns'
 import ProgressBar from './ProgressBar'
 import FeedbackPanel from './FeedbackPanel'
-import XPToast from './XPToast'
 
-export default function ExerciseCard({ question, current, total, lives, xp, onAnswer, onReport }) {
+export default function ExerciseCard({ question, current, total, onAnswer, onReport }) {
   const [feedback, setFeedback] = useState(null)   // { correct, explanation }
-  const [xpToast, setXpToast]   = useState(null)   // number | null
+  const [saving, setSaving] = useState(false)
+  const [saveError, setSaveError] = useState('')
 
-  const handleSelect = useCallback((isCorrect, explanation = '') => {
-    setFeedback({ correct: isCorrect, explanation })
-    if (isCorrect) setXpToast(10)
+  const handleSelect = useCallback((isCorrect, explanation = '', answer = {}) => {
+    setFeedback({ correct: isCorrect, explanation, answer })
   }, [])
 
-  function handleContinue() {
-    const wasCorrect = feedback.correct
-    setFeedback(null)
-    onAnswer(wasCorrect)
+  async function handleContinue() {
+    setSaving(true)
+    setSaveError('')
+    try {
+      await onAnswer({ isCorrect: feedback.correct, answer: feedback.answer })
+      setFeedback(null)
+    } catch {
+      setSaveError('Não conseguimos salvar. Confira a internet e tente novamente.')
+    } finally {
+      setSaving(false)
+    }
   }
 
   function renderExercise() {
     const props = { question, onSelect: handleSelect }
     switch (question.type) {
       case 'multipleChoice': return <MultipleChoice {...props} />
-      case 'trueFalse':      return <TrueFalse {...props} />
-      case 'fillBlank':      return <FillBlank {...props} />
-      case 'flashcard':      return <Flashcard question={question} onAnswer={onAnswer} />
-      case 'orderSteps':     return <OrderQuestion {...props} />
       case 'matchColumns':   return <MatchColumns {...props} />
-      default: return <p className="text-red-500">Tipo desconhecido: {question.type}</p>
+      default: return <p className="text-red-500">Esta questão precisa ser revisada antes de aparecer aqui.</p>
     }
   }
 
   return (
     <>
       <div className="flex flex-col gap-4">
-        {/* Lives + XP */}
-        <div className="flex items-center justify-between">
-          <div className="flex gap-1">
-            {Array.from({ length: 3 }).map((_, i) => (
-              <span key={i} className={`text-xl sm:text-2xl ${i < lives ? '' : 'grayscale opacity-30'}`}>❤️</span>
-            ))}
-          </div>
-          <span className="font-extrabold text-yellow-600 text-base sm:text-lg">⚡ {xp} XP</span>
-        </div>
-
         {/* Barra de progresso */}
         <ProgressBar current={current} total={total} />
 
@@ -62,17 +50,21 @@ export default function ExerciseCard({ question, current, total, lives, xp, onAn
         {feedback && <div className="h-44 sm:h-48" />}
       </div>
 
-      {/* Toast de XP */}
-      {xpToast && <XPToast amount={xpToast} onDone={() => setXpToast(null)} />}
-
       {/* Painel de feedback no rodapé */}
       {feedback && (
-        <FeedbackPanel
-          correct={feedback.correct}
-          explanation={feedback.explanation}
-          onContinue={handleContinue}
-          onReport={onReport}
-        />
+        <div>
+          {saveError && (
+            <p className="fixed bottom-36 left-4 right-4 z-[60] max-w-lg mx-auto bg-red-100 text-red-700 rounded-xl px-4 py-3 text-sm font-bold shadow">
+              {saveError}
+            </p>
+          )}
+          <FeedbackPanel
+            correct={feedback.correct}
+            explanation={saving ? 'Salvando sua resposta…' : feedback.explanation}
+            onContinue={saving ? undefined : handleContinue}
+            onReport={onReport}
+          />
+        </div>
       )}
     </>
   )

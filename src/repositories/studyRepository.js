@@ -12,12 +12,12 @@ function unwrap(result) {
 
 export function createStudyRepository(client = supabase) {
   return {
-    async findActiveSession(contentId) {
+    async findOpenSession(contentId) {
       const result = await requireClient(client)
         .from('study_sessions')
         .select('*')
         .eq('content_id', contentId)
-        .eq('status', 'active')
+        .in('status', ['active', 'review'])
         .maybeSingle()
       return unwrap(result)
     },

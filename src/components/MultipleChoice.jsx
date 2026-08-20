@@ -11,7 +11,7 @@ export default function MultipleChoice({ question, onSelect }) {
     if (selected !== null) return
     setSelected(index)
     const correct = index === question.correctIndex
-    onSelect(correct, question.explanation || '')
+    onSelect(correct, question.explanation || '', { optionIndex: index })
   }
 
   function getStyle(index) {

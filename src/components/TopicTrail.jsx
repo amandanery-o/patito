@@ -9,7 +9,6 @@ export default function TopicTrail({ subject, topics, getTopicProgress, onStart 
       {topics.map((topic, index) => {
         const tp        = getTopicProgress(subject.id, topic.id)
         const completed = tp.completed
-        const stars     = tp.stars || 0
         const isEmpty   = topic.questions.length === 0
         const locked    = false
 
@@ -35,7 +34,7 @@ export default function TopicTrail({ subject, topics, getTopicProgress, onStart 
                   }`}
               >
                 {completed
-                  ? (stars === 3 ? '⭐' : stars === 2 ? '🌟' : '✅')
+                  ? '✅'
                   : isEmpty
                     ? <span className="text-xl">🐥</span>
                     : locked
@@ -71,13 +70,7 @@ export default function TopicTrail({ subject, topics, getTopicProgress, onStart 
                       ? <span className="text-xs text-gray-400">Complete o anterior para liberar</span>
                       : <>
                           <span className="text-xs text-gray-400">{topic.questions.length} questões</span>
-                          {completed && (
-                            <div className="flex gap-0.5">
-                              {[1, 2, 3].map(s => (
-                                <span key={s} className={`text-sm ${s <= stars ? 'text-yellow-400' : 'text-gray-200'}`}>⭐</span>
-                              ))}
-                            </div>
-                          )}
+                          {completed && <span className="text-xs font-bold text-green-600">Concluído</span>}
                         </>
                     }
                   </div>

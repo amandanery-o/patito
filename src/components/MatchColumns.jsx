@@ -30,7 +30,7 @@ export default function MatchColumns({ question, onSelect }) {
     if (Object.keys(next).length === question.pairs.length) {
       setSubmitted(true)
       const correct = question.pairs.every((pair, i) => next[i] === pair.right)
-      onSelect(correct, question.explanation || '')
+      onSelect(correct, question.explanation || '', { matches: next })
     }
   }
 

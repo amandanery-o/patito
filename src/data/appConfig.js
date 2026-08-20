@@ -30,8 +30,7 @@ export const EMPTY_EXAM_FORM = {
   subject: 'matematica', type: 'prova', weight: '', date: '', time: '', content: '', notes: '',
 }
 
-export function getMascotState(userName, streak, upcomingCount) {
-  if (streak > 0) return { mood: 'feliz', message: `Dia ${streak} de sequência, ${userName}! Continue assim! 🔥` }
+export function getMascotState(userName, upcomingCount) {
   if (upcomingCount > 0) return { mood: 'neutro', message: `Oi, ${userName}! Bora se preparar para as provas? 💪` }
   return { mood: 'feliz', message: `Oi, ${userName}! Que matéria estudamos hoje? 📚` }
 }

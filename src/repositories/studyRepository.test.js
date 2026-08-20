@@ -5,6 +5,7 @@ function queryResult(data, error = null) {
   const query = {
     select: vi.fn(() => query),
     eq: vi.fn(() => query),
+    in: vi.fn(() => query),
     insert: vi.fn(() => query),
     order: vi.fn(() => Promise.resolve({ data, error })),
     maybeSingle: vi.fn(() => Promise.resolve({ data, error })),
@@ -19,9 +20,9 @@ describe('createStudyRepository', () => {
     const query = queryResult(session)
     const client = { from: vi.fn(() => query) }
 
-    await expect(createStudyRepository(client).findActiveSession('mat-01')).resolves.toEqual(session)
+    await expect(createStudyRepository(client).findOpenSession('mat-01')).resolves.toEqual(session)
     expect(query.eq).toHaveBeenNthCalledWith(1, 'content_id', 'mat-01')
-    expect(query.eq).toHaveBeenNthCalledWith(2, 'status', 'active')
+    expect(query.in).toHaveBeenCalledWith('status', ['active', 'review'])
   })
 
   it('envia respostas pela função transacional', async () => {

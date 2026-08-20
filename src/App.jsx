@@ -12,9 +12,9 @@ import ConfirmModal from './components/ConfirmModal'
 import BottomNav from './components/BottomNav'
 import TopicTrail from './components/TopicTrail'
 import { useProgress } from './hooks/useProgress'
+import { useStudySession } from './hooks/useStudySession'
 import { useReports } from './hooks/useReports'
 import { shuffle } from './utils/shuffle'
-import { calcStars, calcXP } from './utils/scoring'
 import { daysUntil, formatDate, parseLocalDate } from './utils/dates'
 import { SCHEDULE, SUBJECT_COLORS, DAY_NAMES } from './data/schedule'
 import {
@@ -43,7 +43,7 @@ function ViewLoader({ children }) {
 // ---------------------------------------------------------------------------
 
 export default function App() {
-  const { session, profile, syncXp, updateProfileName, signOut } = useAuth()
+  const { session, profile, updateProfileName, signOut } = useAuth()
 
   // Supabase ativo e ainda carregando sessão → spinner
   if (session === undefined) {
@@ -71,7 +71,6 @@ export default function App() {
   return (
     <AppInner
       key={session?.user?.id || 'offline'}
-      syncXp={syncXp}
       updateProfileName={updateProfileName}
       signOut={signOut}
       session={session}
@@ -80,17 +79,14 @@ export default function App() {
   )
 }
 
-function AppInner({ syncXp, updateProfileName, signOut, session, profile }) {
+function AppInner({ updateProfileName, signOut, session, profile }) {
   const [view, setView]                     = useState(VIEWS.HOME)
   const [selectedSubject, setSelectedSubject] = useState(null)
   const [selectedTopic, setSelectedTopic]   = useState(null)
   const [sessionQuestions, setSessionQuestions] = useState([])
   const [questionIndex, setQuestionIndex]   = useState(0)
   const [correct, setCorrect]               = useState(0)
-  const [lives, setLives]                   = useState(3)
-  const [sessionXP, setSessionXP]           = useState(0)
-  const [finalStars, setFinalStars]         = useState(0)
-  const [finalXP, setFinalXP]               = useState(0)
+  const [incorrectQuestions, setIncorrectQuestions] = useState([])
   const [examForm, setExamForm]             = useState(EMPTY_EXAM_FORM)
   const [editingExamId, setEditingExamId]   = useState(null)
   const [calendarView, setCalendarView]     = useState('month')
@@ -106,47 +102,84 @@ function AppInner({ syncXp, updateProfileName, signOut, session, profile }) {
 
   const { reports, addReport, clearReports } = useReports(session?.user?.id)
   const [showReports, setShowReports] = useState(false)
+  const {
+    session: studySession,
+    startOrResume,
+    saveAnswer: saveStudyAnswer,
+    complete: completeStudySession,
+  } = useStudySession()
 
   // -------------------------------------------------------------------------
   // Handlers de sessão
   // -------------------------------------------------------------------------
 
-  function startSession(subject, topic) {
+  async function startSession(subject, topic) {
     setSelectedSubject(subject)
     setSelectedTopic(topic)
-    setSessionQuestions(shuffle(topic.questions))
+    const selectedQuestions = shuffle(topic.questions).slice(0, 30)
+
+    if (session?.user?.id) {
+      try {
+        const resumed = await startOrResume({
+          userId: session.user.id,
+          subjectId: subject.id,
+          contentId: topic.id,
+          questionIds: selectedQuestions.map(question => question.id),
+        })
+        const questionsById = new Map(topic.questions.map(question => [question.id, question]))
+        const orderedQuestions = resumed.session.question_ids.map(id => questionsById.get(id)).filter(Boolean)
+        setSessionQuestions(orderedQuestions)
+        setQuestionIndex(Math.min(resumed.session.current_index, Math.max(orderedQuestions.length - 1, 0)))
+        setCorrect(resumed.answers.filter(answer => answer.is_correct).length)
+        setIncorrectQuestions(resumed.answers
+          .filter(answer => !answer.is_correct)
+          .map(answer => questionsById.get(answer.question_id))
+          .filter(Boolean))
+        setView(resumed.session.status === 'review' ? VIEWS.RESULT : VIEWS.SESSION)
+        return
+      } catch {
+        // O aluno autenticado não deve iniciar uma sessão que não possa ser salva.
+        setView(VIEWS.SUBJECT)
+        return
+      }
+    }
+
+    setSessionQuestions(selectedQuestions)
     setQuestionIndex(0)
     setCorrect(0)
-    setLives(3)
-    setSessionXP(0)
+    setIncorrectQuestions([])
     setView(VIEWS.SESSION)
   }
 
-  function handleAnswer(isCorrect) {
+  async function handleAnswer({ isCorrect, answer }) {
+    const question = sessionQuestions[questionIndex]
+    if (session?.user?.id) {
+      await saveStudyAnswer({
+        answerId: crypto.randomUUID(),
+        questionId: question.id,
+        answer,
+        isCorrect,
+      })
+    }
     const newCorrect = isCorrect ? correct + 1 : correct
-    const newLives   = isCorrect ? lives : Math.max(0, lives - 1)
-    const newXP      = isCorrect ? sessionXP + 10 : sessionXP
-
     setCorrect(newCorrect)
-    setLives(newLives)
-    setSessionXP(newXP)
+    if (!isCorrect) setIncorrectQuestions(previous => [...previous, question])
 
     const nextIndex      = questionIndex + 1
     const isLastQuestion = nextIndex >= sessionQuestions.length
-    const isOutOfLives = newLives === 0
-
-    if (isLastQuestion || isOutOfLives) {
-      const stars = calcStars(newCorrect, sessionQuestions.length)
-      const xp    = calcXP(newCorrect, sessionQuestions.length)
-      setFinalStars(stars)
-      setFinalXP(xp)
-      const updatedUser = updateTopicProgress(selectedSubject.id, selectedTopic.id, stars, xp)
-      // Sincroniza XP total com Supabase (fire-and-forget)
-      syncXp?.(updatedUser.xp, updatedUser.streak.current, updatedUser.streak.best)
+    if (isLastQuestion) {
+      updateTopicProgress(selectedSubject.id, selectedTopic.id)
       setView(VIEWS.RESULT)
     } else {
       setQuestionIndex(nextIndex)
     }
+  }
+
+  async function finishResult(destination) {
+    if (session?.user?.id && studySession?.status === 'review') {
+      await completeStudySession()
+    }
+    setView(destination)
   }
 
   // -------------------------------------------------------------------------
@@ -215,7 +248,7 @@ function AppInner({ syncXp, updateProfileName, signOut, session, profile }) {
   // -------------------------------------------------------------------------
 
   if (view === VIEWS.HOME) {
-    const { mood, message } = getMascotState(user.name, user.streak.current, upcomingExams.length)
+    const { mood, message } = getMascotState(user.name, upcomingExams.length)
     const TODAY_MS = Date.now()
     const NEW_THRESHOLD_DAYS = 7
     const hasQuestions = s => s.topics.some(t => t.questions.length > 0)
@@ -254,12 +287,6 @@ function AppInner({ syncXp, updateProfileName, signOut, session, profile }) {
           <div className="bg-yellow-50 shadow-sm rounded-3xl px-4 sm:px-8 pt-4 sm:pt-6 pb-5 sm:pb-7 flex flex-col items-center text-center gap-1">
             <Mascot mood={mood} size="hero" className="my-2" />
             <p className="text-lg sm:text-2xl md:text-3xl font-extrabold text-yellow-900 leading-snug mt-2">{message}</p>
-            {user.streak.current > 0 && (
-              <div className="flex items-center gap-1.5 bg-orange-100 rounded-full px-4 py-1.5 mt-1">
-                <span className="text-xl leading-none">🔥</span>
-                <span className="text-sm sm:text-base font-extrabold text-orange-600">{user.streak.current} dias seguidos</span>
-              </div>
-            )}
           </div>
 
           {/* Aulas de hoje */}
@@ -460,8 +487,6 @@ function AppInner({ syncXp, updateProfileName, signOut, session, profile }) {
             question={question}
             current={questionIndex + 1}
             total={sessionQuestions.length}
-            lives={lives}
-            xp={sessionXP}
             onAnswer={handleAnswer}
             onReport={() => addReport({
               questionId: question.id,
@@ -487,12 +512,11 @@ function AppInner({ syncXp, updateProfileName, signOut, session, profile }) {
         </div>
         <main className="max-w-lg sm:max-w-xl md:max-w-2xl mx-auto">
           <ResultScreen
-            stars={finalStars}
-            xp={finalXP}
             correct={correct}
             total={sessionQuestions.length}
-            onContinue={() => setView(VIEWS.SUBJECT)}
-            onHome={() => setView(VIEWS.HOME)}
+            incorrectQuestions={incorrectQuestions}
+            onContinue={() => finishResult(VIEWS.SUBJECT)}
+            onHome={() => finishResult(VIEWS.HOME)}
           />
         </main>
       </div>

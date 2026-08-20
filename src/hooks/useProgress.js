@@ -2,20 +2,13 @@ import { useEffect, useMemo, useState } from 'react'
 import { parseLocalDate } from '../utils/dates'
 
 const STORAGE_KEY = 'patito_data'
-const STORAGE_VERSION = 3
+const STORAGE_VERSION = 4
 
 function freshState(base = {}, profile = null) {
   return {
     user: {
       name: profile?.name || 'Estudante',
       avatar: profile?.avatar || '🦁',
-      xp: profile?.xp || 0,
-      streak: {
-        current: profile?.streak_current || 0,
-        lastStudyDate: null,
-        best: profile?.streak_best || 0,
-      },
-      trophies: [],
       ...(base.user || {}),
     },
     progress: base.progress || {},
@@ -31,15 +24,12 @@ function loadData(storageKey, profile) {
     if (raw) {
       const parsed = JSON.parse(raw)
       if (!localStorage.getItem(storageKey)) saveData(storageKey, parsed)
-      // Versão de storage mudou: reseta exams mas preserva progresso e XP
+      // Não importa progresso acadêmico nem gamificação de versões antigas.
       if ((parsed.storageVersion || 0) < STORAGE_VERSION) {
         const data = freshState({
           user: {
             name: profile?.name || parsed.user?.name || 'Estudante',
             avatar: profile?.avatar || parsed.user?.avatar || '🦁',
-            xp: 0,
-            streak: { current: 0, lastStudyDate: null, best: 0 },
-            trophies: [],
           },
         }, profile)
         saveData(storageKey, data)
@@ -57,18 +47,6 @@ function saveData(storageKey, data) {
   localStorage.setItem(storageKey, JSON.stringify(data))
 }
 
-function nextStreak(streak = {}) {
-  const today = new Date()
-  const todayKey = today.toLocaleDateString('en-CA')
-  if (streak.lastStudyDate === todayKey) return streak
-
-  const yesterday = new Date(today)
-  yesterday.setDate(yesterday.getDate() - 1)
-  const yesterdayKey = yesterday.toLocaleDateString('en-CA')
-  const current = streak.lastStudyDate === yesterdayKey ? (streak.current || 0) + 1 : 1
-  return { current, best: Math.max(streak.best || 0, current), lastStudyDate: todayKey }
-}
-
 export function useProgress({ userId = null, profile = null } = {}) {
   const storageKey = useMemo(() => `${STORAGE_KEY}:${userId || 'offline'}`, [userId])
   const [data, setData] = useState(() => loadData(storageKey, profile))
@@ -80,7 +58,7 @@ export function useProgress({ userId = null, profile = null } = {}) {
   useEffect(() => {
     if (!profile) return
     setData(prev => {
-      const isUntouched = prev.user.name === 'Estudante' && prev.user.xp === 0
+      const isUntouched = prev.user.name === 'Estudante'
       if (!isUntouched) return prev
       const next = {
         ...prev,
@@ -88,12 +66,6 @@ export function useProgress({ userId = null, profile = null } = {}) {
           ...prev.user,
           name: profile.name || prev.user.name,
           avatar: profile.avatar || prev.user.avatar,
-          xp: profile.xp || 0,
-          streak: {
-            ...prev.user.streak,
-            current: profile.streak_current || 0,
-            best: profile.streak_best || 0,
-          },
         },
       }
       saveData(storageKey, next)
@@ -101,37 +73,23 @@ export function useProgress({ userId = null, profile = null } = {}) {
     })
   }, [profile, storageKey])
 
-  function updateTopicProgress(subjectId, topicId, stars, xpEarned) {
-    const updatedUser = {
-      ...data.user,
-      xp: data.user.xp + xpEarned,
-      streak: nextStreak(data.user.streak),
-    }
+  function updateTopicProgress(subjectId, topicId) {
     setData(prev => {
       const subjectProgress = { ...(prev.progress[subjectId] || {}) }
-      const existing = subjectProgress[topicId] || { stars: 0, completed: false, bestScore: 0 }
       subjectProgress[topicId] = {
-        stars: Math.max(existing.stars, stars),
         completed: true,
-        bestScore: Math.max(existing.bestScore, stars),
       }
       const next = {
         ...prev,
         progress: { ...prev.progress, [subjectId]: subjectProgress },
-        user: {
-          ...prev.user,
-          xp: prev.user.xp + xpEarned,
-          streak: nextStreak(prev.user.streak),
-        },
       }
       saveData(storageKey, next)
       return next
     })
-    return updatedUser
   }
 
   function getTopicProgress(subjectId, topicId) {
-    return data.progress[subjectId]?.[topicId] || { stars: 0, completed: false }
+    return data.progress[subjectId]?.[topicId] || { completed: false }
   }
 
   function getSubjectProgress(subjectId, totalTopics) {

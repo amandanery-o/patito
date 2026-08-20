@@ -1,29 +1,19 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabase'
-import { useAuth } from '../contexts/AuthContext'
 
 const MEDALS = ['🥇', '🥈', '🥉']
 
 export default function Leaderboard({ onBack }) {
-  const { session, profile } = useAuth()
   const [rows, setRows]       = useState([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     if (!supabase) { setLoading(false); return }
-    let query = supabase
-      .from('profiles')
-      .select('id, name, avatar, xp, streak_current')
-      .order('xp', { ascending: false })
-      .limit(50)
-    if (profile?.class_code) query = query.eq('class_code', profile.class_code)
-    query.then(({ data }) => {
+    supabase.rpc('get_usage_ranking').then(({ data }) => {
         setRows(data || [])
         setLoading(false)
       })
-  }, [profile?.class_code])
-
-  const myId = session?.user?.id
+  }, [])
 
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
@@ -50,12 +40,12 @@ export default function Leaderboard({ onBack }) {
             {rows.slice(0, 3).length > 0 && (
               <div className="grid grid-cols-3 gap-3 mb-5">
                 {[rows[1], rows[0], rows[2]].filter(Boolean).map((row, i) => {
-                  const realRank = rows.indexOf(row)
-                  const isMe = row.id === myId
+                  const realRank = Number(row.position) - 1
+                  const isMe = row.is_current_user
                   const heights = ['h-24', 'h-32', 'h-20']
                   return (
                     <div
-                      key={row.id}
+                      key={`${row.position}-${row.name}`}
                       className={`flex flex-col items-center justify-end rounded-2xl pb-3 pt-2 gap-1
                         ${isMe ? 'bg-yellow-100 border-2 border-yellow-400' : 'bg-white border border-gray-100'}
                         ${heights[i]}`}
@@ -67,7 +57,7 @@ export default function Leaderboard({ onBack }) {
                       <div className="flex items-center gap-1">
                         <span className="text-lg">{MEDALS[realRank]}</span>
                       </div>
-                      <span className="text-xs font-bold text-yellow-600">{row.xp} XP</span>
+                      <span className="text-xs font-bold text-yellow-600">{row.activity_points} pts</span>
                     </div>
                   )
                 })}
@@ -76,27 +66,25 @@ export default function Leaderboard({ onBack }) {
 
             {/* Lista completa */}
             {rows.map((row, i) => {
-              const isMe = row.id === myId
+              const isMe = row.is_current_user
               return (
                 <div
-                  key={row.id}
+                  key={`${row.position}-${row.name}`}
                   className={`flex items-center gap-3 px-4 py-3 rounded-2xl
                     ${isMe ? 'bg-yellow-50 border-2 border-yellow-300' : 'bg-white border border-gray-100'}`}
                 >
                   <span className="w-8 text-center font-extrabold text-gray-400 text-sm">
-                    {i < 3 ? MEDALS[i] : `${i + 1}º`}
+                    {i < 3 ? MEDALS[i] : `${row.position}º`}
                   </span>
                   <span className="text-2xl">{row.avatar || '🦆'}</span>
                   <div className="flex-1 min-w-0">
                     <p className={`font-bold truncate ${isMe ? 'text-yellow-800' : 'text-gray-800'}`}>
                       {row.name}{isMe ? ' (você)' : ''}
                     </p>
-                    {row.streak_current > 0 && (
-                      <p className="text-xs text-orange-500 font-semibold">🔥 {row.streak_current} dias</p>
-                    )}
+                    <p className="text-xs text-gray-500 font-semibold">{row.questions_count} questões · {row.sessions_count} sessões</p>
                   </div>
                   <div className="text-right">
-                    <p className="font-extrabold text-yellow-600 text-sm">{row.xp} XP</p>
+                    <p className="font-extrabold text-yellow-600 text-sm">{row.activity_points} pts</p>
                   </div>
                 </div>
               )

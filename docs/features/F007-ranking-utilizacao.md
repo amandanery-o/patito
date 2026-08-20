@@ -14,7 +14,8 @@ O ranking incentiva estudo recorrente sem comparar inteligência ou desempenho.
 - No máximo 60 questões e duas sessões por dia geram XP e ranking.
 - Uso adicional permanece liberado, mas não gera pontuação no dia.
 - Acertos, erros e percentual de desempenho não influenciam o ranking.
-- O ranking mostra o nome do aluno; permanece aberta a decisão entre nome completo e primeiro nome.
+- Cada questão vale 1 ponto de utilização e cada sessão concluída vale 10.
+- O ranking mostra somente o primeiro nome do aluno.
 
 ## Critérios de aceite
 
