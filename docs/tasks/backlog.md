@@ -50,9 +50,9 @@ Status: proposto, aguardando aprovação de priorização.
 
 ## F006 — Dever de casa
 
-- `TASK-029` Criar tabela, RLS e cliente de deveres.
-- `TASK-030` Implementar lista e formulário mobile-first.
-- `TASK-031` Implementar edição, exclusão e conclusão.
+- `TASK-029` ✅ Criar tabela, RLS e cliente de deveres.
+- `TASK-030` ✅ Implementar lista e formulário mobile-first.
+- `TASK-031` ✅ Implementar edição, exclusão e conclusão.
 - `TASK-032` Cobrir CRUD, isolamento e persistência com testes.
 
 ## F007 — Ranking por utilização

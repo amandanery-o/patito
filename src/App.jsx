@@ -11,8 +11,10 @@ import Mascot from './components/Mascot'
 import ConfirmModal from './components/ConfirmModal'
 import BottomNav from './components/BottomNav'
 import TopicTrail from './components/TopicTrail'
+import HomeworkView from './components/HomeworkView'
 import { useProgress } from './hooks/useProgress'
 import { useStudySession } from './hooks/useStudySession'
+import { useHomework } from './hooks/useHomework'
 import { useReports } from './hooks/useReports'
 import { shuffle } from './utils/shuffle'
 import { daysUntil, formatDate, parseLocalDate } from './utils/dates'
@@ -108,6 +110,7 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
     saveAnswer: saveStudyAnswer,
     complete: completeStudySession,
   } = useStudySession()
+  const homework = useHomework(session?.user?.id)
 
   // -------------------------------------------------------------------------
   // Handlers de sessão
@@ -230,6 +233,31 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
 
   if (view === VIEWS.LEADERBOARD) {
     return <ViewLoader><Leaderboard onBack={() => setView(VIEWS.HOME)} /></ViewLoader>
+  }
+
+  if (view === VIEWS.HOMEWORK) {
+    return (
+      <>
+        <HomeworkView
+          items={homework.items}
+          loading={homework.loading}
+          saving={homework.saving}
+          error={homework.error}
+          onCreate={homework.createHomework}
+          onUpdate={homework.updateHomework}
+          onRemove={homework.removeHomework}
+          onBack={() => setView(VIEWS.HOME)}
+        />
+        <BottomNav
+          activeView="homework"
+          onHome={() => setView(VIEWS.HOME)}
+          onHomework={() => setView(VIEWS.HOMEWORK)}
+          onSchedule={() => setView(VIEWS.SCHEDULE)}
+          onCalendar={() => setView(VIEWS.CALENDAR)}
+          onLeaderboard={() => setView(VIEWS.LEADERBOARD)}
+        />
+      </>
+    )
   }
 
   // -------------------------------------------------------------------------
@@ -400,6 +428,7 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
         <BottomNav
           activeView="home"
           onHome={() => setView(VIEWS.HOME)}
+          onHomework={() => setView(VIEWS.HOMEWORK)}
           onSchedule={() => setView(VIEWS.SCHEDULE)}
           onCalendar={() => setView(VIEWS.CALENDAR)}
           onLeaderboard={() => setView(VIEWS.LEADERBOARD)}
@@ -661,6 +690,7 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
         <BottomNav
           activeView="calendar"
           onHome={() => setView(VIEWS.HOME)}
+          onHomework={() => setView(VIEWS.HOMEWORK)}
           onSchedule={() => setView(VIEWS.SCHEDULE)}
           onCalendar={() => setView(VIEWS.CALENDAR)}
           onLeaderboard={() => setView(VIEWS.LEADERBOARD)}
@@ -689,6 +719,7 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
         <BottomNav
           activeView="schedule"
           onHome={() => setView(VIEWS.HOME)}
+          onHomework={() => setView(VIEWS.HOMEWORK)}
           onSchedule={() => setView(VIEWS.SCHEDULE)}
           onCalendar={() => setView(VIEWS.CALENDAR)}
           onLeaderboard={() => setView(VIEWS.LEADERBOARD)}

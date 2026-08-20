@@ -24,6 +24,7 @@ export const EXAM_TYPES = [
 export const VIEWS = {
   HOME: 'home', SUBJECT: 'subject', SESSION: 'session', RESULT: 'result',
   CALENDAR: 'calendar', ADD_EXAM: 'add_exam', SCHEDULE: 'schedule', LEADERBOARD: 'leaderboard',
+  HOMEWORK: 'homework',
 }
 
 export const EMPTY_EXAM_FORM = {

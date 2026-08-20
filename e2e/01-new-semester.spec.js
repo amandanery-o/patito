@@ -31,4 +31,13 @@ test.describe('Estrutura limpa do segundo semestre', () => {
     await page.getByRole('button', { name: 'Lista' }).click()
     await expect(page.getByText(/Nenhuma atividade cadastrada/i)).toBeVisible()
   })
+
+  test('abre o cadastro mobile de dever de casa', async ({ page }) => {
+    await page.getByRole('button', { name: 'Deveres' }).click()
+    await expect(page.getByRole('heading', { name: 'Deveres de casa' })).toBeVisible()
+    await expect(page.getByText('Nenhum dever pendente')).toBeVisible()
+    await page.getByRole('button', { name: '+ Novo' }).click()
+    await expect(page.getByLabel('O que precisa fazer?')).toBeVisible()
+    await expect(page.getByLabel('Entregar em')).toBeVisible()
+  })
 })
