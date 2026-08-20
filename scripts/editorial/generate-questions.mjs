@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { mkdir, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { GEOGRAPHY_TOPICS } from '../../src/data/geografia.js'
@@ -9,6 +9,9 @@ import { validateEditorialContent } from '../../src/editorial/contentValidator.j
 const API_URL = 'https://api.anthropic.com/v1/messages'
 const PROMPT_VERSION = 'geography-p1-v1'
 const CONTENT_ID = 'geografia-p1-capitulos-7-8'
+const SCRIPT_DIRECTORY = dirname(fileURLToPath(import.meta.url))
+const SYSTEM_PROMPT_PATH = resolve(SCRIPT_DIRECTORY, 'prompts/question-author-system-v1.md')
+const BATCH_PROMPT_PATH = resolve(SCRIPT_DIRECTORY, 'prompts/geography-p1-batch-v1.md')
 
 function requiredEnvironment(name) {
   const value = process.env[name]?.trim()
@@ -72,26 +75,22 @@ export function validateGeneratedQuestions(questions, expected) {
   return errors
 }
 
-async function generateBatch({ apiKey, model, batch, sourceBrief }) {
-  const prompt = `Crie um lote editorial de questões para crianças brasileiras de 9 a 10 anos.
+export function renderPrompt(template, values) {
+  return Object.entries(values).reduce(
+    (result, [key, value]) => result.replaceAll(`{{${key}}}`, String(value)),
+    template,
+  )
+}
 
-Regras obrigatórias:
-- Produza exatamente ${batch.total} questões: ${batch.multipleChoice} de múltipla escolha e ${batch.matchColumns} de associação.
-- Use somente os conceitos do material fornecido.
-- Distribua as questões de modo equilibrado entre os capítulos 7 e 8 e entre as seções.
-- Múltipla escolha deve ter quatro alternativas plausíveis, somente uma correta e explicação curta.
-- Associação deve ter de 3 a 5 pares sem respostas ambíguas e explicação curta.
-- Linguagem simples, respeitosa e apropriada para 10 anos.
-- Não use pegadinhas, dupla negação ou alternativas como “todas as anteriores”.
-- Não exija números de mapas ou gráficos que não estejam no material fornecido.
-- Em sourceRef, informe a seção e as páginas correspondentes.
-- Não inclua dados pessoais, competição, pontuação ou desempenho de alunos.
-- Este é o lote ${batch.number} de 2; evite perguntas genéricas e cubra a lista de focos deste lote.
-
-Focos: ${batch.focus.join('; ')}
-
-Material editorial autorizado e resumido:
-${JSON.stringify(sourceBrief, null, 2)}`
+async function generateBatch({ apiKey, model, batch, sourceBrief, systemPrompt, batchTemplate }) {
+  const prompt = renderPrompt(batchTemplate, {
+    BATCH_NUMBER: batch.number,
+    TOTAL: batch.total,
+    MULTIPLE_CHOICE: batch.multipleChoice,
+    MATCH_COLUMNS: batch.matchColumns,
+    FOCUS: batch.focus.map(focus => `- ${focus}`).join('\n'),
+    SOURCE_BRIEF: JSON.stringify(sourceBrief, null, 2),
+  })
 
   const response = await fetch(API_URL, {
     method: 'POST',
@@ -104,6 +103,7 @@ ${JSON.stringify(sourceBrief, null, 2)}`
       model,
       max_tokens: 12000,
       temperature: 0.3,
+      system: systemPrompt,
       messages: [{ role: 'user', content: prompt }],
       tools: [{
         name: 'submit_question_batch',
@@ -143,6 +143,10 @@ async function main() {
   const model = requiredEnvironment('ANTHROPIC_MODEL')
   const output = resolve(process.argv[2] || 'editorial/drafts/geografia-p1.json')
   const sourceBrief = buildSourceBrief()
+  const [systemPrompt, batchTemplate] = await Promise.all([
+    readFile(SYSTEM_PROMPT_PATH, 'utf8'),
+    readFile(BATCH_PROMPT_PATH, 'utf8'),
+  ])
   const batches = [
     {
       number: 1, total: 30, multipleChoice: 23, matchColumns: 7,
@@ -157,7 +161,7 @@ async function main() {
   const generated = []
   const usage = []
   for (const batch of batches) {
-    const result = await generateBatch({ apiKey, model, batch, sourceBrief })
+    const result = await generateBatch({ apiKey, model, batch, sourceBrief, systemPrompt, batchTemplate })
     const errors = validateGeneratedQuestions(result.questions, batch)
     if (errors.length) throw new Error(`Lote ${batch.number} inválido: ${errors.join('; ')}`)
     generated.push(...result.questions)

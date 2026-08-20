@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { assembleDraft, buildSourceBrief, validateGeneratedQuestions } from '../../scripts/editorial/generate-questions.mjs'
+import { assembleDraft, buildSourceBrief, renderPrompt, validateGeneratedQuestions } from '../../scripts/editorial/generate-questions.mjs'
 
 function questions(multipleChoice, matchColumns) {
   return [
@@ -25,5 +25,10 @@ describe('gerador editorial', () => {
     const draft = assembleDraft({ questions: questions(1, 1), model: 'modelo-configurado' })
     expect(draft.status).toBe('draft')
     expect(draft.questions.map(question => question.id)).toEqual(['geo-p1-001', 'geo-p1-002'])
+  })
+
+  it('renderiza todas as variáveis do prompt', () => {
+    expect(renderPrompt('Lote {{BATCH}}: {{COUNT}} questões', { BATCH: 1, COUNT: 30 }))
+      .toBe('Lote 1: 30 questões')
   })
 })

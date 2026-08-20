@@ -12,6 +12,13 @@ O gerador roda apenas na máquina da mantenedora. A API do Claude não é chamad
 6. O resultado é salvo em `editorial/drafts/`, diretório ignorado pelo Git.
 7. Uma pessoa revisa conteúdo, alternativas, respostas e explicações antes de aprovar e publicar.
 
+Os prompts são artefatos editoriais versionados:
+
+- `scripts/editorial/prompts/question-author-system-v1.md`: papel, princípios pedagógicos, proibições e checklist do Claude;
+- `scripts/editorial/prompts/geography-p1-batch-v1.md`: objetivo, quantidades, focos e material de cada lote.
+
+Alterações de prompt exigem uma nova versão e nova geração; não se modifica silenciosamente o prompt de um lote já produzido.
+
 ## Configuração local
 
 Configure as variáveis no terminal ou em um gerenciador seguro de segredos:
@@ -33,4 +40,3 @@ Por padrão, o resultado é criado em `editorial/drafts/geografia-p1.json`. O sc
 - Cada questão deve referenciar seção e páginas da fonte.
 - Uma falha em qualquer lote impede a criação do arquivo final.
 - A resposta da API não é tratada como conteúdo aprovado.
-
