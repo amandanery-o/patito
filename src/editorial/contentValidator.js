@@ -1,4 +1,5 @@
 const QUESTION_TYPES = new Set(['multipleChoice', 'matchColumns'])
+const DIFFICULTIES = new Set(['easy', 'intermediate', 'challenging'])
 const PROVIDERS = new Set(['edebe', 'richmond'])
 
 function hasText(value) {
@@ -9,6 +10,7 @@ function validateQuestion(question, index, errors) {
   const path = `questions[${index}]`
   if (!hasText(question.id)) errors.push(`${path}.id é obrigatório`)
   if (!QUESTION_TYPES.has(question.type)) errors.push(`${path}.type não é permitido`)
+  if (!DIFFICULTIES.has(question.difficulty)) errors.push(`${path}.difficulty não é permitida`)
   if (!hasText(question.question)) errors.push(`${path}.question é obrigatória`)
   if (!hasText(question.explanation)) errors.push(`${path}.explanation é obrigatória`)
   if (!hasText(question.sourceRef?.section)) errors.push(`${path}.sourceRef.section é obrigatória`)

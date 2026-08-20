@@ -15,7 +15,7 @@ O gerador roda apenas na máquina da mantenedora. A API do Claude não é chamad
 Os prompts são artefatos editoriais versionados:
 
 - `scripts/editorial/prompts/question-author-system-v1.md`: papel, princípios pedagógicos, proibições e checklist do Claude;
-- `scripts/editorial/prompts/geography-p1-batch-v1.md`: objetivo, quantidades, focos e material de cada lote.
+- `scripts/editorial/prompts/question-batch-v2.md`: modelo genérico para qualquer matéria, com escopo, quantidades, dificuldade, focos, habilidades curriculares e material de cada lote.
 
 Alterações de prompt exigem uma nova versão e nova geração; não se modifica silenciosamente o prompt de um lote já produzido.
 

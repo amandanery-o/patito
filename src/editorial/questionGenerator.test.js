@@ -3,8 +3,8 @@ import { assembleDraft, buildSourceBrief, renderPrompt, validateGeneratedQuestio
 
 function questions(multipleChoice, matchColumns) {
   return [
-    ...Array.from({ length: multipleChoice }, () => ({ type: 'multipleChoice' })),
-    ...Array.from({ length: matchColumns }, () => ({ type: 'matchColumns' })),
+    ...Array.from({ length: multipleChoice }, () => ({ type: 'multipleChoice', difficulty: 'intermediate' })),
+    ...Array.from({ length: matchColumns }, () => ({ type: 'matchColumns', difficulty: 'intermediate' })),
   ]
 }
 
@@ -19,6 +19,19 @@ describe('gerador editorial', () => {
   it('valida quantidade e distribuição de formatos', () => {
     expect(validateGeneratedQuestions(questions(23, 7), { total: 30, multipleChoice: 23, matchColumns: 7 })).toEqual([])
     expect(validateGeneratedQuestions(questions(24, 6), { total: 30, multipleChoice: 23, matchColumns: 7 })).toHaveLength(2)
+  })
+
+  it('valida a distribuição de dificuldade', () => {
+    const generated = [
+      ...Array.from({ length: 9 }, () => ({ type: 'multipleChoice', difficulty: 'easy' })),
+      ...Array.from({ length: 14 }, () => ({ type: 'multipleChoice', difficulty: 'intermediate' })),
+      ...Array.from({ length: 6 }, () => ({ type: 'matchColumns', difficulty: 'challenging' })),
+      { type: 'matchColumns', difficulty: 'intermediate' },
+    ]
+    expect(validateGeneratedQuestions(generated, {
+      total: 30, multipleChoice: 23, matchColumns: 7,
+      difficulty: { easy: 9, intermediate: 15, challenging: 6 },
+    })).toEqual([])
   })
 
   it('monta um rascunho com IDs determinísticos', () => {

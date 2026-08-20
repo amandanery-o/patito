@@ -7,11 +7,11 @@ import { GEOGRAPHY_TOPICS } from '../../src/data/geografia.js'
 import { validateEditorialContent } from '../../src/editorial/contentValidator.js'
 
 const API_URL = 'https://api.anthropic.com/v1/messages'
-const PROMPT_VERSION = 'geography-p1-v1'
+const PROMPT_VERSION = 'question-batch-v2'
 const CONTENT_ID = 'geografia-p1-capitulos-7-8'
 const SCRIPT_DIRECTORY = dirname(fileURLToPath(import.meta.url))
 const SYSTEM_PROMPT_PATH = resolve(SCRIPT_DIRECTORY, 'prompts/question-author-system-v1.md')
-const BATCH_PROMPT_PATH = resolve(SCRIPT_DIRECTORY, 'prompts/geography-p1-batch-v1.md')
+const BATCH_PROMPT_PATH = resolve(SCRIPT_DIRECTORY, 'prompts/question-batch-v2.md')
 
 function requiredEnvironment(name) {
   const value = process.env[name]?.trim()
@@ -40,9 +40,10 @@ function questionSchema() {
         items: {
           type: 'object',
           additionalProperties: false,
-          required: ['type', 'question', 'explanation', 'sourceRef'],
+          required: ['type', 'difficulty', 'question', 'explanation', 'sourceRef'],
           properties: {
             type: { enum: ['multipleChoice', 'matchColumns'] },
+            difficulty: { enum: ['easy', 'intermediate', 'challenging'] },
             question: { type: 'string', minLength: 10 },
             explanation: { type: 'string', minLength: 10 },
             options: { type: 'array', minItems: 4, maxItems: 4, items: { type: 'string' } },
@@ -72,6 +73,10 @@ export function validateGeneratedQuestions(questions, expected) {
   const matchColumns = questions.filter(question => question.type === 'matchColumns').length
   if (multipleChoice !== expected.multipleChoice) errors.push(`esperadas ${expected.multipleChoice} múltipla escolha; recebidas ${multipleChoice}`)
   if (matchColumns !== expected.matchColumns) errors.push(`esperadas ${expected.matchColumns} associações; recebidas ${matchColumns}`)
+  for (const [difficulty, amount] of Object.entries(expected.difficulty || {})) {
+    const received = questions.filter(question => question.difficulty === difficulty).length
+    if (received !== amount) errors.push(`esperadas ${amount} questões ${difficulty}; recebidas ${received}`)
+  }
   return errors
 }
 
@@ -85,9 +90,17 @@ export function renderPrompt(template, values) {
 async function generateBatch({ apiKey, model, batch, sourceBrief, systemPrompt, batchTemplate }) {
   const prompt = renderPrompt(batchTemplate, {
     BATCH_NUMBER: batch.number,
+    TOTAL_BATCHES: 2,
+    ASSESSMENT_NAME: 'P1',
+    SUBJECT: 'Geografia',
     TOTAL: batch.total,
     MULTIPLE_CHOICE: batch.multipleChoice,
     MATCH_COLUMNS: batch.matchColumns,
+    CONTENT_SCOPE: 'capítulo 7 — atividades econômicas do espaço rural; capítulo 8 — atividades econômicas do espaço urbano',
+    CURRICULUM_SKILLS: 'Nenhuma habilidade curricular adicional foi fornecida. Use apenas os objetivos e conceitos da fonte editorial.',
+    EASY: batch.difficulty.easy,
+    INTERMEDIATE: batch.difficulty.intermediate,
+    CHALLENGING: batch.difficulty.challenging,
     FOCUS: batch.focus.map(focus => `- ${focus}`).join('\n'),
     SOURCE_BRIEF: JSON.stringify(sourceBrief, null, 2),
   })
@@ -150,10 +163,12 @@ async function main() {
   const batches = [
     {
       number: 1, total: 30, multipleChoice: 23, matchColumns: 7,
+      difficulty: { easy: 9, intermediate: 15, challenging: 6 },
       focus: ['agricultura', 'pecuária', 'extrativismo', 'sustentabilidade', 'trabalho rural'],
     },
     {
       number: 2, total: 30, multipleChoice: 22, matchColumns: 8,
+      difficulty: { easy: 9, intermediate: 15, challenging: 6 },
       focus: ['indústria', 'bens de consumo', 'comércio', 'serviços', 'relações entre campo e cidade'],
     },
   ]

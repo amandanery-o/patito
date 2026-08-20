@@ -3,7 +3,7 @@ import { validateEditorialContent } from './contentValidator'
 
 function question(index, type = 'multipleChoice') {
   const base = {
-    id: `q-${index}`, type, question: `Pergunta ${index}?`, explanation: 'Explicação baseada no livro.',
+    id: `q-${index}`, type, difficulty: 'intermediate', question: `Pergunta ${index}?`, explanation: 'Explicação baseada no livro.',
     sourceRef: { section: 'Capítulo 1' },
   }
   return type === 'multipleChoice'
