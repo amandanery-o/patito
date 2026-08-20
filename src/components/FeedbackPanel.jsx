@@ -2,11 +2,16 @@ import { useState } from 'react'
 import Mascot from './Mascot'
 
 export default function FeedbackPanel({ correct, explanation, onContinue, onReport }) {
-  const [reported, setReported] = useState(false)
+  const [reportStatus, setReportStatus] = useState('idle')
 
-  function handleReport() {
-    onReport?.()
-    setReported(true)
+  async function handleReport() {
+    setReportStatus('sending')
+    try {
+      await onReport?.()
+      setReportStatus('sent')
+    } catch {
+      setReportStatus('error')
+    }
   }
 
   return (
@@ -40,10 +45,13 @@ export default function FeedbackPanel({ correct, explanation, onContinue, onRepo
         </button>
         <button
           onClick={handleReport}
-          disabled={reported}
+          disabled={reportStatus === 'sending' || reportStatus === 'sent'}
           className="text-white/60 text-xs text-center py-1 disabled:opacity-40 transition-opacity"
         >
-          {reported ? '🚩 Erro reportado — obrigado!' : '🚩 Reportar erro nesta questão'}
+          {reportStatus === 'sending' && 'Enviando relato…'}
+          {reportStatus === 'sent' && '🚩 Erro reportado — obrigado!'}
+          {reportStatus === 'error' && 'Não foi possível enviar — toque para tentar novamente'}
+          {reportStatus === 'idle' && '🚩 Reportar erro nesta questão'}
         </button>
       </div>
     </div>

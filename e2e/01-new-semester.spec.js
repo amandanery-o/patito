@@ -42,4 +42,12 @@ test.describe('Estrutura limpa do segundo semestre', () => {
     await expect(page.getByLabel('O que precisa fazer?')).toBeVisible()
     await expect(page.getByLabel('Entregar em')).toBeVisible()
   })
+
+  test('abre um relato geral sem pedir dados pessoais', async ({ page }) => {
+    await page.getByRole('button', { name: 'Reportar um problema' }).click()
+    await expect(page.getByRole('heading', { name: 'Reportar um problema' })).toBeVisible()
+    await expect(page.getByLabel('O que aconteceu?')).toBeVisible()
+    await expect(page.getByText(/não envia seus dados ou respostas/i)).toBeVisible()
+    await expect(page.getByLabel(/nome|e-mail/i)).toHaveCount(0)
+  })
 })

@@ -65,10 +65,10 @@ Status: proposto, aguardando aprovação de priorização.
 
 ## F008 — Relato de problemas
 
-- `TASK-038` Definir payload anônimo de relato.
-- `TASK-039` Criar função segura para abertura de issue no GitHub.
-- `TASK-040` Integrar relato de questão e erro geral na interface.
-- `TASK-041` Testar remoção de dados pessoais e falhas do GitHub.
+- `TASK-038` ✅ Definir payload anônimo de relato.
+- `TASK-039` ✅ Criar função segura para abertura de issue no GitHub.
+- `TASK-040` ✅ Integrar relato de questão e erro geral na interface.
+- `TASK-041` ✅ Testar remoção de dados pessoais e falhas do GitHub.
 
 ## F009 — Pipeline editorial
 
