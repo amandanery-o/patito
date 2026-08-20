@@ -78,6 +78,8 @@ PK composta: `user_id + content_id`. Não armazena estrelas ou percentual como i
 
 ### `homework`
 
+Nome técnico preservado no banco; na interface, a turma chama estas tarefas de **Temas**.
+
 | Campo | Tipo | Regra |
 |---|---|---|
 | `id` | `uuid` | PK, criado pelo cliente |

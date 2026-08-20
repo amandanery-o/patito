@@ -8,7 +8,7 @@
 | 1 | `F003` Sessão de estudos v2 | Sessões retomáveis, sem vidas e com revisão de erros | F002 |
 | 1 | `F004` Conteúdo do segundo semestre | Resumos textuais e exercícios atualizados | F003, F009 |
 | 1 | `F005` Calendário do segundo semestre | Datas e alertas atualizados centralmente | F009 |
-| 1 | `F006` Dever de casa | Aluno gerencia e conclui deveres próprios | F001, F002 |
+| 1 | `F006` Temas | Aluno gerencia e conclui seus próprios temas | F001, F002 |
 | 2 | `F007` XP e ranking por utilização | Incentivo sem comparar desempenho | F002, F003 |
 | 2 | `F008` Relato seguro de problemas | Problemas chegam ao GitHub sem identificar crianças | F001 |
 | 1 | `F009` Pipeline editorial | Conteúdo de Edebê/Richmond e PDFs é publicado com segurança | F000 |

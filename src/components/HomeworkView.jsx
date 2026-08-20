@@ -37,7 +37,7 @@ export default function HomeworkView({ items, loading, saving, error, onCreate, 
     <div className="min-h-screen bg-gray-50 pb-24">
       <header className="bg-white shadow-sm px-4 py-3 flex items-center gap-3 sticky top-0 z-10">
         <button onClick={onBack} className="text-2xl" aria-label="Voltar">‹</button>
-        <h1 className="font-bold text-gray-800 text-lg flex-1">Deveres de casa</h1>
+        <h1 className="font-bold text-gray-800 text-lg flex-1">Temas</h1>
         <button onClick={openCreate} className="bg-blue-500 text-white font-extrabold rounded-xl px-4 py-2 active:scale-95">+ Novo</button>
       </header>
 
@@ -46,7 +46,7 @@ export default function HomeworkView({ items, loading, saving, error, onCreate, 
 
         {showForm && (
           <form onSubmit={handleSubmit} className="bg-white border border-blue-100 shadow-sm rounded-3xl p-5 space-y-4">
-            <h2 className="font-extrabold text-gray-800">{editingId ? 'Editar dever' : 'Novo dever'}</h2>
+            <h2 className="font-extrabold text-gray-800">{editingId ? 'Editar tema' : 'Novo tema'}</h2>
             <div>
               <label htmlFor="homework-description" className="block text-sm font-bold text-gray-600 mb-1">O que precisa fazer?</label>
               <textarea id="homework-description" required maxLength={500} rows={3} value={form.description}
@@ -76,11 +76,11 @@ export default function HomeworkView({ items, loading, saving, error, onCreate, 
         )}
 
         {loading ? (
-          <p className="text-center text-gray-400 font-semibold py-16">Carregando deveres…</p>
+          <p className="text-center text-gray-400 font-semibold py-16">Carregando temas…</p>
         ) : items.length === 0 ? (
           <div className="text-center bg-yellow-50 border border-yellow-100 rounded-3xl py-12 px-6">
             <p className="text-5xl mb-3">📚</p>
-            <p className="font-extrabold text-gray-700">Nenhum dever pendente</p>
+            <p className="font-extrabold text-gray-700">Nenhum tema pendente</p>
             <p className="text-sm text-gray-500 mt-1">Quando receber uma tarefa, cadastre aqui.</p>
           </div>
         ) : (
@@ -95,8 +95,8 @@ export default function HomeworkView({ items, loading, saving, error, onCreate, 
                   <p className="text-sm text-gray-500 mt-1">{item.pages && `Páginas ${item.pages} · `}Entrega: {formatDate(item.due_date)}</p>
                 </div>
                 <div className="flex gap-2">
-                  <button onClick={() => openEdit(item)} aria-label="Editar dever">✏️</button>
-                  <button onClick={() => setConfirmId(item.id)} aria-label="Excluir dever">🗑️</button>
+                  <button onClick={() => openEdit(item)} aria-label="Editar tema">✏️</button>
+                  <button onClick={() => setConfirmId(item.id)} aria-label="Excluir tema">🗑️</button>
                 </div>
               </article>
             ))}
@@ -104,7 +104,7 @@ export default function HomeworkView({ items, loading, saving, error, onCreate, 
         )}
       </main>
 
-      {confirmId && <ConfirmModal message="Excluir este dever?" onConfirm={async () => {
+      {confirmId && <ConfirmModal message="Excluir este tema?" onConfirm={async () => {
         try { await onRemove(confirmId); setConfirmId(null) } catch { /* mensagem no hook */ }
       }} onCancel={() => setConfirmId(null)} />}
     </div>

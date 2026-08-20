@@ -6,7 +6,7 @@
 
 ## Resultado
 
-Respostas, sessões, progresso e deveres sobrevivem a recarregamentos e troca de dispositivo.
+Respostas, sessões, progresso e temas sobrevivem a recarregamentos e troca de dispositivo.
 
 ## Escopo de dados
 
@@ -14,7 +14,7 @@ Respostas, sessões, progresso e deveres sobrevivem a recarregamentos e troca de
 - Respostas por questão.
 - Questões erradas pendentes de revisão.
 - Progresso por conteúdo.
-- Deveres de casa.
+- Temas.
 - Eventos de utilização contabilizados.
 
 ## Regras

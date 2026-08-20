@@ -10,12 +10,12 @@ const baseProps = {
 describe('HomeworkView', () => {
   it('mostra o estado vazio e abre o formulário', () => {
     render(<HomeworkView {...baseProps} />)
-    expect(screen.getByText('Nenhum dever pendente')).toBeInTheDocument()
+    expect(screen.getByText('Nenhum tema pendente')).toBeInTheDocument()
     fireEvent.click(screen.getByText('+ Novo'))
-    expect(screen.getByText('Novo dever')).toBeInTheDocument()
+    expect(screen.getByText('Novo tema')).toBeInTheDocument()
   })
 
-  it('cria um dever com descrição, páginas e data', async () => {
+  it('cria um tema com descrição, páginas e data', async () => {
     const onCreate = vi.fn().mockResolvedValue(undefined)
     render(<HomeworkView {...baseProps} onCreate={onCreate} />)
     fireEvent.click(screen.getByText('+ Novo'))
@@ -28,7 +28,7 @@ describe('HomeworkView', () => {
     }))
   })
 
-  it('marca um dever como concluído', () => {
+  it('marca um tema como concluído', () => {
     const onUpdate = vi.fn().mockResolvedValue(undefined)
     render(<HomeworkView {...baseProps} onUpdate={onUpdate} items={[{
       id: 'h1', description: 'Exercícios', pages: null, due_date: '2026-08-25', completed: false,

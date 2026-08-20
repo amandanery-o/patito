@@ -11,7 +11,7 @@ O escopo inicial é uma única turma com aproximadamente 25 alunos. O projeto n�
 
 ## 2. Problema
 
-O estudo tradicional pode ter pouca aderência à rotina de crianças nativas digitais. O aluno precisa consultar conteúdos, deveres e avaliações e praticar exercícios em um ambiente atraente, sem depender continuamente de um adulto e sem perder seu progresso.
+O estudo tradicional pode ter pouca aderência à rotina de crianças nativas digitais. O aluno precisa consultar conteúdos, temas e avaliações e praticar exercícios em um ambiente atraente, sem depender continuamente de um adulto e sem perder seu progresso.
 
 ## 3. Usuário
 
@@ -93,15 +93,15 @@ Não existirão perfis de responsável, professor, coordenador ou administrador 
 - `REQ-038` Atualizar o calendário a partir de PDF enviado pela professora e processado pela mantenedora.
 - `REQ-039` Não permitir administração do calendário pelos alunos.
 
-### Dever de casa
+### Temas
 
-- `REQ-040` Oferecer uma área em que a criança cadastre seus deveres de casa.
+- `REQ-040` Oferecer uma área em que a criança cadastre seus temas (tarefas de casa).
 - `REQ-041` Permitir informar descrição ou atividade a realizar.
 - `REQ-042` Permitir informar páginas do livro quando aplicável.
 - `REQ-043` Permitir informar data de entrega.
-- `REQ-044` Preservar os deveres cadastrados pelo aluno.
-- `REQ-055` Permitir criar, visualizar, editar e excluir deveres de casa.
-- `REQ-056` Permitir marcar um dever de casa como concluído.
+- `REQ-044` Preservar os temas cadastrados pelo aluno.
+- `REQ-055` Permitir criar, visualizar, editar e excluir temas.
+- `REQ-056` Permitir marcar um tema como concluído.
 
 ### Revisão de conteúdo
 
@@ -140,7 +140,7 @@ Não existirão perfis de responsável, professor, coordenador ou administrador 
 ## 7. Fluxo principal proposto
 
 1. O aluno informa sua identidade.
-2. A página inicial mostra alertas, matérias, deveres e acessos de estudo.
+2. A página inicial mostra alertas, matérias, temas e acessos de estudo.
 3. O aluno pode consultar um resumo de conteúdo.
 4. O aluno inicia ou retoma uma sessão relacionada.
 5. O sistema apresenta aproximadamente 30 questões aleatórias.
@@ -155,7 +155,7 @@ Não existirão perfis de responsável, professor, coordenador ou administrador 
 - Respostas por questão e questões pendentes de revisão.
 - Progresso por conteúdo.
 - Eventos escolares publicados.
-- Deveres de casa cadastrados pelo aluno.
+- Temas cadastrados pelo aluno.
 - Registros de utilização necessários para XP e ranking.
 - Relatos de problemas e questões reportadas.
 
@@ -193,7 +193,7 @@ Não serão usadas métricas comerciais.
 - O ranking exibirá o nome do aluno.
 - Sessões interrompidas preservam respostas e podem coexistir com a navegação pela página inicial.
 - A revisão de erros acontece ao final da sessão.
-- Deveres de casa possuem CRUD completo e estado de conclusão.
+- Temas possuem CRUD completo e estado de conclusão.
 - Resumos de conteúdo contêm somente texto nesta versão.
 - Relatos de problemas são encaminhados ao GitHub.
 - A recuperação de senha utiliza o fluxo padrão por e-mail do Supabase.
@@ -219,7 +219,7 @@ Não serão usadas métricas comerciais.
 - Conteúdo completo do segundo semestre.
 - Estrutura vazia e validada para publicação gradual do novo semestre.
 - Calendário atualizado e alertas.
-- Deveres de casa.
+- Temas.
 - Resumos de revisão seguidos por exercícios.
 - Sessões retomáveis, sem vidas e com revisão de erros.
 - XP e ranking por utilização.

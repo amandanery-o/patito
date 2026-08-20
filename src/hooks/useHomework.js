@@ -15,7 +15,7 @@ export function useHomework(userId, repository) {
     try {
       setItems(await stableRepository.list())
     } catch {
-      setError('Não conseguimos carregar os deveres. Tente novamente.')
+      setError('Não conseguimos carregar os temas. Tente novamente.')
     } finally {
       setLoading(false)
     }
@@ -25,7 +25,7 @@ export function useHomework(userId, repository) {
 
   async function run(operation) {
     if (!userId) {
-      setError('Entre na sua conta para salvar seus deveres.')
+      setError('Entre na sua conta para salvar seus temas.')
       throw new Error('authentication_required')
     }
     setSaving(true)

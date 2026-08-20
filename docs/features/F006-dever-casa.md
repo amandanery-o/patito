@@ -1,4 +1,4 @@
-# F006 — Dever de casa
+# F006 — Temas
 
 ## Requisitos
 
@@ -6,7 +6,7 @@
 
 ## Resultado
 
-Cada aluno registra e acompanha seus próprios deveres de casa.
+Cada aluno registra e acompanha seus próprios temas, termo usado pela turma para as tarefas de casa.
 
 ## Campos
 
@@ -14,8 +14,8 @@ Descrição, páginas opcionais, data de entrega e estado de conclusão.
 
 ## Critérios de aceite
 
-- O aluno consegue criar, visualizar, editar e excluir um dever.
-- O aluno consegue marcar e desmarcar um dever como concluído.
+- O aluno consegue criar, visualizar, editar e excluir um tema.
+- O aluno consegue marcar e desmarcar um tema como concluído.
 - Páginas são opcionais e a data de entrega é obrigatória.
-- Deveres permanecem disponíveis após recarregar ou trocar de dispositivo.
-- O aluno não consegue acessar deveres de outra conta.
+- Temas permanecem disponíveis após recarregar ou trocar de dispositivo.
+- O aluno não consegue acessar temas de outra conta.

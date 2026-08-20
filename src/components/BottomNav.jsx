@@ -5,7 +5,7 @@ export default function BottomNav({ activeView, onHome, onHomework, onSchedule, 
     <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 safe-area-inset-bottom">
       <div className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto flex">
         <NavTab active={activeView === 'home'}        onClick={onHome}        icon="🏠" label="Início" />
-        <NavTab active={activeView === 'homework'}    onClick={onHomework}    icon="✏️" label="Deveres" />
+        <NavTab active={activeView === 'homework'}    onClick={onHomework}    icon="✏️" label="Temas" />
         <NavTab active={activeView === 'schedule'}    onClick={onSchedule}    icon="📋" label="Horário" />
         <NavTab
           active={activeView === 'calendar'}

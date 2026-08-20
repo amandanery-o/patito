@@ -48,9 +48,9 @@ Status: proposto, aguardando aprovação de priorização.
 - `TASK-027` Criar importador validado de PDF para eventos oficiais.
 - `TASK-028` Testar alertas, fuso horário e duplicidades.
 
-## F006 — Dever de casa
+## F006 — Temas
 
-- `TASK-029` ✅ Criar tabela, RLS e cliente de deveres.
+- `TASK-029` ✅ Criar tabela, RLS e cliente de temas.
 - `TASK-030` ✅ Implementar lista e formulário mobile-first.
 - `TASK-031` ✅ Implementar edição, exclusão e conclusão.
 - `TASK-032` Cobrir CRUD, isolamento e persistência com testes.
