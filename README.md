@@ -4,7 +4,7 @@ App educacional gamificado para alunos do **4º ano do Ensino Fundamental**, ins
 
 ## Funcionalidades
 
-- 9 áreas de estudo, incluindo Português, Matemática, Ciências e olimpíadas
+- 7 matérias escolares com estrutura pronta para o conteúdo do segundo semestre
 - 6 tipos de exercício: múltipla escolha, verdadeiro/falso, lacunas, flashcards, ordenação e associação
 - XP, níveis, sequência diária e progresso por tópico
 - Calendário de avaliações e horário semanal

@@ -1,9 +1,8 @@
 import { useEffect, useMemo, useState } from 'react'
-import { SEMESTER_EXAMS, SEED_VERSION } from '../data/semesterExams'
 import { parseLocalDate } from '../utils/dates'
 
 const STORAGE_KEY = 'patito_data'
-const STORAGE_VERSION = 2
+const STORAGE_VERSION = 3
 
 function freshState(base = {}, profile = null) {
   return {
@@ -20,8 +19,7 @@ function freshState(base = {}, profile = null) {
       ...(base.user || {}),
     },
     progress: base.progress || {},
-    exams: base.exams || SEMESTER_EXAMS,
-    seedVersion: SEED_VERSION,
+    exams: base.exams || [],
     storageVersion: STORAGE_VERSION,
   }
 }
@@ -35,15 +33,15 @@ function loadData(storageKey, profile) {
       if (!localStorage.getItem(storageKey)) saveData(storageKey, parsed)
       // Versão de storage mudou: reseta exams mas preserva progresso e XP
       if ((parsed.storageVersion || 0) < STORAGE_VERSION) {
-        const data = freshState(parsed, profile)
-        saveData(storageKey, data)
-        return data
-      }
-      // Seed atualizado: substitui só as provas do seed, mantém as do usuário
-      if ((parsed.seedVersion || 0) < SEED_VERSION) {
-        const seedIds = new Set(SEMESTER_EXAMS.map(e => e.id))
-        const userExams = (parsed.exams || []).filter(e => !seedIds.has(e.id))
-        const data = { ...parsed, exams: [...SEMESTER_EXAMS, ...userExams], seedVersion: SEED_VERSION }
+        const data = freshState({
+          user: {
+            name: profile?.name || parsed.user?.name || 'Estudante',
+            avatar: profile?.avatar || parsed.user?.avatar || '🦁',
+            xp: 0,
+            streak: { current: 0, lastStudyDate: null, best: 0 },
+            trophies: [],
+          },
+        }, profile)
         saveData(storageKey, data)
         return data
       }

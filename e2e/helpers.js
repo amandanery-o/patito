@@ -11,8 +11,7 @@ export async function seedUser(page, overrides = {}) {
       },
       progress: {},
       exams: [],
-      seedVersion: 999,
-      storageVersion: 2,
+      storageVersion: 3,
       ...seed,
     }))
   }, overrides)

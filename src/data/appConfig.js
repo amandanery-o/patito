@@ -1,24 +1,13 @@
-import { portugues } from './portugues'
-import { matematica } from './matematica'
-import { geografia } from './geografia'
-import { historia } from './historia'
-import { ciencias } from './ciencias'
-import { ensinoReligioso } from './ensino-religioso'
-import { ingles } from './ingles'
-import { obict } from './obict'
-import { obli } from './obli'
 import { daysUntil } from '../utils/dates'
 
 export const SUBJECTS = [
-  { id: 'portugues', name: 'Português', icon: '📝', color: 'bg-blue-500', topics: portugues.topics, calendarOnly: false, lastUpdated: '2026-06-17' },
-  { id: 'matematica', name: 'Matemática', icon: '🔢', color: 'bg-green-500', topics: matematica.topics, calendarOnly: false, lastUpdated: '2026-06-17' },
-  { id: 'obict', name: 'Olimpíada Brasileira de Inovação, Ciência e Tecnologia (OBICT)', icon: '🚀', color: 'bg-violet-600', topics: obict.topics, calendarOnly: false, lastUpdated: null },
-  { id: 'geografia', name: 'Geografia', icon: '🌍', color: 'bg-orange-500', topics: geografia.topics, calendarOnly: false, lastUpdated: null },
-  { id: 'ingles', name: 'Inglês', icon: '🇬🇧', color: 'bg-purple-500', topics: ingles.topics, calendarOnly: false, lastUpdated: null },
-  { id: 'obli', name: 'Olimpíada de Língua Inglesa (OBLI)', icon: '🏅', color: 'bg-blue-600', topics: obli.topics, calendarOnly: false, lastUpdated: null },
-  { id: 'ciencias', name: 'Ciências', icon: '🔬', color: 'bg-cyan-500', topics: ciencias.topics, calendarOnly: false, lastUpdated: '2026-06-17' },
-  { id: 'historia', name: 'História', icon: '📜', color: 'bg-amber-700', topics: historia.topics, calendarOnly: false, lastUpdated: null },
-  { id: 'ensino-religioso', name: 'Ens. Religioso', icon: '✨', color: 'bg-yellow-500', topics: ensinoReligioso.topics, calendarOnly: false, lastUpdated: null },
+  { id: 'portugues', name: 'Português', icon: '📝', color: 'bg-blue-500', topics: [], calendarOnly: false, lastUpdated: null },
+  { id: 'matematica', name: 'Matemática', icon: '🔢', color: 'bg-green-500', topics: [], calendarOnly: false, lastUpdated: null },
+  { id: 'geografia', name: 'Geografia', icon: '🌍', color: 'bg-orange-500', topics: [], calendarOnly: false, lastUpdated: null },
+  { id: 'ingles', name: 'Inglês', icon: '🇬🇧', color: 'bg-purple-500', topics: [], calendarOnly: false, lastUpdated: null },
+  { id: 'ciencias', name: 'Ciências', icon: '🔬', color: 'bg-cyan-500', topics: [], calendarOnly: false, lastUpdated: null },
+  { id: 'historia', name: 'História', icon: '📜', color: 'bg-amber-700', topics: [], calendarOnly: false, lastUpdated: null },
+  { id: 'ensino-religioso', name: 'Ens. Religioso', icon: '✨', color: 'bg-yellow-500', topics: [], calendarOnly: false, lastUpdated: null },
   { id: 'educacao-fisica', name: 'Educ. Física', icon: '⚽', color: 'bg-red-500', topics: [], calendarOnly: true, lastUpdated: null },
   { id: 'arte', name: 'Arte', icon: '🎨', color: 'bg-pink-500', topics: [], calendarOnly: true, lastUpdated: null },
 ]
