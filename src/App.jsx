@@ -17,7 +17,7 @@ import { useStudySession } from './hooks/useStudySession'
 import { useHomework } from './hooks/useHomework'
 import { upcomingSchoolEvents, useSchoolEvents } from './hooks/useSchoolEvents'
 import { useReports } from './hooks/useReports'
-import { shuffle } from './utils/shuffle'
+import { selectStudyQuestions, studyModeForSubject } from './utils/questionSelection'
 import { daysUntil, formatDate, parseLocalDate } from './utils/dates'
 import { SCHEDULE, SUBJECT_COLORS, DAY_NAMES } from './data/schedule'
 import {
@@ -119,7 +119,8 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
   async function startSession(subject, topic) {
     setSelectedSubject(subject)
     setSelectedTopic(topic)
-    const selectedQuestions = shuffle(topic.questions).slice(0, 30)
+    const mode = studyModeForSubject(exams, subject.id)
+    const selectedQuestions = selectStudyQuestions(topic.questions, { limit: 30, mode })
 
     if (session?.user?.id) {
       try {

@@ -2,7 +2,7 @@
 
 ## Requisitos
 
-`REQ-015`, `REQ-016`, `REQ-023`–`REQ-030`, `REQ-052`–`REQ-054`
+`REQ-015`, `REQ-016`, `REQ-023`–`REQ-030`, `REQ-052`–`REQ-054`, `REQ-071`–`REQ-073`
 
 ## Resultado
 
@@ -15,6 +15,9 @@ O aluno realiza sessões objetivas de aproximadamente 30 questões, pode sair e 
 - Não existem vidas, limite de tentativas ou adaptação de dificuldade.
 - A revisão final contém as questões erradas da sessão.
 - Flashcards e formatos fora do escopo não aparecem no conteúdo ativo.
+- Cada sessão seleciona cerca de 30 questões sem repetição de um banco editorial com pelo menos 60.
+- No reforço contínuo, questões ainda não vistas têm prioridade; erros anteriores voltam de forma controlada.
+- Nos sete dias anteriores a uma prova, a matéria relacionada entra em modo de revisão de prova e prioriza erros anteriores.
 
 ## Critérios de aceite
 

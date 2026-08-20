@@ -78,3 +78,7 @@ Status: proposto, aguardando aprovação de priorização.
 - `TASK-045` Implementar adaptadores quando as configurações forem entregues.
 - `TASK-046` Registrar origem, versão e validação dos lotes.
 - `TASK-047` Integrar importação do calendário em PDF.
+- `TASK-048` ✅ Definir schema versionado de conteúdo e questões geradas por IA.
+- `TASK-049` ✅ Validar banco mínimo de 60 questões, formatos, IDs e referências de origem.
+- `TASK-050` Implementar gerador de rascunhos com IA quando o provedor e o modelo forem configurados.
+- `TASK-051` Implementar etapa explícita de revisão e aprovação antes da publicação.

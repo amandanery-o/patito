@@ -60,6 +60,10 @@ Não existirão perfis de responsável, professor, coordenador ou administrador 
 - `REQ-064` Iniciar a nova versão sem migrar progresso, XP, streak, estrelas, sessões ou calendário do primeiro semestre.
 - `REQ-065` Manter a estrutura de matérias pronta para receber gradualmente os novos resumos e exercícios.
 - `REQ-066` Remover OBICT, OBLI e toda experiência relacionada a olimpíadas do produto.
+- `REQ-067` Manter um banco editorial de no mínimo 60 questões por conteúdo aprovado.
+- `REQ-068` Gerar resumos e questões com IA somente a partir do material autorizado e com referência explícita à origem.
+- `REQ-069` Submeter todo conteúdo gerado por IA à validação automática e aprovação editorial antes da publicação.
+- `REQ-070` Registrar provedor, recurso, versão da fonte, modelo e versão do prompt de cada lote gerado.
 
 ### Sessões de estudo
 
@@ -74,6 +78,9 @@ Não existirão perfis de responsável, professor, coordenador ou administrador 
 - `REQ-054` Apresentar a revisão das respostas incorretas ao final da própria sessão.
 - `REQ-029` Não adaptar automaticamente a dificuldade ao desempenho.
 - `REQ-030` Remover flashcards nesta versão.
+- `REQ-071` Selecionar aproximadamente 30 questões sem repetição a partir do banco de pelo menos 60.
+- `REQ-072` Oferecer reforço contínuo durante o semestre, priorizando questões ainda não vistas e erros anteriores.
+- `REQ-073` Na semana de uma prova, destacar e priorizar a revisão do conteúdo e da matéria relacionados.
 
 ### Progresso e incentivo
 

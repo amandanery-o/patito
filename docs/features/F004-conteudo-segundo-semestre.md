@@ -2,7 +2,7 @@
 
 ## Requisitos
 
-`REQ-014`–`REQ-022`, `REQ-045`–`REQ-048`, `REQ-057`
+`REQ-014`–`REQ-022`, `REQ-045`–`REQ-048`, `REQ-057`, `REQ-067`–`REQ-070`
 
 ## Resultado
 
@@ -15,6 +15,8 @@ Cada matéria apresenta conteúdos atuais do segundo semestre com resumo textual
 - Cada unidade liga matéria, livro, conteúdo, resumo textual e questões.
 - O conteúdo publicado é igual para todos os alunos.
 - Apenas a mantenedora publica ou versiona conteúdo.
+- Conteúdo aprovado possui no mínimo 60 questões, com alvo editorial de 45 múltipla escolha e 15 associações.
+- Resumo, questões e explicações podem ser gerados por IA, mas precisam permanecer fundamentados e rastreáveis ao livro.
 
 ## Critérios de aceite
 
@@ -23,6 +25,7 @@ Cada matéria apresenta conteúdos atuais do segundo semestre com resumo textual
 - Nenhuma tela ativa mistura conteúdo do primeiro e segundo semestre.
 - A ausência temporária de conteúdo usa um estado vazio claro, sem restaurar dados antigos.
 - Questões inválidas são rejeitadas antes da publicação.
+- Nenhum lote gerado por IA chega ao aluno sem aprovação editorial.
 
 ## Dependência externa
 

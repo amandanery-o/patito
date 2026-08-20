@@ -6,7 +6,7 @@
 
 ## Resultado
 
-A mantenedora transforma fontes autorizadas em conteúdo e calendário validados sem expor credenciais no sistema web.
+A mantenedora transforma fontes autorizadas em conteúdo e calendário validados, usando IA como assistente editorial sem expor credenciais no sistema web.
 
 ## Fontes previstas
 
@@ -20,6 +20,10 @@ A mantenedora transforma fontes autorizadas em conteúdo e calendário validados
 - Importação e publicação são processos editoriais fora da interface do aluno.
 - Todo conteúdo passa por validação estrutural antes de ser publicado.
 - A origem e a versão de cada lote são registradas.
+- A IA produz rascunhos estruturados de resumo, questões, respostas, explicações e referências ao trecho de origem.
+- A IA nunca publica diretamente; validação automática e aprovação editorial são obrigatórias.
+- Um conteúdo aprovado contém ao menos 60 questões e cada sessão consome aproximadamente 30.
+- Dados ou respostas dos alunos nunca são enviados ao modelo de geração.
 
 ## Critérios de aceite
 
@@ -27,6 +31,7 @@ A mantenedora transforma fontes autorizadas em conteúdo e calendário validados
 - Cada conteúdo publicado mantém origem, data e versão.
 - Nenhuma credencial aparece no bundle, logs públicos ou repositório.
 - O pipeline pode ser repetido sem duplicar eventos ou conteúdos.
+- Cada questão mantém referência à seção de origem, modelo usado e versão do prompt.
 
 ## Dependências externas
 
