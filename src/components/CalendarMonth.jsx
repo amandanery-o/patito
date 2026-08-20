@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import ConfirmModal from './ConfirmModal'
 
 const WEEKDAYS = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']
 const MONTHS = [
@@ -7,12 +6,11 @@ const MONTHS = [
   'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro',
 ]
 
-export default function CalendarMonth({ exams, subjects, examTypes, onEdit, onRemove }) {
+export default function CalendarMonth({ exams, subjects, examTypes }) {
   const today = new Date()
   const [year, setYear] = useState(today.getFullYear())
   const [month, setMonth] = useState(today.getMonth())
   const [selectedDay, setSelectedDay] = useState(null)
-  const [confirmingId, setConfirmingId] = useState(null)
 
   function prevMonth() {
     if (month === 0) { setMonth(11); setYear(y => y - 1) }
@@ -32,13 +30,6 @@ export default function CalendarMonth({ exams, subjects, examTypes, onEdit, onRe
 
   function isToday(day) {
     return day === today.getDate() && month === today.getMonth() && year === today.getFullYear()
-  }
-
-  function confirmRemove() {
-    onRemove(confirmingId)
-    setConfirmingId(null)
-    // Fecha o detalhe do dia se era o último item
-    if (selectedExams.length <= 1) setSelectedDay(null)
   }
 
   // Mapeia exames por dia (YYYY-MM-DD)
@@ -196,18 +187,6 @@ export default function CalendarMonth({ exams, subjects, examTypes, onEdit, onRe
                     {exam.content && <p className="text-xs text-gray-500 mt-0.5">{exam.content}</p>}
                     {exam.notes && <p className="text-xs text-gray-400 mt-0.5">📌 {exam.notes}</p>}
                   </div>
-                  <div className="flex gap-2 shrink-0">
-                    <button
-                      onClick={() => onEdit(exam)}
-                      className="text-gray-300 hover:text-blue-400 transition-colors"
-                      aria-label="Editar"
-                    >✏️</button>
-                    <button
-                      onClick={() => setConfirmingId(exam.id)}
-                      className="text-gray-300 hover:text-red-400 transition-colors text-lg"
-                      aria-label="Remover"
-                    >✕</button>
-                  </div>
                 </div>
               )
             })
@@ -215,13 +194,6 @@ export default function CalendarMonth({ exams, subjects, examTypes, onEdit, onRe
         </div>
       )}
 
-      {confirmingId && (
-        <ConfirmModal
-          message="Remover esta atividade do calendário?"
-          onConfirm={confirmRemove}
-          onCancel={() => setConfirmingId(null)}
-        />
-      )}
     </div>
   )
 }

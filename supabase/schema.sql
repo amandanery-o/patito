@@ -152,6 +152,32 @@ create table if not exists public.usage_events (
 create index if not exists usage_events_user_date_type
   on public.usage_events(user_id, study_date, event_type);
 
+create table if not exists public.school_events (
+  id uuid primary key default gen_random_uuid(),
+  external_id text not null unique,
+  subject_id text not null,
+  type text not null check (type in ('trabalho', 'prova', 'recuperacao', 'evento')),
+  date date not null,
+  end_date date,
+  time time,
+  weight numeric(4,2),
+  content text check (content is null or char_length(content) <= 1000),
+  notes text check (notes is null or char_length(notes) <= 500),
+  source_file text not null,
+  source_version text not null,
+  published_at timestamptz not null default now(),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  check (end_date is null or end_date >= date)
+);
+create index if not exists school_events_date on public.school_events(date);
+
+alter table public.school_events enable row level security;
+drop policy if exists authenticated_read_school_events on public.school_events;
+create policy authenticated_read_school_events on public.school_events for select to authenticated using (true);
+revoke insert, update, delete on public.school_events from authenticated;
+grant select on public.school_events to authenticated;
+
 -- Todas as tabelas pessoais são isoladas pelo usuário autenticado.
 alter table public.study_sessions enable row level security;
 alter table public.session_answers enable row level security;

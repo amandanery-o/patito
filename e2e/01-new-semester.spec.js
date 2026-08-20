@@ -28,8 +28,10 @@ test.describe('Estrutura limpa do segundo semestre', () => {
 
   test('inicia o calendário oficial vazio', async ({ page }) => {
     await page.getByRole('button', { name: /Provas/i }).last().click()
+    await expect(page.getByText('Oficial')).toBeVisible()
+    await expect(page.getByRole('button', { name: /Adicionar atividade/i })).toHaveCount(0)
     await page.getByRole('button', { name: 'Lista' }).click()
-    await expect(page.getByText(/Nenhuma atividade cadastrada/i)).toBeVisible()
+    await expect(page.getByText(/Nenhuma data oficial publicada/i)).toBeVisible()
   })
 
   test('abre o cadastro mobile de dever de casa', async ({ page }) => {

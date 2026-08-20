@@ -8,19 +8,19 @@ import ExerciseCard from './components/ExerciseCard'
 import ResultScreen from './components/ResultScreen'
 import CalendarIcon from './components/CalendarIcon'
 import Mascot from './components/Mascot'
-import ConfirmModal from './components/ConfirmModal'
 import BottomNav from './components/BottomNav'
 import TopicTrail from './components/TopicTrail'
 import HomeworkView from './components/HomeworkView'
 import { useProgress } from './hooks/useProgress'
 import { useStudySession } from './hooks/useStudySession'
 import { useHomework } from './hooks/useHomework'
+import { upcomingSchoolEvents, useSchoolEvents } from './hooks/useSchoolEvents'
 import { useReports } from './hooks/useReports'
 import { shuffle } from './utils/shuffle'
 import { daysUntil, formatDate, parseLocalDate } from './utils/dates'
 import { SCHEDULE, SUBJECT_COLORS, DAY_NAMES } from './data/schedule'
 import {
-  EMPTY_EXAM_FORM, EXAM_TYPES, STUDY_SUBJECTS, SUBJECTS, VIEWS,
+  EXAM_TYPES, STUDY_SUBJECTS, SUBJECTS, VIEWS,
   examAlertText, getMascotState,
 } from './data/appConfig'
 
@@ -89,18 +89,17 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
   const [questionIndex, setQuestionIndex]   = useState(0)
   const [correct, setCorrect]               = useState(0)
   const [incorrectQuestions, setIncorrectQuestions] = useState([])
-  const [examForm, setExamForm]             = useState(EMPTY_EXAM_FORM)
-  const [editingExamId, setEditingExamId]   = useState(null)
   const [calendarView, setCalendarView]     = useState('month')
-  const [confirmExamId, setConfirmExamId]   = useState(null)
 
   const {
-    user, exams,
+    user,
     updateTopicProgress, getTopicProgress, getSubjectProgress,
-    addExam, updateExam, removeExam, getUpcomingExams, setUserName,
+    setUserName,
   } = useProgress({ userId: session?.user?.id, profile })
 
-  const upcomingExams = getUpcomingExams(7)
+  const schoolEvents = useSchoolEvents(Boolean(session?.user?.id))
+  const exams = schoolEvents.events
+  const upcomingExams = upcomingSchoolEvents(exams, 7)
 
   const { reports, addReport, clearReports } = useReports(session?.user?.id)
   const [showReports, setShowReports] = useState(false)
@@ -183,48 +182,6 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
       await completeStudySession()
     }
     setView(destination)
-  }
-
-  // -------------------------------------------------------------------------
-  // Handlers de exames
-  // -------------------------------------------------------------------------
-
-  function handleAddExam(e) {
-    e.preventDefault()
-    if (!examForm.date) return
-    if (editingExamId) {
-      updateExam(editingExamId, examForm)
-      setEditingExamId(null)
-    } else {
-      addExam(examForm)
-    }
-    setExamForm(EMPTY_EXAM_FORM)
-    setView(VIEWS.CALENDAR)
-  }
-
-  function startEditExam(exam) {
-    setExamForm({
-      subject: exam.subject,
-      type:    exam.type    || 'prova',
-      weight:  exam.weight  || '',
-      date:    exam.date,
-      time:    exam.time    || '',
-      content: exam.content || '',
-      notes:   exam.notes   || '',
-    })
-    setEditingExamId(exam.id)
-    setView(VIEWS.ADD_EXAM)
-  }
-
-  function openAddExam() {
-    setEditingExamId(null)
-    setExamForm(EMPTY_EXAM_FORM)
-    setView(VIEWS.ADD_EXAM)
-  }
-
-  function cancelAddExam() {
-    setEditingExamId(null)
-    setView(VIEWS.CALENDAR)
   }
 
   // -------------------------------------------------------------------------
@@ -564,14 +521,8 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
           <div className="px-4 py-3 flex items-center gap-3">
             <button onClick={() => setView(VIEWS.HOME)} className="text-2xl" aria-label="Voltar">‹</button>
             <CalendarIcon size="sm" />
-            <h1 className="font-bold text-gray-800 text-lg flex-1">Provas</h1>
-            <button
-              onClick={openAddExam}
-              className="w-9 h-9 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-xl flex items-center justify-center text-xl active:scale-95 transition-all"
-              aria-label="Adicionar atividade"
-            >
-              +
-            </button>
+            <h1 className="font-bold text-gray-800 text-lg flex-1">Calendário escolar</h1>
+            <span className="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full">Oficial</span>
           </div>
 
           {/* Toggle Mês / Lista */}
@@ -600,19 +551,20 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
               exams={exams}
               subjects={SUBJECTS}
               examTypes={EXAM_TYPES}
-              onEdit={startEditExam}
-              onRemove={removeExam}
             /></ViewLoader>
           )}
 
           {/* Visão de lista */}
           {calendarView === 'list' && (
             <div>
-              <h2 className="font-bold text-gray-700 mb-3">Suas Atividades</h2>
-              {exams.length === 0 ? (
+              <h2 className="font-bold text-gray-700 mb-3">Datas da turma</h2>
+              {schoolEvents.error && <p className="bg-red-50 text-red-700 rounded-xl p-3 text-sm font-bold mb-3">{schoolEvents.error}</p>}
+              {schoolEvents.loading ? (
+                <p className="text-center py-10 text-gray-400 font-semibold">Carregando calendário…</p>
+              ) : exams.length === 0 ? (
                 <div className="text-center py-10 space-y-2 flex flex-col items-center">
                   <Mascot mood="neutro" size="md" />
-                  <p className="text-gray-400 text-sm">Nenhuma atividade cadastrada ainda!</p>
+                  <p className="text-gray-400 text-sm">Nenhuma data oficial publicada ainda.</p>
                 </div>
               ) : (
                 <div className="space-y-2">
@@ -655,20 +607,6 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
                             {exam.content && <p className="text-xs text-gray-500 mt-0.5">{exam.content}</p>}
                             {exam.notes && <p className="text-xs text-gray-400 mt-0.5">📌 {exam.notes}</p>}
                           </div>
-
-                          {/* Ações */}
-                          <div className="flex gap-2 shrink-0 items-start">
-                            <button
-                              onClick={() => startEditExam(exam)}
-                              className="text-gray-300 hover:text-blue-400 text-lg transition-colors"
-                              aria-label="Editar"
-                            >✏️</button>
-                            <button
-                              onClick={() => setConfirmExamId(exam.id)}
-                              className="text-gray-300 hover:text-red-400 text-xl transition-colors"
-                              aria-label="Remover"
-                            >✕</button>
-                          </div>
                         </div>
                       )
                     })}
@@ -677,15 +615,6 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
             </div>
           )}
         </main>
-
-        {/* Confirmação de remoção (lista) */}
-        {confirmExamId && (
-          <ConfirmModal
-            message="Remover esta atividade do calendário?"
-            onConfirm={() => { removeExam(confirmExamId); setConfirmExamId(null) }}
-            onCancel={() => setConfirmExamId(null)}
-          />
-        )}
 
         <BottomNav
           activeView="calendar"
@@ -724,105 +653,6 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
           onCalendar={() => setView(VIEWS.CALENDAR)}
           onLeaderboard={() => setView(VIEWS.LEADERBOARD)}
         />
-      </div>
-    )
-  }
-
-  // -------------------------------------------------------------------------
-  // VIEW: ADD_EXAM — adicionar / editar atividade
-  // -------------------------------------------------------------------------
-
-  if (view === VIEWS.ADD_EXAM) {
-    return (
-      <div className="min-h-screen bg-gray-50">
-        <div className="bg-white shadow-sm px-4 py-3 flex items-center gap-3 sticky top-0 z-10">
-          <button onClick={cancelAddExam} className="text-2xl" aria-label="Voltar">‹</button>
-          <h1 className="font-bold text-gray-800 text-lg">
-            {editingExamId ? 'Editar Atividade' : 'Nova Atividade'}
-          </h1>
-        </div>
-
-        <main className="max-w-lg sm:max-w-xl md:max-w-2xl mx-auto px-4 sm:px-6 py-5">
-          <form onSubmit={handleAddExam} className="space-y-4">
-            <div>
-              <label className="text-sm text-gray-500 block mb-1">Matéria</label>
-              <select
-                value={examForm.subject}
-                onChange={e => setExamForm(f => ({ ...f, subject: e.target.value }))}
-                className="w-full border border-gray-200 rounded-xl p-3 text-base bg-white"
-              >
-                {SUBJECTS.map(s => (
-                  <option key={s.id} value={s.id}>{s.icon} {s.name}</option>
-                ))}
-              </select>
-            </div>
-
-            <div className="grid grid-cols-2 gap-3">
-              <div>
-                <label className="text-sm text-gray-500 block mb-1">Tipo</label>
-                <select
-                  value={examForm.type}
-                  onChange={e => setExamForm(f => ({ ...f, type: e.target.value }))}
-                  className="w-full border border-gray-200 rounded-xl p-3 text-base bg-white"
-                >
-                  {EXAM_TYPES.map(t => (
-                    <option key={t.id} value={t.id}>{t.label}</option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <label className="text-sm text-gray-500 block mb-1">Peso</label>
-                <input
-                  type="number"
-                  step="0.5"
-                  min="0"
-                  max="10"
-                  placeholder="Ex: 2"
-                  value={examForm.weight}
-                  onChange={e => setExamForm(f => ({ ...f, weight: e.target.value }))}
-                  className="w-full border border-gray-200 rounded-xl p-3 text-base"
-                />
-              </div>
-            </div>
-
-            <div>
-              <label className="text-sm text-gray-500 block mb-1">Data</label>
-              <input
-                type="date"
-                required
-                value={examForm.date}
-                onChange={e => setExamForm(f => ({ ...f, date: e.target.value }))}
-                className="w-full border border-gray-200 rounded-xl p-3 text-base"
-              />
-            </div>
-
-            <div>
-              <label className="text-sm text-gray-500 block mb-1">O que vai cair (opcional)</label>
-              <textarea
-                placeholder="Ex: Frações, medidas de comprimento, capítulos 4 e 5"
-                value={examForm.content}
-                onChange={e => setExamForm(f => ({ ...f, content: e.target.value }))}
-                rows={3}
-                className="w-full border border-gray-200 rounded-xl p-3 text-base resize-none"
-              />
-            </div>
-
-            <div>
-              <label className="text-sm text-gray-500 block mb-1">Observações (opcional)</label>
-              <input
-                type="text"
-                placeholder="Ex: Trazer régua e compasso"
-                value={examForm.notes}
-                onChange={e => setExamForm(f => ({ ...f, notes: e.target.value }))}
-                className="w-full border border-gray-200 rounded-xl p-3 text-base"
-              />
-            </div>
-
-            <button type="submit" className="w-full btn-duo-blue">
-              {editingExamId ? 'Salvar alterações ✏️' : 'Adicionar'}
-            </button>
-          </form>
-        </main>
       </div>
     )
   }

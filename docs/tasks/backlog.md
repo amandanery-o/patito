@@ -43,7 +43,7 @@ Status: proposto, aguardando aprovação de priorização.
 
 ## F005 — Calendário
 
-- `TASK-025` Remover edição de eventos oficiais da interface do aluno.
+- `TASK-025` ✅ Remover edição de eventos oficiais da interface do aluno.
 - `TASK-026` Atualizar seed/eventos para o segundo semestre.
 - `TASK-027` Criar importador validado de PDF para eventos oficiais.
 - `TASK-028` Testar alertas, fuso horário e duplicidades.
