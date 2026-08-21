@@ -23,7 +23,9 @@ async function answerCurrentQuestion(page) {
   } else {
     await exerciseGrid.locator('button:not([disabled])').first().click()
   }
-  await page.getByRole('button', { name: 'Continuar', exact: true }).evaluate((button) => button.click())
+  const continueButton = page.getByRole('button', { name: 'Continuar', exact: true })
+  await expect(continueButton).toBeEnabled()
+  await continueButton.dispatchEvent('click')
   if (currentQuestion < 30)
     await expect(page.getByText(`${currentQuestion + 1}/30 questões`, { exact: true })).toBeVisible()
   else await expect(page.getByText('Revisão concluída! 🎉')).toBeVisible()

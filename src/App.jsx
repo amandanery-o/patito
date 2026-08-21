@@ -519,6 +519,7 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
         </div>
         <main className="max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto px-4 sm:px-8 md:px-10 py-5 sm:py-8 pb-40">
           <ExerciseCard
+            key={question.id}
             question={question}
             current={questionIndex + 1}
             total={sessionQuestions.length}

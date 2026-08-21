@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useRef } from 'react'
 import MultipleChoice from './MultipleChoice'
 import MatchColumns from './MatchColumns'
 import ProgressBar from './ProgressBar'
@@ -8,18 +8,22 @@ export default function ExerciseCard({ question, current, total, onAnswer, onRep
   const [feedback, setFeedback] = useState(null) // { correct, explanation }
   const [saving, setSaving] = useState(false)
   const [saveError, setSaveError] = useState('')
+  const continuingRef = useRef(false)
 
   const handleSelect = useCallback((isCorrect, explanation = '', answer = {}) => {
     setFeedback({ correct: isCorrect, explanation, answer })
   }, [])
 
   async function handleContinue() {
+    if (continuingRef.current) return
+    continuingRef.current = true
     setSaving(true)
     setSaveError('')
     try {
       await onAnswer({ isCorrect: feedback.correct, answer: feedback.answer })
       setFeedback(null)
     } catch {
+      continuingRef.current = false
       setSaveError('Não conseguimos salvar. Confira a internet e tente novamente.')
     } finally {
       setSaving(false)
