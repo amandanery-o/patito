@@ -37,6 +37,14 @@ npm run editorial:generate:geografia-p1
 npm run editorial:approve:geografia-p1
 ```
 
+Para criar o rascunho da P2 de Geografia (capítulos 11 e 12):
+
+```bash
+npm run editorial:generate:geografia-p2
+```
+
+O mesmo gerador escolhe a configuração editorial pelo nome do conteúdo, mantendo IDs, fontes, focos e checkpoints separados entre P1 e P2.
+
 Não cole a chave em arquivos do projeto, no chat, em issues ou em commits.
 
 Por padrão, o resultado é criado em `editorial/drafts/geografia-p1.json`. O script não sobrescreve um rascunho existente: para gerar novamente, mova o arquivo anterior para um local seguro ou informe outro caminho como argumento.

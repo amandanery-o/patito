@@ -59,6 +59,11 @@ export function validateEditorialContent(content) {
     content.questions.forEach((question, index) => validateQuestion(question, index, errors))
     const ids = content.questions.map((question) => question.id)
     if (new Set(ids).size !== ids.length) errors.push('IDs de questões devem ser únicos')
+    const normalizedQuestions = content.questions
+      .filter((question) => question.type === 'multipleChoice')
+      .map((question) => question.question.trim().toLocaleLowerCase('pt-BR'))
+    if (new Set(normalizedQuestions).size !== normalizedQuestions.length)
+      errors.push('Enunciados de questões devem ser únicos')
     if (content.status === 'approved' && content.questions.length < 60)
       errors.push('conteúdo aprovado deve ter ao menos 60 questões')
     const associationCount = content.questions.filter((question) => question.type === 'matchColumns').length

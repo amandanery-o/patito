@@ -10,8 +10,16 @@ import {
 
 function questions(multipleChoice, matchColumns) {
   return [
-    ...Array.from({ length: multipleChoice }, () => ({ type: 'multipleChoice', difficulty: 'intermediate' })),
-    ...Array.from({ length: matchColumns }, () => ({ type: 'matchColumns', difficulty: 'intermediate' })),
+    ...Array.from({ length: multipleChoice }, (_, index) => ({
+      type: 'multipleChoice',
+      difficulty: 'intermediate',
+      question: `Múltipla escolha ${index + 1}`,
+    })),
+    ...Array.from({ length: matchColumns }, (_, index) => ({
+      type: 'matchColumns',
+      difficulty: 'intermediate',
+      question: `Associação ${index + 1}`,
+    })),
   ]
 }
 
@@ -21,6 +29,10 @@ describe('gerador editorial', () => {
     const serialized = JSON.stringify(brief)
     expect(brief.map((item) => item.chapter)).toEqual([7, 8])
     expect(serialized).not.toMatch(/user|email|resposta do aluno/i)
+  })
+
+  it('seleciona somente os capítulos solicitados para outro lote', () => {
+    expect(buildSourceBrief(undefined, [11, 12]).map((item) => item.chapter)).toEqual([11, 12])
   })
 
   it('valida quantidade e distribuição de formatos', () => {
@@ -86,6 +98,26 @@ describe('gerador editorial', () => {
     const draft = assembleDraft({ questions: questions(1, 1), model: 'modelo-configurado' })
     expect(draft.status).toBe('draft')
     expect(draft.questions.map((question) => question.id)).toEqual(['geo-p1-001', 'geo-p1-002'])
+  })
+
+  it('distribui a posição das respostas ao montar o rascunho', () => {
+    const input = Array.from({ length: 8 }, () => ({
+      type: 'multipleChoice',
+      difficulty: 'easy',
+      question: 'Questão',
+      options: ['Errada 1', 'Certa', 'Errada 2', 'Errada 3'],
+      correctIndex: 1,
+    }))
+    const draft = assembleDraft({ questions: input, model: 'modelo-configurado' })
+    expect(draft.questions.map((question) => question.correctIndex)).toEqual([1, 0, 3, 2, 1, 0, 3, 2])
+    for (const question of draft.questions) expect(question.options[question.correctIndex]).toBe('Certa')
+  })
+
+  it('rejeita enunciados repetidos dentro de um lote', () => {
+    const repeated = questions(2, 0).map((question) => ({ ...question, question: 'Mesmo enunciado' }))
+    expect(validateGeneratedQuestions(repeated, { total: 2, multipleChoice: 2, matchColumns: 0 })).toContain(
+      'o lote contém enunciados repetidos',
+    )
   })
 
   it('renderiza todas as variáveis do prompt', () => {

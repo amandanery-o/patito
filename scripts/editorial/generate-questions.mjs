@@ -3,12 +3,11 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { GEOGRAPHY_TOPICS } from '../../src/data/geografia.js'
 import { validateEditorialContent } from '../../src/editorial/contentValidator.js'
+import { GEOGRAPHY_SOURCE_TOPICS } from './geography-source-briefs.mjs'
 
 const API_URL = 'https://api.anthropic.com/v1/messages'
 const PROMPT_VERSION = 'question-batch-v2'
-const CONTENT_ID = 'geografia-p1-capitulos-7-8'
 const SCRIPT_DIRECTORY = dirname(fileURLToPath(import.meta.url))
 const SYSTEM_PROMPT_PATH = resolve(SCRIPT_DIRECTORY, 'prompts/question-author-system-v1.md')
 const BATCH_PROMPT_PATH = resolve(SCRIPT_DIRECTORY, 'prompts/question-batch-v2.md')
@@ -19,15 +18,57 @@ function requiredEnvironment(name) {
   return value
 }
 
-export function buildSourceBrief(topics = GEOGRAPHY_TOPICS) {
+const GEOGRAPHY_CONFIGS = {
+  'geografia-p1': {
+    assessmentName: 'P1',
+    subject: 'Geografia',
+    chapters: [7, 8],
+    contentId: 'geografia-p1-capitulos-7-8',
+    questionPrefix: 'geo-p1',
+    title: 'Revisão P1 — Espaços rural e urbano',
+    summary: 'Revisão dos capítulos 7 e 8: atividades econômicas dos espaços rural e urbano.',
+    resourceId: 'courseware-252/chapters-7-8',
+    contentScope:
+      'capítulo 7 — atividades econômicas do espaço rural; capítulo 8 — atividades econômicas do espaço urbano',
+    batches: [
+      ['agricultura', 'grandes e pequenos produtores', 'agricultura orgânica'],
+      ['pecuária', 'sistemas intensivo e extensivo', 'produtos da criação animal'],
+      ['extrativismo', 'sustentabilidade', 'modernização do campo', 'êxodo rural'],
+      ['indústria de base', 'bens intermediários', 'bens de consumo'],
+      ['comércio', 'atacado e varejo', 'comércio interno e externo'],
+      ['prestação de serviços', 'trabalho urbano', 'relações entre campo e cidade'],
+    ],
+  },
+  'geografia-p2': {
+    assessmentName: 'P2',
+    subject: 'Geografia',
+    chapters: [11, 12],
+    contentId: 'geografia-p2-capitulos-11-12',
+    questionPrefix: 'geo-p2',
+    title: 'Revisão P2 — População e migrações',
+    summary: 'Revisão dos capítulos 11 e 12: população brasileira e fluxos migratórios.',
+    resourceId: 'courseware-252/chapters-11-12',
+    contentScope: 'capítulo 11 — características da população brasileira; capítulo 12 — fluxos migratórios',
+    batches: [
+      ['demografia', 'indicadores demográficos', 'densidade demográfica'],
+      ['distribuição da população brasileira', 'colonização', 'transportes', 'trabalho e clima'],
+      ['setores de trabalho', 'trabalho formal e informal', 'direitos e igualdade'],
+      ['migração', 'imigração', 'emigração', 'migração interna'],
+      ['êxodo rural', 'migração sazonal', 'deslocamento pendular'],
+      ['migrações internacionais', 'causas das migrações', 'diversidade cultural'],
+    ],
+  },
+}
+
+export function buildSourceBrief(topics = GEOGRAPHY_SOURCE_TOPICS, chapters = [7, 8]) {
   return topics
-    .filter((topic) => Number.isInteger(topic.chapter))
+    .filter((topic) => typeof topic.chapter === 'number' && chapters.includes(topic.chapter))
     .map((topic) => ({
       chapter: topic.chapter,
       title: topic.title,
-      pages: topic.source.pages,
+      pages: topic.pages,
       sourceSections: topic.sourceSections,
-      sections: topic.summarySections,
+      sections: topic.sections,
       keyIdeas: topic.keyIdeas,
     }))
 }
@@ -114,6 +155,11 @@ export function validateGeneratedQuestions(questions, expected) {
     if (Math.abs(received - amount) > 2)
       errors.push(`esperadas aproximadamente ${amount} questões ${difficulty}; recebidas ${received}`)
   }
+  const normalizedTexts = questions
+    .filter((question) => question.type === 'multipleChoice')
+    .map((question) => question.question?.trim().toLocaleLowerCase('pt-BR'))
+    .filter(Boolean)
+  if (new Set(normalizedTexts).size !== normalizedTexts.length) errors.push('o lote contém enunciados repetidos')
   return errors
 }
 
@@ -174,17 +220,25 @@ export function structuredCollection(value) {
   throw new Error('Claude retornou uma coleção de questões em formato inválido')
 }
 
-async function generateBatch({ apiKey, model, batch, sourceBrief, systemPrompt, batchTemplate, existingQuestions }) {
+async function generateBatch({
+  apiKey,
+  model,
+  config,
+  batch,
+  sourceBrief,
+  systemPrompt,
+  batchTemplate,
+  existingQuestions,
+}) {
   const prompt = renderPrompt(batchTemplate, {
     BATCH_NUMBER: batch.number,
     TOTAL_BATCHES: batch.totalBatches,
-    ASSESSMENT_NAME: 'P1',
-    SUBJECT: 'Geografia',
+    ASSESSMENT_NAME: config.assessmentName,
+    SUBJECT: config.subject,
     TOTAL: batch.total,
     MULTIPLE_CHOICE: batch.multipleChoice,
     MATCH_COLUMNS: batch.matchColumns,
-    CONTENT_SCOPE:
-      'capítulo 7 — atividades econômicas do espaço rural; capítulo 8 — atividades econômicas do espaço urbano',
+    CONTENT_SCOPE: config.contentScope,
     CURRICULUM_SKILLS:
       'Nenhuma habilidade curricular adicional foi fornecida. Use apenas os objetivos e conceitos da fonte editorial.',
     EASY: batch.difficulty.easy,
@@ -234,17 +288,24 @@ async function generateBatch({ apiKey, model, batch, sourceBrief, systemPrompt, 
   return { questions, usage: payload.usage, stopReason: payload.stop_reason }
 }
 
-export function assembleDraft({ questions, model }) {
-  const numbered = questions.map((question, index) => ({
-    ...question,
-    id: `geo-p1-${String(index + 1).padStart(3, '0')}`,
-  }))
+export function assembleDraft({ questions, model, config = GEOGRAPHY_CONFIGS['geografia-p1'] }) {
+  const numbered = questions.map((question, index) => {
+    const id = `${config.questionPrefix}-${String(index + 1).padStart(3, '0')}`
+    if (question.type !== 'multipleChoice' || !Array.isArray(question.options)) return { ...question, id }
+    const rotation = index % 4
+    return {
+      ...question,
+      id,
+      options: question.options.map((_, optionIndex) => question.options[(optionIndex + rotation) % 4]),
+      correctIndex: (question.correctIndex - rotation + 4) % 4,
+    }
+  })
   return {
-    id: CONTENT_ID,
+    id: config.contentId,
     subjectId: 'geografia',
-    title: 'Revisão P1 — Espaços rural e urbano',
-    summary: 'Revisão dos capítulos 7 e 8: atividades econômicas dos espaços rural e urbano.',
-    source: { provider: 'edebe', resourceId: 'courseware-252/chapters-7-8', version: '2024' },
+    title: config.title,
+    summary: config.summary,
+    source: { provider: 'edebe', resourceId: config.resourceId, version: '2024' },
     generation: { model, promptVersion: PROMPT_VERSION, generatedAt: new Date().toISOString() },
     status: 'draft',
     questions: numbered,
@@ -254,75 +315,35 @@ export function assembleDraft({ questions, model }) {
 async function main() {
   const apiKey = requiredEnvironment('ANTHROPIC_API_KEY')
   const model = requiredEnvironment('ANTHROPIC_MODEL')
-  const output = resolve(process.argv[2] || 'editorial/drafts/geografia-p1.json')
-  const sourceBrief = buildSourceBrief()
+  const configurationName = process.argv[2] || 'geografia-p1'
+  const config = GEOGRAPHY_CONFIGS[configurationName]
+  if (!config)
+    throw new Error(
+      `Configuração desconhecida: ${configurationName}. Opções: ${Object.keys(GEOGRAPHY_CONFIGS).join(', ')}`,
+    )
+  const output = resolve(process.argv[3] || `editorial/drafts/${configurationName}.json`)
+  const sourceBrief = buildSourceBrief(GEOGRAPHY_SOURCE_TOPICS, config.chapters)
   const [systemPrompt, batchTemplate] = await Promise.all([
     readFile(SYSTEM_PROMPT_PATH, 'utf8'),
     readFile(BATCH_PROMPT_PATH, 'utf8'),
   ])
-  const batches = [
-    {
-      number: 1,
-      totalBatches: 6,
-      total: 10,
-      multipleChoice: 8,
-      matchColumns: 2,
-      difficulty: { easy: 3, intermediate: 5, challenging: 2 },
-      focus: ['agricultura', 'grandes e pequenos produtores', 'agricultura orgânica'],
-    },
-    {
-      number: 2,
-      totalBatches: 6,
-      total: 10,
-      multipleChoice: 8,
-      matchColumns: 2,
-      difficulty: { easy: 3, intermediate: 5, challenging: 2 },
-      focus: ['pecuária', 'sistemas intensivo e extensivo', 'produtos da criação animal'],
-    },
-    {
-      number: 3,
-      totalBatches: 6,
-      total: 10,
-      multipleChoice: 8,
-      matchColumns: 2,
-      difficulty: { easy: 3, intermediate: 5, challenging: 2 },
-      focus: ['extrativismo', 'sustentabilidade', 'modernização do campo', 'êxodo rural'],
-    },
-    {
-      number: 4,
-      totalBatches: 6,
-      total: 10,
-      multipleChoice: 7,
-      matchColumns: 3,
-      difficulty: { easy: 3, intermediate: 5, challenging: 2 },
-      focus: ['indústria de base', 'bens intermediários', 'bens de consumo'],
-    },
-    {
-      number: 5,
-      totalBatches: 6,
-      total: 10,
-      multipleChoice: 7,
-      matchColumns: 3,
-      difficulty: { easy: 3, intermediate: 5, challenging: 2 },
-      focus: ['comércio', 'atacado e varejo', 'comércio interno e externo'],
-    },
-    {
-      number: 6,
-      totalBatches: 6,
-      total: 10,
-      multipleChoice: 7,
-      matchColumns: 3,
-      difficulty: { easy: 3, intermediate: 5, challenging: 2 },
-      focus: ['prestação de serviços', 'trabalho urbano', 'relações entre campo e cidade'],
-    },
-  ]
+  const batches = config.batches.map((focus, index) => ({
+    number: index + 1,
+    totalBatches: config.batches.length,
+    total: 10,
+    multipleChoice: index < 3 ? 8 : 7,
+    matchColumns: index < 3 ? 2 : 3,
+    difficulty: { easy: 3, intermediate: 5, challenging: 2 },
+    focus,
+  }))
 
   const generated = []
   const usage = []
   await mkdir(dirname(output), { recursive: true })
   for (const batch of batches) {
-    const checkpoint = resolve(dirname(output), `.geografia-p1-batch-${batch.number}.json`)
+    const checkpoint = resolve(dirname(output), `.${configurationName}-batch-${batch.number}.json`)
     let result
+    let shouldWriteCheckpoint = false
     try {
       result = JSON.parse(await readFile(checkpoint, 'utf8'))
     } catch (error) {
@@ -330,22 +351,35 @@ async function main() {
       result = await generateBatch({
         apiKey,
         model,
+        config,
         batch,
         sourceBrief,
         systemPrompt,
         batchTemplate,
         existingQuestions: generated,
       })
-      await writeFile(checkpoint, `${JSON.stringify(result, null, 2)}\n`, { flag: 'wx' })
+      shouldWriteCheckpoint = true
     }
     const normalized = normalizeGeneratedQuestions(result.questions, batch)
     const errors = validateGeneratedQuestions(normalized, batch)
+    const existingTexts = new Set(
+      generated
+        .filter((question) => question.type === 'multipleChoice')
+        .map((question) => question.question.trim().toLocaleLowerCase('pt-BR')),
+    )
+    const repeatedAcrossBatches = normalized.filter(
+      (question) =>
+        question.type === 'multipleChoice' && existingTexts.has(question.question.trim().toLocaleLowerCase('pt-BR')),
+    )
+    if (repeatedAcrossBatches.length)
+      errors.push(`enunciado repetido em outro lote: ${repeatedAcrossBatches.map((item) => item.question).join(' | ')}`)
     if (errors.length) throw new Error(`Lote ${batch.number} inválido: ${errors.join('; ')}`)
+    if (shouldWriteCheckpoint) await writeFile(checkpoint, `${JSON.stringify(result, null, 2)}\n`, { flag: 'wx' })
     generated.push(...normalized)
     usage.push({ batch: batch.number, ...result.usage, stopReason: result.stopReason })
   }
 
-  const draft = assembleDraft({ questions: generated, model })
+  const draft = assembleDraft({ questions: generated, model, config })
   const structural = validateEditorialContent(draft)
   if (!structural.valid) throw new Error(`Rascunho inválido: ${structural.errors.join('; ')}`)
 
