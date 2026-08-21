@@ -1,17 +1,23 @@
 import { useEffect, useMemo, useState } from 'react'
 import { createSchoolEventsRepository } from '../repositories/schoolEventsRepository'
-import { parseLocalDate } from '../utils/dates'
+import { calendarDayDifference, parseLocalDate } from '../utils/dates'
 
 export function upcomingSchoolEvents(events, daysAhead = 7, today = new Date()) {
-  const startOfToday = new Date(today)
-  startOfToday.setHours(0, 0, 0, 0)
-  return events
+  const uniqueEvents = new Map()
+  for (const event of events) {
+    const key = event.externalId || event.id
+    if (!uniqueEvents.has(key)) uniqueEvents.set(key, event)
+  }
+
+  return [...uniqueEvents.values()]
     .filter((event) => {
-      const start = parseLocalDate(event.date)
-      const end = event.endDate ? parseLocalDate(event.endDate) : start
-      if (event.endDate) return startOfToday >= start && startOfToday <= end
-      const difference = Math.ceil((start.getTime() - startOfToday.getTime()) / 86400000)
-      return difference >= 0 && difference <= daysAhead
+      const startsIn = calendarDayDifference(event.date, today)
+      if (!event.endDate) return startsIn >= 0 && startsIn <= daysAhead
+
+      const endsIn = calendarDayDifference(event.endDate, today)
+      const isActive = startsIn <= 0 && endsIn >= 0
+      const startsSoon = startsIn >= 0 && startsIn <= daysAhead
+      return isActive || startsSoon
     })
     .sort((a, b) => parseLocalDate(a.date).getTime() - parseLocalDate(b.date).getTime())
 }

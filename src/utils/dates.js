@@ -4,14 +4,17 @@ export function parseLocalDate(dateStr) {
   return new Date(y, m - 1, d)
 }
 
+/** Compara dias civis sem deixar horário de verão alterar a contagem. */
+export function calendarDayDifference(dateStr, from = new Date()) {
+  const [year, month, day] = dateStr.split('-').map(Number)
+  const targetDay = Date.UTC(year, month - 1, day)
+  const sourceDay = Date.UTC(from.getFullYear(), from.getMonth(), from.getDate())
+  return Math.round((targetDay - sourceDay) / 86400000)
+}
+
 /** Retorna quantos dias faltam até uma data no formato 'YYYY-MM-DD'. */
-export function daysUntil(dateStr) {
-  const today = new Date()
-  today.setHours(0, 0, 0, 0)
-  const d = parseLocalDate(dateStr)
-  const days = Math.ceil((d.getTime() - today.getTime()) / (1000 * 60 * 60 * 24))
-  // Normaliza -0 para 0 (comportamento de Math.ceil com valores entre -1 e 0)
-  return days === 0 ? 0 : days
+export function daysUntil(dateStr, today = new Date()) {
+  return calendarDayDifference(dateStr, today)
 }
 
 /** Formata 'YYYY-MM-DD' para 'DD/MM/YYYY'. */

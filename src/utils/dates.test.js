@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { daysUntil, formatDate } from './dates'
+import { calendarDayDifference, daysUntil, formatDate } from './dates'
 
 describe('formatDate', () => {
   it('converte YYYY-MM-DD para DD/MM/YYYY', () => {
@@ -33,5 +33,12 @@ describe('daysUntil', () => {
 
   it('retorna negativo para datas passadas', () => {
     expect(daysUntil('2026-03-21')).toBeLessThan(0)
+  })
+})
+
+describe('calendarDayDifference', () => {
+  it('conta dias civis sem depender da duração do dia', () => {
+    const lateAtNight = new Date(2026, 2, 7, 23, 30)
+    expect(calendarDayDifference('2026-03-08', lateAtNight)).toBe(1)
   })
 })

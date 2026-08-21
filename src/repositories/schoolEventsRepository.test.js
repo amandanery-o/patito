@@ -17,6 +17,7 @@ describe('schoolEventsRepository', () => {
       }),
     ).toEqual({
       id: 'e1',
+      externalId: undefined,
       subject: 'matematica',
       type: 'prova',
       date: '2026-08-25',

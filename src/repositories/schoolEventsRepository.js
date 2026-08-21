@@ -3,6 +3,7 @@ import { supabase } from '../lib/supabase'
 export function mapSchoolEvent(row) {
   return {
     id: row.id,
+    externalId: row.external_id,
     subject: row.subject_id,
     type: row.type,
     date: row.date,

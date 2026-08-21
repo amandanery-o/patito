@@ -45,8 +45,8 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 
 - `TASK-025` ✅ Remover edição de eventos oficiais da interface do aluno.
 - `TASK-026` ✅ Atualizar seed/eventos para o segundo semestre.
-- `TASK-027` Criar importador validado de PDF para eventos oficiais.
-- `TASK-028` Testar alertas, fuso horário e duplicidades.
+- `TASK-027` ✅ Criar importador validado de PDF para eventos oficiais.
+- `TASK-028` ✅ Testar alertas, fuso horário e duplicidades.
 
 ## F006 — Temas
 
@@ -77,7 +77,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-044` ✅ Criar armazenamento seguro de credenciais editoriais.
 - `TASK-045` Implementar adaptadores quando as configurações forem entregues.
 - `TASK-046` ✅ Registrar origem, versão e validação dos lotes.
-- `TASK-047` 🟡 Integrar importação do calendário em PDF (primeiro lote extraído, conferido e normalizado; falta automatizar o importador).
+- `TASK-047` ✅ Integrar importação do calendário em PDF com transcrição revisada, manifesto, comparação de versões e SQL transacional.
 - `TASK-048` ✅ Definir schema versionado de conteúdo e questões geradas por IA.
 - `TASK-049` ✅ Validar banco mínimo de 60 questões, formatos, IDs e referências de origem.
 - `TASK-050` ✅ Implementar gerador de rascunhos com IA quando o provedor e o modelo forem configurados.

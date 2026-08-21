@@ -18,4 +18,17 @@ describe('upcomingSchoolEvents', () => {
     const events = [{ id: 'week', date: '2026-08-18', endDate: '2026-08-21' }]
     expect(upcomingSchoolEvents(events, 7, today)).toHaveLength(1)
   })
+
+  it('avisa sobre eventos de período antes de começarem', () => {
+    const events = [{ id: 'week', date: '2026-08-23', endDate: '2026-08-27' }]
+    expect(upcomingSchoolEvents(events, 7, today)).toHaveLength(1)
+  })
+
+  it('remove eventos repetidos pelo identificador externo', () => {
+    const events = [
+      { id: 'first', externalId: 'official-1', date: '2026-08-21' },
+      { id: 'second', externalId: 'official-1', date: '2026-08-21' },
+    ]
+    expect(upcomingSchoolEvents(events, 7, today)).toHaveLength(1)
+  })
 })
