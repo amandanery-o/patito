@@ -12,8 +12,13 @@ function unwrap(result) {
 
 export function createHomeworkRepository(client = supabase) {
   return {
-    async list() {
-      const result = await requireClient(client).from('homework').select('*').order('completed').order('due_date')
+    async list(userId) {
+      const result = await requireClient(client)
+        .from('homework')
+        .select('*')
+        .eq('user_id', userId)
+        .order('completed')
+        .order('due_date')
       return unwrap(result)
     },
 
@@ -32,18 +37,24 @@ export function createHomeworkRepository(client = supabase) {
       return unwrap(result)
     },
 
-    async update(id, changes) {
+    async update(id, changes, userId) {
       const payload = { ...changes, updated_at: new Date().toISOString() }
       if ('description' in payload) payload.description = payload.description.trim()
       if ('pages' in payload) payload.pages = payload.pages.trim() || null
       if ('completed' in payload) payload.completed_at = payload.completed ? new Date().toISOString() : null
 
-      const result = await requireClient(client).from('homework').update(payload).eq('id', id).select().single()
+      const result = await requireClient(client)
+        .from('homework')
+        .update(payload)
+        .eq('id', id)
+        .eq('user_id', userId)
+        .select()
+        .single()
       return unwrap(result)
     },
 
-    async remove(id) {
-      const result = await requireClient(client).from('homework').delete().eq('id', id)
+    async remove(id, userId) {
+      const result = await requireClient(client).from('homework').delete().eq('id', id).eq('user_id', userId)
       unwrap(result)
     },
   }

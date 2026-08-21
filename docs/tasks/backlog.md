@@ -53,7 +53,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-029` ✅ Criar tabela, RLS e cliente de temas.
 - `TASK-030` ✅ Implementar lista e formulário mobile-first.
 - `TASK-031` ✅ Implementar edição, exclusão e conclusão.
-- `TASK-032` Cobrir CRUD, isolamento e persistência com testes.
+- `TASK-032` ✅ Cobrir CRUD, isolamento e persistência com testes.
 
 ## F007 — Ranking por utilização
 

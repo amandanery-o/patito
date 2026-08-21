@@ -19,7 +19,8 @@ describe('createHomeworkRepository', () => {
   it('lista pendentes primeiro e ordena por entrega', async () => {
     const query = queryResult([])
     const repository = createHomeworkRepository({ from: vi.fn(() => query) })
-    await repository.list()
+    await repository.list('student-1')
+    expect(query.eq).toHaveBeenCalledWith('user_id', 'student-1')
     expect(query.order).toHaveBeenNthCalledWith(1, 'completed')
     expect(query.order).toHaveBeenNthCalledWith(2, 'due_date')
   })
@@ -46,7 +47,7 @@ describe('createHomeworkRepository', () => {
   it('registra o horário ao concluir', async () => {
     const query = queryResult({ id: 'homework-1', completed: true })
     const repository = createHomeworkRepository({ from: vi.fn(() => query) })
-    await repository.update('homework-1', { completed: true })
+    await repository.update('homework-1', { completed: true }, 'student-1')
     expect(query.update).toHaveBeenCalledWith(
       expect.objectContaining({
         completed: true,
@@ -54,5 +55,14 @@ describe('createHomeworkRepository', () => {
         updated_at: expect.any(String),
       }),
     )
+    expect(query.eq).toHaveBeenCalledWith('user_id', 'student-1')
+  })
+
+  it('restringe a exclusão ao aluno autenticado', async () => {
+    const query = queryResult(null)
+    const repository = createHomeworkRepository({ from: vi.fn(() => query) })
+    await repository.remove('homework-1', 'student-1')
+    expect(query.eq).toHaveBeenNthCalledWith(1, 'id', 'homework-1')
+    expect(query.eq).toHaveBeenNthCalledWith(2, 'user_id', 'student-1')
   })
 })

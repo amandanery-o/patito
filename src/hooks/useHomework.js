@@ -16,7 +16,7 @@ export function useHomework(userId, repository) {
     setLoading(true)
     setError('')
     try {
-      setItems(await stableRepository.list())
+      setItems(await stableRepository.list(userId))
     } catch {
       setError('Não conseguimos carregar os temas. Tente novamente.')
     } finally {
@@ -53,7 +53,7 @@ export function useHomework(userId, repository) {
     error,
     reload: load,
     createHomework: (data) => run(() => stableRepository.create({ ...data, userId })),
-    updateHomework: (id, changes) => run(() => stableRepository.update(id, changes)),
-    removeHomework: (id) => run(() => stableRepository.remove(id)),
+    updateHomework: (id, changes) => run(() => stableRepository.update(id, changes, userId)),
+    removeHomework: (id) => run(() => stableRepository.remove(id, userId)),
   }
 }

@@ -60,4 +60,41 @@ describe('HomeworkView', () => {
     fireEvent.click(screen.getByLabelText('Marcar como concluído'))
     expect(onUpdate).toHaveBeenCalledWith('h1', { completed: true })
   })
+
+  it('edita descrição, páginas e data do tema', async () => {
+    const onUpdate = vi.fn().mockResolvedValue(undefined)
+    render(
+      <HomeworkView
+        {...baseProps}
+        onUpdate={onUpdate}
+        items={[{ id: 'h1', description: 'Exercícios', pages: '10', due_date: '2026-08-25', completed: false }]}
+      />,
+    )
+    fireEvent.click(screen.getByLabelText('Editar tema'))
+    fireEvent.change(screen.getByLabelText('O que precisa fazer?'), { target: { value: 'Exercícios revisados' } })
+    fireEvent.change(screen.getByLabelText('Páginas'), { target: { value: '11-12' } })
+    fireEvent.click(screen.getByText('Salvar'))
+    await waitFor(() =>
+      expect(onUpdate).toHaveBeenCalledWith('h1', {
+        description: 'Exercícios revisados',
+        pages: '11-12',
+        dueDate: '2026-08-25',
+      }),
+    )
+  })
+
+  it('só exclui depois da confirmação', async () => {
+    const onRemove = vi.fn().mockResolvedValue(undefined)
+    render(
+      <HomeworkView
+        {...baseProps}
+        onRemove={onRemove}
+        items={[{ id: 'h1', description: 'Exercícios', pages: null, due_date: '2026-08-25', completed: false }]}
+      />,
+    )
+    fireEvent.click(screen.getByLabelText('Excluir tema'))
+    expect(onRemove).not.toHaveBeenCalled()
+    fireEvent.click(screen.getByText('Remover'))
+    await waitFor(() => expect(onRemove).toHaveBeenCalledWith('h1'))
+  })
 })
