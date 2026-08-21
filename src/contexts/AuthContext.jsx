@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, useContext, useEffect, useRef, useState } from 'react'
 import { supabase } from '../lib/supabase'
 
 const AuthContext = createContext(null)
@@ -8,6 +8,7 @@ const E2E_PROFILE = { id: E2E_SESSION.user.id, name: 'Aluno de teste', avatar: '
 export function AuthProvider({ children, client = supabase }) {
   const [session, setSession] = useState(undefined) // undefined = carregando
   const [profile, setProfile] = useState(undefined)
+  const activeUserId = useRef(null)
   const userId = session?.user?.id
   const userName = session?.user?.user_metadata?.name
 
@@ -23,25 +24,40 @@ export function AuthProvider({ children, client = supabase }) {
       return
     }
 
-    client.auth.getSession().then(({ data }) => setSession(data.session))
+    let active = true
+    const applySession = (nextSession) => {
+      if (!active) return
+      const nextUserId = nextSession?.user?.id || null
+      const userChanged = activeUserId.current !== nextUserId
+      activeUserId.current = nextUserId
+      setSession(nextSession)
+      if (userChanged) setProfile(nextSession ? undefined : null)
+    }
+
+    client.auth
+      .getSession()
+      .then(({ data, error }) => applySession(error ? null : data.session))
+      .catch(() => applySession(null))
 
     const {
       data: { subscription },
-    } = client.auth.onAuthStateChange((_, s) => {
-      setSession(s)
-      setProfile(s ? undefined : null)
-    })
-    return () => subscription.unsubscribe()
+    } = client.auth.onAuthStateChange((_, nextSession) => applySession(nextSession))
+    return () => {
+      active = false
+      subscription.unsubscribe()
+    }
   }, [client])
 
   useEffect(() => {
     if (!userId || !client) return
+    let active = true
     client
       .from('profiles')
       .select('id, name, avatar, created_at')
       .eq('id', userId)
       .single()
       .then(({ data, error }) => {
+        if (!active) return
         if (error) {
           console.error('Não foi possível carregar o perfil do aluno.', error)
           setProfile({
@@ -53,6 +69,9 @@ export function AuthProvider({ children, client = supabase }) {
         }
         setProfile(data)
       })
+    return () => {
+      active = false
+    }
   }, [client, userId, userName])
 
   async function signIn(email, password) {

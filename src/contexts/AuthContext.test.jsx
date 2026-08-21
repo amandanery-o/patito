@@ -1,4 +1,4 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react'
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import { AuthProvider, useAuth } from './AuthContext'
 
@@ -24,6 +24,7 @@ function Probe() {
 }
 
 function client() {
+  let authStateCallback
   const query = {
     select: vi.fn(() => query),
     eq: vi.fn(() => query),
@@ -35,12 +36,16 @@ function client() {
     from: vi.fn(() => query),
     auth: {
       getSession: vi.fn().mockResolvedValue({ data: { session: SESSION } }),
-      onAuthStateChange: vi.fn(() => ({ data: { subscription: { unsubscribe: vi.fn() } } })),
+      onAuthStateChange: vi.fn((callback) => {
+        authStateCallback = callback
+        return { data: { subscription: { unsubscribe: vi.fn() } } }
+      }),
       signInWithPassword: vi.fn().mockResolvedValue({ error: null }),
       signUp: vi.fn().mockResolvedValue({ error: null }),
       resetPasswordForEmail: vi.fn().mockResolvedValue({ error: null }),
       signOut: vi.fn().mockResolvedValue({ error: null }),
     },
+    emitAuthState: (event, session) => authStateCallback(event, session),
   }
 }
 
@@ -78,5 +83,25 @@ describe('AuthProvider', () => {
       expect(supabaseClient.auth.signOut).toHaveBeenCalled()
       expect(screen.getByTestId('profile-name')).toHaveTextContent('Alice Nery')
     })
+  })
+
+  it('preserva o perfil quando o token da mesma sessão é renovado ao voltar ao app', async () => {
+    const supabaseClient = client()
+    render(
+      <AuthProvider client={supabaseClient}>
+        <Probe />
+      </AuthProvider>,
+    )
+    await waitFor(() => expect(screen.getByTestId('profile-name')).toHaveTextContent('Alice'))
+
+    act(() => {
+      supabaseClient.emitAuthState('TOKEN_REFRESHED', {
+        ...SESSION,
+        access_token: 'token-renovado',
+      })
+    })
+
+    await waitFor(() => expect(screen.getByTestId('profile-name')).toHaveTextContent('Alice'))
+    expect(supabaseClient.from).toHaveBeenCalledTimes(1)
   })
 })
