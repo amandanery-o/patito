@@ -22,6 +22,7 @@ import { selectStudyQuestions, studyModeForSubject } from './utils/questionSelec
 import { daysUntil, formatDate, parseLocalDate } from './utils/dates'
 import { SCHEDULE, SUBJECT_COLORS, DAY_NAMES } from './data/schedule'
 import { EXAM_TYPES, STUDY_SUBJECTS, SUBJECTS, VIEWS, examAlertText, getMascotState } from './data/appConfig'
+import { e2eStudyRepository } from './testSupport/e2eStudyRepository'
 
 const Leaderboard = lazy(() => import('./components/Leaderboard'))
 const CalendarMonth = lazy(() => import('./components/CalendarMonth'))
@@ -107,7 +108,7 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
     startOrResume,
     saveAnswer: saveStudyAnswer,
     complete: completeStudySession,
-  } = useStudySession()
+  } = useStudySession(import.meta.env.VITE_E2E_AUTH === '1' ? e2eStudyRepository : undefined)
   const homework = useHomework(session?.user?.id)
 
   // -------------------------------------------------------------------------

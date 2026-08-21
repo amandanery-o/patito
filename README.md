@@ -66,4 +66,6 @@ src/
 
 Cada push e pull request para `main` executa instalação limpa, lint, testes unitários, build e testes E2E em Chromium.
 
+Nos testes de navegador, `VITE_E2E_AUTH=1` ativa uma conta e um repositório persistente exclusivos do ambiente Playwright. Esse adaptador valida a jornada visual sem credenciais; as mesmas operações transacionais do Supabase são executadas separadamente em PostgreSQL isolado pelos testes de `scripts/database/`.
+
 Veja o [SPEC.md](./SPEC.md) para a especificação completa do projeto.

@@ -32,7 +32,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-017` ✅ Persistir ordem aleatória, posição e respostas da sessão.
 - `TASK-018` ✅ Implementar retorno à página inicial e retomada.
 - `TASK-019` ✅ Implementar revisão de erros ao final.
-- `TASK-020` Cobrir conclusão, abandono, retomada e nova tentativa com E2E.
+- `TASK-020` ✅ Cobrir conclusão, abandono, retomada após recarga e nova tentativa com E2E.
 
 ## F004 — Conteúdo do segundo semestre
 

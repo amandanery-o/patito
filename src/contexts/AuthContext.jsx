@@ -2,6 +2,8 @@ import { createContext, useContext, useEffect, useState } from 'react'
 import { supabase } from '../lib/supabase'
 
 const AuthContext = createContext(null)
+const E2E_SESSION = { user: { id: '00000000-0000-4000-8000-000000000001', user_metadata: { name: 'Aluno de teste' } } }
+const E2E_PROFILE = { id: E2E_SESSION.user.id, name: 'Aluno de teste', avatar: '🦁' }
 
 export function AuthProvider({ children }) {
   const [session, setSession] = useState(undefined) // undefined = carregando
@@ -10,6 +12,11 @@ export function AuthProvider({ children }) {
   const userName = session?.user?.user_metadata?.name
 
   useEffect(() => {
+    if (import.meta.env.VITE_E2E_AUTH === '1') {
+      setSession(E2E_SESSION)
+      setProfile(E2E_PROFILE)
+      return
+    }
     if (!supabase) {
       setSession(null)
       setProfile(null)
