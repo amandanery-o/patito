@@ -76,33 +76,33 @@ export default function LoginScreen() {
             </div>
           )}
 
+          <div>
+            <label className="text-sm font-bold text-gray-600 block mb-1">E-mail</label>
+            <input
+              type="email"
+              placeholder="seu@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              autoFocus={mode === 'login' || mode === 'recovery'}
+            />
+          </div>
+
           {mode !== 'recovery' && (
             <div>
-              <label className="text-sm font-bold text-gray-600 block mb-1">E-mail</label>
+              <label className="text-sm font-bold text-gray-600 block mb-1">Senha</label>
               <input
-                type="email"
-                placeholder="seu@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                type="password"
+                placeholder="••••••••"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 required
+                minLength={6}
                 className="w-full border border-gray-200 rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                autoFocus={mode === 'login'}
               />
             </div>
           )}
-
-          <div>
-            <label className="text-sm font-bold text-gray-600 block mb-1">Senha</label>
-            <input
-              type="password"
-              placeholder="••••••••"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              minLength={6}
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-yellow-400"
-            />
-          </div>
 
           {error && (
             <p

@@ -1,5 +1,6 @@
 const AUTH_MESSAGES = {
-  'Invalid login credentials': 'E-mail ou senha incorretos.',
+  'Invalid login credentials':
+    'Não encontramos uma conta com esses dados. Confira o e-mail e a senha. Se ainda não fez cadastro, toque em Criar agora.',
   'Email not confirmed': 'Confirme seu e-mail antes de entrar.',
   'User already registered': 'Este e-mail já tem uma conta.',
   'Password should be at least 6 characters': 'A senha precisa ter pelo menos 6 caracteres.',

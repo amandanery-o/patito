@@ -3,7 +3,9 @@ import { friendlyAuthError } from './authErrors'
 
 describe('friendlyAuthError', () => {
   it('traduz credenciais inválidas', () => {
-    expect(friendlyAuthError({ message: 'Invalid login credentials' })).toBe('E-mail ou senha incorretos.')
+    expect(friendlyAuthError({ message: 'Invalid login credentials' })).toBe(
+      'Não encontramos uma conta com esses dados. Confira o e-mail e a senha. Se ainda não fez cadastro, toque em Criar agora.',
+    )
   })
 
   it('não mostra detalhes técnicos desconhecidos', () => {
