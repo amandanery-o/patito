@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest'
 import { GEOGRAPHY_TOPICS } from './geografia'
 
 describe('conteúdos de Geografia', () => {
-  it('mantém os conteúdos da P1 rastreáveis à Edebê', () => {
-    expect(GEOGRAPHY_TOPICS.map((topic) => topic.chapter)).toEqual([7, 8, '7 e 8'])
+  it('mantém os conteúdos do segundo semestre rastreáveis à Edebê', () => {
+    expect(GEOGRAPHY_TOPICS.map((topic) => topic.chapter)).toEqual([7, 8, '7 e 8', 11, 12])
     for (const topic of GEOGRAPHY_TOPICS) {
       expect(topic.source.provider).toBe('edebe')
       expect(topic.source.resourceId).toMatch(/^courseware-252-/)

@@ -140,4 +140,98 @@ export const GEOGRAPHY_TOPICS = [
     ],
     questions: geographyP1Questions,
   },
+  {
+    id: 'geografia-11-populacao-brasileira',
+    title: 'Características da população brasileira',
+    chapter: 11,
+    source: {
+      provider: 'edebe',
+      resourceId: 'courseware-252-content-585',
+      pages: '110–117',
+      version: '2024',
+    },
+    sourceSections: [
+      { title: 'Demografia e indicadores', pages: '110–111' },
+      { title: 'Distribuição da população brasileira', pages: '112–113' },
+      { title: 'População e trabalho', pages: '114' },
+      { title: 'Trabalho formal e informal', pages: '115' },
+      { title: 'Desigualdades no trabalho', pages: '116' },
+      { title: 'Direitos e trabalho doméstico', pages: '117' },
+    ],
+    summarySections: [
+      {
+        title: 'Como a população é estudada',
+        text: 'A demografia estuda o tamanho, a distribuição e as características de uma população. Para isso, utiliza indicadores como a taxa de natalidade e a densidade demográfica, que mostra a média de habitantes por quilômetro quadrado.',
+      },
+      {
+        title: 'Distribuição pelo território',
+        text: 'A população brasileira não está distribuída igualmente. A história da colonização, as redes de transporte, o clima e a oferta de trabalho ajudam a explicar por que algumas áreas, especialmente cidades e partes do litoral, concentram mais habitantes.',
+      },
+      {
+        title: 'População e trabalho',
+        text: 'Nas cidades predominam atividades da indústria, do comércio e dos serviços. No campo, destacam-se agricultura, pecuária e extrativismo. O trabalho pode ser formal, com registro e direitos, ou informal, sem as mesmas garantias.',
+      },
+      {
+        title: 'Direitos e igualdade',
+        text: 'Todas as pessoas devem ter oportunidades e remuneração justas. O trabalho forçado e o trabalho infantil são proibidos. As tarefas domésticas também são trabalho e devem ser divididas de maneira equilibrada entre as pessoas da família.',
+      },
+    ],
+    keyIdeas: [
+      'Demografia é o estudo das populações.',
+      'Densidade demográfica não é o mesmo que quantidade total de habitantes.',
+      'A população brasileira está distribuída de maneira desigual pelo território.',
+      'Trabalho formal e informal oferecem garantias diferentes.',
+      'Direitos e oportunidades devem valer para todas as pessoas.',
+    ],
+    questions: [],
+  },
+  {
+    id: 'geografia-12-fluxos-migratorios',
+    title: 'Fluxos migratórios',
+    chapter: 12,
+    source: {
+      provider: 'edebe',
+      resourceId: 'courseware-252-content-587',
+      pages: '118–127',
+      version: '2024',
+    },
+    sourceSections: [
+      { title: 'Migração, imigração e emigração', pages: '118–120' },
+      { title: 'Migrações internas no Brasil', pages: '121' },
+      { title: 'Êxodo rural', pages: '122' },
+      { title: 'Migração sazonal e deslocamento pendular', pages: '123' },
+      { title: 'Migrações internacionais', pages: '124–125' },
+      { title: 'Atividades de revisão', pages: '126–127' },
+    ],
+    summarySections: [
+      {
+        title: 'Migrar, emigrar e imigrar',
+        text: 'Migração é a mudança para outro lugar de moradia. Quem sai de um lugar é emigrante quando observado pelo local de saída; ao chegar a outro lugar, é imigrante quando observado pelo local de destino.',
+      },
+      {
+        title: 'Migrações dentro do Brasil',
+        text: 'Em diferentes momentos, pessoas se deslocaram entre as regiões brasileiras em busca de trabalho, terras e melhores condições de vida. Esses fluxos mudam conforme as oportunidades econômicas e as condições de cada lugar.',
+      },
+      {
+        title: 'Êxodo rural e outros deslocamentos',
+        text: 'Êxodo rural é a mudança do campo para a cidade. Migração sazonal é temporária e acompanha épocas de trabalho. No deslocamento pendular, a pessoa vai com frequência a outro lugar para trabalhar ou estudar e depois retorna para casa.',
+      },
+      {
+        title: 'Migrações internacionais',
+        text: 'Pessoas podem mudar de país por trabalho, estudo, desastres, guerras, perseguições, fome ou busca de segurança. O Brasil recebe imigrantes e também possui brasileiros vivendo em outros países.',
+      },
+      {
+        title: 'Migração e cultura',
+        text: 'Os migrantes levam conhecimentos, hábitos, culinária, festas e formas de falar. Esse encontro contribui para a diversidade cultural dos lugares de origem e de destino.',
+      },
+    ],
+    keyIdeas: [
+      'Imigração e emigração descrevem o mesmo movimento a partir de pontos de vista diferentes.',
+      'Migração interna acontece dentro de um país.',
+      'Êxodo rural é a mudança do campo para a cidade.',
+      'Deslocamento pendular não envolve necessariamente mudança de moradia.',
+      'Migrações possuem causas econômicas, sociais, políticas e ambientais.',
+    ],
+    questions: [],
+  },
 ]
