@@ -1,102 +1,112 @@
-/**
- * Visualização em trilha dos tópicos de uma matéria.
- * Cada nó é um círculo; nós completos ficam cheios, incompletos vazados.
- * Conectados por uma linha vertical.
- */
-export default function TopicTrail({ subject, topics, getTopicProgress, onStart, onReview }) {
+function chapterNumbers(value) {
   return (
-    <div className="flex flex-col items-center gap-0 pb-8">
-      {topics.map((topic, index) => {
-        const tp = getTopicProgress(subject.id, topic.id)
-        const completed = tp.completed
-        const isEmpty = topic.questions.length === 0
-        const locked = false
+    String(value || '')
+      .match(/\d+/g)
+      ?.map(Number) || []
+  )
+}
 
-        return (
-          <div key={topic.id} className="flex flex-col items-center w-full">
-            {/* Linha de conexão acima (exceto primeiro) */}
-            {index > 0 && (
-              <div
-                className={`w-1 h-8 rounded-full ${completed ? 'bg-green-400' : isEmpty ? 'bg-yellow-100' : 'bg-gray-200'}`}
-              />
-            )}
+function assessmentName(topic) {
+  return (
+    topic.reviewLabel?.match(/P\d/i)?.[0]?.toUpperCase() || topic.title.match(/P\d/i)?.[0]?.toUpperCase() || 'Revisão'
+  )
+}
 
-            {/* Nó + Card */}
-            <div className="flex items-center gap-4 w-full px-4">
-              {/* Nó circular */}
-              <div
-                className={`w-14 h-14 md:w-16 md:h-16 shrink-0 rounded-full border-4 flex items-center justify-center text-xl md:text-2xl shadow-md transition-all
-                  ${
-                    completed
-                      ? `${subject.color} border-white text-white shadow-lg`
-                      : isEmpty
-                        ? 'bg-yellow-50 border-yellow-200 text-yellow-400'
-                        : locked
-                          ? 'bg-gray-100 border-gray-200 text-gray-300'
-                          : 'bg-white border-blue-300 text-blue-500 shadow-md'
-                  }`}
+function sourceDescription(topic) {
+  const chapters = topic.chapter ? `Capítulos ${topic.chapter}` : 'Conteúdo do livro'
+  const pages = topic.source?.pages ? ` · páginas ${topic.source.pages}` : ''
+  return `${chapters}${pages}`
+}
+
+export default function TopicTrail({ subject, topics, getTopicProgress, onStart, onReview }) {
+  const reviewMaterials = topics.filter((topic) => topic.questions.length > 0 && topic.summarySections?.length)
+  const coveredChapters = new Set(reviewMaterials.flatMap((topic) => chapterNumbers(topic.chapter)))
+  const preparing = topics.filter(
+    (topic) =>
+      topic.questions.length === 0 && !chapterNumbers(topic.chapter).some((chapter) => coveredChapters.has(chapter)),
+  )
+
+  return (
+    <div className="space-y-8 px-4 pb-8">
+      <section aria-labelledby="review-materials-title">
+        <div className="mb-4">
+          <p className="text-sm font-bold uppercase tracking-wide text-orange-600">Estude no seu ritmo</p>
+          <h2 id="review-materials-title" className="text-2xl font-extrabold text-gray-900">
+            Material de revisão
+          </h2>
+          <p className="mt-1 text-sm text-gray-600">
+            Primeiro leia o resumo. Quando estiver pronto, pratique as questões.
+          </p>
+        </div>
+
+        <div className="space-y-4">
+          {reviewMaterials.map((topic) => {
+            const completed = getTopicProgress(subject.id, topic.id).completed
+            const label = assessmentName(topic)
+
+            return (
+              <article
+                key={topic.id}
+                className="overflow-hidden rounded-3xl border-2 border-orange-100 bg-white shadow-sm"
               >
-                {completed ? (
-                  '✅'
-                ) : isEmpty ? (
-                  <span className="text-xl">🐥</span>
-                ) : locked ? (
-                  <span className="text-2xl">🔒</span>
-                ) : (
-                  <span className="font-extrabold text-base text-blue-600">{index + 1}</span>
-                )}
-              </div>
-
-              {/* Card do tópico */}
-              {isEmpty ? (
-                <button
-                  type="button"
-                  onClick={() => topic.summarySections?.length && onReview(topic)}
-                  disabled={!topic.summarySections?.length}
-                  className="flex-1 rounded-2xl p-4 md:p-5 text-left bg-yellow-50 border-2 border-yellow-100 disabled:cursor-default"
-                >
-                  <p className="font-extrabold text-base md:text-lg text-yellow-700">{topic.title}</p>
-                  <p className="text-xs text-yellow-600 mt-1">
-                    {topic.summarySections?.length
-                      ? 'Resumo disponível · questões em breve 🐥'
-                      : 'Em breve 🐥 — questões chegando!'}
-                  </p>
-                </button>
-              ) : (
-                <button
-                  onClick={() => !locked && onStart(topic)}
-                  disabled={locked}
-                  title={locked ? 'Complete o tópico anterior para liberar' : undefined}
-                  className={`flex-1 rounded-2xl p-4 md:p-5 text-left transition-all
-                    ${
-                      completed
-                        ? 'bg-green-50 border-2 border-green-200 hover:bg-green-100 active:scale-95'
-                        : locked
-                          ? 'bg-gray-50 border-2 border-gray-200 cursor-not-allowed opacity-60'
-                          : 'bg-white border-2 border-blue-200 hover:border-blue-400 hover:shadow-md shadow-sm active:scale-95'
-                    }`}
-                >
-                  <p
-                    className={`font-extrabold text-base md:text-lg ${completed ? 'text-green-700' : locked ? 'text-gray-400' : 'text-gray-800'}`}
-                  >
-                    {topic.title}
-                  </p>
-                  <div className="flex items-center gap-2 mt-1">
-                    {locked ? (
-                      <span className="text-xs text-gray-400">Complete o anterior para liberar</span>
-                    ) : (
-                      <>
-                        <span className="text-xs text-gray-400">{topic.questions.length} questões</span>
-                        {completed && <span className="text-xs font-bold text-green-600">Concluído</span>}
-                      </>
-                    )}
+                <div className="p-5">
+                  <div className="mb-3 flex items-start justify-between gap-3">
+                    <div>
+                      <span className="inline-flex rounded-full bg-orange-100 px-3 py-1 text-xs font-extrabold text-orange-700">
+                        {label}
+                      </span>
+                      <h3 className="mt-2 text-xl font-extrabold leading-tight text-gray-900">{topic.title}</h3>
+                      <p className="mt-1 text-sm text-gray-500">{sourceDescription(topic)}</p>
+                    </div>
+                    <span className="text-3xl" aria-hidden="true">
+                      {completed ? '✅' : '📚'}
+                    </span>
                   </div>
-                </button>
-              )}
-            </div>
+
+                  <p className="text-sm leading-relaxed text-gray-700">
+                    {topic.summary || 'Resumo dos conteúdos da prova, com os pontos mais importantes do livro.'}
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3 border-t border-orange-100 bg-orange-50 p-4">
+                  <button
+                    type="button"
+                    onClick={() => onReview(topic)}
+                    aria-label={`Ler material da ${topic.title}`}
+                    className="rounded-2xl border-2 border-orange-200 bg-white px-3 py-3 text-sm font-extrabold text-orange-700 active:scale-95"
+                  >
+                    Ler material
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => onStart(topic)}
+                    aria-label={`Praticar ${topic.title}`}
+                    className="rounded-2xl bg-blue-600 px-3 py-3 text-sm font-extrabold text-white shadow-sm active:scale-95"
+                  >
+                    Praticar 30 questões
+                  </button>
+                </div>
+              </article>
+            )
+          })}
+        </div>
+      </section>
+
+      {preparing.length > 0 && (
+        <section aria-labelledby="preparing-title">
+          <h2 id="preparing-title" className="mb-3 text-lg font-extrabold text-gray-800">
+            Em preparação
+          </h2>
+          <div className="space-y-3">
+            {preparing.map((topic) => (
+              <div key={topic.id} className="rounded-2xl border-2 border-yellow-100 bg-yellow-50 p-4">
+                <p className="font-extrabold text-yellow-800">{topic.title}</p>
+                <p className="mt-1 text-xs text-yellow-700">Material e questões chegando em breve 🐥</p>
+              </div>
+            ))}
           </div>
-        )
-      })}
+        </section>
+      )}
     </div>
   )
 }

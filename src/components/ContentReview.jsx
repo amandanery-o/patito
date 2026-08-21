@@ -11,7 +11,7 @@ export default function ContentReview({ topic, onBack, onStart }) {
         </button>
         <div>
           <p className="text-xs font-bold uppercase tracking-wide text-orange-100">
-            {topic.reviewLabel || `Revisão do capítulo ${topic.chapter}`}
+            Material de revisão · {topic.reviewLabel || `Capítulo ${topic.chapter}`}
           </p>
           <h1 className="text-lg font-extrabold leading-tight">{topic.title}</h1>
         </div>
@@ -49,7 +49,7 @@ export default function ContentReview({ topic, onBack, onStart }) {
             onClick={onStart}
             className="w-full rounded-2xl bg-blue-600 px-5 py-4 font-extrabold text-white shadow-md active:scale-95"
           >
-            Começar questões
+            Praticar 30 questões
           </button>
         ) : (
           <div className="rounded-2xl border-2 border-dashed border-yellow-300 bg-yellow-50 p-4 text-center font-semibold text-yellow-700">

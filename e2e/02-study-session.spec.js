@@ -3,7 +3,7 @@ import { seedUser } from './helpers.js'
 
 async function openGeographySession(page) {
   await page.getByRole('button', { name: /Jogar agora/i }).click()
-  await page.getByRole('button', { name: /Revisão P1 — Espaços rural e urbano/i }).click()
+  await page.getByRole('button', { name: /Praticar Revisão P1 — Espaços rural e urbano/i }).click()
 }
 
 async function answerCurrentQuestion(page) {
@@ -42,7 +42,7 @@ test('abandona, retoma, recarrega, conclui e começa uma nova tentativa', async 
   await expect(page.getByText('2/30 questões', { exact: true })).toBeVisible()
   await page.getByRole('button', { name: 'Fechar sessão' }).click()
 
-  await page.getByRole('button', { name: /Revisão P1 — Espaços rural e urbano/i }).click()
+  await page.getByRole('button', { name: /Praticar Revisão P1 — Espaços rural e urbano/i }).click()
   await expect(page.getByText('2/30 questões', { exact: true })).toBeVisible()
 
   await page.reload()

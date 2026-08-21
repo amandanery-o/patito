@@ -117,6 +117,7 @@ Não existirão perfis de responsável, professor, coordenador ou administrador 
 - `REQ-047` Disponibilizar questões relacionadas ao conteúdo revisado.
 - `REQ-048` Manter relação explícita entre resumo, livro/conteúdo e conjunto de questões.
 - `REQ-057` Utilizar somente texto nos resumos de conteúdo nesta versão.
+- `REQ-071` Apresentar o material de revisão como uma área explícita, separando claramente as ações de ler o resumo e praticar questões, sem repetir os capítulos cobertos como etapas concorrentes.
 
 ### Erros e suporte
 
