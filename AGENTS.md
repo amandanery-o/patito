@@ -12,6 +12,7 @@ Patito is a Portuguese-language study PWA for fourth-grade students. It provides
 - `src/data/` contains educational content and the subject catalog.
 - `supabase/schema.sql` is the current backend schema reference.
 - `README.md` describes setup and supported functionality.
+- `docs/operations/next-subject-playbook.md` is the mandatory end-to-end procedure for publishing each new subject or assessment.
 
 Do not invent unresolved product behavior. Record meaningful unknowns in the relevant PRD or feature under “Open questions”.
 
@@ -85,6 +86,7 @@ Every feature must include user value, scope, rules, data implications, acceptan
 - Student-facing progress counts published review materials (P1/P2), never internal topic records or hidden chapters.
 - Use child-friendly copy that makes the next action understandable without adult support.
 - Any agent changing educational content or subject navigation must update the PRD/feature traceability and preserve this invariant in UI tests.
+- For a new subject, follow the full source → material → generation → independent review → publication → test sequence in the playbook; do not publish question-only packages.
 
 ## Change discipline
 

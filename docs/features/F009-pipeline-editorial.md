@@ -26,6 +26,8 @@ O pipeline transforma fontes autorizadas em conteúdo e calendário validados, u
 - O revisor corrige problemas sustentados pela fonte e escala somente dúvidas que não podem ser resolvidas com alta confiança.
 - Um conteúdo aprovado contém ao menos 60 questões e cada sessão consome aproximadamente 30.
 - Dados ou respostas dos alunos nunca são enviados ao modelo de geração.
+- Toda nova matéria segue `docs/operations/next-subject-playbook.md`; pacotes contendo apenas questões, sem material de leitura, não são publicáveis.
+- Configurações editoriais são identificadas por matéria e prova; regras de Geografia não devem ser duplicadas em scripts específicos para outras matérias.
 
 ## Critérios de aceite
 
@@ -34,6 +36,7 @@ O pipeline transforma fontes autorizadas em conteúdo e calendário validados, u
 - Nenhuma credencial aparece no bundle, logs públicos ou repositório.
 - O pipeline pode ser repetido sem duplicar eventos ou conteúdos.
 - Cada questão mantém referência à seção de origem, modelo usado e versão do prompt.
+- Uma nova prova chega à UI como uma unidade completa de material, prática e progresso compreensível para a criança.
 
 ## Dependências externas
 

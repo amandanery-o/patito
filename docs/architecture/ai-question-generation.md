@@ -4,6 +4,8 @@ O gerador roda apenas na máquina da mantenedora. A API do Claude não é chamad
 
 ## Fluxo
 
+O procedimento completo e genérico para uma nova matéria está em [`docs/operations/next-subject-playbook.md`](../operations/next-subject-playbook.md). Este documento detalha a etapa técnica de geração com Claude.
+
 1. Os capítulos autorizados são lidos e resumidos editorialmente.
 2. O script envia somente o mapa conceitual, sem dados ou respostas de alunos.
 3. Claude produz seis lotes estruturados de 10 questões usando JSON Schema.
@@ -30,7 +32,7 @@ ANTHROPIC_API_KEY=...
 ANTHROPIC_MODEL=claude-sonnet-4-6
 ```
 
-Depois execute:
+Os comandos atuais de Geografia são a referência já implementada:
 
 ```bash
 npm run editorial:generate:geografia-p1
@@ -54,6 +56,8 @@ npm run editorial:publish:geografia-p2
 ```
 
 O primeiro comando recusa questões pendentes ou com ajuste solicitado. O segundo valida novamente o conteúdo e a aprovação e substitui o pacote publicado de forma atômica; assim, a aplicação nunca recebe apenas parte das 60 questões. O mesmo gerador escolhe a configuração editorial pelo nome do conteúdo, mantendo IDs, fontes, focos e checkpoints separados entre P1 e P2.
+
+Antes da próxima matéria, a configuração específica deve ser extraída para um catálogo genérico por `subjectId + assessmentName`. Novos scripts não devem copiar e renomear regras de Geografia: matéria, fonte, capítulos, prefixo de IDs, focos, habilidades e arquivo de saída entram como configuração validada.
 
 Não cole a chave em arquivos do projeto, no chat, em issues ou em commits.
 
