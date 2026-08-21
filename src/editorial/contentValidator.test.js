@@ -8,7 +8,7 @@ function question(index, type = 'multipleChoice') {
     difficulty: 'intermediate',
     question: `Pergunta ${index}?`,
     explanation: 'Explicação baseada no livro.',
-    sourceRef: { section: 'Capítulo 1' },
+    sourceRef: { section: 'Capítulo 1', pages: '10–20' },
   }
   return type === 'multipleChoice'
     ? { ...base, options: ['A', 'B', 'C', 'D'], correctIndex: 0 }

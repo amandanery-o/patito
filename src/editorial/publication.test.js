@@ -1,5 +1,8 @@
 import { describe, expect, it } from 'vitest'
-import { buildGeographyPublication } from '../../scripts/editorial/publish-geography-content.mjs'
+import {
+  buildEditorialPublication,
+  buildGeographyPublication,
+} from '../../scripts/editorial/publish-geography-content.mjs'
 
 function question(index, type = 'multipleChoice') {
   const base = {
@@ -55,6 +58,15 @@ describe('publicação editorial de Geografia', () => {
     )
     expect(() => buildGeographyPublication(approvedContent({ editorialApproval: undefined }))).toThrow(
       'aprovação editorial auditável é obrigatória',
+    )
+  })
+
+  it('publica outra matéria somente quando o identificador corresponde à configuração', () => {
+    const approved = approvedContent({ id: 'matematica-t2-capitulos-4-8', subjectId: 'matematica' })
+    const config = { contentId: 'matematica-t2-capitulos-4-8' }
+    expect(buildEditorialPublication(approved, config).contentId).toBe(config.contentId)
+    expect(() => buildEditorialPublication(approved, { contentId: 'matematica-p1-capitulos-5-6-7' })).toThrow(
+      'conteúdo inesperado',
     )
   })
 })

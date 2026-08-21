@@ -121,6 +121,37 @@ export function validateGeneratedQuestions(questions, expected) {
   return errors
 }
 
+export function validateQuestionDetails(questions, sourceBrief) {
+  const errors = []
+  const allowedReferences = new Set(
+    sourceBrief.flatMap((topic) =>
+      topic.sourceSections.map((section) => `${section.title.trim()}|${section.pages.trim()}`),
+    ),
+  )
+  questions.forEach((question, index) => {
+    if (!question.explanation?.trim()) errors.push(`questão ${index + 1} sem explicação`)
+    const section = question.sourceRef?.section?.trim()
+    const pages = question.sourceRef?.pages?.trim()
+    if (!section || !pages) errors.push(`questão ${index + 1} sem referência completa`)
+    else if (!allowedReferences.has(`${section}|${pages}`))
+      errors.push(`questão ${index + 1} usa referência não autorizada: ${section} | ${pages}`)
+    if (question.type === 'multipleChoice') {
+      const options = question.options?.map((option) => option.trim().toLocaleLowerCase('pt-BR')) || []
+      if (options.length !== 4 || new Set(options).size !== options.length)
+        errors.push(`questão ${index + 1} precisa de quatro alternativas distintas`)
+    }
+    if (question.type === 'matchColumns') {
+      const rights = question.pairs?.map((pair) => pair.right.trim().toLocaleLowerCase('pt-BR')) || []
+      const repeatedRights = [...new Set(rights.filter((right, position) => rights.indexOf(right) !== position))]
+      if (rights.length < 3 || rights.length > 6 || repeatedRights.length)
+        errors.push(`questão ${index + 1} precisa de três a seis correspondências distintas`)
+      if (repeatedRights.length)
+        errors.push(`questão ${index + 1} repete na coluna direita: ${repeatedRights.join(', ')}`)
+    }
+  })
+  return errors
+}
+
 export function normalizeGeneratedQuestions(questions, expected) {
   const difficulties = ['easy', 'intermediate', 'challenging']
   const byTypeAndDifficulty = new Map()
@@ -187,6 +218,7 @@ async function generateBatch({
   systemPrompt,
   batchTemplate,
   existingQuestions,
+  validationFeedback = [],
 }) {
   const prompt = renderPrompt(batchTemplate, {
     BATCH_NUMBER: batch.number,
@@ -207,6 +239,9 @@ async function generateBatch({
       ? existingQuestions.map((question) => `- ${question.question}`).join('\n')
       : 'Nenhuma; este é o primeiro lote.',
     SOURCE_BRIEF: JSON.stringify(sourceBrief, null, 2),
+    RETRY_FEEDBACK: validationFeedback.length
+      ? validationFeedback.map((error) => `- ${error}`).join('\n')
+      : 'Nenhuma tentativa anterior deste lote foi rejeitada.',
   })
 
   const response = await fetch(API_URL, {
@@ -296,39 +331,50 @@ async function main() {
   await mkdir(dirname(output), { recursive: true })
   for (const batch of batches) {
     const checkpoint = resolve(dirname(output), `.${configurationName}-batch-${batch.number}.json`)
-    let result
-    let shouldWriteCheckpoint = false
+    let result = null
     try {
       result = JSON.parse(await readFile(checkpoint, 'utf8'))
     } catch (error) {
       if (/** @type {{ code?: string }} */ (error).code !== 'ENOENT') throw error
-      result = await generateBatch({
-        apiKey,
-        model,
-        config,
-        batch,
-        sourceBrief,
-        systemPrompt,
-        batchTemplate,
-        existingQuestions: generated,
-      })
-      shouldWriteCheckpoint = true
     }
-    const normalized = normalizeGeneratedQuestions(result.questions, batch)
-    const errors = validateGeneratedQuestions(normalized, batch)
-    const existingTexts = new Set(
-      generated
-        .filter((question) => question.type === 'multipleChoice')
-        .map((question) => question.question.trim().toLocaleLowerCase('pt-BR')),
-    )
-    const repeatedAcrossBatches = normalized.filter(
-      (question) =>
-        question.type === 'multipleChoice' && existingTexts.has(question.question.trim().toLocaleLowerCase('pt-BR')),
-    )
-    if (repeatedAcrossBatches.length)
-      errors.push(`enunciado repetido em outro lote: ${repeatedAcrossBatches.map((item) => item.question).join(' | ')}`)
-    if (errors.length) throw new Error(`Lote ${batch.number} inválido: ${errors.join('; ')}`)
-    if (shouldWriteCheckpoint) await writeFile(checkpoint, `${JSON.stringify(result, null, 2)}\n`, { flag: 'wx' })
+    let normalized = []
+    let errors = []
+    const maxAttempts = result ? 4 : 3
+    for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+      if (!result || errors.length) {
+        result = await generateBatch({
+          apiKey,
+          model,
+          config,
+          batch,
+          sourceBrief,
+          systemPrompt,
+          batchTemplate,
+          existingQuestions: generated,
+          validationFeedback: errors,
+        })
+      }
+      normalized = normalizeGeneratedQuestions(result.questions, batch)
+      errors = [...validateGeneratedQuestions(normalized, batch), ...validateQuestionDetails(normalized, sourceBrief)]
+      const existingTexts = new Set(
+        generated
+          .filter((question) => question.type === 'multipleChoice')
+          .map((question) => question.question.trim().toLocaleLowerCase('pt-BR')),
+      )
+      const repeatedAcrossBatches = normalized.filter(
+        (question) =>
+          question.type === 'multipleChoice' && existingTexts.has(question.question.trim().toLocaleLowerCase('pt-BR')),
+      )
+      if (repeatedAcrossBatches.length)
+        errors.push(
+          `enunciado repetido em outro lote: ${repeatedAcrossBatches.map((item) => item.question).join(' | ')}`,
+        )
+      if (!errors.length) break
+      console.warn(`Lote ${batch.number}, tentativa ${attempt}, rejeitado: ${errors.join('; ')}`)
+    }
+    if (errors.length)
+      throw new Error(`Lote ${batch.number} inválido após ${maxAttempts} verificações: ${errors.join('; ')}`)
+    await writeFile(checkpoint, `${JSON.stringify(result, null, 2)}\n`)
     generated.push(...normalized)
     usage.push({ batch: batch.number, ...result.usage, stopReason: result.stopReason })
   }

@@ -14,6 +14,7 @@ function validateQuestion(question, index, errors) {
   if (!hasText(question.question)) errors.push(`${path}.question é obrigatória`)
   if (!hasText(question.explanation)) errors.push(`${path}.explanation é obrigatória`)
   if (!hasText(question.sourceRef?.section)) errors.push(`${path}.sourceRef.section é obrigatória`)
+  if (!hasText(question.sourceRef?.pages)) errors.push(`${path}.sourceRef.pages é obrigatória`)
 
   if (question.type === 'multipleChoice') {
     if (!Array.isArray(question.options) || question.options.length !== 4) {

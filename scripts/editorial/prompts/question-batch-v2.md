@@ -31,6 +31,10 @@ Questões já produzidas em lotes anteriores e que não devem ser repetidas:
 
 {{AVOID_QUESTIONS}}
 
+Problemas encontrados na tentativa anterior deste lote, que precisam ser corrigidos integralmente:
+
+{{RETRY_FEEDBACK}}
+
 ## Adequação ao 4º ano
 
 As questões serão respondidas por estudantes do 4º ano do Ensino Fundamental, geralmente com 9 ou 10 anos.
@@ -95,6 +99,8 @@ Cada questão de associação deve:
 - não repetir respostas;
 - garantir que cada item tenha apenas uma correspondência correta;
 - evitar pistas baseadas apenas no gênero, número, tamanho ou estrutura gramatical dos itens.
+- em Matemática, calcular antecipadamente todos os resultados usados na coluna direita e substituir exemplos que produzam resultados iguais;
+- quando resultados numéricos distintos não forem viáveis, associar conceitos a definições ou situações, sempre com correspondências únicas.
 
 A interface do Patito embaralha automaticamente a segunda coluna. Entregue cada par correto em `pairs`; não tente representar a ordem visual final.
 

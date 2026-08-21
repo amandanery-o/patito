@@ -5,6 +5,7 @@ import {
   normalizeGeneratedQuestions,
   renderPrompt,
   structuredCollection,
+  validateQuestionDetails,
   validateGeneratedQuestions,
 } from '../../scripts/editorial/generate-questions.mjs'
 import { getEditorialConfig } from '../../scripts/editorial/editorial-configs.mjs'
@@ -38,11 +39,38 @@ describe('gerador editorial', () => {
     expect(buildSourceBrief(config.sourceTopics, config.chapters).map((item) => item.chapter)).toEqual([11, 12])
   })
 
+  it.each([
+    ['matematica-t2', [4, 8], 'matematica-t2-capitulos-4-8'],
+    ['matematica-p1', [5, 6, 7], 'matematica-p1-capitulos-5-6-7'],
+  ])('mantém o recorte oficial de %s', (configurationName, chapters, contentId) => {
+    const config = getEditorialConfig(configurationName)
+    const brief = buildSourceBrief(config.sourceTopics, config.chapters)
+    expect(brief.map((item) => item.chapter)).toEqual(chapters)
+    expect(config).toMatchObject({ subjectId: 'matematica', contentId })
+  })
+
   it('valida quantidade e distribuição de formatos', () => {
     expect(validateGeneratedQuestions(questions(23, 7), { total: 30, multipleChoice: 23, matchColumns: 7 })).toEqual([])
     expect(
       validateGeneratedQuestions(questions(24, 6), { total: 30, multipleChoice: 23, matchColumns: 7 }),
     ).toHaveLength(2)
+  })
+
+  it('rejeita explicação ausente, referência inventada e associação ambígua', () => {
+    const sourceBrief = buildSourceBrief(getEditorialConfig('matematica-p1').sourceTopics, [5])
+    const invalid = [
+      {
+        type: 'matchColumns',
+        explanation: '',
+        sourceRef: { section: 'Seção inventada', pages: '1–2' },
+        pairs: [
+          { left: 'A', right: 'Mesmo' },
+          { left: 'B', right: 'Mesmo' },
+          { left: 'C', right: 'Outro' },
+        ],
+      },
+    ]
+    expect(validateQuestionDetails(invalid, sourceBrief)).toHaveLength(4)
   })
 
   it('valida a distribuição de dificuldade', () => {
@@ -139,6 +167,12 @@ describe('gerador editorial', () => {
 
   it('renderiza todas as variáveis do prompt', () => {
     expect(renderPrompt('Lote {{BATCH}}: {{COUNT}} questões', { BATCH: 1, COUNT: 30 })).toBe('Lote 1: 30 questões')
+  })
+
+  it('permite inserir a crítica da tentativa anterior no novo pedido', () => {
+    expect(renderPrompt('Corrija: {{RETRY_FEEDBACK}}', { RETRY_FEEDBACK: '- associação repetida' })).toBe(
+      'Corrija: - associação repetida',
+    )
   })
 
   it('normaliza coleções indexadas devolvidas pela ferramenta', () => {
