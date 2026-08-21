@@ -24,7 +24,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-012` ✅ Implementar funções transacionais idempotentes para resposta e conclusão de sessão.
 - `TASK-013` ✅ Implementar corte versionado que ignora dados locais do primeiro semestre sem importação automática.
 - `TASK-014` ✅ Implementar repositório cliente e estados loading/saving/saved/error/stale.
-- `TASK-015` Testar recarga, duas abas, troca de dispositivo, RLS e repetição de requisições.
+- `TASK-015` ✅ Testar no PostgreSQL recarga/retomada, duas abas, troca de cliente, isolamento e repetição de requisições.
 
 ## F003 — Sessão de estudos v2
 

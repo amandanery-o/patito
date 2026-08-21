@@ -44,7 +44,7 @@ Representa uma tentativa retomável.
 | `completed_at`  | `timestamptz` | somente quando concluída        |
 | `updated_at`    | `timestamptz` | resolução de versão             |
 
-Uma conta pode ter mais de uma tentativa histórica, mas no máximo uma sessão `active` por `user_id + content_id`.
+Uma conta pode ter mais de uma tentativa histórica, mas no máximo uma sessão aberta (`active` ou `review`) por `user_id + content_id`.
 
 ### `session_answers`
 
