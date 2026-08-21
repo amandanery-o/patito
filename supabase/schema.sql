@@ -8,29 +8,20 @@ create table if not exists public.profiles (
   id             uuid references auth.users on delete cascade primary key,
   name           text not null default 'Estudante' check (char_length(trim(name)) between 1 and 60),
   avatar         text default '🦆',
-  xp             integer default 0,
-  streak_current integer default 0,
-  streak_best    integer default 0,
-  class_code     text default 'turma43',
-  created_at     timestamptz default now()
+  created_at     timestamptz not null default now(),
+  updated_at     timestamptz not null default now()
 );
+
+-- Corte de versão: remove do ambiente existente as métricas do produto antigo.
+drop function if exists public.current_user_class_code();
+alter table public.profiles drop column if exists xp;
+alter table public.profiles drop column if exists streak_current;
+alter table public.profiles drop column if exists streak_best;
+alter table public.profiles drop column if exists class_code;
+alter table public.profiles add column if not exists updated_at timestamptz not null default now();
 
 -- RLS
 alter table public.profiles enable row level security;
-
--- Evita recursão de RLS ao descobrir a turma do usuário atual.
-create or replace function public.current_user_class_code()
-returns text
-language sql
-stable
-security definer
-set search_path = public
-as $$
-  select class_code from public.profiles where id = auth.uid();
-$$;
-
-revoke all on function public.current_user_class_code() from public;
-grant execute on function public.current_user_class_code() to authenticated;
 
 drop policy if exists "profiles_select" on public.profiles;
 
@@ -76,6 +67,19 @@ drop trigger if exists on_auth_user_created on auth.users;
 create trigger on_auth_user_created
   after insert on auth.users
   for each row execute procedure public.handle_new_user();
+
+create or replace function public.touch_updated_at()
+returns trigger language plpgsql as $$
+begin
+  new.updated_at = now();
+  return new;
+end;
+$$;
+
+drop trigger if exists profiles_touch_updated_at on public.profiles;
+create trigger profiles_touch_updated_at
+  before update on public.profiles
+  for each row execute procedure public.touch_updated_at();
 
 -- ── Estado de estudo sincronizado ──────────────────────────
 create table if not exists public.study_sessions (

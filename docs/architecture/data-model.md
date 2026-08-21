@@ -25,7 +25,7 @@ Um perfil por usuário do Supabase Auth.
 | `created_at` | `timestamptz` | padrão `now()`                            |
 | `updated_at` | `timestamptz` | atualizado por trigger                    |
 
-`xp`, `streak_current`, `streak_best` e `class_code` do schema atual tornam-se campos legados. XP passa a ser derivado de utilização; streak e níveis deixam de existir. Como existe apenas uma turma, `class_code` não participa da v1.
+`xp`, `streak_current`, `streak_best` e `class_code` são removidos pelo corte de versão do schema. A pontuação de atividade é derivada de `usage_events`; streak, níveis e segmentação por turma não existem nesta versão.
 
 ### `study_sessions`
 
