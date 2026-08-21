@@ -38,7 +38,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 
 - `TASK-021` ✅ Remover conteúdo do primeiro semestre e olimpíadas da experiência ativa, preservando recuperação pelo histórico do Git.
 - `TASK-022` ✅ Definir schema de livro, conteúdo, resumo e questões.
-- `TASK-023` 🟡 Publicar resumos textuais e exercícios do segundo semestre por matéria (Geografia P1 publicada; demais matérias aguardam fontes).
+- `TASK-023` 🟡 Publicar resumos textuais e exercícios do segundo semestre por matéria (Geografia P1 publicada; P2 gerada e aguardando revisão humana; demais matérias aguardam fontes).
 - `TASK-024` ✅ Validar estrutura, IDs, relações e quantidade de questões.
 
 ## F005 — Calendário
@@ -75,7 +75,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-042` 🟡 Documentar contratos e permissões da Edebê (catálogo e fontes documentados; acesso oficial por API ainda não fornecido).
 - `TASK-043` 🟡 Documentar contratos e permissões da Richmond College (acesso oficial ainda não fornecido).
 - `TASK-044` ✅ Criar armazenamento seguro de credenciais editoriais.
-- `TASK-045` Implementar adaptadores quando as configurações forem entregues.
+- `TASK-045` 🟡 Implementar adaptadores quando configurações oficiais e permissões forem entregues; é proibido extrair senha, cookies ou sessão do aluno.
 - `TASK-046` ✅ Registrar origem, versão e validação dos lotes.
 - `TASK-047` ✅ Integrar importação do calendário em PDF com transcrição revisada, manifesto, comparação de versões e SQL transacional.
 - `TASK-048` ✅ Definir schema versionado de conteúdo e questões geradas por IA.

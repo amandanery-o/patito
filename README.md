@@ -72,3 +72,4 @@ supabase/           schema, seed e função de relato de problemas
 ```
 
 O estado da implementação está em `docs/tasks/backlog.md` e a relação entre requisitos e entregas em `docs/tasks/traceability.md`.
+As credenciais, decisões editoriais e ativações externas ainda necessárias estão em `docs/operations/go-live-checklist.md`.
