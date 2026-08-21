@@ -41,9 +41,18 @@ Para criar o rascunho da P2 de Geografia (capítulos 11 e 12):
 
 ```bash
 npm run editorial:generate:geografia-p2
+npm run editorial:review:geografia-p2
 ```
 
-O mesmo gerador escolhe a configuração editorial pelo nome do conteúdo, mantendo IDs, fontes, focos e checkpoints separados entre P1 e P2.
+O segundo comando cria uma página local em `editorial/reviews/geografia-p2.html`. Nela, a mantenedora confere cada questão, registra sua decisão e exporta um manifesto JSON. O manifesto contém o hash exato do rascunho: qualquer alteração posterior invalida a aprovação.
+
+Depois de salvar o manifesto exportado como `editorial/reviews/geografia-p2-review.json`, a aprovação final é criada com:
+
+```bash
+npm run editorial:approve:geografia-p2
+```
+
+O comando recusa questões pendentes ou com ajuste solicitado. O mesmo gerador escolhe a configuração editorial pelo nome do conteúdo, mantendo IDs, fontes, focos e checkpoints separados entre P1 e P2.
 
 Não cole a chave em arquivos do projeto, no chat, em issues ou em commits.
 

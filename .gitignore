@@ -8,5 +8,7 @@ playwright-report/
 test-results/
 .vercel
 editorial/drafts/
+editorial/reviews/
+editorial/approved/
 scripts/richmond/.cache/
 scripts/edebe/.cache/
