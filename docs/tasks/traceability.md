@@ -6,7 +6,7 @@
 | REQ-011–012, 062–063                | F001             | TASK-005–009          | UI de Auth, schema e isolamento               | Ativado e validado no projeto Supabase remoto             |
 | REQ-011–013, 027, 031, 044, 052–053 | F002             | TASK-010–015          | PostgreSQL real + hooks de sincronização      | Implementado e testado localmente                         |
 | REQ-015–016, 023–030, 052–054       | F003             | TASK-016–020          | Unitários + jornada E2E completa              | Implementado e testado                                    |
-| REQ-014–022, 045–048, 057           | F004, F009       | TASK-021–024, 042–051 | P1 e P2 publicadas com revisão auditável      | Parcial; demais matérias e fontes ainda estão pendentes   |
+| REQ-014–022, 045–048, 057, 067–071  | F004, F009       | TASK-021–024, 042–051 | P1 e P2 publicadas com revisão auditável      | Parcial; demais matérias e fontes ainda estão pendentes   |
 | REQ-064–065                         | F002, F004       | TASK-013, 021–024     | Corte versionado + teste de estado local      | Implementado                                              |
 | REQ-066                             | F004             | TASK-021              | Busca de conteúdo antigo + E2E                | Implementado                                              |
 | REQ-036–039                         | F005, F009       | TASK-025–028, 047     | Importador, manifesto e testes de alerta/fuso | Implementado; 27 eventos publicados no Supabase remoto    |

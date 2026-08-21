@@ -82,6 +82,7 @@ Every feature must include user value, scope, rules, data implications, acceptan
 - Treat **Material de revisão** and **Praticar questões** as two explicit actions within the same assessment card.
 - Never represent book chapters, summaries, and question banks as equivalent consecutive trail steps.
 - When a P1/P2 material already groups chapters, do not repeat those chapters as competing cards on the subject screen.
+- Student-facing progress counts published review materials (P1/P2), never internal topic records or hidden chapters.
 - Use child-friendly copy that makes the next action understandable without adult support.
 - Any agent changing educational content or subject navigation must update the PRD/feature traceability and preserve this invariant in UI tests.
 

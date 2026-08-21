@@ -19,12 +19,21 @@ export default function SubjectCard({ subject, progress, onClick, isNew }) {
             )}
           </div>
           <p className="text-xs text-white/80 mt-0.5">
-            {completed}/{total} tópicos
+            {total > 0
+              ? `${completed} de ${total} ${total === 1 ? 'revisão concluída' : 'revisões concluídas'}`
+              : 'Material em preparação'}
           </p>
         </div>
       </div>
 
-      <div className="w-full h-2.5 bg-white/30 rounded-full overflow-hidden">
+      <div
+        className="w-full h-2.5 bg-white/30 rounded-full overflow-hidden"
+        role="progressbar"
+        aria-label={`Progresso das revisões de ${subject.name}`}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-valuenow={percent}
+      >
         <div className="h-full bg-white rounded-full transition-all duration-500" style={{ width: `${percent}%` }} />
       </div>
 
@@ -33,7 +42,7 @@ export default function SubjectCard({ subject, progress, onClick, isNew }) {
         className="w-full bg-white text-gray-800 font-extrabold rounded-xl py-2.5 text-sm border-b-4 active:border-b-2 active:translate-y-0.5 transition-all select-none hover:brightness-95"
         style={{ borderBottomColor: 'rgba(0,0,0,0.15)' }}
       >
-        {hasQuestions ? 'Jogar agora 🎮' : 'Revisar agora 📖'}
+        {hasQuestions ? 'Ver materiais 📚' : 'Revisar agora 📖'}
       </button>
     </div>
   )

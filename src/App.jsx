@@ -101,7 +101,7 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
   const [resultSaving, setResultSaving] = useState(false)
   const [resultError, setResultError] = useState('')
 
-  const { user, updateTopicProgress, getTopicProgress, getSubjectProgress, setUserName, reloadProgress } = useProgress({
+  const { user, updateTopicProgress, getTopicProgress, setUserName, reloadProgress } = useProgress({
     userId: session?.user?.id,
     profile,
     repository: e2e ? e2eProgressRepository : null,
@@ -413,7 +413,14 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
           {subjectsWithContent.length > 0 && (
             <div className="space-y-3">
               {subjectsWithContent.map((subject) => {
-                const progress = getSubjectProgress(subject.id, subject.topics.length)
+                const reviewMaterials = subject.topics.filter(
+                  (topic) => topic.questions.length > 0 && topic.summarySections?.length,
+                )
+                const completed = reviewMaterials.filter(
+                  (topic) => getTopicProgress(subject.id, topic.id).completed,
+                ).length
+                const total = reviewMaterials.length
+                const progress = { completed, total, percent: total ? Math.round((completed / total) * 100) : 0 }
                 return (
                   <SubjectCard
                     key={subject.id}

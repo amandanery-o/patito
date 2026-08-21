@@ -15,7 +15,11 @@ describe('SubjectCard', () => {
   it('exibe nome e progresso', () => {
     render(<SubjectCard subject={subject} progress={progress} onClick={() => {}} />)
     expect(screen.getByText('Matemática')).toBeInTheDocument()
-    expect(screen.getByText('1/3 tópicos')).toBeInTheDocument()
+    expect(screen.getByText('1 de 3 revisões concluídas')).toBeInTheDocument()
+    expect(screen.getByRole('progressbar', { name: 'Progresso das revisões de Matemática' })).toHaveAttribute(
+      'aria-valuenow',
+      '33',
+    )
   })
 
   it('chama onClick ao clicar', () => {

@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test'
 import { seedUser } from './helpers.js'
 
 async function openGeographySession(page) {
-  await page.getByRole('button', { name: /Jogar agora/i }).click()
+  await page.getByRole('button', { name: /Ver materiais/i }).click()
   await page.getByRole('button', { name: /Praticar Revisão P1 — Espaços rural e urbano/i }).click()
 }
 
