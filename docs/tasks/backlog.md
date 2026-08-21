@@ -38,7 +38,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 
 - `TASK-021` ✅ Remover conteúdo do primeiro semestre e olimpíadas da experiência ativa, preservando recuperação pelo histórico do Git.
 - `TASK-022` ✅ Definir schema de livro, conteúdo, resumo e questões.
-- `TASK-023` 🟡 Publicar resumos textuais e exercícios do segundo semestre por matéria (Geografia P1 publicada; P2 gerada e aguardando revisão humana; demais matérias aguardam fontes).
+- `TASK-023` 🟡 Publicar resumos textuais e exercícios do segundo semestre por matéria (Geografia P1 publicada; P2 em revisão automática independente; demais matérias aguardam fontes).
 - `TASK-024` ✅ Validar estrutura, IDs, relações e quantidade de questões.
 
 ## F005 — Calendário

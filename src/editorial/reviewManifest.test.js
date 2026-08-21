@@ -39,6 +39,11 @@ describe('manifesto de revisão editorial', () => {
   it('registra a aprovação humana no conteúdo', () => {
     const approved = approveReviewedDraft(draft, completedReview())
     expect(approved.status).toBe('approved')
-    expect(approved.editorialApproval).toMatchObject({ reviewer: 'Amanda', draftDigest: draftDigest(draft) })
+    expect(approved.editorialApproval).toMatchObject({
+      reviewer: 'Amanda',
+      reviewerType: 'human',
+      reviewMethod: 'manual-question-by-question-v1',
+      draftDigest: draftDigest(draft),
+    })
   })
 })

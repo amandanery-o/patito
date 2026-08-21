@@ -11,8 +11,8 @@ O gerador roda apenas na máquina da mantenedora. A API do Claude não é chamad
 5. O script exige o total de 45 questões de múltipla escolha e 15 de associação.
 6. O validador verifica formatos, explicações, referências, alternativas, associações e IDs.
 7. O resultado é salvo em `editorial/drafts/`, diretório ignorado pelo Git.
-8. Uma pessoa revisa conteúdo, alternativas, respostas e explicações.
-9. O comando de aprovação aplica os ajustes editoriais registrados e publica somente as questões validadas em `src/data/generated/`.
+8. Um agente revisor independente confere conteúdo, alternativas, respostas, explicações e referências; dúvidas sem solução segura são escaladas à mantenedora.
+9. O comando de aprovação registra o parecer auditável e publica somente as questões validadas em `src/data/generated/`.
 
 Os prompts são artefatos editoriais versionados:
 
@@ -44,7 +44,7 @@ npm run editorial:generate:geografia-p2
 npm run editorial:review:geografia-p2
 ```
 
-O segundo comando cria uma página local em `editorial/reviews/geografia-p2.html`. Nela, a mantenedora confere cada questão, registra sua decisão e exporta um manifesto JSON. O manifesto contém o hash exato do rascunho: qualquer alteração posterior invalida a aprovação.
+O segundo comando cria uma página local em `editorial/reviews/geografia-p2.html` para inspeção opcional. Por padrão, um agente independente revisa todas as questões e produz o mesmo manifesto auditável. O manifesto contém o hash exato do rascunho: qualquer alteração posterior invalida a aprovação.
 
 Depois de salvar o manifesto exportado como `editorial/reviews/geografia-p2-review.json`, a aprovação final é criada com:
 
@@ -61,7 +61,8 @@ Por padrão, o resultado é criado em `editorial/drafts/geografia-p1.json`. O sc
 
 ## Limites de segurança
 
-- Não há publicação automática após a geração; a aprovação é uma etapa separada e reproduzível.
+- Não há publicação direta após a geração; revisão, aprovação e publicação são etapas separadas e reproduzíveis.
+- A aprovação pode ser automatizada por um agente independente, mas falha de forma fechada: qualquer dúvida ou ajuste pendente impede a publicação e é escalado.
 - O provedor e o modelo ficam registrados no lote.
 - Cada questão deve referenciar seção e páginas da fonte.
 - Uma falha em qualquer lote impede a criação do arquivo final.

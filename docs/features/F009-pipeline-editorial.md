@@ -6,7 +6,7 @@
 
 ## Resultado
 
-A mantenedora transforma fontes autorizadas em conteúdo e calendário validados, usando IA como assistente editorial sem expor credenciais no sistema web.
+O pipeline transforma fontes autorizadas em conteúdo e calendário validados, usando agentes editoriais sem expor credenciais no sistema web. A mantenedora é acionada somente quando o revisor independente não consegue resolver uma dúvida com segurança.
 
 ## Fontes previstas
 
@@ -21,7 +21,9 @@ A mantenedora transforma fontes autorizadas em conteúdo e calendário validados
 - Todo conteúdo passa por validação estrutural antes de ser publicado.
 - A origem e a versão de cada lote são registradas.
 - A IA produz rascunhos estruturados de resumo, questões, respostas, explicações e referências ao trecho de origem.
-- A IA nunca publica diretamente; validação automática e aprovação editorial são obrigatórias.
+- O agente autor e o agente revisor exercem papéis separados.
+- O agente autor nunca publica diretamente; validação automática e aprovação auditável do revisor independente são obrigatórias.
+- O revisor corrige problemas sustentados pela fonte e escala somente dúvidas que não podem ser resolvidas com alta confiança.
 - Um conteúdo aprovado contém ao menos 60 questões e cada sessão consome aproximadamente 30.
 - Dados ou respostas dos alunos nunca são enviados ao modelo de geração.
 

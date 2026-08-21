@@ -387,7 +387,7 @@ async function main() {
     flag: 'wx',
   })
   console.log(`Rascunho criado em ${output}`)
-  console.log('Status: draft — revisão humana obrigatória antes da publicação')
+  console.log('Status: draft — revisão editorial independente obrigatória antes da publicação')
 }
 
 if (fileURLToPath(import.meta.url) === resolve(process.argv[1])) {

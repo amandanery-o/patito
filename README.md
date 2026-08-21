@@ -13,7 +13,7 @@ Sistema web mobile-first para tornar o estudo do segundo semestre mais simples e
 - CRUD de Temas: descrição, páginas, entrega e conclusão.
 - Ranking somente por utilização, sem usar acertos ou desempenho.
 - Relato anônimo de problemas e questões para o GitHub.
-- Pipeline editorial com geração assistida por Claude e aprovação humana obrigatória.
+- Pipeline editorial com geração, revisão independente e aprovação auditável por agente; dúvidas são escaladas para a mantenedora.
 
 O produto não possui vidas, flashcards, streak, níveis, olimpíadas, papéis de professor/responsável ou administração pelo aluno.
 

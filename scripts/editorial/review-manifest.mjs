@@ -16,6 +16,8 @@ export function createReviewManifest(draft) {
     contentId: draft.id,
     draftDigest: draftDigest(draft),
     reviewer: '',
+    reviewerType: 'human',
+    reviewMethod: 'manual-question-by-question-v1',
     reviewedAt: null,
     decisions: Object.fromEntries(
       draft.questions.map((question) => [question.id, { decision: REVIEW_DECISIONS.PENDING, comment: '' }]),
@@ -29,6 +31,9 @@ export function validateReviewManifest(draft, manifest, { requireAllApproved = f
   if (manifest?.contentId !== draft.id) errors.push('a revisão pertence a outro conteúdo')
   if (manifest?.draftDigest !== draftDigest(draft)) errors.push('o rascunho mudou depois da revisão')
   if (typeof manifest?.reviewer !== 'string' || !manifest.reviewer.trim()) errors.push('reviewer é obrigatório')
+  if (!['human', 'agent'].includes(manifest?.reviewerType)) errors.push('reviewerType deve ser human ou agent')
+  if (typeof manifest?.reviewMethod !== 'string' || !manifest.reviewMethod.trim())
+    errors.push('reviewMethod é obrigatório')
   if (!manifest?.reviewedAt || Number.isNaN(Date.parse(manifest.reviewedAt)))
     errors.push('reviewedAt deve ser uma data válida')
 
@@ -55,6 +60,8 @@ export function approveReviewedDraft(draft, manifest) {
     status: 'approved',
     editorialApproval: {
       reviewer: manifest.reviewer.trim(),
+      reviewerType: manifest.reviewerType,
+      reviewMethod: manifest.reviewMethod,
       reviewedAt: manifest.reviewedAt,
       draftDigest: manifest.draftDigest,
       schemaVersion: manifest.schemaVersion,
