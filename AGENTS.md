@@ -85,6 +85,7 @@ Every feature must include user value, scope, rules, data implications, acceptan
 - When a P1/P2 material already groups chapters, do not repeat those chapters as competing cards on the subject screen.
 - Student-facing progress counts published review materials (P1/P2), never internal topic records or hidden chapters.
 - Use child-friendly copy that makes the next action understandable without adult support.
+- Use **Agenda** in bottom navigation and **Agenda escolar** as the student-facing area name; “Prova” and “Trabalho” are event types, never the section label.
 - Any agent changing educational content or subject navigation must update the PRD/feature traceability and preserve this invariant in UI tests.
 - For a new subject, follow the full source → material → generation → independent review → publication → test sequence in the playbook; do not publish question-only packages.
 

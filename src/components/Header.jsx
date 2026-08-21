@@ -17,7 +17,7 @@ export default function Header({ user, onCalendarClick, onSignOut }) {
           <button
             onClick={onCalendarClick}
             className="hover:scale-110 transition-transform"
-            aria-label="Calendário de provas"
+            aria-label="Abrir agenda escolar"
           >
             <CalendarIcon />
           </button>

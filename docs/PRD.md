@@ -93,12 +93,12 @@ Não existirão perfis de responsável, professor, coordenador ou administrador 
 - `REQ-051` Aplicar limites diários de contabilização para impedir geração artificial de XP ou posição no ranking.
 - `REQ-060` Contabilizar no máximo 60 questões respondidas e duas sessões concluídas por aluno por dia para XP e ranking, sem impedir estudo adicional.
 
-### Calendário e alertas
+### Agenda escolar e alertas
 
-- `REQ-036` Manter calendário de provas, trabalhos e outros compromissos escolares.
+- `REQ-036` Manter uma Agenda escolar de provas, trabalhos e outros compromissos, com visualização em calendário e lista.
 - `REQ-037` Exibir alertas como “prova em N dias”.
-- `REQ-038` Atualizar o calendário a partir de PDF enviado pela professora e processado pela mantenedora.
-- `REQ-039` Não permitir administração do calendário pelos alunos.
+- `REQ-038` Atualizar a Agenda a partir de PDF enviado pela professora e processado pela mantenedora.
+- `REQ-039` Não permitir administração da Agenda oficial pelos alunos.
 
 ### Temas
 

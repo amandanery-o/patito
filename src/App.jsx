@@ -579,7 +579,7 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
   }
 
   // -------------------------------------------------------------------------
-  // VIEW: CALENDAR — calendário de provas
+  // VIEW: CALENDAR — agenda escolar
   // -------------------------------------------------------------------------
 
   if (view === VIEWS.CALENDAR) {
@@ -592,7 +592,7 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
               ‹
             </button>
             <CalendarIcon size="sm" />
-            <h1 className="font-bold text-gray-800 text-lg flex-1">Calendário escolar</h1>
+            <h1 className="font-bold text-gray-800 text-lg flex-1">Agenda escolar</h1>
             <span className="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-full">Oficial</span>
           </div>
 
@@ -631,7 +631,7 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
                 <p className="bg-red-50 text-red-700 rounded-xl p-3 text-sm font-bold mb-3">{schoolEvents.error}</p>
               )}
               {schoolEvents.loading ? (
-                <p className="text-center py-10 text-gray-400 font-semibold">Carregando calendário…</p>
+                <p className="text-center py-10 text-gray-400 font-semibold">Carregando agenda…</p>
               ) : exams.length === 0 ? (
                 <div className="text-center py-10 space-y-2 flex flex-col items-center">
                   <Mascot mood="neutro" size="md" />

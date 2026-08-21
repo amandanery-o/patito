@@ -41,7 +41,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-023` 🟡 Publicar resumos textuais e exercícios do segundo semestre por matéria (Geografia P1 e P2 publicadas; demais matérias aguardam fontes).
 - `TASK-024` ✅ Validar estrutura, IDs, relações e quantidade de questões.
 
-## F005 — Calendário
+## F005 — Agenda escolar
 
 - `TASK-025` ✅ Remover edição de eventos oficiais da interface do aluno.
 - `TASK-026` ✅ Atualizar seed/eventos para o segundo semestre.

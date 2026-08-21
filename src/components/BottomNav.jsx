@@ -11,7 +11,7 @@ export default function BottomNav({ activeView, onHome, onHomework, onSchedule, 
           active={activeView === 'calendar'}
           onClick={onCalendar}
           icon={<CalendarIcon size="sm" />}
-          label="Provas"
+          label="Agenda"
           useCustomIcon
         />
         <NavTab active={activeView === 'leaderboard'} onClick={onLeaderboard} icon="🏆" label="Ranking" />
@@ -24,6 +24,7 @@ function NavTab({ active, onClick, icon, label, useCustomIcon = false }) {
   return (
     <button
       onClick={onClick}
+      aria-label={label}
       className={`flex-1 flex flex-col items-center gap-1 py-3 text-xs font-bold transition-colors border-t-2
         ${active ? 'text-blue-600 border-blue-600' : 'text-gray-400 hover:text-gray-600 border-transparent'}`}
     >

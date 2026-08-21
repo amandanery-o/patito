@@ -41,7 +41,7 @@ export function useSchoolEvents(authenticated, repository) {
         if (active) setEvents(data)
       })
       .catch(() => {
-        if (active) setError('Não conseguimos carregar o calendário.')
+        if (active) setError('Não conseguimos carregar a agenda escolar.')
       })
       .finally(() => {
         if (active) setLoading(false)

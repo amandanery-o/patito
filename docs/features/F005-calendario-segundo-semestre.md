@@ -1,4 +1,4 @@
-# F005 — Calendário do segundo semestre
+# F005 — Agenda escolar do segundo semestre
 
 ## Requisitos
 
@@ -6,7 +6,7 @@
 
 ## Resultado
 
-O aluno consulta datas escolares atualizadas e recebe alertas de proximidade sem editar o calendário oficial.
+O aluno consulta provas, trabalhos e outros compromissos na **Agenda escolar**, com visualização mensal ou em lista, e recebe alertas de proximidade sem editar os eventos oficiais.
 
 ## Regras
 
@@ -14,6 +14,7 @@ O aluno consulta datas escolares atualizadas e recebe alertas de proximidade sem
 - Alunos possuem acesso somente de leitura aos eventos oficiais.
 - Alertas apresentam tipo, matéria e dias restantes.
 - Datas antigas do primeiro semestre não aparecem como próximas.
+- Na interface infantil, usar **Agenda** no menu e **Agenda escolar** como título. “Provas” e “Trabalhos” são tipos de evento, não o nome da área.
 
 ## Critérios de aceite
 

@@ -9,7 +9,7 @@ Sistema web mobile-first para tornar o estudo do segundo semestre mais simples e
 - Resumos textuais e sessões de aproximadamente 30 questões.
 - Exercícios de múltipla escolha e associação.
 - Retomada da sessão após sair ou recarregar, revisão dos erros e tentativas ilimitadas.
-- Calendário oficial de provas e trabalhos, com alertas de proximidade.
+- Agenda escolar oficial com provas, trabalhos e alertas de proximidade.
 - CRUD de Temas: descrição, páginas, entrega e conclusão.
 - Ranking somente por utilização, sem usar acertos ou desempenho.
 - Relato anônimo de problemas e questões para o GitHub.

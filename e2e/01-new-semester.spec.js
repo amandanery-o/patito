@@ -53,11 +53,12 @@ test.describe('Estrutura limpa do segundo semestre', () => {
     await expect(page.getByText('1/30 questões', { exact: true })).toBeVisible()
   })
 
-  test('inicia o calendário oficial vazio', async ({ page }) => {
+  test('abre a agenda escolar oficial', async ({ page }) => {
     await page
-      .getByRole('button', { name: /Provas/i })
+      .getByRole('button', { name: /Agenda/i })
       .last()
       .click()
+    await expect(page.getByRole('heading', { name: 'Agenda escolar' })).toBeVisible()
     await expect(page.getByText('Oficial')).toBeVisible()
     await expect(page.getByRole('button', { name: /Adicionar atividade/i })).toHaveCount(0)
     await page.getByRole('button', { name: 'Lista' }).click()
