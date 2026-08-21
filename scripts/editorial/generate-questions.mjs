@@ -12,6 +12,18 @@ const SCRIPT_DIRECTORY = dirname(fileURLToPath(import.meta.url))
 const SYSTEM_PROMPT_PATH = resolve(SCRIPT_DIRECTORY, 'prompts/question-author-system-v1.md')
 const BATCH_PROMPT_PATH = resolve(SCRIPT_DIRECTORY, 'prompts/question-batch-v2.md')
 
+async function appendUsageEvent(path, event) {
+  let events = []
+  try {
+    events = JSON.parse(await readFile(path, 'utf8'))
+  } catch (error) {
+    if (/** @type {{ code?: string }} */ (error).code !== 'ENOENT') throw error
+  }
+  events.push(event)
+  await mkdir(dirname(path), { recursive: true })
+  await writeFile(path, `${JSON.stringify(events, null, 2)}\n`)
+}
+
 function requiredEnvironment(name) {
   const value = process.env[name]?.trim()
   if (!value) throw new Error(`${name} não configurado`)
@@ -311,6 +323,7 @@ async function main() {
   const configurationName = process.argv[2] || 'geografia-p1'
   const config = getEditorialConfig(configurationName)
   const output = resolve(process.argv[3] || `editorial/drafts/${configurationName}.json`)
+  const usageLedger = resolve(`editorial/usage/${configurationName}.json`)
   const sourceBrief = buildSourceBrief(config.sourceTopics, config.chapters)
   const [systemPrompt, batchTemplate] = await Promise.all([
     readFile(SYSTEM_PROMPT_PATH, 'utf8'),
@@ -341,6 +354,7 @@ async function main() {
     let errors = []
     const maxAttempts = result ? 4 : 3
     for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+      let generatedByApi = false
       if (!result || errors.length) {
         result = await generateBatch({
           apiKey,
@@ -353,6 +367,7 @@ async function main() {
           existingQuestions: generated,
           validationFeedback: errors,
         })
+        generatedByApi = true
       }
       normalized = normalizeGeneratedQuestions(result.questions, batch)
       errors = [...validateGeneratedQuestions(normalized, batch), ...validateQuestionDetails(normalized, sourceBrief)]
@@ -369,6 +384,19 @@ async function main() {
         errors.push(
           `enunciado repetido em outro lote: ${repeatedAcrossBatches.map((item) => item.question).join(' | ')}`,
         )
+      if (generatedByApi) {
+        await appendUsageEvent(usageLedger, {
+          recordedAt: new Date().toISOString(),
+          model,
+          promptVersion: PROMPT_VERSION,
+          batch: batch.number,
+          attempt,
+          accepted: errors.length === 0,
+          validationErrors: errors,
+          usage: result.usage,
+          stopReason: result.stopReason,
+        })
+      }
       if (!errors.length) break
       console.warn(`Lote ${batch.number}, tentativa ${attempt}, rejeitado: ${errors.join('; ')}`)
     }

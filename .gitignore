@@ -10,6 +10,7 @@ test-results/
 editorial/drafts/
 editorial/reviews/
 editorial/approved/
+editorial/usage/
 scripts/richmond/.cache/
 scripts/edebe/.cache/
 supabase/.temp/
