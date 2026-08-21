@@ -1,7 +1,7 @@
 import Mascot from './Mascot'
 import Confetti from './Confetti'
 
-export default function ResultScreen({ correct, total, incorrectQuestions = [], onContinue, onHome }) {
+export default function ResultScreen({ correct, total, incorrectQuestions = [], onContinue, onHome, saving, error }) {
   return (
     <div className="relative flex flex-col items-center gap-6 sm:gap-8 py-10 sm:py-16 px-4 sm:px-10 text-center overflow-hidden">
       <Confetti />
@@ -31,11 +31,24 @@ export default function ResultScreen({ correct, total, incorrectQuestions = [], 
         </div>
       )}
 
+      {error && (
+        <p
+          role="alert"
+          className="w-full rounded-2xl border border-red-200 bg-red-50 p-3 text-sm font-bold text-red-700"
+        >
+          {error}
+        </p>
+      )}
+
       <div className="flex flex-col gap-3 w-full">
-        <button onClick={onContinue} className="w-full text-lg sm:text-xl btn-duo-green">
-          Continuar 🚀
+        <button
+          disabled={saving}
+          onClick={onContinue}
+          className="w-full text-lg sm:text-xl btn-duo-green disabled:opacity-60"
+        >
+          {saving ? 'Salvando…' : 'Continuar 🚀'}
         </button>
-        <button onClick={onHome} className="w-full sm:text-lg btn-duo-gray">
+        <button disabled={saving} onClick={onHome} className="w-full sm:text-lg btn-duo-gray disabled:opacity-60">
           Início 🏠
         </button>
       </div>

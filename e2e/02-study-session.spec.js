@@ -7,6 +7,8 @@ async function openGeographySession(page) {
 }
 
 async function answerCurrentQuestion(page) {
+  const progressText = await page.getByText(/\d+\/30 questões/).textContent()
+  const currentQuestion = Number(progressText.split('/')[0])
   const exerciseGrid = page.locator('main .grid-cols-2, main .grid-cols-1').first()
   await exerciseGrid.waitFor()
   const isMatchQuestion = (await exerciseGrid.getAttribute('class')).includes('grid-cols-2')
@@ -21,7 +23,10 @@ async function answerCurrentQuestion(page) {
   } else {
     await exerciseGrid.locator('button:not([disabled])').first().click()
   }
-  await page.getByRole('button', { name: 'Continuar', exact: true }).click()
+  await page.getByRole('button', { name: 'Continuar', exact: true }).evaluate((button) => button.click())
+  if (currentQuestion < 30)
+    await expect(page.getByText(`${currentQuestion + 1}/30 questões`, { exact: true })).toBeVisible()
+  else await expect(page.getByText('Revisão concluída! 🎉')).toBeVisible()
 }
 
 test('abandona, retoma, recarrega, conclui e começa uma nova tentativa', async ({ page }) => {

@@ -1,4 +1,4 @@
-import { act, renderHook } from '@testing-library/react'
+import { act, renderHook, waitFor } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { useProgress } from './useProgress'
 
@@ -41,5 +41,30 @@ describe('useProgress', () => {
 
     const second = renderHook(() => useProgress({ userId: 'aluno-b' }))
     expect(second.result.current.getTopicProgress('ingles', 'ing-p1').completed).toBe(false)
+  })
+
+  it('carrega do servidor o progresso concluído em outro dispositivo', async () => {
+    vi.useRealTimers()
+    const repository = {
+      configured: true,
+      list: vi.fn().mockResolvedValue([
+        {
+          subject_id: 'geografia',
+          content_id: 'geo-p1',
+          sessions_completed: 2,
+          questions_answered: 60,
+          last_studied_at: '2026-08-20T12:00:00Z',
+        },
+      ]),
+    }
+    const { result } = renderHook(() => useProgress({ userId: 'aluno-a', repository }))
+
+    await waitFor(() => expect(result.current.syncing).toBe(false))
+    expect(repository.list).toHaveBeenCalledWith('aluno-a')
+    expect(result.current.getTopicProgress('geografia', 'geo-p1')).toMatchObject({
+      completed: true,
+      sessionsCompleted: 2,
+      questionsAnswered: 60,
+    })
   })
 })

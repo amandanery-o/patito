@@ -3,6 +3,8 @@
 -- Colar no SQL Editor do Supabase e executar
 -- ============================================================
 
+grant usage on schema public to authenticated;
+
 -- Tabela de perfis (estende auth.users)
 create table if not exists public.profiles (
   id             uuid references auth.users on delete cascade primary key,
@@ -38,6 +40,8 @@ create policy "profiles_upsert"
   to authenticated
   using (auth.uid() = id)
   with check (auth.uid() = id);
+
+grant select on public.profiles to authenticated;
 
 -- O navegador pode editar somente os campos visuais do próprio perfil.
 -- Pontuação e demais métricas serão atualizadas por funções transacionais.
@@ -207,6 +211,11 @@ end $$;
 revoke update, delete on public.study_sessions from authenticated;
 revoke insert, update, delete on public.session_answers from authenticated;
 revoke insert, update, delete on public.topic_progress from authenticated;
+grant select, insert on public.study_sessions to authenticated;
+grant select on public.session_answers to authenticated;
+grant select on public.topic_progress to authenticated;
+grant select, insert, update, delete on public.homework to authenticated;
+grant select on public.usage_events to authenticated;
 
 drop policy if exists own_usage_events on public.usage_events;
 create policy own_usage_events on public.usage_events for select to authenticated

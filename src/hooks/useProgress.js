@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { createTopicProgressRepository } from '../repositories/topicProgressRepository'
 
 const STORAGE_KEY = 'patito_data'
 const STORAGE_VERSION = 4
@@ -48,13 +49,48 @@ function saveData(storageKey, data) {
   localStorage.setItem(storageKey, JSON.stringify(data))
 }
 
-export function useProgress({ userId = null, profile = null } = {}) {
+export function useProgress({ userId = null, profile = null, repository = null } = {}) {
   const storageKey = useMemo(() => `${STORAGE_KEY}:${userId || 'offline'}`, [userId])
+  const stableRepository = useMemo(() => repository || createTopicProgressRepository(), [repository])
   const [data, setData] = useState(() => loadData(storageKey, profile))
+  const [syncError, setSyncError] = useState('')
+  const [syncing, setSyncing] = useState(false)
 
   useEffect(() => {
     setData(loadData(storageKey, profile))
   }, [storageKey, profile])
+
+  const reloadProgress = useCallback(async () => {
+    if (!userId || !stableRepository.configured) return
+    setSyncing(true)
+    setSyncError('')
+    try {
+      const rows = await stableRepository.list(userId)
+      const progress = rows.reduce((subjects, row) => {
+        const subject = { ...(subjects[row.subject_id] || {}) }
+        subject[row.content_id] = {
+          completed: row.sessions_completed > 0,
+          sessionsCompleted: row.sessions_completed,
+          questionsAnswered: row.questions_answered,
+          lastStudiedAt: row.last_studied_at,
+        }
+        return { ...subjects, [row.subject_id]: subject }
+      }, {})
+      setData((previous) => {
+        const next = { ...previous, progress }
+        saveData(storageKey, next)
+        return next
+      })
+    } catch {
+      setSyncError('Não conseguimos atualizar seu progresso.')
+    } finally {
+      setSyncing(false)
+    }
+  }, [stableRepository, storageKey, userId])
+
+  useEffect(() => {
+    reloadProgress()
+  }, [reloadProgress])
 
   useEffect(() => {
     if (!profile) return
@@ -113,5 +149,8 @@ export function useProgress({ userId = null, profile = null } = {}) {
     getTopicProgress,
     getSubjectProgress,
     setUserName,
+    reloadProgress,
+    syncing,
+    syncError,
   }
 }

@@ -91,8 +91,10 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
   const [correct, setCorrect] = useState(0)
   const [incorrectQuestions, setIncorrectQuestions] = useState([])
   const [calendarView, setCalendarView] = useState('month')
+  const [resultSaving, setResultSaving] = useState(false)
+  const [resultError, setResultError] = useState('')
 
-  const { user, updateTopicProgress, getTopicProgress, getSubjectProgress, setUserName } = useProgress({
+  const { user, updateTopicProgress, getTopicProgress, getSubjectProgress, setUserName, reloadProgress } = useProgress({
     userId: session?.user?.id,
     profile,
   })
@@ -190,7 +192,8 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
     const nextIndex = questionIndex + 1
     const isLastQuestion = nextIndex >= sessionQuestions.length
     if (isLastQuestion) {
-      updateTopicProgress(selectedSubject.id, selectedTopic.id)
+      if (!session?.user?.id) updateTopicProgress(selectedSubject.id, selectedTopic.id)
+      setResultError('')
       setView(VIEWS.RESULT)
     } else {
       setQuestionIndex(nextIndex)
@@ -198,10 +201,19 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
   }
 
   async function finishResult(destination) {
-    if (session?.user?.id && studySession?.status === 'review') {
-      await completeStudySession()
+    setResultSaving(true)
+    setResultError('')
+    try {
+      if (session?.user?.id && studySession?.status === 'review') {
+        await completeStudySession()
+        await reloadProgress()
+      }
+      setView(destination)
+    } catch {
+      setResultError('Não conseguimos concluir sua revisão. Confira a internet e tente novamente.')
+    } finally {
+      setResultSaving(false)
     }
-    setView(destination)
   }
 
   // -------------------------------------------------------------------------
@@ -542,6 +554,8 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
             incorrectQuestions={incorrectQuestions}
             onContinue={() => finishResult(VIEWS.SUBJECT)}
             onHome={() => finishResult(VIEWS.HOME)}
+            saving={resultSaving}
+            error={resultError}
           />
         </main>
       </div>
