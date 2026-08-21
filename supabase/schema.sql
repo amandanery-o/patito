@@ -67,18 +67,22 @@ begin
 end;
 $$;
 
+revoke all on function public.handle_new_user() from public, anon, authenticated;
+
 drop trigger if exists on_auth_user_created on auth.users;
 create trigger on_auth_user_created
   after insert on auth.users
   for each row execute procedure public.handle_new_user();
 
 create or replace function public.touch_updated_at()
-returns trigger language plpgsql as $$
+returns trigger language plpgsql set search_path = public as $$
 begin
   new.updated_at = now();
   return new;
 end;
 $$;
+
+revoke all on function public.touch_updated_at() from public, anon, authenticated;
 
 drop trigger if exists profiles_touch_updated_at on public.profiles;
 create trigger profiles_touch_updated_at
@@ -300,8 +304,8 @@ begin
 end;
 $$;
 
-revoke all on function public.save_session_answer(uuid, uuid, text, jsonb, boolean, timestamptz) from public;
-revoke all on function public.complete_study_session(uuid) from public;
+revoke all on function public.save_session_answer(uuid, uuid, text, jsonb, boolean, timestamptz) from public, anon;
+revoke all on function public.complete_study_session(uuid) from public, anon;
 grant execute on function public.save_session_answer(uuid, uuid, text, jsonb, boolean, timestamptz) to authenticated;
 grant execute on function public.complete_study_session(uuid) to authenticated;
 
@@ -354,5 +358,5 @@ as $$
   limit 50;
 $$;
 
-revoke all on function public.get_usage_ranking() from public;
+revoke all on function public.get_usage_ranking() from public, anon;
 grant execute on function public.get_usage_ranking() to authenticated;

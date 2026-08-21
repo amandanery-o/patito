@@ -21,6 +21,7 @@
     "editorial:publish:geografia-p2": "node scripts/editorial/publish-geography-content.mjs",
     "editorial:approve:geografia-p1": "node scripts/editorial/approve-geography-p1.mjs",
     "calendar:import": "node scripts/calendar/import-calendar.mjs",
+    "supabase:smoke": "node --env-file=.env.local scripts/database/remote-smoke.mjs",
     "precommit": "lint-staged",
     "prepare": "husky"
   },

@@ -15,7 +15,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-006` ✅ Ajustar cadastro e login padrão com nome, e-mail e senha.
 - `TASK-007` ✅ Implementar encerramento de sessão e recuperação de senha por e-mail.
 - `TASK-008` ✅ Criar RLS e testes de isolamento entre alunos.
-- `TASK-009` 🟡 Auditar e migrar identidades existentes somente se forem encontradas ao conectar o projeto Supabase remoto.
+- `TASK-009` ✅ Auditar e migrar identidades existentes somente se forem encontradas ao conectar o projeto Supabase remoto (projeto novo criado sem identidades legadas).
 
 ## F002 — Sincronização de progresso
 
@@ -38,7 +38,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 
 - `TASK-021` ✅ Remover conteúdo do primeiro semestre e olimpíadas da experiência ativa, preservando recuperação pelo histórico do Git.
 - `TASK-022` ✅ Definir schema de livro, conteúdo, resumo e questões.
-- `TASK-023` 🟡 Publicar resumos textuais e exercícios do segundo semestre por matéria (Geografia P1 publicada; P2 em revisão automática independente; demais matérias aguardam fontes).
+- `TASK-023` 🟡 Publicar resumos textuais e exercícios do segundo semestre por matéria (Geografia P1 e P2 publicadas; demais matérias aguardam fontes).
 - `TASK-024` ✅ Validar estrutura, IDs, relações e quantidade de questões.
 
 ## F005 — Calendário

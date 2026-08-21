@@ -1,11 +1,1344 @@
 {
-  "status": "preparation",
+  "status": "approved",
   "contentId": "geografia-p2-capitulos-11-12",
+  "title": "Revisão P2 — População e migrações",
+  "summary": "Revisão dos capítulos 11 e 12: população brasileira e fluxos migratórios.",
   "source": {
     "provider": "edebe",
-    "resourceId": "courseware-252-chapters-11-12",
-    "pages": "110–127",
+    "resourceId": "courseware-252/chapters-11-12",
     "version": "2024"
   },
-  "questions": []
+  "generation": {
+    "model": "claude-sonnet-4-6",
+    "promptVersion": "question-batch-v2",
+    "generatedAt": "2026-08-21T09:30:48.878Z",
+    "usage": [
+      {
+        "batch": 1,
+        "input_tokens": 4388,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1884,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 2,
+        "input_tokens": 4631,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2381,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 3,
+        "input_tokens": 4982,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2167,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 4,
+        "input_tokens": 5285,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1788,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 5,
+        "input_tokens": 5525,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2026,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 6,
+        "input_tokens": 5836,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1877,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      }
+    ],
+    "revision": {
+      "method": "independent-source-check-v1",
+      "reviewer": "Agente editorial Patito",
+      "revisedAt": "2026-08-21T11:25:00Z",
+      "baseDraftDigest": "83394f356549a0fddb3221760dfc0b6b8a4302591e4e35e6a52805be6156cd27",
+      "replacedQuestionIds": [
+        "geo-p2-003",
+        "geo-p2-004",
+        "geo-p2-009",
+        "geo-p2-010",
+        "geo-p2-011",
+        "geo-p2-012",
+        "geo-p2-014",
+        "geo-p2-015",
+        "geo-p2-016",
+        "geo-p2-019",
+        "geo-p2-022",
+        "geo-p2-026",
+        "geo-p2-027",
+        "geo-p2-030",
+        "geo-p2-034",
+        "geo-p2-036",
+        "geo-p2-037",
+        "geo-p2-039",
+        "geo-p2-040",
+        "geo-p2-041",
+        "geo-p2-044",
+        "geo-p2-046",
+        "geo-p2-048",
+        "geo-p2-049",
+        "geo-p2-050",
+        "geo-p2-051",
+        "geo-p2-054",
+        "geo-p2-057",
+        "geo-p2-059",
+        "geo-p2-060"
+      ]
+    }
+  },
+  "editorialApproval": {
+    "reviewer": "Agente editorial Patito",
+    "reviewerType": "agent",
+    "reviewMethod": "independent-source-check-v1",
+    "reviewedAt": "2026-08-21T11:29:22Z",
+    "draftDigest": "42fd4198c230c124b2b7f8d3d89b39c78e77198bd16313407946926f35368597",
+    "schemaVersion": 1
+  },
+  "publishedAt": "2026-08-21T11:56:32.591Z",
+  "questions": [
+    {
+      "difficulty": "easy",
+      "question": "O que é demografia?",
+      "explanation": "A demografia é o campo de estudo que analisa o tamanho, a distribuição e as características de uma população. Ela nos ajuda a entender como as pessoas estão espalhadas pelo território e quais são seus perfis.",
+      "sourceRef": {
+        "section": "Demografia e indicadores",
+        "pages": "110–111"
+      },
+      "options": [
+        "Estudo do clima de uma região",
+        "Estudo do tamanho, da distribuição e das características de uma população",
+        "Estudo das plantas e animais de um lugar",
+        "Estudo das riquezas naturais do Brasil"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "geo-p2-001"
+    },
+    {
+      "difficulty": "easy",
+      "question": "O que significa densidade demográfica?",
+      "explanation": "A densidade demográfica indica a média de habitantes por quilômetro quadrado. Ela mostra se uma área tem muitas ou poucas pessoas em relação ao seu tamanho, e não a quantidade total de habitantes do país.",
+      "sourceRef": {
+        "section": "Demografia e indicadores",
+        "pages": "110–111"
+      },
+      "options": [
+        "A média de habitantes por quilômetro quadrado",
+        "O número de cidades de uma região",
+        "A velocidade com que a população cresce",
+        "A quantidade total de habitantes de um país"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "geo-p2-002"
+    },
+    {
+      "difficulty": "easy",
+      "question": "O que é êxodo rural?",
+      "explanation": "Êxodo rural é a mudança de pessoas do campo para a cidade. Esse movimento pode estar ligado à busca de trabalho e serviços e à mecanização do campo.",
+      "sourceRef": {
+        "section": "Êxodo rural",
+        "pages": "122"
+      },
+      "options": [
+        "A chegada de pessoas de outros países",
+        "A ida diária da casa ao trabalho",
+        "A mudança do campo para a cidade",
+        "A viagem temporária durante as férias"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "geo-p2-003"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Duas cidades ocupam áreas do mesmo tamanho. A Cidade Azul tem 2 mil habitantes e a Cidade Verde tem 8 mil. Qual delas tem maior densidade demográfica?",
+      "explanation": "Como as duas cidades têm a mesma área, aquela que possui mais habitantes tem a maior média de pessoas por quilômetro quadrado. Por isso, a Cidade Verde é mais densa.",
+      "sourceRef": {
+        "section": "Demografia e indicadores",
+        "pages": "110–111"
+      },
+      "options": [
+        "A Cidade Azul",
+        "Não há habitantes suficientes para comparar",
+        "As duas têm a mesma densidade",
+        "A Cidade Verde"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "geo-p2-004"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "A população brasileira está distribuída de maneira igual pelo território? O que ajuda a explicar essa distribuição?",
+      "explanation": "A população brasileira está distribuída de maneira desigual. Fatores como colonização, transportes, clima e oportunidades de trabalho influenciam onde as pessoas se instalam, fazendo com que algumas regiões tenham muito mais habitantes do que outras.",
+      "sourceRef": {
+        "section": "Distribuição da população brasileira",
+        "pages": "112–113"
+      },
+      "options": [
+        "Sim, está distribuída de forma igual em todo o território",
+        "Não; colonização, transportes, clima e trabalho ajudam a explicar essa distribuição",
+        "Não; apenas o clima explica onde as pessoas moram",
+        "Sim; todas as regiões têm a mesma densidade demográfica"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "geo-p2-005"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual é a diferença entre migração interna e migração internacional?",
+      "explanation": "A migração interna acontece dentro do próprio país, quando a pessoa muda de uma região para outra sem cruzar fronteiras nacionais. Já a migração internacional envolve a mudança para outro país.",
+      "sourceRef": {
+        "section": "Migração, imigração e emigração",
+        "pages": "118–120"
+      },
+      "options": [
+        "A migração interna acontece dentro do próprio país; a internacional envolve a mudança para outro país",
+        "A migração interna é feita só por adultos; a internacional, por famílias inteiras",
+        "A migração interna é ilegal; a internacional é permitida",
+        "A migração interna é temporária; a internacional é definitiva"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "geo-p2-006"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Carlos mora em uma cidade e todo dia vai trabalhar em outra cidade vizinha, voltando para casa à noite. Como se chama esse tipo de deslocamento?",
+      "explanation": "Esse movimento diário de ir e voltar entre o local de moradia e o local de trabalho ou estudo chama-se deslocamento pendular. Ele é diferente da migração, pois a pessoa não muda de moradia.",
+      "sourceRef": {
+        "section": "Migração sazonal e deslocamento pendular",
+        "pages": "123"
+      },
+      "options": [
+        "Deslocamento pendular",
+        "Migração sazonal",
+        "Êxodo rural",
+        "Emigração"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "geo-p2-007"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Uma pessoa que deixa o Brasil para morar em outro país pode ser chamada de emigrante pelo Brasil e de imigrante pelo país que a recebe. Por que os dois termos são usados para a mesma pessoa?",
+      "explanation": "Emigração e imigração descrevem o mesmo deslocamento de pontos de vista diferentes. Do ponto de vista do país de origem, a pessoa emigra (sai). Do ponto de vista do país de destino, ela imigra (chega). Por isso, a mesma pessoa pode ser chamada de emigrante e de imigrante ao mesmo tempo.",
+      "sourceRef": {
+        "section": "Migração, imigração e emigração",
+        "pages": "118–120"
+      },
+      "options": [
+        "Porque os dois termos significam exatamente a mesma coisa",
+        "Porque a pessoa muda de nome ao cruzar a fronteira",
+        "Porque emigração e imigração descrevem o mesmo deslocamento de pontos de vista diferentes",
+        "Porque emigrante é quem viaja de avião e imigrante é quem viaja de navio"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "geo-p2-008"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada conceito ao seu significado.",
+      "explanation": "A demografia usa indicadores para conhecer a população. A densidade demográfica é um desses indicadores e relaciona habitantes e área.",
+      "sourceRef": {
+        "section": "Demografia e indicadores",
+        "pages": "110–111"
+      },
+      "pairs": [
+        {
+          "left": "Demografia",
+          "right": "Estudo do tamanho, da distribuição e das características de uma população"
+        },
+        {
+          "left": "Densidade demográfica",
+          "right": "Média de habitantes por quilômetro quadrado"
+        },
+        {
+          "left": "Indicador demográfico",
+          "right": "Informação usada para conhecer uma população"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "geo-p2-009"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada situação ao direito ou cuidado correspondente.",
+      "explanation": "O trabalho forçado é crime e o trabalho infantil é proibido. Já as tarefas domésticas são responsabilidade da família e devem ser repartidas de modo justo.",
+      "sourceRef": {
+        "section": "Direitos e trabalho doméstico",
+        "pages": "117"
+      },
+      "pairs": [
+        {
+          "left": "Obrigar alguém a trabalhar contra a própria vontade",
+          "right": "Trabalho forçado, que é crime"
+        },
+        {
+          "left": "Colocar uma criança abaixo da idade permitida para trabalhar",
+          "right": "Trabalho infantil, que é proibido"
+        },
+        {
+          "left": "Lavar, cozinhar e organizar a casa",
+          "right": "Tarefas que devem ser divididas de maneira justa"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "geo-p2-010"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Uma cidade ganhou novas estradas e oportunidades de trabalho. Como esses fatores podem influenciar sua população?",
+      "explanation": "Transportes e oportunidades de trabalho ajudam a explicar onde as pessoas se estabelecem. Eles podem atrair moradores, mas não determinam sozinhos toda a distribuição.",
+      "sourceRef": {
+        "section": "Distribuição da população brasileira",
+        "pages": "112–113"
+      },
+      "options": [
+        "Fazem todas as pessoas deixarem a cidade",
+        "Podem atrair pessoas para morar nela",
+        "Garantem que a população fique igual à do campo",
+        "Impedem qualquer mudança na população"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "geo-p2-011"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual situação apresenta trabalho formal?",
+      "explanation": "O trabalho formal possui registro e oferece direitos e garantias ao trabalhador.",
+      "sourceRef": {
+        "section": "Trabalho formal e informal",
+        "pages": "115"
+      },
+      "options": [
+        "Trabalho sem registro e sem as mesmas garantias",
+        "Trabalho com registro e direitos garantidos",
+        "Ajuda ocasional sem relação de trabalho",
+        "Atividade feita somente no campo"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "geo-p2-012"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Nas cidades brasileiras, quais tipos de atividades de trabalho são mais comuns?",
+      "explanation": "Segundo o material, nas cidades predominam as atividades de indústria, comércio e serviços, enquanto no campo predominam as atividades do setor primário, como agricultura e pecuária.",
+      "sourceRef": {
+        "section": "População e trabalho",
+        "pages": "114"
+      },
+      "options": [
+        "Agricultura, pecuária e extrativismo",
+        "Indústria, comércio e serviços",
+        "Pesca, mineração e silvicultura",
+        "Artesanato, turismo e pesca"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "geo-p2-013"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual atitude respeita os direitos estudados no capítulo?",
+      "explanation": "Dividir as tarefas domésticas de maneira justa respeita as pessoas da família. O trabalho forçado é crime e o trabalho infantil é proibido.",
+      "sourceRef": {
+        "section": "Direitos e trabalho doméstico",
+        "pages": "117"
+      },
+      "options": [
+        "Obrigar uma pessoa a trabalhar",
+        "Colocar uma criança pequena para trabalhar",
+        "Dividir justamente as tarefas da casa",
+        "Deixar todo o trabalho doméstico para uma pessoa"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "geo-p2-014"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Paulo saiu da Bahia e foi morar no Paraná. Como essa mudança é classificada?",
+      "explanation": "Paulo mudou de moradia, mas continuou dentro do Brasil. Por isso, realizou uma migração interna.",
+      "sourceRef": {
+        "section": "Migrações internas no Brasil",
+        "pages": "121"
+      },
+      "options": [
+        "Migração internacional",
+        "Migração interna",
+        "Deslocamento pendular",
+        "Imigração para o Brasil"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "geo-p2-015"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma pessoa deixou seu país para escapar de uma perseguição por suas crenças. Por que essa situação pode levar a uma migração internacional?",
+      "explanation": "Perseguições políticas, religiosas ou culturais podem colocar pessoas em risco e levá-las a buscar segurança em outro país.",
+      "sourceRef": {
+        "section": "Migrações internacionais",
+        "pages": "124–125"
+      },
+      "options": [
+        "Porque realizou um trajeto diário e voltou para casa",
+        "Porque a pessoa busca segurança diante de uma perseguição",
+        "Porque saiu do campo para morar na cidade",
+        "Porque viajou somente durante as férias"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "geo-p2-016"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Pense na seguinte situação: uma região tem clima muito seco, poucas estradas e poucas oportunidades de trabalho. Com base no que você estudou, o que provavelmente acontece com a população dessa região?",
+      "explanation": "O material explica que colonização, transportes, clima e trabalho influenciam a distribuição da população. Regiões com clima difícil, poucos transportes e poucas oportunidades de trabalho tendem a ter menor concentração de habitantes, pois esses fatores dificultam a fixação das pessoas no local.",
+      "sourceRef": {
+        "section": "Distribuição da população brasileira",
+        "pages": "112–113"
+      },
+      "options": [
+        "A região tende a ter alta densidade demográfica, pois o clima seco atrai turistas",
+        "A região tende a ter baixa concentração de habitantes, pois esses fatores dificultam a fixação das pessoas",
+        "A região tende a crescer rapidamente por causa da facilidade de construir estradas",
+        "A região tende a receber muitos imigrantes internacionais em busca de terras baratas"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "geo-p2-017"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Joana cuida da casa, lava, cozinha e organiza os cômodos todos os dias, mas nenhum outro morador da família ajuda. Com base no que você estudou, o que o material diz sobre essa situação?",
+      "explanation": "O material afirma que as tarefas domésticas devem ser divididas de maneira justa entre os moradores. Sobrecarregar apenas uma pessoa com todo o trabalho doméstico vai contra esse princípio de divisão equitativa.",
+      "sourceRef": {
+        "section": "Direitos e trabalho doméstico",
+        "pages": "117"
+      },
+      "options": [
+        "As tarefas domésticas devem ser divididas de maneira justa entre todos os moradores",
+        "O trabalho doméstico só deve ser feito por pessoas contratadas formalmente para isso",
+        "Cuidar da casa não é considerado trabalho, por isso não precisa ser dividido",
+        "Essa situação é considerada normal, pois o trabalho doméstico é responsabilidade de apenas um morador"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "geo-p2-018"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada situação ao que ela mostra sobre igualdade no trabalho.",
+      "explanation": "Direitos, oportunidades e remuneração não devem ser diferentes por causa do gênero ou da raça de uma pessoa.",
+      "sourceRef": {
+        "section": "Desigualdades no trabalho",
+        "pages": "116"
+      },
+      "pairs": [
+        {
+          "left": "Duas pessoas fazem o mesmo trabalho e recebem o mesmo pagamento",
+          "right": "Tratamento igual"
+        },
+        {
+          "left": "Uma mulher recebe menos pelo mesmo trabalho",
+          "right": "Desigualdade relacionada ao gênero"
+        },
+        {
+          "left": "Uma pessoa negra perde uma oportunidade por causa de sua cor",
+          "right": "Desigualdade relacionada à raça"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "geo-p2-019"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada elemento à característica correta.",
+      "explanation": "A migração sazonal é temporária e ligada a uma época. No deslocamento pendular, a pessoa retorna com frequência e mantém o mesmo lugar de moradia.",
+      "sourceRef": {
+        "section": "Migração sazonal e deslocamento pendular",
+        "pages": "123"
+      },
+      "pairs": [
+        {
+          "left": "Migração sazonal",
+          "right": "Deslocamento temporário ligado a uma época"
+        },
+        {
+          "left": "Deslocamento pendular",
+          "right": "Ida e volta frequente entre dois lugares"
+        },
+        {
+          "left": "Moradia de quem faz deslocamento pendular",
+          "right": "Permanece no mesmo lugar"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "geo-p2-020"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual é um exemplo de trabalho do setor primário?",
+      "explanation": "O setor primário reúne atividades que retiram recursos diretamente da natureza, como a agricultura, a pesca e a pecuária. Essas atividades são mais comuns no campo.",
+      "sourceRef": {
+        "section": "População e trabalho",
+        "pages": "114"
+      },
+      "options": [
+        "Trabalhar em uma fábrica de sapatos",
+        "Plantar e colher alimentos em uma fazenda",
+        "Vender roupas em uma loja",
+        "Atender clientes em um banco"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "geo-p2-021"
+    },
+    {
+      "difficulty": "easy",
+      "question": "O que caracteriza o trabalho informal?",
+      "explanation": "O trabalho informal não possui registro e não oferece as mesmas garantias do trabalho formal.",
+      "sourceRef": {
+        "section": "Trabalho formal e informal",
+        "pages": "115"
+      },
+      "options": [
+        "Tem registro e as mesmas garantias do formal",
+        "Acontece somente nas cidades",
+        "Não tem registro nem as mesmas garantias do formal",
+        "É sempre realizado sem pagamento"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "geo-p2-022"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Por que a migração sazonal é diferente do êxodo rural?",
+      "explanation": "A migração sazonal é temporária: a pessoa se desloca por um período, geralmente para trabalhar, e depois retorna ao seu lugar de origem. Já no êxodo rural, a pessoa deixa o campo e vai morar definitivamente na cidade.",
+      "sourceRef": {
+        "section": "Migração sazonal e deslocamento pendular",
+        "pages": "123"
+      },
+      "options": [
+        "Porque a migração sazonal acontece apenas entre países diferentes",
+        "Porque no êxodo rural a pessoa vai para o campo e na migração sazonal vai para outro país",
+        "Porque na migração sazonal a pessoa nunca volta ao lugar de origem",
+        "Porque a migração sazonal é temporária e a pessoa retorna após um período"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "geo-p2-023"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Pedro trabalha como mecânico em uma oficina, mas não tem carteira assinada nem recebe férias. Marcos trabalha em uma empresa com carteira assinada e tem direito a férias e aposentadoria. Qual é a diferença entre as situações de Pedro e Marcos?",
+      "explanation": "Pedro está em uma situação de trabalho informal, pois não tem registro nem os direitos garantidos por lei. Marcos está em uma situação de trabalho formal, com carteira assinada e direitos assegurados.",
+      "sourceRef": {
+        "section": "Trabalho formal e informal",
+        "pages": "115"
+      },
+      "options": [
+        "Pedro e Marcos têm o mesmo tipo de trabalho, pois os dois recebem salário",
+        "Pedro trabalha no setor primário e Marcos no setor terciário",
+        "Pedro tem trabalho formal e Marcos tem trabalho informal",
+        "Pedro tem trabalho informal e Marcos tem trabalho formal"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "geo-p2-024"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual das situações abaixo representa uma desigualdade no trabalho?",
+      "explanation": "Desigualdade no trabalho acontece quando pessoas recebem tratamento diferente sem razão justa, como ganhar salários diferentes por fazer o mesmo serviço. Direitos e oportunidades devem valer para todas as pessoas.",
+      "sourceRef": {
+        "section": "Desigualdades no trabalho",
+        "pages": "116"
+      },
+      "options": [
+        "Dois trabalhadores fazem o mesmo serviço e recebem o mesmo salário",
+        "Uma pessoa recebe menos do que outra pelo mesmo trabalho, sem razão justa",
+        "Um trabalhador do campo e um da cidade têm profissões diferentes",
+        "Uma empresa contrata pessoas com experiências diferentes para funções diferentes"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "geo-p2-025"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma família muda de país buscando acesso a estudo e melhores condições de vida. Que tipo de fator aparece principalmente nessa situação?",
+      "explanation": "A busca por estudo, serviços e melhores condições de vida pode ser um fator social de uma migração internacional.",
+      "sourceRef": {
+        "section": "Migrações internacionais",
+        "pages": "124–125"
+      },
+      "options": [
+        "Pendular",
+        "Sazonal",
+        "Social",
+        "Climático"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "geo-p2-026"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Duas pessoas fazem o mesmo trabalho, mas uma delas recebe menos somente por ser mulher. O que essa situação mostra?",
+      "explanation": "Receber menos pelo mesmo trabalho somente por causa do gênero é uma desigualdade. Direitos e oportunidades devem valer para todas as pessoas.",
+      "sourceRef": {
+        "section": "Desigualdades no trabalho",
+        "pages": "116"
+      },
+      "options": [
+        "Uma diferença justa de profissão",
+        "Uma desigualdade relacionada ao gênero",
+        "Uma forma de trabalho sazonal",
+        "Uma atividade do setor primário"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "geo-p2-027"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Por que não se deve explicar uma migração internacional por uma única causa?",
+      "explanation": "As migrações internacionais geralmente resultam de uma combinação de fatores: econômicos, sociais, políticos e ambientais. Reduzir o deslocamento a apenas uma causa simplifica demais uma realidade complexa e não representa fielmente o que acontece.",
+      "sourceRef": {
+        "section": "Migrações internacionais",
+        "pages": "124–125"
+      },
+      "options": [
+        "Porque as leis internacionais proíbem registrar mais de uma causa para a migração",
+        "Porque as migrações internacionais sempre têm causa exclusivamente econômica",
+        "Porque os migrantes raramente sabem por que se deslocam",
+        "Porque as causas das migrações costumam se combinar e raramente são apenas uma"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "geo-p2-028"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada setor de trabalho da coluna da esquerda a um exemplo correto da coluna da direita.",
+      "explanation": "O setor primário envolve atividades que retiram recursos da natureza, como a pesca. O setor secundário transforma matéria-prima em produtos, como uma fábrica. O setor terciário oferece serviços e comércio, como uma escola ou uma loja.",
+      "sourceRef": {
+        "section": "População e trabalho",
+        "pages": "114"
+      },
+      "pairs": [
+        {
+          "left": "Setor primário",
+          "right": "Pescador que retira peixes do rio"
+        },
+        {
+          "left": "Setor secundário",
+          "right": "Operário que fabrica móveis em uma fábrica"
+        },
+        {
+          "left": "Setor terciário",
+          "right": "Professora que ensina em uma escola"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "geo-p2-029"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada elemento ligado ao êxodo rural à sua descrição.",
+      "explanation": "A mecanização pode reduzir algumas oportunidades de trabalho no campo e contribuir para o êxodo rural. A chegada rápida de moradores pode acelerar o crescimento das cidades.",
+      "sourceRef": {
+        "section": "Êxodo rural",
+        "pages": "122"
+      },
+      "pairs": [
+        {
+          "left": "Mecanização do campo",
+          "right": "Uso de máquinas que transforma o trabalho rural"
+        },
+        {
+          "left": "Êxodo rural",
+          "right": "Mudança de pessoas do campo para a cidade"
+        },
+        {
+          "left": "Crescimento urbano acelerado",
+          "right": "Possível consequência da chegada rápida de moradores às cidades"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "geo-p2-030"
+    },
+    {
+      "difficulty": "easy",
+      "question": "O que é migração?",
+      "explanation": "Migração é a mudança de uma pessoa para outro lugar de moradia. Ela pode acontecer dentro do mesmo país ou entre países diferentes.",
+      "sourceRef": {
+        "section": "Migração, imigração e emigração",
+        "pages": "118–120"
+      },
+      "options": [
+        "O deslocamento diário de casa para o trabalho",
+        "O crescimento do número de habitantes de uma cidade",
+        "Uma viagem de férias sem mudança de moradia",
+        "A mudança de uma pessoa para outro lugar de moradia"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "geo-p2-031"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Quando uma pessoa vem de outro país para morar no Brasil, ela é chamada de:",
+      "explanation": "Imigrante é quem chega a um país vindo de outro lugar. O ponto de vista é o do país que recebe a pessoa.",
+      "sourceRef": {
+        "section": "Migração, imigração e emigração",
+        "pages": "118–120"
+      },
+      "options": [
+        "Pendular",
+        "Emigrante",
+        "Migrante sazonal",
+        "Imigrante"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "geo-p2-032"
+    },
+    {
+      "difficulty": "easy",
+      "question": "O que é migração interna?",
+      "explanation": "Migração interna é quando uma pessoa muda de moradia, mas continua dentro do mesmo país. Por exemplo, sair de um estado e ir morar em outro estado do Brasil.",
+      "sourceRef": {
+        "section": "Migrações internas no Brasil",
+        "pages": "121"
+      },
+      "options": [
+        "Mudar de moradia para outro país",
+        "Viajar para o exterior nas férias",
+        "Mudar de moradia dentro do próprio país",
+        "Ir e voltar todos os dias para o trabalho"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "geo-p2-033"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Duas regiões têm 10 mil habitantes. A Região Sol ocupa 100 km² e a Região Lua ocupa 500 km². Qual tem maior densidade demográfica?",
+      "explanation": "Com a mesma quantidade de habitantes, a região de menor área tem mais pessoas, em média, por quilômetro quadrado. Por isso, a Região Sol é mais densa.",
+      "sourceRef": {
+        "section": "Demografia e indicadores",
+        "pages": "110–111"
+      },
+      "options": [
+        "A Região Lua",
+        "As duas têm a mesma densidade",
+        "A Região Sol",
+        "A que possui clima mais frio"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "geo-p2-034"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual das situações abaixo é um exemplo de migração interna no Brasil?",
+      "explanation": "Migração interna acontece dentro do próprio país. Uma pessoa que sai do Nordeste para morar no Sudeste está realizando uma migração interna, pois não saiu do Brasil.",
+      "sourceRef": {
+        "section": "Migrações internas no Brasil",
+        "pages": "121"
+      },
+      "options": [
+        "Uma pessoa que sai do Nordeste para morar no Sudeste do Brasil",
+        "Uma pessoa que viaja de avião para outro continente",
+        "Um brasileiro que vai morar na Argentina",
+        "Um argentino que vem morar em São Paulo"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "geo-p2-035"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual alternativa apresenta possíveis consequências do êxodo rural nas cidades?",
+      "explanation": "A chegada rápida de muitas pessoas às cidades pode causar crescimento urbano acelerado, desemprego, trabalhos precários e moradias inadequadas.",
+      "sourceRef": {
+        "section": "Êxodo rural",
+        "pages": "122"
+      },
+      "options": [
+        "Fim do comércio e dos serviços",
+        "Diminuição imediata de toda a população urbana",
+        "Crescimento urbano acelerado e falta de moradias adequadas",
+        "Distribuição igual de pessoas pelo território"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "geo-p2-036"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Uma pessoa é impedida de ir embora e obrigada a trabalhar contra a própria vontade. Como essa situação é tratada no conteúdo estudado?",
+      "explanation": "Obrigar uma pessoa a trabalhar contra a própria vontade é trabalho forçado. Essa prática é crime e desrespeita os direitos do trabalhador.",
+      "sourceRef": {
+        "section": "Direitos e trabalho doméstico",
+        "pages": "117"
+      },
+      "options": [
+        "É uma forma de migração sazonal",
+        "É trabalho formal com direitos garantidos",
+        "É uma tarefa doméstica comum",
+        "É trabalho forçado e constitui crime"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "geo-p2-037"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada termo da coluna da esquerda ao seu significado correto na coluna da direita.",
+      "explanation": "Migração é a mudança de moradia; emigração é observada pelo país de saída; imigração é observada pelo país de chegada. Esses três conceitos descrevem o mesmo fenômeno de pontos de vista diferentes.",
+      "sourceRef": {
+        "section": "Migração, imigração e emigração",
+        "pages": "118–120"
+      },
+      "pairs": [
+        {
+          "left": "Migração",
+          "right": "Mudança de uma pessoa para outro lugar de moradia"
+        },
+        {
+          "left": "Emigração",
+          "right": "Saída de uma pessoa de seu país de origem"
+        },
+        {
+          "left": "Imigração",
+          "right": "Chegada de uma pessoa a um novo país"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "geo-p2-038"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada característica ao trabalho formal ou informal.",
+      "explanation": "O trabalho formal possui registro e direitos. O informal não tem registro nem oferece as mesmas garantias.",
+      "sourceRef": {
+        "section": "Trabalho formal e informal",
+        "pages": "115"
+      },
+      "pairs": [
+        {
+          "left": "Registro do trabalho",
+          "right": "Característica do trabalho formal"
+        },
+        {
+          "left": "Direitos e garantias",
+          "right": "Proteções presentes no trabalho formal"
+        },
+        {
+          "left": "Ausência de registro",
+          "right": "Característica do trabalho informal"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "geo-p2-039"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada contribuição cultural de migrantes ao exemplo correspondente.",
+      "explanation": "Ao mudar de lugar, as pessoas levam hábitos, culinária, festas e formas de linguagem, contribuindo para a diversidade cultural.",
+      "sourceRef": {
+        "section": "Migrações internacionais",
+        "pages": "124–125"
+      },
+      "pairs": [
+        {
+          "left": "Culinária",
+          "right": "Comidas e modos de preparar alimentos"
+        },
+        {
+          "left": "Festas",
+          "right": "Celebrações mantidas ou compartilhadas no novo lugar"
+        },
+        {
+          "left": "Linguagem",
+          "right": "Palavras e modos de falar que circulam entre as pessoas"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "geo-p2-040"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual opção é um exemplo de indicador demográfico?",
+      "explanation": "A taxa de natalidade é uma informação usada para conhecer características de uma população e, por isso, é um indicador demográfico.",
+      "sourceRef": {
+        "section": "Demografia e indicadores",
+        "pages": "110–111"
+      },
+      "options": [
+        "Horário de uma escola",
+        "Nome de uma rodovia",
+        "Tipo de mercadoria",
+        "Taxa de natalidade"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "geo-p2-041"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual das situações abaixo é um exemplo de migração sazonal?",
+      "explanation": "A migração sazonal é temporária: a pessoa se desloca por um período para trabalhar e depois retorna ao seu lugar de origem. Ir colher frutas em outra região por alguns meses e voltar para casa é um exemplo claro disso.",
+      "sourceRef": {
+        "section": "Migração sazonal e deslocamento pendular",
+        "pages": "123"
+      },
+      "options": [
+        "Um trabalhador vai para outra região na época da colheita e volta para casa depois.",
+        "Uma pessoa vai trabalhar em outro país e fica morando lá.",
+        "Um estudante vai para a escola todos os dias e volta para casa à tarde.",
+        "Uma família muda de cidade e nunca mais volta para a antiga moradia."
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "geo-p2-042"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual é a principal característica do deslocamento pendular?",
+      "explanation": "No deslocamento pendular, a pessoa se desloca com frequência — geralmente todos os dias — entre dois lugares, como morar em uma cidade e trabalhar em outra, sempre voltando para sua moradia. Por isso, não é considerado propriamente uma migração.",
+      "sourceRef": {
+        "section": "Migração sazonal e deslocamento pendular",
+        "pages": "123"
+      },
+      "options": [
+        "A pessoa vai para outro país em busca de trabalho.",
+        "A pessoa sai do campo para morar na cidade para sempre.",
+        "A pessoa muda de moradia de forma definitiva.",
+        "A pessoa se desloca e retorna frequentemente ao mesmo lugar de moradia."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "geo-p2-043"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Quais fatores podem contribuir para o êxodo rural?",
+      "explanation": "A mecanização do campo e a busca de trabalho, serviços e melhores condições de vida nas cidades podem contribuir para o êxodo rural.",
+      "sourceRef": {
+        "section": "Êxodo rural",
+        "pages": "122"
+      },
+      "options": [
+        "Densidade demográfica e divisão das tarefas domésticas",
+        "Viagens de férias e deslocamentos diários para a escola",
+        "Chegada de estrangeiros e aumento da culinária local",
+        "Mecanização do campo e busca de trabalho e serviços nas cidades"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "geo-p2-044"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual é a diferença entre migração sazonal e deslocamento pendular?",
+      "explanation": "Na migração sazonal, a pessoa se desloca por uma temporada, como a época de colheita, e depois volta. No deslocamento pendular, o retorno é frequente e regular, geralmente diário, como quem vai trabalhar em outra cidade e volta para casa todo dia.",
+      "sourceRef": {
+        "section": "Migração sazonal e deslocamento pendular",
+        "pages": "123"
+      },
+      "options": [
+        "Na migração sazonal, a pessoa volta todo dia; no deslocamento pendular, a pessoa fica meses fora.",
+        "Na migração sazonal, o deslocamento é temporário por uma estação; no pendular, o retorno é frequente e regular.",
+        "As duas são iguais: a pessoa sempre volta para casa no mesmo dia.",
+        "Na migração sazonal, a pessoa vai para outro país; no pendular, fica no mesmo estado."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "geo-p2-045"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Os movimentos de pessoas entre as regiões brasileiras permaneceram iguais ao longo do tempo?",
+      "explanation": "Não. Os fluxos internos mudaram em diferentes períodos, e várias regiões do Brasil participaram como lugares de saída ou de chegada.",
+      "sourceRef": {
+        "section": "Migrações internas no Brasil",
+        "pages": "121"
+      },
+      "options": [
+        "Não, os fluxos entre as regiões mudaram em diferentes períodos",
+        "Sim, as pessoas sempre seguiram uma única rota",
+        "Sim, somente uma região recebeu moradores",
+        "Não, porque nunca houve migração interna no Brasil"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "geo-p2-046"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Máquinas passaram a realizar parte do trabalho de uma família no campo. Depois, a família mudou para a cidade em busca de emprego e serviços. O que essa situação mostra?",
+      "explanation": "A família realizou êxodo rural ao mudar do campo para a cidade. A mecanização do campo e a busca de trabalho e serviços podem contribuir para esse movimento.",
+      "sourceRef": {
+        "section": "Êxodo rural",
+        "pages": "122"
+      },
+      "options": [
+        "Êxodo rural relacionado à mecanização e à busca de oportunidades",
+        "Deslocamento pendular realizado diariamente",
+        "Imigração de pessoas vindas de outro país",
+        "Migração sazonal com retorno após uma época"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "geo-p2-047"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada fator a uma situação que pode influenciar a distribuição da população.",
+      "explanation": "A distribuição da população é desigual e pode ser influenciada por fatores históricos, econômicos e naturais, como colonização, transportes, trabalho e clima.",
+      "sourceRef": {
+        "section": "Distribuição da população brasileira",
+        "pages": "112–113"
+      },
+      "pairs": [
+        {
+          "left": "Transportes",
+          "right": "Existência de estradas e caminhos para chegar a um lugar"
+        },
+        {
+          "left": "Trabalho",
+          "right": "Oferta de empregos em uma região"
+        },
+        {
+          "left": "Clima",
+          "right": "Condições naturais do lugar"
+        },
+        {
+          "left": "Colonização",
+          "right": "Processo histórico de ocupação do território"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "geo-p2-048"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada atividade ao setor ou espaço em que ela predomina.",
+      "explanation": "No campo predominam atividades do setor primário. Nas cidades predominam atividades dos setores secundário e terciário. Isso não significa que elas existam somente nesses lugares.",
+      "sourceRef": {
+        "section": "População e trabalho",
+        "pages": "114"
+      },
+      "pairs": [
+        {
+          "left": "Agricultura",
+          "right": "Setor primário, mais presente no campo"
+        },
+        {
+          "left": "Indústria",
+          "right": "Setor secundário, mais presente nas cidades"
+        },
+        {
+          "left": "Comércio e serviços",
+          "right": "Setor terciário, mais presente nas cidades"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "geo-p2-049"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada situação do Brasil contemporâneo ao conceito correspondente.",
+      "explanation": "O Brasil recebe imigrantes e também tem emigrantes vivendo no exterior. Esses movimentos contribuem para a diversidade cultural.",
+      "sourceRef": {
+        "section": "Migrações internacionais",
+        "pages": "124–125"
+      },
+      "pairs": [
+        {
+          "left": "Pessoas de outros países chegam para morar no Brasil",
+          "right": "Imigração"
+        },
+        {
+          "left": "Brasileiros saem para viver em outros países",
+          "right": "Emigração"
+        },
+        {
+          "left": "Novos hábitos, comidas e festas passam a fazer parte de um lugar",
+          "right": "Diversidade cultural"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "geo-p2-050"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual afirmação descreve o Brasil na atualidade?",
+      "explanation": "O Brasil recebe pessoas que vêm morar aqui e também possui brasileiros que vivem em outros países.",
+      "sourceRef": {
+        "section": "Migrações internacionais",
+        "pages": "124–125"
+      },
+      "options": [
+        "Somente recebe pessoas de outros países",
+        "Somente tem brasileiros vivendo no país",
+        "Recebe imigrantes e tem brasileiros vivendo no exterior",
+        "Não participa de migrações internacionais"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "geo-p2-051"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual das situações abaixo é um exemplo de diversidade cultural trazida pelos imigrantes?",
+      "explanation": "Quando pessoas de outros países se instalam em um lugar, elas trazem seus costumes, línguas, festas e comidas, enriquecendo a cultura local. Isso é diversidade cultural.",
+      "sourceRef": {
+        "section": "Migrações internacionais",
+        "pages": "124–125"
+      },
+      "options": [
+        "A redução do trabalho informal",
+        "A construção de novas rodovias",
+        "A chegada de festas, comidas e línguas de outros países",
+        "O aumento da densidade demográfica"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "geo-p2-052"
+    },
+    {
+      "difficulty": "easy",
+      "question": "O Brasil tanto recebe imigrantes quanto possui brasileiros morando em outros países. Como são chamados esses brasileiros que vivem fora do Brasil?",
+      "explanation": "Quem sai do próprio país para morar em outro é chamado de emigrante pelo país de origem. Portanto, os brasileiros que vivem no exterior são emigrantes do Brasil.",
+      "sourceRef": {
+        "section": "Migração, imigração e emigração",
+        "pages": "118–120"
+      },
+      "options": [
+        "Imigrantes",
+        "Refugiados",
+        "Emigrantes",
+        "Migrantes sazonais"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "geo-p2-053"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma pessoa negra deixa de ser contratada somente por causa de sua cor. O que essa situação representa?",
+      "explanation": "Negar uma oportunidade de trabalho por causa da raça é uma desigualdade. Direitos e oportunidades devem valer para todas as pessoas.",
+      "sourceRef": {
+        "section": "Desigualdades no trabalho",
+        "pages": "116"
+      },
+      "options": [
+        "Uma desigualdade de oportunidade relacionada à raça",
+        "Uma diferença entre trabalho formal e informal",
+        "Uma migração interna",
+        "Uma atividade do setor terciário"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "geo-p2-054"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma família deixou seu país por causa de uma guerra que tornava a vida perigosa. Que tipo de causa motivou essa migração internacional?",
+      "explanation": "Guerras e conflitos são causas políticas que forçam pessoas a deixar seus países. As migrações internacionais podem ter causas econômicas, sociais, políticas e ambientais.",
+      "sourceRef": {
+        "section": "Migrações internacionais",
+        "pages": "124–125"
+      },
+      "options": [
+        "Causa política",
+        "Causa sazonal",
+        "Causa econômica",
+        "Causa ambiental"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "geo-p2-055"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma pessoa deixou seu país porque uma grande enchente destruiu sua casa e sua cidade. Que tipo de causa motivou essa migração internacional?",
+      "explanation": "Desastres naturais, como enchentes e secas, são causas ambientais que podem obrigar pessoas a deixar seus países em busca de um lugar seguro para viver.",
+      "sourceRef": {
+        "section": "Migrações internacionais",
+        "pages": "124–125"
+      },
+      "options": [
+        "Causa ambiental",
+        "Causa política",
+        "Causa econômica",
+        "Causa social"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "geo-p2-056"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Uma família deixou seu país depois de perder o trabalho e também fugir de um conflito. O que essa situação mostra?",
+      "explanation": "A perda de trabalho é um fator econômico e o conflito é um fator político. Uma mesma migração pode acontecer por mais de um fator.",
+      "sourceRef": {
+        "section": "Migrações internacionais",
+        "pages": "124–125"
+      },
+      "options": [
+        "Uma migração com fatores econômico e político combinados",
+        "Um deslocamento pendular entre duas cidades",
+        "Uma migração causada apenas pelo clima",
+        "Um êxodo rural dentro do mesmo país"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "geo-p2-057"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada causa de migração internacional da coluna da esquerda ao seu tipo correto na coluna da direita.",
+      "explanation": "As migrações internacionais podem ser motivadas por diferentes tipos de causas: econômicas, quando envolvem trabalho e renda; políticas, quando envolvem guerras ou perseguições; ambientais, quando envolvem desastres da natureza; e sociais, quando envolvem busca por melhores condições de vida e educação.",
+      "sourceRef": {
+        "section": "Migrações internacionais",
+        "pages": "124–125"
+      },
+      "pairs": [
+        {
+          "left": "Falta de emprego e baixa renda no país de origem",
+          "right": "Causa econômica"
+        },
+        {
+          "left": "Guerra e perseguição no país de origem",
+          "right": "Causa política"
+        },
+        {
+          "left": "Seca intensa que destruiu plantações e fontes de água",
+          "right": "Causa ambiental"
+        },
+        {
+          "left": "Busca por melhores escolas e serviços de saúde",
+          "right": "Causa social"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "geo-p2-058"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada situação urbana a uma possível consequência do êxodo rural.",
+      "explanation": "A chegada rápida de moradores pode acelerar o crescimento das cidades e contribuir para desemprego, trabalhos precários e moradias inadequadas.",
+      "sourceRef": {
+        "section": "Êxodo rural",
+        "pages": "122"
+      },
+      "pairs": [
+        {
+          "left": "A cidade recebe muitos moradores em pouco tempo",
+          "right": "Crescimento urbano acelerado"
+        },
+        {
+          "left": "Não há vagas de trabalho para todas as pessoas",
+          "right": "Desemprego ou trabalho precário"
+        },
+        {
+          "left": "Faltam casas em condições adequadas",
+          "right": "Moradias inadequadas"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "geo-p2-059"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada situação ao conceito correto.",
+      "explanation": "Na mudança entre países, o lugar de saída observa uma emigração, o lugar de chegada observa uma imigração e o movimento completo é uma migração internacional.",
+      "sourceRef": {
+        "section": "Migração, imigração e emigração",
+        "pages": "118–120"
+      },
+      "pairs": [
+        {
+          "left": "Uma pessoa sai do país onde morava",
+          "right": "Emigração vista pelo lugar de saída"
+        },
+        {
+          "left": "Essa pessoa chega para morar em outro país",
+          "right": "Imigração vista pelo lugar de chegada"
+        },
+        {
+          "left": "O movimento completo acontece entre dois países",
+          "right": "Migração internacional"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "geo-p2-060"
+    }
+  ]
 }

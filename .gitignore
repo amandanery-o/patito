@@ -12,3 +12,4 @@ editorial/reviews/
 editorial/approved/
 scripts/richmond/.cache/
 scripts/edebe/.cache/
+supabase/.temp/

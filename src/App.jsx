@@ -23,6 +23,12 @@ import { daysUntil, formatDate, parseLocalDate } from './utils/dates'
 import { SCHEDULE, SUBJECT_COLORS, DAY_NAMES } from './data/schedule'
 import { EXAM_TYPES, STUDY_SUBJECTS, SUBJECTS, VIEWS, examAlertText, getMascotState } from './data/appConfig'
 import { e2eStudyRepository } from './testSupport/e2eStudyRepository'
+import {
+  e2eHomeworkRepository,
+  e2eProblemReportRepository,
+  e2eProgressRepository,
+  e2eSchoolEventsRepository,
+} from './testSupport/e2eRepositories'
 
 const Leaderboard = lazy(() => import('./components/Leaderboard'))
 const CalendarMonth = lazy(() => import('./components/CalendarMonth'))
@@ -83,6 +89,7 @@ export default function App() {
 }
 
 function AppInner({ updateProfileName, signOut, session, profile }) {
+  const e2e = import.meta.env.VITE_E2E_AUTH === '1'
   const [view, setView] = useState(VIEWS.HOME)
   const [selectedSubject, setSelectedSubject] = useState(null)
   const [selectedTopic, setSelectedTopic] = useState(null)
@@ -97,21 +104,22 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
   const { user, updateTopicProgress, getTopicProgress, getSubjectProgress, setUserName, reloadProgress } = useProgress({
     userId: session?.user?.id,
     profile,
+    repository: e2e ? e2eProgressRepository : null,
   })
 
-  const schoolEvents = useSchoolEvents(Boolean(session?.user?.id))
+  const schoolEvents = useSchoolEvents(Boolean(session?.user?.id), e2e ? e2eSchoolEventsRepository : undefined)
   const exams = schoolEvents.events
   const upcomingExams = upcomingSchoolEvents(exams, 7)
 
-  const { addReport } = useReports(session?.user?.id)
+  const { addReport } = useReports(session?.user?.id, e2e ? e2eProblemReportRepository : undefined)
   const [showReportForm, setShowReportForm] = useState(false)
   const {
     session: studySession,
     startOrResume,
     saveAnswer: saveStudyAnswer,
     complete: completeStudySession,
-  } = useStudySession(import.meta.env.VITE_E2E_AUTH === '1' ? e2eStudyRepository : undefined)
-  const homework = useHomework(session?.user?.id)
+  } = useStudySession(e2e ? e2eStudyRepository : undefined)
+  const homework = useHomework(session?.user?.id, e2e ? e2eHomeworkRepository : undefined)
 
   // -------------------------------------------------------------------------
   // Handlers de sessão
