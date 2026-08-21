@@ -15,7 +15,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-006` ✅ Ajustar cadastro e login padrão com nome, e-mail e senha.
 - `TASK-007` ✅ Implementar encerramento de sessão e recuperação de senha por e-mail.
 - `TASK-008` ✅ Criar RLS e testes de isolamento entre alunos.
-- `TASK-009` Migrar identidades Supabase existentes quando aplicável.
+- `TASK-009` 🟡 Auditar e migrar identidades existentes somente se forem encontradas ao conectar o projeto Supabase remoto.
 
 ## F002 — Sincronização de progresso
 

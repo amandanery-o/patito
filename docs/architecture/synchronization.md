@@ -1,6 +1,6 @@
 # Estratégia de sincronização
 
-Status: proposta técnica para `F002`. Supabase é obrigatório na próxima versão.
+Status: implementada e validada localmente; ativação e teste no projeto Supabase remoto ainda pendentes.
 
 ## Responsabilidades
 

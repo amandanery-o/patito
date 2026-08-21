@@ -1,71 +1,74 @@
-# 🐥 Patito — App de Estudos
+# 🐥 Patito — estudos do 4º ano
 
-App educacional gamificado para alunos do **4º ano do Ensino Fundamental**, inspirado no Duolingo. Sessões curtas, feedback imediato, recompensas e progresso visível.
+Sistema web mobile-first para tornar o estudo do segundo semestre mais simples e atraente para crianças de aproximadamente 10 anos.
 
-## Funcionalidades
+## O que existe hoje
 
-- 7 matérias escolares com estrutura pronta para o conteúdo do segundo semestre
-- 6 tipos de exercício: múltipla escolha, verdadeiro/falso, lacunas, flashcards, ordenação e associação
-- XP, níveis, sequência diária e progresso por tópico
-- Calendário de avaliações e horário semanal
-- Login e ranking por turma com Supabase (opcional)
-- Modo offline com dados locais separados por usuário
-- PWA responsivo e mobile-first
+- Conta individual com nome, e-mail e senha pelo Supabase Auth.
+- Sete matérias, com estado claro de “em preparação” quando ainda não há conteúdo.
+- Resumos textuais e sessões de aproximadamente 30 questões.
+- Exercícios de múltipla escolha e associação.
+- Retomada da sessão após sair ou recarregar, revisão dos erros e tentativas ilimitadas.
+- Calendário oficial de provas e trabalhos, com alertas de proximidade.
+- CRUD de Temas: descrição, páginas, entrega e conclusão.
+- Ranking somente por utilização, sem usar acertos ou desempenho.
+- Relato anônimo de problemas e questões para o GitHub.
+- Pipeline editorial com geração assistida por Claude e aprovação humana obrigatória.
+
+O produto não possui vidas, flashcards, streak, níveis, olimpíadas, papéis de professor/responsável ou administração pelo aluno.
 
 ## Stack
 
-- [React 18](https://react.dev) + [Vite](https://vitejs.dev)
-- [Tailwind CSS](https://tailwindcss.com)
-- Supabase para autenticação, perfil e ranking
-- Vitest, Testing Library e Playwright
-- Persistência local por usuário para progresso, provas e relatórios
+- React 18, Vite e Tailwind CSS.
+- Supabase Auth e Postgres como fonte de verdade dos dados do aluno.
+- Vitest, Testing Library, PostgreSQL isolado com PGlite e Playwright.
+- PWA responsiva; funcionamento offline não é um requisito.
 
 ## Rodando localmente
 
 ```bash
-# Instalar dependências
-npm install
-
-# Iniciar servidor de desenvolvimento
+npm ci
 npm run dev
 ```
 
-Acesse em `http://localhost:5173`.
+Acesse `http://127.0.0.1:5173/`. Sem variáveis do Supabase, a interface abre somente como demonstração local; conta, calendário oficial, ranking e sincronização remota exigem a configuração abaixo.
 
-O aplicativo funciona sem Supabase em modo offline. Para habilitar login e ranking:
+## Ativando o Supabase
 
-```bash
-cp .env.example .env.local
+1. Copie `.env.example` para `.env.local`.
+2. Preencha a URL e a chave pública `anon` do projeto.
+3. Execute `supabase/schema.sql` no SQL Editor do Supabase.
+4. Execute `supabase/seed.sql` para publicar o calendário oficial.
+5. Em Authentication, habilite cadastro por e-mail/senha e configure a URL do site para recuperação de senha.
+6. Reinicie `npm run dev` e valide cadastro, login, retomada e ranking com duas contas de teste.
+
+Nunca use a chave `service_role` em uma variável `VITE_` ou no navegador.
+
+## Comandos principais
+
+| Comando                   | Descrição                                        |
+| ------------------------- | ------------------------------------------------ |
+| `npm run dev`             | Inicia o servidor local                          |
+| `npm run build`           | Gera o build de produção em `dist/`              |
+| `npm run lint`            | Executa ESLint                                   |
+| `npm run typecheck`       | Verifica os tipos de JavaScript/React            |
+| `npm run format:check`    | Verifica a formatação                            |
+| `npm test`                | Executa testes unitários e de PostgreSQL isolado |
+| `npm run test:e2e`        | Executa as jornadas de navegador em Chromium     |
+| `npm run calendar:import` | Valida o lote do calendário e gera manifesto/SQL |
+
+Nos testes de navegador, `VITE_E2E_AUTH=1` é definido apenas pelo Playwright e ativa uma conta/repositório de teste sem credenciais. As funções reais do Supabase são testadas separadamente em PostgreSQL isolado por `scripts/database/`.
+
+## Estrutura
+
+```text
+docs/               PRD, features, tasks, arquitetura e fontes editoriais
+e2e/                jornadas completas no navegador
+scripts/calendar/   importação validada do calendário
+scripts/database/   testes das funções PostgreSQL reais
+scripts/editorial/  geração, validação e aprovação de conteúdo
+src/                aplicação React
+supabase/           schema, seed e função de relato de problemas
 ```
 
-Preencha as duas variáveis e aplique [supabase/schema.sql](./supabase/schema.sql) no SQL Editor do projeto Supabase.
-
-## Scripts disponíveis
-
-| Comando            | Descrição                                     |
-| ------------------ | --------------------------------------------- |
-| `npm run dev`      | Inicia o servidor de desenvolvimento          |
-| `npm run build`    | Gera o build de produção em `/dist`           |
-| `npm run preview`  | Pré-visualiza o build de produção             |
-| `npm run lint`     | Verifica o código com ESLint                  |
-| `npm test`         | Executa os testes unitários                   |
-| `npm run test:e2e` | Executa os testes de navegador com Playwright |
-
-## Estrutura do projeto
-
-```
-src/
-├── components/   # Componentes de UI
-├── contexts/     # Sessão e perfil do Supabase
-├── data/         # Conteúdo e questões por matéria
-├── hooks/        # Hooks de estado (XP, progresso, streak)
-└── utils/        # Funções auxiliares (pontuação, shuffle)
-```
-
-## Qualidade e CI
-
-Cada push e pull request para `main` executa instalação limpa, lint, testes unitários, build e testes E2E em Chromium.
-
-Nos testes de navegador, `VITE_E2E_AUTH=1` ativa uma conta e um repositório persistente exclusivos do ambiente Playwright. Esse adaptador valida a jornada visual sem credenciais; as mesmas operações transacionais do Supabase são executadas separadamente em PostgreSQL isolado pelos testes de `scripts/database/`.
-
-Veja o [SPEC.md](./SPEC.md) para a especificação completa do projeto.
+O estado da implementação está em `docs/tasks/backlog.md` e a relação entre requisitos e entregas em `docs/tasks/traceability.md`.
