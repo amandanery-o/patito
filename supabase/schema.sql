@@ -300,7 +300,7 @@ grant execute on function public.complete_study_session(uuid) to authenticated;
 -- 60 questões e duas sessões por aluno/dia. Acertos nunca entram no cálculo.
 create or replace function public.get_usage_ranking()
 returns table (
-  position bigint,
+  "position" bigint,
   name text,
   avatar text,
   questions_count bigint,

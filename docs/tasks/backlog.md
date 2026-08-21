@@ -61,7 +61,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-034` ✅ Implementar eventos idempotentes e agregação diária.
 - `TASK-035` ✅ Aplicar teto de 60 questões e duas sessões por dia.
 - `TASK-036` ✅ Atualizar ranking para remover métricas de desempenho.
-- `TASK-037` Testar duplicação, virada do dia e uso após o limite.
+- `TASK-037` ✅ Testar no PostgreSQL a duplicação, a virada do dia e o uso após o limite.
 
 ## F008 — Relato de problemas
 
