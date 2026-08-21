@@ -47,7 +47,7 @@ function ViewLoader({ children }) {
 // ---------------------------------------------------------------------------
 
 export default function App() {
-  const { session, profile, updateProfileName, signOut } = useAuth()
+  const { session, profile, configured, updateProfileName, signOut } = useAuth()
 
   // Supabase ativo e ainda carregando sessão → spinner
   if (session === undefined) {
@@ -67,7 +67,7 @@ export default function App() {
   }
 
   // Supabase ativo mas não logado → tela de login
-  if (session === null && typeof window !== 'undefined' && import.meta.env.VITE_SUPABASE_URL) {
+  if (session === null && configured) {
     return <LoginScreen />
   }
 
