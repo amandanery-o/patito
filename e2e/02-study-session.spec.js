@@ -21,8 +21,9 @@ async function answerCurrentQuestion(page) {
     const pairCount = await leftButtons.count()
     for (let index = 0; index < pairCount; index += 1) {
       await leftButtons.nth(index).click()
-      await columns.nth(1).locator('button:not([disabled])').first().click()
+      await columns.nth(1).locator('button:not([disabled]):not([aria-label*="conectado"])').first().click()
     }
+    await page.getByRole('button', { name: 'Conferir respostas' }).click()
   } else {
     await exerciseGrid.locator('button:not([disabled])').first().click()
   }

@@ -15,23 +15,43 @@ export default function MatchColumns({ question, onSelect }) {
   }, [question])
 
   function handleLeftTap(leftIndex) {
-    if (submitted || matches[leftIndex] !== undefined) return
+    if (submitted) return
+    if (matches[leftIndex] !== undefined) {
+      setMatches((current) => {
+        const next = { ...current }
+        delete next[leftIndex]
+        return next
+      })
+      setActiveLeft(null)
+      return
+    }
     setActiveLeft(activeLeft === leftIndex ? null : leftIndex)
   }
 
   function handleRightTap(rightValue) {
-    if (submitted || activeLeft === null) return
-    if (Object.values(matches).includes(rightValue)) return
+    if (submitted) return
+    const matchedLeft = Object.keys(matches).find((leftIndex) => matches[leftIndex] === rightValue)
+    if (matchedLeft !== undefined) {
+      setMatches((current) => {
+        const next = { ...current }
+        delete next[matchedLeft]
+        return next
+      })
+      setActiveLeft(null)
+      return
+    }
+    if (activeLeft === null) return
 
     const next = { ...matches, [activeLeft]: rightValue }
     setMatches(next)
     setActiveLeft(null)
+  }
 
-    if (Object.keys(next).length === question.pairs.length) {
-      setSubmitted(true)
-      const correct = question.pairs.every((pair, i) => next[i] === pair.right)
-      onSelect(correct, question.explanation || '', { matches: next })
-    }
+  function handleSubmit() {
+    if (submitted || Object.keys(matches).length !== question.pairs.length) return
+    setSubmitted(true)
+    const correct = question.pairs.every((pair, i) => matches[i] === pair.right)
+    onSelect(correct, question.explanation || '', { matches })
   }
 
   function leftStyle(i) {
@@ -69,7 +89,9 @@ export default function MatchColumns({ question, onSelect }) {
       {!submitted && (
         <p className="text-sm text-gray-500">
           {activeLeft === null
-            ? `Toque um item à esquerda para começar (${matched}/${total} conectados) 👈`
+            ? matched === total
+              ? 'Tudo conectado! Revise os pares ou confira suas respostas. 🐥'
+              : `Toque um item à esquerda para começar (${matched}/${total} conectados) 👈`
             : `Agora toque o item correspondente à direita ➡️`}
         </p>
       )}
@@ -81,7 +103,8 @@ export default function MatchColumns({ question, onSelect }) {
             <button
               key={i}
               onClick={() => handleLeftTap(i)}
-              disabled={submitted || matches[i] !== undefined}
+              disabled={submitted}
+              aria-label={matches[i] !== undefined ? `${pair.left}, conectado; toque para desfazer` : pair.left}
               className={`w-full min-h-[56px] p-3 rounded-xl border-2 text-sm font-semibold text-left transition-all duration-200 shadow-sm ${leftStyle(i)}`}
             >
               {pair.left}
@@ -95,7 +118,12 @@ export default function MatchColumns({ question, onSelect }) {
             <button
               key={i}
               onClick={() => handleRightTap(rightValue)}
-              disabled={submitted || Object.values(matches).includes(rightValue) || activeLeft === null}
+              disabled={submitted || (activeLeft === null && !Object.values(matches).includes(rightValue))}
+              aria-label={
+                Object.values(matches).includes(rightValue)
+                  ? `${rightValue}, conectado; toque para desfazer`
+                  : rightValue
+              }
               className={`w-full min-h-[56px] p-3 rounded-xl border-2 text-sm font-semibold text-left transition-all duration-200 shadow-sm ${rightStyle(rightValue)}`}
             >
               {rightValue}
@@ -103,6 +131,17 @@ export default function MatchColumns({ question, onSelect }) {
           ))}
         </div>
       </div>
+
+      {!submitted && (
+        <button
+          type="button"
+          onClick={handleSubmit}
+          disabled={matched !== total}
+          className="w-full rounded-2xl bg-blue-600 px-5 py-3.5 font-extrabold text-white shadow-md transition-all active:scale-95 disabled:cursor-not-allowed disabled:opacity-40"
+        >
+          Conferir respostas
+        </button>
+      )}
     </div>
   )
 }
