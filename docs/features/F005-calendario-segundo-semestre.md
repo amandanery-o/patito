@@ -15,6 +15,7 @@ O aluno consulta provas, trabalhos e outros compromissos na **Agenda escolar**, 
 - Alertas apresentam tipo, matéria e dias restantes.
 - Datas antigas do primeiro semestre não aparecem como próximas.
 - Na interface infantil, usar **Agenda** no menu e **Agenda escolar** como título. “Provas” e “Trabalhos” são tipos de evento, não o nome da área.
+- Mensagens gerais sobre compromissos próximos convidam a conferir a Agenda e não presumem que todos os eventos sejam provas.
 
 ## Critérios de aceite
 

@@ -12,5 +12,6 @@ paths:
 - Use semantic HTML and accessible names for interactive controls.
 - Keep interface copy in Brazilian Portuguese and suitable for fourth-grade students.
 - Preserve product terminology: **Agenda** in navigation and **Agenda escolar** on the page; do not label the whole area as **Provas**.
+- Use neutral Agenda copy for aggregate reminders; mention **Prova** or **Trabalho** only when the specific event type is known.
 - Add or update Vitest tests for behavior changes and Playwright coverage for critical journeys.
 - Preserve the no-Supabase offline path.

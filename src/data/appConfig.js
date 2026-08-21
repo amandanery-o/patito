@@ -99,7 +99,8 @@ export const VIEWS = {
 }
 
 export function getMascotState(userName, upcomingCount) {
-  if (upcomingCount > 0) return { mood: 'neutro', message: `Oi, ${userName}! Bora se preparar para as provas? 💪` }
+  if (upcomingCount > 0)
+    return { mood: 'neutro', message: `Oi, ${userName}! Tem coisa importante chegando! Vamos conferir a Agenda? 📅` }
   return { mood: 'feliz', message: `Oi, ${userName}! Que matéria estudamos hoje? 📚` }
 }
 
