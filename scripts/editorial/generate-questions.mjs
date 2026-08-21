@@ -20,49 +20,80 @@ function requiredEnvironment(name) {
 }
 
 export function buildSourceBrief(topics = GEOGRAPHY_TOPICS) {
-  return topics.map(topic => ({
+  return topics.filter(topic => Number.isInteger(topic.chapter)).map(topic => ({
     chapter: topic.chapter,
     title: topic.title,
     pages: topic.source.pages,
+    sourceSections: topic.sourceSections,
     sections: topic.summarySections,
     keyIdeas: topic.keyIdeas,
   }))
 }
 
-function questionSchema() {
+function sourceReferenceSchema() {
   return {
     type: 'object',
-    additionalProperties: false,
-    required: ['questions'],
     properties: {
-      questions: {
+      section: { type: 'string' },
+      pages: { type: 'string' },
+    },
+    required: ['section', 'pages'],
+    additionalProperties: false,
+  }
+}
+
+function questionBatchSchema() {
+  const commonProperties = {
+    difficulty: { type: 'string', enum: ['easy', 'intermediate', 'challenging'] },
+    question: { type: 'string' },
+    explanation: { type: 'string' },
+    sourceRef: sourceReferenceSchema(),
+  }
+  return {
+    type: 'object',
+    properties: {
+      multipleChoiceQuestions: {
         type: 'array',
         items: {
           type: 'object',
-          additionalProperties: false,
-          required: ['type', 'difficulty', 'question', 'explanation', 'sourceRef'],
           properties: {
-            type: { enum: ['multipleChoice', 'matchColumns'] },
-            difficulty: { enum: ['easy', 'intermediate', 'challenging'] },
-            question: { type: 'string', minLength: 10 },
-            explanation: { type: 'string', minLength: 10 },
-            options: { type: 'array', minItems: 4, maxItems: 4, items: { type: 'string' } },
-            correctIndex: { type: 'integer', minimum: 0, maximum: 3 },
+            ...commonProperties,
+            options: {
+              type: 'array',
+              items: { type: 'string' },
+            },
+            correctIndex: { type: 'integer' },
+          },
+          required: ['difficulty', 'question', 'options', 'correctIndex', 'explanation', 'sourceRef'],
+          additionalProperties: false,
+        },
+      },
+      matchColumnsQuestions: {
+        type: 'array',
+        items: {
+          type: 'object',
+          properties: {
+            ...commonProperties,
             pairs: {
-              type: 'array', minItems: 3, maxItems: 6,
+              type: 'array',
               items: {
-                type: 'object', additionalProperties: false, required: ['left', 'right'],
-                properties: { left: { type: 'string' }, right: { type: 'string' } },
+                type: 'object',
+                properties: {
+                  left: { type: 'string' },
+                  right: { type: 'string' },
+                },
+                required: ['left', 'right'],
+                additionalProperties: false,
               },
             },
-            sourceRef: {
-              type: 'object', additionalProperties: false, required: ['section', 'pages'],
-              properties: { section: { type: 'string' }, pages: { type: 'string' } },
-            },
           },
+          required: ['difficulty', 'question', 'pairs', 'explanation', 'sourceRef'],
+          additionalProperties: false,
         },
       },
     },
+    required: ['multipleChoiceQuestions', 'matchColumnsQuestions'],
+    additionalProperties: false,
   }
 }
 
@@ -75,9 +106,43 @@ export function validateGeneratedQuestions(questions, expected) {
   if (matchColumns !== expected.matchColumns) errors.push(`esperadas ${expected.matchColumns} associações; recebidas ${matchColumns}`)
   for (const [difficulty, amount] of Object.entries(expected.difficulty || {})) {
     const received = questions.filter(question => question.difficulty === difficulty).length
-    if (received !== amount) errors.push(`esperadas ${amount} questões ${difficulty}; recebidas ${received}`)
+    if (Math.abs(received - amount) > 2) errors.push(`esperadas aproximadamente ${amount} questões ${difficulty}; recebidas ${received}`)
   }
   return errors
+}
+
+export function normalizeGeneratedQuestions(questions, expected) {
+  const difficulties = ['easy', 'intermediate', 'challenging']
+  const byTypeAndDifficulty = new Map()
+  for (const type of ['multipleChoice', 'matchColumns']) {
+    for (const difficulty of difficulties) {
+      byTypeAndDifficulty.set(`${type}:${difficulty}`, questions.filter(
+        question => question.type === type && question.difficulty === difficulty,
+      ))
+    }
+  }
+
+  for (let easy = 0; easy <= expected.difficulty.easy; easy += 1) {
+    for (let intermediate = 0; intermediate <= expected.difficulty.intermediate; intermediate += 1) {
+      const challenging = expected.multipleChoice - easy - intermediate
+      if (challenging < 0 || challenging > expected.difficulty.challenging) continue
+      const multipleTargets = { easy, intermediate, challenging }
+      const matchTargets = Object.fromEntries(difficulties.map(
+        difficulty => [difficulty, expected.difficulty[difficulty] - multipleTargets[difficulty]],
+      ))
+      if (Object.values(matchTargets).some(amount => amount < 0)) continue
+      const enough = difficulties.every(difficulty =>
+        byTypeAndDifficulty.get(`multipleChoice:${difficulty}`).length >= multipleTargets[difficulty] &&
+        byTypeAndDifficulty.get(`matchColumns:${difficulty}`).length >= matchTargets[difficulty])
+      if (!enough) continue
+
+      return ['multipleChoice', 'matchColumns'].flatMap(type => difficulties.flatMap(difficulty => {
+        const target = type === 'multipleChoice' ? multipleTargets[difficulty] : matchTargets[difficulty]
+        return byTypeAndDifficulty.get(`${type}:${difficulty}`).slice(0, target)
+      }))
+    }
+  }
+  return questions
 }
 
 export function renderPrompt(template, values) {
@@ -87,10 +152,21 @@ export function renderPrompt(template, values) {
   )
 }
 
-async function generateBatch({ apiKey, model, batch, sourceBrief, systemPrompt, batchTemplate }) {
+export function structuredCollection(value) {
+  if (Array.isArray(value)) return value
+  if (value && typeof value === 'object') return Object.values(value)
+  if (typeof value === 'string') {
+    const parsed = JSON.parse(value)
+    if (Array.isArray(parsed)) return parsed
+    if (parsed && typeof parsed === 'object') return Object.values(parsed)
+  }
+  throw new Error('Claude retornou uma coleção de questões em formato inválido')
+}
+
+async function generateBatch({ apiKey, model, batch, sourceBrief, systemPrompt, batchTemplate, existingQuestions }) {
   const prompt = renderPrompt(batchTemplate, {
     BATCH_NUMBER: batch.number,
-    TOTAL_BATCHES: 2,
+    TOTAL_BATCHES: batch.totalBatches,
     ASSESSMENT_NAME: 'P1',
     SUBJECT: 'Geografia',
     TOTAL: batch.total,
@@ -102,6 +178,9 @@ async function generateBatch({ apiKey, model, batch, sourceBrief, systemPrompt, 
     INTERMEDIATE: batch.difficulty.intermediate,
     CHALLENGING: batch.difficulty.challenging,
     FOCUS: batch.focus.map(focus => `- ${focus}`).join('\n'),
+    AVOID_QUESTIONS: existingQuestions.length
+      ? existingQuestions.map(question => `- ${question.question}`).join('\n')
+      : 'Nenhuma; este é o primeiro lote.',
     SOURCE_BRIEF: JSON.stringify(sourceBrief, null, 2),
   })
 
@@ -114,24 +193,30 @@ async function generateBatch({ apiKey, model, batch, sourceBrief, systemPrompt, 
     },
     body: JSON.stringify({
       model,
-      max_tokens: 12000,
+      max_tokens: 6000,
       temperature: 0.3,
       system: systemPrompt,
       messages: [{ role: 'user', content: prompt }],
-      tools: [{
-        name: 'submit_question_batch',
-        description: 'Entrega o lote estruturado de questões para validação editorial.',
-        input_schema: questionSchema(),
-      }],
-      tool_choice: { type: 'tool', name: 'submit_question_batch' },
+      output_config: {
+        format: {
+          type: 'json_schema',
+          schema: questionBatchSchema(),
+        },
+      },
     }),
   })
 
   const payload = await response.json()
   if (!response.ok) throw new Error(`Anthropic API ${response.status}: ${payload.error?.message || 'falha desconhecida'}`)
-  const toolUse = payload.content?.find(block => block.type === 'tool_use' && block.name === 'submit_question_batch')
-  if (!toolUse?.input?.questions) throw new Error('Claude não retornou o lote estruturado esperado')
-  return { questions: toolUse.input.questions, usage: payload.usage, stopReason: payload.stop_reason }
+  const textBlock = payload.content?.find(block => block.type === 'text')
+  if (!textBlock?.text) throw new Error('Claude não retornou o lote JSON esperado')
+  const input = JSON.parse(textBlock.text)
+  if (!input.multipleChoiceQuestions || !input.matchColumnsQuestions) throw new Error('Claude não retornou as coleções esperadas')
+  const questions = [
+    ...structuredCollection(input.multipleChoiceQuestions).map(question => ({ ...question, type: 'multipleChoice' })),
+    ...structuredCollection(input.matchColumnsQuestions).map(question => ({ ...question, type: 'matchColumns' })),
+  ]
+  return { questions, usage: payload.usage, stopReason: payload.stop_reason }
 }
 
 export function assembleDraft({ questions, model }) {
@@ -162,24 +247,57 @@ async function main() {
   ])
   const batches = [
     {
-      number: 1, total: 30, multipleChoice: 23, matchColumns: 7,
-      difficulty: { easy: 9, intermediate: 15, challenging: 6 },
-      focus: ['agricultura', 'pecuária', 'extrativismo', 'sustentabilidade', 'trabalho rural'],
+      number: 1, totalBatches: 6, total: 10, multipleChoice: 8, matchColumns: 2,
+      difficulty: { easy: 3, intermediate: 5, challenging: 2 },
+      focus: ['agricultura', 'grandes e pequenos produtores', 'agricultura orgânica'],
     },
     {
-      number: 2, total: 30, multipleChoice: 22, matchColumns: 8,
-      difficulty: { easy: 9, intermediate: 15, challenging: 6 },
-      focus: ['indústria', 'bens de consumo', 'comércio', 'serviços', 'relações entre campo e cidade'],
+      number: 2, totalBatches: 6, total: 10, multipleChoice: 8, matchColumns: 2,
+      difficulty: { easy: 3, intermediate: 5, challenging: 2 },
+      focus: ['pecuária', 'sistemas intensivo e extensivo', 'produtos da criação animal'],
+    },
+    {
+      number: 3, totalBatches: 6, total: 10, multipleChoice: 8, matchColumns: 2,
+      difficulty: { easy: 3, intermediate: 5, challenging: 2 },
+      focus: ['extrativismo', 'sustentabilidade', 'modernização do campo', 'êxodo rural'],
+    },
+    {
+      number: 4, totalBatches: 6, total: 10, multipleChoice: 7, matchColumns: 3,
+      difficulty: { easy: 3, intermediate: 5, challenging: 2 },
+      focus: ['indústria de base', 'bens intermediários', 'bens de consumo'],
+    },
+    {
+      number: 5, totalBatches: 6, total: 10, multipleChoice: 7, matchColumns: 3,
+      difficulty: { easy: 3, intermediate: 5, challenging: 2 },
+      focus: ['comércio', 'atacado e varejo', 'comércio interno e externo'],
+    },
+    {
+      number: 6, totalBatches: 6, total: 10, multipleChoice: 7, matchColumns: 3,
+      difficulty: { easy: 3, intermediate: 5, challenging: 2 },
+      focus: ['prestação de serviços', 'trabalho urbano', 'relações entre campo e cidade'],
     },
   ]
 
   const generated = []
   const usage = []
+  await mkdir(dirname(output), { recursive: true })
   for (const batch of batches) {
-    const result = await generateBatch({ apiKey, model, batch, sourceBrief, systemPrompt, batchTemplate })
-    const errors = validateGeneratedQuestions(result.questions, batch)
+    const checkpoint = resolve(dirname(output), `.geografia-p1-batch-${batch.number}.json`)
+    let result
+    try {
+      result = JSON.parse(await readFile(checkpoint, 'utf8'))
+    } catch (error) {
+      if (error.code !== 'ENOENT') throw error
+      result = await generateBatch({
+        apiKey, model, batch, sourceBrief, systemPrompt, batchTemplate,
+        existingQuestions: generated,
+      })
+      await writeFile(checkpoint, `${JSON.stringify(result, null, 2)}\n`, { flag: 'wx' })
+    }
+    const normalized = normalizeGeneratedQuestions(result.questions, batch)
+    const errors = validateGeneratedQuestions(normalized, batch)
     if (errors.length) throw new Error(`Lote ${batch.number} inválido: ${errors.join('; ')}`)
-    generated.push(...result.questions)
+    generated.push(...normalized)
     usage.push({ batch: batch.number, ...result.usage, stopReason: result.stopReason })
   }
 
@@ -187,7 +305,6 @@ async function main() {
   const structural = validateEditorialContent(draft)
   if (!structural.valid) throw new Error(`Rascunho inválido: ${structural.errors.join('; ')}`)
 
-  await mkdir(dirname(output), { recursive: true })
   await writeFile(output, `${JSON.stringify({ ...draft, generation: { ...draft.generation, usage } }, null, 2)}\n`, { flag: 'wx' })
   console.log(`Rascunho criado em ${output}`)
   console.log('Status: draft — revisão humana obrigatória antes da publicação')

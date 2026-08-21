@@ -37,4 +37,19 @@ describe('validateEditorialContent', () => {
     questions[0] = { ...questions[0], sourceRef: undefined }
     expect(validateEditorialContent(content({ questions })).errors).toContain('questions[0].sourceRef.section é obrigatória')
   })
+
+  it('rejeita associações com respostas repetidas', () => {
+    const questions = content().questions
+    questions[0] = {
+      ...questions[0],
+      pairs: [
+        { left: 'A', right: 'Mesmo' },
+        { left: 'B', right: 'Mesmo' },
+        { left: 'C', right: 'Outro' },
+      ],
+    }
+    const result = validateEditorialContent(content({ questions }))
+    expect(result.valid).toBe(false)
+    expect(result.errors).toContain('questions[0].pairs não pode repetir itens da coluna direita')
+  })
 })

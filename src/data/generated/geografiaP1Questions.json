@@ -1,0 +1,1227 @@
+[
+  {
+    "difficulty": "easy",
+    "question": "O que é agricultura?",
+    "options": [
+      "A criação de animais para produzir alimentos e matérias-primas.",
+      "A retirada de recursos que já existem na natureza.",
+      "O cultivo do solo para obter alimentos e matérias-primas.",
+      "A transformação de matérias-primas em produtos industrializados."
+    ],
+    "correctIndex": 2,
+    "explanation": "Agricultura é o cultivo do solo para obter alimentos e matérias-primas. Criar animais é pecuária, retirar recursos da natureza é extrativismo, e transformar matérias-primas é atividade industrial.",
+    "sourceRef": {
+      "section": "Agricultura",
+      "pages": "72"
+    },
+    "type": "multipleChoice",
+    "id": "geo-p1-001"
+  },
+  {
+    "difficulty": "easy",
+    "question": "Como os pequenos produtores rurais costumam trabalhar?",
+    "options": [
+      "Cultivam produtos variados em propriedades menores para abastecer a família e a comunidade.",
+      "Vendem toda a produção para outros países.",
+      "Trabalham somente com pecuária intensiva.",
+      "Usam grandes áreas e muitas máquinas para produzir um único produto."
+    ],
+    "correctIndex": 0,
+    "explanation": "Os pequenos produtores geralmente cultivam produtos variados em propriedades menores, abastecendo principalmente a família e a comunidade local, ao contrário dos grandes produtores, que usam áreas extensas e máquinas.",
+    "sourceRef": {
+      "section": "Agricultura",
+      "pages": "72"
+    },
+    "type": "multipleChoice",
+    "id": "geo-p1-002"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Leia a situação abaixo e responda.\n\nDona Marta planta alface, tomate e cenoura em sua pequena propriedade. Ela não usa agrotóxicos nem adubos químicos no cultivo.\n\nQual prática agrícola Dona Marta realiza?",
+    "options": [
+      "Agricultura orgânica.",
+      "Agricultura de grande produtor.",
+      "Pecuária extensiva.",
+      "Extrativismo vegetal."
+    ],
+    "correctIndex": 0,
+    "explanation": "A agricultura orgânica é aquela que evita o uso de substâncias químicas no cultivo. Como Dona Marta não usa agrotóxicos nem adubos químicos, ela pratica agricultura orgânica.",
+    "sourceRef": {
+      "section": "Agricultura orgânica no Brasil",
+      "pages": "78"
+    },
+    "type": "multipleChoice",
+    "id": "geo-p1-003"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Por que a agricultura orgânica é considerada uma prática que ajuda a preservar o meio ambiente?",
+    "options": [
+      "Porque substitui o trabalho braçal pelo trabalho de máquinas.",
+      "Porque usa máquinas modernas que tornam a produção mais rápida.",
+      "Porque evita o uso de substâncias químicas que podem poluir o solo e a água.",
+      "Porque produz apenas para grandes empresas e não para a comunidade."
+    ],
+    "correctIndex": 2,
+    "explanation": "A agricultura orgânica evita substâncias químicas no cultivo. Isso ajuda a preservar o solo, a água e os seres vivos, ao contrário de práticas predatórias que podem causar poluição e danos ao ambiente.",
+    "sourceRef": {
+      "section": "Agricultura orgânica no Brasil",
+      "pages": "78"
+    },
+    "type": "multipleChoice",
+    "id": "geo-p1-004"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Qual é a principal diferença entre o grande produtor e o pequeno produtor na agricultura?",
+    "options": [
+      "O grande produtor cultiva apenas alimentos orgânicos.",
+      "O pequeno produtor usa mais máquinas do que o grande produtor.",
+      "O grande produtor usa áreas extensas, máquinas e produção especializada.",
+      "O pequeno produtor vende sua produção para outros países."
+    ],
+    "correctIndex": 2,
+    "explanation": "Os grandes produtores costumam usar áreas extensas, máquinas e produção especializada. Já os pequenos produtores cultivam produtos variados em propriedades menores, geralmente para abastecer a família e a comunidade.",
+    "sourceRef": {
+      "section": "Agricultura",
+      "pages": "72"
+    },
+    "type": "multipleChoice",
+    "id": "geo-p1-005"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "O que acontece quando práticas predatórias são usadas na agricultura?",
+    "options": [
+      "O solo fica mais fértil e a água mais limpa.",
+      "Podem ocorrer poluição, desmatamento e perda de espécies.",
+      "Os pequenos produtores passam a usar mais máquinas.",
+      "A produção de alimentos orgânicos aumenta."
+    ],
+    "correctIndex": 1,
+    "explanation": "Práticas predatórias na agricultura podem provocar poluição, desmatamento e perda de espécies. Por isso, o desafio é produzir alimentos preservando o solo, a água e os seres vivos.",
+    "sourceRef": {
+      "section": "Agricultura orgânica no Brasil",
+      "pages": "78"
+    },
+    "type": "multipleChoice",
+    "id": "geo-p1-006"
+  },
+  {
+    "difficulty": "challenging",
+    "question": "Uma pequena propriedade cultiva verduras e também cria galinhas. Que nome recebe a união dessas duas atividades?",
+    "options": [
+      "Comércio",
+      "Prestação de serviços",
+      "Extrativismo",
+      "Agropecuária"
+    ],
+    "correctIndex": 3,
+    "explanation": "Agropecuária é a união da agricultura, que cultiva o solo, com a pecuária, que cria animais.",
+    "sourceRef": {
+      "section": "Agricultura; Pecuária",
+      "pages": "72–73"
+    },
+    "type": "multipleChoice",
+    "id": "geo-p1-007"
+  },
+  {
+    "difficulty": "challenging",
+    "question": "Um agricultor decide usar máquinas modernas em sua propriedade para aumentar a produção. Qual consequência esse processo de modernização pode trazer para os trabalhadores do campo?",
+    "options": [
+      "Os trabalhadores deixam de precisar de qualquer especialização.",
+      "Todos os trabalhadores passam a ganhar salários maiores.",
+      "A produção diminui porque as máquinas são lentas.",
+      "Parte do trabalho braçal pode ser substituída pelas máquinas."
+    ],
+    "correctIndex": 3,
+    "explanation": "A modernização do campo tornou a produção mais rápida e eficiente, mas também substituiu parte do trabalho braçal. Isso pode levar trabalhadores a deixar o campo e ir para a cidade, movimento chamado de êxodo rural.",
+    "sourceRef": {
+      "section": "Trabalhadores do espaço rural",
+      "pages": "77"
+    },
+    "type": "multipleChoice",
+    "id": "geo-p1-008"
+  },
+  {
+    "difficulty": "easy",
+    "question": "Associe cada tipo de atividade econômica rural à sua descrição correta.",
+    "pairs": [
+      {
+        "left": "Agricultura",
+        "right": "Cultivo do solo para obter alimentos e matérias-primas."
+      },
+      {
+        "left": "Pecuária",
+        "right": "Criação de animais para produzir alimentos e matérias-primas."
+      },
+      {
+        "left": "Extrativismo",
+        "right": "Retirada de recursos que já existem na natureza."
+      }
+    ],
+    "explanation": "Cada atividade econômica rural tem uma característica própria: a agricultura trabalha com o cultivo do solo, a pecuária com a criação de animais e o extrativismo com a retirada de recursos naturais já existentes.",
+    "sourceRef": {
+      "section": "Agricultura; Pecuária; Extrativismo animal, mineral e vegetal",
+      "pages": "72–75"
+    },
+    "type": "matchColumns",
+    "id": "geo-p1-009"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Associe cada característica à atividade rural correspondente.",
+    "pairs": [
+      {
+        "left": "Cultivo de arroz",
+        "right": "Agricultura"
+      },
+      {
+        "left": "Criação de gado",
+        "right": "Pecuária"
+      },
+      {
+        "left": "Coleta de látex",
+        "right": "Extrativismo vegetal"
+      },
+      {
+        "left": "Pesca artesanal",
+        "right": "Extrativismo animal"
+      }
+    ],
+    "explanation": "Agricultura cultiva o solo, pecuária cria animais e extrativismo retira recursos que já existem na natureza.",
+    "sourceRef": {
+      "section": "Agricultura; Pecuária; Extrativismo animal, mineral e vegetal",
+      "pages": "72–75"
+    },
+    "type": "matchColumns",
+    "id": "geo-p1-010"
+  },
+  {
+    "difficulty": "easy",
+    "question": "O que é pecuária?",
+    "explanation": "Pecuária é a criação de animais com diferentes finalidades, como produzir alimentos, matérias-primas, transporte ou esporte. Não se trata do cultivo de plantas nem da retirada de recursos da natureza.",
+    "sourceRef": {
+      "section": "Pecuária",
+      "pages": "73"
+    },
+    "options": [
+      "A retirada de recursos que já existem na natureza.",
+      "A venda de produtos agrícolas em feiras e mercados.",
+      "A criação de animais para produzir alimentos, matérias-primas, transporte ou esporte.",
+      "O cultivo do solo para obter alimentos e matérias-primas."
+    ],
+    "correctIndex": 2,
+    "type": "multipleChoice",
+    "id": "geo-p1-011"
+  },
+  {
+    "difficulty": "easy",
+    "question": "Na pecuária extensiva, como os animais são criados?",
+    "explanation": "Na pecuária extensiva, o gado permanece solto no pasto e precisa de áreas maiores para se alimentar. Já na pecuária intensiva, os animais ficam confinados com maior uso de tecnologia.",
+    "sourceRef": {
+      "section": "Pecuária",
+      "pages": "73"
+    },
+    "options": [
+      "Os animais são transportados constantemente entre diferentes regiões.",
+      "Os animais ficam confinados e há maior uso de tecnologia.",
+      "Os animais são criados em pequenas jaulas dentro de galpões fechados.",
+      "O gado permanece solto no pasto e precisa de áreas maiores."
+    ],
+    "correctIndex": 3,
+    "type": "multipleChoice",
+    "id": "geo-p1-012"
+  },
+  {
+    "difficulty": "easy",
+    "question": "Qual dos exemplos abaixo é um produto obtido por meio da pecuária?",
+    "explanation": "O leite é um alimento produzido a partir da criação de animais, portanto é um produto da pecuária. O arroz e a soja são obtidos pela agricultura, e o ferro é extraído pela mineração.",
+    "sourceRef": {
+      "section": "Pecuária",
+      "pages": "73"
+    },
+    "options": [
+      "Arroz",
+      "Leite",
+      "Soja",
+      "Ferro"
+    ],
+    "correctIndex": 1,
+    "type": "multipleChoice",
+    "id": "geo-p1-013"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Qual é a principal diferença entre a pecuária intensiva e a pecuária extensiva?",
+    "explanation": "Na pecuária intensiva, os animais ficam confinados e há maior uso de tecnologia. Na extensiva, o gado fica solto no pasto e ocupa áreas maiores. A diferença está na forma de criar os animais e no espaço utilizado.",
+    "sourceRef": {
+      "section": "Pecuária",
+      "pages": "73"
+    },
+    "options": [
+      "Na intensiva, os animais ficam confinados com mais tecnologia; na extensiva, o gado fica solto no pasto.",
+      "Na intensiva, usa-se menos tecnologia; na extensiva, usa-se mais.",
+      "Na intensiva, cria-se apenas gado bovino; na extensiva, cria-se qualquer animal.",
+      "Na intensiva, os animais ficam soltos; na extensiva, ficam confinados."
+    ],
+    "correctIndex": 0,
+    "type": "multipleChoice",
+    "id": "geo-p1-014"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Leia o trecho abaixo e responda.\n\n\"Carlos tem uma fazenda onde cria galinhas para produzir ovos. As galinhas ficam em galpões fechados e recebem ração controlada.\"\n\nQue tipo de pecuária Carlos pratica?",
+    "explanation": "Como os animais ficam confinados em galpões e há controle da alimentação, trata-se de pecuária intensiva, que se caracteriza pelo confinamento e pelo maior uso de tecnologia.",
+    "sourceRef": {
+      "section": "Pecuária",
+      "pages": "73"
+    },
+    "options": [
+      "Pecuária intensiva, porque os animais ficam confinados com alimentação controlada.",
+      "Extrativismo animal, porque retira recursos da natureza.",
+      "Pecuária extensiva, porque os animais são criados em grandes áreas.",
+      "Pecuária orgânica, porque não usa agrotóxicos."
+    ],
+    "correctIndex": 0,
+    "type": "multipleChoice",
+    "id": "geo-p1-015"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "A pecuária pode fornecer matérias-primas para a indústria. Qual dos exemplos abaixo mostra essa relação?",
+    "explanation": "O couro obtido do gado é uma matéria-prima usada pela indústria para fabricar sapatos, bolsas e outros produtos. Isso mostra como a pecuária abastece a indústria com materiais para transformação.",
+    "sourceRef": {
+      "section": "Pecuária",
+      "pages": "73"
+    },
+    "options": [
+      "O minério de ferro é fundido para produzir aço.",
+      "O couro do gado é usado para fabricar sapatos e bolsas.",
+      "O trigo cultivado no campo é moído para fazer farinha.",
+      "A madeira retirada da floresta é usada na construção civil."
+    ],
+    "correctIndex": 1,
+    "type": "multipleChoice",
+    "id": "geo-p1-016"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Qual exemplo mostra uma matéria-prima fornecida pela pecuária para a indústria?",
+    "explanation": "O couro vem da criação de animais e pode ser transformado pela indústria em calçados e bolsas.",
+    "sourceRef": {
+      "section": "Pecuária",
+      "pages": "73"
+    },
+    "options": [
+      "Areia usada na construção",
+      "Couro usado para fabricar calçados",
+      "Minério usado para produzir aço",
+      "Madeira usada para fabricar móveis"
+    ],
+    "correctIndex": 1,
+    "type": "multipleChoice",
+    "id": "geo-p1-017"
+  },
+  {
+    "difficulty": "challenging",
+    "question": "Uma fazenda produz leite usando ordenhadeiras automáticas, alimentação controlada para o gado e monitoramento por computador. Outra fazenda cria bois soltos em grandes pastagens sem uso de máquinas.\n\nCom base nessas informações, qual afirmação está correta?",
+    "explanation": "A primeira fazenda pratica pecuária intensiva, pois usa tecnologia e confinamento. A segunda pratica pecuária extensiva, pois o gado fica solto no pasto em áreas maiores. As duas são formas de pecuária, mas com características diferentes.",
+    "sourceRef": {
+      "section": "Pecuária",
+      "pages": "73"
+    },
+    "options": [
+      "A primeira pratica pecuária intensiva e a segunda pratica pecuária extensiva.",
+      "A primeira pratica extrativismo animal e a segunda pratica pecuária extensiva.",
+      "As duas fazendas praticam pecuária intensiva, porque produzem alimentos.",
+      "As duas fazendas praticam pecuária extensiva, porque criam animais."
+    ],
+    "correctIndex": 0,
+    "type": "multipleChoice",
+    "id": "geo-p1-018"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Associe cada produto ao tipo de atividade econômica rural que o origina.",
+    "explanation": "O leite e a lã vêm da pecuária, que é a criação de animais. O arroz vem da agricultura, que é o cultivo do solo. O látex vem do extrativismo vegetal, que é a retirada de recursos que já existem na natureza.",
+    "sourceRef": {
+      "section": "Pecuária",
+      "pages": "73"
+    },
+    "pairs": [
+      {
+        "left": "Leite",
+        "right": "Criação de bovinos"
+      },
+      {
+        "left": "Arroz",
+        "right": "Cultivo do solo"
+      },
+      {
+        "left": "Látex",
+        "right": "Coleta da seiva de seringueiras"
+      },
+      {
+        "left": "Lã",
+        "right": "Criação de ovinos"
+      }
+    ],
+    "type": "matchColumns",
+    "id": "geo-p1-019"
+  },
+  {
+    "difficulty": "challenging",
+    "question": "Associe cada característica ao sistema de criação correspondente.",
+    "explanation": "A pecuária intensiva usa confinamento e mais tecnologia; a extensiva mantém os animais soltos e ocupa áreas maiores.",
+    "sourceRef": {
+      "section": "Pecuária",
+      "pages": "73"
+    },
+    "pairs": [
+      {
+        "left": "Animais confinados",
+        "right": "Pecuária intensiva"
+      },
+      {
+        "left": "Gado solto no pasto",
+        "right": "Pecuária extensiva"
+      },
+      {
+        "left": "Maior uso de tecnologia",
+        "right": "Característica do sistema intensivo"
+      },
+      {
+        "left": "Necessidade de áreas maiores",
+        "right": "Característica do sistema extensivo"
+      }
+    ],
+    "type": "matchColumns",
+    "id": "geo-p1-020"
+  },
+  {
+    "difficulty": "easy",
+    "question": "O que é extrativismo?",
+    "explanation": "Extrativismo é a retirada de recursos que já existem na natureza, como pesca, extração de minérios ou coleta de frutos. Diferente da agricultura, o ser humano não planta nem cria — apenas retira o que a natureza já oferece.",
+    "sourceRef": {
+      "section": "Extrativismo",
+      "pages": "75"
+    },
+    "options": [
+      "O cultivo do solo para produzir alimentos.",
+      "A criação de animais em fazendas.",
+      "A retirada de recursos que já existem na natureza.",
+      "A fabricação de produtos em fábricas."
+    ],
+    "correctIndex": 2,
+    "type": "multipleChoice",
+    "id": "geo-p1-021"
+  },
+  {
+    "difficulty": "easy",
+    "question": "Qual dos exemplos abaixo é uma atividade de extrativismo vegetal?",
+    "explanation": "A coleta de látex é um exemplo de extrativismo vegetal, pois o látex é retirado diretamente de árvores que existem na natureza. Plantar soja é agricultura, criar bois é pecuária e extrair ferro é extrativismo mineral.",
+    "sourceRef": {
+      "section": "Extrativismo",
+      "pages": "75"
+    },
+    "options": [
+      "Criar bois soltos no pasto.",
+      "Coletar látex de seringueiras na floresta.",
+      "Extrair ferro de uma mina.",
+      "Plantar soja em uma grande fazenda."
+    ],
+    "correctIndex": 1,
+    "type": "multipleChoice",
+    "id": "geo-p1-022"
+  },
+  {
+    "difficulty": "easy",
+    "question": "O que é êxodo rural?",
+    "explanation": "Êxodo rural é a mudança de trabalhadores do campo para a cidade. Isso acontece, entre outros motivos, quando as máquinas substituem o trabalho braçal no campo e os trabalhadores buscam emprego nas cidades.",
+    "sourceRef": {
+      "section": "Trabalhadores do espaço rural",
+      "pages": "77"
+    },
+    "options": [
+      "O aumento da produção agrícola com uso de tecnologia.",
+      "A criação de animais em grandes propriedades rurais.",
+      "A chegada de máquinas modernas nas fazendas.",
+      "A mudança de trabalhadores do campo para a cidade."
+    ],
+    "correctIndex": 3,
+    "type": "multipleChoice",
+    "id": "geo-p1-023"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "A pesca artesanal é considerada uma forma sustentável de extrativismo. Por quê?",
+    "explanation": "A pesca artesanal retira poucos peixes de cada vez, o que permite que a natureza se recomponha. Práticas que retiram recursos em excesso podem causar danos ao meio ambiente e reduzir os estoques naturais.",
+    "sourceRef": {
+      "section": "Extrativismo",
+      "pages": "75"
+    },
+    "options": [
+      "Porque a pesca artesanal não usa barcos nem redes.",
+      "Porque usa máquinas modernas para capturar mais peixes.",
+      "Porque retira poucos peixes de cada vez, permitindo que a natureza se recomponha.",
+      "Porque os peixes são criados em tanques antes de serem pescados."
+    ],
+    "correctIndex": 2,
+    "type": "multipleChoice",
+    "id": "geo-p1-024"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Qual é um dos impactos que a mineração em grande escala pode causar ao meio ambiente?",
+    "explanation": "A mineração em grande escala pode desmatar áreas e contaminar o solo e a água. Por isso, é importante que essa atividade seja realizada com cuidado para reduzir os danos ao meio ambiente.",
+    "sourceRef": {
+      "section": "Impactos da mineração e extrativismo vegetal",
+      "pages": "76"
+    },
+    "options": [
+      "Aumentar a quantidade de animais na região.",
+      "Melhorar a qualidade da água dos rios próximos.",
+      "Desmatar e contaminar o solo e a água.",
+      "Produzir mais alimentos para a população."
+    ],
+    "correctIndex": 2,
+    "type": "multipleChoice",
+    "id": "geo-p1-025"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Leia a situação abaixo e responda.\n\nCom a chegada de tratores e colheitadeiras em uma fazenda, o dono precisou de menos trabalhadores para realizar as mesmas tarefas. Muitos desses trabalhadores foram morar na cidade em busca de emprego.\n\nEssa situação descreve qual processo estudado no capítulo?",
+    "explanation": "A situação descreve o êxodo rural, que é a mudança de trabalhadores do campo para a cidade. A modernização do campo com máquinas substituiu parte do trabalho braçal, levando muitos trabalhadores a buscar emprego nas cidades.",
+    "sourceRef": {
+      "section": "Trabalhadores do espaço rural",
+      "pages": "77"
+    },
+    "options": [
+      "Pecuária extensiva.",
+      "Êxodo rural.",
+      "Extrativismo vegetal.",
+      "Agricultura orgânica."
+    ],
+    "correctIndex": 1,
+    "type": "multipleChoice",
+    "id": "geo-p1-026"
+  },
+  {
+    "difficulty": "challenging",
+    "question": "Leia o trecho abaixo e responda.\n\n\"O desafio é produzir alimentos preservando o solo, a água e os seres vivos.\"\n\nQual prática agrícola está mais alinhada a esse desafio?",
+    "explanation": "A agricultura orgânica evita o uso de substâncias químicas no cultivo, ajudando a preservar o solo, a água e os seres vivos. Práticas predatórias, ao contrário, podem causar poluição, desmatamento e perda de espécies.",
+    "sourceRef": {
+      "section": "Agricultura orgânica no Brasil",
+      "pages": "78"
+    },
+    "options": [
+      "O desmatamento de florestas para ampliar as áreas plantadas.",
+      "A mineração em grande escala para obter mais recursos.",
+      "O uso intensivo de agrotóxicos para aumentar a produção.",
+      "A agricultura orgânica, que evita substâncias químicas no cultivo."
+    ],
+    "correctIndex": 3,
+    "type": "multipleChoice",
+    "id": "geo-p1-027"
+  },
+  {
+    "difficulty": "challenging",
+    "question": "A modernização do campo trouxe mudanças tanto positivas quanto negativas. Qual afirmação representa corretamente essas mudanças?",
+    "explanation": "A modernização tornou a produção rural mais rápida e eficiente, mas também substituiu parte do trabalho braçal, gerando êxodo rural. Ao mesmo tempo, criou espaço para profissionais especializados no campo.",
+    "sourceRef": {
+      "section": "Trabalhadores do espaço rural",
+      "pages": "77"
+    },
+    "options": [
+      "A modernização eliminou completamente o trabalho humano nas fazendas.",
+      "A modernização só trouxe benefícios, pois criou mais empregos no campo.",
+      "A modernização aumentou a produção, mas substituiu trabalhadores braçais e gerou êxodo rural.",
+      "A modernização não afetou os trabalhadores do campo, apenas aumentou a produção."
+    ],
+    "correctIndex": 2,
+    "type": "multipleChoice",
+    "id": "geo-p1-028"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Associe cada tipo de extrativismo ao seu exemplo correto.",
+    "explanation": "O extrativismo pode ser animal (como a pesca), mineral (como a extração de ouro) ou vegetal (como a coleta de frutos e madeira). Cada tipo retira um recurso diferente que já existe na natureza.",
+    "sourceRef": {
+      "section": "Extrativismo",
+      "pages": "75"
+    },
+    "pairs": [
+      {
+        "left": "Extrativismo animal",
+        "right": "Pesca de peixes nos rios"
+      },
+      {
+        "left": "Extrativismo mineral",
+        "right": "Extração de ouro em minas"
+      },
+      {
+        "left": "Extrativismo vegetal",
+        "right": "Coleta de frutos na floresta"
+      }
+    ],
+    "type": "matchColumns",
+    "id": "geo-p1-029"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Associe cada mudança no campo à sua consequência.",
+    "explanation": "A modernização aumenta a eficiência, transforma o trabalho e pode contribuir para o êxodo rural.",
+    "sourceRef": {
+      "section": "Trabalhadores do espaço rural",
+      "pages": "77"
+    },
+    "pairs": [
+      {
+        "left": "Uso de tratores e colheitadeiras",
+        "right": "Produção mais rápida e eficiente"
+      },
+      {
+        "left": "Substituição do trabalho braçal",
+        "right": "Redução de alguns postos de trabalho"
+      },
+      {
+        "left": "Mudança de trabalhadores para a cidade",
+        "right": "Êxodo rural"
+      },
+      {
+        "left": "Uso de conhecimentos técnicos",
+        "right": "Novas oportunidades para profissionais especializados"
+      }
+    ],
+    "type": "matchColumns",
+    "id": "geo-p1-030"
+  },
+  {
+    "difficulty": "easy",
+    "question": "O que a indústria de base produz?",
+    "explanation": "A indústria de base fornece materiais processados que serão usados por outras indústrias. Ela não entrega produtos prontos para o consumidor final, mas sim insumos como aço, cimento e alumínio.",
+    "sourceRef": {
+      "section": "Indústria: base, bens intermediários e bens de consumo",
+      "pages": "82"
+    },
+    "options": [
+      "Alimentos e produtos de higiene",
+      "Máquinas e equipamentos agrícolas",
+      "Roupas e sapatos para as pessoas usarem",
+      "Materiais processados para outras indústrias"
+    ],
+    "correctIndex": 3,
+    "type": "multipleChoice",
+    "id": "geo-p1-031"
+  },
+  {
+    "difficulty": "easy",
+    "question": "Qual dos exemplos abaixo é um bem de consumo não durável?",
+    "explanation": "Bens de consumo não duráveis são aqueles consumidos rapidamente, como alimentos e produtos de higiene. Roupas e sapatos são semiduráveis, e automóveis são duráveis.",
+    "sourceRef": {
+      "section": "Indústria: base, bens intermediários e bens de consumo",
+      "pages": "82"
+    },
+    "options": [
+      "Geladeira",
+      "Automóvel",
+      "Sapato",
+      "Sabonete"
+    ],
+    "correctIndex": 3,
+    "type": "multipleChoice",
+    "id": "geo-p1-032"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "O que é a indústria de bens intermediários?",
+    "explanation": "A indústria de bens intermediários fabrica máquinas, peças e equipamentos que são usados por outras indústrias ou atividades produtivas, e não diretamente pelo consumidor final.",
+    "sourceRef": {
+      "section": "Indústria: base, bens intermediários e bens de consumo",
+      "pages": "82"
+    },
+    "options": [
+      "Aquela que vende produtos diretamente ao consumidor",
+      "Aquela que fabrica máquinas, peças e equipamentos",
+      "Aquela que extrai recursos da natureza",
+      "Aquela que produz alimentos para a população"
+    ],
+    "correctIndex": 1,
+    "type": "multipleChoice",
+    "id": "geo-p1-033"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Uma fábrica produz chapas de aço que são vendidas para outras fábricas. Que tipo de indústria é essa?",
+    "explanation": "A indústria de base fornece materiais processados, como chapas de aço, que serão utilizados por outras indústrias. Ela não entrega o produto final ao consumidor.",
+    "sourceRef": {
+      "section": "Indústria: base, bens intermediários e bens de consumo",
+      "pages": "82"
+    },
+    "options": [
+      "Indústria de bens intermediários",
+      "Indústria de base",
+      "Indústria de serviços",
+      "Indústria de bens de consumo"
+    ],
+    "correctIndex": 1,
+    "type": "multipleChoice",
+    "id": "geo-p1-034"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Uma fábrica produz motores que são usados por montadoras de carros. Que tipo de indústria é essa?",
+    "explanation": "A indústria de bens intermediários fabrica peças e equipamentos, como motores, que serão utilizados por outras indústrias no processo de produção.",
+    "sourceRef": {
+      "section": "Indústria: base, bens intermediários e bens de consumo",
+      "pages": "82"
+    },
+    "options": [
+      "Indústria de bens intermediários",
+      "Comércio atacadista",
+      "Indústria de base",
+      "Indústria de bens de consumo"
+    ],
+    "correctIndex": 0,
+    "type": "multipleChoice",
+    "id": "geo-p1-035"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Uma calça jeans se desgasta com o uso, mas dura alguns anos antes de ser descartada. Como esse produto é classificado?",
+    "explanation": "Produtos semiduráveis são aqueles que se desgastam com o uso, como roupas e sapatos. Eles não duram tanto quanto os duráveis, mas também não são consumidos tão rapidamente quanto os não duráveis.",
+    "sourceRef": {
+      "section": "Indústria: base, bens intermediários e bens de consumo",
+      "pages": "82"
+    },
+    "options": [
+      "Bem intermediário",
+      "Bem de consumo durável",
+      "Bem de consumo semidurável",
+      "Bem de consumo não durável"
+    ],
+    "correctIndex": 2,
+    "type": "multipleChoice",
+    "id": "geo-p1-036"
+  },
+  {
+    "difficulty": "challenging",
+    "question": "Leia a situação abaixo e responda.\n\nUma fábrica compra aço de uma siderúrgica, usa esse aço para fabricar engrenagens e vende as engrenagens para uma montadora de automóveis.\n\nNessa cadeia, qual é o papel da fábrica de engrenagens?",
+    "explanation": "A fábrica de engrenagens é uma indústria de bens intermediários, pois fabrica peças que serão usadas por outra indústria — a montadora — e não pelo consumidor final. A siderúrgica, que fornece o aço, é a indústria de base.",
+    "sourceRef": {
+      "section": "Indústria: base, bens intermediários e bens de consumo",
+      "pages": "82"
+    },
+    "options": [
+      "Indústria de base, pois processa matéria-prima",
+      "Indústria de bens de consumo, pois produz para o consumidor final",
+      "Indústria de bens intermediários, pois fabrica peças para outra indústria",
+      "Comércio varejista, pois vende para outra empresa"
+    ],
+    "correctIndex": 2,
+    "type": "multipleChoice",
+    "id": "geo-p1-037"
+  },
+  {
+    "difficulty": "easy",
+    "question": "Associe cada tipo de indústria ao que ela produz.",
+    "explanation": "Cada tipo de indústria ocupa uma etapa diferente da produção: a de base fornece materiais processados, a de bens intermediários fabrica máquinas e peças, e a de bens de consumo produz o que a população usa no dia a dia.",
+    "sourceRef": {
+      "section": "Indústria: base, bens intermediários e bens de consumo",
+      "pages": "82"
+    },
+    "pairs": [
+      {
+        "left": "Indústria de base",
+        "right": "Materiais processados para outras indústrias"
+      },
+      {
+        "left": "Indústria de bens intermediários",
+        "right": "Máquinas, peças e equipamentos"
+      },
+      {
+        "left": "Indústria de bens de consumo",
+        "right": "Produtos usados pela população"
+      }
+    ],
+    "type": "matchColumns",
+    "id": "geo-p1-038"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Associe cada bem de consumo ao seu tipo correto.",
+    "explanation": "Os bens de consumo se dividem em duráveis, que duram muitos anos; semiduráveis, que se desgastam com o uso; e não duráveis, que são consumidos rapidamente. Cada produto se encaixa em uma dessas categorias conforme sua durabilidade.",
+    "sourceRef": {
+      "section": "Indústria: base, bens intermediários e bens de consumo",
+      "pages": "82"
+    },
+    "pairs": [
+      {
+        "left": "Automóvel",
+        "right": "Bem durável"
+      },
+      {
+        "left": "Roupa",
+        "right": "Bem semidurável"
+      },
+      {
+        "left": "Alimento",
+        "right": "Bem não durável"
+      }
+    ],
+    "type": "matchColumns",
+    "id": "geo-p1-039"
+  },
+  {
+    "difficulty": "challenging",
+    "question": "Associe cada etapa da produção industrial ao exemplo correto.",
+    "explanation": "A indústria de base processa matérias-primas brutas, como transformar minério em aço. A de bens intermediários usa esses materiais para fabricar peças, como motores. A de bens de consumo entrega o produto final ao consumidor, como um eletrodoméstico.",
+    "sourceRef": {
+      "section": "Indústria: base, bens intermediários e bens de consumo",
+      "pages": "82"
+    },
+    "pairs": [
+      {
+        "left": "Indústria de base",
+        "right": "Siderúrgica que transforma minério em aço"
+      },
+      {
+        "left": "Indústria de bens intermediários",
+        "right": "Fábrica que produz motores para montadoras"
+      },
+      {
+        "left": "Indústria de bens de consumo",
+        "right": "Fábrica que produz geladeiras para as famílias"
+      }
+    ],
+    "type": "matchColumns",
+    "id": "geo-p1-040"
+  },
+  {
+    "difficulty": "easy",
+    "question": "O que é comércio?",
+    "explanation": "Comércio é a atividade econômica que envolve a compra, a venda ou a troca de mercadorias. Não se trata de fabricar produtos nem de prestar serviços, mas de fazer circular o que já foi produzido.",
+    "sourceRef": {
+      "section": "Comércio",
+      "pages": "84"
+    },
+    "options": [
+      "A fabricação de produtos em fábricas",
+      "A compra, a venda ou a troca de mercadorias",
+      "A retirada de recursos da natureza",
+      "A realização de atividades para atender necessidades sem entregar um produto físico"
+    ],
+    "correctIndex": 1,
+    "type": "multipleChoice",
+    "id": "geo-p1-041"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Qual é a principal diferença entre o atacado e o varejo?",
+    "explanation": "No atacado, as mercadorias são vendidas em grandes quantidades, geralmente para quem vai revendê-las. No varejo, o consumidor final compra em quantidades menores para uso próprio.",
+    "sourceRef": {
+      "section": "Comércio",
+      "pages": "84"
+    },
+    "options": [
+      "O atacado vende em grandes quantidades para revenda e o varejo atende o consumidor final em quantidades menores",
+      "O atacado funciona somente em cidades grandes e o varejo funciona no campo",
+      "O atacado vende alimentos e o varejo vende roupas",
+      "O atacado vende produtos importados e o varejo vende produtos nacionais"
+    ],
+    "correctIndex": 0,
+    "type": "multipleChoice",
+    "id": "geo-p1-042"
+  },
+  {
+    "difficulty": "easy",
+    "question": "Qual dos exemplos abaixo representa uma atividade de comércio varejista?",
+    "explanation": "O varejo é o comércio que atende diretamente o consumidor final em pequenas quantidades. Uma padaria que vende pão para as famílias do bairro é um exemplo claro de varejo.",
+    "sourceRef": {
+      "section": "Comércio",
+      "pages": "84"
+    },
+    "options": [
+      "Um agricultor que planta milho em sua fazenda",
+      "Um médico que atende pacientes em um consultório",
+      "Uma fábrica que produz sapatos",
+      "Uma padaria que vende pão para as famílias do bairro"
+    ],
+    "correctIndex": 3,
+    "type": "multipleChoice",
+    "id": "geo-p1-043"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Um supermercado compra caixas com centenas de unidades de sabão diretamente de uma distribuidora para depois vender aos clientes. Como se chama o tipo de comércio que a distribuidora pratica com o supermercado?",
+    "explanation": "A distribuidora vende grandes quantidades de mercadorias para o supermercado, que vai revendê-las. Isso caracteriza o comércio atacadista, que fornece produtos em grande escala para quem vai revendê-los.",
+    "sourceRef": {
+      "section": "Comércio",
+      "pages": "84"
+    },
+    "options": [
+      "Comércio de exportação",
+      "Comércio varejista",
+      "Comércio de serviços",
+      "Comércio atacadista"
+    ],
+    "correctIndex": 3,
+    "type": "multipleChoice",
+    "id": "geo-p1-044"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "O Brasil vende produtos como soja e minério de ferro para outros países. Como é chamado esse tipo de comércio?",
+    "explanation": "Quando um país vende mercadorias para outros países, realiza o comércio externo, também chamado de exportação. O comércio interno acontece dentro do próprio país.",
+    "sourceRef": {
+      "section": "Comércio",
+      "pages": "84"
+    },
+    "options": [
+      "Comércio interno",
+      "Comércio varejista",
+      "Comércio atacadista",
+      "Comércio externo"
+    ],
+    "correctIndex": 3,
+    "type": "multipleChoice",
+    "id": "geo-p1-045"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Leia a situação abaixo e responda.\n\nUma loja de brinquedos compra seus produtos de um grande distribuidor e os vende, um a um, para crianças e famílias.\n\nQual tipo de comércio a loja de brinquedos pratica com seus clientes?",
+    "explanation": "A loja vende os brinquedos diretamente ao consumidor final, em pequenas quantidades. Isso caracteriza o comércio varejista, que é voltado para quem vai usar o produto, e não para revendê-lo.",
+    "sourceRef": {
+      "section": "Comércio",
+      "pages": "84"
+    },
+    "options": [
+      "Varejo, porque vende ao consumidor final em pequenas quantidades",
+      "Comércio externo, porque os brinquedos podem vir de outros países",
+      "Serviço, porque a loja atende os clientes",
+      "Atacado, porque compra do distribuidor"
+    ],
+    "correctIndex": 0,
+    "type": "multipleChoice",
+    "id": "geo-p1-046"
+  },
+  {
+    "difficulty": "challenging",
+    "question": "Uma empresa brasileira importa máquinas de outros países para usar em suas fábricas e, ao mesmo tempo, exporta parte de sua produção para o exterior. Que tipos de comércio essa empresa realiza?",
+    "explanation": "Quando uma empresa compra produtos de outros países, ela pratica o comércio externo de importação. Quando vende sua produção para o exterior, pratica o comércio externo de exportação. Nos dois casos, trata-se de comércio externo, pois envolve outros países.",
+    "sourceRef": {
+      "section": "Comércio",
+      "pages": "84"
+    },
+    "options": [
+      "Comércio externo nos dois casos, pois envolve outros países",
+      "Comércio interno nos dois casos, pois a empresa fica no Brasil",
+      "Comércio interno e comércio varejista",
+      "Comércio atacadista e comércio varejista"
+    ],
+    "correctIndex": 0,
+    "type": "multipleChoice",
+    "id": "geo-p1-047"
+  },
+  {
+    "difficulty": "easy",
+    "question": "Associe cada tipo de comércio à sua característica correta.",
+    "explanation": "O atacado vende em grandes quantidades para revenda; o varejo vende em pequenas quantidades ao consumidor final; o comércio interno ocorre dentro do próprio país; e o comércio externo envolve a compra e venda entre países diferentes.",
+    "sourceRef": {
+      "section": "Comércio",
+      "pages": "84"
+    },
+    "pairs": [
+      {
+        "left": "Atacado",
+        "right": "Vende grandes quantidades, geralmente para revenda"
+      },
+      {
+        "left": "Varejo",
+        "right": "Atende o consumidor final em pequenas quantidades"
+      },
+      {
+        "left": "Comércio interno",
+        "right": "Ocorre dentro do próprio país"
+      },
+      {
+        "left": "Comércio externo",
+        "right": "Envolve a compra e venda entre países diferentes"
+      }
+    ],
+    "type": "matchColumns",
+    "id": "geo-p1-048"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Associe cada exemplo de comércio ao tipo que melhor o representa.",
+    "explanation": "A feira do bairro vende diretamente ao consumidor final, sendo varejo. O distribuidor que abastece supermercados com grandes lotes pratica o atacado. A venda de café brasileiro para outros países é comércio externo (exportação). A compra de produtos entre estados brasileiros é comércio interno.",
+    "sourceRef": {
+      "section": "Comércio",
+      "pages": "84"
+    },
+    "pairs": [
+      {
+        "left": "Feira do bairro que vende frutas diretamente às famílias",
+        "right": "Varejo"
+      },
+      {
+        "left": "Distribuidor que vende centenas de caixas de produto para supermercados",
+        "right": "Atacado"
+      },
+      {
+        "left": "Venda de café brasileiro para outros países",
+        "right": "Comércio externo"
+      },
+      {
+        "left": "Compra de produtos entre estados do Brasil",
+        "right": "Comércio interno"
+      }
+    ],
+    "type": "matchColumns",
+    "id": "geo-p1-049"
+  },
+  {
+    "difficulty": "challenging",
+    "question": "Associe cada atividade econômica urbana à sua descrição correta.",
+    "explanation": "O comércio envolve a compra, venda ou troca de mercadorias. A prestação de serviços é a realização de uma atividade para atender uma necessidade, sem entregar necessariamente um produto físico. A indústria de base fornece materiais processados para outras indústrias. A indústria de bens de consumo produz o que a população utiliza diretamente.",
+    "sourceRef": {
+      "section": "Comércio",
+      "pages": "84"
+    },
+    "pairs": [
+      {
+        "left": "Comércio",
+        "right": "Compra, venda ou troca de mercadorias"
+      },
+      {
+        "left": "Prestação de serviços",
+        "right": "Realização de uma atividade para atender uma necessidade, sem entregar necessariamente um produto físico"
+      },
+      {
+        "left": "Indústria de base",
+        "right": "Fornece materiais processados para outras indústrias"
+      },
+      {
+        "left": "Indústria de bens de consumo",
+        "right": "Produz itens que a população utiliza diretamente"
+      }
+    ],
+    "type": "matchColumns",
+    "id": "geo-p1-050"
+  },
+  {
+    "difficulty": "easy",
+    "question": "Qual das atividades abaixo é um exemplo de prestação de serviços?",
+    "explanation": "A prestação de serviços envolve a realização de uma atividade para atender uma necessidade, sem entregar necessariamente um produto físico. Transporte, educação e saúde são exemplos de serviços, enquanto fabricar móveis é uma atividade industrial.",
+    "sourceRef": {
+      "section": "Prestação de serviços",
+      "pages": "85"
+    },
+    "options": [
+      "Transportar passageiros de ônibus",
+      "Plantar soja em uma fazenda",
+      "Fabricar móveis de madeira",
+      "Vender frutas em uma feira"
+    ],
+    "correctIndex": 0,
+    "type": "multipleChoice",
+    "id": "geo-p1-051"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "O campo e a cidade dependem um do outro. O que o campo fornece para as cidades?",
+    "explanation": "O campo fornece alimentos e matérias-primas para as cidades. Em troca, as cidades fornecem máquinas, equipamentos, indústrias, comércio e serviços que ajudam na produção rural.",
+    "sourceRef": {
+      "section": "Prestação de serviços",
+      "pages": "85"
+    },
+    "options": [
+      "Comércio atacadista e varejista",
+      "Máquinas e equipamentos industriais",
+      "Alimentos e matérias-primas",
+      "Serviços de saúde e educação"
+    ],
+    "correctIndex": 2,
+    "type": "multipleChoice",
+    "id": "geo-p1-052"
+  },
+  {
+    "difficulty": "easy",
+    "question": "Qual dos exemplos abaixo é um serviço oferecido nas cidades?",
+    "explanation": "A educação é um serviço, pois o professor realiza uma atividade — ensinar — para atender uma necessidade das pessoas, sem entregar um produto físico. Fabricar calçados, vender roupas e colher frutas são atividades de outros setores econômicos.",
+    "sourceRef": {
+      "section": "Prestação de serviços",
+      "pages": "85"
+    },
+    "options": [
+      "Fabricar calçados em uma fábrica",
+      "Vender roupas em uma loja",
+      "Oferecer aulas em uma escola",
+      "Colher frutas em um pomar"
+    ],
+    "correctIndex": 2,
+    "type": "multipleChoice",
+    "id": "geo-p1-053"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Leia a situação abaixo e responda.\n\nAna mora na cidade e trabalha em um hospital cuidando de pacientes. Ela não fabrica nem vende nenhum produto.\n\nQual setor econômico Ana representa?",
+    "explanation": "Ana trabalha no setor de serviços, pois realiza uma atividade — cuidar de pacientes — para atender uma necessidade, sem entregar um produto físico. Saúde é um dos exemplos de serviços citados no material.",
+    "sourceRef": {
+      "section": "Prestação de serviços",
+      "pages": "85"
+    },
+    "options": [
+      "Comércio",
+      "Agropecuária",
+      "Serviços",
+      "Indústria"
+    ],
+    "correctIndex": 2,
+    "type": "multipleChoice",
+    "id": "geo-p1-054"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Por que as cidades maiores costumam oferecer maior variedade de serviços?",
+    "explanation": "Cidades maiores concentram mais pessoas e, por isso, há maior demanda por diferentes tipos de serviços, como transporte, saúde, educação, cultura e lazer. O material indica que cidades maiores costumam oferecer maior variedade de serviços.",
+    "sourceRef": {
+      "section": "Prestação de serviços",
+      "pages": "85"
+    },
+    "options": [
+      "Porque produzem mais matérias-primas",
+      "Porque possuem mais indústrias de base",
+      "Porque têm mais fazendas ao redor",
+      "Porque concentram mais pessoas e maior demanda por serviços"
+    ],
+    "correctIndex": 3,
+    "type": "multipleChoice",
+    "id": "geo-p1-055"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Leia a situação abaixo e responda.\n\nUm agricultor do interior compra um trator fabricado em uma cidade para usar em sua plantação. Ao mesmo tempo, ele vende sua produção de milho para uma indústria alimentícia na cidade.\n\nO que essa situação mostra sobre o campo e a cidade?",
+    "explanation": "Essa situação mostra que o campo e a cidade estão conectados e dependem um do outro. O campo fornece alimentos e matérias-primas, enquanto a cidade fornece máquinas e equipamentos usados na produção rural.",
+    "sourceRef": {
+      "section": "Prestação de serviços",
+      "pages": "85"
+    },
+    "options": [
+      "Que a cidade produz alimentos e o campo produz máquinas",
+      "Que o campo e a cidade são completamente independentes",
+      "Que apenas a cidade depende do campo para se abastecer",
+      "Que o campo e a cidade se relacionam e dependem um do outro"
+    ],
+    "correctIndex": 3,
+    "type": "multipleChoice",
+    "id": "geo-p1-056"
+  },
+  {
+    "difficulty": "challenging",
+    "question": "Observe os exemplos abaixo:\n\n• Um médico atende pacientes em uma clínica.\n• Um motorista leva mercadorias de uma cidade a outra.\n• Um professor ensina matemática para crianças.\n\nO que esses três exemplos têm em comum?",
+    "explanation": "Os três exemplos representam a prestação de serviços, pois em todos eles o trabalhador realiza uma atividade para atender uma necessidade, sem entregar necessariamente um produto físico. Saúde, transporte e educação são exemplos de serviços citados no material.",
+    "sourceRef": {
+      "section": "Prestação de serviços",
+      "pages": "85"
+    },
+    "options": [
+      "Todos fabricam produtos para vender no comércio",
+      "Todos realizam atividades de serviços para atender necessidades das pessoas",
+      "Todos trabalham diretamente com a produção agrícola",
+      "Todos vendem mercadorias no atacado ou no varejo"
+    ],
+    "correctIndex": 1,
+    "type": "multipleChoice",
+    "id": "geo-p1-057"
+  },
+  {
+    "difficulty": "intermediate",
+    "question": "Associe cada exemplo de trabalho urbano ao setor econômico correto.",
+    "explanation": "O material apresenta três grandes atividades econômicas urbanas: indústria (transforma matérias-primas em produtos), comércio (compra, venda ou troca de mercadorias) e serviços (realização de atividades para atender necessidades). Cada exemplo se encaixa em um desses setores.",
+    "sourceRef": {
+      "section": "Prestação de serviços",
+      "pages": "85"
+    },
+    "pairs": [
+      {
+        "left": "Fábrica que produz geladeiras",
+        "right": "Atividade industrial"
+      },
+      {
+        "left": "Loja que vende eletrodomésticos",
+        "right": "Atividade comercial"
+      },
+      {
+        "left": "Empresa que fornece energia elétrica",
+        "right": "Serviço de utilidade pública"
+      },
+      {
+        "left": "Hospital que atende pacientes",
+        "right": "Serviço de saúde"
+      }
+    ],
+    "type": "matchColumns",
+    "id": "geo-p1-058"
+  },
+  {
+    "difficulty": "easy",
+    "question": "Associe cada atividade ao local em que ela aparece no exemplo.",
+    "explanation": "O campo é o espaço onde se desenvolvem atividades como agricultura, pecuária e extrativismo. A cidade concentra indústrias, comércio e serviços. As duas áreas se relacionam e dependem uma da outra.",
+    "sourceRef": {
+      "section": "Prestação de serviços",
+      "pages": "85"
+    },
+    "pairs": [
+      {
+        "left": "Cultivo de arroz em uma fazenda",
+        "right": "Área rural de produção agrícola"
+      },
+      {
+        "left": "Atendimento em uma escola",
+        "right": "Área urbana de prestação de serviços"
+      },
+      {
+        "left": "Criação de bovinos para produzir leite",
+        "right": "Área rural de produção pecuária"
+      },
+      {
+        "left": "Venda de produtos em uma loja",
+        "right": "Área urbana de atividade comercial"
+      }
+    ],
+    "type": "matchColumns",
+    "id": "geo-p1-059"
+  },
+  {
+    "difficulty": "challenging",
+    "question": "Associe cada relação entre campo e cidade à sua descrição correta.",
+    "explanation": "O campo e a cidade participam de uma rede de produção, circulação e consumo. O campo fornece alimentos e matérias-primas; a cidade fornece máquinas, equipamentos, indústrias, comércio e serviços. Essa troca mostra como os dois espaços dependem um do outro.",
+    "sourceRef": {
+      "section": "Prestação de serviços",
+      "pages": "85"
+    },
+    "pairs": [
+      {
+        "left": "O campo fornece para a cidade",
+        "right": "Alimentos e matérias-primas"
+      },
+      {
+        "left": "A cidade fornece para o campo",
+        "right": "Máquinas e equipamentos"
+      },
+      {
+        "left": "Serviços como saúde e educação são encontrados principalmente",
+        "right": "Nas cidades"
+      },
+      {
+        "left": "O êxodo rural acontece quando trabalhadores do campo",
+        "right": "Migram para a cidade em busca de emprego"
+      }
+    ],
+    "type": "matchColumns",
+    "id": "geo-p1-060"
+  }
+]

@@ -21,9 +21,20 @@ test.describe('Estrutura limpa do segundo semestre', () => {
     await expect(page.getByText(/OBICT|OBLI|Olimpíada/i)).toHaveCount(0)
   })
 
-  test('não mostra sessões ou conteúdo do primeiro semestre', async ({ page }) => {
-    await expect(page.getByRole('button', { name: /Jogar agora/i })).toHaveCount(0)
-    await expect(page.getByText(/Revisão P1|Revisão P2/i)).toHaveCount(0)
+  test('publica somente a revisão atual de Geografia', async ({ page }) => {
+    await expect(page.getByRole('button', { name: /Jogar agora/i })).toHaveCount(1)
+    await page.getByRole('button', { name: /Jogar agora/i }).click()
+    await expect(page.getByText('Atividades econômicas do espaço rural', { exact: true })).toBeVisible()
+    await expect(page.getByText('Atividades econômicas do espaço urbano', { exact: true })).toBeVisible()
+    await expect(page.getByRole('button', { name: /Revisão P1 — Espaços rural e urbano/i })).toBeVisible()
+    await expect(page.getByText(/flashcard|olimpíada|primeiro semestre/i)).toHaveCount(0)
+  })
+
+  test('inicia uma sessão de 30 questões da P1 de Geografia', async ({ page }) => {
+    await page.getByRole('button', { name: /Jogar agora/i }).click()
+    await page.getByRole('button', { name: /Revisão P1 — Espaços rural e urbano/i }).click()
+    await expect(page.getByText('Revisão P1 — Espaços rural e urbano', { exact: true })).toBeVisible()
+    await expect(page.getByText('1/30 questões', { exact: true })).toBeVisible()
   })
 
   test('inicia o calendário oficial vazio', async ({ page }) => {

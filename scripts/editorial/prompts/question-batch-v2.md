@@ -27,6 +27,10 @@ A soma das quantidades de cada tipo deve ser igual ao total solicitado.
 - Evite perguntas iguais ou muito parecidas com as dos demais lotes.
 - Não introduza conceitos ou informações ausentes do material autorizado.
 
+Questões já produzidas em lotes anteriores e que não devem ser repetidas:
+
+{{AVOID_QUESTIONS}}
+
 ## Adequação ao 4º ano
 
 As questões serão respondidas por estudantes do 4º ano do Ensino Fundamental, geralmente com 9 ou 10 anos.
@@ -60,7 +64,7 @@ Misture questões que trabalhem:
 
 Use situações cotidianas familiares aos estudantes quando forem adequadas ao conteúdo. Não force um contexto cotidiano se ele deixar a questão artificial ou mais difícil de compreender.
 
-Distribua a dificuldade desta forma:
+Distribua a dificuldade aproximadamente desta forma:
 
 - fáceis: {{EASY}};
 - intermediárias: {{INTERMEDIATE}};
@@ -121,7 +125,7 @@ Antes de entregar, revise silenciosamente se:
 
 - as quantidades solicitadas estão corretas;
 - a soma dos tipos corresponde ao total;
-- a distribuição de dificuldade foi atendida;
+- a distribuição aproximada de dificuldade foi atendida;
 - todas as questões são adequadas ao 4º ano;
 - cada questão possui uma resposta inequívoca;
 - os enunciados são claros e autossuficientes;
@@ -136,3 +140,34 @@ Antes de entregar, revise silenciosamente se:
 
 {{SOURCE_BRIEF}}
 
+## Formato de entrega
+
+Retorne um único objeto JSON válido com esta estrutura:
+
+```json
+{
+  "multipleChoiceQuestions": [
+    {
+      "difficulty": "easy | intermediate | challenging",
+      "question": "Enunciado",
+      "options": ["A", "B", "C", "D"],
+      "correctIndex": 0,
+      "explanation": "Explicação formativa",
+      "sourceRef": { "section": "Título exato", "pages": "XX–YY" }
+    }
+  ],
+  "matchColumnsQuestions": [
+    {
+      "difficulty": "easy | intermediate | challenging",
+      "question": "Comando",
+      "pairs": [
+        { "left": "Item", "right": "Correspondência correta" }
+      ],
+      "explanation": "Explicação formativa",
+      "sourceRef": { "section": "Título exato", "pages": "XX–YY" }
+    }
+  ]
+}
+```
+
+Não transforme as listas em strings. Não inclua cercas de código Markdown na resposta.

@@ -22,9 +22,17 @@ function validateQuestion(question, index, errors) {
     if (!Number.isInteger(question.correctIndex) || question.correctIndex < 0 || question.correctIndex > 3) {
       errors.push(`${path}.correctIndex deve apontar para uma das 4 alternativas`)
     }
+    if (Array.isArray(question.options) && new Set(question.options.map(option => option.trim().toLowerCase())).size !== question.options.length) {
+      errors.push(`${path}.options não pode repetir alternativas`)
+    }
   }
-  if (question.type === 'matchColumns' && (!Array.isArray(question.pairs) || question.pairs.length < 3 || question.pairs.length > 6)) {
-    errors.push(`${path}.pairs deve ter entre 3 e 6 associações`)
+  if (question.type === 'matchColumns') {
+    if (!Array.isArray(question.pairs) || question.pairs.length < 3 || question.pairs.length > 6) {
+      errors.push(`${path}.pairs deve ter entre 3 e 6 associações`)
+    } else {
+      const rightItems = question.pairs.map(pair => pair.right.trim().toLowerCase())
+      if (new Set(rightItems).size !== rightItems.length) errors.push(`${path}.pairs não pode repetir itens da coluna direita`)
+    }
   }
 }
 

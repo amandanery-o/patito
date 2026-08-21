@@ -8,7 +8,7 @@ export default function ContentReview({ topic, onBack, onStart }) {
       <header className="sticky top-0 z-10 flex items-center gap-3 bg-orange-500 px-4 py-4 text-white shadow-sm">
         <button onClick={onBack} className="text-2xl font-bold" aria-label="Voltar">‹</button>
         <div>
-          <p className="text-xs font-bold uppercase tracking-wide text-orange-100">Revisão do capítulo {topic.chapter}</p>
+          <p className="text-xs font-bold uppercase tracking-wide text-orange-100">{topic.reviewLabel || `Revisão do capítulo ${topic.chapter}`}</p>
           <h1 className="text-lg font-extrabold leading-tight">{topic.title}</h1>
         </div>
       </header>
@@ -46,4 +46,3 @@ export default function ContentReview({ topic, onBack, onStart }) {
     </div>
   )
 }
-

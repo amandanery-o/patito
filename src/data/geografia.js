@@ -1,3 +1,5 @@
+import geographyP1Questions from './generated/geografiaP1Questions.json'
+
 export const GEOGRAPHY_TOPICS = [
   {
     id: 'geografia-7-atividades-economicas-rurais',
@@ -9,6 +11,18 @@ export const GEOGRAPHY_TOPICS = [
       pages: '70–79',
       version: '2024',
     },
+    sourceSections: [
+      { title: 'Todos a bordo', pages: '70' },
+      { title: 'Objetivos do capítulo', pages: '71' },
+      { title: 'Agricultura', pages: '72' },
+      { title: 'Pecuária', pages: '73' },
+      { title: 'Produção brasileira e atividades', pages: '74' },
+      { title: 'Extrativismo animal, mineral e vegetal', pages: '75' },
+      { title: 'Impactos da mineração e extrativismo vegetal', pages: '76' },
+      { title: 'Trabalhadores do espaço rural', pages: '77' },
+      { title: 'Agricultura orgânica no Brasil', pages: '78' },
+      { title: 'Atividades de revisão', pages: '79' },
+    ],
     summarySections: [
       {
         title: 'Agricultura',
@@ -50,6 +64,16 @@ export const GEOGRAPHY_TOPICS = [
       pages: '80–87',
       version: '2024',
     },
+    sourceSections: [
+      { title: 'Todos a bordo', pages: '80' },
+      { title: 'Objetivos do capítulo', pages: '81' },
+      { title: 'Indústria: base, bens intermediários e bens de consumo', pages: '82' },
+      { title: 'Indústrias no Brasil', pages: '83' },
+      { title: 'Comércio', pages: '84' },
+      { title: 'Prestação de serviços', pages: '85' },
+      { title: 'Atividade sobre os setores econômicos', pages: '86' },
+      { title: 'Atividade com gráfico', pages: '87' },
+    ],
     summarySections: [
       {
         title: 'Indústria',
@@ -80,5 +104,40 @@ export const GEOGRAPHY_TOPICS = [
       'Campo e cidade participam de uma rede de produção, circulação e consumo.',
     ],
     questions: [],
+  },
+  {
+    id: 'geografia-p1-espacos-rural-urbano',
+    title: 'Revisão P1 — Espaços rural e urbano',
+    chapter: '7 e 8',
+    reviewLabel: 'Revisão para a P1',
+    source: {
+      provider: 'edebe',
+      resourceId: 'courseware-252-chapters-7-8',
+      pages: '70–87',
+      version: '2024',
+    },
+    summarySections: [
+      {
+        title: 'Atividades do espaço rural',
+        text: 'Agricultura, pecuária e extrativismo produzem alimentos e matérias-primas. A tecnologia transforma a produção e o trabalho no campo, enquanto práticas sustentáveis ajudam a preservar o solo, a água e os seres vivos.',
+      },
+      {
+        title: 'Atividades do espaço urbano',
+        text: 'Indústria, comércio e prestação de serviços são atividades importantes das cidades. As indústrias participam de diferentes etapas da produção; o comércio movimenta mercadorias; e os serviços atendem necessidades da população.',
+      },
+      {
+        title: 'Campo e cidade conectados',
+        text: 'O campo fornece alimentos e matérias-primas, enquanto a cidade oferece produtos industrializados, máquinas, comércio e serviços. Por isso, os espaços rural e urbano dependem um do outro.',
+      },
+    ],
+    keyIdeas: [
+      'Agricultura cultiva o solo; pecuária cria animais; extrativismo retira recursos da natureza.',
+      'Pecuária intensiva e extensiva usam formas diferentes de criação.',
+      'A modernização aumenta a produção e transforma o trabalho rural.',
+      'Indústria, comércio e serviços têm funções diferentes.',
+      'Atacado, varejo, comércio interno e externo não são a mesma coisa.',
+      'Campo e cidade formam uma rede de produção, circulação e consumo.',
+    ],
+    questions: geographyP1Questions,
   },
 ]

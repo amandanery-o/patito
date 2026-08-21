@@ -32,5 +32,4 @@ Antes de entregar, faça silenciosamente esta revisão:
 - as referências correspondem ao conceito cobrado;
 - a linguagem é natural para uma criança de 10 anos.
 
-Entregue o resultado exclusivamente pela ferramenta estruturada disponibilizada. Não acrescente introdução, conclusão ou comentários fora dela.
-
+Entregue exclusivamente o objeto JSON solicitado. Não use Markdown e não acrescente introdução, conclusão ou comentários fora do JSON.

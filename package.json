@@ -11,7 +11,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",
-    "editorial:generate:geografia-p1": "node scripts/editorial/generate-questions.mjs"
+    "editorial:generate:geografia-p1": "node --env-file=.env.editorial scripts/editorial/generate-questions.mjs",
+    "editorial:approve:geografia-p1": "node scripts/editorial/approve-geography-p1.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.4",

@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { assembleDraft, buildSourceBrief, renderPrompt, validateGeneratedQuestions } from '../../scripts/editorial/generate-questions.mjs'
+import {
+  assembleDraft, buildSourceBrief, normalizeGeneratedQuestions, renderPrompt, structuredCollection, validateGeneratedQuestions,
+} from '../../scripts/editorial/generate-questions.mjs'
 
 function questions(multipleChoice, matchColumns) {
   return [
@@ -34,6 +36,35 @@ describe('gerador editorial', () => {
     })).toEqual([])
   })
 
+  it('aceita uma variação de duas questões na distribuição aproximada', () => {
+    const generated = [
+      ...Array.from({ length: 11 }, () => ({ type: 'multipleChoice', difficulty: 'easy' })),
+      ...Array.from({ length: 12 }, () => ({ type: 'multipleChoice', difficulty: 'intermediate' })),
+      ...Array.from({ length: 3 }, () => ({ type: 'matchColumns', difficulty: 'intermediate' })),
+      ...Array.from({ length: 4 }, () => ({ type: 'matchColumns', difficulty: 'challenging' })),
+    ]
+    expect(validateGeneratedQuestions(generated, {
+      total: 30, multipleChoice: 23, matchColumns: 7,
+      difficulty: { easy: 9, intermediate: 15, challenging: 6 },
+    })).toEqual([])
+  })
+
+  it('reduz conteúdo excedente preservando formato e dificuldade', () => {
+    const generated = [
+      ...Array.from({ length: 11 }, () => ({ type: 'multipleChoice', difficulty: 'easy' })),
+      ...Array.from({ length: 12 }, () => ({ type: 'multipleChoice', difficulty: 'intermediate' })),
+      ...Array.from({ length: 3 }, () => ({ type: 'multipleChoice', difficulty: 'challenging' })),
+      ...Array.from({ length: 4 }, () => ({ type: 'matchColumns', difficulty: 'intermediate' })),
+      ...Array.from({ length: 3 }, () => ({ type: 'matchColumns', difficulty: 'challenging' })),
+    ]
+    const expected = {
+      total: 30, multipleChoice: 23, matchColumns: 7,
+      difficulty: { easy: 9, intermediate: 15, challenging: 6 },
+    }
+    const normalized = normalizeGeneratedQuestions(generated, expected)
+    expect(validateGeneratedQuestions(normalized, expected)).toEqual([])
+  })
+
   it('monta um rascunho com IDs determinísticos', () => {
     const draft = assembleDraft({ questions: questions(1, 1), model: 'modelo-configurado' })
     expect(draft.status).toBe('draft')
@@ -43,5 +74,10 @@ describe('gerador editorial', () => {
   it('renderiza todas as variáveis do prompt', () => {
     expect(renderPrompt('Lote {{BATCH}}: {{COUNT}} questões', { BATCH: 1, COUNT: 30 }))
       .toBe('Lote 1: 30 questões')
+  })
+
+  it('normaliza coleções indexadas devolvidas pela ferramenta', () => {
+    expect(structuredCollection({ 0: { question: 'A' }, 1: { question: 'B' } }))
+      .toEqual([{ question: 'A' }, { question: 'B' }])
   })
 })

@@ -6,11 +6,13 @@ O gerador roda apenas na máquina da mantenedora. A API do Claude não é chamad
 
 1. Os capítulos autorizados são lidos e resumidos editorialmente.
 2. O script envia somente o mapa conceitual, sem dados ou respostas de alunos.
-3. Claude produz dois lotes estruturados de 30 questões.
-4. O script exige o total de 45 questões de múltipla escolha e 15 de associação.
-5. O validador verifica formatos, explicações, referências e IDs.
-6. O resultado é salvo em `editorial/drafts/`, diretório ignorado pelo Git.
-7. Uma pessoa revisa conteúdo, alternativas, respostas e explicações antes de aprovar e publicar.
+3. Claude produz seis lotes estruturados de 10 questões usando JSON Schema.
+4. Cada lote aprovado é salvo como checkpoint para permitir retomada após uma falha de rede.
+5. O script exige o total de 45 questões de múltipla escolha e 15 de associação.
+6. O validador verifica formatos, explicações, referências, alternativas, associações e IDs.
+7. O resultado é salvo em `editorial/drafts/`, diretório ignorado pelo Git.
+8. Uma pessoa revisa conteúdo, alternativas, respostas e explicações.
+9. O comando de aprovação aplica os ajustes editoriais registrados e publica somente as questões validadas em `src/data/generated/`.
 
 Os prompts são artefatos editoriais versionados:
 
@@ -21,12 +23,18 @@ Alterações de prompt exigem uma nova versão e nova geração; não se modific
 
 ## Configuração local
 
-Configure as variáveis no terminal ou em um gerenciador seguro de segredos:
+Crie o arquivo local `.env.editorial`, que é ignorado pelo Git:
 
 ```bash
-export ANTHROPIC_API_KEY="..."
-export ANTHROPIC_MODEL="..."
+ANTHROPIC_API_KEY=...
+ANTHROPIC_MODEL=claude-sonnet-4-6
+```
+
+Depois execute:
+
+```bash
 npm run editorial:generate:geografia-p1
+npm run editorial:approve:geografia-p1
 ```
 
 Não cole a chave em arquivos do projeto, no chat, em issues ou em commits.
@@ -35,7 +43,7 @@ Por padrão, o resultado é criado em `editorial/drafts/geografia-p1.json`. O sc
 
 ## Limites de segurança
 
-- Não há publicação automática.
+- Não há publicação automática após a geração; a aprovação é uma etapa separada e reproduzível.
 - O provedor e o modelo ficam registrados no lote.
 - Cada questão deve referenciar seção e páginas da fonte.
 - Uma falha em qualquer lote impede a criação do arquivo final.
