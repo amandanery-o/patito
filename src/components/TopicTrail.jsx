@@ -8,7 +8,9 @@ function chapterNumbers(value) {
 
 function assessmentName(topic) {
   return (
-    topic.reviewLabel?.match(/P\d/i)?.[0]?.toUpperCase() || topic.title.match(/P\d/i)?.[0]?.toUpperCase() || 'Revisão'
+    topic.reviewLabel?.match(/[PT]\d/i)?.[0]?.toUpperCase() ||
+    topic.title.match(/[PT]\d/i)?.[0]?.toUpperCase() ||
+    'Revisão'
   )
 }
 

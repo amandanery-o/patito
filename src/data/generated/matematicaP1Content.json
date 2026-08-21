@@ -1,0 +1,1327 @@
+{
+  "status": "approved",
+  "contentId": "matematica-p1-capitulos-5-6-7",
+  "title": "Revisão P1 — Multiplicação, divisão e igualdade",
+  "summary": "Revisão dos capítulos 5, 6 e 7: operações por dois algarismos, inversas e valores desconhecidos.",
+  "source": {
+    "provider": "edebe",
+    "resourceId": "courseware-250/chapters-5-6-7",
+    "version": "2024"
+  },
+  "generation": {
+    "model": "claude-sonnet-4-6",
+    "promptVersion": "question-batch-v2",
+    "generatedAt": "2026-08-21T13:07:02.301Z",
+    "usage": [
+      {
+        "batch": 1,
+        "input_tokens": 4533,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1866,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 2,
+        "input_tokens": 4893,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2022,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 3,
+        "input_tokens": 5276,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1551,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 4,
+        "input_tokens": 5704,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1812,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 5,
+        "input_tokens": 5872,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2059,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 6,
+        "input_tokens": 6303,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2087,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      }
+    ],
+    "revision": {
+      "method": "independent-source-check-v1",
+      "reviewer": "Agente editorial Patito",
+      "revisedAt": "2026-08-21T11:45:00Z"
+    }
+  },
+  "editorialApproval": {
+    "reviewer": "Agente editorial Patito",
+    "reviewerType": "agent",
+    "reviewMethod": "independent-source-check-v1",
+    "reviewedAt": "2026-08-21T13:13:26Z",
+    "draftDigest": "aa7329c2a5d2b2ce4d51935f37d9d5b0420cd927755e23a2c89e1376377488a3",
+    "schemaVersion": 1
+  },
+  "publishedAt": "2026-08-21T13:14:33.196Z",
+  "questions": [
+    {
+      "difficulty": "easy",
+      "question": "Ana tem 4 caixas com 6 laranjas em cada uma. Qual conta representa essa situação?",
+      "explanation": "A multiplicação representa parcelas iguais. Como há 4 caixas com 6 laranjas cada, a conta é 4 × 6 = 24. Isso é uma das ideias de multiplicação: somar parcelas iguais de forma mais rápida.",
+      "sourceRef": {
+        "section": "Ideias de Multiplicação",
+        "pages": "86–87"
+      },
+      "options": [
+        "4 + 6 = 10",
+        "4 × 6 = 24",
+        "6 – 4 = 2",
+        "6 ÷ 4 = 1"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p1-001"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual é o resultado de 7 × 100?",
+      "explanation": "No sistema decimal, 7 unidades multiplicadas por 100 passam a representar 7 centenas. Sete centenas correspondem a 700, portanto 7 × 100 = 700.",
+      "sourceRef": {
+        "section": "Multiplicação por 10, 100 e 1000",
+        "pages": "92–93"
+      },
+      "options": [
+        "7 000",
+        "700",
+        "107",
+        "70"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p1-002"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Para calcular 6 × 14, um estudante pensou assim: 6 × 10 = 60 e 6 × 4 = 24, depois somou 60 + 24 = 84. Que propriedade ele usou?",
+      "explanation": "O estudante decompôs o fator 14 em 10 + 4 e multiplicou cada parte por 6 separadamente. Isso é a propriedade distributiva, que permite decompor um fator para facilitar o cálculo.",
+      "sourceRef": {
+        "section": "Problemas com multiplicação",
+        "pages": "88–91"
+      },
+      "options": [
+        "Propriedade associativa",
+        "Regularidade da divisão",
+        "Propriedade comutativa",
+        "Propriedade distributiva"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p1-003"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Pedro quer estimar o resultado de 49 × 3. Ele arredonda 49 para 50 e calcula 50 × 3 = 150. O resultado exato de 49 × 3 é 147. A estimativa de Pedro foi:",
+      "explanation": "Estimar significa calcular um valor aproximado. Pedro obteve 150, que está bem próximo do resultado exato 147. Usar estimativa ajuda a conferir se um produto faz sentido.",
+      "sourceRef": {
+        "section": "Atividades de investigação",
+        "pages": "96–99"
+      },
+      "options": [
+        "Menor que a metade do resultado exato",
+        "Muito distante do resultado exato",
+        "Igual ao resultado exato",
+        "Próxima do resultado exato"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p1-004"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma sala tem 8 fileiras com 9 cadeiras em cada fileira. Quantas cadeiras há na sala?",
+      "explanation": "Organizar objetos em fileiras e colunas é uma das ideias de multiplicação. Multiplicando 8 × 9 = 72, encontramos o total de cadeiras.",
+      "sourceRef": {
+        "section": "Problemas com multiplicação",
+        "pages": "88–91"
+      },
+      "options": [
+        "63",
+        "72",
+        "81",
+        "17"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p1-005"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Numa igualdade, o que acontece quando somamos o mesmo número nos dois lados?",
+      "explanation": "Somar a mesma quantidade nos dois lados de uma igualdade preserva a igualdade. Os dois lados continuam com o mesmo valor, então a igualdade continua verdadeira.",
+      "sourceRef": {
+        "section": "Relações de igualdade",
+        "pages": "118–120"
+      },
+      "options": [
+        "O lado esquerdo fica maior",
+        "A igualdade continua verdadeira",
+        "O resultado muda apenas no lado direito",
+        "A igualdade deixa de ser verdadeira"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p1-006"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Luiza fez a divisão 58 ÷ 7 e encontrou quociente 8 e resto 2. Como ela pode conferir se o resultado está correto?",
+      "explanation": "Para conferir uma divisão, multiplica-se o quociente pelo divisor e soma-se o resto: 8 × 7 = 56 e 56 + 2 = 58, que é o dividendo. Se o resultado for igual ao dividendo, a divisão está correta.",
+      "sourceRef": {
+        "section": "Operação da divisão",
+        "pages": "102–105"
+      },
+      "options": [
+        "Dividindo o quociente pelo resto e comparando com o divisor",
+        "Subtraindo o resto do dividendo e comparando com o quociente",
+        "Somando o quociente com o divisor e comparando com o dividendo",
+        "Multiplicando o quociente pelo divisor e somando o resto, comparando com o dividendo"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p1-007"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Na igualdade □ × 6 = 54, qual é o valor de □?",
+      "explanation": "Para descobrir o valor desconhecido, usamos a operação inversa da multiplicação, que é a divisão: 54 ÷ 6 = 9. Podemos conferir substituindo: 9 × 6 = 54. A igualdade é verdadeira.",
+      "sourceRef": {
+        "section": "Valor desconhecido",
+        "pages": "124–129"
+      },
+      "options": [
+        "10",
+        "7",
+        "8",
+        "9"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p1-008"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada situação à ideia de multiplicação que ela representa.",
+      "explanation": "A multiplicação pode representar diferentes situações: parcelas iguais (como caixas com o mesmo número de itens), organização retangular (fileiras e colunas) e proporcionalidade (relação entre quantidades que crescem juntas). Reconhecer essas ideias ajuda a escolher a operação certa para resolver problemas.",
+      "sourceRef": {
+        "section": "Ideias de Multiplicação",
+        "pages": "86–87"
+      },
+      "pairs": [
+        {
+          "left": "5 caixas com 8 biscoitos cada",
+          "right": "Parcelas iguais"
+        },
+        {
+          "left": "4 fileiras com 6 carteiras em cada",
+          "right": "Organização retangular"
+        },
+        {
+          "left": "Se 1 ingresso custa R$ 3, quanto custam 7 ingressos?",
+          "right": "Proporcionalidade"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p1-009"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada termo da divisão ao seu significado.",
+      "explanation": "Na divisão, cada termo tem um papel: o dividendo é o total que será dividido, o divisor indica em quantas partes ou grupos, o quociente é o resultado da divisão e o resto é o que sobra quando a divisão não é exata. Conhecer esses termos ajuda a organizar e conferir os cálculos.",
+      "sourceRef": {
+        "section": "Operação da divisão",
+        "pages": "102–105"
+      },
+      "pairs": [
+        {
+          "left": "Dividendo",
+          "right": "O número que será dividido"
+        },
+        {
+          "left": "Divisor",
+          "right": "O número pelo qual se divide"
+        },
+        {
+          "left": "Quociente",
+          "right": "O resultado da divisão"
+        },
+        {
+          "left": "Resto",
+          "right": "O que sobra após a divisão"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p1-010"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Uma fazenda tem 3 pomares. Em cada pomar há 25 árvores. Quantas árvores há no total?",
+      "explanation": "Multiplicamos o número de pomares pelo número de árvores em cada um: 3 × 25 = 75. A multiplicação resolve situações com grupos de quantidades iguais.",
+      "sourceRef": {
+        "section": "Problemas com multiplicação",
+        "pages": "88–91"
+      },
+      "options": [
+        "75",
+        "80",
+        "55",
+        "70"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p1-011"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual é o resultado de 4 × 1000?",
+      "explanation": "No sistema decimal, 4 unidades multiplicadas por 1000 passam a representar 4 unidades de milhar. Assim, 4 × 1000 = 4000.",
+      "sourceRef": {
+        "section": "Multiplicação por 10, 100 e 1000",
+        "pages": "92–93"
+      },
+      "options": [
+        "40",
+        "400",
+        "4000",
+        "40000"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p1-012"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Um estudante calculou 12 × 15 decompondo o 15 em 10 + 5. Ele fez: 12 × 10 = 120 e 12 × 5 = 60, depois somou 120 + 60 = 180. Qual é o resultado correto de 12 × 15?",
+      "explanation": "Usando a propriedade distributiva, 12 × 15 = 12 × (10 + 5) = 120 + 60 = 180. O estudante usou a decomposição de um fator para facilitar o cálculo.",
+      "sourceRef": {
+        "section": "Problemas com multiplicação",
+        "pages": "88–91"
+      },
+      "options": [
+        "170",
+        "175",
+        "180",
+        "185"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p1-013"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma quadra retangular mede 20 metros de comprimento e 13 metros de largura. Qual é a área dessa quadra?",
+      "explanation": "A área de uma figura retangular é calculada multiplicando comprimento por largura: 20 × 13 = 260 metros quadrados.",
+      "sourceRef": {
+        "section": "Ideia de área",
+        "pages": "94–95"
+      },
+      "options": [
+        "66 metros quadrados",
+        "230 metros quadrados",
+        "260 metros quadrados",
+        "33 metros quadrados"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p1-014"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Numa divisão, o dividendo é 47, o divisor é 6, o quociente é 7 e o resto é 5. Como podemos conferir esse resultado?",
+      "explanation": "Para conferir uma divisão, multiplicamos o quociente pelo divisor e somamos o resto: 7 × 6 + 5 = 42 + 5 = 47. Se o resultado for igual ao dividendo, a divisão está correta.",
+      "sourceRef": {
+        "section": "Operação da divisão",
+        "pages": "102–105"
+      },
+      "options": [
+        "7 + 6 + 5 = 47",
+        "47 – 5 = 7",
+        "47 ÷ 7 = 6",
+        "7 × 6 + 5 = 47"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p1-015"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Na igualdade 8 + □ = 20, qual é o valor de □?",
+      "explanation": "Para descobrir o valor desconhecido, usamos a operação inversa: 20 – 8 = 12. Substituindo, 8 + 12 = 20, o que confirma que □ = 12.",
+      "sourceRef": {
+        "section": "Valor desconhecido",
+        "pages": "124–129"
+      },
+      "options": [
+        "13",
+        "10",
+        "11",
+        "12"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p1-016"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Uma loja vendeu 24 caixas de suco por dia durante 12 dias. Quantas caixas foram vendidas no total? Para calcular, um estudante decompôs o 12 em 10 + 2. Qual foi o raciocínio correto?",
+      "explanation": "Usando a propriedade distributiva: 24 × 12 = 24 × 10 + 24 × 2 = 240 + 48 = 288. A decomposição de um fator em parcelas facilita a multiplicação por dois algarismos.",
+      "sourceRef": {
+        "section": "Problemas com multiplicação",
+        "pages": "88–91"
+      },
+      "options": [
+        "24 × 10 + 24 × 2 = 240 + 48 = 288",
+        "24 × 10 + 2 = 242",
+        "24 + 10 + 24 + 2 = 60",
+        "24 × 12 = 24 × 10 + 2 = 242"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p1-017"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Mariana tem 96 figurinhas e quer dividir igualmente entre 9 amigos. Quantas figurinhas cada amigo recebe e quantas sobram?",
+      "explanation": "96 ÷ 9 = 10 com resto 6, pois 9 × 10 = 90 e 96 – 90 = 6. O resto deve ser menor que o divisor. Cada amigo recebe 10 figurinhas e sobram 6.",
+      "sourceRef": {
+        "section": "Ideias de divisão",
+        "pages": "106–109"
+      },
+      "options": [
+        "Cada um recebe 10 e sobram 6",
+        "Cada um recebe 9 e sobram 15",
+        "Cada um recebe 10 e sobram 9",
+        "Cada um recebe 11 e sobram 3"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p1-018"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada expressão ao seu resultado.",
+      "explanation": "Ao multiplicar por 10, 100 ou 1000, o valor posicional de cada algarismo muda. Assim, 5 unidades tornam-se 5 dezenas (50) em 5 × 10 e 5 centenas (500) em 5 × 100; 3 unidades tornam-se 3 milhares (3000) em 3 × 1000; e 8 unidades tornam-se 8 centenas (800) em 8 × 100.",
+      "sourceRef": {
+        "section": "Multiplicação por 10, 100 e 1000",
+        "pages": "92–93"
+      },
+      "pairs": [
+        {
+          "left": "5 × 10",
+          "right": "50"
+        },
+        {
+          "left": "5 × 100",
+          "right": "500"
+        },
+        {
+          "left": "3 × 1000",
+          "right": "3000"
+        },
+        {
+          "left": "8 × 100",
+          "right": "800"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p1-019"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada retângulo à sua área.",
+      "explanation": "A área de um retângulo pode ser encontrada multiplicando suas duas dimensões. Assim, 2 × 3 = 6, 4 × 5 = 20 e 3 × 7 = 21 unidades quadradas.",
+      "sourceRef": {
+        "section": "Ideia de área",
+        "pages": "94–95"
+      },
+      "pairs": [
+        {
+          "left": "Retângulo de 2 por 3 unidades",
+          "right": "6 unidades quadradas"
+        },
+        {
+          "left": "Retângulo de 4 por 5 unidades",
+          "right": "20 unidades quadradas"
+        },
+        {
+          "left": "Retângulo de 3 por 7 unidades",
+          "right": "21 unidades quadradas"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p1-020"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual é uma boa estimativa para 31 × 6?",
+      "explanation": "Podemos aproximar 31 por 30. Como 30 × 6 = 180, esse é um valor próximo do produto exato e ajuda a verificar se o cálculo faz sentido.",
+      "sourceRef": {
+        "section": "Atividades de investigação",
+        "pages": "96–99"
+      },
+      "options": [
+        "60",
+        "120",
+        "180",
+        "360"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p1-021"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Uma horta tem formato retangular com 4 metros de comprimento e 3 metros de largura. Qual é a área dessa horta?",
+      "explanation": "A área de uma figura retangular é calculada multiplicando o comprimento pela largura: 4 × 3 = 12 metros quadrados.",
+      "sourceRef": {
+        "section": "Ideia de área",
+        "pages": "94–95"
+      },
+      "options": [
+        "12 metros quadrados",
+        "14 metros quadrados",
+        "16 metros quadrados",
+        "7 metros quadrados"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p1-022"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Um retângulo mede 5 metros de comprimento e 4 metros de largura. Qual opção apresenta corretamente sua área e seu perímetro?",
+      "explanation": "A área é 5 × 4 = 20 metros quadrados. O perímetro é a soma dos quatro lados: 5 + 4 + 5 + 4 = 18 metros. Área e perímetro são medidas diferentes.",
+      "sourceRef": {
+        "section": "Ideia de área",
+        "pages": "94–95"
+      },
+      "options": [
+        "Área de 9 m² e perímetro de 20 m",
+        "Área de 20 m² e perímetro de 18 m",
+        "Área de 18 m² e perímetro de 20 m",
+        "Área de 20 m² e perímetro de 9 m"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p1-023"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Três cadernos iguais custam 24 reais ao todo. Mantendo o mesmo preço por caderno, quanto custam 5 cadernos?",
+      "explanation": "Se 3 cadernos custam 24 reais, cada um custa 24 ÷ 3 = 8 reais. Então 5 cadernos custam 5 × 8 = 40 reais.",
+      "sourceRef": {
+        "section": "Problemas com multiplicação",
+        "pages": "88–91"
+      },
+      "options": [
+        "32 reais",
+        "35 reais",
+        "40 reais",
+        "48 reais"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p1-024"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Um retângulo tem 8 metros de comprimento e 5 metros de largura. Qual é o perímetro desse retângulo?",
+      "explanation": "O perímetro é a soma de todos os lados. Para um retângulo: (8 + 5) × 2 = 26 metros. Perímetro mede o contorno, enquanto área mede a superfície interna.",
+      "sourceRef": {
+        "section": "Ideia de área",
+        "pages": "94–95"
+      },
+      "options": [
+        "13 metros",
+        "26 metros",
+        "40 metros",
+        "52 metros"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p1-025"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Um estudante afirmou que 54 ÷ 6 tem quociente 8 e resto 6. Por que esse resultado não pode estar correto?",
+      "explanation": "O resto precisa ser menor que o divisor. Além disso, 54 ÷ 6 é exata: 6 × 9 = 54, então o quociente é 9 e o resto é zero.",
+      "sourceRef": {
+        "section": "Operação da divisão",
+        "pages": "102–105"
+      },
+      "options": [
+        "Porque o resto é igual ao divisor e a conta correta tem resto zero",
+        "Porque todo resto precisa ser maior que o divisor",
+        "Porque o quociente deveria ser menor que o resto",
+        "Porque uma divisão nunca pode ter resto zero"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p1-026"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Na sentença 72 ÷ □ = 8, qual é o valor do □?",
+      "explanation": "Multiplicação e divisão são operações inversas. Se 72 ÷ □ = 8, então □ × 8 = 72, logo □ = 9.",
+      "sourceRef": {
+        "section": "Operações inversas",
+        "pages": "121–123"
+      },
+      "options": [
+        "9",
+        "10",
+        "7",
+        "8"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p1-027"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Um quadrado tem 7 metros de lado. Qual afirmação sobre esse quadrado está correta?",
+      "explanation": "A área do quadrado é 7 × 7 = 49 metros quadrados. O perímetro é 7 × 4 = 28 metros. Área e perímetro são medidas diferentes: área mede a superfície e perímetro mede o contorno.",
+      "sourceRef": {
+        "section": "Ideia de área",
+        "pages": "94–95"
+      },
+      "options": [
+        "A área é 14 metros quadrados e o perímetro é 28 metros.",
+        "A área é 28 metros quadrados e o perímetro é 49 metros.",
+        "A área é 49 metros quadrados e o perímetro é 28 metros.",
+        "A área e o perímetro são iguais a 49."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p1-028"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada multiplicação à decomposição correta pela propriedade distributiva.",
+      "explanation": "A propriedade distributiva permite decompor um fator em dezenas e unidades, multiplicar cada parte e somar os produtos.",
+      "sourceRef": {
+        "section": "Problemas com multiplicação",
+        "pages": "88–91"
+      },
+      "pairs": [
+        {
+          "left": "14 × 6",
+          "right": "(10 × 6) + (4 × 6)"
+        },
+        {
+          "left": "23 × 4",
+          "right": "(20 × 4) + (3 × 4)"
+        },
+        {
+          "left": "12 × 8",
+          "right": "(10 × 8) + (2 × 8)"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p1-029"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada sentença com valor desconhecido à operação inversa que ajuda a descobrir o valor do □.",
+      "explanation": "Para encontrar um fator desconhecido, dividimos o produto pelo fator conhecido. Quando o divisor é desconhecido, podemos dividir o dividendo pelo quociente. Em todos os casos, substituímos o valor encontrado para conferir a sentença.",
+      "sourceRef": {
+        "section": "Operações inversas",
+        "pages": "121–123"
+      },
+      "pairs": [
+        {
+          "left": "□ × 6 = 48",
+          "right": "48 ÷ 6"
+        },
+        {
+          "left": "56 ÷ □ = 7",
+          "right": "56 ÷ 7"
+        },
+        {
+          "left": "□ × 9 = 63",
+          "right": "63 ÷ 9"
+        },
+        {
+          "left": "72 ÷ □ = 8",
+          "right": "72 ÷ 8"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p1-030"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Numa divisão, o número que queremos dividir chama-se:",
+      "explanation": "O dividendo é o número que será dividido. O divisor indica em quantas partes ou grupos ele será separado. Quociente é o resultado e resto é o que sobra.",
+      "sourceRef": {
+        "section": "Operação da divisão",
+        "pages": "102–105"
+      },
+      "options": [
+        "Dividendo",
+        "Resto",
+        "Divisor",
+        "Quociente"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p1-031"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Carlos tem 30 balas e quer colocar 5 em cada saquinho. Qual conta representa essa situação?",
+      "explanation": "Quando queremos saber quantos grupos de um mesmo tamanho cabem numa quantidade, usamos a divisão. Aqui, 30 ÷ 5 indica quantos saquinhos Carlos consegue encher.",
+      "sourceRef": {
+        "section": "Ideias de divisão",
+        "pages": "106–109"
+      },
+      "options": [
+        "30 ÷ 5",
+        "30 + 5",
+        "30 × 5",
+        "30 – 5"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p1-032"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Numa divisão exata, o resto é sempre:",
+      "explanation": "Quando a divisão é exata, não sobra nada. Por isso o resto é igual a zero. Quando sobra alguma coisa, o resto é maior que zero, mas sempre menor que o divisor.",
+      "sourceRef": {
+        "section": "Operação da divisão",
+        "pages": "102–105"
+      },
+      "options": [
+        "Igual ao divisor",
+        "Maior que o divisor",
+        "Igual a zero",
+        "Igual ao quociente"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p1-033"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Sofia tem 48 figurinhas e quer dividir igualmente entre 6 amigas. Quantas figurinhas cada amiga recebe?",
+      "explanation": "48 ÷ 6 = 8. Podemos conferir: 8 × 6 = 48. Cada amiga recebe 8 figurinhas e não sobra nenhuma, pois a divisão é exata.",
+      "sourceRef": {
+        "section": "Operação da divisão",
+        "pages": "102–105"
+      },
+      "options": [
+        "7",
+        "8",
+        "9",
+        "6"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p1-034"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Um professor tem 50 lápis e quer distribuir 8 para cada aluno. Quantos alunos recebem lápis e quantos lápis sobram?",
+      "explanation": "50 ÷ 8: 8 × 6 = 48, que é o maior múltiplo de 8 menor que 50. Então o quociente é 6 e o resto é 50 – 48 = 2. Seis alunos recebem lápis e sobram 2.",
+      "sourceRef": {
+        "section": "Operação da divisão",
+        "pages": "102–105"
+      },
+      "options": [
+        "Quociente 7 e resto 1",
+        "Quociente 6 e resto 8",
+        "Quociente 5 e resto 10",
+        "Quociente 6 e resto 2"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p1-035"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Na sentença □ ÷ 8 = 9, qual é o valor de □?",
+      "explanation": "Multiplicação e divisão são operações inversas. Se □ ÷ 8 = 9, então □ = 9 × 8 = 72. Podemos conferir: 72 ÷ 8 = 9.",
+      "sourceRef": {
+        "section": "Operações inversas",
+        "pages": "121–123"
+      },
+      "options": [
+        "81",
+        "63",
+        "64",
+        "72"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p1-036"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Numa divisão, o dividendo é 73, o divisor é 8 e o quociente é 9. Qual é o resto dessa divisão?",
+      "explanation": "Para encontrar o resto, calculamos: 9 × 8 = 72. Então o resto é 73 – 72 = 1. Podemos conferir: 9 × 8 + 1 = 73. O resto deve ser menor que o divisor (1 < 8), o que confirma o resultado.",
+      "sourceRef": {
+        "section": "Operação da divisão",
+        "pages": "102–105"
+      },
+      "options": [
+        "0",
+        "1",
+        "2",
+        "9"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p1-037"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada situação à ideia de divisão que ela representa.",
+      "explanation": "A divisão tem duas ideias principais: repartição em partes iguais (distribuir uma quantidade em grupos do mesmo tamanho) e medida (descobrir quantos grupos de um tamanho cabem numa quantidade). Reconhecer qual ideia está presente ajuda a montar a conta correta.",
+      "sourceRef": {
+        "section": "Ideias de divisão",
+        "pages": "106–109"
+      },
+      "pairs": [
+        {
+          "left": "24 chocolates divididos igualmente entre 4 crianças",
+          "right": "Repartição em partes iguais"
+        },
+        {
+          "left": "Quantos grupos de 6 livros cabem em 30 livros",
+          "right": "Medida: quantos grupos cabem"
+        },
+        {
+          "left": "36 laranjas colocadas em caixas de 9",
+          "right": "Medida: quantos grupos de 9 cabem"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p1-038"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada divisão ao seu quociente correto.",
+      "explanation": "Os quocientes são: 56 ÷ 7 = 8, 63 ÷ 9 = 7, 45 ÷ 5 = 9 e 72 ÷ 6 = 12. Cada resultado pode ser conferido multiplicando o quociente pelo divisor.",
+      "sourceRef": {
+        "section": "Operação da divisão",
+        "pages": "102–105"
+      },
+      "pairs": [
+        {
+          "left": "56 ÷ 7",
+          "right": "8"
+        },
+        {
+          "left": "63 ÷ 9",
+          "right": "7"
+        },
+        {
+          "left": "45 ÷ 5",
+          "right": "9"
+        },
+        {
+          "left": "72 ÷ 6",
+          "right": "12"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p1-039"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada sentença com valor desconhecido ao valor correto de □.",
+      "explanation": "Usamos a operação inversa para descobrir cada valor: em □ ÷ 6 = 7, temos □ = 7 × 6 = 42; em 54 ÷ □ = 9, temos □ = 54 ÷ 9 = 6; em □ × 7 = 56, temos □ = 56 ÷ 7 = 8; em 9 × □ = 63, temos □ = 63 ÷ 9 = 7. Substituir o valor encontrado na sentença original confirma se a igualdade é verdadeira.",
+      "sourceRef": {
+        "section": "Valor desconhecido",
+        "pages": "124–129"
+      },
+      "pairs": [
+        {
+          "left": "□ ÷ 6 = 7",
+          "right": "42"
+        },
+        {
+          "left": "54 ÷ □ = 9",
+          "right": "6"
+        },
+        {
+          "left": "□ × 7 = 56",
+          "right": "8"
+        },
+        {
+          "left": "9 × □ = 63",
+          "right": "7"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p1-040"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Uma professora tem 60 lápis e quer dividir igualmente entre 10 alunos. Quantos lápis cada aluno vai receber?",
+      "explanation": "Dividir por 10 significa descobrir quantas vezes 10 cabe no número. Como 60 ÷ 10 = 6, cada aluno recebe 6 lápis. Essa é uma regularidade da divisão por 10 no sistema decimal.",
+      "sourceRef": {
+        "section": "Divisão por 10, 100 e 1000",
+        "pages": "110–111"
+      },
+      "options": [
+        "5 lápis",
+        "6 lápis",
+        "7 lápis",
+        "8 lápis"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p1-041"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Uma caixa tem 1 000 parafusos. Um operário vai dividir esses parafusos em grupos de 1 000. Quantos grupos ele vai formar?",
+      "explanation": "Dividir qualquer número por 1 000 equivale a descobrir quantas vezes 1 000 cabe nele. Como 1 000 ÷ 1 000 = 1, ele forma exatamente 1 grupo. Essa é a regularidade da divisão por 1 000.",
+      "sourceRef": {
+        "section": "Divisão por 10, 100 e 1000",
+        "pages": "110–111"
+      },
+      "options": [
+        "10 grupos",
+        "100 grupos",
+        "1 000 grupos",
+        "1 grupo"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p1-042"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Observe a sequência de divisões: 80 ÷ 10 = 8; 800 ÷ 100 = 8; 8 000 ÷ 1 000 = 8. O que acontece com o resultado quando dividimos por 10, 100 e 1 000?",
+      "explanation": "Nas três expressões, dividendo e divisor aumentam na mesma proporção: 80 contém 8 grupos de 10, 800 contém 8 grupos de 100 e 8000 contém 8 grupos de 1000. Por isso, o quociente é 8 em todas.",
+      "sourceRef": {
+        "section": "Regularidades da divisão",
+        "pages": "112–115"
+      },
+      "options": [
+        "O resultado diminui pela metade",
+        "O resultado aumenta 10 vezes",
+        "O resultado dobra a cada divisão",
+        "O resultado é sempre o mesmo: 8"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p1-043"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma fábrica produziu 3 500 botões e vai embalá-los em saquinhos com 100 botões cada. Quantos saquinhos completos serão formados?",
+      "explanation": "Como 3500 corresponde a 35 centenas, há 35 grupos de 100 botões. Portanto, 3500 ÷ 100 = 35.",
+      "sourceRef": {
+        "section": "Divisão por 10, 100 e 1000",
+        "pages": "110–111"
+      },
+      "options": [
+        "305 saquinhos",
+        "35 saquinhos",
+        "350 saquinhos",
+        "3 saquinhos"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p1-044"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Há 74 brinquedos para guardar em caixas com 8 brinquedos cada. Quantas caixas são necessárias para guardar todos eles?",
+      "explanation": "74 ÷ 8 dá 9 caixas completas e resto 2. As 9 caixas guardam 72 brinquedos, e os 2 restantes precisam de mais uma caixa. Portanto, são necessárias 10 caixas.",
+      "sourceRef": {
+        "section": "Ideias de divisão",
+        "pages": "106–109"
+      },
+      "options": [
+        "8 caixas",
+        "9 caixas",
+        "10 caixas",
+        "11 caixas"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p1-045"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Lara quer descobrir o valor de □ na sentença □ ÷ 6 = 7. Qual operação inversa ela deve usar para encontrar □?",
+      "explanation": "Divisão e multiplicação são operações inversas. Para descobrir o dividendo quando se conhece o quociente e o divisor, basta multiplicar: 7 × 6 = 42. Portanto, □ = 42.",
+      "sourceRef": {
+        "section": "Operações inversas",
+        "pages": "121–123"
+      },
+      "options": [
+        "7 + 6 = 13",
+        "7 × 6 = 42",
+        "7 ÷ 6 = 1",
+        "7 − 6 = 1"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p1-046"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Uma padaria fez 256 pãezinhos e quer colocá-los em bandejas com 8 pãezinhos cada. Depois, vai embalar cada 4 bandejas em uma caixa. Quantas caixas completas a padaria vai formar?",
+      "explanation": "Primeiro, 256 ÷ 8 = 32 bandejas. Depois, 32 ÷ 4 = 8 caixas. A padaria vai formar 8 caixas completas. Esse problema exige duas divisões em sequência, interpretando o resultado de cada etapa.",
+      "sourceRef": {
+        "section": "Ideias de divisão",
+        "pages": "106–109"
+      },
+      "options": [
+        "8 caixas",
+        "32 caixas",
+        "4 caixas",
+        "6 caixas"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p1-047"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada divisão ao seu resultado correto.",
+      "explanation": "As divisões podem ser compreendidas pelo valor posicional: 4200 contém 420 dezenas, 5000 contém 50 centenas e 9000 contém 9 milhares. Logo, os resultados são 420, 50 e 9.",
+      "sourceRef": {
+        "section": "Divisão por 10, 100 e 1000",
+        "pages": "110–111"
+      },
+      "pairs": [
+        {
+          "left": "4 200 ÷ 10",
+          "right": "420"
+        },
+        {
+          "left": "5 000 ÷ 100",
+          "right": "50"
+        },
+        {
+          "left": "9 000 ÷ 1 000",
+          "right": "9"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p1-048"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada multiplicação a uma divisão da mesma família de fatos.",
+      "explanation": "Multiplicação e divisão são operações inversas. Se conhecemos um produto, podemos usar divisões com os mesmos três números para conferir a relação.",
+      "sourceRef": {
+        "section": "Operações inversas",
+        "pages": "121–123"
+      },
+      "pairs": [
+        {
+          "left": "6 × 7 = 42",
+          "right": "42 ÷ 7 = 6"
+        },
+        {
+          "left": "8 × 5 = 40",
+          "right": "40 ÷ 8 = 5"
+        },
+        {
+          "left": "9 × 4 = 36",
+          "right": "36 ÷ 4 = 9"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p1-049"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada divisão com resto à conta que a verifica.",
+      "explanation": "Uma divisão com resto é conferida por quociente × divisor + resto. O resultado precisa ser igual ao dividendo, e o resto deve ser menor que o divisor.",
+      "sourceRef": {
+        "section": "Regularidades da divisão",
+        "pages": "112–115"
+      },
+      "pairs": [
+        {
+          "left": "47 ÷ 5 = 9, resto 2",
+          "right": "9 × 5 + 2 = 47"
+        },
+        {
+          "left": "73 ÷ 8 = 9, resto 1",
+          "right": "9 × 8 + 1 = 73"
+        },
+        {
+          "left": "85 ÷ 9 = 9, resto 4",
+          "right": "9 × 9 + 4 = 85"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p1-050"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual das sentenças abaixo é uma igualdade verdadeira?",
+      "explanation": "Uma igualdade é verdadeira quando os dois lados têm o mesmo valor. Em 3 × 6 = 18, o lado esquerdo vale 18 e o lado direito também vale 18, tornando a igualdade verdadeira.",
+      "sourceRef": {
+        "section": "Relações de igualdade",
+        "pages": "118–120"
+      },
+      "options": [
+        "3 × 6 = 16",
+        "3 × 6 = 21",
+        "3 × 6 = 20",
+        "3 × 6 = 18"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p1-051"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Adição e subtração são operações inversas. O que isso significa?",
+      "explanation": "Operações inversas são aquelas que se desfazem mutuamente. Se somamos um número e depois subtraímos o mesmo número, voltamos ao valor inicial. Por isso, adição e subtração são operações inversas.",
+      "sourceRef": {
+        "section": "Operações inversas",
+        "pages": "121–123"
+      },
+      "options": [
+        "Só funcionam com números grandes",
+        "Sempre dão o mesmo resultado",
+        "Uma desfaz o efeito da outra",
+        "Sempre usam os mesmos números"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p1-052"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Na sentença 8 × □ = 40, qual operação inversa ajuda a descobrir o valor do □?",
+      "explanation": "Como a sentença envolve uma multiplicação, a operação inversa que ajuda a encontrar o valor desconhecido é a divisão. Basta calcular 40 ÷ 8 = 5, então □ = 5.",
+      "sourceRef": {
+        "section": "Operações inversas",
+        "pages": "121–123"
+      },
+      "options": [
+        "Adição: 40 + 8",
+        "Subtração: 40 − 8",
+        "Divisão: 40 ÷ 8",
+        "Multiplicação: 40 × 8"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p1-053"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Na sentença □ + 15 = 32, qual é o valor do □?",
+      "explanation": "Para descobrir o valor desconhecido em uma adição, usamos a subtração, que é a operação inversa. Calculamos 32 − 15 = 17. Substituindo: 17 + 15 = 32, confirmando que a igualdade é verdadeira.",
+      "sourceRef": {
+        "section": "Valor desconhecido",
+        "pages": "124–129"
+      },
+      "options": [
+        "□ = 17",
+        "□ = 19",
+        "□ = 47",
+        "□ = 14"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p1-054"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Tiago encontrou □ na sentença □ × 6 = 42 e disse que □ = 7. Como ele pode verificar se a resposta está correta?",
+      "explanation": "Para verificar um valor desconhecido, basta substituí-lo na sentença original e conferir se a igualdade fica verdadeira. Calculando 7 × 6 = 42, confirmamos que □ = 7 está correto.",
+      "sourceRef": {
+        "section": "Valor desconhecido",
+        "pages": "124–129"
+      },
+      "options": [
+        "Substituir 7 no lugar do □ e verificar se 7 × 6 = 42",
+        "Dividir 7 por 6 e ver se dá 42",
+        "Calcular 42 + 6 e ver se dá 7",
+        "Calcular 42 − 7 e ver se dá 6"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p1-055"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Se subtrairmos o mesmo número dos dois lados de uma igualdade verdadeira, o que acontece?",
+      "explanation": "Subtrair a mesma quantidade dos dois lados preserva a igualdade, pois os dois valores são modificados do mesmo modo.",
+      "sourceRef": {
+        "section": "Relações de igualdade",
+        "pages": "118–120"
+      },
+      "options": [
+        "A igualdade continua verdadeira",
+        "Somente o lado esquerdo muda",
+        "Somente o lado direito muda",
+        "A igualdade sempre se torna falsa"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p1-056"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Observe as duas sentenças: A) 4 × □ = 36 e B) □ ÷ 4 = 9. As duas sentenças têm o mesmo valor de □?",
+      "explanation": "Na sentença A, usamos a divisão inversa: 36 ÷ 4 = 9, então □ = 9. Na sentença B, usamos a multiplicação inversa: 9 × 4 = 36, então □ = 36. Os valores de □ são diferentes: na sentença A, □ = 9; na sentença B, □ = 36.",
+      "sourceRef": {
+        "section": "Operações inversas",
+        "pages": "121–123"
+      },
+      "options": [
+        "Sim, nas duas sentenças □ = 9",
+        "Sim, nas duas sentenças □ = 36",
+        "Não: na sentença A, □ = 9; na sentença B, □ = 36",
+        "Não: na sentença A, □ = 36; na sentença B, □ = 9"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p1-057"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada sentença com valor desconhecido à operação inversa que deve ser usada para encontrar o □.",
+      "explanation": "Quando o □ está em uma adição, usamos a subtração para encontrá-lo. Quando está em uma subtração, usamos a adição. Quando está em uma multiplicação, usamos a divisão. Essas são as operações inversas estudadas no capítulo 7.",
+      "sourceRef": {
+        "section": "Operações inversas",
+        "pages": "121–123"
+      },
+      "pairs": [
+        {
+          "left": "□ + 9 = 20",
+          "right": "Subtração: 20 − 9"
+        },
+        {
+          "left": "□ − 5 = 13",
+          "right": "Adição: 13 + 5"
+        },
+        {
+          "left": "□ × 7 = 56",
+          "right": "Divisão: 56 ÷ 7"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p1-058"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada sentença com valor desconhecido ao valor correto do □, usando operações inversas.",
+      "explanation": "Usamos operações inversas e conferimos por substituição: 25 − 8 = 17; 30 − 12 = 18; 45 ÷ 5 = 9; e 64 ÷ 8 = 8. Esses valores tornam verdadeiras as quatro sentenças apresentadas.",
+      "sourceRef": {
+        "section": "Valor desconhecido",
+        "pages": "124–129"
+      },
+      "pairs": [
+        {
+          "left": "□ + 8 = 25",
+          "right": "□ = 17"
+        },
+        {
+          "left": "30 − □ = 12",
+          "right": "□ = 18"
+        },
+        {
+          "left": "□ × 5 = 45",
+          "right": "□ = 9"
+        },
+        {
+          "left": "64 ÷ □ = 8",
+          "right": "□ = 8"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p1-059"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada igualdade à afirmação correta sobre ela.",
+      "explanation": "Na primeira sentença, 6 × 7 e 40 + 2 valem 42, então a igualdade é verdadeira. Na segunda, 5 × 8 e 50 − 10 valem 40, então também é verdadeira. Na terceira, 9 × 4 vale 36, mas 30 + 8 vale 38, então a igualdade é falsa.",
+      "sourceRef": {
+        "section": "Relações de igualdade",
+        "pages": "118–120"
+      },
+      "pairs": [
+        {
+          "left": "6 × 7 = 40 + 2",
+          "right": "Igualdade verdadeira, pois 42 = 42"
+        },
+        {
+          "left": "5 × 8 = 50 − 10",
+          "right": "Igualdade verdadeira, pois 40 = 40"
+        },
+        {
+          "left": "9 × 4 = 30 + 8",
+          "right": "Igualdade falsa, pois 36 ≠ 38"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p1-060"
+    }
+  ]
+}

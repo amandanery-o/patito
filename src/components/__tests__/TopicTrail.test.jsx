@@ -20,6 +20,14 @@ const review = {
   questions: Array.from({ length: 60 }, (_, index) => ({ id: `q-${index}` })),
 }
 
+const workReview = {
+  ...review,
+  id: 'mat-t2',
+  title: 'Revisão T2 — Grandezas e medidas',
+  reviewLabel: 'Revisão para o T2',
+  chapter: '4 e 8',
+}
+
 describe('TopicTrail', () => {
   it('separa leitura e prática sem repetir capítulos cobertos', () => {
     const onStart = vi.fn()
@@ -42,5 +50,18 @@ describe('TopicTrail', () => {
 
     fireEvent.click(screen.getByRole('button', { name: /Praticar Revisão P1/i }))
     expect(onStart).toHaveBeenCalledWith(review)
+  })
+
+  it('identifica trabalhos T2 no selo do material', () => {
+    render(
+      <TopicTrail
+        subject={{ id: 'matematica' }}
+        topics={[workReview]}
+        getTopicProgress={() => ({ completed: false })}
+        onStart={() => {}}
+        onReview={() => {}}
+      />,
+    )
+    expect(screen.getByText('T2')).toBeInTheDocument()
   })
 })

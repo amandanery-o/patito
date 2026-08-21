@@ -7,11 +7,12 @@ O código local está pronto e testado. Os itens abaixo dependem de decisão edi
 - Projeto Supabase remoto criado, schema aplicado e RLS validado.
 - Calendário oficial com 27 eventos publicado.
 - Geografia P1 e P2 aprovadas e publicadas.
+- Matemática T2 e P1 aprovadas e publicadas, com 60 questões por material.
 - Login, perfil, calendário, Temas, sessão e ranking validados remotamente.
 
 ## 1. Publicar as próximas matérias
 
-Seguir `docs/operations/next-subject-playbook.md`, começando por Matemática P1. Cada entrega precisa conter fonte registrada, material de leitura, pelo menos 60 questões, revisão independente, aprovação auditável e testes.
+Seguir `docs/operations/next-subject-playbook.md`, começando por História P1. Cada entrega precisa conter fonte registrada, material de leitura, pelo menos 60 questões, revisão independente, aprovação auditável e testes.
 
 ## 2. Ativar relatos no GitHub
 
@@ -26,7 +27,7 @@ Em seguida, publicar `supabase/functions/report-problem` e realizar um relato de
 
 Para cada prova ainda sem conteúdo, fornecer o material autorizado ou abrir a plataforma autenticada no capítulo correspondente:
 
-- Matemática: capítulos 6–11;
+- Matemática: capítulos 9–11 para P2 (capítulos 4–8 necessários para T2/P1 já foram conferidos);
 - Português: páginas e tópicos registrados no calendário;
 - Inglês: unidades 5–8 da Richmond College;
 - Ciências: capítulos 7–11;

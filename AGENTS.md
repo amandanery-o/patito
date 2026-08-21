@@ -13,6 +13,7 @@ Patito is a Portuguese-language study PWA for fourth-grade students. It provides
 - `supabase/schema.sql` is the current backend schema reference.
 - `README.md` describes setup and supported functionality.
 - `docs/operations/next-subject-playbook.md` is the mandatory end-to-end procedure for publishing each new subject or assessment.
+- `.claude/agents/editorial-reviewer.md` defines the reusable independent reviewer; keep authoring and review as separate roles.
 
 Do not invent unresolved product behavior. Record meaningful unknowns in the relevant PRD or feature under “Open questions”.
 
@@ -61,7 +62,7 @@ The local fallback exists only for development and automated tests. The released
 ## Supabase safety
 
 - Treat schema and RLS changes as security-sensitive.
-- Preserve offline mode and document migration/rollout steps.
+- Não introduza modo offline para dados do aluno; o produto publicado depende da sincronização com Supabase. O fallback local existe somente para desenvolvimento e testes.
 - Scope student-visible data by user or class as appropriate.
 - Never expose service-role keys to Vite or browser code.
 - Do not mutate production Supabase from local scripts without explicit user approval.
@@ -82,7 +83,7 @@ Every feature must include user value, scope, rules, data implications, acceptan
 
 - Treat **Material de revisão** and **Praticar questões** as two explicit actions within the same assessment card.
 - Never represent book chapters, summaries, and question banks as equivalent consecutive trail steps.
-- When a P1/P2 material already groups chapters, do not repeat those chapters as competing cards on the subject screen.
+- When a P1/P2/T2 material already groups chapters, do not repeat those chapters as competing cards on the subject screen.
 - Student-facing progress counts published review materials (P1/P2), never internal topic records or hidden chapters.
 - Use child-friendly copy that makes the next action understandable without adult support.
 - Use **Agenda** in bottom navigation and **Agenda escolar** as the student-facing area name; “Prova” and “Trabalho” are event types, never the section label.

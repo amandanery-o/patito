@@ -1,5 +1,6 @@
 import { daysUntil } from '../utils/dates'
 import { GEOGRAPHY_TOPICS } from './geografia'
+import { MATHEMATICS_TOPICS } from './matematica'
 
 export const SUBJECTS = [
   {
@@ -16,9 +17,9 @@ export const SUBJECTS = [
     name: 'Matemática',
     icon: '🔢',
     color: 'bg-green-500',
-    topics: [],
+    topics: MATHEMATICS_TOPICS,
     calendarOnly: false,
-    lastUpdated: null,
+    lastUpdated: '2026-08-21',
   },
   {
     id: 'geografia',

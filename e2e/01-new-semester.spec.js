@@ -7,7 +7,7 @@ test.describe('Estrutura limpa do segundo semestre', () => {
     await page.goto('/')
   })
 
-  test('mostra as sete matérias regulares como conteúdo em preparação', async ({ page }) => {
+  test('mostra as sete matérias regulares e separa as que estão em preparação', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Em breve' })).toBeVisible()
     for (const subject of [
       'Português',
@@ -27,9 +27,9 @@ test.describe('Estrutura limpa do segundo semestre', () => {
   })
 
   test('publica as revisões aprovadas de Geografia', async ({ page }) => {
-    await expect(page.getByText('0 de 2 revisões concluídas', { exact: true })).toBeVisible()
-    await expect(page.getByRole('button', { name: /Ver materiais/i })).toHaveCount(1)
-    await page.getByRole('button', { name: /Ver materiais/i }).click()
+    const geographyCard = page.getByTestId('subject-geografia')
+    await expect(geographyCard.getByText('0 de 2 revisões concluídas', { exact: true })).toBeVisible()
+    await geographyCard.getByRole('button', { name: /Ver materiais/i }).click()
     await expect(page.getByRole('heading', { name: 'Material de revisão' })).toBeVisible()
     await expect(page.getByRole('button', { name: /Ler material da Revisão P1/i })).toBeVisible()
     await expect(page.getByRole('button', { name: /Praticar Revisão P1/i })).toBeVisible()
@@ -40,16 +40,35 @@ test.describe('Estrutura limpa do segundo semestre', () => {
   })
 
   test('inicia uma sessão de 30 questões da P2 de Geografia', async ({ page }) => {
-    await page.getByRole('button', { name: /Ver materiais/i }).click()
+    await page
+      .getByTestId('subject-geografia')
+      .getByRole('button', { name: /Ver materiais/i })
+      .click()
     await page.getByRole('button', { name: /Praticar Revisão P2 — População e migrações/i }).click()
     await expect(page.getByText('Revisão P2 — População e migrações', { exact: true })).toBeVisible()
     await expect(page.getByText('1/30 questões', { exact: true })).toBeVisible()
   })
 
   test('inicia uma sessão de 30 questões da P1 de Geografia', async ({ page }) => {
-    await page.getByRole('button', { name: /Ver materiais/i }).click()
+    await page
+      .getByTestId('subject-geografia')
+      .getByRole('button', { name: /Ver materiais/i })
+      .click()
     await page.getByRole('button', { name: /Praticar Revisão P1 — Espaços rural e urbano/i }).click()
     await expect(page.getByText('Revisão P1 — Espaços rural e urbano', { exact: true })).toBeVisible()
+    await expect(page.getByText('1/30 questões', { exact: true })).toBeVisible()
+  })
+
+  test('publica T2 e P1 de Matemática com leitura e prática', async ({ page }) => {
+    const mathematicsCard = page.getByTestId('subject-matematica')
+    await expect(mathematicsCard.getByText('0 de 2 revisões concluídas', { exact: true })).toBeVisible()
+    await mathematicsCard.getByRole('button', { name: /Ver materiais/i }).click()
+    await expect(page.getByText('T2', { exact: true })).toBeVisible()
+    await expect(page.getByText('P1', { exact: true })).toBeVisible()
+    await page.getByRole('button', { name: 'Ler material da Revisão T2 — Grandezas e medidas' }).click()
+    await expect(page.getByRole('heading', { name: 'Comprimento e perímetro' })).toBeVisible()
+    await page.getByRole('button', { name: 'Praticar 30 questões' }).click()
+    await expect(page.getByText('Revisão T2 — Grandezas e medidas', { exact: true })).toBeVisible()
     await expect(page.getByText('1/30 questões', { exact: true })).toBeVisible()
   })
 

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { getMascotState } from './appConfig'
+import { getMascotState, SUBJECTS } from './appConfig'
 
 describe('getMascotState', () => {
   it('convida para conferir a Agenda quando existe qualquer compromisso próximo', () => {
@@ -14,5 +14,10 @@ describe('getMascotState', () => {
       mood: 'feliz',
       message: 'Oi, Bento! Que matéria estudamos hoje? 📚',
     })
+  })
+
+  it('conecta os materiais de Matemática somente à matéria correta', () => {
+    expect(SUBJECTS.find((subject) => subject.id === 'matematica').topics).toHaveLength(2)
+    expect(SUBJECTS.find((subject) => subject.id === 'portugues').topics).toEqual([])
   })
 })

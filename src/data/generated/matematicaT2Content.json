@@ -1,0 +1,1335 @@
+{
+  "status": "approved",
+  "contentId": "matematica-t2-capitulos-4-8",
+  "title": "Revisão T2 — Grandezas e medidas",
+  "summary": "Revisão dos capítulos 4 e 8: comprimento, massa, capacidade, tempo e temperatura.",
+  "source": {
+    "provider": "edebe",
+    "resourceId": "courseware-250/chapters-4-8",
+    "version": "2024"
+  },
+  "generation": {
+    "model": "claude-sonnet-4-6",
+    "promptVersion": "question-batch-v2",
+    "generatedAt": "2026-08-21T12:56:23.352Z",
+    "usage": [
+      {
+        "batch": 1,
+        "input_tokens": 4167,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1421,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 2,
+        "input_tokens": 4383,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1696,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 3,
+        "input_tokens": 4695,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1573,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 4,
+        "input_tokens": 4971,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1517,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 5,
+        "input_tokens": 5275,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1426,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 6,
+        "input_tokens": 5506,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1742,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      }
+    ],
+    "revision": {
+      "method": "independent-source-check-v1",
+      "reviewer": "Agente editorial Patito",
+      "revisedAt": "2026-08-21T13:10:00Z"
+    }
+  },
+  "editorialApproval": {
+    "reviewer": "Agente editorial Patito",
+    "reviewerType": "agent",
+    "reviewMethod": "independent-source-check-v1",
+    "reviewedAt": "2026-08-21T13:13:26Z",
+    "draftDigest": "646c2256c6bd9d325b9df1e2149689d6e31dae5a5218af95ab2dfd5c924026d1",
+    "schemaVersion": 1
+  },
+  "publishedAt": "2026-08-21T13:14:33.064Z",
+  "questions": [
+    {
+      "difficulty": "easy",
+      "question": "Qual é a unidade de medida usada para medir comprimentos muito curtos, como a espessura de uma folha de papel?",
+      "explanation": "O milímetro é usado para medir comprimentos muito pequenos. Ele é a menor das unidades de comprimento estudadas: 1 m = 1000 mm.",
+      "sourceRef": {
+        "section": "Medidas de comprimento",
+        "pages": "70–75"
+      },
+      "options": [
+        "Quilômetro",
+        "Metro",
+        "Centímetro",
+        "Milímetro"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-t2-001"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Quantos centímetros tem 1 metro?",
+      "explanation": "1 metro equivale a 100 centímetros. Essa equivalência é fundamental para converter medidas de comprimento.",
+      "sourceRef": {
+        "section": "Medidas de comprimento",
+        "pages": "70–75"
+      },
+      "options": [
+        "100 centímetros",
+        "1000 centímetros",
+        "10 000 centímetros",
+        "10 centímetros"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-t2-002"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Para medir a distância entre duas cidades, qual unidade de comprimento é mais adequada?",
+      "explanation": "O quilômetro é usado para medir distâncias grandes, como entre cidades. As outras unidades são muito pequenas para esse tipo de medida.",
+      "sourceRef": {
+        "section": "Medidas de comprimento",
+        "pages": "70–75"
+      },
+      "options": [
+        "Metro",
+        "Quilômetro",
+        "Milímetro",
+        "Centímetro"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-t2-003"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma fita mede 3 metros de comprimento. Quantos centímetros essa fita tem?",
+      "explanation": "Como 1 metro equivale a 100 centímetros, 3 metros equivalem a 3 × 100 = 300 centímetros.",
+      "sourceRef": {
+        "section": "Medidas de comprimento",
+        "pages": "70–75"
+      },
+      "options": [
+        "30 000 cm",
+        "30 cm",
+        "300 cm",
+        "3 000 cm"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-t2-004"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Quantos metros há em 1 quilômetro?",
+      "explanation": "1 quilômetro equivale a 1 000 metros. O quilômetro é usado para medir distâncias longas, como estradas e trajetos entre cidades.",
+      "sourceRef": {
+        "section": "Medidas de comprimento",
+        "pages": "70–75"
+      },
+      "options": [
+        "10 metros",
+        "100 metros",
+        "1 000 metros",
+        "10 000 metros"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-t2-005"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma régua mede 30 centímetros. Quantos milímetros ela tem?",
+      "explanation": "Como 1 centímetro equivale a 10 milímetros, 30 centímetros equivalem a 30 × 10 = 300 milímetros.",
+      "sourceRef": {
+        "section": "Medidas de comprimento",
+        "pages": "70–75"
+      },
+      "options": [
+        "30 mm",
+        "300 mm",
+        "3 000 mm",
+        "3 mm"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-t2-006"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma fita mede 250 centímetros. Qual é essa medida em metros e centímetros?",
+      "explanation": "Como 100 centímetros correspondem a 1 metro, 200 centímetros correspondem a 2 metros. Restam 50 centímetros. Portanto, 250 centímetros são 2 metros e 50 centímetros.",
+      "sourceRef": {
+        "section": "Medidas de comprimento",
+        "pages": "70–75"
+      },
+      "options": [
+        "2 m e 5 cm",
+        "2 m e 50 cm",
+        "25 m",
+        "250 m"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-t2-007"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Uma trilha tem 2 km e 500 m de extensão. Quantos metros ela tem no total?",
+      "explanation": "2 km equivalem a 2 × 1 000 = 2 000 m. Somando os 500 m restantes, temos 2 000 + 500 = 2 500 m no total.",
+      "sourceRef": {
+        "section": "Medidas de comprimento",
+        "pages": "70–75"
+      },
+      "options": [
+        "25 000 m",
+        "250 m",
+        "2 050 m",
+        "2 500 m"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-t2-008"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada medida de comprimento à sua equivalência correta.",
+      "explanation": "As equivalências são 1 m = 100 cm, 1 km = 1000 m e 1 cm = 10 mm. Como 1 m = 1000 mm, 2 m = 2000 mm.",
+      "sourceRef": {
+        "section": "Medidas de comprimento",
+        "pages": "70–75"
+      },
+      "pairs": [
+        {
+          "left": "1 metro",
+          "right": "100 centímetros"
+        },
+        {
+          "left": "1 quilômetro",
+          "right": "1 000 metros"
+        },
+        {
+          "left": "1 centímetro",
+          "right": "10 milímetros"
+        },
+        {
+          "left": "2 metros",
+          "right": "2 000 milímetros"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-t2-009"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada medida à sua equivalência em outra unidade.",
+      "explanation": "Usamos as relações 1 m = 100 cm, 1 m = 1000 mm e 1 km = 1000 m. Todas as conversões usam números inteiros.",
+      "sourceRef": {
+        "section": "Medidas de comprimento",
+        "pages": "70–75"
+      },
+      "pairs": [
+        {
+          "left": "2 quilômetros",
+          "right": "2 000 metros"
+        },
+        {
+          "left": "3 metros",
+          "right": "300 centímetros"
+        },
+        {
+          "left": "250 milímetros",
+          "right": "25 centímetros"
+        },
+        {
+          "left": "4 metros",
+          "right": "4 000 milímetros"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-t2-010"
+    },
+    {
+      "difficulty": "easy",
+      "question": "O perímetro de uma figura é a medida do seu contorno. Se um quadrado tem cada lado medindo 5 cm, qual é o perímetro desse quadrado?",
+      "explanation": "O perímetro é a soma de todos os lados da figura. Um quadrado tem 4 lados iguais, então 5 + 5 + 5 + 5 = 20 cm.",
+      "sourceRef": {
+        "section": "Medidas de comprimento",
+        "pages": "70–75"
+      },
+      "options": [
+        "20 cm",
+        "25 cm",
+        "10 cm",
+        "15 cm"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-t2-011"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual instrumento é usado para medir a temperatura do corpo de uma pessoa?",
+      "explanation": "O termômetro é o instrumento adequado para medir temperatura. No Brasil, a temperatura é geralmente registrada em graus Celsius.",
+      "sourceRef": {
+        "section": "Medidas de temperatura",
+        "pages": "138–143"
+      },
+      "options": [
+        "Relógio",
+        "Régua",
+        "Balança",
+        "Termômetro"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-t2-012"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Um retângulo tem dois lados medindo 8 cm e dois lados medindo 3 cm. Qual é o perímetro desse retângulo?",
+      "explanation": "O perímetro é a soma de todos os lados. Para o retângulo: 8 + 8 + 3 + 3 = 22 cm.",
+      "sourceRef": {
+        "section": "Medidas de comprimento",
+        "pages": "70–75"
+      },
+      "options": [
+        "11 cm",
+        "16 cm",
+        "22 cm",
+        "24 cm"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-t2-013"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Para medir a massa de um pacote de arroz, qual unidade é mais adequada?",
+      "explanation": "O quilograma é a unidade adequada para medir a massa de objetos do dia a dia, como um pacote de arroz. O miligrama é muito pequeno e a tonelada é muito grande para essa situação.",
+      "sourceRef": {
+        "section": "Medidas de massa",
+        "pages": "76–78"
+      },
+      "options": [
+        "Miligrama",
+        "Quilograma",
+        "Tonelada",
+        "Milímetro"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-t2-014"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Um filme começa às 14h e termina às 16h. Quanto tempo dura o filme?",
+      "explanation": "Para calcular o intervalo de tempo, comparamos o horário de início e o de fim: 16h – 14h = 2 horas de duração.",
+      "sourceRef": {
+        "section": "Medidas de tempo",
+        "pages": "134–137"
+      },
+      "options": [
+        "3 horas",
+        "4 horas",
+        "1 hora",
+        "2 horas"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-t2-015"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Ana quer medir a quantidade de água em um copo. Qual unidade ela deve usar?",
+      "explanation": "Litro e mililitro são as unidades usadas para medir capacidade, ou seja, a quantidade de líquido que um recipiente comporta. Para um copo, o mililitro é a unidade mais adequada.",
+      "sourceRef": {
+        "section": "Medidas de capacidade",
+        "pages": "132–133"
+      },
+      "options": [
+        "Quilômetro",
+        "Grama",
+        "Milímetro",
+        "Mililitro"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-t2-016"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Duas embalagens têm 1 litro de leite cada. Foram usados 750 mL e depois mais 250 mL. Quantos mililitros restaram?",
+      "explanation": "As duas embalagens têm 2000 mL. Foram usados 750 + 250 = 1000 mL. Então restaram 2000 − 1000 = 1000 mL.",
+      "sourceRef": {
+        "section": "Medidas de capacidade",
+        "pages": "132–133"
+      },
+      "options": [
+        "500 mL",
+        "750 mL",
+        "1000 mL",
+        "1250 mL"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-t2-017"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Um jardim tem formato de retângulo com 12 m de comprimento e 7 m de largura. Para cercar todo o jardim, quantos metros de cerca são necessários?",
+      "explanation": "Para cercar o jardim, é preciso calcular o perímetro: 12 + 12 + 7 + 7 = 38 m. O perímetro representa o contorno total da figura.",
+      "sourceRef": {
+        "section": "Medidas de comprimento",
+        "pages": "70–75"
+      },
+      "options": [
+        "38 m",
+        "84 m",
+        "48 m",
+        "19 m"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-t2-018"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada grandeza ao instrumento usado para medi-la.",
+      "explanation": "Cada grandeza tem um instrumento adequado: a régua mede comprimento, a balança mede massa, o termômetro mede temperatura e o relógio mede tempo.",
+      "sourceRef": {
+        "section": "Atividades de revisão",
+        "pages": "144–145"
+      },
+      "pairs": [
+        {
+          "left": "Comprimento",
+          "right": "Régua"
+        },
+        {
+          "left": "Massa",
+          "right": "Balança"
+        },
+        {
+          "left": "Temperatura",
+          "right": "Termômetro"
+        },
+        {
+          "left": "Tempo",
+          "right": "Relógio"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-t2-019"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada grandeza à unidade de medida correspondente.",
+      "explanation": "Cada grandeza possui unidades próprias: o metro mede comprimento, o quilograma mede massa, o litro mede capacidade e o grau Celsius mede temperatura.",
+      "sourceRef": {
+        "section": "Atividades de revisão",
+        "pages": "144–145"
+      },
+      "pairs": [
+        {
+          "left": "Comprimento de uma rua",
+          "right": "Metro"
+        },
+        {
+          "left": "Massa de uma pessoa",
+          "right": "Quilograma"
+        },
+        {
+          "left": "Quantidade de suco em uma garrafa",
+          "right": "Litro"
+        },
+        {
+          "left": "Temperatura do ambiente",
+          "right": "Grau Celsius"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-t2-020"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Quantos gramas há em 1 quilograma?",
+      "explanation": "O quilograma é a unidade padrão de massa e equivale a 1000 gramas. Essa relação é usada para comparar e converter medidas de massa no dia a dia.",
+      "sourceRef": {
+        "section": "Medidas de massa",
+        "pages": "76–78"
+      },
+      "options": [
+        "10 gramas",
+        "100 gramas",
+        "1000 gramas",
+        "10 000 gramas"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-t2-021"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual unidade de massa é usada para medir objetos muito leves, como um comprimido?",
+      "explanation": "O miligrama é a menor unidade de massa estudada e é usada para medir objetos muito leves, como medicamentos. O quilograma e a tonelada são usados para objetos muito mais pesados.",
+      "sourceRef": {
+        "section": "Medidas de massa",
+        "pages": "76–78"
+      },
+      "options": [
+        "Quilograma",
+        "Grama",
+        "Miligrama",
+        "Tonelada"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-t2-022"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Uma balança de cozinha marca 2 kg de farinha. Quantos gramas de farinha há na balança?",
+      "explanation": "Como 1 kg equivale a 1000 g, basta multiplicar: 2 × 1000 = 2000 g. Converter quilogramas em gramas é útil para comparar e usar medidas em receitas.",
+      "sourceRef": {
+        "section": "Medidas de massa",
+        "pages": "76–78"
+      },
+      "options": [
+        "2000 g",
+        "20 000 g",
+        "200 g",
+        "20 g"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-t2-023"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Um caminhão carrega 3 toneladas de areia. Quantos quilogramas de areia ele está transportando?",
+      "explanation": "A tonelada é usada para medir objetos muito pesados. Como 1 tonelada equivale a 1000 kg, 3 toneladas correspondem a 3 × 1000 = 3000 kg.",
+      "sourceRef": {
+        "section": "Medidas de massa",
+        "pages": "76–78"
+      },
+      "options": [
+        "30 kg",
+        "300 kg",
+        "3000 kg",
+        "30 000 kg"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-t2-024"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma embalagem de iogurte tem 500 g. Quantas embalagens iguais são necessárias para completar 1 kg?",
+      "explanation": "Como 1 kg = 1000 g e cada embalagem tem 500 g, são necessárias 1000 ÷ 500 = 2 embalagens para completar 1 kg.",
+      "sourceRef": {
+        "section": "Medidas de massa",
+        "pages": "76–78"
+      },
+      "options": [
+        "5 embalagens",
+        "4 embalagens",
+        "3 embalagens",
+        "2 embalagens"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-t2-025"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Para medir a massa de um elefante adulto, qual unidade é mais adequada?",
+      "explanation": "A tonelada é usada para medir a massa de objetos muito pesados, como veículos grandes e animais de grande porte. O quilograma e o grama são usados para objetos bem mais leves.",
+      "sourceRef": {
+        "section": "Medidas de massa",
+        "pages": "76–78"
+      },
+      "options": [
+        "Grama",
+        "Quilograma",
+        "Tonelada",
+        "Miligrama"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-t2-026"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Lucas tem 1500 g de açúcar. Qual é essa quantidade em quilogramas e gramas?",
+      "explanation": "Como 1 kg = 1000 g, 1500 g equivale a 1 kg e 500 g. Separar a quantidade em quilogramas e gramas ajuda a entender melhor o valor da medida.",
+      "sourceRef": {
+        "section": "Medidas de massa",
+        "pages": "76–78"
+      },
+      "options": [
+        "1 kg e 500 g",
+        "2 kg e 500 g",
+        "1 kg e 50 g",
+        "15 kg e 0 g"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-t2-027"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Uma receita usa 250 g de manteiga, 500 g de farinha e 1 kg de açúcar. Qual é a massa total dos ingredientes em gramas?",
+      "explanation": "Primeiro, converte-se 1 kg em gramas: 1 kg = 1000 g. Depois, soma-se tudo: 250 + 500 + 1000 = 1750 g. Converter todas as medidas para a mesma unidade antes de somar é fundamental para obter o resultado correto.",
+      "sourceRef": {
+        "section": "Medidas de massa",
+        "pages": "76–78"
+      },
+      "options": [
+        "2000 g",
+        "1250 g",
+        "1500 g",
+        "1750 g"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-t2-028"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada unidade de massa à situação em que ela é mais adequada para ser usada.",
+      "explanation": "Cada unidade de massa tem uma escala diferente: o miligrama mede objetos muito leves, o grama mede objetos leves do dia a dia, o quilograma mede objetos de massa média e a tonelada mede objetos muito pesados. Escolher a unidade certa torna a medida mais prática e compreensível.",
+      "sourceRef": {
+        "section": "Medidas de massa",
+        "pages": "76–78"
+      },
+      "pairs": [
+        {
+          "left": "Miligrama",
+          "right": "Massa de um comprimido"
+        },
+        {
+          "left": "Grama",
+          "right": "Massa de uma maçã"
+        },
+        {
+          "left": "Quilograma",
+          "right": "Massa de uma criança"
+        },
+        {
+          "left": "Tonelada",
+          "right": "Massa de um caminhão carregado"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-t2-029"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada medida de massa à sua equivalência.",
+      "explanation": "Usamos 1 kg = 1000 g, 1 g = 1000 mg e 1 t = 1000 kg. Quando a conversão não forma uma unidade inteira, podemos escrever quilogramas e gramas.",
+      "sourceRef": {
+        "section": "Medidas de massa",
+        "pages": "76–78"
+      },
+      "pairs": [
+        {
+          "left": "3 kg",
+          "right": "3 000 g"
+        },
+        {
+          "left": "2 000 mg",
+          "right": "2 g"
+        },
+        {
+          "left": "4 t",
+          "right": "4 000 kg"
+        },
+        {
+          "left": "2 500 g",
+          "right": "2 kg e 500 g"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-t2-030"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual é a unidade de medida usada para medir a quantidade de líquido em uma garrafa?",
+      "explanation": "A capacidade indica quanto líquido um recipiente pode conter. O litro é a unidade de medida de capacidade mais comum no dia a dia.",
+      "sourceRef": {
+        "section": "Medidas de capacidade",
+        "pages": "132–133"
+      },
+      "options": [
+        "Metro",
+        "Segundo",
+        "Grama",
+        "Litro"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-t2-031"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Quantos mililitros há em 1 litro?",
+      "explanation": "A equivalência fundamental de capacidade é: 1 litro = 1000 mililitros. Assim como 1 kg tem 1000 g, 1 L tem 1000 mL.",
+      "sourceRef": {
+        "section": "Medidas de capacidade",
+        "pages": "132–133"
+      },
+      "options": [
+        "1000 mL",
+        "10 mL",
+        "100 mL",
+        "500 mL"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-t2-032"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Uma embalagem de suco tem 2 litros. Quantos mililitros ela tem?",
+      "explanation": "Para converter litros em mililitros, multiplicamos por 1000. Então, 2 L × 1000 = 2000 mL.",
+      "sourceRef": {
+        "section": "Medidas de capacidade",
+        "pages": "132–133"
+      },
+      "options": [
+        "200 mL",
+        "500 mL",
+        "2000 mL",
+        "20 000 mL"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-t2-033"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma garrafa de água tem 500 mL. Quantas garrafas iguais são necessárias para completar 1 litro?",
+      "explanation": "Como 1 litro = 1000 mL, e cada garrafa tem 500 mL, precisamos de 1000 ÷ 500 = 2 garrafas para completar 1 litro.",
+      "sourceRef": {
+        "section": "Medidas de capacidade",
+        "pages": "132–133"
+      },
+      "options": [
+        "2 garrafas",
+        "4 garrafas",
+        "5 garrafas",
+        "1 garrafa"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-t2-034"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Carla tem um aquário com capacidade para 3 litros de água. Ela já colocou 1500 mL. Quantos mililitros ainda cabem no aquário?",
+      "explanation": "O aquário tem 3 L = 3000 mL. Já foram colocados 1500 mL. Então ainda cabem 3000 − 1500 = 1500 mL.",
+      "sourceRef": {
+        "section": "Medidas de capacidade",
+        "pages": "132–133"
+      },
+      "options": [
+        "1500 mL",
+        "2000 mL",
+        "500 mL",
+        "1000 mL"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-t2-035"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Para medir a quantidade de xarope em um frasco pequeno de remédio, qual unidade é mais adequada?",
+      "explanation": "O mililitro é a unidade usada para medir pequenas quantidades de líquido, como remédios e ingredientes em colheres. O litro seria uma unidade muito grande para essa situação.",
+      "sourceRef": {
+        "section": "Medidas de capacidade",
+        "pages": "132–133"
+      },
+      "options": [
+        "Mililitro",
+        "Quilômetro",
+        "Quilograma",
+        "Litro"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-t2-036"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Uma jarra tem 2 litros de água. Foram servidos três copos de 250 mL. Quantos mililitros restaram na jarra?",
+      "explanation": "Dois litros correspondem a 2000 mL. Três copos de 250 mL totalizam 750 mL. Assim, restaram 2000 − 750 = 1250 mL.",
+      "sourceRef": {
+        "section": "Medidas de capacidade",
+        "pages": "132–133"
+      },
+      "options": [
+        "750 mL",
+        "1000 mL",
+        "1250 mL",
+        "1750 mL"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-t2-037"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada conjunto de recipientes à capacidade total.",
+      "explanation": "Somamos as capacidades em mililitros ou usamos 1 L = 1000 mL. Assim, dois copos de 250 mL têm 500 mL, duas garrafas de 1 L têm 2000 mL e um balde de 5 L tem 5000 mL.",
+      "sourceRef": {
+        "section": "Medidas de capacidade",
+        "pages": "132–133"
+      },
+      "pairs": [
+        {
+          "left": "2 copos de 250 mL",
+          "right": "500 mL"
+        },
+        {
+          "left": "2 garrafas de 1 L",
+          "right": "2 000 mL"
+        },
+        {
+          "left": "1 balde de 5 L",
+          "right": "5 000 mL"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-t2-038"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada conversão de capacidade ao seu resultado correto.",
+      "explanation": "Como 1 litro corresponde a 1000 mililitros, 2 L = 2000 mL, 3000 mL = 3 L e 4 L = 4000 mL. Quinhentos mililitros correspondem à metade de 1 litro.",
+      "sourceRef": {
+        "section": "Medidas de capacidade",
+        "pages": "132–133"
+      },
+      "pairs": [
+        {
+          "left": "2 L",
+          "right": "2 000 mL"
+        },
+        {
+          "left": "3 000 mL",
+          "right": "3 L"
+        },
+        {
+          "left": "500 mL",
+          "right": "Meio litro"
+        },
+        {
+          "left": "4 L",
+          "right": "4 000 mL"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-t2-039"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada situação à descrição correta da medida de capacidade.",
+      "explanation": "Litro e mililitro medem capacidade. O mililitro é adequado para pequenas quantidades, enquanto o litro é usado em embalagens e quantidades maiores. Um litro corresponde a 1000 mililitros.",
+      "sourceRef": {
+        "section": "Medidas de capacidade",
+        "pages": "132–133"
+      },
+      "pairs": [
+        {
+          "left": "Quantidade de água em uma piscina",
+          "right": "Pode ser medida em litros por ser uma quantidade grande"
+        },
+        {
+          "left": "Dose de xarope em uma colher",
+          "right": "Pode ser medida em mililitros por ser uma quantidade pequena"
+        },
+        {
+          "left": "Leite em uma embalagem de 1 L",
+          "right": "Tem capacidade equivalente a 1000 mL"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-t2-040"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Quantos minutos há em 1 hora?",
+      "explanation": "Uma hora equivale a 60 minutos. Essa é a relação básica entre horas e minutos usada para medir o tempo.",
+      "sourceRef": {
+        "section": "Medidas de tempo",
+        "pages": "134–137"
+      },
+      "options": [
+        "24 minutos",
+        "60 minutos",
+        "100 minutos",
+        "1000 minutos"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-t2-041"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Quantos segundos há em 1 minuto?",
+      "explanation": "Um minuto equivale a 60 segundos. Assim como a hora se divide em 60 minutos, o minuto se divide em 60 segundos.",
+      "sourceRef": {
+        "section": "Medidas de tempo",
+        "pages": "134–137"
+      },
+      "options": [
+        "30 segundos",
+        "60 segundos",
+        "100 segundos",
+        "10 segundos"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-t2-042"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual instrumento é usado para medir o tempo mostrando horas, minutos e segundos?",
+      "explanation": "O relógio é o instrumento usado para medir o tempo. Ele pode ser analógico, com ponteiros, ou digital, com números.",
+      "sourceRef": {
+        "section": "Medidas de tempo",
+        "pages": "134–137"
+      },
+      "options": [
+        "Régua",
+        "Relógio",
+        "Termômetro",
+        "Balança"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-t2-043"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma aula começa às 7h e termina às 8h. Quanto tempo dura essa aula?",
+      "explanation": "Para calcular o intervalo de tempo, subtraímos o horário de início do horário de fim: 8h – 7h = 1 hora. Portanto, a aula dura 1 hora, ou seja, 60 minutos.",
+      "sourceRef": {
+        "section": "Medidas de tempo",
+        "pages": "134–137"
+      },
+      "options": [
+        "90 minutos",
+        "30 minutos",
+        "45 minutos",
+        "60 minutos"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-t2-044"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Um treino de natação começa às 9h e termina às 9h30. Quanto tempo dura o treino?",
+      "explanation": "O intervalo entre 9h e 9h30 é de 30 minutos. Para encontrar o intervalo, comparamos o horário de início com o horário de fim.",
+      "sourceRef": {
+        "section": "Medidas de tempo",
+        "pages": "134–137"
+      },
+      "options": [
+        "15 minutos",
+        "20 minutos",
+        "30 minutos",
+        "60 minutos"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-t2-045"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Um relógio digital marca 14h45. Quantos minutos faltam para chegar às 15h?",
+      "explanation": "De 14h45 até 15h passam-se 15 minutos. Basta calcular a diferença entre 60 minutos e 45 minutos: 60 – 45 = 15 minutos.",
+      "sourceRef": {
+        "section": "Medidas de tempo",
+        "pages": "134–137"
+      },
+      "options": [
+        "10 minutos",
+        "15 minutos",
+        "20 minutos",
+        "5 minutos"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-t2-046"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Uma atividade começou às 8h45 e terminou às 10h15. Quanto tempo ela durou?",
+      "explanation": "Das 8h45 às 9h45 passa 1 hora. Das 9h45 às 10h15 passam mais 30 minutos. Ao todo, a atividade durou 1 hora e 30 minutos.",
+      "sourceRef": {
+        "section": "Medidas de tempo",
+        "pages": "134–137"
+      },
+      "options": [
+        "1 hora",
+        "1 hora e 15 minutos",
+        "1 hora e 30 minutos",
+        "2 horas e 30 minutos"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-t2-047"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada unidade de tempo à sua equivalência correta.",
+      "explanation": "As relações entre unidades de tempo são: 1 hora = 60 minutos, 1 minuto = 60 segundos e 1 hora = 3600 segundos (60 × 60). Conhecer essas equivalências ajuda a calcular intervalos de tempo.",
+      "sourceRef": {
+        "section": "Medidas de tempo",
+        "pages": "134–137"
+      },
+      "pairs": [
+        {
+          "left": "1 hora",
+          "right": "60 minutos"
+        },
+        {
+          "left": "1 minuto",
+          "right": "60 segundos"
+        },
+        {
+          "left": "2 horas",
+          "right": "120 minutos"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-t2-048"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada situação ao intervalo de tempo correspondente.",
+      "explanation": "Calcular intervalos de tempo significa encontrar a diferença entre o horário de início e o horário de fim. Cada situação tem um intervalo diferente que pode ser calculado comparando os horários.",
+      "sourceRef": {
+        "section": "Medidas de tempo",
+        "pages": "134–137"
+      },
+      "pairs": [
+        {
+          "left": "Das 10h às 10h30",
+          "right": "30 minutos"
+        },
+        {
+          "left": "Das 13h às 14h",
+          "right": "60 minutos"
+        },
+        {
+          "left": "Das 7h às 7h15",
+          "right": "15 minutos"
+        },
+        {
+          "left": "Das 9h às 11h",
+          "right": "2 horas"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-t2-049"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada horário de início e fim ao intervalo de tempo correto.",
+      "explanation": "Para calcular o intervalo de tempo, comparamos o horário de início com o horário de fim. Quando os minutos do fim são menores que os do início, é preciso reagrupar: por exemplo, de 8h50 a 9h10 passam-se 20 minutos.",
+      "sourceRef": {
+        "section": "Medidas de tempo",
+        "pages": "134–137"
+      },
+      "pairs": [
+        {
+          "left": "Das 6h30 às 7h",
+          "right": "30 minutos"
+        },
+        {
+          "left": "Das 8h50 às 9h10",
+          "right": "20 minutos"
+        },
+        {
+          "left": "Das 11h15 às 12h15",
+          "right": "1 hora"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-t2-050"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual unidade de medida é usada para registrar a temperatura no Brasil?",
+      "explanation": "No Brasil, a temperatura é medida em graus Celsius (°C). Essa é a unidade padrão usada em termômetros do dia a dia, como os de farmácia e os de cozinha.",
+      "sourceRef": {
+        "section": "Medidas de temperatura",
+        "pages": "138–143"
+      },
+      "options": [
+        "Quilogramas",
+        "Litros",
+        "Graus Fahrenheit",
+        "Graus Celsius"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-t2-051"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Um termômetro marcou 18 °C pela manhã e 27 °C à tarde. Em qual momento a temperatura estava maior?",
+      "explanation": "Vinte e sete é maior que dezoito. Portanto, a leitura da tarde indicava uma temperatura maior.",
+      "sourceRef": {
+        "section": "Medidas de temperatura",
+        "pages": "138–143"
+      },
+      "options": [
+        "Pela manhã",
+        "À tarde",
+        "Nos dois momentos foi igual",
+        "Não é possível comparar"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-t2-052"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Um dia de verão muito quente pode ter temperatura de 38 °C. O que significa o símbolo °C?",
+      "explanation": "O símbolo °C representa graus Celsius, que é a unidade usada para medir temperatura no Brasil. O número indica o valor da temperatura nessa unidade.",
+      "sourceRef": {
+        "section": "Medidas de temperatura",
+        "pages": "138–143"
+      },
+      "options": [
+        "Graus Centímetros",
+        "Graus Celsius",
+        "Graus Capacidade",
+        "Graus Comprimento"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-t2-053"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Um termômetro marca 36 °C no corpo de uma criança e 20 °C no ambiente. Qual das afirmações está correta?",
+      "explanation": "Quanto maior o número em graus Celsius, maior é a temperatura. Como 36 °C é maior que 20 °C, a temperatura do corpo da criança é mais alta do que a temperatura do ambiente.",
+      "sourceRef": {
+        "section": "Medidas de temperatura",
+        "pages": "138–143"
+      },
+      "options": [
+        "As duas temperaturas são iguais.",
+        "A temperatura do corpo é maior do que a do ambiente.",
+        "Não é possível comparar as duas temperaturas.",
+        "A temperatura do ambiente é maior do que a do corpo."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-t2-054"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Quatro cidades registraram as seguintes temperaturas em um mesmo dia: cidade A = 15 °C, cidade B = 28 °C, cidade C = 10 °C e cidade D = 22 °C. Qual cidade estava mais fria?",
+      "explanation": "Para comparar temperaturas em graus Celsius, basta observar os valores: quanto menor o número, mais fria é a temperatura. Entre 15 °C, 28 °C, 10 °C e 22 °C, o menor valor é 10 °C, que corresponde à cidade C.",
+      "sourceRef": {
+        "section": "Medidas de temperatura",
+        "pages": "138–143"
+      },
+      "options": [
+        "Cidade C",
+        "Cidade D",
+        "Cidade A",
+        "Cidade B"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-t2-055"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Em uma semana, a temperatura mínima registrada foi de 8 °C e a máxima foi de 32 °C. Qual é a diferença entre essas temperaturas?",
+      "explanation": "Para encontrar a diferença entre duas temperaturas, subtraímos o menor valor do maior: 32 °C − 8 °C = 24 °C. Isso mostra que a temperatura variou 24 graus Celsius ao longo da semana.",
+      "sourceRef": {
+        "section": "Medidas de temperatura",
+        "pages": "138–143"
+      },
+      "options": [
+        "28 °C",
+        "16 °C",
+        "24 °C",
+        "40 °C"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-t2-056"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Um termômetro marcava 25 °C de manhã. À tarde, a temperatura subiu 7 °C. À noite, a temperatura caiu 12 °C em relação à tarde. Qual era a temperatura à noite?",
+      "explanation": "De manhã: 25 °C. À tarde: 25 + 7 = 32 °C. À noite: 32 − 12 = 20 °C. Para resolver, basta aplicar as variações em ordem, somando quando sobe e subtraindo quando cai.",
+      "sourceRef": {
+        "section": "Medidas de temperatura",
+        "pages": "138–143"
+      },
+      "options": [
+        "18 °C",
+        "20 °C",
+        "22 °C",
+        "30 °C"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-t2-057"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada par de leituras à comparação correta.",
+      "explanation": "Comparamos os números registrados em graus Celsius: 20 é 8 maior que 12; 30 é 5 maior que 25; e duas leituras de 18 têm o mesmo valor.",
+      "sourceRef": {
+        "section": "Medidas de temperatura",
+        "pages": "138–143"
+      },
+      "pairs": [
+        {
+          "left": "Termômetro A: 12 °C; B: 20 °C",
+          "right": "B marca 8 °C a mais que A"
+        },
+        {
+          "left": "Termômetro C: 30 °C; D: 25 °C",
+          "right": "C marca 5 °C a mais que D"
+        },
+        {
+          "left": "Termômetro E: 18 °C; F: 18 °C",
+          "right": "E e F marcam a mesma temperatura"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-t2-058"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada leitura à sua posição entre as três temperaturas apresentadas.",
+      "explanation": "Entre 12 °C, 20 °C e 28 °C, do menor para o maior, a ordem é 12, 20 e 28.",
+      "sourceRef": {
+        "section": "Medidas de temperatura",
+        "pages": "138–143"
+      },
+      "pairs": [
+        {
+          "left": "12 °C",
+          "right": "Menor leitura"
+        },
+        {
+          "left": "20 °C",
+          "right": "Leitura intermediária"
+        },
+        {
+          "left": "28 °C",
+          "right": "Maior leitura"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-t2-059"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada mudança de leitura à variação correta da temperatura.",
+      "explanation": "Calculamos a diferença entre a leitura inicial e a final. De 18 para 25 há aumento de 7 °C; de 30 para 22 há diminuição de 8 °C; e de 26 para 26 não há mudança.",
+      "sourceRef": {
+        "section": "Medidas de temperatura",
+        "pages": "138–143"
+      },
+      "pairs": [
+        {
+          "left": "De 18 °C para 25 °C",
+          "right": "Aumento de 7 °C"
+        },
+        {
+          "left": "De 30 °C para 22 °C",
+          "right": "Diminuição de 8 °C"
+        },
+        {
+          "left": "De 26 °C para 26 °C",
+          "right": "Sem alteração"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-t2-060"
+    }
+  ]
+}
