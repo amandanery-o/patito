@@ -42,13 +42,13 @@ Preencha as duas variáveis e aplique [supabase/schema.sql](./supabase/schema.sq
 
 ## Scripts disponíveis
 
-| Comando | Descrição |
-|---|---|
-| `npm run dev` | Inicia o servidor de desenvolvimento |
-| `npm run build` | Gera o build de produção em `/dist` |
-| `npm run preview` | Pré-visualiza o build de produção |
-| `npm run lint` | Verifica o código com ESLint |
-| `npm test` | Executa os testes unitários |
+| Comando            | Descrição                                     |
+| ------------------ | --------------------------------------------- |
+| `npm run dev`      | Inicia o servidor de desenvolvimento          |
+| `npm run build`    | Gera o build de produção em `/dist`           |
+| `npm run preview`  | Pré-visualiza o build de produção             |
+| `npm run lint`     | Verifica o código com ESLint                  |
+| `npm test`         | Executa os testes unitários                   |
 | `npm run test:e2e` | Executa os testes de navegador com Playwright |
 
 ## Estrutura do projeto

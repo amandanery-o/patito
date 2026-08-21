@@ -4,17 +4,17 @@ import { SCHEDULE, SUBJECT_COLORS, DAY_SHORT, DAY_NAMES } from '../data/schedule
 const WEEKDAYS = [1, 2, 3, 4, 5]
 
 const SUBJECT_ICONS = {
-  'Língua Portuguesa':  '📝',
-  'Educação Física':    '⚽',
-  'Língua Inglesa':     '🇬🇧',
-  'Matemática':         '🔢',
-  'Ciências':           '🔬',
-  'História':           '📜',
-  'Arte':               '🎨',
-  'Geografia':          '🌍',
-  'Ensino Religioso':   '✨',
-  'Laboratório':        '🧪',
-  'Robótica/Matemática':'🤖',
+  'Língua Portuguesa': '📝',
+  'Educação Física': '⚽',
+  'Língua Inglesa': '🇬🇧',
+  Matemática: '🔢',
+  Ciências: '🔬',
+  História: '📜',
+  Arte: '🎨',
+  Geografia: '🌍',
+  'Ensino Religioso': '✨',
+  Laboratório: '🧪',
+  'Robótica/Matemática': '🤖',
 }
 
 function getColors(subject) {
@@ -31,10 +31,9 @@ export default function ScheduleView() {
 
   return (
     <div className="px-4 sm:px-6 pb-6 space-y-4">
-
       {/* Abas de dias */}
       <div className="flex gap-2 overflow-x-auto pb-1">
-        {WEEKDAYS.map(d => {
+        {WEEKDAYS.map((d) => {
           const isToday = d === todayDay
           const isActive = d === selectedDay
           return (
@@ -42,9 +41,10 @@ export default function ScheduleView() {
               key={d}
               onClick={() => setSelectedDay(d)}
               className={`shrink-0 flex flex-col items-center justify-center px-4 py-3 rounded-2xl font-extrabold transition-all
-                ${isActive
-                  ? 'bg-blue-500 text-white shadow-md'
-                  : 'bg-white border border-gray-200 text-gray-500 hover:border-blue-300'
+                ${
+                  isActive
+                    ? 'bg-blue-500 text-white shadow-md'
+                    : 'bg-white border border-gray-200 text-gray-500 hover:border-blue-300'
                 }`}
             >
               <span className="text-sm">{DAY_SHORT[d]}</span>
@@ -85,12 +85,8 @@ export default function ScheduleView() {
               <div className="flex items-center gap-3 flex-1">
                 <span className="text-2xl">{icon}</span>
                 <div>
-                  <p className={`font-extrabold text-base leading-tight ${colors.text}`}>
-                    {lesson.subject}
-                  </p>
-                  {lesson.quinzenal && (
-                    <span className="text-xs font-bold text-gray-400">⚠️ Quinzenal</span>
-                  )}
+                  <p className={`font-extrabold text-base leading-tight ${colors.text}`}>{lesson.subject}</p>
+                  {lesson.quinzenal && <span className="text-xs font-bold text-gray-400">⚠️ Quinzenal</span>}
                 </div>
               </div>
             </div>
@@ -99,9 +95,7 @@ export default function ScheduleView() {
       </div>
 
       {/* Nota de rodapé */}
-      <p className="text-xs text-gray-400 text-center font-semibold pt-2">
-        Turno da tarde · 13h30 às 18h00 · Turma 43
-      </p>
+      <p className="text-xs text-gray-400 text-center font-semibold pt-2">Turno da tarde · 13h30 às 18h00 · Turma 43</p>
     </div>
   )
 }

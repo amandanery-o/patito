@@ -1,10 +1,10 @@
 ---
 description: Security and migration rules for Supabase-related changes
 paths:
-  - "supabase/**"
-  - "src/lib/supabase.js"
-  - "src/contexts/AuthContext.jsx"
-  - "src/components/Leaderboard.jsx"
+  - 'supabase/**'
+  - 'src/lib/supabase.js'
+  - 'src/contexts/AuthContext.jsx'
+  - 'src/components/Leaderboard.jsx'
 ---
 
 # Supabase rules

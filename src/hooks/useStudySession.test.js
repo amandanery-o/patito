@@ -3,7 +3,10 @@ import { describe, expect, it, vi } from 'vitest'
 import { SYNC_STATUS, useStudySession } from './useStudySession'
 
 const input = {
-  userId: 'student-1', subjectId: 'matematica', contentId: 'fracoes', questionIds: ['q1'],
+  userId: 'student-1',
+  subjectId: 'matematica',
+  contentId: 'fracoes',
+  questionIds: ['q1'],
 }
 
 describe('useStudySession', () => {

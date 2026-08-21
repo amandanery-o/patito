@@ -1,7 +1,7 @@
 ---
 description: Traceability rules for PRDs, features, tasks, and roadmap documents
 paths:
-  - "docs/**"
+  - 'docs/**'
 ---
 
 # Product documentation rules

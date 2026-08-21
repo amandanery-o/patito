@@ -32,7 +32,6 @@ export default function Header({ user, onCalendarClick, onSignOut }) {
               Sair
             </button>
           )}
-
         </div>
       </div>
     </header>

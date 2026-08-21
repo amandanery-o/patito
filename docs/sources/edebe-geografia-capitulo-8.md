@@ -36,4 +36,3 @@
 - Referenciar a seção e a página em cada questão produzida.
 
 O texto do livro não é reproduzido neste repositório. Os resumos do Patito são redações próprias baseadas nos conceitos estudados.
-

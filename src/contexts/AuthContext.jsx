@@ -4,17 +4,23 @@ import { supabase } from '../lib/supabase'
 const AuthContext = createContext(null)
 
 export function AuthProvider({ children }) {
-  const [session, setSession]   = useState(undefined) // undefined = carregando
-  const [profile, setProfile]   = useState(undefined)
+  const [session, setSession] = useState(undefined) // undefined = carregando
+  const [profile, setProfile] = useState(undefined)
   const userId = session?.user?.id
   const userName = session?.user?.user_metadata?.name
 
   useEffect(() => {
-    if (!supabase) { setSession(null); setProfile(null); return }
+    if (!supabase) {
+      setSession(null)
+      setProfile(null)
+      return
+    }
 
     supabase.auth.getSession().then(({ data }) => setSession(data.session))
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_, s) => {
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_, s) => {
       setSession(s)
       setProfile(s ? undefined : null)
     })
@@ -69,7 +75,7 @@ export function AuthProvider({ children }) {
   async function updateProfileName(name) {
     if (!session?.user?.id || !supabase) return
     await supabase.from('profiles').upsert({ id: session.user.id, name })
-    setProfile(p => ({ ...p, name }))
+    setProfile((p) => ({ ...p, name }))
   }
 
   return (

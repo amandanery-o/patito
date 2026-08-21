@@ -17,3 +17,11 @@ Agentes e pessoas conseguem planejar, implementar e validar mudanças com contex
 - CI executa todos os checks obrigatórios.
 - Harness Score não fica abaixo do nível mínimo acordado.
 - Mudanças de schema, autenticação e sincronização possuem testes e plano de rollout.
+
+## Estado atual
+
+- Harness Score: L4, 98/108 (91%) em 20/08/2026.
+- TypeScript verifica o código JavaScript/React com `checkJs` e modo estrito.
+- Prettier é obrigatório localmente e na CI.
+- `lint-staged` executa formatter e ESLint antes de commits.
+- O gate bloqueia comandos destrutivos conhecidos e o hook de feedback formata arquivos editados.

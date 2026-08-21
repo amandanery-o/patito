@@ -9,7 +9,8 @@ const outputPath = resolve(process.argv[3] || 'src/data/generated/geografiaP1Que
 
 const overrides = {
   'geo-p1-007': {
-    question: 'Uma pequena propriedade cultiva verduras e também cria galinhas. Que nome recebe a união dessas duas atividades?',
+    question:
+      'Uma pequena propriedade cultiva verduras e também cria galinhas. Que nome recebe a união dessas duas atividades?',
     options: ['Extrativismo', 'Agropecuária', 'Comércio', 'Prestação de serviços'],
     correctIndex: 1,
     explanation: 'Agropecuária é a união da agricultura, que cultiva o solo, com a pecuária, que cria animais.',
@@ -23,12 +24,18 @@ const overrides = {
       { left: 'Coleta de látex', right: 'Extrativismo vegetal' },
       { left: 'Pesca artesanal', right: 'Extrativismo animal' },
     ],
-    explanation: 'Agricultura cultiva o solo, pecuária cria animais e extrativismo retira recursos que já existem na natureza.',
+    explanation:
+      'Agricultura cultiva o solo, pecuária cria animais e extrativismo retira recursos que já existem na natureza.',
     sourceRef: { section: 'Agricultura, pecuária e extrativismo', pages: '72–75' },
   },
   'geo-p1-017': {
     question: 'Qual exemplo mostra uma matéria-prima fornecida pela pecuária para a indústria?',
-    options: ['Areia usada na construção', 'Couro usado para fabricar calçados', 'Minério usado para produzir aço', 'Madeira usada para fabricar móveis'],
+    options: [
+      'Areia usada na construção',
+      'Couro usado para fabricar calçados',
+      'Minério usado para produzir aço',
+      'Madeira usada para fabricar móveis',
+    ],
     correctIndex: 1,
     explanation: 'O couro vem da criação de animais e pode ser transformado pela indústria em calçados e bolsas.',
     sourceRef: { section: 'Pecuária', pages: '73' },
@@ -49,7 +56,8 @@ const overrides = {
       { left: 'Maior uso de tecnologia', right: 'Característica do sistema intensivo' },
       { left: 'Necessidade de áreas maiores', right: 'Característica do sistema extensivo' },
     ],
-    explanation: 'A pecuária intensiva usa confinamento e mais tecnologia; a extensiva mantém os animais soltos e ocupa áreas maiores.',
+    explanation:
+      'A pecuária intensiva usa confinamento e mais tecnologia; a extensiva mantém os animais soltos e ocupa áreas maiores.',
     sourceRef: { section: 'Pecuária', pages: '73' },
   },
   'geo-p1-030': {
@@ -98,7 +106,7 @@ const sourceSectionOverrides = {
   'Agricultura, pecuária e extrativismo': 'Agricultura; Pecuária; Extrativismo animal, mineral e vegetal',
   'Trabalho e modernização do campo': 'Trabalhadores do espaço rural',
   'Produção e preservação': 'Agricultura orgânica no Brasil',
-  'Indústria': 'Indústria: base, bens intermediários e bens de consumo',
+  Indústria: 'Indústria: base, bens intermediários e bens de consumo',
   'Bens de consumo': 'Indústria: base, bens intermediários e bens de consumo',
   'Campo e cidade conectados': 'Prestação de serviços',
 }
@@ -111,7 +119,7 @@ function rotateOptions(question) {
 }
 
 const draft = JSON.parse(await readFile(inputPath, 'utf8'))
-const questions = draft.questions.map(question => {
+const questions = draft.questions.map((question) => {
   const overridden = { ...question, ...overrides[question.id] }
   const page = pageOverrides[question.id]
   const referenced = page ? { ...overridden, sourceRef: { section: page[0], pages: page[1] } } : overridden

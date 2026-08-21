@@ -5,11 +5,11 @@ import Mascot from './Mascot'
 
 export default function LoginScreen() {
   const { signIn, signUp, resetPassword } = useAuth()
-  const [mode, setMode]       = useState('login') // 'login' | 'signup' | 'recovery'
-  const [email, setEmail]     = useState('')
+  const [mode, setMode] = useState('login') // 'login' | 'signup' | 'recovery'
+  const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [name, setName]       = useState('')
-  const [error, setError]     = useState('')
+  const [name, setName] = useState('')
+  const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
 
   async function handleSubmit(e) {
@@ -21,7 +21,11 @@ export default function LoginScreen() {
     if (mode === 'login') {
       err = await signIn(email, password)
     } else if (mode === 'signup') {
-      if (!name.trim()) { setError('Digite seu nome'); setLoading(false); return }
+      if (!name.trim()) {
+        setError('Digite seu nome')
+        setLoading(false)
+        return
+      }
       err = await signUp(email, password, name.trim())
       if (!err) {
         setError('Confirme seu e-mail e depois faça login!')
@@ -45,7 +49,6 @@ export default function LoginScreen() {
   return (
     <div className="min-h-screen bg-yellow-50 flex flex-col items-center justify-center px-6 py-10">
       <div className="w-full max-w-sm space-y-6">
-
         {/* Cabeçalho */}
         <div className="flex flex-col items-center gap-2">
           <Mascot mood="feliz" size="lg" />
@@ -66,25 +69,27 @@ export default function LoginScreen() {
                 type="text"
                 placeholder="Como você se chama?"
                 value={name}
-                onChange={e => setName(e.target.value)}
+                onChange={(e) => setName(e.target.value)}
                 className="w-full border border-gray-200 rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 autoFocus
               />
             </div>
           )}
 
-          {mode !== 'recovery' && <div>
-            <label className="text-sm font-bold text-gray-600 block mb-1">E-mail</label>
-            <input
-              type="email"
-              placeholder="seu@email.com"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              required
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-yellow-400"
-              autoFocus={mode === 'login'}
-            />
-          </div>}
+          {mode !== 'recovery' && (
+            <div>
+              <label className="text-sm font-bold text-gray-600 block mb-1">E-mail</label>
+              <input
+                type="email"
+                placeholder="seu@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                autoFocus={mode === 'login'}
+              />
+            </div>
+          )}
 
           <div>
             <label className="text-sm font-bold text-gray-600 block mb-1">Senha</label>
@@ -92,7 +97,7 @@ export default function LoginScreen() {
               type="password"
               placeholder="••••••••"
               value={password}
-              onChange={e => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
               required
               minLength={6}
               className="w-full border border-gray-200 rounded-xl px-4 py-3 text-base focus:outline-none focus:ring-2 focus:ring-yellow-400"
@@ -100,9 +105,13 @@ export default function LoginScreen() {
           </div>
 
           {error && (
-            <p className={`text-sm font-semibold rounded-xl px-3 py-2 ${
-              (error.startsWith('Confirme') || error.startsWith('Enviamos')) ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-600'
-            }`}>
+            <p
+              className={`text-sm font-semibold rounded-xl px-3 py-2 ${
+                error.startsWith('Confirme') || error.startsWith('Enviamos')
+                  ? 'bg-green-50 text-green-700'
+                  : 'bg-red-50 text-red-600'
+              }`}
+            >
               {error}
             </p>
           )}
@@ -118,7 +127,10 @@ export default function LoginScreen() {
           {mode === 'login' && (
             <button
               type="button"
-              onClick={() => { setMode('recovery'); setError('') }}
+              onClick={() => {
+                setMode('recovery')
+                setError('')
+              }}
               className="w-full text-sm font-bold text-yellow-700 hover:underline"
             >
               Esqueci minha senha
@@ -130,7 +142,10 @@ export default function LoginScreen() {
         <p className="text-center text-sm text-gray-500">
           {mode === 'login' ? 'Ainda não tem conta?' : mode === 'signup' ? 'Já tem conta?' : 'Lembrou sua senha?'}{' '}
           <button
-            onClick={() => { setMode(m => m === 'login' ? 'signup' : 'login'); setError('') }}
+            onClick={() => {
+              setMode((m) => (m === 'login' ? 'signup' : 'login'))
+              setError('')
+            }}
             className="font-bold text-yellow-700 hover:underline"
           >
             {mode === 'login' ? 'Criar agora' : 'Fazer login'}

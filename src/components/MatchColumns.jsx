@@ -2,13 +2,13 @@ import { useState, useEffect } from 'react'
 import { shuffle } from '../utils/shuffle'
 
 export default function MatchColumns({ question, onSelect }) {
-  const [rightItems, setRightItems]   = useState([])
-  const [activeLeft, setActiveLeft]   = useState(null)  // index do par esquerdo selecionado
-  const [matches, setMatches]         = useState({})    // leftIndex → rightValue
-  const [submitted, setSubmitted]     = useState(false)
+  const [rightItems, setRightItems] = useState([])
+  const [activeLeft, setActiveLeft] = useState(null) // index do par esquerdo selecionado
+  const [matches, setMatches] = useState({}) // leftIndex → rightValue
+  const [submitted, setSubmitted] = useState(false)
 
   useEffect(() => {
-    setRightItems(shuffle(question.pairs.map(p => p.right)))
+    setRightItems(shuffle(question.pairs.map((p) => p.right)))
     setActiveLeft(null)
     setMatches({})
     setSubmitted(false)
@@ -49,7 +49,7 @@ export default function MatchColumns({ question, onSelect }) {
     const matched = Object.values(matches).includes(rightValue)
     if (matched) {
       if (!submitted) return 'bg-blue-100 border-blue-400 text-blue-900 opacity-50 cursor-default'
-      const leftIdx = parseInt(Object.keys(matches).find(k => matches[k] === rightValue))
+      const leftIdx = parseInt(Object.keys(matches).find((k) => matches[k] === rightValue))
       return matches[leftIdx] === question.pairs[leftIdx].right
         ? 'bg-green-100 border-green-500 text-green-900 opacity-50 cursor-default'
         : 'bg-red-100 border-red-500 text-red-900 opacity-50 cursor-default'
@@ -60,13 +60,11 @@ export default function MatchColumns({ question, onSelect }) {
   }
 
   const matched = Object.keys(matches).length
-  const total   = question.pairs.length
+  const total = question.pairs.length
 
   return (
     <div className="space-y-4">
-      <p className="text-lg sm:text-xl font-bold text-gray-800 leading-snug">
-        {question.question}
-      </p>
+      <p className="text-lg sm:text-xl font-bold text-gray-800 leading-snug">{question.question}</p>
 
       {!submitted && (
         <p className="text-sm text-gray-500">

@@ -11,7 +11,7 @@ describe('upcomingSchoolEvents', () => {
       { id: 'later', date: '2026-08-28' },
       { id: 'past', date: '2026-08-19' },
     ]
-    expect(upcomingSchoolEvents(events, 7, today).map(event => event.id)).toEqual(['today', 'limit'])
+    expect(upcomingSchoolEvents(events, 7, today).map((event) => event.id)).toEqual(['today', 'limit'])
   })
 
   it('mantém eventos de período enquanto estiverem acontecendo', () => {

@@ -17,6 +17,7 @@
 `src/App.jsx` tem **756 linhas** e concentra: gerenciamento de todas as views, toda a lógica de navegação, cálculo de sessão, renderização condicional de 6 telas distintas, listas de dados estáticos e handlers de eventos. Isso viola o princípio de responsabilidade única e torna o arquivo extremamente difícil de manter e testar.
 
 **Opções:**
+
 - A) Dividir em componentes de página separados por view (HomeView, SubjectView, SessionView, ResultView, CalendarView, ScheduleView, AddExamView)
 - B) Manter como está por ser um projeto pequeno
 - C) Outro approach
@@ -124,6 +125,7 @@ Em `FillBlank.jsx`, o enunciado com blank é detectado procurando `'____'` (4 un
 ### Q11 — SEED_VERSION: Migração Não Tem Rollback e Não é Testada
 
 O sistema de seed em `useProgress.js` compara `stored.version` com `SEED_VERSION`. Se a versão armazenada for menor, as provas padrão são re-injetadas. Porém:
+
 - Não há lógica de migração incremental (v1→v2→v3)
 - Se uma versão futura mudar a estrutura de progresso, o progresso do usuário pode ser silenciosamente perdido ou corrompido
 - Não há testes para esse sistema
@@ -265,6 +267,7 @@ Ao adicionar uma prova manualmente, os campos `content` e `notes` aceitam qualqu
 ### Q24 — localStorage Como Único Armazenamento
 
 Todo o estado persistido (progresso, XP, streaks, provas, nome) fica no localStorage. Isso significa:
+
 - Limpar dados do browser apaga tudo (sem aviso)
 - Não há backup
 - Não há sincronização entre dispositivos
@@ -599,72 +602,75 @@ Ao refazer um tópico já completado, parece que está começando do zero.
 ## 📊 Resumo de Prioridades
 
 ### 🔴 Alta Prioridade (implementar primeiro)
-| # | Título |
-|---|--------|
-| Q1 | Dividir App.jsx em pages |
-| Q2 | Adicionar React Router |
-| Q3 | Mover dados estáticos para arquivos separados |
-| Q4 | Implementar Context API + useReducer |
-| Q5 | Resolver prop drilling com SessionContext |
-| Q7 | Corrigir bug de fuso horário |
-| Q11 | Migrações versionadas do localStorage |
-| Q13 | Conectar TrophyModal ao useXP |
-| Q14 | Remover pdfjs-dist |
-| Q15 | Corrigir CalendarMonth (junto com Q7) |
-| Q17 | Lógica de endDate nos alertas |
-| Q18 | Otimizar imagens do mascote para WebP |
-| Q25 | Testes de integração para App.jsx |
-| Q26 | Testes unitários para os hooks |
+
+| #   | Título                                                 |
+| --- | ------------------------------------------------------ |
+| Q1  | Dividir App.jsx em pages                               |
+| Q2  | Adicionar React Router                                 |
+| Q3  | Mover dados estáticos para arquivos separados          |
+| Q4  | Implementar Context API + useReducer                   |
+| Q5  | Resolver prop drilling com SessionContext              |
+| Q7  | Corrigir bug de fuso horário                           |
+| Q11 | Migrações versionadas do localStorage                  |
+| Q13 | Conectar TrophyModal ao useXP                          |
+| Q14 | Remover pdfjs-dist                                     |
+| Q15 | Corrigir CalendarMonth (junto com Q7)                  |
+| Q17 | Lógica de endDate nos alertas                          |
+| Q18 | Otimizar imagens do mascote para WebP                  |
+| Q25 | Testes de integração para App.jsx                      |
+| Q26 | Testes unitários para os hooks                         |
 | Q29 | Validação de estrutura das questões + unicidade de IDs |
-| Q32 | Teste de unicidade de IDs (junto com Q29) |
-| Q33 | Refatorar ExerciseCard (junto com Q1) |
-| Q37 | Validar conteúdo das matérias com currículo real |
-| Q38 | Implementar 4 tópicos restantes de Matemática |
-| Q42 | Enriquecer CI com lint e coverage |
-| Q43 | Implementar PWA com suporte offline |
-| Q45 | Integrar Sentry para monitoramento em produção |
+| Q32 | Teste de unicidade de IDs (junto com Q29)              |
+| Q33 | Refatorar ExerciseCard (junto com Q1)                  |
+| Q37 | Validar conteúdo das matérias com currículo real       |
+| Q38 | Implementar 4 tópicos restantes de Matemática          |
+| Q42 | Enriquecer CI com lint e coverage                      |
+| Q43 | Implementar PWA com suporte offline                    |
+| Q45 | Integrar Sentry para monitoramento em produção         |
 
 ### 🟡 Média Prioridade (próxima sprint)
-| # | Título |
-|---|--------|
-| Q6 | Migrar para TypeScript progressivamente |
-| Q8 | Comportamento de vidas zeradas |
-| Q9 | Embaralhar opções + migrar para correctAnswer |
-| Q10 | Marcador `{{BLANK}}` no FillBlank |
-| Q12 | Verificação de quebra de streak na abertura |
-| Q16 | Validação de data mínima no AddExam |
-| Q22 | Validação de tamanho e formato do nome |
-| Q27 | Coverage report com threshold |
-| Q34 | Altura dinâmica do FeedbackPanel placeholder |
-| Q36 | Cleanup de setTimeout em todos os componentes |
-| Q40 | Paridade de semana para Robótica quinzenal |
-| Q41 | Feriados e recessos no ScheduleView |
-| Q46 | Tela de configurações com reset de progresso |
-| Q48 | Histórico de navegação no ResultScreen |
+
+| #   | Título                                         |
+| --- | ---------------------------------------------- |
+| Q6  | Migrar para TypeScript progressivamente        |
+| Q8  | Comportamento de vidas zeradas                 |
+| Q9  | Embaralhar opções + migrar para correctAnswer  |
+| Q10 | Marcador `{{BLANK}}` no FillBlank              |
+| Q12 | Verificação de quebra de streak na abertura    |
+| Q16 | Validação de data mínima no AddExam            |
+| Q22 | Validação de tamanho e formato do nome         |
+| Q27 | Coverage report com threshold                  |
+| Q34 | Altura dinâmica do FeedbackPanel placeholder   |
+| Q36 | Cleanup de setTimeout em todos os componentes  |
+| Q40 | Paridade de semana para Robótica quinzenal     |
+| Q41 | Feriados e recessos no ScheduleView            |
+| Q46 | Tela de configurações com reset de progresso   |
+| Q48 | Histórico de navegação no ResultScreen         |
 | Q50 | Acessibilidade mínima (aria-labels, contraste) |
-| Q51 | Dica visual no Flashcard |
-| Q53 | Micro-animação de desbloqueio de tópico |
-| Q54 | Indicação de recorde em retentativas |
+| Q51 | Dica visual no Flashcard                       |
+| Q53 | Micro-animação de desbloqueio de tópico        |
+| Q54 | Indicação de recorde em retentativas           |
 
 ### 🟢 Baixa Prioridade (backlog)
-| # | Título |
-|---|--------|
-| Q19 | Code splitting / Lazy loading |
-| Q20 | Lazy loading de dados de matérias |
-| Q21 | Memoização de componentes pesados |
-| Q23 | Validação de tamanho de exam.content/notes |
-| Q24 | Backend / sincronização (avaliar no futuro) |
-| Q28 | Testes E2E com Playwright |
+
+| #   | Título                                           |
+| --- | ------------------------------------------------ |
+| Q19 | Code splitting / Lazy loading                    |
+| Q20 | Lazy loading de dados de matérias                |
+| Q21 | Memoização de componentes pesados                |
+| Q23 | Validação de tamanho de exam.content/notes       |
+| Q24 | Backend / sincronização (avaliar no futuro)      |
+| Q28 | Testes E2E com Playwright                        |
 | Q30 | Documentar fórmula de XP com constantes nomeadas |
-| Q31 | Documentar limiares de estrelas |
-| Q35 | useMemo no Confetti |
-| Q39 | Lógica de "Em Breve" (resolve organicamente) |
-| Q44 | Variáveis de ambiente |
-| Q47 | Múltiplos perfis (reavaliar com expansão) |
-| Q49 | Affordance visual do CalendarIcon no Header |
-| Q52 | Persistência da aba ativa (resolve com Q2) |
+| Q31 | Documentar limiares de estrelas                  |
+| Q35 | useMemo no Confetti                              |
+| Q39 | Lógica de "Em Breve" (resolve organicamente)     |
+| Q44 | Variáveis de ambiente                            |
+| Q47 | Múltiplos perfis (reavaliar com expansão)        |
+| Q49 | Affordance visual do CalendarIcon no Header      |
+| Q52 | Persistência da aba ativa (resolve com Q2)       |
 
 ---
 
-*Total: 54 questões respondidas com base em melhores práticas de desenvolvimento de software.*
-*Próximo passo: implementar itens de Alta Prioridade em ordem, começando por Q1→Q2→Q3→Q4.*
+_Total: 54 questões respondidas com base em melhores práticas de desenvolvimento de software._
+_Próximo passo: implementar itens de Alta Prioridade em ordem, começando por Q1→Q2→Q3→Q4._

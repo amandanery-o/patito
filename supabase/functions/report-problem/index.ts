@@ -5,7 +5,13 @@ const corsHeaders = {
 
 const allowedKinds = new Set(['question', 'general'])
 const allowedKeys = new Set([
-  'correlationId', 'kind', 'subjectId', 'contentId', 'questionId', 'description', 'appVersion',
+  'correlationId',
+  'kind',
+  'subjectId',
+  'contentId',
+  'questionId',
+  'description',
+  'appVersion',
 ])
 
 function text(value: unknown, maxLength: number): string {
@@ -18,11 +24,12 @@ function code(value: string): string {
 
 Deno.serve(async (request) => {
   if (request.method === 'OPTIONS') return new Response('ok', { headers: corsHeaders })
-  if (request.method !== 'POST') return Response.json({ error: 'method_not_allowed' }, { status: 405, headers: corsHeaders })
+  if (request.method !== 'POST')
+    return Response.json({ error: 'method_not_allowed' }, { status: 405, headers: corsHeaders })
 
   try {
     const input = await request.json()
-    if (!input || typeof input !== 'object' || Object.keys(input).some(key => !allowedKeys.has(key))) {
+    if (!input || typeof input !== 'object' || Object.keys(input).some((key) => !allowedKeys.has(key))) {
       return Response.json({ error: 'invalid_payload' }, { status: 400, headers: corsHeaders })
     }
 
@@ -37,9 +44,10 @@ Deno.serve(async (request) => {
     const repository = Deno.env.get('GITHUB_ISSUES_REPOSITORY') || 'amandanery-o/patito'
     if (!token || !/^[\w.-]+\/[\w.-]+$/.test(repository)) throw new Error('github_not_configured')
 
-    const title = kind === 'question'
-      ? `[Relato] Questão ${text(input.questionId, 120) || 'sem ID'}`
-      : `[Relato] Problema no Patito`
+    const title =
+      kind === 'question'
+        ? `[Relato] Questão ${text(input.questionId, 120) || 'sem ID'}`
+        : `[Relato] Problema no Patito`
     const body = [
       '## Relato anônimo',
       '',

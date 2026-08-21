@@ -5,7 +5,7 @@ import ProgressBar from './ProgressBar'
 import FeedbackPanel from './FeedbackPanel'
 
 export default function ExerciseCard({ question, current, total, onAnswer, onReport }) {
-  const [feedback, setFeedback] = useState(null)   // { correct, explanation }
+  const [feedback, setFeedback] = useState(null) // { correct, explanation }
   const [saving, setSaving] = useState(false)
   const [saveError, setSaveError] = useState('')
 
@@ -29,9 +29,12 @@ export default function ExerciseCard({ question, current, total, onAnswer, onRep
   function renderExercise() {
     const props = { question, onSelect: handleSelect }
     switch (question.type) {
-      case 'multipleChoice': return <MultipleChoice {...props} />
-      case 'matchColumns':   return <MatchColumns {...props} />
-      default: return <p className="text-red-500">Esta questão precisa ser revisada antes de aparecer aqui.</p>
+      case 'multipleChoice':
+        return <MultipleChoice {...props} />
+      case 'matchColumns':
+        return <MatchColumns {...props} />
+      default:
+        return <p className="text-red-500">Esta questão precisa ser revisada antes de aparecer aqui.</p>
     }
   }
 

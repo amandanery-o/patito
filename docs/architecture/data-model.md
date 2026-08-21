@@ -17,13 +17,13 @@ Status: implementado em `supabase/schema.sql`; aplicação no ambiente Supabase 
 
 Um perfil por usuário do Supabase Auth.
 
-| Campo | Tipo | Regra |
-|---|---|---|
-| `id` | `uuid` | PK e FK para `auth.users`, cascade delete |
-| `name` | `text` | obrigatório, exibido na interface/ranking |
-| `avatar` | `text` | opcional |
-| `created_at` | `timestamptz` | padrão `now()` |
-| `updated_at` | `timestamptz` | atualizado por trigger |
+| Campo        | Tipo          | Regra                                     |
+| ------------ | ------------- | ----------------------------------------- |
+| `id`         | `uuid`        | PK e FK para `auth.users`, cascade delete |
+| `name`       | `text`        | obrigatório, exibido na interface/ranking |
+| `avatar`     | `text`        | opcional                                  |
+| `created_at` | `timestamptz` | padrão `now()`                            |
+| `updated_at` | `timestamptz` | atualizado por trigger                    |
 
 `xp`, `streak_current`, `streak_best` e `class_code` do schema atual tornam-se campos legados. XP passa a ser derivado de utilização; streak e níveis deixam de existir. Como existe apenas uma turma, `class_code` não participa da v1.
 
@@ -31,32 +31,32 @@ Um perfil por usuário do Supabase Auth.
 
 Representa uma tentativa retomável.
 
-| Campo | Tipo | Regra |
-|---|---|---|
-| `id` | `uuid` | PK, criado pelo cliente |
-| `user_id` | `uuid` | FK para perfil, obrigatório |
-| `subject_id` | `text` | ID estável da matéria |
-| `content_id` | `text` | ID estável do conteúdo/revisão |
-| `question_ids` | `text[]` | ordem sorteada e congelada |
-| `current_index` | `integer` | mínimo zero |
-| `status` | `text` | `active`, `review`, `completed` |
-| `started_at` | `timestamptz` | obrigatório |
-| `completed_at` | `timestamptz` | somente quando concluída |
-| `updated_at` | `timestamptz` | resolução de versão |
+| Campo           | Tipo          | Regra                           |
+| --------------- | ------------- | ------------------------------- |
+| `id`            | `uuid`        | PK, criado pelo cliente         |
+| `user_id`       | `uuid`        | FK para perfil, obrigatório     |
+| `subject_id`    | `text`        | ID estável da matéria           |
+| `content_id`    | `text`        | ID estável do conteúdo/revisão  |
+| `question_ids`  | `text[]`      | ordem sorteada e congelada      |
+| `current_index` | `integer`     | mínimo zero                     |
+| `status`        | `text`        | `active`, `review`, `completed` |
+| `started_at`    | `timestamptz` | obrigatório                     |
+| `completed_at`  | `timestamptz` | somente quando concluída        |
+| `updated_at`    | `timestamptz` | resolução de versão             |
 
 Uma conta pode ter mais de uma tentativa histórica, mas no máximo uma sessão `active` por `user_id + content_id`.
 
 ### `session_answers`
 
-| Campo | Tipo | Regra |
-|---|---|---|
-| `id` | `uuid` | PK, criado pelo cliente |
-| `session_id` | `uuid` | FK para sessão, cascade delete |
-| `user_id` | `uuid` | proprietário redundante para RLS simples |
-| `question_id` | `text` | ID editorial estável |
-| `answer` | `jsonb` | resposta normalizada por tipo |
-| `is_correct` | `boolean` | resultado no momento da resposta |
-| `answered_at` | `timestamptz` | horário do servidor quando possível |
+| Campo         | Tipo          | Regra                                    |
+| ------------- | ------------- | ---------------------------------------- |
+| `id`          | `uuid`        | PK, criado pelo cliente                  |
+| `session_id`  | `uuid`        | FK para sessão, cascade delete           |
+| `user_id`     | `uuid`        | proprietário redundante para RLS simples |
+| `question_id` | `text`        | ID editorial estável                     |
+| `answer`      | `jsonb`       | resposta normalizada por tipo            |
+| `is_correct`  | `boolean`     | resultado no momento da resposta         |
+| `answered_at` | `timestamptz` | horário do servidor quando possível      |
 
 Restrição única: `session_id + question_id`. Repetir a mesma escrita atualiza a resposta, mas não cria novo evento de utilização.
 
@@ -64,15 +64,15 @@ Restrição única: `session_id + question_id`. Repetir a mesma escrita atualiza
 
 Resumo materializado para telas, reconstruível a partir das sessões.
 
-| Campo | Tipo | Regra |
-|---|---|---|
-| `user_id` | `uuid` | parte da PK |
-| `subject_id` | `text` | parte da PK |
-| `content_id` | `text` | parte da PK |
-| `sessions_completed` | `integer` | padrão zero |
-| `questions_answered` | `integer` | padrão zero |
-| `last_studied_at` | `timestamptz` | nullable |
-| `updated_at` | `timestamptz` | obrigatório |
+| Campo                | Tipo          | Regra       |
+| -------------------- | ------------- | ----------- |
+| `user_id`            | `uuid`        | parte da PK |
+| `subject_id`         | `text`        | parte da PK |
+| `content_id`         | `text`        | parte da PK |
+| `sessions_completed` | `integer`     | padrão zero |
+| `questions_answered` | `integer`     | padrão zero |
+| `last_studied_at`    | `timestamptz` | nullable    |
+| `updated_at`         | `timestamptz` | obrigatório |
 
 PK composta: `user_id + content_id`. Não armazena estrelas ou percentual como incentivo.
 
@@ -80,30 +80,30 @@ PK composta: `user_id + content_id`. Não armazena estrelas ou percentual como i
 
 Nome técnico preservado no banco; na interface, a turma chama estas tarefas de **Temas**.
 
-| Campo | Tipo | Regra |
-|---|---|---|
-| `id` | `uuid` | PK, criado pelo cliente |
-| `user_id` | `uuid` | proprietário |
-| `description` | `text` | obrigatório, tamanho limitado |
-| `pages` | `text` | opcional |
-| `due_date` | `date` | obrigatório |
-| `completed` | `boolean` | padrão falso |
-| `completed_at` | `timestamptz` | nullable |
-| `created_at` | `timestamptz` | obrigatório |
-| `updated_at` | `timestamptz` | obrigatório |
+| Campo          | Tipo          | Regra                         |
+| -------------- | ------------- | ----------------------------- |
+| `id`           | `uuid`        | PK, criado pelo cliente       |
+| `user_id`      | `uuid`        | proprietário                  |
+| `description`  | `text`        | obrigatório, tamanho limitado |
+| `pages`        | `text`        | opcional                      |
+| `due_date`     | `date`        | obrigatório                   |
+| `completed`    | `boolean`     | padrão falso                  |
+| `completed_at` | `timestamptz` | nullable                      |
+| `created_at`   | `timestamptz` | obrigatório                   |
+| `updated_at`   | `timestamptz` | obrigatório                   |
 
 ### `usage_events`
 
 Registro canônico para XP e ranking.
 
-| Campo | Tipo | Regra |
-|---|---|---|
-| `id` | `uuid` | PK |
-| `user_id` | `uuid` | proprietário |
-| `event_type` | `text` | `question_answered` ou `session_completed` |
-| `source_id` | `uuid` | ID da resposta ou sessão |
-| `occurred_at` | `timestamptz` | definido no servidor |
-| `study_date` | `date` | data em `America/Sao_Paulo` |
+| Campo         | Tipo          | Regra                                      |
+| ------------- | ------------- | ------------------------------------------ |
+| `id`          | `uuid`        | PK                                         |
+| `user_id`     | `uuid`        | proprietário                               |
+| `event_type`  | `text`        | `question_answered` ou `session_completed` |
+| `source_id`   | `uuid`        | ID da resposta ou sessão                   |
+| `occurred_at` | `timestamptz` | definido no servidor                       |
+| `study_date`  | `date`        | data em `America/Sao_Paulo`                |
 
 Restrição única: `user_id + event_type + source_id`. Eventos são inseridos por função SQL transacional, não diretamente pelo cliente.
 

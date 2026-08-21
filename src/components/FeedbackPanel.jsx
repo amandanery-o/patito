@@ -23,12 +23,8 @@ export default function FeedbackPanel({ correct, explanation, onContinue, onRepo
         <div className="flex items-center gap-3 sm:gap-5">
           <Mascot mood={correct ? 'feliz' : 'triste'} size="md" />
           <div>
-            <p className="font-extrabold text-white text-lg sm:text-2xl">
-              {correct ? 'Arrasou! 🎉' : 'Quase lá! 💪'}
-            </p>
-            {explanation && (
-              <p className="text-white/90 text-sm sm:text-base leading-snug">{explanation}</p>
-            )}
+            <p className="font-extrabold text-white text-lg sm:text-2xl">{correct ? 'Arrasou! 🎉' : 'Quase lá! 💪'}</p>
+            {explanation && <p className="text-white/90 text-sm sm:text-base leading-snug">{explanation}</p>}
           </div>
         </div>
         <button
@@ -36,9 +32,10 @@ export default function FeedbackPanel({ correct, explanation, onContinue, onRepo
           disabled={!onContinue}
           className={`w-full font-extrabold text-lg sm:text-xl rounded-2xl py-3 sm:py-4 transition-all active:scale-95 select-none
             disabled:opacity-60 disabled:cursor-wait
-            ${correct
-              ? 'bg-white text-green-600 border-b-4 border-green-700 active:border-b-2'
-              : 'bg-white text-red-600 border-b-4 border-red-700 active:border-b-2'
+            ${
+              correct
+                ? 'bg-white text-green-600 border-b-4 border-green-700 active:border-b-2'
+                : 'bg-white text-red-600 border-b-4 border-red-700 active:border-b-2'
             }`}
         >
           Continuar

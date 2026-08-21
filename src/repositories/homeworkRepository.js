@@ -13,11 +13,7 @@ function unwrap(result) {
 export function createHomeworkRepository(client = supabase) {
   return {
     async list() {
-      const result = await requireClient(client)
-        .from('homework')
-        .select('*')
-        .order('completed')
-        .order('due_date')
+      const result = await requireClient(client).from('homework').select('*').order('completed').order('due_date')
       return unwrap(result)
     },
 
@@ -42,12 +38,7 @@ export function createHomeworkRepository(client = supabase) {
       if ('pages' in payload) payload.pages = payload.pages.trim() || null
       if ('completed' in payload) payload.completed_at = payload.completed ? new Date().toISOString() : null
 
-      const result = await requireClient(client)
-        .from('homework')
-        .update(payload)
-        .eq('id', id)
-        .select()
-        .single()
+      const result = await requireClient(client).from('homework').update(payload).eq('id', id).select().single()
       return unwrap(result)
     },
 

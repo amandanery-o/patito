@@ -6,21 +6,21 @@ App educacional gamificado para auxiliar alunos do 4º ano do Ensino Fundamental
 
 **Usuário primário:** Criança de 9–10 anos  
 **Plataforma:** Web responsiva (mobile-first), deploy via Netlify ou Vercel  
-**Stack:** React + Vite, Tailwind CSS, localStorage para persistência  
+**Stack:** React + Vite, Tailwind CSS, localStorage para persistência
 
 ---
 
 ## 2. Matérias
 
-| Matéria | Ícone sugerido | Cor |
-|---|---|---|
-| Português | 📝 | Azul |
-| Matemática | 🔢 | Verde |
-| Geografia | 🌍 | Laranja |
-| Inglês | 🇬🇧 | Roxo |
-| Ciências | 🔬 | Ciano |
-| História | 📜 | Marrom |
-| Ensino Religioso | ✨ | Amarelo |
+| Matéria          | Ícone sugerido | Cor     |
+| ---------------- | -------------- | ------- |
+| Português        | 📝             | Azul    |
+| Matemática       | 🔢             | Verde   |
+| Geografia        | 🌍             | Laranja |
+| Inglês           | 🇬🇧             | Roxo    |
+| Ciências         | 🔬             | Ciano   |
+| História         | 📜             | Marrom  |
+| Ensino Religioso | ✨             | Amarelo |
 
 ---
 
@@ -29,20 +29,24 @@ App educacional gamificado para auxiliar alunos do 4º ano do Ensino Fundamental
 Todos os tipos devem funcionar em todas as matérias:
 
 ### 3.1 Múltipla Escolha
+
 - 1 pergunta + 4 alternativas (A, B, C, D)
 - Feedback imediato: verde (acerto) / vermelho (erro) + explicação curta
 - Avança automaticamente após 1.5s
 
 ### 3.2 Verdadeiro ou Falso
+
 - 1 afirmação + 2 botões grandes (✅ Verdadeiro / ❌ Falso)
 - Feedback imediato com explicação
 
 ### 3.3 Complete a Frase
+
 - Frase com lacuna ( ___ )
 - 4 opções de palavra/número para preencher
 - Feedback imediato
 
 ### 3.4 Flashcard
+
 - Frente: pergunta ou conceito
 - Verso: resposta (virar com animação flip)
 - Botões: "Errei" / "Acertei" para tracking
@@ -85,30 +89,34 @@ Tela de Resultado (fim de sessão)
 ## 5. Sistema de Gamificação
 
 ### 5.1 XP (Pontuação)
+
 - Acerto simples: +10 XP
 - Acerto sem errar nenhuma na sessão (perfeito): +50 XP bônus
 - Cada sessão completa: +20 XP base
 
 ### 5.2 Estrelas por Tópico
+
 - ⭐ = completou o tópico (qualquer resultado)
 - ⭐⭐ = acertou ≥ 70%
 - ⭐⭐⭐ = acertou 100% (sessão perfeita)
 
 ### 5.3 Streak Diário
+
 - Incrementa ao completar pelo menos 1 sessão por dia
 - Exibido no header com ícone de chama 🔥
 - Quebrando o streak: reseta para 0 (aviso amigável, não punitivo)
 - Milestones de streak: 3, 7, 15, 30 dias → troféu desbloqueado
 
 ### 5.4 Troféus
-| Troféu | Condição |
-|---|---|
-| 🥇 Primeiros Passos | Completar a primeira sessão |
-| 🔥 Em Chamas | Streak de 7 dias |
-| 🌟 Perfeito! | Fazer 5 sessões perfeitas |
-| 📚 Curioso | Completar 1 tópico em cada matéria |
+
+| Troféu              | Condição                                        |
+| ------------------- | ----------------------------------------------- |
+| 🥇 Primeiros Passos | Completar a primeira sessão                     |
+| 🔥 Em Chamas        | Streak de 7 dias                                |
+| 🌟 Perfeito!        | Fazer 5 sessões perfeitas                       |
+| 📚 Curioso          | Completar 1 tópico em cada matéria              |
 | 🏆 Mestre do 4º Ano | Completar todos os tópicos de todas as matérias |
-| 🧠 Gênio | Acumular 1000 XP |
+| 🧠 Gênio            | Acumular 1000 XP                                |
 
 ---
 
@@ -118,7 +126,9 @@ Tela de Resultado (fim de sessão)
 > Adaptar conforme apostila/currículo específico da escola quando disponível.
 
 ### 6.1 Português
+
 **Tópicos:**
+
 1. Tipos de texto (narrativo, descritivo, instrucional)
 2. Substantivos (próprios, comuns, coletivos)
 3. Adjetivos e locuções adjetivas
@@ -131,12 +141,15 @@ Tela de Resultado (fim de sessão)
 10. Ortografia (por que / porque / por quê / porquê)
 
 **Exemplo de questão (Múltipla Escolha):**
+
 > "Qual das palavras abaixo é um substantivo coletivo?"
-> A) Bonito  B) Correr  C) Cardume  D) Rapidamente  
+> A) Bonito B) Correr C) Cardume D) Rapidamente
 > ✅ C — Cardume é o coletivo de peixes
 
 ### 6.2 Matemática
+
 **Tópicos:**
+
 1. Números até 100.000 (leitura e escrita)
 2. Operações: adição e subtração com reserva
 3. Multiplicação (tabuada e além)
@@ -149,12 +162,15 @@ Tela de Resultado (fim de sessão)
 10. Problemas de raciocínio lógico
 
 **Exemplo de questão (Complete a Frase):**
+
 > "O resultado de 7 × 8 é ___"
 > Opções: 54 / 56 / 63 / 48  
 > ✅ 56
 
 ### 6.3 Geografia
+
 **Tópicos:**
+
 1. Regiões do Brasil (Norte, Nordeste, Centro-Oeste, Sudeste, Sul)
 2. Estados e capitais brasileiras
 3. Biomas brasileiros (Amazônia, Cerrado, Caatinga, Mata Atlântica, Pampa, Pantanal)
@@ -165,11 +181,14 @@ Tela de Resultado (fim de sessão)
 8. Preservação ambiental
 
 **Exemplo de questão (V ou F):**
+
 > "Brasília é a capital do Brasil e fica na região Centro-Oeste."
 > ✅ Verdadeiro
 
 ### 6.4 Inglês
+
 **Tópicos:**
+
 1. Vocabulário: cores (colors)
 2. Vocabulário: animais (animals)
 3. Vocabulário: escola (school objects)
@@ -182,11 +201,14 @@ Tela de Resultado (fim de sessão)
 10. Presente simples — frases básicas
 
 **Exemplo de questão (Flashcard):**
+
 > Frente: 🐘 What's this animal?
 > Verso: Elephant — Elefante
 
 ### 6.5 Ciências
+
 **Tópicos:**
+
 1. Seres vivos: características gerais
 2. Cadeia alimentar
 3. Fotossíntese
@@ -199,12 +221,15 @@ Tela de Resultado (fim de sessão)
 10. Preservação do meio ambiente
 
 **Exemplo de questão (Múltipla Escolha):**
+
 > "Qual planeta fica mais próximo do Sol?"
-> A) Terra  B) Marte  C) Mercúrio  D) Vênus  
+> A) Terra B) Marte C) Mercúrio D) Vênus
 > ✅ C — Mercúrio é o planeta mais próximo do Sol
 
 ### 6.6 História
+
 **Tópicos:**
+
 1. História do Brasil: povos indígenas
 2. Chegada dos portugueses (1500)
 3. Período colonial
@@ -217,12 +242,15 @@ Tela de Resultado (fim de sessão)
 10. Datas comemorativas e efemérides
 
 **Exemplo de questão (Complete a Frase):**
+
 > "O Brasil foi descoberto em ___ por Pedro Álvares Cabral."
 > Opções: 1500 / 1492 / 1822 / 1888  
 > ✅ 1500
 
 ### 6.7 Ensino Religioso
+
 **Tópicos:**
+
 1. O que é religião?
 2. Religiões do mundo (visão panorâmica, sem hierarquia)
 3. Símbolos religiosos
@@ -232,6 +260,7 @@ Tela de Resultado (fim de sessão)
 7. Cuidado com a natureza (perspectiva ética)
 
 **Exemplo de questão (V ou F):**
+
 > "O respeito às diferenças é um valor importante em todas as culturas."
 > ✅ Verdadeiro
 
@@ -338,7 +367,7 @@ Tela de Resultado (fim de sessão)
 Cole este prompt no Claude Code para começar:
 
 ```
-Leia o SPEC.md neste repositório. 
+Leia o SPEC.md neste repositório.
 
 Vamos construir o app de estudos para o 4º ano do ensino fundamental brasileiro conforme especificado.
 
@@ -359,6 +388,7 @@ Após cada etapa, rode npm run dev e confirme que está funcionando antes de ava
 O app tem um mascote oficial: **Patito**, um patinho amarelo (🐥), análogo à coruja do Duolingo.
 
 ### Usos do Patito
+
 - **Feedback positivo:** Patito comemora com animação ao acertar questões
 - **Encorajamento:** Patito aparece na tela de resultado com mensagem animada
 - **Streak:** Patito fica triste (😢) quando o streak é quebrado, alegre (🎉) nos milestones
@@ -366,10 +396,12 @@ O app tem um mascote oficial: **Patito**, um patinho amarelo (🐥), análogo à
 - **Erro/Dica:** Patito explica a resposta correta após erros
 
 ### Representação Visual (v1)
+
 - Usar emoji 🐥 como representação do mascote (sem assets externos necessários)
 - Futuramente pode ser substituído por ilustração SVG personalizada
 
 ### Personalidade
+
 - Animado, encorajador, nunca punitivo
 - Fala com a criança em linguagem simples e divertida
 - Frases de exemplo: "Boa! 🐥", "Quase lá! Você consegue!", "Incrível! Você é demais!"
@@ -379,26 +411,32 @@ O app tem um mascote oficial: **Patito**, um patinho amarelo (🐥), análogo à
 ## 14. Calendário de Provas 📅
 
 ### Visão Geral
+
 O aluno pode registrar as datas das provas e receber lembretes do Patito quando estiver próximo de uma avaliação.
 
 ### 14.1 Cadastro de Provas
+
 Duas formas de entrada:
+
 - **Manual:** formulário com campos: matéria (dropdown das 7 matérias), data, hora (opcional), observações
 - **PDF:** upload de arquivo PDF com o cronograma escolar → parsing automático das datas e matérias
 
 ### 14.2 Lembretes (in-app apenas)
+
 - Verificação das datas ao abrir o app (sem push notifications — v1)
 - Exibe banner do Patito no topo da Home quando há prova em ≤7 dias
 - Exemplos: "📅 Prova de Matemática em 2 dias! Vamos estudar? 🐥"
 - Push notifications ficam para v2
 
 ### 14.3 Calendário
+
 - Tela dedicada acessível pelo header (ícone 📅)
 - Visualização mensal com marcadores nas datas de prova
 - Cores das matérias (da seção 2) identificam cada prova no calendário
 - Ao clicar na data: detalhes da prova + sugestão "Estudar agora 📚"
 
 ### 14.4 Schema localStorage (extensão da seção 8)
+
 ```json
 "exams": [
   {
@@ -412,6 +450,7 @@ Duas formas de entrada:
 ```
 
 ### 14.5 Parsing de PDF (v1 simplificado)
+
 - Usar biblioteca `pdfjs-dist` para extrair texto do PDF
 - Buscar padrões de data (dd/mm/aaaa) e nomes de matérias no texto extraído
 - Apresentar resultado para confirmação manual antes de salvar

@@ -3,7 +3,10 @@ import { describe, it, expect, vi } from 'vitest'
 import SubjectCard from '../SubjectCard'
 
 const subject = {
-  id: 'matematica', name: 'Matemática', icon: '🔢', color: 'bg-green-500',
+  id: 'matematica',
+  name: 'Matemática',
+  icon: '🔢',
+  color: 'bg-green-500',
   topics: [{ questions: [{ id: 'q1' }] }],
 }
 const progress = { completed: 1, total: 3, percent: 33 }

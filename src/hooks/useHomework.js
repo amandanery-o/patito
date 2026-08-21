@@ -9,7 +9,10 @@ export function useHomework(userId, repository) {
   const [error, setError] = useState('')
 
   const load = useCallback(async () => {
-    if (!userId) { setLoading(false); return }
+    if (!userId) {
+      setLoading(false)
+      return
+    }
     setLoading(true)
     setError('')
     try {
@@ -21,7 +24,9 @@ export function useHomework(userId, repository) {
     }
   }, [stableRepository, userId])
 
-  useEffect(() => { load() }, [load])
+  useEffect(() => {
+    load()
+  }, [load])
 
   async function run(operation) {
     if (!userId) {
@@ -42,9 +47,13 @@ export function useHomework(userId, repository) {
   }
 
   return {
-    items, loading, saving, error, reload: load,
-    createHomework: data => run(() => stableRepository.create({ ...data, userId })),
+    items,
+    loading,
+    saving,
+    error,
+    reload: load,
+    createHomework: (data) => run(() => stableRepository.create({ ...data, userId })),
     updateHomework: (id, changes) => run(() => stableRepository.update(id, changes)),
-    removeHomework: id => run(() => stableRepository.remove(id)),
+    removeHomework: (id) => run(() => stableRepository.remove(id)),
   }
 }

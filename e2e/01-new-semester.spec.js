@@ -10,8 +10,13 @@ test.describe('Estrutura limpa do segundo semestre', () => {
   test('mostra as sete matérias regulares como conteúdo em preparação', async ({ page }) => {
     await expect(page.getByRole('heading', { name: 'Em breve' })).toBeVisible()
     for (const subject of [
-      'Português', 'Matemática', 'Geografia', 'Inglês',
-      'Ciências', 'História', 'Ens. Religioso',
+      'Português',
+      'Matemática',
+      'Geografia',
+      'Inglês',
+      'Ciências',
+      'História',
+      'Ens. Religioso',
     ]) {
       await expect(page.getByText(subject, { exact: true }).first()).toBeVisible()
     }
@@ -38,7 +43,10 @@ test.describe('Estrutura limpa do segundo semestre', () => {
   })
 
   test('inicia o calendário oficial vazio', async ({ page }) => {
-    await page.getByRole('button', { name: /Provas/i }).last().click()
+    await page
+      .getByRole('button', { name: /Provas/i })
+      .last()
+      .click()
     await expect(page.getByText('Oficial')).toBeVisible()
     await expect(page.getByRole('button', { name: /Adicionar atividade/i })).toHaveCount(0)
     await page.getByRole('button', { name: 'Lista' }).click()

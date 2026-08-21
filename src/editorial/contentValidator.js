@@ -22,7 +22,10 @@ function validateQuestion(question, index, errors) {
     if (!Number.isInteger(question.correctIndex) || question.correctIndex < 0 || question.correctIndex > 3) {
       errors.push(`${path}.correctIndex deve apontar para uma das 4 alternativas`)
     }
-    if (Array.isArray(question.options) && new Set(question.options.map(option => option.trim().toLowerCase())).size !== question.options.length) {
+    if (
+      Array.isArray(question.options) &&
+      new Set(question.options.map((option) => option.trim().toLowerCase())).size !== question.options.length
+    ) {
       errors.push(`${path}.options não pode repetir alternativas`)
     }
   }
@@ -30,8 +33,9 @@ function validateQuestion(question, index, errors) {
     if (!Array.isArray(question.pairs) || question.pairs.length < 3 || question.pairs.length > 6) {
       errors.push(`${path}.pairs deve ter entre 3 e 6 associações`)
     } else {
-      const rightItems = question.pairs.map(pair => pair.right.trim().toLowerCase())
-      if (new Set(rightItems).size !== rightItems.length) errors.push(`${path}.pairs não pode repetir itens da coluna direita`)
+      const rightItems = question.pairs.map((pair) => pair.right.trim().toLowerCase())
+      if (new Set(rightItems).size !== rightItems.length)
+        errors.push(`${path}.pairs não pode repetir itens da coluna direita`)
     }
   }
 }
@@ -53,11 +57,13 @@ export function validateEditorialContent(content) {
   if (!Array.isArray(content.questions)) errors.push('questions deve ser uma lista')
   else {
     content.questions.forEach((question, index) => validateQuestion(question, index, errors))
-    const ids = content.questions.map(question => question.id)
+    const ids = content.questions.map((question) => question.id)
     if (new Set(ids).size !== ids.length) errors.push('IDs de questões devem ser únicos')
-    if (content.status === 'approved' && content.questions.length < 60) errors.push('conteúdo aprovado deve ter ao menos 60 questões')
-    const associationCount = content.questions.filter(question => question.type === 'matchColumns').length
-    if (content.questions.length >= 60 && associationCount < 12) warnings.push('recomenda-se cerca de 15 questões de associação')
+    if (content.status === 'approved' && content.questions.length < 60)
+      errors.push('conteúdo aprovado deve ter ao menos 60 questões')
+    const associationCount = content.questions.filter((question) => question.type === 'matchColumns').length
+    if (content.questions.length >= 60 && associationCount < 12)
+      warnings.push('recomenda-se cerca de 15 questões de associação')
   }
   return { valid: errors.length === 0, errors, warnings }
 }

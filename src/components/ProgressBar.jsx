@@ -5,7 +5,9 @@ export default function ProgressBar({ current, total, showLabel = true }) {
     <div className="w-full space-y-1">
       {showLabel && (
         <div className="flex justify-between text-xs font-bold text-gray-500">
-          <span>{current}/{total} questões</span>
+          <span>
+            {current}/{total} questões
+          </span>
           <span>{percent}%</span>
         </div>
       )}

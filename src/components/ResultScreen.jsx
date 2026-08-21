@@ -12,14 +12,19 @@ export default function ResultScreen({ correct, total, incorrectQuestions = [], 
 
       <div className="bg-blue-50 rounded-2xl px-6 sm:px-10 py-4 sm:py-6 border-2 border-blue-200 shadow-sm w-full">
         <p className="text-xl sm:text-2xl font-extrabold text-blue-700">Você respondeu {total} questões</p>
-        <p className="text-sm sm:text-lg font-semibold text-gray-500 mt-1">{correct} corretas · {total - correct} para revisar</p>
+        <p className="text-sm sm:text-lg font-semibold text-gray-500 mt-1">
+          {correct} corretas · {total - correct} para revisar
+        </p>
       </div>
 
       {incorrectQuestions.length > 0 && (
         <div className="w-full text-left space-y-2">
           <h2 className="font-extrabold text-gray-700">Vamos rever estas questões:</h2>
-          {incorrectQuestions.map(question => (
-            <div key={question.id} className="bg-orange-50 border border-orange-200 rounded-2xl p-4 text-sm font-semibold text-gray-700">
+          {incorrectQuestions.map((question) => (
+            <div
+              key={question.id}
+              className="bg-orange-50 border border-orange-200 rounded-2xl p-4 text-sm font-semibold text-gray-700"
+            >
               {question.question}
             </div>
           ))}

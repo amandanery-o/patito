@@ -1,0 +1,9 @@
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+editorial/drafts/
+src/data/generated/*.json
+package-lock.json
+*.png

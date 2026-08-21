@@ -9,7 +9,9 @@ describe('ProblemReportModal', () => {
     expect(screen.queryByLabelText(/nome|e-mail/i)).not.toBeInTheDocument()
     fireEvent.change(screen.getByLabelText('O que aconteceu?'), { target: { value: 'O calendário não abriu' } })
     fireEvent.click(screen.getByText('Enviar relato'))
-    await waitFor(() => expect(onSubmit).toHaveBeenCalledWith({ kind: 'general', description: 'O calendário não abriu' }))
+    await waitFor(() =>
+      expect(onSubmit).toHaveBeenCalledWith({ kind: 'general', description: 'O calendário não abriu' }),
+    )
     expect(await screen.findByText('Recebemos seu relato. Obrigado!')).toBeInTheDocument()
   })
 

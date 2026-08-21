@@ -19,5 +19,5 @@ export function buildProblemReport(input, appVersion = 'dev') {
 
 export function containsPersonalFields(value) {
   const forbidden = new Set(['name', 'email', 'userId', 'user_id', 'answer', 'response'])
-  return Object.keys(value).some(key => forbidden.has(key))
+  return Object.keys(value).some((key) => forbidden.has(key))
 }

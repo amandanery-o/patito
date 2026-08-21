@@ -160,9 +160,7 @@ Retorne um único objeto JSON válido com esta estrutura:
     {
       "difficulty": "easy | intermediate | challenging",
       "question": "Comando",
-      "pairs": [
-        { "left": "Item", "right": "Correspondência correta" }
-      ],
+      "pairs": [{ "left": "Item", "right": "Correspondência correta" }],
       "explanation": "Explicação formativa",
       "sourceRef": { "section": "Título exato", "pages": "XX–YY" }
     }

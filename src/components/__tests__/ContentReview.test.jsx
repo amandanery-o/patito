@@ -25,4 +25,3 @@ describe('ContentReview', () => {
     expect(onBack).toHaveBeenCalledOnce()
   })
 })
-

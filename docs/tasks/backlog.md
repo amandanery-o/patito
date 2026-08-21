@@ -1,13 +1,13 @@
 # Backlog da próxima versão
 
-Status: proposto, aguardando aprovação de priorização.
+Status: em implementação contínua. Itens com `✅` possuem evidência no código e nos testes; bloqueios externos permanecem explícitos.
 
 ## F000 — Engineering Harness
 
-- `TASK-001` Adicionar type checking para JavaScript/React e script `typecheck`.
-- `TASK-002` Configurar formatter e verificação na CI.
-- `TASK-003` Adicionar pre-commit para checks rápidos.
-- `TASK-004` Adicionar hooks seguros de gate e feedback e atingir Harness Score L4.
+- `TASK-001` ✅ Adicionar type checking para JavaScript/React e script `typecheck`.
+- `TASK-002` ✅ Configurar formatter e verificação na CI.
+- `TASK-003` ✅ Adicionar pre-commit para checks rápidos.
+- `TASK-004` ✅ Adicionar hooks seguros de gate e feedback e atingir Harness Score L4.
 
 ## F001 — Conta do aluno com Supabase Auth
 
@@ -36,10 +36,10 @@ Status: proposto, aguardando aprovação de priorização.
 
 ## F004 — Conteúdo do segundo semestre
 
-- `TASK-021` Remover conteúdo do primeiro semestre e olimpíadas da experiência ativa, preservando recuperação pelo histórico do Git.
-- `TASK-022` Definir schema de livro, conteúdo, resumo e questões.
-- `TASK-023` Publicar resumos textuais e exercícios do segundo semestre por matéria.
-- `TASK-024` Validar estrutura, IDs, relações e quantidade de questões.
+- `TASK-021` ✅ Remover conteúdo do primeiro semestre e olimpíadas da experiência ativa, preservando recuperação pelo histórico do Git.
+- `TASK-022` ✅ Definir schema de livro, conteúdo, resumo e questões.
+- `TASK-023` 🟡 Publicar resumos textuais e exercícios do segundo semestre por matéria (Geografia P1 publicada; demais matérias aguardam fontes).
+- `TASK-024` ✅ Validar estrutura, IDs, relações e quantidade de questões.
 
 ## F005 — Calendário
 
@@ -72,13 +72,13 @@ Status: proposto, aguardando aprovação de priorização.
 
 ## F009 — Pipeline editorial
 
-- `TASK-042` Documentar contratos e permissões da Edebê.
-- `TASK-043` Documentar contratos e permissões da Richmond College.
-- `TASK-044` Criar armazenamento seguro de credenciais editoriais.
+- `TASK-042` 🟡 Documentar contratos e permissões da Edebê (catálogo e fontes documentados; acesso oficial por API ainda não fornecido).
+- `TASK-043` 🟡 Documentar contratos e permissões da Richmond College (acesso oficial ainda não fornecido).
+- `TASK-044` ✅ Criar armazenamento seguro de credenciais editoriais.
 - `TASK-045` Implementar adaptadores quando as configurações forem entregues.
-- `TASK-046` Registrar origem, versão e validação dos lotes.
+- `TASK-046` ✅ Registrar origem, versão e validação dos lotes.
 - `TASK-047` 🟡 Integrar importação do calendário em PDF (primeiro lote extraído, conferido e normalizado; falta automatizar o importador).
 - `TASK-048` ✅ Definir schema versionado de conteúdo e questões geradas por IA.
 - `TASK-049` ✅ Validar banco mínimo de 60 questões, formatos, IDs e referências de origem.
-- `TASK-050` Implementar gerador de rascunhos com IA quando o provedor e o modelo forem configurados.
-- `TASK-051` Implementar etapa explícita de revisão e aprovação antes da publicação.
+- `TASK-050` ✅ Implementar gerador de rascunhos com IA quando o provedor e o modelo forem configurados.
+- `TASK-051` ✅ Implementar etapa explícita de revisão e aprovação antes da publicação.

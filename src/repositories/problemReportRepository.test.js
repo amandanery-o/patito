@@ -5,7 +5,9 @@ describe('problemReportRepository', () => {
   it('envia o payload pela função protegida', async () => {
     const invoke = vi.fn().mockResolvedValue({ data: { ok: true }, error: null })
     const payload = { correlationId: 'r1', kind: 'general', description: 'Tela travou' }
-    await expect(createProblemReportRepository({ functions: { invoke } }).submit(payload)).resolves.toEqual({ ok: true })
+    await expect(createProblemReportRepository({ functions: { invoke } }).submit(payload)).resolves.toEqual({
+      ok: true,
+    })
     expect(invoke).toHaveBeenCalledWith('report-problem', { body: payload })
   })
 

@@ -29,14 +29,20 @@ describe('createStudyRepository', () => {
     const rpc = vi.fn().mockResolvedValue({ data: { current_index: 1 }, error: null })
     const repository = createStudyRepository({ rpc })
     const result = await repository.saveAnswer({
-      sessionId: 'session-1', answerId: 'answer-1', questionId: 'q1',
-      answer: { optionId: 'b' }, isCorrect: true,
+      sessionId: 'session-1',
+      answerId: 'answer-1',
+      questionId: 'q1',
+      answer: { optionId: 'b' },
+      isCorrect: true,
     })
 
     expect(result).toEqual({ current_index: 1 })
     expect(rpc).toHaveBeenCalledWith('save_session_answer', {
-      p_session_id: 'session-1', p_answer_id: 'answer-1', p_question_id: 'q1',
-      p_answer: { optionId: 'b' }, p_is_correct: true,
+      p_session_id: 'session-1',
+      p_answer_id: 'answer-1',
+      p_question_id: 'q1',
+      p_answer: { optionId: 'b' },
+      p_is_correct: true,
     })
   })
 

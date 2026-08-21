@@ -2,7 +2,7 @@
 
 ## Project overview
 
-Patito is a Portuguese-language, gamified study PWA for fourth-grade students. It provides subject trails, six exercise formats, XP, daily streaks, exams, a weekly schedule, optional Supabase authentication, and a class-scoped leaderboard. Treat child privacy, learning accuracy, offline behavior, and data durability as product requirements.
+Patito is a Portuguese-language study PWA for fourth-grade students. It provides subject trails, multiple-choice and association exercises, text summaries, official school dates, student-managed homework, Supabase authentication, durable progress, anonymous problem reports, and a class-scoped usage leaderboard. Treat child privacy, learning accuracy, synchronization, and data durability as product requirements.
 
 ## Source of truth
 
@@ -23,6 +23,8 @@ Use Node.js 22 as declared in `.nvmrc`.
 npm ci
 npm run dev
 npm run lint
+npm run typecheck
+npm run format:check
 npm test
 npm run build
 npm run test:e2e
@@ -36,13 +38,13 @@ Before declaring implementation complete, run lint, unit tests, build, and the r
 - `src/App.jsx` coordinates navigation and top-level application flows.
 - `src/components/` contains focused React UI components.
 - `src/contexts/AuthContext.jsx` owns Supabase session and profile state.
-- `src/hooks/useProgress.js` owns local progress, XP, streak, and exam persistence.
+- `src/hooks/useProgress.js` adapts profile and topic progress for the active student.
 - `src/hooks/useReports.js` owns question reports.
 - `src/data/appConfig.js` owns the subject catalog and app-level constants.
 - `src/utils/` contains deterministic domain helpers.
 - `e2e/` contains Playwright journeys.
 
-The app must continue to work without Supabase environment variables. Authenticated local data must remain isolated by user ID.
+The local fallback exists only for development and automated tests. The released product requires Supabase; authenticated data must remain isolated by user ID and must never silently fall back to another student's local data.
 
 ## Coding conventions
 

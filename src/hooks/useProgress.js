@@ -17,19 +17,22 @@ function freshState(base = {}, profile = null) {
 
 function loadData(storageKey, profile) {
   try {
-    const raw = localStorage.getItem(storageKey) ||
-      (storageKey.endsWith(':offline') ? localStorage.getItem(STORAGE_KEY) : null)
+    const raw =
+      localStorage.getItem(storageKey) || (storageKey.endsWith(':offline') ? localStorage.getItem(STORAGE_KEY) : null)
     if (raw) {
       const parsed = JSON.parse(raw)
       if (!localStorage.getItem(storageKey)) saveData(storageKey, parsed)
       // Não importa progresso acadêmico nem gamificação de versões antigas.
       if ((parsed.storageVersion || 0) < STORAGE_VERSION) {
-        const data = freshState({
-          user: {
-            name: profile?.name || parsed.user?.name || 'Estudante',
-            avatar: profile?.avatar || parsed.user?.avatar || '🦁',
+        const data = freshState(
+          {
+            user: {
+              name: profile?.name || parsed.user?.name || 'Estudante',
+              avatar: profile?.avatar || parsed.user?.avatar || '🦁',
+            },
           },
-        }, profile)
+          profile,
+        )
         saveData(storageKey, data)
         return data
       }
@@ -55,7 +58,7 @@ export function useProgress({ userId = null, profile = null } = {}) {
 
   useEffect(() => {
     if (!profile) return
-    setData(prev => {
+    setData((prev) => {
       const isUntouched = prev.user.name === 'Estudante'
       if (!isUntouched) return prev
       const next = {
@@ -72,7 +75,7 @@ export function useProgress({ userId = null, profile = null } = {}) {
   }, [profile, storageKey])
 
   function updateTopicProgress(subjectId, topicId) {
-    setData(prev => {
+    setData((prev) => {
       const subjectProgress = { ...(prev.progress[subjectId] || {}) }
       subjectProgress[topicId] = {
         completed: true,
@@ -92,12 +95,12 @@ export function useProgress({ userId = null, profile = null } = {}) {
 
   function getSubjectProgress(subjectId, totalTopics) {
     const sp = data.progress[subjectId] || {}
-    const completed = Object.values(sp).filter(t => t.completed).length
+    const completed = Object.values(sp).filter((t) => t.completed).length
     return { completed, total: totalTopics, percent: totalTopics ? Math.round((completed / totalTopics) * 100) : 0 }
   }
 
   function setUserName(name) {
-    setData(prev => {
+    setData((prev) => {
       const next = { ...prev, user: { ...prev.user, name } }
       saveData(storageKey, next)
       return next

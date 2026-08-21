@@ -2,8 +2,18 @@ import { useState } from 'react'
 
 const WEEKDAYS = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb']
 const MONTHS = [
-  'Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho',
-  'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro',
+  'Janeiro',
+  'Fevereiro',
+  'Março',
+  'Abril',
+  'Maio',
+  'Junho',
+  'Julho',
+  'Agosto',
+  'Setembro',
+  'Outubro',
+  'Novembro',
+  'Dezembro',
 ]
 
 export default function CalendarMonth({ exams, subjects, examTypes }) {
@@ -13,14 +23,18 @@ export default function CalendarMonth({ exams, subjects, examTypes }) {
   const [selectedDay, setSelectedDay] = useState(null)
 
   function prevMonth() {
-    if (month === 0) { setMonth(11); setYear(y => y - 1) }
-    else setMonth(m => m - 1)
+    if (month === 0) {
+      setMonth(11)
+      setYear((y) => y - 1)
+    } else setMonth((m) => m - 1)
     setSelectedDay(null)
   }
 
   function nextMonth() {
-    if (month === 11) { setMonth(0); setYear(y => y + 1) }
-    else setMonth(m => m + 1)
+    if (month === 11) {
+      setMonth(0)
+      setYear((y) => y + 1)
+    } else setMonth((m) => m + 1)
     setSelectedDay(null)
   }
 
@@ -34,7 +48,7 @@ export default function CalendarMonth({ exams, subjects, examTypes }) {
 
   // Mapeia exames por dia (YYYY-MM-DD)
   const examsByDay = {}
-  exams.forEach(exam => {
+  exams.forEach((exam) => {
     if (!examsByDay[exam.date]) examsByDay[exam.date] = []
     examsByDay[exam.date].push(exam)
   })
@@ -42,20 +56,17 @@ export default function CalendarMonth({ exams, subjects, examTypes }) {
   // Grade: dias do mês + padding inicial
   const firstDay = new Date(year, month, 1).getDay()
   const daysInMonth = new Date(year, month + 1, 0).getDate()
-  const cells = [
-    ...Array(firstDay).fill(null),
-    ...Array.from({ length: daysInMonth }, (_, i) => i + 1),
-  ]
+  const cells = [...Array(firstDay).fill(null), ...Array.from({ length: daysInMonth }, (_, i) => i + 1)]
 
   const selectedKey = selectedDay ? dayKey(selectedDay) : null
-  const selectedExams = selectedKey ? (examsByDay[selectedKey] || []) : []
+  const selectedExams = selectedKey ? examsByDay[selectedKey] || [] : []
 
   // Cores dos dots por tipo de avaliação
   const TYPE_DOT = {
-    trabalho:    'bg-blue-500',
-    prova:       'bg-green-500',
+    trabalho: 'bg-blue-500',
+    prova: 'bg-green-500',
     recuperacao: 'bg-orange-500',
-    evento:      'bg-teal-500',
+    evento: 'bg-teal-500',
   }
 
   return (
@@ -69,7 +80,9 @@ export default function CalendarMonth({ exams, subjects, examTypes }) {
         >
           ‹
         </button>
-        <span className="font-bold text-gray-800 text-base">{MONTHS[month]} {year}</span>
+        <span className="font-bold text-gray-800 text-base">
+          {MONTHS[month]} {year}
+        </span>
         <button
           onClick={nextMonth}
           className="w-11 h-11 flex items-center justify-center rounded-xl bg-gray-100 hover:bg-gray-200 active:scale-95 transition-all text-gray-600 font-bold"
@@ -83,7 +96,7 @@ export default function CalendarMonth({ exams, subjects, examTypes }) {
       <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
         {/* Cabeçalho da semana */}
         <div className="grid grid-cols-7 border-b border-gray-100">
-          {WEEKDAYS.map(wd => (
+          {WEEKDAYS.map((wd) => (
             <div key={wd} className="text-center text-xs font-semibold text-gray-400 py-2">
               {wd}
             </div>
@@ -94,7 +107,7 @@ export default function CalendarMonth({ exams, subjects, examTypes }) {
         <div className="grid grid-cols-7">
           {cells.map((day, i) => {
             const key = day ? dayKey(day) : null
-            const dayExams = key ? (examsByDay[key] || []) : []
+            const dayExams = key ? examsByDay[key] || [] : []
             const isSelected = day === selectedDay
             const isTodayCell = day && isToday(day)
 
@@ -109,22 +122,22 @@ export default function CalendarMonth({ exams, subjects, examTypes }) {
               >
                 {day && (
                   <>
-                    <span className={`text-sm font-medium w-7 h-7 flex items-center justify-center rounded-full
-                      ${isTodayCell ? 'bg-blue-500 text-white font-bold' : isSelected ? 'text-blue-600' : 'text-gray-700'}`}>
+                    <span
+                      className={`text-sm font-medium w-7 h-7 flex items-center justify-center rounded-full
+                      ${isTodayCell ? 'bg-blue-500 text-white font-bold' : isSelected ? 'text-blue-600' : 'text-gray-700'}`}
+                    >
                       {day}
                     </span>
                     {dayExams.length > 0 && (
                       <div className="flex gap-0.5 mt-0.5 flex-wrap justify-center px-1">
-                        {dayExams.slice(0, 3).map(exam => (
+                        {dayExams.slice(0, 3).map((exam) => (
                           <span
                             key={exam.id}
                             className={`w-1.5 h-1.5 rounded-full ${TYPE_DOT[exam.type] || 'bg-gray-400'}`}
                           />
                         ))}
                         {dayExams.length > 3 && (
-                          <span className="text-gray-400 text-[8px] leading-none">
-                            +{dayExams.length - 3}
-                          </span>
+                          <span className="text-gray-400 text-[8px] leading-none">+{dayExams.length - 3}</span>
                         )}
                       </div>
                     )}
@@ -139,10 +152,10 @@ export default function CalendarMonth({ exams, subjects, examTypes }) {
       {/* Legenda fixa por tipo de avaliação */}
       <div className="flex flex-wrap gap-x-4 gap-y-1.5 px-1">
         {[
-          { type: 'trabalho',    label: 'Trabalho',    dot: 'bg-blue-500' },
-          { type: 'prova',       label: 'Prova',       dot: 'bg-green-500' },
+          { type: 'trabalho', label: 'Trabalho', dot: 'bg-blue-500' },
+          { type: 'prova', label: 'Prova', dot: 'bg-green-500' },
           { type: 'recuperacao', label: 'Recuperação', dot: 'bg-orange-500' },
-          { type: 'evento',      label: 'Evento',      dot: 'bg-teal-500' },
+          { type: 'evento', label: 'Evento', dot: 'bg-teal-500' },
         ].map(({ type, label, dot }) => (
           <div key={type} className="flex items-center gap-1.5">
             <span className={`w-2.5 h-2.5 rounded-full shrink-0 ${dot}`} />
@@ -162,21 +175,24 @@ export default function CalendarMonth({ exams, subjects, examTypes }) {
               Nenhuma atividade neste dia
             </div>
           ) : (
-            selectedExams.map(exam => {
-              const subj = subjects.find(s => s.id === exam.subject)
-              const et = examTypes.find(t => t.id === exam.type)
+            selectedExams.map((exam) => {
+              const subj = subjects.find((s) => s.id === exam.subject)
+              const et = examTypes.find((t) => t.id === exam.type)
               return (
-                <div key={exam.id} className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-start gap-3">
-                  <div className={`w-9 h-9 shrink-0 ${subj?.color || 'bg-gray-400'} rounded-xl flex items-center justify-center text-lg`}>
+                <div
+                  key={exam.id}
+                  className="bg-white rounded-2xl p-4 shadow-sm border border-gray-100 flex items-start gap-3"
+                >
+                  <div
+                    className={`w-9 h-9 shrink-0 ${subj?.color || 'bg-gray-400'} rounded-xl flex items-center justify-center text-lg`}
+                  >
                     {subj?.icon || '📚'}
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap">
                       <p className="font-semibold text-gray-800">{subj?.name || exam.subject}</p>
                       {et && (
-                        <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${et.badge}`}>
-                          {et.label}
-                        </span>
+                        <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${et.badge}`}>{et.label}</span>
                       )}
                       {exam.weight && (
                         <span className="text-xs font-medium px-2 py-0.5 rounded-full bg-gray-100 text-gray-600">
@@ -193,7 +209,6 @@ export default function CalendarMonth({ exams, subjects, examTypes }) {
           )}
         </div>
       )}
-
     </div>
   )
 }

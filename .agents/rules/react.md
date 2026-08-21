@@ -1,8 +1,8 @@
 ---
 description: React UI and state rules for Patito application code
 paths:
-  - "src/**/*.jsx"
-  - "src/**/*.js"
+  - 'src/**/*.jsx'
+  - 'src/**/*.js'
 ---
 
 # React rules

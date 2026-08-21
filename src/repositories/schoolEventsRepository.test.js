@@ -3,12 +3,28 @@ import { createSchoolEventsRepository, mapSchoolEvent } from './schoolEventsRepo
 
 describe('schoolEventsRepository', () => {
   it('converte os nomes do banco para o formato da interface', () => {
-    expect(mapSchoolEvent({
-      id: 'e1', subject_id: 'matematica', type: 'prova', date: '2026-08-25',
-      end_date: null, time: '14:30:00', weight: 2, content: 'Frações', notes: null,
-    })).toEqual({
-      id: 'e1', subject: 'matematica', type: 'prova', date: '2026-08-25',
-      endDate: null, time: '14:30', weight: 2, content: 'Frações', notes: null,
+    expect(
+      mapSchoolEvent({
+        id: 'e1',
+        subject_id: 'matematica',
+        type: 'prova',
+        date: '2026-08-25',
+        end_date: null,
+        time: '14:30:00',
+        weight: 2,
+        content: 'Frações',
+        notes: null,
+      }),
+    ).toEqual({
+      id: 'e1',
+      subject: 'matematica',
+      type: 'prova',
+      date: '2026-08-25',
+      endDate: null,
+      time: '14:30',
+      weight: 2,
+      content: 'Frações',
+      notes: null,
     })
   })
 

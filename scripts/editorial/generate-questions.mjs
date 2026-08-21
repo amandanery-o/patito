@@ -20,14 +20,16 @@ function requiredEnvironment(name) {
 }
 
 export function buildSourceBrief(topics = GEOGRAPHY_TOPICS) {
-  return topics.filter(topic => Number.isInteger(topic.chapter)).map(topic => ({
-    chapter: topic.chapter,
-    title: topic.title,
-    pages: topic.source.pages,
-    sourceSections: topic.sourceSections,
-    sections: topic.summarySections,
-    keyIdeas: topic.keyIdeas,
-  }))
+  return topics
+    .filter((topic) => Number.isInteger(topic.chapter))
+    .map((topic) => ({
+      chapter: topic.chapter,
+      title: topic.title,
+      pages: topic.source.pages,
+      sourceSections: topic.sourceSections,
+      sections: topic.summarySections,
+      keyIdeas: topic.keyIdeas,
+    }))
 }
 
 function sourceReferenceSchema() {
@@ -99,14 +101,18 @@ function questionBatchSchema() {
 
 export function validateGeneratedQuestions(questions, expected) {
   const errors = []
-  if (questions.length !== expected.total) errors.push(`esperadas ${expected.total} questões; recebidas ${questions.length}`)
-  const multipleChoice = questions.filter(question => question.type === 'multipleChoice').length
-  const matchColumns = questions.filter(question => question.type === 'matchColumns').length
-  if (multipleChoice !== expected.multipleChoice) errors.push(`esperadas ${expected.multipleChoice} múltipla escolha; recebidas ${multipleChoice}`)
-  if (matchColumns !== expected.matchColumns) errors.push(`esperadas ${expected.matchColumns} associações; recebidas ${matchColumns}`)
+  if (questions.length !== expected.total)
+    errors.push(`esperadas ${expected.total} questões; recebidas ${questions.length}`)
+  const multipleChoice = questions.filter((question) => question.type === 'multipleChoice').length
+  const matchColumns = questions.filter((question) => question.type === 'matchColumns').length
+  if (multipleChoice !== expected.multipleChoice)
+    errors.push(`esperadas ${expected.multipleChoice} múltipla escolha; recebidas ${multipleChoice}`)
+  if (matchColumns !== expected.matchColumns)
+    errors.push(`esperadas ${expected.matchColumns} associações; recebidas ${matchColumns}`)
   for (const [difficulty, amount] of Object.entries(expected.difficulty || {})) {
-    const received = questions.filter(question => question.difficulty === difficulty).length
-    if (Math.abs(received - amount) > 2) errors.push(`esperadas aproximadamente ${amount} questões ${difficulty}; recebidas ${received}`)
+    const received = questions.filter((question) => question.difficulty === difficulty).length
+    if (Math.abs(received - amount) > 2)
+      errors.push(`esperadas aproximadamente ${amount} questões ${difficulty}; recebidas ${received}`)
   }
   return errors
 }
@@ -116,9 +122,10 @@ export function normalizeGeneratedQuestions(questions, expected) {
   const byTypeAndDifficulty = new Map()
   for (const type of ['multipleChoice', 'matchColumns']) {
     for (const difficulty of difficulties) {
-      byTypeAndDifficulty.set(`${type}:${difficulty}`, questions.filter(
-        question => question.type === type && question.difficulty === difficulty,
-      ))
+      byTypeAndDifficulty.set(
+        `${type}:${difficulty}`,
+        questions.filter((question) => question.type === type && question.difficulty === difficulty),
+      )
     }
   }
 
@@ -127,19 +134,23 @@ export function normalizeGeneratedQuestions(questions, expected) {
       const challenging = expected.multipleChoice - easy - intermediate
       if (challenging < 0 || challenging > expected.difficulty.challenging) continue
       const multipleTargets = { easy, intermediate, challenging }
-      const matchTargets = Object.fromEntries(difficulties.map(
-        difficulty => [difficulty, expected.difficulty[difficulty] - multipleTargets[difficulty]],
-      ))
-      if (Object.values(matchTargets).some(amount => amount < 0)) continue
-      const enough = difficulties.every(difficulty =>
-        byTypeAndDifficulty.get(`multipleChoice:${difficulty}`).length >= multipleTargets[difficulty] &&
-        byTypeAndDifficulty.get(`matchColumns:${difficulty}`).length >= matchTargets[difficulty])
+      const matchTargets = Object.fromEntries(
+        difficulties.map((difficulty) => [difficulty, expected.difficulty[difficulty] - multipleTargets[difficulty]]),
+      )
+      if (Object.values(matchTargets).some((amount) => amount < 0)) continue
+      const enough = difficulties.every(
+        (difficulty) =>
+          byTypeAndDifficulty.get(`multipleChoice:${difficulty}`).length >= multipleTargets[difficulty] &&
+          byTypeAndDifficulty.get(`matchColumns:${difficulty}`).length >= matchTargets[difficulty],
+      )
       if (!enough) continue
 
-      return ['multipleChoice', 'matchColumns'].flatMap(type => difficulties.flatMap(difficulty => {
-        const target = type === 'multipleChoice' ? multipleTargets[difficulty] : matchTargets[difficulty]
-        return byTypeAndDifficulty.get(`${type}:${difficulty}`).slice(0, target)
-      }))
+      return ['multipleChoice', 'matchColumns'].flatMap((type) =>
+        difficulties.flatMap((difficulty) => {
+          const target = type === 'multipleChoice' ? multipleTargets[difficulty] : matchTargets[difficulty]
+          return byTypeAndDifficulty.get(`${type}:${difficulty}`).slice(0, target)
+        }),
+      )
     }
   }
   return questions
@@ -172,14 +183,16 @@ async function generateBatch({ apiKey, model, batch, sourceBrief, systemPrompt, 
     TOTAL: batch.total,
     MULTIPLE_CHOICE: batch.multipleChoice,
     MATCH_COLUMNS: batch.matchColumns,
-    CONTENT_SCOPE: 'capítulo 7 — atividades econômicas do espaço rural; capítulo 8 — atividades econômicas do espaço urbano',
-    CURRICULUM_SKILLS: 'Nenhuma habilidade curricular adicional foi fornecida. Use apenas os objetivos e conceitos da fonte editorial.',
+    CONTENT_SCOPE:
+      'capítulo 7 — atividades econômicas do espaço rural; capítulo 8 — atividades econômicas do espaço urbano',
+    CURRICULUM_SKILLS:
+      'Nenhuma habilidade curricular adicional foi fornecida. Use apenas os objetivos e conceitos da fonte editorial.',
     EASY: batch.difficulty.easy,
     INTERMEDIATE: batch.difficulty.intermediate,
     CHALLENGING: batch.difficulty.challenging,
-    FOCUS: batch.focus.map(focus => `- ${focus}`).join('\n'),
+    FOCUS: batch.focus.map((focus) => `- ${focus}`).join('\n'),
     AVOID_QUESTIONS: existingQuestions.length
-      ? existingQuestions.map(question => `- ${question.question}`).join('\n')
+      ? existingQuestions.map((question) => `- ${question.question}`).join('\n')
       : 'Nenhuma; este é o primeiro lote.',
     SOURCE_BRIEF: JSON.stringify(sourceBrief, null, 2),
   })
@@ -207,14 +220,16 @@ async function generateBatch({ apiKey, model, batch, sourceBrief, systemPrompt, 
   })
 
   const payload = await response.json()
-  if (!response.ok) throw new Error(`Anthropic API ${response.status}: ${payload.error?.message || 'falha desconhecida'}`)
-  const textBlock = payload.content?.find(block => block.type === 'text')
+  if (!response.ok)
+    throw new Error(`Anthropic API ${response.status}: ${payload.error?.message || 'falha desconhecida'}`)
+  const textBlock = payload.content?.find((block) => block.type === 'text')
   if (!textBlock?.text) throw new Error('Claude não retornou o lote JSON esperado')
   const input = JSON.parse(textBlock.text)
-  if (!input.multipleChoiceQuestions || !input.matchColumnsQuestions) throw new Error('Claude não retornou as coleções esperadas')
+  if (!input.multipleChoiceQuestions || !input.matchColumnsQuestions)
+    throw new Error('Claude não retornou as coleções esperadas')
   const questions = [
-    ...structuredCollection(input.multipleChoiceQuestions).map(question => ({ ...question, type: 'multipleChoice' })),
-    ...structuredCollection(input.matchColumnsQuestions).map(question => ({ ...question, type: 'matchColumns' })),
+    ...structuredCollection(input.multipleChoiceQuestions).map((question) => ({ ...question, type: 'multipleChoice' })),
+    ...structuredCollection(input.matchColumnsQuestions).map((question) => ({ ...question, type: 'matchColumns' })),
   ]
   return { questions, usage: payload.usage, stopReason: payload.stop_reason }
 }
@@ -247,32 +262,56 @@ async function main() {
   ])
   const batches = [
     {
-      number: 1, totalBatches: 6, total: 10, multipleChoice: 8, matchColumns: 2,
+      number: 1,
+      totalBatches: 6,
+      total: 10,
+      multipleChoice: 8,
+      matchColumns: 2,
       difficulty: { easy: 3, intermediate: 5, challenging: 2 },
       focus: ['agricultura', 'grandes e pequenos produtores', 'agricultura orgânica'],
     },
     {
-      number: 2, totalBatches: 6, total: 10, multipleChoice: 8, matchColumns: 2,
+      number: 2,
+      totalBatches: 6,
+      total: 10,
+      multipleChoice: 8,
+      matchColumns: 2,
       difficulty: { easy: 3, intermediate: 5, challenging: 2 },
       focus: ['pecuária', 'sistemas intensivo e extensivo', 'produtos da criação animal'],
     },
     {
-      number: 3, totalBatches: 6, total: 10, multipleChoice: 8, matchColumns: 2,
+      number: 3,
+      totalBatches: 6,
+      total: 10,
+      multipleChoice: 8,
+      matchColumns: 2,
       difficulty: { easy: 3, intermediate: 5, challenging: 2 },
       focus: ['extrativismo', 'sustentabilidade', 'modernização do campo', 'êxodo rural'],
     },
     {
-      number: 4, totalBatches: 6, total: 10, multipleChoice: 7, matchColumns: 3,
+      number: 4,
+      totalBatches: 6,
+      total: 10,
+      multipleChoice: 7,
+      matchColumns: 3,
       difficulty: { easy: 3, intermediate: 5, challenging: 2 },
       focus: ['indústria de base', 'bens intermediários', 'bens de consumo'],
     },
     {
-      number: 5, totalBatches: 6, total: 10, multipleChoice: 7, matchColumns: 3,
+      number: 5,
+      totalBatches: 6,
+      total: 10,
+      multipleChoice: 7,
+      matchColumns: 3,
       difficulty: { easy: 3, intermediate: 5, challenging: 2 },
       focus: ['comércio', 'atacado e varejo', 'comércio interno e externo'],
     },
     {
-      number: 6, totalBatches: 6, total: 10, multipleChoice: 7, matchColumns: 3,
+      number: 6,
+      totalBatches: 6,
+      total: 10,
+      multipleChoice: 7,
+      matchColumns: 3,
       difficulty: { easy: 3, intermediate: 5, challenging: 2 },
       focus: ['prestação de serviços', 'trabalho urbano', 'relações entre campo e cidade'],
     },
@@ -287,9 +326,14 @@ async function main() {
     try {
       result = JSON.parse(await readFile(checkpoint, 'utf8'))
     } catch (error) {
-      if (error.code !== 'ENOENT') throw error
+      if (/** @type {{ code?: string }} */ (error).code !== 'ENOENT') throw error
       result = await generateBatch({
-        apiKey, model, batch, sourceBrief, systemPrompt, batchTemplate,
+        apiKey,
+        model,
+        batch,
+        sourceBrief,
+        systemPrompt,
+        batchTemplate,
         existingQuestions: generated,
       })
       await writeFile(checkpoint, `${JSON.stringify(result, null, 2)}\n`, { flag: 'wx' })
@@ -305,13 +349,15 @@ async function main() {
   const structural = validateEditorialContent(draft)
   if (!structural.valid) throw new Error(`Rascunho inválido: ${structural.errors.join('; ')}`)
 
-  await writeFile(output, `${JSON.stringify({ ...draft, generation: { ...draft.generation, usage } }, null, 2)}\n`, { flag: 'wx' })
+  await writeFile(output, `${JSON.stringify({ ...draft, generation: { ...draft.generation, usage } }, null, 2)}\n`, {
+    flag: 'wx',
+  })
   console.log(`Rascunho criado em ${output}`)
   console.log('Status: draft — revisão humana obrigatória antes da publicação')
 }
 
 if (fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
-  main().catch(error => {
+  main().catch((error) => {
     console.error(error.message)
     process.exitCode = 1
   })
