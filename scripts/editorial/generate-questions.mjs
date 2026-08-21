@@ -4,7 +4,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { validateEditorialContent } from '../../src/editorial/contentValidator.js'
-import { GEOGRAPHY_SOURCE_TOPICS } from './geography-source-briefs.mjs'
+import { getEditorialConfig } from './editorial-configs.mjs'
 
 const API_URL = 'https://api.anthropic.com/v1/messages'
 const PROMPT_VERSION = 'question-batch-v2'
@@ -18,49 +18,7 @@ function requiredEnvironment(name) {
   return value
 }
 
-const GEOGRAPHY_CONFIGS = {
-  'geografia-p1': {
-    assessmentName: 'P1',
-    subject: 'Geografia',
-    chapters: [7, 8],
-    contentId: 'geografia-p1-capitulos-7-8',
-    questionPrefix: 'geo-p1',
-    title: 'Revisão P1 — Espaços rural e urbano',
-    summary: 'Revisão dos capítulos 7 e 8: atividades econômicas dos espaços rural e urbano.',
-    resourceId: 'courseware-252/chapters-7-8',
-    contentScope:
-      'capítulo 7 — atividades econômicas do espaço rural; capítulo 8 — atividades econômicas do espaço urbano',
-    batches: [
-      ['agricultura', 'grandes e pequenos produtores', 'agricultura orgânica'],
-      ['pecuária', 'sistemas intensivo e extensivo', 'produtos da criação animal'],
-      ['extrativismo', 'sustentabilidade', 'modernização do campo', 'êxodo rural'],
-      ['indústria de base', 'bens intermediários', 'bens de consumo'],
-      ['comércio', 'atacado e varejo', 'comércio interno e externo'],
-      ['prestação de serviços', 'trabalho urbano', 'relações entre campo e cidade'],
-    ],
-  },
-  'geografia-p2': {
-    assessmentName: 'P2',
-    subject: 'Geografia',
-    chapters: [11, 12],
-    contentId: 'geografia-p2-capitulos-11-12',
-    questionPrefix: 'geo-p2',
-    title: 'Revisão P2 — População e migrações',
-    summary: 'Revisão dos capítulos 11 e 12: população brasileira e fluxos migratórios.',
-    resourceId: 'courseware-252/chapters-11-12',
-    contentScope: 'capítulo 11 — características da população brasileira; capítulo 12 — fluxos migratórios',
-    batches: [
-      ['demografia', 'indicadores demográficos', 'densidade demográfica'],
-      ['distribuição da população brasileira', 'colonização', 'transportes', 'trabalho e clima'],
-      ['setores de trabalho', 'trabalho formal e informal', 'direitos e igualdade'],
-      ['migração', 'imigração', 'emigração', 'migração interna'],
-      ['êxodo rural', 'migração sazonal', 'deslocamento pendular'],
-      ['migrações internacionais', 'causas das migrações', 'diversidade cultural'],
-    ],
-  },
-}
-
-export function buildSourceBrief(topics = GEOGRAPHY_SOURCE_TOPICS, chapters = [7, 8]) {
+export function buildSourceBrief(topics, chapters) {
   return topics
     .filter((topic) => typeof topic.chapter === 'number' && chapters.includes(topic.chapter))
     .map((topic) => ({
@@ -288,7 +246,7 @@ async function generateBatch({
   return { questions, usage: payload.usage, stopReason: payload.stop_reason }
 }
 
-export function assembleDraft({ questions, model, config = GEOGRAPHY_CONFIGS['geografia-p1'] }) {
+export function assembleDraft({ questions, model, config = getEditorialConfig('geografia-p1') }) {
   const numbered = questions.map((question, index) => {
     const id = `${config.questionPrefix}-${String(index + 1).padStart(3, '0')}`
     if (question.type !== 'multipleChoice' || !Array.isArray(question.options)) return { ...question, id }
@@ -302,10 +260,10 @@ export function assembleDraft({ questions, model, config = GEOGRAPHY_CONFIGS['ge
   })
   return {
     id: config.contentId,
-    subjectId: 'geografia',
+    subjectId: config.subjectId,
     title: config.title,
     summary: config.summary,
-    source: { provider: 'edebe', resourceId: config.resourceId, version: '2024' },
+    source: config.source,
     generation: { model, promptVersion: PROMPT_VERSION, generatedAt: new Date().toISOString() },
     status: 'draft',
     questions: numbered,
@@ -316,13 +274,9 @@ async function main() {
   const apiKey = requiredEnvironment('ANTHROPIC_API_KEY')
   const model = requiredEnvironment('ANTHROPIC_MODEL')
   const configurationName = process.argv[2] || 'geografia-p1'
-  const config = GEOGRAPHY_CONFIGS[configurationName]
-  if (!config)
-    throw new Error(
-      `Configuração desconhecida: ${configurationName}. Opções: ${Object.keys(GEOGRAPHY_CONFIGS).join(', ')}`,
-    )
+  const config = getEditorialConfig(configurationName)
   const output = resolve(process.argv[3] || `editorial/drafts/${configurationName}.json`)
-  const sourceBrief = buildSourceBrief(GEOGRAPHY_SOURCE_TOPICS, config.chapters)
+  const sourceBrief = buildSourceBrief(config.sourceTopics, config.chapters)
   const [systemPrompt, batchTemplate] = await Promise.all([
     readFile(SYSTEM_PROMPT_PATH, 'utf8'),
     readFile(BATCH_PROMPT_PATH, 'utf8'),

@@ -57,7 +57,7 @@ npm run editorial:publish:geografia-p2
 
 O primeiro comando recusa questões pendentes ou com ajuste solicitado. O segundo valida novamente o conteúdo e a aprovação e substitui o pacote publicado de forma atômica; assim, a aplicação nunca recebe apenas parte das 60 questões. O mesmo gerador escolhe a configuração editorial pelo nome do conteúdo, mantendo IDs, fontes, focos e checkpoints separados entre P1 e P2.
 
-Antes da próxima matéria, a configuração específica deve ser extraída para um catálogo genérico por `subjectId + assessmentName`. Novos scripts não devem copiar e renomear regras de Geografia: matéria, fonte, capítulos, prefixo de IDs, focos, habilidades e arquivo de saída entram como configuração validada.
+As configurações ficam no catálogo `scripts/editorial/editorial-configs.mjs`, identificado por matéria e prova. Novos scripts não devem copiar e renomear regras de Geografia: matéria, fonte, capítulos, prefixo de IDs, focos, habilidades e arquivo de saída entram como configuração validada. Uma configuração só pode ser habilitada depois que seus mapas de fonte estiverem conferidos.
 
 Não cole a chave em arquivos do projeto, no chat, em issues ou em commits.
 

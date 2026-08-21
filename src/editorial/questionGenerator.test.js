@@ -7,6 +7,7 @@ import {
   structuredCollection,
   validateGeneratedQuestions,
 } from '../../scripts/editorial/generate-questions.mjs'
+import { getEditorialConfig } from '../../scripts/editorial/editorial-configs.mjs'
 
 function questions(multipleChoice, matchColumns) {
   return [
@@ -25,14 +26,16 @@ function questions(multipleChoice, matchColumns) {
 
 describe('gerador editorial', () => {
   it('envia apenas o conteúdo editorial necessário, sem dados de aluno', () => {
-    const brief = buildSourceBrief()
+    const config = getEditorialConfig('geografia-p1')
+    const brief = buildSourceBrief(config.sourceTopics, config.chapters)
     const serialized = JSON.stringify(brief)
     expect(brief.map((item) => item.chapter)).toEqual([7, 8])
     expect(serialized).not.toMatch(/user|email|resposta do aluno/i)
   })
 
   it('seleciona somente os capítulos solicitados para outro lote', () => {
-    expect(buildSourceBrief(undefined, [11, 12]).map((item) => item.chapter)).toEqual([11, 12])
+    const config = getEditorialConfig('geografia-p2')
+    expect(buildSourceBrief(config.sourceTopics, config.chapters).map((item) => item.chapter)).toEqual([11, 12])
   })
 
   it('valida quantidade e distribuição de formatos', () => {
@@ -98,6 +101,20 @@ describe('gerador editorial', () => {
     const draft = assembleDraft({ questions: questions(1, 1), model: 'modelo-configurado' })
     expect(draft.status).toBe('draft')
     expect(draft.questions.map((question) => question.id)).toEqual(['geo-p1-001', 'geo-p1-002'])
+  })
+
+  it('mantém matéria e fonte definidas pela configuração', () => {
+    const config = {
+      ...getEditorialConfig('geografia-p1'),
+      subjectId: 'matematica',
+      questionPrefix: 'mat-p1',
+      contentId: 'matematica-p1',
+      source: { provider: 'edebe', resourceId: 'livro-matematica/capitulos-5-7', version: '2024' },
+    }
+    const draft = assembleDraft({ questions: questions(1, 0), model: 'modelo-configurado', config })
+    expect(draft.subjectId).toBe('matematica')
+    expect(draft.questions[0].id).toBe('mat-p1-001')
+    expect(draft.source.resourceId).toBe('livro-matematica/capitulos-5-7')
   })
 
   it('distribui a posição das respostas ao montar o rascunho', () => {

@@ -82,7 +82,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-049` ✅ Validar banco mínimo de 60 questões, formatos, IDs e referências de origem.
 - `TASK-050` ✅ Implementar gerador de rascunhos com IA quando o provedor e o modelo forem configurados.
 - `TASK-051` ✅ Implementar etapa explícita de revisão e aprovação antes da publicação.
-- `TASK-052` ⬜ Generalizar o catálogo editorial de Geografia para configurações por matéria e prova.
+- `TASK-052` ✅ Generalizar o catálogo editorial de Geografia para configurações por matéria e prova.
 - `TASK-053` ⬜ Publicar Matemática P1 seguindo o roteiro editorial completo.
 - `TASK-054` ⬜ Publicar História P1 seguindo o roteiro editorial completo.
 - `TASK-055` ⬜ Publicar Inglês P1 seguindo o roteiro editorial completo.
