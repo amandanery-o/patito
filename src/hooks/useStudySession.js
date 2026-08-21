@@ -7,7 +7,20 @@ export const SYNC_STATUS = Object.freeze({
   SAVING: 'saving',
   SAVED: 'saved',
   ERROR: 'error',
+  STALE: 'stale',
 })
+
+function isStaleError(error) {
+  return error?.message?.includes('session_stale') || error?.details?.includes('session_stale')
+}
+
+function canonicalStateError(session, answers) {
+  return Object.assign(new Error('Seu progresso mudou em outra aba. Recarregamos a versão mais recente.'), {
+    code: 'SESSION_STALE',
+    session,
+    answers,
+  })
+}
 
 export function useStudySession(repository = createStudyRepository()) {
   const [session, setSession] = useState(null)
@@ -52,6 +65,7 @@ export function useStudySession(repository = createStudyRepository()) {
         const updatedSession = await repository.saveAnswer({
           ...answerData,
           sessionId: session.id,
+          expectedUpdatedAt: session.updated_at,
         })
         setSession(updatedSession)
         setAnswers((previous) => {
@@ -69,6 +83,15 @@ export function useStudySession(repository = createStudyRepository()) {
         setStatus(SYNC_STATUS.SAVED)
         return updatedSession
       } catch (requestError) {
+        if (isStaleError(requestError)) {
+          const canonicalSession = await repository.findOpenSession(session.content_id)
+          const canonicalAnswers = canonicalSession ? await repository.listAnswers(canonicalSession.id) : []
+          setSession(canonicalSession)
+          setAnswers(canonicalAnswers)
+          setError(null)
+          setStatus(SYNC_STATUS.STALE)
+          throw canonicalStateError(canonicalSession, canonicalAnswers)
+        }
         setError(requestError)
         setStatus(SYNC_STATUS.ERROR)
         throw requestError

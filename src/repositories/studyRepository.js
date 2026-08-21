@@ -46,13 +46,14 @@ export function createStudyRepository(client = supabase) {
       return unwrap(result)
     },
 
-    async saveAnswer({ sessionId, answerId = crypto.randomUUID(), questionId, answer, isCorrect }) {
+    async saveAnswer({ sessionId, answerId = crypto.randomUUID(), questionId, answer, isCorrect, expectedUpdatedAt }) {
       const result = await requireClient(client).rpc('save_session_answer', {
         p_session_id: sessionId,
         p_answer_id: answerId,
         p_question_id: questionId,
         p_answer: answer,
         p_is_correct: isCorrect,
+        p_expected_updated_at: expectedUpdatedAt,
       })
       return unwrap(result)
     },

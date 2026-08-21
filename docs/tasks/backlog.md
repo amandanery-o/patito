@@ -22,8 +22,8 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-010` ✅ Modelar sessões, respostas, progresso e eventos de utilização conforme `docs/architecture/data-model.md`.
 - `TASK-011` ✅ Criar migrações, índices, constraints e políticas RLS idempotentes.
 - `TASK-012` ✅ Implementar funções transacionais idempotentes para resposta e conclusão de sessão.
-- `TASK-013` Implementar corte versionado que ignora dados locais do primeiro semestre sem importação automática.
-- `TASK-014` 🟡 Implementar repositório cliente e estados loading/saving/saved/error/stale (falta detecção explícita de estado stale).
+- `TASK-013` ✅ Implementar corte versionado que ignora dados locais do primeiro semestre sem importação automática.
+- `TASK-014` ✅ Implementar repositório cliente e estados loading/saving/saved/error/stale.
 - `TASK-015` Testar recarga, duas abas, troca de dispositivo, RLS e repetição de requisições.
 
 ## F003 — Sessão de estudos v2

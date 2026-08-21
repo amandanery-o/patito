@@ -34,6 +34,7 @@ describe('createStudyRepository', () => {
       questionId: 'q1',
       answer: { optionId: 'b' },
       isCorrect: true,
+      expectedUpdatedAt: '2026-08-20T12:00:00Z',
     })
 
     expect(result).toEqual({ current_index: 1 })
@@ -43,6 +44,7 @@ describe('createStudyRepository', () => {
       p_question_id: 'q1',
       p_answer: { optionId: 'b' },
       p_is_correct: true,
+      p_expected_updated_at: '2026-08-20T12:00:00Z',
     })
   })
 

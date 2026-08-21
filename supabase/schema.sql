@@ -210,12 +210,14 @@ create policy own_usage_events on public.usage_events for select to authenticate
 revoke insert, update, delete on public.usage_events from authenticated;
 
 -- Salva uma resposta e seu evento de uso na mesma transação.
+drop function if exists public.save_session_answer(uuid, uuid, text, jsonb, boolean);
 create or replace function public.save_session_answer(
   p_session_id uuid,
   p_answer_id uuid,
   p_question_id text,
   p_answer jsonb,
-  p_is_correct boolean
+  p_is_correct boolean,
+  p_expected_updated_at timestamptz default null
 ) returns public.study_sessions
 language plpgsql security definer set search_path = public
 as $$
@@ -228,6 +230,9 @@ begin
     where id = p_session_id and user_id = auth.uid() for update;
   if not found then raise exception 'session_not_found'; end if;
   if current_session.status <> 'active' then raise exception 'session_not_active'; end if;
+  if p_expected_updated_at is not null and current_session.updated_at <> p_expected_updated_at then
+    raise exception 'session_stale';
+  end if;
   if not (p_question_id = any(current_session.question_ids)) then raise exception 'question_not_in_session'; end if;
 
   insert into public.session_answers(id, session_id, user_id, question_id, answer, is_correct)
@@ -282,9 +287,9 @@ begin
 end;
 $$;
 
-revoke all on function public.save_session_answer(uuid, uuid, text, jsonb, boolean) from public;
+revoke all on function public.save_session_answer(uuid, uuid, text, jsonb, boolean, timestamptz) from public;
 revoke all on function public.complete_study_session(uuid) from public;
-grant execute on function public.save_session_answer(uuid, uuid, text, jsonb, boolean) to authenticated;
+grant execute on function public.save_session_answer(uuid, uuid, text, jsonb, boolean, timestamptz) to authenticated;
 grant execute on function public.complete_study_session(uuid) to authenticated;
 
 -- Ranking por utilização: 1 ponto por questão e 10 por sessão, limitado a

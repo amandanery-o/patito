@@ -52,4 +52,41 @@ describe('useStudySession', () => {
     expect(result.current.status).toBe(SYNC_STATUS.ERROR)
     expect(result.current.error.message).toBe('network')
   })
+
+  it('recarrega o estado canônico quando outra aba avançou a sessão', async () => {
+    const initial = { id: 'session-1', content_id: 'fracoes', updated_at: '2026-08-20T12:00:00Z' }
+    const canonical = { ...initial, current_index: 1, updated_at: '2026-08-20T12:01:00Z' }
+    const repository = {
+      findOpenSession: vi.fn().mockResolvedValueOnce(initial).mockResolvedValueOnce(canonical),
+      createSession: vi.fn(),
+      listAnswers: vi
+        .fn()
+        .mockResolvedValueOnce([])
+        .mockResolvedValueOnce([{ question_id: 'q1', is_correct: true }]),
+      saveAnswer: vi.fn().mockRejectedValue({ message: 'session_stale' }),
+    }
+    const { result } = renderHook(() => useStudySession(repository))
+    await act(() => result.current.startOrResume(input))
+
+    await act(async () => {
+      await expect(
+        result.current.saveAnswer({
+          answerId: 'answer-1',
+          questionId: 'q1',
+          answer: { option: 1 },
+          isCorrect: true,
+        }),
+      ).rejects.toMatchObject({ code: 'SESSION_STALE', session: canonical })
+    })
+
+    expect(repository.saveAnswer).toHaveBeenCalledWith(
+      expect.objectContaining({
+        sessionId: 'session-1',
+        expectedUpdatedAt: '2026-08-20T12:00:00Z',
+      }),
+    )
+    expect(result.current.session).toEqual(canonical)
+    expect(result.current.answers).toHaveLength(1)
+    expect(result.current.status).toBe(SYNC_STATUS.STALE)
+  })
 })

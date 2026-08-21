@@ -158,12 +158,29 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
   async function handleAnswer({ isCorrect, answer }) {
     const question = sessionQuestions[questionIndex]
     if (session?.user?.id) {
-      await saveStudyAnswer({
-        answerId: crypto.randomUUID(),
-        questionId: question.id,
-        answer,
-        isCorrect,
-      })
+      try {
+        await saveStudyAnswer({
+          answerId: crypto.randomUUID(),
+          questionId: question.id,
+          answer,
+          isCorrect,
+        })
+      } catch (saveError) {
+        const staleError = /** @type {{ code?: string, session?: any, answers?: any[] }} */ (saveError)
+        if (staleError.code !== 'SESSION_STALE') throw saveError
+        const questionsById = new Map(selectedTopic.questions.map((item) => [item.id, item]))
+        const orderedQuestions = staleError.session.question_ids.map((id) => questionsById.get(id)).filter(Boolean)
+        setSessionQuestions(orderedQuestions)
+        setQuestionIndex(Math.min(staleError.session.current_index, Math.max(orderedQuestions.length - 1, 0)))
+        setCorrect(staleError.answers.filter((item) => item.is_correct).length)
+        setIncorrectQuestions(
+          staleError.answers
+            .filter((item) => !item.is_correct)
+            .map((item) => questionsById.get(item.question_id))
+            .filter(Boolean),
+        )
+        return
+      }
     }
     const newCorrect = isCorrect ? correct + 1 : correct
     setCorrect(newCorrect)
