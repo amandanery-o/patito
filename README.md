@@ -2,6 +2,8 @@
 
 Sistema web mobile-first para tornar o estudo do segundo semestre mais simples e atraente para crianças de aproximadamente 10 anos.
 
+Produção: [patito-mauve.vercel.app](https://patito-mauve.vercel.app)
+
 ## O que existe hoje
 
 - Conta individual com nome, e-mail e senha pelo Supabase Auth.
@@ -12,7 +14,7 @@ Sistema web mobile-first para tornar o estudo do segundo semestre mais simples e
 - Agenda escolar oficial com provas, trabalhos e alertas de proximidade.
 - CRUD de Temas: descrição, páginas, entrega e conclusão.
 - Ranking somente por utilização, sem usar acertos ou desempenho.
-- Relato anônimo de problemas e questões para o GitHub.
+- Interface de relato anônimo de problemas e questões; a criação no GitHub depende da ativação descrita no checklist de produção.
 - Pipeline editorial com geração, revisão independente e aprovação auditável por agente; dúvidas são escaladas para a mantenedora.
 
 O produto não possui vidas, flashcards, streak, níveis, olimpíadas, papéis de professor/responsável ou administração pelo aluno.
@@ -43,6 +45,19 @@ Acesse `http://127.0.0.1:5173/`. Sem variáveis do Supabase, a interface abre so
 6. Reinicie `npm run dev` e valide cadastro, login, retomada e ranking com duas contas de teste.
 
 Nunca use a chave `service_role` em uma variável `VITE_` ou no navegador.
+
+## Publicação na Vercel
+
+O projeto de produção é `amanda-nerys-projects/patito` e o domínio estável é `https://patito-mauve.vercel.app`.
+
+As variáveis `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` e `VITE_APP_VERSION` devem existir nos ambientes Production, Preview e Development da Vercel. A chave `anon` é pública por definição; o isolamento dos dados é garantido pelas políticas RLS do Supabase.
+
+```bash
+npx vercel@latest link --yes --project patito
+npx vercel@latest --prod --yes
+```
+
+Depois do deploy, valide login, leitura, prática, retomada, Agenda, Temas e ranking na URL pública. O arquivo `supabase/config.toml` mantém o domínio permitido para recuperação de senha e deve ser aplicado com `supabase config push` quando mudar.
 
 ## Comandos principais
 

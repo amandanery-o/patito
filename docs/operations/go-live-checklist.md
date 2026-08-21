@@ -9,6 +9,8 @@ O código local está pronto e testado. Os itens abaixo dependem de decisão edi
 - Geografia P1 e P2 aprovadas e publicadas.
 - Matemática T2 e P1 aprovadas e publicadas, com 60 questões por material.
 - Login, perfil, calendário, Temas, sessão e ranking validados remotamente.
+- Produção Vercel publicada em `https://patito-mauve.vercel.app`, conectada ao Supabase.
+- URL principal e retornos de autenticação configurados no Supabase para o domínio de produção.
 
 ## 1. Publicar as próximas matérias
 
