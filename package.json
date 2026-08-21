@@ -18,6 +18,7 @@
     "editorial:generate:geografia-p2": "node --env-file=.env.editorial scripts/editorial/generate-questions.mjs geografia-p2",
     "editorial:review:geografia-p2": "node scripts/editorial/prepare-review.mjs",
     "editorial:approve:geografia-p2": "node scripts/editorial/approve-reviewed-draft.mjs",
+    "editorial:publish:geografia-p2": "node scripts/editorial/publish-geography-content.mjs",
     "editorial:approve:geografia-p1": "node scripts/editorial/approve-geography-p1.mjs",
     "calendar:import": "node scripts/calendar/import-calendar.mjs",
     "precommit": "lint-staged",

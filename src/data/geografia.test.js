@@ -18,4 +18,8 @@ describe('conteúdos de Geografia', () => {
     expect(p1.questions.filter((question) => question.type === 'multipleChoice')).toHaveLength(45)
     expect(p1.questions.filter((question) => question.type === 'matchColumns')).toHaveLength(15)
   })
+
+  it('não expõe a P2 enquanto o lote estiver em preparação', () => {
+    expect(GEOGRAPHY_TOPICS.find((topic) => topic.id === 'geografia-p2-populacao-migracoes')).toBeUndefined()
+  })
 })

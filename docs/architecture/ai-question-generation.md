@@ -50,9 +50,10 @@ Depois de salvar o manifesto exportado como `editorial/reviews/geografia-p2-revi
 
 ```bash
 npm run editorial:approve:geografia-p2
+npm run editorial:publish:geografia-p2
 ```
 
-O comando recusa questões pendentes ou com ajuste solicitado. O mesmo gerador escolhe a configuração editorial pelo nome do conteúdo, mantendo IDs, fontes, focos e checkpoints separados entre P1 e P2.
+O primeiro comando recusa questões pendentes ou com ajuste solicitado. O segundo valida novamente o conteúdo e a aprovação e substitui o pacote publicado de forma atômica; assim, a aplicação nunca recebe apenas parte das 60 questões. O mesmo gerador escolhe a configuração editorial pelo nome do conteúdo, mantendo IDs, fontes, focos e checkpoints separados entre P1 e P2.
 
 Não cole a chave em arquivos do projeto, no chat, em issues ou em commits.
 

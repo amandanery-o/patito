@@ -1,4 +1,5 @@
 import geographyP1Questions from './generated/geografiaP1Questions.json'
+import geographyP2Content from './generated/geografiaP2Content.json'
 
 export const GEOGRAPHY_TOPICS = [
   {
@@ -234,4 +235,41 @@ export const GEOGRAPHY_TOPICS = [
     ],
     questions: [],
   },
+  ...(geographyP2Content.status === 'approved'
+    ? [
+        {
+          id: 'geografia-p2-populacao-migracoes',
+          title: 'Revisão P2 — População e migrações',
+          chapter: '11 e 12',
+          reviewLabel: 'Revisão para a P2',
+          source: geographyP2Content.source,
+          summarySections: [
+            {
+              title: 'População brasileira',
+              text: 'A demografia estuda o tamanho, a distribuição e as características da população. A ocupação do território brasileiro é desigual e se relaciona à história, aos transportes, ao clima e às oportunidades de trabalho.',
+            },
+            {
+              title: 'Trabalho e direitos',
+              text: 'Campo e cidade concentram atividades econômicas diferentes. Trabalho formal e informal oferecem garantias diferentes, e todas as pessoas devem ter direitos, oportunidades e divisão justa das tarefas domésticas.',
+            },
+            {
+              title: 'Migrações',
+              text: 'As pessoas migram dentro de um país ou entre países por diferentes motivos. Êxodo rural, migração sazonal e deslocamento pendular descrevem movimentos distintos.',
+            },
+            {
+              title: 'Diversidade cultural',
+              text: 'Migrantes levam conhecimentos, hábitos, culinária, festas e formas de falar, contribuindo para a diversidade dos lugares de origem e de destino.',
+            },
+          ],
+          keyIdeas: [
+            'Densidade demográfica não é o mesmo que quantidade total de habitantes.',
+            'A população brasileira se distribui de maneira desigual.',
+            'Imigração e emigração observam o deslocamento por pontos de vista diferentes.',
+            'Êxodo rural e deslocamento pendular não são a mesma coisa.',
+            'Migrações podem possuir causas econômicas, sociais, políticas e ambientais.',
+          ],
+          questions: geographyP2Content.questions,
+        },
+      ]
+    : []),
 ]
