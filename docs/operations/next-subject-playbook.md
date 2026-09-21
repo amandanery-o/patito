@@ -6,10 +6,10 @@ Este é o procedimento obrigatório para publicar qualquer novo material de prov
 
 A prioridade acompanha a primeira prova ainda sem material publicado. Matemática T2 e P1 foram concluídas em 21/08/2026 e permanecem como implementação de referência:
 
-1. História P1 — capítulos 9 e 10 — prova em 24/09/2026.
-2. Inglês P1 — unidades 5 e 6 — prova em 25/09/2026.
-3. Português P1 — tópicos e páginas do calendário — prova em 28/09/2026.
-4. Ciências P1 — capítulos 8 e 9 — prova em 30/09/2026.
+1. Inglês P1 — unidades 5 e 6 — prova em 25/09/2026.
+2. Português P1 — tópicos e páginas do calendário — prova em 28/09/2026.
+3. Ciências P1 — capítulos 8 e 9 — prova em 30/09/2026.
+4. História P1 — capítulos 9 e 10 — prova em 08/10/2026, conforme comunicado de 17/09.
 5. Demais trabalhos e materiais P2, em ordem de data.
 
 Se a fonte autorizada de uma matéria não estiver disponível, o agente registra o bloqueio e avança para a próxima fonte disponível. Não inventa conteúdo nem usa páginas não conferidas.
