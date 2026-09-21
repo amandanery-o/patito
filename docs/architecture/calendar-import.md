@@ -41,3 +41,9 @@ npm run calendar:import -- \
 Para uma nova versão, acrescente `--compare` apontando para o manifesto anterior. O relatório informa inclusões, alterações e remoções; o SQL aplica o lote e remove apenas os identificadores ausentes que estavam no manifesto comparado, dentro da mesma transação.
 
 O PDF original não entra no Git. O manifesto guarda seu hash para comprovar exatamente qual arquivo foi revisado.
+
+## Correções posteriores ao PDF
+
+O comunicado da professora de 17/09/2026 substitui três datas do PDF original. A transcrição está em `docs/sources/correcao-provas-p1-2026-09-17.md`; o manifesto `calendar-turma-43-2026-s2-v2.json` mantém os 27 eventos e registra o SHA-256 da imagem recebida, sem copiar a imagem com dados pessoais para o Git. Somente os três eventos alterados recebem `source_file` e `source_version` novos. Os demais mantêm a proveniência do PDF.
+
+`supabase/seed.sql` representa o estado completo para uma instalação nova. Em um banco já publicado, aplicar `supabase/corrections/2026-09-17-provas-p1.sql` em uma única transação. Ele altera os três registros existentes, preserva seus UUIDs e aborta se o estado anterior não corresponder ao esperado. Confirmar as três novas datas em `school_events` após a aplicação.

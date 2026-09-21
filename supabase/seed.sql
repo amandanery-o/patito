@@ -7,14 +7,14 @@ values
   ('t43-2026-s2-20260908-trabalho-matematica', 'matematica', 'trabalho', '2026-09-08', null, null, 2, 'Grandezas e medidas — capítulos 4 e 8', 'Trabalho T2', 'PDF_2026_08_17_15_16_08.pdf', 'turma-43-2026-s2-v1'),
   ('t43-2026-s2-20260916-trabalho-ciencias', 'ciencias', 'trabalho', '2026-09-16', null, null, 2, 'Misturas — capítulo 7', 'Trabalho T2', 'PDF_2026_08_17_15_16_08.pdf', 'turma-43-2026-s2-v1'),
   ('t43-2026-s2-20260921-prova-educacao-fisica', 'educacao-fisica', 'prova', '2026-09-21', '2026-09-25', null, 2, 'Habilidades motoras globais, domínio cinestésico, deslocamento e progressão rítmica e coordenada', 'Prova P1', 'PDF_2026_08_17_15_16_08.pdf', 'turma-43-2026-s2-v1'),
-  ('t43-2026-s2-20260921-prova-geografia', 'geografia', 'prova', '2026-09-21', null, null, 2, 'Atividades econômicas dos espaços rural e urbano — capítulos 7 e 8', 'Prova P1', 'PDF_2026_08_17_15_16_08.pdf', 'turma-43-2026-s2-v1'),
-  ('t43-2026-s2-20260922-prova-matematica', 'matematica', 'prova', '2026-09-22', null, null, 2, 'Multiplicação e divisão por dois algarismos, operações inversas e valores desconhecidos — capítulos 5, 6 e 7', 'Prova P1', 'PDF_2026_08_17_15_16_08.pdf', 'turma-43-2026-s2-v1'),
-  ('t43-2026-s2-20260924-prova-historia', 'historia', 'prova', '2026-09-24', null, null, 2, 'Colonização do Brasil e migrações para o Brasil — capítulos 9 e 10', 'Prova P1', 'PDF_2026_08_17_15_16_08.pdf', 'turma-43-2026-s2-v1'),
   ('t43-2026-s2-20260925-prova-ingles', 'ingles', 'prova', '2026-09-25', null, null, 2, 'Unidades 5 e 6', 'Prova P1', 'PDF_2026_08_17_15_16_08.pdf', 'turma-43-2026-s2-v1'),
   ('t43-2026-s2-20260925-trabalho-ensino-religioso', 'ensino-religioso', 'trabalho', '2026-09-25', null, null, 2, 'A importância dos ritos religiosos', 'Trabalho T2', 'PDF_2026_08_17_15_16_08.pdf', 'turma-43-2026-s2-v1'),
   ('t43-2026-s2-20260928-prova-portugues', 'portugues', 'prova', '2026-09-28', null, null, 2, 'Leitura e interpretação; adjetivos em OSO/OSA (p. 110); substantivos em AGEM/EZA (p. 124); vírgula; concordância nominal (p. 144); plural em ÃO (p. 146)', 'Prova P1', 'PDF_2026_08_17_15_16_08.pdf', 'turma-43-2026-s2-v1'),
   ('t43-2026-s2-20260930-prova-ciencias', 'ciencias', 'prova', '2026-09-30', null, null, 2, 'Transformações químicas e físicas; reversíveis e irreversíveis — capítulos 8 e 9', 'Prova P1', 'PDF_2026_08_17_15_16_08.pdf', 'turma-43-2026-s2-v1'),
+  ('t43-2026-s2-20261002-prova-matematica', 'matematica', 'prova', '2026-10-02', null, null, 2, 'Multiplicação e divisão por dois algarismos, operações inversas e valores desconhecidos — capítulos 5, 6 e 7', 'Prova P1', 'IMG_6847.PNG', 'turma-43-2026-s2-v2'),
+  ('t43-2026-s2-20261005-prova-geografia', 'geografia', 'prova', '2026-10-05', null, null, 2, 'Atividades econômicas dos espaços rural e urbano — capítulos 7 e 8', 'Prova P1', 'IMG_6847.PNG', 'turma-43-2026-s2-v2'),
   ('t43-2026-s2-20261005-trabalho-educacao-fisica', 'educacao-fisica', 'trabalho', '2026-10-05', '2026-10-09', null, 2, 'Esportes coletivos e pré-desportivos; características, regras, sistemas, estrutura e modelo de jogo', 'Trabalho T2', 'PDF_2026_08_17_15_16_08.pdf', 'turma-43-2026-s2-v1'),
+  ('t43-2026-s2-20261008-prova-historia', 'historia', 'prova', '2026-10-08', null, null, 2, 'Colonização do Brasil e migrações para o Brasil — capítulos 9 e 10', 'Prova P1', 'IMG_6847.PNG', 'turma-43-2026-s2-v2'),
   ('t43-2026-s2-20261009-trabalho-ingles', 'ingles', 'trabalho', '2026-10-09', null, null, 2, 'Atividade em língua inglesa realizada em sala', 'Trabalho T2', 'PDF_2026_08_17_15_16_08.pdf', 'turma-43-2026-s2-v1'),
   ('t43-2026-s2-20261109-prova-educacao-fisica', 'educacao-fisica', 'prova', '2026-11-09', '2026-11-13', null, 3, 'Evolução motora, participação, integração, rendimento, autonomia e destreza nas atividades', 'Prova P2', 'PDF_2026_08_17_15_16_08.pdf', 'turma-43-2026-s2-v1'),
   ('t43-2026-s2-20261110-prova-matematica', 'matematica', 'prova', '2026-11-10', null, null, 3, 'Frações, números decimais, tabelas e gráficos — capítulos 9, 10 e 11', 'Prova P2', 'PDF_2026_08_17_15_16_08.pdf', 'turma-43-2026-s2-v1'),
@@ -41,4 +41,5 @@ on conflict (external_id) do update set
   source_file = excluded.source_file,
   source_version = excluded.source_version,
   updated_at = now();
+delete from public.school_events where external_id in ('t43-2026-s2-20260921-prova-geografia', 't43-2026-s2-20260922-prova-matematica', 't43-2026-s2-20260924-prova-historia');
 commit;
