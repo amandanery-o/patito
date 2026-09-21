@@ -47,7 +47,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-026` ✅ Atualizar seed/eventos para o segundo semestre.
 - `TASK-027` ✅ Criar importador validado de PDF para eventos oficiais.
 - `TASK-028` ✅ Testar alertas, fuso horário e duplicidades.
-- `TASK-058` 🟡 Corrigir as três datas P1 do comunicado de 17/09, validar o manifesto v2 e aplicar a correção transacional no Supabase remoto. Arquivos: fonte, manifesto, seed e SQL de correção. Aceite: apenas Matemática 02/10, Geografia 05/10 e História 08/10 mudam; os 27 eventos seguem únicos; publicação remota e leitura por aluno confirmadas. Dependência: aplicação autorizada da correção no banco; risco: Agenda continua com datas antigas até a publicação.
+- `TASK-058` ✅ Corrigir as três datas P1 do comunicado de 17/09, validar o manifesto v2 e aplicar a correção transacional no Supabase remoto. Arquivos: fonte, manifesto, seed e SQL de correção. Aceite: apenas Matemática 02/10, Geografia 05/10 e História 08/10 mudam; os 27 eventos seguem únicos; publicação remota confirmada. Conferidos no Supabase: três datas v2 e 27 IDs distintos.
 
 ## F006 — Temas
 
