@@ -156,6 +156,10 @@ Não existirão perfis de responsável, professor, coordenador ou administrador 
 7. Uso e progresso são sincronizados sem depender do dispositivo atual.
 8. O ranking reflete utilização, sem comparar desempenho.
 
+### Materiais publicados em 22/09/2026
+
+Geografia P1/P2, Matemática T2/P1 e Ciências P1 seguem o fluxo de leitura e prática separadas. Ciências P1 cobre os capítulos 8 e 9 do Nautas 4º ano, com resumo próprio e 60 questões aprovadas por revisão independente. Inglês, Português e História ainda dependem da conclusão de suas fontes e do mesmo processo editorial.
+
 ## 8. Dados que precisam ser preservados
 
 - Identidade do aluno.

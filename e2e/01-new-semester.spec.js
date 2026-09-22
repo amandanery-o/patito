@@ -72,6 +72,17 @@ test.describe('Estrutura limpa do segundo semestre', () => {
     await expect(page.getByText('1/30 questões', { exact: true })).toBeVisible()
   })
 
+  test('publica Ciências P1 com leitura e prática separadas', async ({ page }) => {
+    const scienceCard = page.getByTestId('subject-ciencias')
+    await expect(scienceCard.getByText('0 de 1 revisão concluída', { exact: true })).toBeVisible()
+    await scienceCard.getByRole('button', { name: /Ver materiais/i }).click()
+    await page.getByRole('button', { name: 'Ler material da Revisão P1 — Transformações dos materiais' }).click()
+    await expect(page.getByRole('heading', { name: 'Transformações físicas e químicas' })).toBeVisible()
+    await page.getByRole('button', { name: 'Praticar 30 questões' }).click()
+    await expect(page.getByText('Revisão P1 — Transformações dos materiais', { exact: true })).toBeVisible()
+    await expect(page.getByText('1/30 questões', { exact: true })).toBeVisible()
+  })
+
   test('abre a agenda escolar oficial', async ({ page }) => {
     await page
       .getByRole('button', { name: /Agenda/i })

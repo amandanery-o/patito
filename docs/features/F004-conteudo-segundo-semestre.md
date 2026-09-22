@@ -41,4 +41,5 @@ Configurações, credenciais e permissões de uso de Edebê e Richmond College a
 - Geografia P1 e P2: capítulos 7–8 e 11–12.
 - Matemática T2: capítulos 4 e 8, 60 questões aprovadas.
 - Matemática P1: capítulos 5, 6 e 7, 60 questões aprovadas.
+- Ciências P1: capítulos 8 e 9, 60 questões aprovadas, com leitura e prática separadas.
 - As demais matérias permanecem no estado explícito **Em breve** até concluírem o mesmo pipeline.

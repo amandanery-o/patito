@@ -1,0 +1,1322 @@
+{
+  "status": "approved",
+  "contentId": "ciencias-p1-capitulos-8-9",
+  "title": "Revisão P1 — Transformações dos materiais",
+  "summary": "Revisão dos capítulos 8 e 9: transformações físicas, químicas, reversíveis e irreversíveis.",
+  "source": {
+    "provider": "edebe",
+    "resourceId": "courseware-249/chapters-8-9",
+    "version": "2024"
+  },
+  "generation": {
+    "model": "claude-sonnet-4-6",
+    "promptVersion": "question-batch-v2",
+    "generatedAt": "2026-09-22T12:01:38.988Z",
+    "usage": [
+      {
+        "batch": 1,
+        "input_tokens": 4487,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1871,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 2,
+        "input_tokens": 4750,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1788,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 3,
+        "input_tokens": 5046,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1832,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 4,
+        "input_tokens": 5281,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1920,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 5,
+        "input_tokens": 5547,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1836,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 6,
+        "input_tokens": 5991,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1837,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      }
+    ]
+  },
+  "editorialApproval": {
+    "reviewer": "Agente editorial independente Patito",
+    "reviewerType": "agent",
+    "reviewMethod": "independent-source-check-v4",
+    "reviewedAt": "2026-09-22T12:53:35.348Z",
+    "draftDigest": "d3c700187fda4d425a5b87ebe60fedf6ccd59f7c8ac855862fa9073cdfed7aad",
+    "schemaVersion": 1
+  },
+  "publishedAt": "2026-09-22T12:53:52.241Z",
+  "questions": [
+    {
+      "difficulty": "easy",
+      "question": "Quando o gelo derrete e vira água, o que acontece com o material?",
+      "explanation": "Derreter o gelo é uma transformação física: a água muda de estado sólido para líquido, mas continua sendo água. Nenhum material novo é formado.",
+      "sourceRef": {
+        "section": "Transformações físicas e químicas",
+        "pages": "80–81"
+      },
+      "options": [
+        "O material vira outro material diferente.",
+        "O material muda de estado, mas continua sendo o mesmo.",
+        "O material desaparece completamente.",
+        "O material vira gás imediatamente."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "cie-p1-001"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Assar um bolo é um exemplo de qual tipo de transformação?",
+      "explanation": "Ao assar o bolo, os ingredientes se transformam em um material diferente, que não pode voltar a ser farinha, ovos e leite separados. Por isso, é uma transformação química.",
+      "sourceRef": {
+        "section": "Transformações físicas e químicas",
+        "pages": "80–81"
+      },
+      "options": [
+        "Transformação física, porque muda a forma.",
+        "Transformação química, porque forma um material diferente.",
+        "Transformação química, porque o bolo fica maior.",
+        "Transformação física, porque usa calor."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "cie-p1-002"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual das situações abaixo é um indício de que pode ter ocorrido uma transformação química?",
+      "explanation": "A mudança de cor, a formação de gás ou de sólido, a emissão de luz e calor são indícios de transformação química. Esses sinais indicam que um material diferente pode ter sido formado.",
+      "sourceRef": {
+        "section": "Observação de transformações",
+        "pages": "82–83"
+      },
+      "options": [
+        "O material mudou de cor e liberou gás.",
+        "O material foi aquecido e ficou mais quente.",
+        "O material mudou de recipiente.",
+        "O material foi cortado em pedaços menores."
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "cie-p1-003"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Pedro derreteu gelo e depois colocou a água no congelador. O que aconteceu com o material ao longo dessas duas etapas?",
+      "explanation": "Derreter o gelo é fusão (sólido para líquido) e congelar a água é solidificação (líquido para sólido). Em ambas as etapas, o material continua sendo água, então são transformações físicas e reversíveis.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "options": [
+        "O material passou por uma transformação irreversível.",
+        "O material passou por duas transformações químicas.",
+        "O material passou por fusão e depois por solidificação.",
+        "O material passou por vaporização e depois por condensação."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "cie-p1-004"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Cozinhar um ovo é considerado uma transformação irreversível. Por quê?",
+      "explanation": "Após cozinhar, o ovo não pode voltar ao estado cru. Como o material não retorna à condição inicial, a transformação é irreversível.",
+      "sourceRef": {
+        "section": "Transformações irreversíveis",
+        "pages": "93–93"
+      },
+      "options": [
+        "Porque o ovo muda de tamanho ao ser cozido.",
+        "Porque o calor sempre causa transformações físicas.",
+        "Porque o ovo cozido não pode voltar a ser ovo cru.",
+        "Porque o ovo libera água durante o cozimento."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "cie-p1-005"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Ana rasgou uma folha de papel ao meio. Como podemos classificar essa transformação?",
+      "explanation": "Rasgar papel é uma transformação física, pois não forma um material diferente. Porém, ela é irreversível, porque os pedaços rasgados não voltam a ser a folha inteira por si mesmos.",
+      "sourceRef": {
+        "section": "Transformações irreversíveis",
+        "pages": "93–93"
+      },
+      "options": [
+        "Transformação química e irreversível.",
+        "Transformação física e reversível.",
+        "Transformação física e irreversível.",
+        "Transformação química e reversível."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "cie-p1-006"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual é a diferença entre fusão e solidificação?",
+      "explanation": "Fusão é a passagem do estado sólido para o líquido, como o gelo derretendo. Solidificação é o caminho contrário: do líquido para o sólido, como a água congelando.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "options": [
+        "Fusão é de líquido para sólido; solidificação é de sólido para líquido.",
+        "Fusão é de gás para líquido; solidificação é de líquido para gás.",
+        "Fusão é de líquido para gás; solidificação é de gás para líquido.",
+        "Fusão é de sólido para líquido; solidificação é de líquido para sólido."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "cie-p1-007"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia as situações abaixo e escolha aquela em que ocorre uma transformação física reversível.\n\n1. Queimar uma vela até ela acabar.\n2. Derreter alumínio e moldá-lo em outra forma.\n3. Apodrecer uma fruta.\n4. Assar um bolo.",
+      "explanation": "Derreter e moldar alumínio é uma transformação física (não forma outro material) e reversível (o alumínio pode ser derretido e solidificado novamente sem mudar sua composição). As outras situações envolvem transformações irreversíveis ou químicas.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "options": [
+        "Situação 4",
+        "Situação 1",
+        "Situação 2",
+        "Situação 3"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "cie-p1-008"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada pista observada ao exemplo correspondente.",
+      "explanation": "Derreter gelo é uma mudança física; assar bolo e queimar papel formam outros materiais. As pistas ajudam a identificar cada caso.",
+      "sourceRef": {
+        "section": "Transformações físicas e químicas",
+        "pages": "80–81"
+      },
+      "pairs": [
+        {
+          "left": "Material muda de sólido para líquido sem formar outro material",
+          "right": "Gelo derretendo"
+        },
+        {
+          "left": "Ingredientes aquecidos formam um alimento diferente",
+          "right": "Bolo assando"
+        },
+        {
+          "left": "Material queimado deixa cinzas e fumaça",
+          "right": "Papel em combustão"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "cie-p1-009"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada termo à sua definição correta.",
+      "explanation": "Fusão é a passagem do sólido para o líquido. Solidificação é do líquido para o sólido. Vaporização é do líquido para o gás. Condensação é do gás para o líquido. Conhecer essas mudanças de estado ajuda a entender o ciclo da água e outras transformações físicas reversíveis.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "pairs": [
+        {
+          "left": "Fusão",
+          "right": "Passagem do sólido para o líquido"
+        },
+        {
+          "left": "Solidificação",
+          "right": "Passagem do líquido para o sólido"
+        },
+        {
+          "left": "Vaporização",
+          "right": "Passagem do líquido para o gás"
+        },
+        {
+          "left": "Condensação",
+          "right": "Passagem do gás para o líquido"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "cie-p1-010"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual é a característica dos materiais no estado sólido?",
+      "explanation": "Materiais sólidos têm forma própria, ou seja, não mudam de forma quando trocamos de recipiente. Já os líquidos assumem a forma do recipiente e os gases ocupam o espaço disponível.",
+      "sourceRef": {
+        "section": "Transformações físicas e químicas",
+        "pages": "80–81"
+      },
+      "options": [
+        "Têm forma própria, que não muda.",
+        "Não podem ser aquecidos nem resfriados.",
+        "Assumem a forma do recipiente em que estão.",
+        "Ocupam todo o espaço disponível ao redor."
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "cie-p1-011"
+    },
+    {
+      "difficulty": "easy",
+      "question": "O que acontece com a água quando ela é aquecida até virar vapor?",
+      "explanation": "Quando um líquido passa para o estado gasoso, chamamos essa mudança de vaporização. O vapor d'água é a água no estado gasoso.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "options": [
+        "Ela sofre fusão e vira outro material.",
+        "Ela sofre solidificação e vira gelo.",
+        "Ela sofre vaporização e vira gás.",
+        "Ela sofre condensação e vira chuva."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "cie-p1-012"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual das situações abaixo mostra uma transformação irreversível?",
+      "explanation": "Queimar papel é uma transformação irreversível porque o papel não pode voltar ao seu estado original após ser queimado. Já derreter gelo, dobrar papel e congelar suco são transformações que podem ser revertidas.",
+      "sourceRef": {
+        "section": "Transformações irreversíveis",
+        "pages": "93–93"
+      },
+      "options": [
+        "Derreter gelo no copo.",
+        "Dobrar uma folha de papel.",
+        "Queimar uma folha de papel.",
+        "Congelar suco de fruta."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "cie-p1-013"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "O alumínio de uma lata foi derretido e depois moldado em outro objeto. O que permaneceu igual nesse processo?",
+      "explanation": "O alumínio mudou de forma e de estado, mas continuou sendo alumínio. Por isso ele pode ser reaproveitado.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "options": [
+        "A forma da lata",
+        "A composição do alumínio",
+        "A temperatura do material",
+        "O tamanho do objeto"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "cie-p1-014"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Um pedaço de alumínio foi derretido e moldado em uma nova forma. O material que existia antes ainda é alumínio depois do processo. Isso mostra que a transformação foi:",
+      "explanation": "Derreter e solidificar alumínio sem mudar sua composição é uma transformação física reversível. O alumínio pode ser derretido e moldado novamente porque continua sendo o mesmo material.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "options": [
+        "Química e reversível.",
+        "Física e irreversível.",
+        "Química e irreversível.",
+        "Física e reversível."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "cie-p1-015"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual dos indícios abaixo pode indicar que uma transformação química aconteceu?",
+      "explanation": "A formação de um gás, como bolhas ou fumaça, pode ser um indício de transformação química, pois sugere que um material diferente foi formado. Mudança de cor, formação de sólido, luz e calor também podem indicar transformação química.",
+      "sourceRef": {
+        "section": "Observação de transformações",
+        "pages": "82–83"
+      },
+      "options": [
+        "O material foi partido em pedaços menores.",
+        "O material ficou mais frio ao ser tocado.",
+        "O material mudou de recipiente.",
+        "Formou-se um gás durante a transformação."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "cie-p1-016"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Rasgar uma folha de papel é uma transformação física. Mas ela também é irreversível. O que isso significa?",
+      "explanation": "Mesmo sendo física, rasgar papel não permite que o material volte exatamente à condição anterior. Isso mostra que transformações físicas podem ser irreversíveis, ou seja, nem toda transformação física é reversível.",
+      "sourceRef": {
+        "section": "Transformações irreversíveis",
+        "pages": "93–93"
+      },
+      "options": [
+        "O papel virou outro material depois de ser rasgado.",
+        "O papel rasgado não pode voltar à condição original.",
+        "O papel rasgado pode ser colado e fica igual ao original.",
+        "Rasgar papel é sempre uma transformação química."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "cie-p1-017"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia as duas afirmações abaixo:\n1. Uma transformação pode ser física e reversível ao mesmo tempo.\n2. Uma transformação pode ser física e irreversível ao mesmo tempo.\n\nCom base no que você estudou, qual das afirmações está correta?",
+      "explanation": "As duas afirmações estão corretas. Derreter gelo é física e reversível. Rasgar papel é física e irreversível. Física/química e reversível/irreversível respondem a perguntas diferentes sobre a mesma transformação.",
+      "sourceRef": {
+        "section": "Revisão e ciclo da água",
+        "pages": "96–97"
+      },
+      "options": [
+        "Somente a afirmação 2 está correta.",
+        "As duas afirmações estão corretas.",
+        "As duas afirmações estão incorretas.",
+        "Somente a afirmação 1 está correta."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "cie-p1-018"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada observação da investigação ao que ela mostra.",
+      "explanation": "A investigação compara o ovo, que não volta a ser cru, com o gelo, que pode derreter e congelar novamente.",
+      "sourceRef": {
+        "section": "Investigação com ovo e gelo",
+        "pages": "94–95"
+      },
+      "pairs": [
+        {
+          "left": "O ovo continua com as características de cru antes do aquecimento",
+          "right": "Condição inicial do ovo"
+        },
+        {
+          "left": "O ovo apresenta novas características após o cozimento",
+          "right": "Mudança irreversível pelo calor"
+        },
+        {
+          "left": "O cubo fora do congelador vira água líquida",
+          "right": "Derretimento por aquecimento"
+        },
+        {
+          "left": "A água volta a formar gelo depois de resfriada",
+          "right": "Mudança reversível pelo frio"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "cie-p1-019"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada exemplo ao estado físico do material descrito.",
+      "explanation": "Sólidos têm forma própria; líquidos assumem a forma do recipiente; gases ocupam o espaço disponível. Reconhecer o estado físico de um material é importante para entender como ele se comporta e como pode se transformar.",
+      "sourceRef": {
+        "section": "Transformações físicas e químicas",
+        "pages": "80–81"
+      },
+      "pairs": [
+        {
+          "left": "Cubo de gelo",
+          "right": "Sólido"
+        },
+        {
+          "left": "Água em um copo",
+          "right": "Líquido"
+        },
+        {
+          "left": "Vapor de água no ar",
+          "right": "Gasoso"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "cie-p1-020"
+    },
+    {
+      "difficulty": "easy",
+      "question": "O que é reciclagem?",
+      "explanation": "Reciclagem é o processo de reaproveitar materiais para que eles não virem lixo. Assim, um material usado pode se tornar um novo produto.",
+      "sourceRef": {
+        "section": "Reciclagem e plásticos",
+        "pages": "84–85"
+      },
+      "options": [
+        "Jogar fora materiais que não servem mais",
+        "Reaproveitar materiais para fazer novos produtos",
+        "Queimar materiais para diminuir o lixo",
+        "Guardar materiais sem usá-los novamente"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "cie-p1-021"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Como chamamos os resíduos plásticos muito pequenos que poluem o ambiente?",
+      "explanation": "Resíduos plásticos muito pequenos são chamados de microplásticos. Eles são difíceis de recolher e podem causar problemas ao meio ambiente.",
+      "sourceRef": {
+        "section": "Reciclagem e plásticos",
+        "pages": "84–85"
+      },
+      "options": [
+        "Microplásticos",
+        "Miniplásticos",
+        "Bioplásticos",
+        "Nanoplásticos"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "cie-p1-022"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Queimar papel é um exemplo de qual tipo de transformação?",
+      "explanation": "Queimar papel é uma transformação química, porque o papel se transforma em cinzas e fumaça, materiais completamente diferentes do papel original.",
+      "sourceRef": {
+        "section": "Transformações físicas e químicas",
+        "pages": "80–81"
+      },
+      "options": [
+        "Transformação química",
+        "Mudança de estado físico",
+        "Transformação física reversível",
+        "Transformação física irreversível"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "cie-p1-023"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Por que derreter e solidificar alumínio é um exemplo de reaproveitamento?",
+      "explanation": "Quando o alumínio é derretido e moldado em outra forma, ele continua sendo alumínio. Como o material não muda, ele pode ser reutilizado várias vezes, o que é uma forma de reaproveitamento.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "options": [
+        "Porque o alumínio derretido não pode voltar ao estado sólido",
+        "Porque o alumínio vira um material diferente ao ser derretido",
+        "Porque o alumínio pode ser derretido e moldado sem mudar sua composição",
+        "Porque derreter alumínio é uma transformação química"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "cie-p1-024"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual das situações abaixo é um exemplo de transformação química?",
+      "explanation": "A combustão, como queimar uma vela até ela acabar, é uma transformação química porque forma materiais diferentes dos originais. As outras situações são transformações físicas.",
+      "sourceRef": {
+        "section": "Transformações físicas e químicas",
+        "pages": "80–81"
+      },
+      "options": [
+        "Derreter manteiga no fogão",
+        "Amassar uma folha de papel alumínio",
+        "Queimar uma vela até ela acabar",
+        "Dissolver açúcar na água"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "cie-p1-025"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "O que acontece com o material durante uma combustão?",
+      "explanation": "Na combustão, o material queima e forma materiais diferentes, como fumaça e cinzas. Por isso, a combustão é uma transformação química e irreversível.",
+      "sourceRef": {
+        "section": "Transformações físicas e químicas",
+        "pages": "80–81"
+      },
+      "options": [
+        "O material muda de estado físico e pode voltar ao estado anterior",
+        "O material se transforma em outros materiais diferentes",
+        "O material apenas muda de cor sem se transformar",
+        "O material muda de forma, mas continua sendo o mesmo"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "cie-p1-026"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Por que a reciclagem de plásticos é importante para o meio ambiente?",
+      "explanation": "A reciclagem de plásticos permite reaproveitar esse material, reduzindo a quantidade de resíduos no ambiente. Sem reciclagem, os plásticos podem se fragmentar em microplásticos e poluir o ambiente por muito tempo.",
+      "sourceRef": {
+        "section": "Reciclagem e plásticos",
+        "pages": "84–85"
+      },
+      "options": [
+        "Porque permite reaproveitar o plástico, reduzindo a quantidade de resíduos",
+        "Porque faz o plástico desaparecer rapidamente na natureza",
+        "Porque transforma o plástico em outro tipo de material completamente diferente",
+        "Porque elimina totalmente os microplásticos já existentes no ambiente"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "cie-p1-027"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Uma massinha foi apenas dividida em duas partes. Em outro caso, uma folha foi queimada e deixou cinzas. Qual observação permite distinguir as duas transformações?",
+      "explanation": "Dividir a massinha muda sua forma sem criar outro material. A combustão da folha forma materiais diferentes, como cinzas e fumaça.",
+      "sourceRef": {
+        "section": "Transformações físicas e químicas",
+        "pages": "80–81"
+      },
+      "options": [
+        "Nos dois casos surgiu o mesmo material novo",
+        "A massinha continuou sendo massinha; a queima formou materiais diferentes",
+        "Dividir a massinha é sempre uma transformação química",
+        "A folha queimada pode voltar a ser a mesma folha"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "cie-p1-028"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada descrição da seção sobre plásticos ao termo correspondente.",
+      "explanation": "Microplásticos são fragmentos pequenos; reciclagem reaproveita materiais; o descarte de plástico precisa de cuidado.",
+      "sourceRef": {
+        "section": "Reciclagem e plásticos",
+        "pages": "84–85"
+      },
+      "pairs": [
+        {
+          "left": "Pequenos fragmentos de resíduos plásticos",
+          "right": "Microplásticos"
+        },
+        {
+          "left": "Aproveitar material usado para produzir um novo objeto",
+          "right": "Reciclagem"
+        },
+        {
+          "left": "Material que pode gerar resíduos muito persistentes quando descartado de modo inadequado",
+          "right": "Plástico"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "cie-p1-029"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada atitude ao resultado que ela busca.",
+      "explanation": "Separar, reutilizar e descartar corretamente são atitudes diferentes que ajudam a reduzir resíduos plásticos.",
+      "sourceRef": {
+        "section": "Reciclagem e plásticos",
+        "pages": "84–85"
+      },
+      "pairs": [
+        {
+          "left": "Separar uma embalagem plástica para coleta adequada",
+          "right": "Facilitar o encaminhamento para reciclagem"
+        },
+        {
+          "left": "Usar novamente um recipiente que ainda está bom",
+          "right": "Evitar o descarte imediato"
+        },
+        {
+          "left": "Evitar deixar resíduos plásticos na natureza",
+          "right": "Reduzir a presença de fragmentos plásticos no ambiente"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "cie-p1-030"
+    },
+    {
+      "difficulty": "easy",
+      "question": "O que acontece com o alumínio quando ele é aquecido até derreter?",
+      "explanation": "Quando o alumínio é aquecido e derrete, ele passa do estado sólido para o estado líquido. Esse processo é chamado de fusão. O material continua sendo alumínio, apenas muda de estado físico.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "options": [
+        "Ele passa do estado líquido para o estado sólido, num processo chamado solidificação.",
+        "Ele se transforma em gás e desaparece no ar.",
+        "Ele vira um material diferente e não pode mais ser usado.",
+        "Ele passa do estado sólido para o estado líquido, num processo chamado fusão."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "cie-p1-031"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Quando o alumínio líquido esfria e endurece, como chamamos essa mudança?",
+      "explanation": "A passagem do estado líquido para o estado sólido é chamada de solidificação. É o processo contrário da fusão.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "options": [
+        "Solidificação",
+        "Vaporização",
+        "Condensação",
+        "Fusão"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "cie-p1-032"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual das situações abaixo é um exemplo de transformação reversível?",
+      "explanation": "O gelo derretido pode congelar novamente. O material continua sendo água nas duas etapas, por isso a transformação é reversível.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "options": [
+        "Queimar uma folha de papel",
+        "Apodrecer uma banana",
+        "Derreter gelo e congelar a água novamente",
+        "Cozinhar um ovo"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "cie-p1-033"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Carlos derreteu um pedaço de alumínio e depois deixou o material esfriar até endurecer novamente. Qual das afirmações abaixo descreve corretamente o que aconteceu?",
+      "explanation": "Derreter e solidificar alumínio são transformações físicas e reversíveis: o material muda de estado, mas continua sendo alumínio. Por isso, esse processo é uma forma de reaproveitar o material.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "options": [
+        "O alumínio passou por fusão e depois por solidificação, continuando sendo alumínio.",
+        "O alumínio passou por vaporização e depois por condensação.",
+        "O alumínio sofreu uma transformação irreversível e não pôde ser reutilizado.",
+        "O alumínio virou um material diferente depois de derreter."
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "cie-p1-034"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Por que derreter alumínio e moldá-lo em uma nova forma é considerado uma transformação reversível?",
+      "explanation": "Uma transformação é reversível quando o material pode voltar à condição anterior. Ao derreter e solidificar o alumínio, ele continua sendo alumínio — apenas muda de forma e estado físico, sem se transformar em outro material.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "options": [
+        "Porque o alumínio libera gás durante o aquecimento.",
+        "Porque qualquer transformação que use calor é sempre reversível.",
+        "Porque o alumínio vira um material completamente diferente após ser derretido.",
+        "Porque o alumínio pode voltar ao estado sólido e continua sendo alumínio."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "cie-p1-035"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Na investigação, um cubo de gelo ficou fora do congelador e virou água. O que deve acontecer para essa água voltar a ser gelo?",
+      "explanation": "O resfriamento permite que a água líquida se solidifique e volte a ser gelo.",
+      "sourceRef": {
+        "section": "Investigação com ovo e gelo",
+        "pages": "94–95"
+      },
+      "options": [
+        "Ela precisa ser resfriada no congelador",
+        "Ela precisa ser cozida",
+        "Ela precisa ser misturada com cinzas",
+        "Ela precisa receber mais calor"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "cie-p1-036"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Uma folha de papel foi rasgada em pedaços. Qual observação mostra que a mudança foi física?",
+      "explanation": "Rasgar altera a forma da folha, mas não forma outro material. A mudança é física e, nesse caso, irreversível.",
+      "sourceRef": {
+        "section": "Transformações irreversíveis",
+        "pages": "93–93"
+      },
+      "options": [
+        "O papel virou água",
+        "O papel continua sendo papel, embora esteja em pedaços",
+        "O papel se transformou em cinzas",
+        "O papel desapareceu"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "cie-p1-037"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada observação a um possível indício de transformação química.",
+      "explanation": "Gás, sólido, luz e calor são pistas possíveis de transformação química. É preciso observar também se apareceram materiais diferentes.",
+      "sourceRef": {
+        "section": "Transformações físicas e químicas",
+        "pages": "80–81"
+      },
+      "pairs": [
+        {
+          "left": "Apareceram bolhas em um material que estava mudando",
+          "right": "Formação de gás"
+        },
+        {
+          "left": "Surgiu um depósito sólido na mistura",
+          "right": "Formação de sólido"
+        },
+        {
+          "left": "O material emitiu brilho durante a mudança",
+          "right": "Emissão de luz"
+        },
+        {
+          "left": "O material liberou energia e aqueceu o entorno",
+          "right": "Liberação de calor"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "cie-p1-038"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada exemplo à mudança de estado físico que ele representa.",
+      "explanation": "Gelo derretendo é fusão (sólido para líquido); água congelando é solidificação (líquido para sólido); água fervendo é vaporização (líquido para gás). Esses processos são transformações físicas e reversíveis.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "pairs": [
+        {
+          "left": "Gelo derretendo",
+          "right": "Fusão"
+        },
+        {
+          "left": "Água congelando no freezer",
+          "right": "Solidificação"
+        },
+        {
+          "left": "Água fervendo e virando vapor",
+          "right": "Vaporização"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "cie-p1-039"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada pergunta sobre a transformação à resposta que explica sua irreversibilidade.",
+      "explanation": "A página apresenta cozimento, apodrecimento e rasgo como mudanças que não devolvem o material à condição inicial.",
+      "sourceRef": {
+        "section": "Transformações irreversíveis",
+        "pages": "93–93"
+      },
+      "pairs": [
+        {
+          "left": "Um bolo assado pode voltar a ser massa crua?",
+          "right": "Não; o cozimento alterou os ingredientes"
+        },
+        {
+          "left": "Uma fruta apodrecida pode voltar a ficar fresca?",
+          "right": "Não; o apodrecimento mudou a fruta"
+        },
+        {
+          "left": "Uma folha rasgada pode voltar a ser a mesma folha inteira?",
+          "right": "Não; os pedaços não recompõem a condição original"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "cie-p1-040"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Quando a água líquida é aquecida e vira vapor, como chamamos essa mudança de estado?",
+      "explanation": "A passagem de líquido para gás chama-se vaporização. É o que acontece, por exemplo, quando a água ferve ou quando poças d'água secam ao sol.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "options": [
+        "Fusão",
+        "Solidificação",
+        "Condensação",
+        "Vaporização"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "cie-p1-041"
+    },
+    {
+      "difficulty": "easy",
+      "question": "O que acontece quando o vapor d'água esfria e volta a ser líquido?",
+      "explanation": "Quando o gás esfria e vira líquido, ocorre a condensação. É o contrário da vaporização: o material volta ao estado líquido.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "options": [
+        "Condensação",
+        "Solidificação",
+        "Vaporização",
+        "Fusão"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "cie-p1-042"
+    },
+    {
+      "difficulty": "easy",
+      "question": "O ciclo da água envolve mudanças entre os estados físicos da água. Qual das opções abaixo é uma dessas mudanças?",
+      "explanation": "O ciclo da água inclui mudanças de estado físico, como a vaporização (líquido vira gás) e a condensação (gás vira líquido). Assar bolo é uma transformação química, não uma mudança de estado da água.",
+      "sourceRef": {
+        "section": "Revisão e ciclo da água",
+        "pages": "96–97"
+      },
+      "options": [
+        "Queimar papel",
+        "Apodrecer fruta",
+        "Assar bolo",
+        "A água líquida virar vapor"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "cie-p1-043"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Luísa fez um picolé colocando suco de fruta no congelador. Depois, ela tirou o picolé e ele derreteu. Como podemos classificar essas duas transformações?",
+      "explanation": "Congelar o suco é solidificação (líquido vira sólido) e derreter o picolé é fusão (sólido vira líquido). As duas são transformações físicas reversíveis, pois o material pode voltar à condição anterior.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "options": [
+        "Transformações químicas reversíveis",
+        "Transformações químicas irreversíveis",
+        "Transformações físicas reversíveis",
+        "Transformações físicas irreversíveis"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "cie-p1-044"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Durante o ciclo da água, o vapor d'água presente no ar esfria e forma gotinhas de água nas nuvens. Qual mudança de estado ocorre nesse momento?",
+      "explanation": "Quando o vapor (gás) esfria e vira líquido, ocorre a condensação. Esse processo é fundamental no ciclo da água, pois forma as nuvens e, depois, a chuva.",
+      "sourceRef": {
+        "section": "Revisão e ciclo da água",
+        "pages": "96–97"
+      },
+      "options": [
+        "Fusão",
+        "Solidificação",
+        "Vaporização",
+        "Condensação"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "cie-p1-045"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Tomás observou que, em um dia quente, a poça d'água na calçada desapareceu aos poucos. Qual transformação explica o que aconteceu?",
+      "explanation": "A água líquida da poça foi aquecida pelo sol e se transformou em vapor, processo chamado de vaporização. Por isso a poça foi sumindo sem que ninguém a removesse.",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "options": [
+        "A água sofreu solidificação e virou sólido.",
+        "A água sofreu vaporização e virou vapor.",
+        "A água sofreu fusão e virou gás.",
+        "A água sofreu condensação e virou gelo."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "cie-p1-046"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Beatriz afirmou que a vaporização e a condensação são transformações opostas e que as duas fazem parte do ciclo da água. Sua afirmação está correta?",
+      "explanation": "Sim, Beatriz está certa. A vaporização transforma líquido em gás, e a condensação transforma gás em líquido — são processos opostos. As duas mudanças de estado ocorrem no ciclo da água, que envolve justamente essas passagens entre estados físicos.",
+      "sourceRef": {
+        "section": "Revisão e ciclo da água",
+        "pages": "96–97"
+      },
+      "options": [
+        "Sim, porque as duas são transformações opostas e ocorrem no ciclo da água.",
+        "Sim, mas apenas a condensação faz parte do ciclo da água.",
+        "Não, porque a condensação não faz parte do ciclo da água.",
+        "Não, porque vaporização e condensação são o mesmo processo."
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "cie-p1-047"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada mudança de estado físico da água ao momento em que ela ocorre no ciclo da água.",
+      "explanation": "No ciclo da água, a vaporização ocorre quando a água dos rios e mares aquece e vira vapor; a condensação ocorre quando esse vapor esfria e forma gotinhas nas nuvens; a solidificação ocorre quando a água líquida congela e vira gelo.",
+      "sourceRef": {
+        "section": "Revisão e ciclo da água",
+        "pages": "96–97"
+      },
+      "pairs": [
+        {
+          "left": "Vaporização",
+          "right": "A água líquida aquece e vira vapor"
+        },
+        {
+          "left": "Condensação",
+          "right": "O vapor esfria e vira gotinhas de água"
+        },
+        {
+          "left": "Solidificação",
+          "right": "A água líquida congela e vira gelo"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "cie-p1-048"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada situação à mudança de estado físico que ela representa.",
+      "explanation": "Fazer picolé é solidificação (líquido vira sólido); o picolé derretendo é fusão (sólido vira líquido); a fumaça quente esfriando e formando gotinhas é condensação (gás vira líquido); a água fervendo e soltando vapor é vaporização (líquido vira gás).",
+      "sourceRef": {
+        "section": "Transformações reversíveis",
+        "pages": "90–92"
+      },
+      "pairs": [
+        {
+          "left": "Suco de fruta congelando para virar picolé",
+          "right": "Solidificação"
+        },
+        {
+          "left": "Picolé derretendo no calor",
+          "right": "Fusão"
+        },
+        {
+          "left": "Água fervendo e soltando vapor",
+          "right": "Vaporização"
+        },
+        {
+          "left": "Vapor esfriando e virando gotinhas",
+          "right": "Condensação"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "cie-p1-049"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada afirmação sobre o ciclo da água ao conceito correto.",
+      "explanation": "A vaporização e a condensação são transformações físicas reversíveis: o material (água) pode voltar à condição anterior. O ciclo da água é possível justamente porque essas mudanças de estado são reversíveis, permitindo que a água circule continuamente entre os estados líquido, gasoso e sólido.",
+      "sourceRef": {
+        "section": "Revisão e ciclo da água",
+        "pages": "96–97"
+      },
+      "pairs": [
+        {
+          "left": "Passagem da água do estado líquido para o gasoso",
+          "right": "Vaporização"
+        },
+        {
+          "left": "Passagem do vapor para o estado líquido",
+          "right": "Condensação"
+        },
+        {
+          "left": "Tipo de transformação que ocorre no ciclo da água",
+          "right": "Transformação física reversível"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "cie-p1-050"
+    },
+    {
+      "difficulty": "easy",
+      "question": "O que acontece com o ovo quando ele é cozido?",
+      "explanation": "Cozinhar o ovo é uma transformação irreversível: o ovo cru muda de aparência e textura e não pode voltar a ser ovo cru. Isso mostra que nem toda transformação pode ser desfeita.",
+      "sourceRef": {
+        "section": "Transformações irreversíveis",
+        "pages": "93–93"
+      },
+      "options": [
+        "Ele apenas muda de cor, mas continua igual por dentro.",
+        "Ele vira um material completamente diferente, como metal.",
+        "Ele volta a ser ovo cru quando esfria.",
+        "Ele muda e não pode voltar ao estado anterior."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "cie-p1-051"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual das situações abaixo é um exemplo de transformação irreversível?",
+      "explanation": "A ferrugem é uma transformação química e irreversível: o ferro reage com o oxigênio e a umidade formando um material diferente, e esse processo não pode ser desfeito.",
+      "sourceRef": {
+        "section": "Transformações irreversíveis",
+        "pages": "93–93"
+      },
+      "options": [
+        "Alumínio sendo derretido e moldado.",
+        "Gelo derretendo no copo.",
+        "Água virando vapor no fogão.",
+        "Ferrugem se formando em um portão de ferro."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "cie-p1-052"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Rasgar uma folha de papel é uma transformação física. O que mais podemos dizer sobre ela?",
+      "explanation": "Rasgar papel é uma transformação física porque não forma um material novo, mas é irreversível porque os pedaços rasgados não voltam a ser a folha inteira por conta própria.",
+      "sourceRef": {
+        "section": "Transformações irreversíveis",
+        "pages": "93–93"
+      },
+      "options": [
+        "É reversível, pois o papel pode voltar a ser inteiro sozinho.",
+        "É irreversível, pois os pedaços não voltam a ser a folha inteira.",
+        "É química, pois o papel muda de cor ao ser rasgado.",
+        "É reversível, pois o papel continua sendo papel."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "cie-p1-053"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Por que a ferrugem é considerada uma transformação química?",
+      "explanation": "Na ferrugem, o ferro reage com o oxigênio e a umidade e forma um material diferente do ferro original. Quando um novo material é formado, a transformação é química.",
+      "sourceRef": {
+        "section": "Revisão e ciclo da água",
+        "pages": "96–97"
+      },
+      "options": [
+        "Porque o ferro muda de temperatura ao enferrujar.",
+        "Porque um material diferente do ferro é formado durante a ferrugem.",
+        "Porque o ferro pode voltar ao estado original depois de enferrujar.",
+        "Porque o ferro muda de tamanho ao enferrujar."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "cie-p1-054"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Um ovo cozido e um papel rasgado têm algo em comum. O que é?",
+      "explanation": "Tanto cozinhar o ovo quanto rasgar o papel são transformações irreversíveis: em nenhum dos dois casos o material volta à condição inicial. Isso mostra que transformações físicas e químicas podem ser irreversíveis.",
+      "sourceRef": {
+        "section": "Transformações irreversíveis",
+        "pages": "93–93"
+      },
+      "options": [
+        "Os dois são exemplos de transformações irreversíveis.",
+        "Os dois são exemplos de transformações físicas e reversíveis.",
+        "Os dois são exemplos de transformações reversíveis.",
+        "Os dois formam materiais completamente novos."
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "cie-p1-055"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Cláudia observou que um portão de ferro ficou coberto de ferrugem após ficar exposto à chuva. Qual indício mostra que houve uma transformação química?",
+      "explanation": "A mudança de cor e a formação de um novo material, a ferrugem, são indícios de transformação química. O ferro reagiu com o oxigênio e a umidade, formando um material diferente.",
+      "sourceRef": {
+        "section": "Revisão e ciclo da água",
+        "pages": "96–97"
+      },
+      "options": [
+        "O portão mudou de tamanho por causa do calor.",
+        "O portão ficou mais pesado por causa da chuva.",
+        "O portão mudou de cor e formou um novo material sobre sua superfície.",
+        "O portão ficou molhado e depois secou."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "cie-p1-056"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Depois de cozinhar um ovo, uma criança o colocou na geladeira. O ovo voltou a ficar cru?",
+      "explanation": "Resfriar o ovo cozido muda sua temperatura, mas não desfaz o cozimento.",
+      "sourceRef": {
+        "section": "Investigação com ovo e gelo",
+        "pages": "94–95"
+      },
+      "options": [
+        "Sim, porque todo resfriamento desfaz uma mudança",
+        "Sim, porque o ovo fica frio",
+        "Não, porque cozinhar o ovo é irreversível",
+        "Não, porque o ovo virou gelo"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "cie-p1-057"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada situação descrita na revisão ao que aconteceu com o material.",
+      "explanation": "O gelo derrete com aquecimento, a maçã pode apodrecer e o resfriamento solidifica a mistura do picolé.",
+      "sourceRef": {
+        "section": "Revisão e ciclo da água",
+        "pages": "96–97"
+      },
+      "pairs": [
+        {
+          "left": "Cubos de gelo ficaram fora do congelador",
+          "right": "Derreteram"
+        },
+        {
+          "left": "Uma maçã ficou muito tempo sem conservação",
+          "right": "Apodreceu"
+        },
+        {
+          "left": "Uma mistura líquida foi colocada no congelador",
+          "right": "Virou picolé"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "cie-p1-058"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada exemplo da página sobre mudanças irreversíveis ao processo indicado.",
+      "explanation": "Cozimento, rasgo, apodrecimento e combustão são exemplos de mudanças irreversíveis.",
+      "sourceRef": {
+        "section": "Transformações irreversíveis",
+        "pages": "93–93"
+      },
+      "pairs": [
+        {
+          "left": "Um ovo cru é colocado em água quente",
+          "right": "Cozimento"
+        },
+        {
+          "left": "Uma folha é dividida em pedaços",
+          "right": "Rasgo"
+        },
+        {
+          "left": "Uma fruta estraga com o tempo",
+          "right": "Apodrecimento"
+        },
+        {
+          "left": "Madeira é consumida pelo fogo",
+          "right": "Combustão"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "cie-p1-059"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada situação da revisão à explicação correta.",
+      "explanation": "A revisão reúne mudanças de estado e transformações como ferrugem e combustão. Cada situação tem um resultado distinto.",
+      "sourceRef": {
+        "section": "Revisão e ciclo da água",
+        "pages": "96–97"
+      },
+      "pairs": [
+        {
+          "left": "Gelo derretido volta ao congelador",
+          "right": "Pode se solidificar novamente"
+        },
+        {
+          "left": "Ferro exposto sofre ferrugem",
+          "right": "Forma um material diferente na superfície"
+        },
+        {
+          "left": "Papel é queimado",
+          "right": "Produz cinzas e fumaça"
+        },
+        {
+          "left": "Água líquida passa a vapor",
+          "right": "Muda para o estado gasoso"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "cie-p1-060"
+    }
+  ]
+}

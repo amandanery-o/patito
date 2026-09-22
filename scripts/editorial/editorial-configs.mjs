@@ -1,7 +1,31 @@
 import { GEOGRAPHY_SOURCE_TOPICS } from './geography-source-briefs.mjs'
 import { MATHEMATICS_SOURCE_TOPICS } from './mathematics-source-briefs.mjs'
+import { SCIENCE_SOURCE_TOPICS } from './science-source-briefs.mjs'
 
 export const EDITORIAL_CONFIGS = {
+  'ciencias-p1': {
+    assessmentName: 'P1',
+    subject: 'Ciências',
+    subjectId: 'ciencias',
+    chapters: [8, 9],
+    contentId: 'ciencias-p1-capitulos-8-9',
+    questionPrefix: 'cie-p1',
+    title: 'Revisão P1 — Transformações dos materiais',
+    summary: 'Revisão dos capítulos 8 e 9: transformações físicas, químicas, reversíveis e irreversíveis.',
+    source: { provider: 'edebe', resourceId: 'courseware-249/chapters-8-9', version: '2024' },
+    sourceTopics: SCIENCE_SOURCE_TOPICS,
+    publicationOutput: 'src/data/generated/cienciasP1Content.json',
+    contentScope:
+      'capítulo 8 — transformações químicas e físicas; capítulo 9 — transformações reversíveis e irreversíveis',
+    batches: [
+      ['transformações físicas', 'transformações químicas', 'indícios', 'bolo', 'gelo'],
+      ['estados sólido, líquido e gasoso', 'temperatura', 'observação de materiais'],
+      ['reciclagem', 'plásticos', 'combustão', 'reaproveitamento'],
+      ['transformações reversíveis', 'fusão', 'solidificação', 'alumínio'],
+      ['vaporização', 'condensação', 'ciclo da água', 'picolé'],
+      ['transformações irreversíveis', 'ovo cozido', 'ferrugem', 'papel rasgado'],
+    ],
+  },
   'matematica-t2': {
     assessmentName: 'T2',
     subject: 'Matemática',

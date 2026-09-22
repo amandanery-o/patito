@@ -38,7 +38,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 
 - `TASK-021` ✅ Remover conteúdo do primeiro semestre e olimpíadas da experiência ativa, preservando recuperação pelo histórico do Git.
 - `TASK-022` ✅ Definir schema de livro, conteúdo, resumo e questões.
-- `TASK-023` 🟡 Publicar resumos textuais e exercícios do segundo semestre por matéria (Geografia P1 e P2 publicadas; demais matérias aguardam fontes).
+- `TASK-023` 🟡 Publicar resumos textuais e exercícios do segundo semestre por matéria (Geografia P1 e P2, Matemática T2 e P1 e Ciências P1 publicadas; demais matérias aguardam fontes).
 - `TASK-024` ✅ Validar estrutura, IDs, relações e quantidade de questões.
 
 ## F005 — Agenda escolar
@@ -88,4 +88,4 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-054` ⬜ Publicar História P1 seguindo o roteiro editorial completo.
 - `TASK-055` ⬜ Publicar Inglês P1 seguindo o roteiro editorial completo.
 - `TASK-056` ⬜ Publicar Português P1 seguindo o roteiro editorial completo.
-- `TASK-057` ⬜ Publicar Ciências P1 seguindo o roteiro editorial completo.
+- `TASK-057` ✅ Publicar Ciências P1 seguindo o roteiro editorial completo (capítulos 8 e 9, resumo, 60 questões aprovadas e revisão independente).

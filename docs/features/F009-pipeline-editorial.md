@@ -41,3 +41,7 @@ O pipeline transforma fontes autorizadas em conteúdo e calendário validados, u
 ## Dependências externas
 
 Endpoints, autenticação, limites e permissões de uso serão especificados quando as configurações forem fornecidas.
+
+## Entregas recentes
+
+- Ciências P1: capítulos 8 e 9 conferidos no HTML da Edebê em 21/09/2026; 60 questões geradas em lotes, revisadas por agente independente e publicadas com manifesto de aprovação vinculado ao hash do rascunho.
