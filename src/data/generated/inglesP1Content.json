@@ -1,0 +1,1350 @@
+{
+  "status": "approved",
+  "contentId": "ingles-p1-unidades-5-6",
+  "title": "Revisão P1 — Ações e horas",
+  "summary": "Revisão das unidades 5 e 6: ações acontecendo agora e leitura de horas em inglês.",
+  "source": {
+    "provider": "richmond",
+    "resourceId": "go-primary-4/digital-book/units-5-6",
+    "version": "cycle-2026"
+  },
+  "generation": {
+    "model": "claude-sonnet-4-6",
+    "promptVersion": "question-batch-v2",
+    "generatedAt": "2026-09-22T13:13:46.111Z",
+    "usage": [
+      {
+        "batch": 1,
+        "input_tokens": 4319,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1804,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 2,
+        "input_tokens": 4567,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1583,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 3,
+        "input_tokens": 4883,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1571,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 4,
+        "input_tokens": 5179,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1853,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 5,
+        "input_tokens": 5671,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1804,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 6,
+        "input_tokens": 5970,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1801,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      }
+    ]
+  },
+  "editorialApproval": {
+    "reviewer": "Agente editorial independente Patito",
+    "reviewerType": "agent",
+    "reviewMethod": "independent-source-check-v4",
+    "reviewedAt": "2026-09-22T13:18:47.268Z",
+    "draftDigest": "35ec5c5139698a08f7becbf484d1d2093bd8bd702802d1e9161a3e7ffab86ade",
+    "schemaVersion": 1
+  },
+  "publishedAt": "2026-09-22T13:18:55.632Z",
+  "questions": [
+    {
+      "difficulty": "easy",
+      "question": "Olha a frase em inglês: 'She is cooking.' O que essa frase quer dizer?",
+      "explanation": "'She is cooking' usa 'she' (ela) + 'is' + ação com -ing para indicar algo que está acontecendo agora. 'Cooking' significa cozinhando.",
+      "sourceRef": {
+        "section": "Actions in progress",
+        "pages": "10–12"
+      },
+      "options": [
+        "Ela cozinhou ontem.",
+        "Ela está cozinhando agora.",
+        "Ela vai cozinhar amanhã.",
+        "Ela gosta de cozinhar."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "eng-p1-001"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual palavra usamos em inglês para perguntar o que UMA pessoa está fazendo agora?",
+      "explanation": "Para perguntar sobre uma pessoa (he ou she), usamos 'What is he/she doing?' O verbo 'is' combina com he e she no presente contínuo.",
+      "sourceRef": {
+        "section": "Actions and questions",
+        "pages": "8–9"
+      },
+      "options": [
+        "What am he doing?",
+        "What is she doing?",
+        "What does she doing?",
+        "What are she doing?"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "eng-p1-002"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Pedro quer dizer em inglês que ele está estudando agora. Qual frase está correta?",
+      "explanation": "Com 'I' (eu), usamos 'am' + verbo com -ing. 'Study' vira 'studying' porque o 'y' fica e acrescentamos -ing. A frase correta é 'I am studying.'",
+      "sourceRef": {
+        "section": "Actions in progress",
+        "pages": "10–12"
+      },
+      "options": [
+        "I am studying.",
+        "I am study.",
+        "I is studying.",
+        "I are studying."
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "eng-p1-003"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia a frase: 'He is listening to music.' Qual ação está sendo descrita?",
+      "explanation": "'Listening to music' significa ouvindo música. A frase diz que ele está ouvindo música agora, usando 'is' porque o sujeito é 'he'.",
+      "sourceRef": {
+        "section": "Actions in progress",
+        "pages": "10–12"
+      },
+      "options": [
+        "Ele está comprando música.",
+        "Ele está tocando música.",
+        "Ele está ouvindo música.",
+        "Ele está cantando uma música."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "eng-p1-004"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Em inglês, qual é a diferença entre 'a.m.' e 'p.m.'?",
+      "explanation": "'a.m.' indica horários da meia-noite até antes do meio-dia. 'p.m.' indica horários do meio-dia até antes da meia-noite. Essa distinção ajuda a saber se é de manhã ou de tarde/noite.",
+      "sourceRef": {
+        "section": "Unit 6 review",
+        "pages": "40"
+      },
+      "options": [
+        "a.m. é para a tarde; p.m. é para a manhã.",
+        "a.m. é para a noite; p.m. é para a tarde.",
+        "a.m. é da meia-noite até antes do meio-dia; p.m. é do meio-dia até antes da meia-noite.",
+        "a.m. e p.m. significam a mesma coisa."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "eng-p1-005"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Veja a frase: 'It's six o'clock and I am getting up.' O que a palavra 'o'clock' indica nessa frase?",
+      "explanation": "'O'clock' é usado em inglês para indicar horas exatas, sem minutos. 'It's six o'clock' significa que são exatamente seis horas.",
+      "sourceRef": {
+        "section": "Time and actions",
+        "pages": "32–36"
+      },
+      "options": [
+        "Que são exatamente seis horas.",
+        "Que faltam seis minutos.",
+        "Que são seis da tarde.",
+        "Que são seis e meia."
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "eng-p1-006"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Ana quer perguntar em inglês o que seus amigos (mais de uma pessoa) estão fazendo agora. Qual pergunta ela deve usar?",
+      "explanation": "Para mais de uma pessoa (they), usamos 'are' em vez de 'is'. A pergunta correta é 'What are they doing?' enquanto 'What is he/she doing?' é usada para uma única pessoa.",
+      "sourceRef": {
+        "section": "Actions and questions",
+        "pages": "8–9"
+      },
+      "options": [
+        "What am they doing?",
+        "What does they doing?",
+        "What is they doing?",
+        "What are they doing?"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "eng-p1-007"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia as duas frases: 'It's 12:00 a.m.' e 'It's 12:00 p.m.' O que cada uma indica?",
+      "explanation": "12:00 a.m. é a meia-noite (início do dia), enquanto 12:00 p.m. é o meio-dia. Essa diferença é importante para saber exatamente que horas são.",
+      "sourceRef": {
+        "section": "Unit 6 review",
+        "pages": "40"
+      },
+      "options": [
+        "12:00 a.m. é à tarde; 12:00 p.m. é de manhã.",
+        "12:00 a.m. é meio-dia; 12:00 p.m. é meia-noite.",
+        "12:00 a.m. é meia-noite; 12:00 p.m. é meio-dia.",
+        "12:00 a.m. e 12:00 p.m. são a mesma hora."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "eng-p1-008"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada ação em inglês ao seu significado em português.",
+      "explanation": "Essas são ações que aparecem na Unidade 5 com a forma -ing para indicar que estão acontecendo agora: talking (conversando), sleeping (dormindo), cooking (cozinhando) e cleaning (limpando).",
+      "sourceRef": {
+        "section": "Actions in progress",
+        "pages": "10–12"
+      },
+      "pairs": [
+        {
+          "left": "talking",
+          "right": "conversando"
+        },
+        {
+          "left": "sleeping",
+          "right": "dormindo"
+        },
+        {
+          "left": "cooking",
+          "right": "cozinhando"
+        },
+        {
+          "left": "cleaning",
+          "right": "limpando"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "eng-p1-009"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada situação à frase em inglês que a descreve corretamente.",
+      "explanation": "Cada sujeito pede um verbo diferente: 'I' usa 'am', 'she' usa 'is', e 'they' usa 'are'. As ações com -ing indicam o que está acontecendo agora.",
+      "sourceRef": {
+        "section": "Actions and questions",
+        "pages": "8–9"
+      },
+      "pairs": [
+        {
+          "left": "Eu estou estudando.",
+          "right": "I am studying."
+        },
+        {
+          "left": "Ela está comendo.",
+          "right": "She is eating."
+        },
+        {
+          "left": "Eles estão usando o computador.",
+          "right": "They are using the computer."
+        },
+        {
+          "left": "Ele está ouvindo música.",
+          "right": "He is listening to music."
+        }
+      ],
+      "type": "matchColumns",
+      "id": "eng-p1-010"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Veja a frase em inglês: 'They are eating.' Quem está realizando a ação nessa frase?",
+      "explanation": "A palavra 'they' significa 'eles' ou 'elas'. Quando falamos de mais de uma pessoa fazendo algo agora, usamos 'they are' seguido da ação com -ing.",
+      "sourceRef": {
+        "section": "Actions and questions",
+        "pages": "8–9"
+      },
+      "options": [
+        "Ninguém",
+        "Um animal sozinho",
+        "Uma pessoa",
+        "Duas ou mais pessoas"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "eng-p1-011"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual auxiliar em inglês usamos com 'they' para falar de ações que estão acontecendo agora?",
+      "explanation": "Com 'they' (eles/elas), usamos sempre 'are'. Por exemplo: 'They are studying.' Já com 'he' ou 'she', usamos 'is'.",
+      "sourceRef": {
+        "section": "Actions and questions",
+        "pages": "8–9"
+      },
+      "options": [
+        "do",
+        "is",
+        "am",
+        "are"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "eng-p1-012"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Leia a frase: 'They are sleeping.' O que Lucas e Maria estão fazendo agora?",
+      "explanation": "'Sleeping' significa 'dormindo'. A frase 'They are sleeping' indica que mais de uma pessoa está dormindo neste momento.",
+      "sourceRef": {
+        "section": "Actions in progress",
+        "pages": "10–12"
+      },
+      "options": [
+        "Estudando",
+        "Comendo",
+        "Dormindo",
+        "Cozinhando"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "eng-p1-013"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Carla quer perguntar em inglês o que duas amigas estão fazendo agora. Qual pergunta ela deve usar?",
+      "explanation": "Para perguntar sobre mais de uma pessoa, usamos 'What are they doing?' A pergunta 'What is she doing?' é usada apenas para uma pessoa.",
+      "sourceRef": {
+        "section": "Actions and questions",
+        "pages": "8–9"
+      },
+      "options": [
+        "What am I doing?",
+        "What are they doing?",
+        "What does she do?",
+        "What is she doing?"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "eng-p1-014"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual frase em inglês está correta para dizer que João e Pedro estão usando o computador agora?",
+      "explanation": "Com 'they' (mais de uma pessoa), usamos 'are'. A ação 'use' vira 'using' no presente contínuo. Portanto, a frase correta é 'They are using the computer.'",
+      "sourceRef": {
+        "section": "Actions in progress",
+        "pages": "10–12"
+      },
+      "options": [
+        "They are using the computer.",
+        "They am using the computer.",
+        "They is using the computer.",
+        "They are use the computer."
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "eng-p1-015"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia a frase: 'It's 7:00 a.m. and they are getting up.' O que as pessoas estão fazendo?",
+      "explanation": "'Getting up' significa 'levantando'. A frase indica que, às 7 da manhã, mais de uma pessoa está se levantando.",
+      "sourceRef": {
+        "section": "Time and actions",
+        "pages": "32–36"
+      },
+      "options": [
+        "Estudando",
+        "Dormindo",
+        "Levantando",
+        "Comendo"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "eng-p1-016"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual frase descreve corretamente duas crianças limpando a casa agora?",
+      "explanation": "Para duas ou mais pessoas, usamos 'they are' com a ação no -ing. 'Cleaning' é a forma correta de 'clean' no presente contínuo.",
+      "sourceRef": {
+        "section": "Actions in progress",
+        "pages": "10–12"
+      },
+      "options": [
+        "She is cleaning the house.",
+        "They are clean the house.",
+        "They are cleaning the house.",
+        "He is cleaning the house."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "eng-p1-017"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia as duas frases abaixo:\n1. 'She is talking.'\n2. 'They are talking.'\n\nQual é a diferença entre elas?",
+      "explanation": "A frase 1 usa 'she is' e fala de uma única pessoa. A frase 2 usa 'they are' e fala de duas ou mais pessoas. A ação 'talking' é a mesma nas duas frases, mas o auxiliar muda conforme o número de pessoas.",
+      "sourceRef": {
+        "section": "Actions and questions",
+        "pages": "8–9"
+      },
+      "options": [
+        "A frase 1 é uma pergunta e a frase 2 é uma resposta.",
+        "A frase 1 fala de uma pessoa e a frase 2 fala de mais de uma pessoa.",
+        "As duas frases têm o mesmo significado e podem ser trocadas.",
+        "A frase 1 fala do passado e a frase 2 fala do presente."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "eng-p1-018"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada pergunta em inglês à resposta correta sobre o que as pessoas estão fazendo agora.",
+      "explanation": "Quando a pergunta é 'What are they doing?', a resposta usa 'They are' com a ação no -ing. Cada par mostra uma pergunta sobre mais de uma pessoa e a resposta correspondente.",
+      "sourceRef": {
+        "section": "Actions and questions",
+        "pages": "8–9"
+      },
+      "pairs": [
+        {
+          "left": "What are they doing? (João e Ana na cozinha)",
+          "right": "They are cooking."
+        },
+        {
+          "left": "What are they doing? (Pedro e Lucas com livros)",
+          "right": "They are studying."
+        },
+        {
+          "left": "What are they doing? (Maria e Sofia com fones de ouvido)",
+          "right": "They are listening to music."
+        },
+        {
+          "left": "What are they doing? (Bia e Gabi no computador)",
+          "right": "They are using the computer."
+        }
+      ],
+      "type": "matchColumns",
+      "id": "eng-p1-019"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada frase completa à informação que ela apresenta.",
+      "explanation": "Leia o sujeito, o horário e a ação de cada frase. A informação em português precisa corresponder aos três elementos.",
+      "sourceRef": {
+        "section": "Time and actions",
+        "pages": "32–36"
+      },
+      "pairs": [
+        {
+          "left": "It's 6:00 a.m. and I am getting up.",
+          "right": "Às seis da manhã, eu estou levantando."
+        },
+        {
+          "left": "It's 12:00 p.m. and she is eating.",
+          "right": "Ao meio-dia, ela está comendo."
+        },
+        {
+          "left": "It's 4:00 p.m. and they are studying.",
+          "right": "Às quatro da tarde, eles estão estudando."
+        },
+        {
+          "left": "It's 8:00 p.m. and he is cleaning.",
+          "right": "Às oito da noite, ele está limpando."
+        }
+      ],
+      "type": "matchColumns",
+      "id": "eng-p1-020"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual é a forma correta do verbo 'study' (estudar) quando usamos com '-ing' em inglês?",
+      "explanation": "'Study' mantém a letra y e recebe -ing: studying. Essa forma indica uma ação acontecendo agora.",
+      "sourceRef": {
+        "section": "Actions in progress",
+        "pages": "10–12"
+      },
+      "options": [
+        "studyng",
+        "studing",
+        "studying",
+        "studeing"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "eng-p1-021"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual é a forma correta do verbo 'use' (usar) com '-ing' em inglês?",
+      "explanation": "Quando o verbo termina em 'e', como 'use', retiramos o 'e' antes de acrescentar -ing, formando 'using'. Assim indicamos que a ação está acontecendo agora.",
+      "sourceRef": {
+        "section": "Actions in progress",
+        "pages": "10–12"
+      },
+      "options": [
+        "usng",
+        "usinge",
+        "using",
+        "useing"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "eng-p1-022"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual é a forma correta do verbo 'listen' (ouvir) com '-ing' em inglês?",
+      "explanation": "O verbo 'listen' não tem nenhuma mudança especial: basta acrescentar -ing ao final, formando 'listening'. Essa forma mostra que a ação está acontecendo agora.",
+      "sourceRef": {
+        "section": "Actions in progress",
+        "pages": "10–12"
+      },
+      "options": [
+        "listeneing",
+        "listening",
+        "listning",
+        "listenning"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "eng-p1-023"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia a frase: 'She is studying English now.' O que a parte 'studying' indica nessa frase?",
+      "explanation": "'Studying' é a forma do verbo 'study' com -ing. Quando usamos 'is' + verbo com -ing, estamos dizendo que a ação está acontecendo neste momento.",
+      "sourceRef": {
+        "section": "Actions in progress",
+        "pages": "10–12"
+      },
+      "options": [
+        "Que ela gosta de estudar inglês",
+        "Que ela estudou inglês ontem",
+        "Que ela vai estudar inglês amanhã",
+        "Que ela está estudando inglês agora"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "eng-p1-024"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual frase em inglês está correta para dizer que Maria está usando o computador agora?",
+      "explanation": "Com 'she' (ela), usamos 'is' seguido do verbo com -ing. 'Use' perde o 'e' antes de receber -ing, formando 'using'. A frase correta é 'She is using the computer.'",
+      "sourceRef": {
+        "section": "Actions in progress",
+        "pages": "10–12"
+      },
+      "options": [
+        "She are using the computer.",
+        "She is useing the computer.",
+        "She is using the computer.",
+        "She am using the computer."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "eng-p1-025"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia a frase: 'He is listening to music.' Qual verbo com -ing aparece nessa frase?",
+      "explanation": "O verbo 'listen' recebe -ing e forma 'listening'. Na frase, 'He is listening to music' significa que ele está ouvindo música agora.",
+      "sourceRef": {
+        "section": "Actions in progress",
+        "pages": "10–12"
+      },
+      "options": [
+        "listenning",
+        "listen",
+        "listening",
+        "listning"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "eng-p1-026"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual frase em inglês está correta para dizer que eu estou estudando agora?",
+      "explanation": "Com 'I' (eu), usamos 'am' seguido do verbo com -ing. 'Study' vira 'studying'. A frase correta é 'I am studying now.'",
+      "sourceRef": {
+        "section": "Actions and questions",
+        "pages": "8–9"
+      },
+      "options": [
+        "I am studing now.",
+        "I am studying now.",
+        "I is studying now.",
+        "I are studying now."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "eng-p1-027"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia as três frases abaixo:\n1. 'I am studying.'\n2. 'She is using the computer.'\n3. 'They are listening to music.'\n\nQual afirmação está correta sobre essas frases?",
+      "explanation": "As três frases mostram ações acontecendo agora. Com 'I' usamos 'am'; com 'she' usamos 'is'; com 'they' usamos 'are'. Os verbos recebem -ing: 'study' vira 'studying', 'use' vira 'using' e 'listen' vira 'listening'.",
+      "sourceRef": {
+        "section": "Actions in progress",
+        "pages": "10–12"
+      },
+      "options": [
+        "Os verbos com -ing nessas frases não mudam de forma.",
+        "As três frases usam 'is' com o verbo em -ing.",
+        "Cada frase usa um auxiliar diferente: am, is ou are.",
+        "Todas as frases falam de ações que aconteceram ontem."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "eng-p1-028"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada verbo em inglês à sua forma correta com -ing.",
+      "explanation": "'Study' mantém o y e recebe -ing (studying); 'use' perde o e final (using); 'listen' e 'cook' recebem -ing (listening e cooking).",
+      "sourceRef": {
+        "section": "Actions in progress",
+        "pages": "10–12"
+      },
+      "pairs": [
+        {
+          "left": "study",
+          "right": "studying"
+        },
+        {
+          "left": "use",
+          "right": "using"
+        },
+        {
+          "left": "listen",
+          "right": "listening"
+        },
+        {
+          "left": "cook",
+          "right": "cooking"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "eng-p1-029"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada frase em inglês ao verbo com -ing que completa corretamente a ação descrita.",
+      "explanation": "Cada frase descreve uma ação diferente acontecendo agora. 'She is ___ English' pede 'studying'; 'He is ___ the computer' pede 'using'; 'They are ___ to music' pede 'listening'; 'I am ___ dinner' pede 'eating'.",
+      "sourceRef": {
+        "section": "Actions in progress",
+        "pages": "10–12"
+      },
+      "pairs": [
+        {
+          "left": "She is ___ English.",
+          "right": "studying"
+        },
+        {
+          "left": "He is ___ the computer.",
+          "right": "using"
+        },
+        {
+          "left": "They are ___ to music.",
+          "right": "listening"
+        },
+        {
+          "left": "I am ___ dinner.",
+          "right": "eating"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "eng-p1-030"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Um ingresso de cinema em inglês pode mostrar o nome do filme, o cinema, a data, o horário e o número do assento. Como se diz 'número do assento' em inglês?",
+      "explanation": "O ingresso de cinema (movie ticket) traz informações como o número do assento, que em inglês é chamado de 'seat number'. Cada informação do ingresso tem um nome específico em inglês.",
+      "sourceRef": {
+        "section": "Movie ticket information",
+        "pages": "13–14"
+      },
+      "options": [
+        "Movie theater",
+        "Date",
+        "Movie title",
+        "Seat number"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "eng-p1-031"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Leia as informações de um ingresso de cinema:\n• Movie: The Big Adventure\n• Date: June 10th\n• Time: 3:00 p.m.\n• Seat number: 22\n\nQual é o horário da sessão?",
+      "explanation": "O campo 'Time' no ingresso indica o horário da sessão. Neste ingresso, o horário é 3:00 p.m., ou seja, três da tarde.",
+      "sourceRef": {
+        "section": "Movie ticket information",
+        "pages": "13–14"
+      },
+      "options": [
+        "22",
+        "June 10th",
+        "The Big Adventure",
+        "3:00 p.m."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "eng-p1-032"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Em inglês, como perguntamos as horas?",
+      "explanation": "A pergunta correta para saber as horas em inglês é 'What time is it?'. Essa é a forma ensinada na unidade sobre horas.",
+      "sourceRef": {
+        "section": "Asking the time",
+        "pages": "30–31"
+      },
+      "options": [
+        "What is he doing?",
+        "What time is it?",
+        "What are they doing?",
+        "Where is it?"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "eng-p1-033"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia as informações de um ingresso de cinema:\n• Movie: Space Friends\n• Movie theater: Star Cinema\n• Date: July 5th\n• Time: 6:00 p.m.\n• Seat number: 14\n\nQual campo do ingresso indica o nome do cinema?",
+      "explanation": "O campo 'Movie theater' é o que indica o nome do cinema. Neste ingresso, o cinema se chama Star Cinema. Não confunda com 'Movie', que é o nome do filme.",
+      "sourceRef": {
+        "section": "Movie ticket information",
+        "pages": "13–14"
+      },
+      "options": [
+        "Date",
+        "Movie theater",
+        "Seat number",
+        "Movie"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "eng-p1-034"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Veja a frase: 'It's 8:00 a.m. and she is eating.' O que essa frase nos conta?",
+      "explanation": "A frase combina um horário (8:00 a.m., ou seja, oito da manhã) com uma ação em andamento (she is eating — ela está comendo). Esse é o padrão estudado na unidade de horas e ações.",
+      "sourceRef": {
+        "section": "Time and actions",
+        "pages": "32–36"
+      },
+      "options": [
+        "Ela está comendo às oito da manhã.",
+        "Ela está cozinhando às oito da manhã.",
+        "Ela está comendo às oito da noite.",
+        "Ela está dormindo às oito da manhã."
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "eng-p1-035"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia o ingresso de cinema abaixo:\n• Movie: Ocean Dream\n• Date: August 3rd\n• Time: 7:30 p.m.\n• Seat number: 5\n\nQual informação NÃO aparece neste ingresso?",
+      "explanation": "O ingresso traz o nome do filme (movie), a data (date), o horário (time) e o número do assento (seat number). O nome do cinema (movie theater) não está listado neste ingresso.",
+      "sourceRef": {
+        "section": "Movie ticket information",
+        "pages": "13–14"
+      },
+      "options": [
+        "Seat number",
+        "Movie",
+        "Movie theater",
+        "Date"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "eng-p1-036"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia as duas frases:\n1. 'It's 10:00 a.m. and they are cleaning.'\n2. 'It's 10:00 p.m. and they are sleeping.'\n\nQual afirmação está correta sobre essas frases?",
+      "explanation": "A frase 1 descreve uma ação acontecendo de manhã (a.m.) e a frase 2 descreve uma ação acontecendo à noite (p.m.). As duas frases usam 'they are' porque falam de mais de uma pessoa, e os verbos terminam em -ing porque as ações estão acontecendo agora.",
+      "sourceRef": {
+        "section": "Unit 6 review",
+        "pages": "40"
+      },
+      "options": [
+        "As duas frases falam de ações que acontecem de manhã.",
+        "A frase 1 acontece de manhã e a frase 2 acontece à noite.",
+        "As duas frases usam 'she is' porque falam de uma pessoa.",
+        "A frase 1 acontece à noite e a frase 2 acontece de manhã."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "eng-p1-037"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada campo do ingresso de cinema em inglês ao seu significado em português.",
+      "explanation": "Um movie ticket (ingresso de cinema) traz informações importantes: 'movie' é o nome do filme, 'date' é a data da sessão, 'time' é o horário e 'seat number' é o número do assento. Conhecer esses campos ajuda a entender um ingresso em inglês.",
+      "sourceRef": {
+        "section": "Movie ticket information",
+        "pages": "13–14"
+      },
+      "pairs": [
+        {
+          "left": "Movie",
+          "right": "Filme"
+        },
+        {
+          "left": "Date",
+          "right": "Data"
+        },
+        {
+          "left": "Time",
+          "right": "Horário"
+        },
+        {
+          "left": "Seat number",
+          "right": "Número do assento"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "eng-p1-038"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada horário escrito em inglês à descrição correta em português.",
+      "explanation": "'a.m.' é usado para horários da meia-noite até antes do meio-dia, e 'p.m.' é usado do meio-dia até antes da meia-noite. '12:00 a.m.' é meia-noite e '12:00 p.m.' é meio-dia. Saber isso ajuda a entender os horários em inglês.",
+      "sourceRef": {
+        "section": "Unit 6 review",
+        "pages": "40"
+      },
+      "pairs": [
+        {
+          "left": "7:00 a.m.",
+          "right": "Sete da manhã"
+        },
+        {
+          "left": "3:00 p.m.",
+          "right": "Três da tarde"
+        },
+        {
+          "left": "12:00 a.m.",
+          "right": "Meia-noite"
+        },
+        {
+          "left": "12:00 p.m.",
+          "right": "Meio-dia"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "eng-p1-039"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia as informações de três ingressos de cinema e associe cada filme ao seu número de assento correto.\n\nIngresso 1 — Movie: Galaxy Run | Seat number: 7\nIngresso 2 — Movie: The Lost Island | Seat number: 15\nIngresso 3 — Movie: Robot City | Seat number: 3",
+      "explanation": "Cada ingresso de cinema traz o nome do filme (movie) e o número do assento (seat number). Para encontrar o assento certo, é preciso ler com atenção as informações de cada ingresso separadamente.",
+      "sourceRef": {
+        "section": "Movie ticket information",
+        "pages": "13–14"
+      },
+      "pairs": [
+        {
+          "left": "Galaxy Run",
+          "right": "Seat number: 7"
+        },
+        {
+          "left": "The Lost Island",
+          "right": "Seat number: 15"
+        },
+        {
+          "left": "Robot City",
+          "right": "Seat number: 3"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "eng-p1-040"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Na pergunta “What time is it in London?”, qual parte indica o lugar sobre o qual queremos saber as horas?",
+      "explanation": "A pergunta básica é “What time is it?”. O trecho “in London” acrescenta o lugar: Londres.",
+      "sourceRef": {
+        "section": "Asking the time",
+        "pages": "30–31"
+      },
+      "options": [
+        "What time",
+        "is it",
+        "in London",
+        "time is"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "eng-p1-041"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Veja o horário: 3:00. Como dizemos esse horário em inglês usando 'o'clock'?",
+      "explanation": "Quando o horário é uma hora exata, sem minutos, usamos 'o'clock' depois do número. Então 3:00 se diz 'It's three o'clock'.",
+      "sourceRef": {
+        "section": "Asking the time",
+        "pages": "30–31"
+      },
+      "options": [
+        "It's three a.m. o'clock.",
+        "It's o'clock three.",
+        "It's three time.",
+        "It's three o'clock."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "eng-p1-042"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual frase em inglês responde corretamente à pergunta 'What time is it?' quando o relógio marca 9:00?",
+      "explanation": "Para responder sobre o horário em inglês, usamos 'It's' seguido da hora. Para horas exatas, acrescentamos 'o'clock'. A resposta correta é 'It's nine o'clock'.",
+      "sourceRef": {
+        "section": "Asking the time",
+        "pages": "30–31"
+      },
+      "options": [
+        "It's at nine.",
+        "Nine is it.",
+        "It's nine o'clock.",
+        "It's nine doing."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "eng-p1-043"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia a frase: 'It's two o'clock and she is cooking.' O que a frase nos conta?",
+      "explanation": "A frase combina um horário ('It's two o'clock') com uma ação em andamento ('she is cooking'). Isso significa que são duas horas e ela está cozinhando.",
+      "sourceRef": {
+        "section": "Time and actions",
+        "pages": "32–36"
+      },
+      "options": [
+        "São doze horas e ela está cozinhando.",
+        "São duas horas e ela está cozinhando.",
+        "São duas horas e ela está dormindo.",
+        "Ela está cozinhando e perguntando as horas."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "eng-p1-044"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual frase em inglês está correta para dizer que são cinco horas e eu estou comendo?",
+      "explanation": "Para combinar horário e ação em andamento, usamos 'It's' com o horário e depois 'I am' com o verbo terminado em -ing. A frase correta é 'It's five o'clock and I am eating'.",
+      "sourceRef": {
+        "section": "Time and actions",
+        "pages": "32–36"
+      },
+      "options": [
+        "It's five o'clock and I am eating.",
+        "It's five o'clock and I is eating.",
+        "It's five o'clock and I are eating.",
+        "It's five o'clock and I am eat."
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "eng-p1-045"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Veja o horário escrito: 11:00 p.m. O que esse horário indica?",
+      "explanation": "A sigla 'p.m.' é usada para horários do meio-dia até antes da meia-noite. Portanto, 11:00 p.m. é onze horas da noite.",
+      "sourceRef": {
+        "section": "Unit 6 review",
+        "pages": "40"
+      },
+      "options": [
+        "Onze horas da manhã.",
+        "Meia-noite.",
+        "Meio-dia.",
+        "Onze horas da noite."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "eng-p1-046"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia as duas frases:\n1. 'It's 4:00 a.m. and they are sleeping.'\n2. 'It's 4:00 p.m. and they are cleaning.'\n\nQual afirmação está correta sobre essas frases?",
+      "explanation": "4:00 a.m. indica quatro horas da madrugada; 4:00 p.m. indica quatro horas da tarde. As ações descritas também são diferentes.",
+      "sourceRef": {
+        "section": "Unit 6 review",
+        "pages": "40"
+      },
+      "options": [
+        "As duas frases indicam quatro horas da madrugada.",
+        "A primeira indica madrugada; a segunda indica tarde.",
+        "A primeira indica tarde; a segunda indica madrugada.",
+        "As duas frases indicam quatro horas da tarde."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "eng-p1-047"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada horário escrito em inglês à sua leitura correta em português.",
+      "explanation": "Para ler horários exatos em inglês, usamos 'It's' seguido do número e 'o'clock'.",
+      "sourceRef": {
+        "section": "Asking the time",
+        "pages": "30–31"
+      },
+      "pairs": [
+        {
+          "left": "It's one o'clock.",
+          "right": "É uma hora."
+        },
+        {
+          "left": "It's six o'clock.",
+          "right": "São seis horas."
+        },
+        {
+          "left": "It's ten o'clock.",
+          "right": "São dez horas."
+        },
+        {
+          "left": "It's twelve o'clock.",
+          "right": "São doze horas."
+        }
+      ],
+      "type": "matchColumns",
+      "id": "eng-p1-048"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada frase ao sujeito que pratica a ação.",
+      "explanation": "Nas frases, I corresponde a eu; she a ela; he a ele; they a eles ou elas. O horário não muda quem pratica a ação.",
+      "sourceRef": {
+        "section": "Time and actions",
+        "pages": "32–36"
+      },
+      "pairs": [
+        {
+          "left": "It's 6:00 a.m. and I am getting up.",
+          "right": "Eu estou levantando."
+        },
+        {
+          "left": "It's 12:00 p.m. and she is eating.",
+          "right": "Ela está comendo."
+        },
+        {
+          "left": "It's 8:00 p.m. and he is studying.",
+          "right": "Ele está estudando."
+        },
+        {
+          "left": "It's 11:00 p.m. and they are sleeping.",
+          "right": "Eles estão dormindo."
+        }
+      ],
+      "type": "matchColumns",
+      "id": "eng-p1-049"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada pergunta em inglês à resposta correta sobre o horário.",
+      "explanation": "Em inglês, respondemos 'What time is it?' com 'It's' seguido do horário. Para horas exatas, podemos usar 'o'clock'; a.m. e p.m. distinguem os períodos do dia em horários digitais.",
+      "sourceRef": {
+        "section": "Unit 6 review",
+        "pages": "40"
+      },
+      "pairs": [
+        {
+          "left": "What time is it? (7:00 a.m.)",
+          "right": "It's 7:00 a.m."
+        },
+        {
+          "left": "What time is it? (12:00 p.m.)",
+          "right": "It's 12:00 p.m."
+        },
+        {
+          "left": "What time is it? (3:00 p.m.)",
+          "right": "It's 3:00 p.m."
+        }
+      ],
+      "type": "matchColumns",
+      "id": "eng-p1-050"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Em inglês, o que significa 'noon'?",
+      "explanation": "'Noon' é a palavra em inglês para meio-dia, ou seja, 12:00 p.m. É o momento em que o período a.m. termina e o p.m. começa.",
+      "sourceRef": {
+        "section": "Unit 6 review",
+        "pages": "40"
+      },
+      "options": [
+        "Tarde",
+        "Manhã",
+        "Meia-noite",
+        "Meio-dia"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "eng-p1-051"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Em inglês, o que significa 'midnight'?",
+      "explanation": "'Midnight' é a palavra em inglês para meia-noite, que corresponde a 12:00 a.m. É o início de um novo dia.",
+      "sourceRef": {
+        "section": "Unit 6 review",
+        "pages": "40"
+      },
+      "options": [
+        "Manhã cedo",
+        "Meio-dia",
+        "Tarde",
+        "Meia-noite"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "eng-p1-052"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Veja a frase: 'It's noon and she is eating lunch.' Que horas são nessa frase?",
+      "explanation": "'Noon' significa meio-dia em inglês, ou seja, 12:00 p.m. A frase nos diz que são 12:00 p.m. e ela está almoçando.",
+      "sourceRef": {
+        "section": "Unit 6 review",
+        "pages": "40"
+      },
+      "options": [
+        "12:00 a.m.",
+        "6:00 p.m.",
+        "12:00 p.m.",
+        "6:00 a.m."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "eng-p1-053"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual horário em inglês representa 'midnight'?",
+      "explanation": "'Midnight' é meia-noite, que em inglês é escrita como 12:00 a.m. Já 12:00 p.m. representa 'noon', o meio-dia.",
+      "sourceRef": {
+        "section": "Unit 6 review",
+        "pages": "40"
+      },
+      "options": [
+        "11:00 p.m.",
+        "12:00 a.m.",
+        "11:00 a.m.",
+        "12:00 p.m."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "eng-p1-054"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia a frase: 'It's 3:00 a.m. and they are sleeping.' Por que faz sentido eles estarem dormindo nesse horário?",
+      "explanation": "3:00 a.m. é de madrugada, um horário da parte da manhã muito cedo, antes do amanhecer. Por isso, é natural que as pessoas estejam dormindo nesse momento.",
+      "sourceRef": {
+        "section": "Unit 6 review",
+        "pages": "40"
+      },
+      "options": [
+        "Porque 3:00 a.m. é ao meio-dia",
+        "Porque 3:00 a.m. é à noite cedo",
+        "Porque 3:00 a.m. é à tarde",
+        "Porque 3:00 a.m. é de madrugada"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "eng-p1-055"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual frase em inglês está correta para dizer que são 12:00 p.m. e eu estou almoçando?",
+      "explanation": "12:00 p.m. é noon, o meio-dia. Com o pronome 'I', usamos 'am' para falar de ações em andamento. Por isso, a frase correta é 'It's noon and I am eating lunch.'",
+      "sourceRef": {
+        "section": "Unit 6 review",
+        "pages": "40"
+      },
+      "options": [
+        "It's noon and I are eating lunch.",
+        "It's midnight and I am eating lunch.",
+        "It's noon and I is eating lunch.",
+        "It's noon and I am eating lunch."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "eng-p1-056"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia as duas frases:\n1. 'It's midnight and they are sleeping.'\n2. 'It's noon and they are eating.'\n\nQual afirmação está correta sobre essas frases?",
+      "explanation": "'Midnight' é 12:00 a.m., a meia-noite, quando as pessoas geralmente dormem. 'Noon' é 12:00 p.m., o meio-dia, quando as pessoas geralmente almoçam. As duas frases combinam o horário com uma ação adequada a ele.",
+      "sourceRef": {
+        "section": "Unit 6 review",
+        "pages": "40"
+      },
+      "options": [
+        "As duas frases usam p.m.",
+        "As duas frases descrevem horários da manhã",
+        "'Midnight' é meio-dia e 'noon' é meia-noite",
+        "'Midnight' é meia-noite e 'noon' é meio-dia"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "eng-p1-057"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada palavra em inglês ao seu significado em português.",
+      "explanation": "'Noon' significa meio-dia (12:00 p.m.), 'midnight' significa meia-noite (12:00 a.m.), 'a.m.' indica horários da meia-noite até antes do meio-dia, e 'p.m.' indica horários do meio-dia até antes da meia-noite.",
+      "sourceRef": {
+        "section": "Unit 6 review",
+        "pages": "40"
+      },
+      "pairs": [
+        {
+          "left": "noon",
+          "right": "meio-dia"
+        },
+        {
+          "left": "midnight",
+          "right": "meia-noite"
+        },
+        {
+          "left": "a.m.",
+          "right": "da meia-noite até antes do meio-dia"
+        },
+        {
+          "left": "p.m.",
+          "right": "do meio-dia até antes da meia-noite"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "eng-p1-058"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia os dados dos quatro ingressos e associe cada filme à data da sessão.\n• Movie: Moon Trip | Date: June 12th\n• Movie: Garden Friends | Date: July 3rd\n• Movie: Ocean Race | Date: August 21st\n• Movie: Little Stars | Date: September 6th",
+      "explanation": "O campo Date informa a data da sessão. Localize o nome em Movie e leia o Date do mesmo ingresso.",
+      "sourceRef": {
+        "section": "Movie ticket information",
+        "pages": "13–14"
+      },
+      "pairs": [
+        {
+          "left": "Moon Trip",
+          "right": "June 12th"
+        },
+        {
+          "left": "Garden Friends",
+          "right": "July 3rd"
+        },
+        {
+          "left": "Ocean Race",
+          "right": "August 21st"
+        },
+        {
+          "left": "Little Stars",
+          "right": "September 6th"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "eng-p1-059"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Coloque os horários em ordem ao longo de um dia, associando cada um à sua posição: primeiro, segundo, terceiro ou quarto.",
+      "explanation": "a.m. indica horários antes do meio-dia; p.m. indica horários a partir do meio-dia. Dentro de cada período, compare os números das horas.",
+      "sourceRef": {
+        "section": "Unit 6 review",
+        "pages": "40"
+      },
+      "pairs": [
+        {
+          "left": "7:00 a.m.",
+          "right": "Primeiro horário do dia nesta lista."
+        },
+        {
+          "left": "11:00 a.m.",
+          "right": "Segundo horário do dia nesta lista."
+        },
+        {
+          "left": "2:00 p.m.",
+          "right": "Terceiro horário do dia nesta lista."
+        },
+        {
+          "left": "9:00 p.m.",
+          "right": "Quarto horário do dia nesta lista."
+        }
+      ],
+      "type": "matchColumns",
+      "id": "eng-p1-060"
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import { daysUntil } from '../utils/dates'
 import { GEOGRAPHY_TOPICS } from './geografia'
 import { MATHEMATICS_TOPICS } from './matematica'
 import { SCIENCE_TOPICS } from './ciencias'
+import { ENGLISH_TOPICS } from './ingles'
 
 export const SUBJECTS = [
   {
@@ -36,9 +37,9 @@ export const SUBJECTS = [
     name: 'Inglês',
     icon: '🇬🇧',
     color: 'bg-purple-500',
-    topics: [],
+    topics: ENGLISH_TOPICS,
     calendarOnly: false,
-    lastUpdated: null,
+    lastUpdated: '2026-09-22',
   },
   {
     id: 'ciencias',

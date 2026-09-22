@@ -1,8 +1,47 @@
 import { GEOGRAPHY_SOURCE_TOPICS } from './geography-source-briefs.mjs'
 import { MATHEMATICS_SOURCE_TOPICS } from './mathematics-source-briefs.mjs'
 import { SCIENCE_SOURCE_TOPICS } from './science-source-briefs.mjs'
+import { ENGLISH_SOURCE_TOPICS } from './english-source-briefs.mjs'
 
 export const EDITORIAL_CONFIGS = {
+  'ingles-p1': {
+    assessmentName: 'P1',
+    subject: 'Inglês',
+    subjectId: 'ingles',
+    chapters: [5, 6],
+    contentId: 'ingles-p1-unidades-5-6',
+    questionPrefix: 'eng-p1',
+    title: 'Revisão P1 — Ações e horas',
+    summary: 'Revisão das unidades 5 e 6: ações acontecendo agora e leitura de horas em inglês.',
+    source: { provider: 'richmond', resourceId: 'go-primary-4/digital-book/units-5-6', version: 'cycle-2026' },
+    sourceTopics: ENGLISH_SOURCE_TOPICS,
+    publicationOutput: 'src/data/generated/inglesP1Content.json',
+    contentScope: 'unidade 5 — ações em andamento; unidade 6 — horas e atividades',
+    batches: [
+      [
+        'What is he/she doing?',
+        'is',
+        'actions happening now',
+        'associations between distinct actions and their English expressions; do not use is/are alone as repeated answers',
+      ],
+      [
+        'What are they doing?',
+        'are',
+        'plural actions',
+        'associations with complete distinct sentences, never repeated auxiliaries',
+      ],
+      [
+        'verbs ending in -ing',
+        'studying',
+        'using',
+        'listening',
+        'associations of different verbs to different action sentences',
+      ],
+      ['movie ticket', 'movie', 'date', 'time', 'seat number'],
+      ['What time is it?', "It's", "o'clock", 'written digital times'],
+      ['a.m.', 'p.m.', 'noon', 'midnight', 'time and actions'],
+    ],
+  },
   'ciencias-p1': {
     assessmentName: 'P1',
     subject: 'Ciências',
