@@ -685,7 +685,7 @@
     {
       "difficulty": "challenging",
       "question": "Associe cada palavra da coluna da esquerda à informação correta sobre ela, conforme o material estudado.",
-      "explanation": "'Viagem' e 'paisagem' são substantivos terminados em -agem, escritos com g. 'Beleza' é um substantivo formado com o sufixo -eza a partir do adjetivo 'belo'. 'Coragem' também termina em -agem e é escrita com g. Reconhecer o sufixo e a ortografia de cada palavra é o objetivo desta questão.",
+      "explanation": "'Viagem', 'paisagem' e 'coragem' terminam em -agem e são escritas com g. 'Beleza' vem de 'belo' e termina em -eza. Embora 'beleza' e 'paisagem' sejam substantivos femininos, cada descrição também traz o significado da palavra, permitindo uma única associação correta.",
       "sourceRef": {
         "section": "Substantivos terminados em -agem e -eza",
         "pages": "124"
@@ -693,19 +693,19 @@
       "pairs": [
         {
           "left": "viagem",
-          "right": "substantivo terminado em -agem, escrito com g"
+          "right": "deslocamento de um lugar para outro; termina em -agem"
         },
         {
           "left": "beleza",
-          "right": "substantivo formado com o sufixo -eza"
+          "right": "qualidade do que é belo; termina em -eza"
         },
         {
           "left": "paisagem",
-          "right": "substantivo feminino terminado em -agem"
+          "right": "vista de um lugar; termina em -agem"
         },
         {
           "left": "coragem",
-          "right": "substantivo terminado em -agem, escrito com g, não com j"
+          "right": "disposição para enfrentar dificuldades; termina em -agem"
         }
       ],
       "type": "matchColumns",
