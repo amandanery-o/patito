@@ -74,26 +74,27 @@ export function AuthProvider({ children, client = supabase }) {
     }
   }, [client, userId, userName])
 
-  async function signIn(email, password) {
+  async function requestEmailCode(email) {
     if (!client) return new Error('Supabase não configurado')
-    const { error } = await client.auth.signInWithPassword({ email, password })
-    return error
-  }
-
-  async function signUp(email, password, name) {
-    if (!client) return new Error('Supabase não configurado')
-    const { error } = await client.auth.signUp({
+    const emailRedirectTo = `${window.location.origin}/`
+    const { error } = await client.auth.signInWithOtp({
       email,
-      password,
-      options: { data: { name } },
+      options: {
+        shouldCreateUser: true,
+        emailRedirectTo,
+        data: { name: 'Estudante' },
+      },
     })
     return error
   }
 
-  async function resetPassword(email) {
+  async function verifyEmailCode(email, token) {
     if (!client) return new Error('Supabase não configurado')
-    const redirectTo = `${window.location.origin}/`
-    const { error } = await client.auth.resetPasswordForEmail(email, { redirectTo })
+    const { error } = await client.auth.verifyOtp({
+      email,
+      token,
+      type: 'email',
+    })
     return error
   }
 
@@ -115,9 +116,8 @@ export function AuthProvider({ children, client = supabase }) {
         session,
         profile,
         configured: Boolean(client) || import.meta.env.VITE_E2E_AUTH === '1',
-        signIn,
-        signUp,
-        resetPassword,
+        requestEmailCode,
+        verifyEmailCode,
         signOut,
         updateProfileName,
       }}

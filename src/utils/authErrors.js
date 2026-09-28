@@ -6,6 +6,8 @@ const AUTH_MESSAGES = {
   'Password should be at least 6 characters': 'A senha precisa ter pelo menos 6 caracteres.',
   'Unable to validate email address: invalid format': 'Confira se o e-mail foi digitado corretamente.',
   'Email rate limit exceeded': 'Muitas tentativas seguidas. Espere um pouco e tente novamente.',
+  'Token has expired or is invalid': 'Esse código venceu ou não está correto. Peça um novo e tente novamente.',
+  'Invalid token': 'Confira os seis números do código e tente novamente.',
 }
 
 export function friendlyAuthError(error) {

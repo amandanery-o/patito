@@ -16,6 +16,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-007` ✅ Implementar encerramento de sessão e recuperação de senha por e-mail.
 - `TASK-008` ✅ Criar RLS e testes de isolamento entre alunos.
 - `TASK-009` ✅ Auditar e migrar identidades existentes somente se forem encontradas ao conectar o projeto Supabase remoto (projeto novo criado sem identidades legadas).
+- `TASK-059` 🟡 Unificar primeiro acesso e login por e-mail e código temporário, sem enumerar contas. Interface e testes implementados; template de OTP, SMTP próprio e teste externo pendentes.
 
 ## F002 — Sincronização de progresso
 

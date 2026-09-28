@@ -6,7 +6,7 @@ Produção: [patito-mauve.vercel.app](https://patito-mauve.vercel.app)
 
 ## O que existe hoje
 
-- Conta individual com nome, e-mail e senha pelo Supabase Auth.
+- Conta individual com acesso por e-mail e código temporário pelo Supabase Auth; novos alunos informam o nome dentro da sessão.
 - Sete matérias, com estado claro de “em preparação” quando ainda não há conteúdo.
 - Resumos textuais e sessões de aproximadamente 30 questões.
 - Exercícios de múltipla escolha e associação.
@@ -14,7 +14,7 @@ Produção: [patito-mauve.vercel.app](https://patito-mauve.vercel.app)
 - Agenda escolar oficial com provas, trabalhos e alertas de proximidade.
 - CRUD de Temas: descrição, páginas, entrega e conclusão.
 - Ranking somente por utilização, sem usar acertos ou desempenho.
-- Interface de relato anônimo de problemas e questões; a criação no GitHub depende da ativação descrita no checklist de produção.
+- Interface de relato anônimo de problemas e questões, integrada a issues do GitHub por função segura no Supabase.
 - Pipeline editorial com geração, revisão independente e aprovação auditável por agente; dúvidas são escaladas para a mantenedora.
 
 O produto não possui vidas, flashcards, streak, níveis, olimpíadas, papéis de professor/responsável ou administração pelo aluno.
@@ -41,7 +41,7 @@ Acesse `http://127.0.0.1:5173/`. Sem variáveis do Supabase, a interface abre so
 2. Preencha a URL e a chave pública `anon` do projeto.
 3. Execute `supabase/schema.sql` no SQL Editor do Supabase.
 4. Execute `supabase/seed.sql` para publicar o calendário oficial.
-5. Em Authentication, habilite cadastro por e-mail/senha e configure a URL do site para recuperação de senha.
+5. Em Authentication, habilite e-mail, configure o template de Magic Link com `{{ .Token }}` para enviar o código e mantenha a URL de produção entre os redirecionamentos permitidos.
 6. Reinicie `npm run dev` e valide cadastro, login, retomada e ranking com duas contas de teste.
 
 Nunca use a chave `service_role` em uma variável `VITE_` ou no navegador.

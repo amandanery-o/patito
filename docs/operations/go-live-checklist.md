@@ -11,19 +11,19 @@ O código local está pronto e testado. Os itens abaixo dependem de decisão edi
 - Login, perfil, calendário, Temas, sessão e ranking validados remotamente.
 - Produção Vercel publicada em `https://patito-mauve.vercel.app`, conectada ao Supabase.
 - URL principal e retornos de autenticação configurados no Supabase para o domínio de produção.
+- Relatos anônimos ativados com token restrito ao repositório e à permissão de Issues; smoke test criou a issue `#4` em 28/09/2026.
 
 ## 1. Publicar as próximas matérias
 
 Seguir `docs/operations/next-subject-playbook.md`, começando por História P1. Cada entrega precisa conter fonte registrada, material de leitura, pelo menos 60 questões, revisão independente, aprovação auditável e testes.
 
-## 2. Ativar relatos no GitHub
+## 2. Ativar entrega de e-mails de autenticação
 
-No ambiente das Edge Functions do Supabase, configurar:
+O serviço SMTP padrão do Supabase não entrega mensagens a endereços externos à equipe do projeto. Configurar SMTP próprio em **Authentication → Emails → SMTP Settings**, trocar o template de Magic Link para `{{ .Token }}` e validar, com um endereço externo de teste:
 
-- `GITHUB_ISSUES_TOKEN`: token restrito a criar issues neste repositório;
-- `GITHUB_ISSUES_REPOSITORY=amandanery-o/patito`.
-
-Em seguida, publicar `supabase/functions/report-problem` e realizar um relato de teste sem dados pessoais.
+- criação de conta nova e coleta do nome;
+- entrada em conta existente;
+- código inválido e reenvio.
 
 ## 3. Entregar fontes editoriais restantes
 

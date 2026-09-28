@@ -18,7 +18,7 @@ O estudo tradicional pode ter pouca aderência à rotina de crianças nativas di
 ### Usuário único: aluno
 
 - Criança de aproximadamente 10 anos.
-- Cria sua própria conta informando nome, e-mail e senha.
+- Informa o e-mail, recebe um código de acesso e entra; no primeiro acesso, completa o nome depois da autenticação.
 - Visualiza somente o próprio progresso.
 - Usa o sistema principalmente pelo celular.
 
@@ -43,8 +43,10 @@ Não existirão perfis de responsável, professor, coordenador ou administrador 
 - `REQ-012` Permitir que cada aluno visualize somente o próprio progresso.
 - `REQ-013` Sincronizar o progresso para impedir perda de respostas e sessões concluídas.
 - `REQ-059` Ao esquecer o PIN, permitir criar uma nova conta — **retirado após adoção do Supabase Auth padrão**.
-- `REQ-062` Permitir cadastro e login com nome, e-mail e senha usando o Supabase Auth padrão.
-- `REQ-063` Utilizar o fluxo padrão de recuperação de senha por e-mail do Supabase.
+- `REQ-062` Permitir cadastro e login com nome, e-mail e senha usando o Supabase Auth padrão — **substituído pelo REQ-075**.
+- `REQ-063` Utilizar o fluxo padrão de recuperação de senha por e-mail do Supabase — **retirado após adoção do acesso sem senha**.
+- `REQ-074` Orientar claramente o primeiro acesso, permitir reenviar a confirmação e garantir entrega de e-mails de autenticação aos endereços das famílias.
+- `REQ-075` Usar um único fluxo de acesso por e-mail e código temporário: contas existentes entram, novos endereços criam a conta, e a interface não revela previamente se o endereço está cadastrado.
 
 ### Conteúdo pedagógico
 
@@ -199,7 +201,7 @@ Não serão usadas métricas comerciais.
 - O foco é celular, mas a entrega é web.
 - XP e ranking medem utilização, não desempenho.
 - A utilização considera questões respondidas e sessões concluídas, com limite diário contra uso artificial.
-- O acesso do aluno usa nome, e-mail e senha por meio do Supabase Auth padrão.
+- O acesso usa e-mail e código temporário por meio do Supabase Auth; o nome é solicitado dentro da sessão quando o perfil é novo.
 - Cada aluno utiliza seu próprio endereço de e-mail no cadastro.
 - Edebê e Richmond College são as fontes digitais previstas; configurações e credenciais serão fornecidas posteriormente.
 - O ranking exibirá o nome do aluno.
@@ -208,7 +210,7 @@ Não serão usadas métricas comerciais.
 - Temas possuem CRUD completo e estado de conclusão.
 - Resumos de conteúdo contêm somente texto nesta versão.
 - Relatos de problemas são encaminhados ao GitHub.
-- A recuperação de senha utiliza o fluxo padrão por e-mail do Supabase.
+- O acesso sem senha elimina o fluxo de recuperação de senha.
 - O ranking contabiliza até 60 questões e duas sessões concluídas por dia, sem limitar o uso adicional.
 - Issues de problemas nunca incluem o nome ou identificação da criança.
 - Não há vidas, streak, níveis, relatórios ou flashcards.
