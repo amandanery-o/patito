@@ -1,0 +1,1342 @@
+{
+  "status": "approved",
+  "contentId": "portugues-p1-leitura-ortografia-concordancia",
+  "title": "Revisão P1 — Leitura e língua em uso",
+  "summary": "Revisão de interpretação, terminações de palavras, vírgula, concordância nominal e plural em -ão.",
+  "source": {
+    "provider": "edebe",
+    "resourceId": "courseware-253/pages-110-124-144-146",
+    "version": "2024"
+  },
+  "generation": {
+    "model": "claude-sonnet-4-6",
+    "promptVersion": "question-batch-v2",
+    "generatedAt": "2026-09-28T14:14:42.203Z",
+    "usage": [
+      {
+        "batch": 1,
+        "input_tokens": 4393,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2011,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 2,
+        "input_tokens": 5037,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2230,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 3,
+        "input_tokens": 5510,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2120,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 4,
+        "input_tokens": 6139,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2406,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 5,
+        "input_tokens": 6747,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2409,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 6,
+        "input_tokens": 7355,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1970,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      }
+    ]
+  },
+  "editorialApproval": {
+    "reviewer": "Agente editorial independente Patito",
+    "reviewerType": "agent",
+    "reviewMethod": "independent-source-check-v3",
+    "reviewedAt": "2026-09-28T14:19:07.386Z",
+    "draftDigest": "bc2ed123832ad378748f1cc11396c24ce8ed68524a56bcf731faec4c6902dee9",
+    "schemaVersion": 1
+  },
+  "publishedAt": "2026-09-28T14:19:17.530Z",
+  "questions": [
+    {
+      "difficulty": "easy",
+      "question": "Leia o texto e responda.\n\n\"Mariana acordou cedo, tomou café com leite e saiu correndo para a escola. Ela não queria perder a aula de arte, sua favorita.\"\n\nPor que Mariana saiu correndo?",
+      "explanation": "O texto diz que ela não queria perder a aula de arte. Essa informação está escrita diretamente no texto, por isso é uma informação explícita.",
+      "sourceRef": {
+        "section": "Leitura e interpretação",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Porque estava com fome.",
+        "Porque não queria perder a aula de arte.",
+        "Porque a escola ficava longe de casa.",
+        "Porque sua mãe mandou ela se apressar."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "por-p1-001"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Leia o texto e responda.\n\n\"O cachorro de Pedro é muito brincalhão. Ele late, pula e corre pelo quintal o dia todo. Quando Pedro chega da escola, o cachorro fica tão feliz que derruba tudo pela frente.\"\n\nComo o cachorro se comporta quando Pedro chega?",
+      "explanation": "O texto informa diretamente que o cachorro fica tão feliz que derruba tudo pela frente. Essa é uma informação explícita, ou seja, está escrita no texto.",
+      "sourceRef": {
+        "section": "Leitura e interpretação",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Ele fica quieto e deitado.",
+        "Ele fica tão feliz que derruba tudo pela frente.",
+        "Ele sai correndo para o quintal.",
+        "Ele late e morde Pedro."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "por-p1-002"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia o texto e responda.\n\n\"Sofia chegou à festa com um sorriso enorme. Ela tinha passado a semana inteira ajudando a mãe a preparar os enfeites. Quando viu o salão decorado, seus olhos brilharam.\"\n\nPor que os olhos de Sofia brilharam ao ver o salão?",
+      "explanation": "O texto não diz diretamente que ela ficou orgulhosa, mas dá pistas: ela ajudou a preparar os enfeites e chegou sorrindo. É possível inferir que ela ficou feliz e orgulhosa ao ver o resultado do seu trabalho.",
+      "sourceRef": {
+        "section": "Leitura e interpretação",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Porque o salão estava muito escuro e assustador.",
+        "Porque ela nunca tinha ido a uma festa antes.",
+        "Porque a festa tinha muita comida gostosa.",
+        "Porque ela ficou feliz e orgulhosa ao ver o resultado do trabalho dela."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "por-p1-003"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia o texto e responda.\n\n\"Lucas não gostava de acordar cedo. Mas naquele dia era diferente: sua turma ia ao zoológico. Ele pulou da cama antes mesmo do despertador tocar.\"\n\nO que o texto permite concluir sobre Lucas naquele dia?",
+      "explanation": "Mesmo não gostando de acordar cedo, Lucas pulou da cama antes do despertador. Isso permite inferir que ele estava animado com o passeio ao zoológico.",
+      "sourceRef": {
+        "section": "Leitura e interpretação",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Lucas acordou cedo porque sua mãe o chamou.",
+        "Lucas estava com sono e não queria ir ao zoológico.",
+        "Lucas acordou tarde e perdeu o passeio.",
+        "Lucas estava animado com o passeio ao zoológico."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "por-p1-004"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual das palavras abaixo é um adjetivo formado com o sufixo -oso?",
+      "explanation": "O sufixo -oso forma adjetivos a partir de substantivos. 'Carinhoso' vem de 'carinho'. As outras palavras não usam esse sufixo para formar adjetivos.",
+      "sourceRef": {
+        "section": "Adjetivos terminados em -oso e -osa",
+        "pages": "110"
+      },
+      "options": [
+        "Carinhagem",
+        "Carinheza",
+        "Carinhoso",
+        "Carinhar"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "por-p1-005"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia a frase e escolha a opção com concordância nominal correta.\n\n\"As meninas ficaram _____ com a surpresa.\"",
+      "explanation": "Como 'meninas' é feminino e plural, o adjetivo também deve ser feminino e plural: 'animadas'. Essa é a regra da concordância nominal: artigo, substantivo e adjetivo combinam em gênero e número.",
+      "sourceRef": {
+        "section": "Concordância nominal",
+        "pages": "144"
+      },
+      "options": [
+        "animada",
+        "animados",
+        "animadas",
+        "animado"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "por-p1-006"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia o texto e responda.\n\n\"A professora entrou na sala e disse: — Hoje vamos fazer algo diferente. Guardem os cadernos e venham para o pátio.\n\nAs crianças se entreolharam, curiosas. Ninguém sabia o que ia acontecer, mas todos estavam com um sorriso no rosto.\"\n\nO que o texto permite inferir sobre as crianças?",
+      "explanation": "O texto diz que as crianças estavam curiosas e sorrindo, mesmo sem saber o que ia acontecer. Isso permite inferir que elas estavam animadas e com expectativa positiva, não com medo ou tristeza.",
+      "sourceRef": {
+        "section": "Leitura e interpretação",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "As crianças não queriam sair da sala.",
+        "As crianças já sabiam o que a professora ia fazer.",
+        "As crianças estavam com medo do que ia acontecer.",
+        "As crianças estavam animadas e com expectativa positiva."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "por-p1-007"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia as frases e escolha aquela em que a vírgula está usada corretamente.",
+      "explanation": "A vírgula deve ser usada para separar o nome de quem é chamado (vocativo) do restante da frase. Em 'Ana, venha aqui!', a vírgula separa o nome chamado do pedido. Nas outras frases, a vírgula separa sujeito do verbo, o que é incorreto.",
+      "sourceRef": {
+        "section": "Usos da vírgula",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Pedro, foi ao mercado.",
+        "A menina, correu até a janela.",
+        "O gato, dormia no sofá.",
+        "Ana, venha aqui!"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "por-p1-008"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada palavra da coluna da esquerda ao seu plural correto na coluna da direita.",
+      "explanation": "O plural das palavras terminadas em -ão pode ser -ões, -ães ou -ãos. 'Balão' faz 'balões'; 'pão' faz 'pães'; 'irmão' faz 'irmãos'. Cada palavra precisa ser aprendida com sua forma específica.",
+      "sourceRef": {
+        "section": "Plural de palavras terminadas em -ão",
+        "pages": "146"
+      },
+      "pairs": [
+        {
+          "left": "balão",
+          "right": "balões"
+        },
+        {
+          "left": "pão",
+          "right": "pães"
+        },
+        {
+          "left": "irmão",
+          "right": "irmãos"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "por-p1-009"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada substantivo ao adjetivo terminado em -oso ou -osa que foi formado a partir dele.",
+      "explanation": "Os adjetivos cuidadoso, carinhosa, cheiroso e perigosa são formados com -oso ou -osa e escritos com s.",
+      "sourceRef": {
+        "section": "Adjetivos terminados em -oso e -osa",
+        "pages": "110"
+      },
+      "pairs": [
+        {
+          "left": "cuidado",
+          "right": "cuidadoso"
+        },
+        {
+          "left": "carinho",
+          "right": "carinhosa"
+        },
+        {
+          "left": "cheiro",
+          "right": "cheiroso"
+        },
+        {
+          "left": "perigo",
+          "right": "perigosa"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "por-p1-010"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Leia: “Rafa observa os carros antes de atravessar e é um menino cuidadoso.” De qual substantivo foi formado o adjetivo “cuidadoso”?",
+      "explanation": "Cuidadoso é um adjetivo formado a partir do substantivo cuidado com a terminação -oso.",
+      "sourceRef": {
+        "section": "Adjetivos terminados em -oso e -osa",
+        "pages": "110"
+      },
+      "options": [
+        "cuidado",
+        "cuidador",
+        "cidade",
+        "curiosidade"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "por-p1-011"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Leia a frase abaixo.\n\n\"A sopa estava gostosa e todo mundo pediu mais.\"\n\nQual sufixo foi usado para formar a palavra 'gostosa'?",
+      "explanation": "A palavra 'gostosa' é formada pela base 'gost-' mais o sufixo -osa. Esse sufixo forma adjetivos femininos e é sempre escrito com s, nunca com z.",
+      "sourceRef": {
+        "section": "Adjetivos terminados em -oso e -osa",
+        "pages": "110"
+      },
+      "options": [
+        "-ossa",
+        "-oza",
+        "-osa",
+        "-assa"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "por-p1-012"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia as frases abaixo.\n\nI. A menina é carinhosa com os animais.\nII. O dia estava chuvoza e frio.\nIII. O avô tem um jeito amoroso de falar.\n\nEm qual frase a palavra formada com o sufixo -oso ou -osa está escrita corretamente?",
+      "explanation": "Os sufixos -oso e -osa são sempre escritos com s. Em I, 'carinhosa' está correta. Em II, 'chuvoza' está errada — o correto é 'chuvosa'. Em III, 'amoroso' está correto. Portanto, as frases I e III estão corretas, mas a frase II tem erro de ortografia.",
+      "sourceRef": {
+        "section": "Adjetivos terminados em -oso e -osa",
+        "pages": "110"
+      },
+      "options": [
+        "Somente a frase II",
+        "Somente a frase I",
+        "As frases I e III",
+        "As frases II e III"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "por-p1-013"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia o texto e responda.\n\n\"Dona Tereza é uma professora bondosa. Ela sempre trata os alunos com gentileza e nunca perde a paciência.\"\n\nQual palavra do texto é um adjetivo formado com o sufixo -osa?",
+      "explanation": "A palavra 'bondosa' é um adjetivo formado pela base 'bond-' mais o sufixo -osa, que é escrito com s. 'Gentileza' é um substantivo formado com o sufixo -eza. 'Professora' e 'paciência' não usam o sufixo -osa.",
+      "sourceRef": {
+        "section": "Adjetivos terminados em -oso e -osa",
+        "pages": "110"
+      },
+      "options": [
+        "gentileza",
+        "bondosa",
+        "paciência",
+        "professora"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "por-p1-014"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia a frase abaixo.\n\n\"Comprei pão, queijo e frutas no mercado.\"\n\nPor que a vírgula foi usada nessa frase?",
+      "explanation": "Nessa frase, a vírgula separa os itens de uma enumeração: pão, queijo e frutas. Esse é um dos usos corretos da vírgula — organizar uma lista de elementos dentro da frase.",
+      "sourceRef": {
+        "section": "Usos da vírgula",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Para indicar uma pausa desnecessária",
+        "Para chamar alguém pelo nome",
+        "Para separar o sujeito do verbo",
+        "Para separar itens de uma enumeração"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "por-p1-015"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia as frases abaixo e escolha aquela em que a vírgula está usada corretamente.\n\nI. João, venha cá, por favor.\nII. A menina, correu até a janela.\nIII. Comprei lápis, borracha, e caderno.",
+      "explanation": "Em I, a vírgula isola o nome de quem está sendo chamado ('João') e a expressão 'por favor', o que é correto. Em II, a vírgula separa o sujeito ('A menina') do verbo ('correu'), o que é errado. Em III, não se usa vírgula antes do 'e' em enumerações simples.",
+      "sourceRef": {
+        "section": "Usos da vírgula",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "As frases I e III",
+        "Somente a frase II",
+        "Somente a frase III",
+        "Somente a frase I"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "por-p1-016"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia as frases abaixo.\n\nI. Os alunos curiosos fizeram muitas perguntas.\nII. A menina corajoso ganhou o prêmio.\nIII. As flores coloridas enfeitaram a sala.\n\nEm qual frase a concordância nominal está correta?",
+      "explanation": "Na concordância nominal, o adjetivo deve combinar em gênero e número com o substantivo. Em I, 'alunos curiosos' está correto: ambos são masculinos e plurais. Em II, 'menina corajoso' está errado — o correto seria 'menina corajosa'. Em III, 'flores coloridas' está correto: ambos são femininos e plurais. Portanto, as frases I e III estão corretas.",
+      "sourceRef": {
+        "section": "Concordância nominal",
+        "pages": "144"
+      },
+      "options": [
+        "Somente a frase II",
+        "Somente a frase I",
+        "As frases I e III",
+        "As frases II e III"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "por-p1-017"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia o texto e responda.\n\n\"Na viagem de fim de ano, a família de Ana visitou uma paisagem deslumbrante. A coragem de enfrentar a estrada longa valeu cada momento.\"\n\nAs palavras 'viagem', 'paisagem' e 'coragem' têm algo em comum. O que é?",
+      "explanation": "As palavras 'viagem', 'paisagem' e 'coragem' são todas substantivos terminados em -agem, escritos com g. Além disso, são todas do gênero feminino: a viagem, a paisagem, a coragem.",
+      "sourceRef": {
+        "section": "Substantivos terminados em -agem e -eza",
+        "pages": "124"
+      },
+      "options": [
+        "São substantivos terminados em -agem, escritos com g",
+        "São palavras que terminam em -eza",
+        "São palavras masculinas terminadas em -agem",
+        "São adjetivos formados com o sufixo -osa"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "por-p1-018"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada frase no plural à palavra correspondente no singular.",
+      "explanation": "Para encontrar o singular, observe a palavra em -ões, -ães ou -ãos: balões/balão, pães/pão, irmãos/irmão e corações/coração.",
+      "sourceRef": {
+        "section": "Plural de palavras terminadas em -ão",
+        "pages": "146"
+      },
+      "pairs": [
+        {
+          "left": "Os balões subiram no céu.",
+          "right": "balão"
+        },
+        {
+          "left": "Os pães estão na cesta.",
+          "right": "pão"
+        },
+        {
+          "left": "Os irmãos chegaram cedo.",
+          "right": "irmão"
+        },
+        {
+          "left": "Os corações aparecem no desenho.",
+          "right": "coração"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "por-p1-019"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada adjetivo da coluna da esquerda à frase em que ele está usado com concordância nominal correta.",
+      "explanation": "Na concordância nominal, o adjetivo deve combinar em gênero e número com o substantivo. 'Carinhoso' combina com 'o pai'; 'carinhosa' combina com 'a mãe'; 'carinhosos' combina com 'os avós'; 'carinhosas' combina com 'as tias'.",
+      "sourceRef": {
+        "section": "Concordância nominal",
+        "pages": "144"
+      },
+      "pairs": [
+        {
+          "left": "carinhoso",
+          "right": "o pai carinhoso"
+        },
+        {
+          "left": "carinhosa",
+          "right": "a mãe carinhosa"
+        },
+        {
+          "left": "carinhosos",
+          "right": "os avós carinhosos"
+        },
+        {
+          "left": "carinhosas",
+          "right": "as tias carinhosas"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "por-p1-020"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Leia a frase abaixo.\n\n\"A bagagem de Luís estava cheia de roupas e livros.\"\n\nA palavra 'bagagem' termina em -agem. Como ela é escrita?",
+      "explanation": "Substantivos terminados em -agem são escritos com a letra g, não com j. Por isso, a grafia correta é 'bagagem', com g.",
+      "sourceRef": {
+        "section": "Substantivos terminados em -agem e -eza",
+        "pages": "124"
+      },
+      "options": [
+        "bajagem",
+        "bagagem",
+        "bagagém",
+        "bajagém"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "por-p1-021"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual das palavras abaixo é um substantivo formado com o sufixo -eza?",
+      "explanation": "O sufixo -eza forma substantivos a partir de adjetivos. 'Beleza' vem de 'belo', seguindo essa regra. As outras palavras não têm esse sufixo.",
+      "sourceRef": {
+        "section": "Substantivos terminados em -agem e -eza",
+        "pages": "124"
+      },
+      "options": [
+        "viagem",
+        "carinhoso",
+        "balões",
+        "beleza"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "por-p1-022"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Leia o texto e responda.\n\n\"Tiago adorava passear de bicicleta pelo parque. Certo dia, ele encontrou um filhote de gato perdido. Sem pensar duas vezes, levou o bichinho para casa e cuidou dele com muito carinho.\"\n\nO que Tiago fez ao encontrar o filhote?",
+      "explanation": "O texto diz claramente que Tiago levou o filhote para casa e cuidou dele. Essa é uma informação explícita no texto.",
+      "sourceRef": {
+        "section": "Leitura e interpretação",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Levou o filhote para casa e cuidou dele.",
+        "Deixou o filhote com um amigo.",
+        "Chamou um veterinário no parque.",
+        "Continuou pedalando sem parar."
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "por-p1-023"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia as frases abaixo.\n\nI. A coragem do bombeiro salvou muitas vidas.\nII. A coragém do bombeiro salvou muitas vidas.\nIII. A corajem do bombeiro salvou muitas vidas.\n\nQual frase está escrita corretamente?",
+      "explanation": "'Coragem' é um substantivo terminado em -agem e é escrito com g, sem acento. A grafia correta é 'coragem', como aparece na frase I.",
+      "sourceRef": {
+        "section": "Substantivos terminados em -agem e -eza",
+        "pages": "124"
+      },
+      "options": [
+        "As frases I e III.",
+        "Somente a frase I.",
+        "Somente a frase II.",
+        "Somente a frase III."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "por-p1-024"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia o texto e responda.\n\n\"Clara era uma menina cheia de firmeza. Mesmo quando as coisas ficavam difíceis, ela não desistia. Seus amigos admiravam muito essa qualidade nela.\"\n\nA palavra 'firmeza' foi formada a partir de qual adjetivo?",
+      "explanation": "O sufixo -eza forma substantivos a partir de adjetivos. 'Firmeza' vem do adjetivo 'firme'. Esse é o padrão ensinado no material: adjetivo + -eza = substantivo.",
+      "sourceRef": {
+        "section": "Substantivos terminados em -agem e -eza",
+        "pages": "124"
+      },
+      "options": [
+        "firmar",
+        "firme",
+        "firmão",
+        "firmoso"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "por-p1-025"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual frase usa corretamente as vírgulas para marcar o nome da pessoa chamada no meio da oração?",
+      "explanation": "Pedro é o nome da pessoa chamada. Quando o vocativo aparece no meio da frase, ele fica entre vírgulas.",
+      "sourceRef": {
+        "section": "Usos da vírgula",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Venha Pedro, conversar conosco.",
+        "Venha, Pedro, conversar conosco.",
+        "Venha, Pedro conversar, conosco.",
+        "Venha Pedro conversar conosco."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "por-p1-026"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia as frases abaixo.\n\nI. Os meninos ficaram animados com o passeio.\nII. As meninas ficaram animada com o passeio.\nIII. O menino ficaram animado com o passeio.\n\nEm qual frase a concordância nominal está correta?",
+      "explanation": "Na concordância nominal, o adjetivo deve combinar em gênero e número com o substantivo. Na frase I, 'meninos' (masculino plural) combina com 'animados' (masculino plural). As frases II e III têm erros de concordância.",
+      "sourceRef": {
+        "section": "Concordância nominal",
+        "pages": "144"
+      },
+      "options": [
+        "Somente a frase III.",
+        "As frases I e III.",
+        "Somente a frase I.",
+        "Somente a frase II."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "por-p1-027"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia o texto e responda.\n\n\"Durante a viagem, a família parou para admirar a paisagem das montanhas. A grandeza daquele lugar deixou todos sem palavras.\"\n\nAs palavras 'viagem', 'paisagem' e 'grandeza' foram formadas com sufixos diferentes. Qual alternativa apresenta corretamente os sufixos usados nessas palavras, nessa ordem?",
+      "explanation": "'Viagem' e 'paisagem' terminam em -agem (escritas com g). 'Grandeza' termina em -eza, sufixo que forma substantivos a partir de adjetivos (grande + eza). Reconhecer os dois sufixos e sua ortografia é o objetivo desta questão.",
+      "sourceRef": {
+        "section": "Substantivos terminados em -agem e -eza",
+        "pages": "124"
+      },
+      "options": [
+        "-agem, -eza e -agem",
+        "-agem, -agem e -eza",
+        "-agem, -agem e -osa",
+        "-eza, -eza e -agem"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "por-p1-028"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada adjetivo da coluna da esquerda ao substantivo formado com o sufixo -eza, conforme o material estudado.",
+      "explanation": "O sufixo -eza forma substantivos abstratos a partir de adjetivos: 'belo' vira 'beleza', 'gentil' vira 'gentileza', 'triste' vira 'tristeza' e 'rico' vira 'riqueza'. Esse é o padrão ensinado no material.",
+      "sourceRef": {
+        "section": "Substantivos terminados em -agem e -eza",
+        "pages": "124"
+      },
+      "pairs": [
+        {
+          "left": "belo",
+          "right": "beleza"
+        },
+        {
+          "left": "gentil",
+          "right": "gentileza"
+        },
+        {
+          "left": "triste",
+          "right": "tristeza"
+        },
+        {
+          "left": "rico",
+          "right": "riqueza"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "por-p1-029"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada palavra da coluna da esquerda à informação correta sobre ela, conforme o material estudado.",
+      "explanation": "'Viagem' e 'paisagem' são substantivos terminados em -agem, escritos com g. 'Beleza' é um substantivo formado com o sufixo -eza a partir do adjetivo 'belo'. 'Coragem' também termina em -agem e é escrita com g. Reconhecer o sufixo e a ortografia de cada palavra é o objetivo desta questão.",
+      "sourceRef": {
+        "section": "Substantivos terminados em -agem e -eza",
+        "pages": "124"
+      },
+      "pairs": [
+        {
+          "left": "viagem",
+          "right": "substantivo terminado em -agem, escrito com g"
+        },
+        {
+          "left": "beleza",
+          "right": "substantivo formado com o sufixo -eza"
+        },
+        {
+          "left": "paisagem",
+          "right": "substantivo feminino terminado em -agem"
+        },
+        {
+          "left": "coragem",
+          "right": "substantivo terminado em -agem, escrito com g, não com j"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "por-p1-030"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Em qual frase a vírgula foi usada de modo incorreto porque separa quem pratica a ação do verbo?",
+      "explanation": "Em “Os alunos, organizaram”, a vírgula separa o sujeito “Os alunos” do verbo “organizaram”, o que deve ser evitado.",
+      "sourceRef": {
+        "section": "Usos da vírgula",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Os alunos, organizaram a biblioteca.",
+        "Depois da aula, os alunos organizaram a biblioteca.",
+        "Os alunos organizaram livros, revistas e jogos.",
+        "Professora, os alunos organizaram a biblioteca."
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "por-p1-031"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Leia a frase abaixo.\n\n\"No parque, as crianças brincaram a tarde toda.\"\n\nPor que há vírgula depois de \"No parque\"?",
+      "explanation": "A expressão \"No parque\" está deslocada para o início da frase, antes do sujeito. Quando uma expressão aparece fora do lugar habitual, usa-se vírgula para separá-la do restante. Esse é o uso da vírgula com expressão deslocada.",
+      "sourceRef": {
+        "section": "Usos da vírgula",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Porque a vírgula separa o sujeito do verbo nessa frase.",
+        "Porque \"No parque\" é o sujeito da frase.",
+        "Porque a frase tem uma enumeração de lugares.",
+        "Porque \"No parque\" é uma expressão deslocada para o início da frase."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "por-p1-032"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia: “Na sexta-feira, a turma levou livros, revistas e gibis para a feira.” Quantos usos da vírgula aparecem na frase?",
+      "explanation": "A primeira vírgula separa a expressão inicial “Na sexta-feira”. A segunda separa itens da enumeração.",
+      "sourceRef": {
+        "section": "Usos da vírgula",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Um: somente vocativo.",
+        "Dois: expressão inicial e enumeração.",
+        "Três: sujeito, verbo e enumeração.",
+        "Nenhum: as vírgulas devem ser retiradas."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "por-p1-033"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia a frase abaixo.\n\n\"Gabriel, traga o livro, a caneta e o caderno.\"\n\nQuantos usos diferentes da vírgula aparecem nessa frase?",
+      "explanation": "A vírgula depois de “Gabriel” separa o vocativo, isto é, o nome de quem está sendo chamado. A vírgula depois de “livro” separa itens da enumeração: livro, caneta e caderno. Portanto, há dois usos diferentes na frase.",
+      "sourceRef": {
+        "section": "Usos da vírgula",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Apenas um: vocativo.",
+        "Dois: vocativo e enumeração.",
+        "Dois: expressão deslocada e enumeração.",
+        "Apenas um: enumeração."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "por-p1-034"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "A frase ainda não foi pontuada: “Na mochila Ana colocou caderno lápis borracha e régua.” Qual opção usa as vírgulas corretamente?",
+      "explanation": "A vírgula separa a expressão inicial “Na mochila” e organiza os itens caderno, lápis, borracha e régua. Não se separa Ana do verbo colocou.",
+      "sourceRef": {
+        "section": "Usos da vírgula",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Na mochila Ana, colocou caderno, lápis, borracha e régua.",
+        "Na mochila, Ana colocou caderno, lápis, borracha e régua.",
+        "Na mochila, Ana, colocou caderno lápis borracha e régua.",
+        "Na mochila Ana colocou, caderno lápis, borracha e régua."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "por-p1-035"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia o texto e responda.\n\n\"Beatriz acordou animada naquele sábado. Ela tinha planejado passar o dia com a avó: iam fazer biscoitos, assistir a um filme e passear no jardim. Quando chegou à casa da avó, encontrou tudo pronto para começar.\"\n\nO que o texto permite concluir sobre Beatriz?",
+      "explanation": "O texto diz que Beatriz acordou animada e que tinha planejado as atividades com a avó. Isso mostra que ela estava feliz e esperando pelo encontro. Essa conclusão é apoiada pelas pistas do próprio texto.",
+      "sourceRef": {
+        "section": "Leitura e interpretação",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Beatriz ficou surpresa ao chegar à casa da avó.",
+        "Beatriz não gostava de passar tempo com a avó.",
+        "Beatriz estava animada porque havia planejado o dia com a avó.",
+        "Beatriz acordou cedo porque precisava ir à escola."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "por-p1-036"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "A frase “Os estudantes, prepararam os cartazes.” tem uma vírgula indevida. Qual é a correção?",
+      "explanation": "A vírgula deve ser retirada porque “Os estudantes” é o sujeito e “prepararam” é o verbo.",
+      "sourceRef": {
+        "section": "Usos da vírgula",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Os estudantes prepararam os cartazes.",
+        "Os, estudantes prepararam os cartazes.",
+        "Os estudantes prepararam, os cartazes.",
+        "Os estudantes, prepararam, os cartazes."
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "por-p1-037"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada frase da coluna da esquerda ao uso correto da vírgula que ela apresenta, conforme o material estudado.",
+      "explanation": "A vírgula tem usos diferentes: separa itens de uma enumeração, isola o vocativo (nome de quem é chamado) e separa expressões deslocadas. Cada frase exemplifica um desses usos.",
+      "sourceRef": {
+        "section": "Usos da vírgula",
+        "pages": "escopo oficial"
+      },
+      "pairs": [
+        {
+          "left": "\"Carla, venha aqui!\"",
+          "right": "Vírgula no vocativo"
+        },
+        {
+          "left": "\"Comprei pão, leite e ovos.\"",
+          "right": "Vírgula na enumeração"
+        },
+        {
+          "left": "\"Na escola, os alunos estudaram muito.\"",
+          "right": "Vírgula em expressão deslocada"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "por-p1-038"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada substantivo terminado em -agem à ideia que ele expressa na frase.",
+      "explanation": "Viagem, paisagem, bagagem e coragem são substantivos escritos com g na terminação -agem e têm sentidos diferentes.",
+      "sourceRef": {
+        "section": "Substantivos terminados em -agem e -eza",
+        "pages": "124"
+      },
+      "pairs": [
+        {
+          "left": "viagem",
+          "right": "deslocamento de um lugar para outro"
+        },
+        {
+          "left": "paisagem",
+          "right": "vista de um lugar"
+        },
+        {
+          "left": "bagagem",
+          "right": "conjunto de malas levado no percurso"
+        },
+        {
+          "left": "coragem",
+          "right": "disposição para enfrentar uma dificuldade"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "por-p1-039"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia cada frase e associe-a à avaliação correta sobre o uso da vírgula, conforme o material estudado.",
+      "explanation": "A vírgula não deve separar o sujeito do verbo. Ela é usada corretamente para isolar vocativos, separar itens de enumeração e destacar expressões deslocadas. Identificar o erro ou o acerto exige conhecer cada um desses usos.",
+      "sourceRef": {
+        "section": "Usos da vírgula",
+        "pages": "escopo oficial"
+      },
+      "pairs": [
+        {
+          "left": "\"Pedro, traga o lápis.\"",
+          "right": "Correto: vírgula no vocativo"
+        },
+        {
+          "left": "\"A menina, correu até o portão.\"",
+          "right": "Errado: vírgula separando sujeito e verbo"
+        },
+        {
+          "left": "\"De tarde, fomos ao parque.\"",
+          "right": "Correto: vírgula em expressão deslocada"
+        },
+        {
+          "left": "\"Comprei maçã, banana, e uva.\"",
+          "right": "Errado: vírgula antes do último item com 'e'"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "por-p1-040"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Leia a frase abaixo.\n\n\"As flores amarelas enfeitaram o jardim.\"\n\nNessa frase, a palavra 'amarelas' concorda com qual substantivo?",
+      "explanation": "Na concordância nominal, o adjetivo deve combinar em gênero e número com o substantivo a que se refere. 'Amarelas' está no feminino plural porque concorda com 'flores', que também é feminino plural.",
+      "sourceRef": {
+        "section": "Concordância nominal",
+        "pages": "144"
+      },
+      "options": [
+        "Com 'jardim', porque é o último substantivo da frase.",
+        "Com 'flores', porque está no mesmo gênero e número.",
+        "Com 'enfeitaram', porque é o verbo principal.",
+        "Com 'As', porque é o artigo que abre a frase."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "por-p1-041"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Leia a frase abaixo.\n\n\"O gato preguiçoso dormiu o dia todo.\"\n\nQual é o adjetivo dessa frase?",
+      "explanation": "'Preguiçoso' é o adjetivo, pois descreve uma característica do substantivo 'gato'. Ele foi formado com o sufixo -oso, que cria adjetivos a partir de substantivos.",
+      "sourceRef": {
+        "section": "Adjetivos terminados em -oso e -osa",
+        "pages": "110"
+      },
+      "options": [
+        "Dormiu",
+        "Preguiçoso",
+        "Dia",
+        "Gato"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "por-p1-042"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Leia o texto e responda.\n\n\"Rodrigo chegou à biblioteca com uma pilha de livros na mochila. A bibliotecária sorriu e disse: — Você já leu todos esses? Rodrigo fez que sim com a cabeça, orgulhoso.\"\n\nO que o gesto de Rodrigo indica?",
+      "explanation": "O gesto de fazer que sim com a cabeça mostra que Rodrigo confirmou ter lido os livros. Essa é uma inferência simples apoiada pelo contexto da cena.",
+      "sourceRef": {
+        "section": "Leitura e interpretação",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Que Rodrigo confirmou ter lido os livros.",
+        "Que Rodrigo queria pegar mais livros emprestados.",
+        "Que Rodrigo estava com dor de cabeça.",
+        "Que Rodrigo não sabia responder à pergunta."
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "por-p1-043"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia as frases abaixo.\n\nI. O menino estudioso tirou boas notas.\nII. A menina estudiosa tirou boas notas.\nIII. Os meninos estudiozos tiraram boas notas.\n\nEm quais frases o adjetivo formado com o sufixo -oso ou -osa está escrito corretamente?",
+      "explanation": "Os adjetivos formados com os sufixos -oso e -osa são sempre escritos com s, nunca com z. Nas frases I e II, 'estudioso' e 'estudiosa' estão corretos. Na frase III, 'estudiozos' está errado. Portanto, as frases I e II estão corretas.",
+      "sourceRef": {
+        "section": "Adjetivos terminados em -oso e -osa",
+        "pages": "110"
+      },
+      "options": [
+        "Somente a frase III",
+        "Somente a frase I",
+        "Somente a frase II",
+        "As frases I e II"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "por-p1-044"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia as frases abaixo e escolha aquela em que a concordância nominal está correta.\n\nI. O livro novo chegou ontem.\nII. A mochila novo chegou ontem.\nIII. Os cadernos nova chegaram ontem.",
+      "explanation": "Na concordância nominal, o adjetivo deve combinar em gênero e número com o substantivo. Em I, 'novo' (masculino singular) concorda com 'livro' (masculino singular). Em II, 'novo' deveria ser 'nova' para concordar com 'mochila' (feminino). Em III, 'nova' deveria ser 'novos' para concordar com 'cadernos' (masculino plural).",
+      "sourceRef": {
+        "section": "Concordância nominal",
+        "pages": "144"
+      },
+      "options": [
+        "Somente a frase I",
+        "Somente a frase II",
+        "Somente a frase III",
+        "As frases II e III"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "por-p1-045"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia o texto e responda.\n\n\"Naquela tarde, Júlia e seu irmão encontraram uma caixinha de madeira no quintal. Dentro havia um bilhete dobrado e uma chave enferrujada. Os dois se olharam sem dizer nada.\"\n\nO que o texto permite concluir sobre Júlia e seu irmão naquele momento?",
+      "explanation": "O texto não diz diretamente o que os personagens sentiram, mas as pistas — encontrar uma caixinha misteriosa com bilhete e chave, e se olharem sem dizer nada — indicam que ficaram surpresos ou curiosos. Essa é uma inferência apoiada pelo contexto.",
+      "sourceRef": {
+        "section": "Leitura e interpretação",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Eles ficaram surpresos ou curiosos com o que encontraram.",
+        "Eles já sabiam o que havia dentro da caixinha.",
+        "Eles jogaram a caixinha fora sem abrir.",
+        "Eles ficaram com medo e fugiram do quintal."
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "por-p1-046"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia as frases abaixo.\n\nI. As crianças animadas cantaram a música.\nII. Os meninos cansados voltaram para casa.\nIII. A professora contente recebeu os alunos.\n\nEm todas as frases, o adjetivo está concordando corretamente com o substantivo. O que essas frases têm em comum em relação à concordância nominal?",
+      "explanation": "Em todas as frases, o adjetivo combina em gênero e número com o substantivo a que se refere: 'animadas' (feminino plural) com 'crianças' (feminino plural); 'cansados' (masculino plural) com 'meninos' (masculino plural); 'contente' (sem variação de gênero) com 'professora'. Isso é concordância nominal: artigo, substantivo e adjetivo devem combinar.",
+      "sourceRef": {
+        "section": "Concordância nominal",
+        "pages": "144"
+      },
+      "options": [
+        "Em todas as frases, o adjetivo é formado com o sufixo -oso.",
+        "Em todas as frases, o adjetivo está no masculino singular.",
+        "Em todas as frases, o adjetivo vem depois do verbo.",
+        "Em todas as frases, o adjetivo combina em gênero e número com o substantivo."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "por-p1-047"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada palavra à descrição de como seu plural termina.",
+      "explanation": "Os plurais mostram três possibilidades diferentes: botões em -ões, alemães em -ães e órfãos em -ãos.",
+      "sourceRef": {
+        "section": "Plural de palavras terminadas em -ão",
+        "pages": "146"
+      },
+      "pairs": [
+        {
+          "left": "botão",
+          "right": "botões — termina em -ões"
+        },
+        {
+          "left": "alemão",
+          "right": "alemães — termina em -ães"
+        },
+        {
+          "left": "órfão",
+          "right": "órfãos — termina em -ãos"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "por-p1-048"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada frase sem pontuação à sua versão corretamente pontuada.",
+      "explanation": "A vírgula marca o vocativo Pedro, separa itens da enumeração e destaca a expressão inicial “Depois do recreio”.",
+      "sourceRef": {
+        "section": "Usos da vírgula",
+        "pages": "escopo oficial"
+      },
+      "pairs": [
+        {
+          "left": "Pedro venha ver o desenho.",
+          "right": "Pedro, venha ver o desenho."
+        },
+        {
+          "left": "Trouxe tinta papel e pincéis.",
+          "right": "Trouxe tinta, papel e pincéis."
+        },
+        {
+          "left": "Depois do recreio voltamos à sala.",
+          "right": "Depois do recreio, voltamos à sala."
+        }
+      ],
+      "type": "matchColumns",
+      "id": "por-p1-049"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada frase à palavra que completa corretamente o sentido.",
+      "explanation": "Viagem, paisagem e coragem terminam em -agem; beleza termina em -eza. Cada substantivo completa um contexto diferente.",
+      "sourceRef": {
+        "section": "Substantivos terminados em -agem e -eza",
+        "pages": "124"
+      },
+      "pairs": [
+        {
+          "left": "A família fez uma longa ___ de ônibus.",
+          "right": "viagem"
+        },
+        {
+          "left": "A ___ das montanhas encantou a turma.",
+          "right": "paisagem"
+        },
+        {
+          "left": "A menina mostrou ___ ao falar no palco.",
+          "right": "coragem"
+        },
+        {
+          "left": "A ___ do desenho chamou atenção.",
+          "right": "beleza"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "por-p1-050"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Leia o texto e responda.\n\n\"Henrique estava nervoso antes da apresentação. Mas quando subiu ao palco e viu o sorriso da professora, respirou fundo e começou a falar com calma.\"\n\nO que ajudou Henrique a se acalmar?",
+      "explanation": "O texto diz que Henrique viu o sorriso da professora e, a partir disso, respirou fundo e começou a falar com calma. A resposta está diretamente no texto.",
+      "sourceRef": {
+        "section": "Leitura e interpretação",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Ele pediu ajuda a um colega no palco.",
+        "Ele fechou os olhos e não olhou para ninguém.",
+        "Ele decorou o texto inteiro antes de subir.",
+        "Ele viu o sorriso da professora."
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "por-p1-051"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Complete corretamente: “No parque, dois ___ brincavam perto da fonte.”",
+      "explanation": "O plural de cão é cães, uma das palavras em -ão cujo plural termina em -ães.",
+      "sourceRef": {
+        "section": "Plural de palavras terminadas em -ão",
+        "pages": "146"
+      },
+      "options": [
+        "cãos",
+        "cães",
+        "cões",
+        "cãoses"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "por-p1-052"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Em qual frase a vírgula mostra corretamente que “professora” é a pessoa chamada no final da pergunta?",
+      "explanation": "Em “Você pode me ajudar, professora?”, a vírgula separa o vocativo “professora”, que aparece no final da pergunta.",
+      "sourceRef": {
+        "section": "Usos da vírgula",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Professora você pode me ajudar?",
+        "Você, pode me ajudar professora?",
+        "Você pode me ajudar, professora?",
+        "Você pode, me ajudar professora?"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "por-p1-053"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual das frases abaixo apresenta concordância nominal correta?",
+      "explanation": "Na concordância nominal, o adjetivo deve combinar em gênero e número com o substantivo. Em 'As alunas dedicadas estudaram muito', o adjetivo 'dedicadas' está no feminino plural, concordando com 'alunas'. Nas outras frases, há erro de gênero ou número.",
+      "sourceRef": {
+        "section": "Concordância nominal",
+        "pages": "144"
+      },
+      "options": [
+        "As alunas dedicada estudaram muito.",
+        "As alunas dedicadas estudaram muito.",
+        "As alunas dedicado estudaram muito.",
+        "As alunas dedicados estudaram muito."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "por-p1-054"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia o texto e responda.\n\n\"Naquela manhã fria, Tomás colocou o casaco, pegou a mochila e saiu apressado. Ele não queria perder o ônibus de jeito nenhum.\"\n\nO que o texto permite concluir sobre Tomás?",
+      "explanation": "O texto mostra que Tomás saiu apressado e não queria perder o ônibus. Isso permite concluir que ele estava com pressa para não se atrasar.",
+      "sourceRef": {
+        "section": "Leitura e interpretação",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Tomás não gostava de andar de ônibus.",
+        "Tomás acordou tarde e faltou à escola.",
+        "Tomás estava com pressa para não perder o ônibus.",
+        "Tomás havia esquecido a mochila em casa."
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "por-p1-055"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual revisão corrige somente a vírgula indevida da frase “Hoje, a turma, apresentou o trabalho”?",
+      "explanation": "A vírgula depois de “Hoje” pode destacar a expressão inicial. A vírgula entre “a turma” e “apresentou” deve ser retirada porque separa sujeito e verbo.",
+      "sourceRef": {
+        "section": "Usos da vírgula",
+        "pages": "escopo oficial"
+      },
+      "options": [
+        "Hoje a turma, apresentou o trabalho.",
+        "Hoje, a turma apresentou o trabalho.",
+        "Hoje a turma apresentou, o trabalho.",
+        "Hoje, a turma, apresentou, o trabalho."
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "por-p1-056"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia as frases abaixo.\n\nI. Os irmãos chegaram juntos à festa.\nII. Os irmãos chegaram juntas à festa.\nIII. Os irmão chegaram juntos à festa.\n\nQual frase está correta em relação à concordância nominal e ao plural de 'irmão'?",
+      "explanation": "O plural de 'irmão' é 'irmãos', e o adjetivo 'juntos' deve estar no masculino plural para concordar com 'irmãos'. Apenas a frase I apresenta as duas formas corretas ao mesmo tempo.",
+      "sourceRef": {
+        "section": "Plural de palavras terminadas em -ão",
+        "pages": "146"
+      },
+      "options": [
+        "Frase I",
+        "Frase II",
+        "Frase III",
+        "Frases I e III"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "por-p1-057"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada frase no singular à reescrita correta no plural.",
+      "explanation": "Os plurais corretos são aviões, cidadãos, mãos e capitães. Na frase inteira, artigo e verbo também passam para o plural.",
+      "sourceRef": {
+        "section": "Plural de palavras terminadas em -ão",
+        "pages": "146"
+      },
+      "pairs": [
+        {
+          "left": "O avião decolou.",
+          "right": "Os aviões decolaram."
+        },
+        {
+          "left": "O cidadão participou.",
+          "right": "Os cidadãos participaram."
+        },
+        {
+          "left": "A mão estava limpa.",
+          "right": "As mãos estavam limpas."
+        },
+        {
+          "left": "O capitão chegou.",
+          "right": "Os capitães chegaram."
+        }
+      ],
+      "type": "matchColumns",
+      "id": "por-p1-058"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada frase com lacuna à grafia correta do substantivo pedido pelo contexto.",
+      "explanation": "Viagem e paisagem são escritas com -agem; beleza e gentileza são escritas com -eza. O contexto indica qual palavra completa cada frase.",
+      "sourceRef": {
+        "section": "Substantivos terminados em -agem e -eza",
+        "pages": "124"
+      },
+      "pairs": [
+        {
+          "left": "A ___ de férias foi divertida.",
+          "right": "viagem"
+        },
+        {
+          "left": "A ___ do jardim impressionou todos.",
+          "right": "beleza"
+        },
+        {
+          "left": "A ___ vista da janela tinha muitas árvores.",
+          "right": "paisagem"
+        },
+        {
+          "left": "A atitude de ajudar mostrou ___.",
+          "right": "gentileza"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "por-p1-059"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada frase com problema de pontuação à revisão correta.",
+      "explanation": "A primeira revisão retira a vírgula entre sujeito e verbo. As demais acrescentam vírgula no vocativo, após expressão inicial e entre itens de uma enumeração.",
+      "sourceRef": {
+        "section": "Usos da vírgula",
+        "pages": "escopo oficial"
+      },
+      "pairs": [
+        {
+          "left": "A equipe, terminou o cartaz.",
+          "right": "A equipe terminou o cartaz."
+        },
+        {
+          "left": "Rita traga a tesoura.",
+          "right": "Rita, traga a tesoura."
+        },
+        {
+          "left": "Ontem os alunos ensaiaram.",
+          "right": "Ontem, os alunos ensaiaram."
+        },
+        {
+          "left": "Usamos cola papel e tinta.",
+          "right": "Usamos cola, papel e tinta."
+        }
+      ],
+      "type": "matchColumns",
+      "id": "por-p1-060"
+    }
+  ]
+}

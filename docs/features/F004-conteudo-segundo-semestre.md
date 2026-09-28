@@ -43,4 +43,5 @@ Configurações, credenciais e permissões de uso de Edebê e Richmond College a
 - Matemática P1: capítulos 5, 6 e 7, 60 questões aprovadas.
 - Ciências P1: capítulos 8 e 9, 60 questões aprovadas, com leitura e prática separadas.
 - Inglês P1: unidades 5 e 6, 60 questões aprovadas, com leitura e prática separadas.
+- Português P1: leitura e interpretação, terminações de palavras, vírgula, concordância nominal e plural em `-ão`, com 60 questões aprovadas e leitura e prática separadas.
 - As demais matérias permanecem no estado explícito **Em breve** até concluírem o mesmo pipeline.

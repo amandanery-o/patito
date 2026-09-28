@@ -158,7 +158,7 @@ Não existirão perfis de responsável, professor, coordenador ou administrador 
 
 ### Materiais publicados em 22/09/2026
 
-Geografia P1/P2, Matemática T2/P1, Ciências P1 e Inglês P1 seguem o fluxo de leitura e prática separadas. Ciências P1 cobre os capítulos 8 e 9 do Nautas 4º ano; Inglês P1 cobre as unidades 5 e 6 de Go Primary 4. Cada material tem resumo próprio e 60 questões aprovadas por revisão independente. Português e História ainda dependem da conclusão de suas fontes e do mesmo processo editorial.
+Geografia P1/P2, Matemática T2/P1, Ciências P1, Inglês P1 e Português P1 seguem o fluxo de leitura e prática separadas. Ciências P1 cobre os capítulos 8 e 9 do Nautas 4º ano; Inglês P1 cobre as unidades 5 e 6 de Go Primary 4; Português P1 cobre leitura, ortografia, vírgula, concordância nominal e plural em `-ão`. Cada material tem resumo próprio e 60 questões aprovadas por revisão independente. História ainda depende da conclusão de sua fonte e do mesmo processo editorial.
 
 ## 8. Dados que precisam ser preservados
 

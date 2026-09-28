@@ -94,6 +94,17 @@ test.describe('Estrutura limpa do segundo semestre', () => {
     await expect(page.getByText('1/30 questões', { exact: true })).toBeVisible()
   })
 
+  test('publica Português P1 com leitura e prática separadas', async ({ page }) => {
+    const portugueseCard = page.getByTestId('subject-portugues')
+    await expect(portugueseCard.getByText('0 de 1 revisão concluída', { exact: true })).toBeVisible()
+    await portugueseCard.getByRole('button', { name: /Ver materiais/i }).click()
+    await page.getByRole('button', { name: 'Ler material da Revisão P1 — Leitura e língua em uso' }).click()
+    await expect(page.getByRole('heading', { name: 'Ler e encontrar pistas' })).toBeVisible()
+    await page.getByRole('button', { name: 'Praticar 30 questões' }).click()
+    await expect(page.getByText('Revisão P1 — Leitura e língua em uso', { exact: true })).toBeVisible()
+    await expect(page.getByText('1/30 questões', { exact: true })).toBeVisible()
+  })
+
   test('abre a agenda escolar oficial', async ({ page }) => {
     await page
       .getByRole('button', { name: /Agenda/i })

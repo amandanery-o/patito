@@ -2,8 +2,67 @@ import { GEOGRAPHY_SOURCE_TOPICS } from './geography-source-briefs.mjs'
 import { MATHEMATICS_SOURCE_TOPICS } from './mathematics-source-briefs.mjs'
 import { SCIENCE_SOURCE_TOPICS } from './science-source-briefs.mjs'
 import { ENGLISH_SOURCE_TOPICS } from './english-source-briefs.mjs'
+import { PORTUGUESE_SOURCE_TOPICS } from './portuguese-source-briefs.mjs'
 
 export const EDITORIAL_CONFIGS = {
+  'portugues-p1': {
+    assessmentName: 'P1',
+    subject: 'Língua Portuguesa',
+    subjectId: 'portugues',
+    chapters: [1],
+    contentId: 'portugues-p1-leitura-ortografia-concordancia',
+    questionPrefix: 'por-p1',
+    title: 'Revisão P1 — Leitura e língua em uso',
+    summary: 'Revisão de interpretação, terminações de palavras, vírgula, concordância nominal e plural em -ão.',
+    source: { provider: 'edebe', resourceId: 'courseware-253/pages-110-124-144-146', version: '2024' },
+    sourceTopics: PORTUGUESE_SOURCE_TOPICS,
+    publicationOutput: 'src/data/generated/portuguesP1Content.json',
+    contentScope: 'leitura e interpretação; -oso/-osa; -agem/-eza; vírgula; concordância nominal; plural em -ão',
+    batches: [
+      [
+        'SOMENTE leitura e interpretação',
+        'informação explícita',
+        'inferência simples',
+        'cada questão traz um texto curto original completo',
+        'não perguntar ortografia ou gramática neste lote',
+      ],
+      [
+        'SOMENTE adjetivos terminados em -oso e -osa',
+        'formação de palavras em frases variadas',
+        'ortografia com s',
+        'evitar repetir o enunciado qual palavra é um adjetivo formado com o sufixo',
+      ],
+      [
+        'SOMENTE substantivos terminados em -agem e -eza',
+        'formação de palavras em contexto',
+        'ortografia com g e z',
+        'usar enunciados variados e exemplos inequívocos',
+      ],
+      [
+        'SOMENTE usos da vírgula',
+        'enumeração',
+        'vocativo',
+        'expressão deslocada',
+        'não separar sujeito e verbo',
+        'frases autorais variadas',
+      ],
+      [
+        'SOMENTE concordância nominal',
+        'gênero',
+        'número',
+        'artigo, substantivo e adjetivo',
+        'reescrita e escolha de frases variadas',
+      ],
+      [
+        'SOMENTE plural em -ão',
+        '-ões',
+        '-ães',
+        '-ãos',
+        'uso em frases',
+        'não inventar regra única; exemplos inequívocos',
+      ],
+    ],
+  },
   'ingles-p1': {
     assessmentName: 'P1',
     subject: 'Inglês',

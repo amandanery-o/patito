@@ -3,6 +3,7 @@ import { GEOGRAPHY_TOPICS } from './geografia'
 import { MATHEMATICS_TOPICS } from './matematica'
 import { SCIENCE_TOPICS } from './ciencias'
 import { ENGLISH_TOPICS } from './ingles'
+import { PORTUGUESE_TOPICS } from './portugues'
 
 export const SUBJECTS = [
   {
@@ -10,9 +11,9 @@ export const SUBJECTS = [
     name: 'Português',
     icon: '📝',
     color: 'bg-blue-500',
-    topics: [],
+    topics: PORTUGUESE_TOPICS,
     calendarOnly: false,
-    lastUpdated: null,
+    lastUpdated: '2026-09-28',
   },
   {
     id: 'matematica',

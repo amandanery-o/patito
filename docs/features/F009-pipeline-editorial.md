@@ -46,3 +46,4 @@ Endpoints, autenticação, limites e permissões de uso serão especificados qua
 
 - Ciências P1: capítulos 8 e 9 conferidos no HTML da Edebê em 21/09/2026; 60 questões geradas em lotes, revisadas por agente independente e publicadas com manifesto de aprovação vinculado ao hash do rascunho.
 - Inglês P1: unidades 5 e 6 conferidas no livro digital Go Primary 4 da Richmond Studio em 22/09/2026; 60 questões geradas em lotes, revisadas por agente independente e publicadas com manifesto de aprovação vinculado ao hash do rascunho.
+- Português P1: páginas 110, 124, 144 e 146 e tópicos gerais conferidos no Nautas 4º ano e no calendário oficial em 28/09/2026; 60 questões geradas em lotes, revisadas por agente independente e publicadas com manifesto de aprovação vinculado ao hash do rascunho.
