@@ -325,8 +325,8 @@
   },
   {
     "difficulty": "challenging",
-    "question": "Uma fazenda produz leite usando ordenhadeiras automáticas, alimentação controlada para o gado e monitoramento por computador. Outra fazenda cria bois soltos em grandes pastagens sem uso de máquinas.\n\nCom base nessas informações, qual afirmação está correta?",
-    "explanation": "A primeira fazenda pratica pecuária intensiva, pois usa tecnologia e confinamento. A segunda pratica pecuária extensiva, pois o gado fica solto no pasto em áreas maiores. As duas são formas de pecuária, mas com características diferentes.",
+    "question": "Uma fazenda mantém o gado em espaço controlado, usa ordenhadeiras automáticas, alimentação planejada e monitoramento por computador. Outra cria bois soltos em grandes pastagens, com pouco uso de máquinas. Qual afirmação está correta?",
+    "explanation": "A primeira fazenda pratica pecuária intensiva, pois mantém os animais em espaço controlado e usa mais tecnologia. A segunda pratica pecuária extensiva, pois o gado fica solto no pasto em áreas maiores.",
     "sourceRef": {
       "section": "Pecuária",
       "pages": "73"
@@ -455,19 +455,19 @@
   },
   {
     "difficulty": "intermediate",
-    "question": "A pesca artesanal é considerada uma forma sustentável de extrativismo. Por quê?",
-    "explanation": "A pesca artesanal retira poucos peixes de cada vez, o que permite que a natureza se recomponha. Práticas que retiram recursos em excesso podem causar danos ao meio ambiente e reduzir os estoques naturais.",
+    "question": "Uma comunidade pesca em pequena quantidade, respeita o período de reprodução dos peixes e não captura animais abaixo do tamanho permitido. Por que essa prática é mais sustentável?",
+    "explanation": "A pesca pode ser mais sustentável quando respeita a reprodução, os tamanhos permitidos e os limites de retirada. Ser artesanal, sozinho, não garante sustentabilidade; a forma como a pesca é realizada também importa.",
     "sourceRef": {
       "section": "Extrativismo",
       "pages": "75"
     },
     "options": [
-      "Porque a pesca artesanal não usa barcos nem redes.",
-      "Porque usa máquinas modernas para capturar mais peixes.",
-      "Porque retira poucos peixes de cada vez, permitindo que a natureza se recomponha.",
-      "Porque os peixes são criados em tanques antes de serem pescados."
+      "Porque respeita o tempo de reprodução e evita retirar peixes em excesso.",
+      "Porque qualquer pesca artesanal é sustentável, sem depender de como é feita.",
+      "Porque usa máquinas para capturar o maior número possível de peixes.",
+      "Porque cria os peixes em tanques antes de pescá-los."
     ],
-    "correctIndex": 2,
+    "correctIndex": 0,
     "type": "multipleChoice",
     "id": "geo-p1-024"
   },

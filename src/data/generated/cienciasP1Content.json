@@ -309,14 +309,14 @@
     },
     {
       "difficulty": "easy",
-      "question": "Qual é a característica dos materiais no estado sólido?",
-      "explanation": "Materiais sólidos têm forma própria, ou seja, não mudam de forma quando trocamos de recipiente. Já os líquidos assumem a forma do recipiente e os gases ocupam o espaço disponível.",
+      "question": "O que acontece com a forma de um material sólido quando ele é colocado em outro recipiente?",
+      "explanation": "Um sólido mantém sua forma quando é colocado em outro recipiente. Já um líquido assume a forma do recipiente, e um gás ocupa o espaço disponível.",
       "sourceRef": {
         "section": "Transformações físicas e químicas",
         "pages": "80–81"
       },
       "options": [
-        "Têm forma própria, que não muda.",
+        "Ele mantém sua forma própria.",
         "Não podem ser aquecidos nem resfriados.",
         "Assumem a forma do recipiente em que estão.",
         "Ocupam todo o espaço disponível ao redor."
@@ -346,14 +346,14 @@
     {
       "difficulty": "easy",
       "question": "Qual das situações abaixo mostra uma transformação irreversível?",
-      "explanation": "Queimar papel é uma transformação irreversível porque o papel não pode voltar ao seu estado original após ser queimado. Já derreter gelo, dobrar papel e congelar suco são transformações que podem ser revertidas.",
+      "explanation": "Queimar papel é uma transformação irreversível porque o papel não pode voltar ao seu estado original após ser queimado. Já derreter gelo, moldar uma massinha e desfazer o formato, e congelar suco são exemplos tratados nesta revisão como transformações reversíveis.",
       "sourceRef": {
         "section": "Transformações irreversíveis",
         "pages": "93–93"
       },
       "options": [
         "Derreter gelo no copo.",
-        "Dobrar uma folha de papel.",
+        "Moldar uma massinha e desfazer o formato.",
         "Queimar uma folha de papel.",
         "Congelar suco de fruta."
       ],
@@ -400,15 +400,15 @@
     {
       "difficulty": "intermediate",
       "question": "Qual dos indícios abaixo pode indicar que uma transformação química aconteceu?",
-      "explanation": "A formação de um gás, como bolhas ou fumaça, pode ser um indício de transformação química, pois sugere que um material diferente foi formado. Mudança de cor, formação de sólido, luz e calor também podem indicar transformação química.",
+      "explanation": "A formação inesperada de gás durante uma transformação pode indicar que um material diferente foi formado. Cortar, trocar de recipiente ou apenas aquecer ao sol não basta para indicar uma transformação química.",
       "sourceRef": {
         "section": "Observação de transformações",
         "pages": "82–83"
       },
       "options": [
-        "O material foi partido em pedaços menores.",
-        "O material ficou mais frio ao ser tocado.",
+        "O material foi cortado em pedaços menores.",
         "O material mudou de recipiente.",
+        "O material foi apenas aquecido pelo sol.",
         "Formou-se um gás durante a transformação."
       ],
       "correctIndex": 3,
@@ -1058,7 +1058,7 @@
     {
       "difficulty": "intermediate",
       "question": "Associe cada situação à mudança de estado físico que ela representa.",
-      "explanation": "Fazer picolé é solidificação (líquido vira sólido); o picolé derretendo é fusão (sólido vira líquido); a fumaça quente esfriando e formando gotinhas é condensação (gás vira líquido); a água fervendo e soltando vapor é vaporização (líquido vira gás).",
+      "explanation": "Fazer picolé é solidificação (líquido vira sólido); o picolé derretendo é fusão (sólido vira líquido); o vapor esfriando e formando gotinhas é condensação (gás vira líquido); a água fervendo e virando vapor é vaporização (líquido vira gás).",
       "sourceRef": {
         "section": "Transformações reversíveis",
         "pages": "90–92"

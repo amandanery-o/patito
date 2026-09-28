@@ -610,17 +610,17 @@
     },
     {
       "difficulty": "intermediate",
-      "question": "Para medir a massa de um elefante adulto, qual unidade é mais adequada?",
-      "explanation": "A tonelada é usada para medir a massa de objetos muito pesados, como veículos grandes e animais de grande porte. O quilograma e o grama são usados para objetos bem mais leves.",
+      "question": "Um elefante adulto tem massa de aproximadamente 5 000 kg. Essa medida equivale a 5 de qual unidade?",
+      "explanation": "Como 1 tonelada equivale a 1 000 kg, 5 000 kg correspondem a 5 toneladas. A conversão torna a resposta única e evita escolher a unidade apenas por preferência.",
       "sourceRef": {
         "section": "Medidas de massa",
         "pages": "76–78"
       },
       "options": [
-        "Grama",
-        "Quilograma",
-        "Tonelada",
-        "Miligrama"
+        "Gramas",
+        "Quilogramas",
+        "Toneladas",
+        "Miligramas"
       ],
       "correctIndex": 2,
       "type": "multipleChoice",

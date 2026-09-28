@@ -1,0 +1,2153 @@
+{
+  "schemaVersion": 1,
+  "auditId": "published-content-2026-09-28",
+  "reviewer": "Codex — auditoria editorial solicitada pela mantenedora",
+  "reviewerType": "maintainer-directed-agent-audit",
+  "reviewMethod": "full-published-bank-recheck-v1",
+  "reviewedAt": "2026-09-28T14:00:46-03:00",
+  "totals": {
+    "banks": 7,
+    "questions": 420,
+    "corrected": 10,
+    "unchanged": 410
+  },
+  "banks": [
+    {
+      "file": "src/data/generated/cienciasP1Content.json",
+      "questionCount": 60,
+      "sha256": "7d4d0e7c8313bcdfeac3f923124b90529c63d26fc46be1af7d532f8a8e66dc00"
+    },
+    {
+      "file": "src/data/generated/geografiaP1Questions.json",
+      "questionCount": 60,
+      "sha256": "2a1a7c86b09a28b7521d1c25dfdcdf471e1f646850587ce1b866727aed3e0d73"
+    },
+    {
+      "file": "src/data/generated/geografiaP2Content.json",
+      "questionCount": 60,
+      "sha256": "473a4838a1466d604cf1b878724a5cf18a899557b89c6d84788478d719763aa4"
+    },
+    {
+      "file": "src/data/generated/inglesP1Content.json",
+      "questionCount": 60,
+      "sha256": "f809e27c3dca219bddad2c4364cac5a7e24adb558c07c86a0208361940b06744"
+    },
+    {
+      "file": "src/data/generated/matematicaP1Content.json",
+      "questionCount": 60,
+      "sha256": "00cff3cb60a8ca0765cb3a1bc6ee64dd5d1e93b725e7d2a48213d87fbccbc48f"
+    },
+    {
+      "file": "src/data/generated/matematicaT2Content.json",
+      "questionCount": 60,
+      "sha256": "d75a08765089296ce79fda9c23d815e8383abedeedc864df1fa6d827e00a642a"
+    },
+    {
+      "file": "src/data/generated/portuguesP1Content.json",
+      "questionCount": 60,
+      "sha256": "7d16819f409265a3e0de524cf976694aa1bfa66f27281264b6be13ceaa3afe68"
+    }
+  ],
+  "decisions": {
+    "cie-p1-001": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-002": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-003": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-004": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-005": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-006": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-007": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-008": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-009": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-010": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-011": {
+      "decision": "approved",
+      "outcome": "corrected",
+      "comment": "Questão esclarecida durante a auditoria integral; resposta, alternativas ou pares e explicação foram reconferidos contra a fonte."
+    },
+    "cie-p1-012": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-013": {
+      "decision": "approved",
+      "outcome": "corrected",
+      "comment": "Questão esclarecida durante a auditoria integral; resposta, alternativas ou pares e explicação foram reconferidos contra a fonte."
+    },
+    "cie-p1-014": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-015": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-016": {
+      "decision": "approved",
+      "outcome": "corrected",
+      "comment": "Questão esclarecida durante a auditoria integral; resposta, alternativas ou pares e explicação foram reconferidos contra a fonte."
+    },
+    "cie-p1-017": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-018": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-019": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-020": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-021": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-022": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-023": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-024": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-025": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-026": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-027": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-028": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-029": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-030": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-031": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-032": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-033": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-034": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-035": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-036": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-037": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-038": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-039": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-040": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-041": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-042": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-043": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-044": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-045": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-046": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-047": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-048": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-049": {
+      "decision": "approved",
+      "outcome": "corrected",
+      "comment": "Questão esclarecida durante a auditoria integral; resposta, alternativas ou pares e explicação foram reconferidos contra a fonte."
+    },
+    "cie-p1-050": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-051": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-052": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-053": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-054": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-055": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-056": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-057": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-058": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-059": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "cie-p1-060": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-001": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-002": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-003": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-004": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-005": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-006": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-007": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-008": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-009": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-010": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-011": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-012": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-013": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-014": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-015": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-016": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-017": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-018": {
+      "decision": "approved",
+      "outcome": "corrected",
+      "comment": "Questão esclarecida durante a auditoria integral; resposta, alternativas ou pares e explicação foram reconferidos contra a fonte."
+    },
+    "geo-p1-019": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-020": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-021": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-022": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-023": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-024": {
+      "decision": "approved",
+      "outcome": "corrected",
+      "comment": "Questão esclarecida durante a auditoria integral; resposta, alternativas ou pares e explicação foram reconferidos contra a fonte."
+    },
+    "geo-p1-025": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-026": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-027": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-028": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-029": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-030": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-031": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-032": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-033": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-034": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-035": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-036": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-037": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-038": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-039": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-040": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-041": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-042": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-043": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-044": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-045": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-046": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-047": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-048": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-049": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-050": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-051": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-052": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-053": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-054": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-055": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-056": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-057": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-058": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-059": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p1-060": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-001": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-002": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-003": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-004": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-005": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-006": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-007": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-008": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-009": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-010": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-011": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-012": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-013": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-014": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-015": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-016": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-017": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-018": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-019": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-020": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-021": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-022": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-023": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-024": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-025": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-026": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-027": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-028": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-029": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-030": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-031": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-032": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-033": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-034": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-035": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-036": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-037": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-038": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-039": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-040": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-041": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-042": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-043": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-044": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-045": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-046": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-047": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-048": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-049": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-050": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-051": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-052": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-053": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-054": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-055": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-056": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-057": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-058": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-059": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "geo-p2-060": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-001": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-002": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-003": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-004": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-005": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-006": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-007": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-008": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-009": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-010": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-011": {
+      "decision": "approved",
+      "outcome": "corrected",
+      "comment": "Questão esclarecida durante a auditoria integral; resposta, alternativas ou pares e explicação foram reconferidos contra a fonte."
+    },
+    "eng-p1-012": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-013": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-014": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-015": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-016": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-017": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-018": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-019": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-020": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-021": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-022": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-023": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-024": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-025": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-026": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-027": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-028": {
+      "decision": "approved",
+      "outcome": "corrected",
+      "comment": "Questão esclarecida durante a auditoria integral; resposta, alternativas ou pares e explicação foram reconferidos contra a fonte."
+    },
+    "eng-p1-029": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-030": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-031": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-032": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-033": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-034": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-035": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-036": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-037": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-038": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-039": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-040": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-041": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-042": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-043": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-044": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-045": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-046": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-047": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-048": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-049": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-050": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-051": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-052": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-053": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-054": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-055": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-056": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-057": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-058": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-059": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "eng-p1-060": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-001": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-002": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-003": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-004": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-005": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-006": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-007": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-008": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-009": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-010": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-011": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-012": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-013": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-014": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-015": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-016": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-017": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-018": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-019": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-020": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-021": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-022": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-023": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-024": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-025": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-026": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-027": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-028": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-029": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-030": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-031": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-032": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-033": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-034": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-035": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-036": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-037": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-038": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-039": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-040": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-041": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-042": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-043": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-044": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-045": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-046": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-047": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-048": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-049": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-050": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-051": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-052": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-053": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-054": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-055": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-056": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-057": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-058": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-059": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-p1-060": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-001": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-002": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-003": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-004": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-005": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-006": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-007": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-008": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-009": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-010": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-011": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-012": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-013": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-014": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-015": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-016": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-017": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-018": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-019": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-020": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-021": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-022": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-023": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-024": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-025": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-026": {
+      "decision": "approved",
+      "outcome": "corrected",
+      "comment": "Questão esclarecida durante a auditoria integral; resposta, alternativas ou pares e explicação foram reconferidos contra a fonte."
+    },
+    "mat-t2-027": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-028": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-029": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-030": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-031": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-032": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-033": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-034": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-035": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-036": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-037": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-038": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-039": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-040": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-041": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-042": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-043": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-044": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-045": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-046": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-047": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-048": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-049": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-050": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-051": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-052": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-053": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-054": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-055": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-056": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-057": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-058": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-059": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "mat-t2-060": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-001": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-002": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-003": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-004": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-005": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-006": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-007": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-008": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-009": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-010": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-011": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-012": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-013": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-014": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-015": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-016": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-017": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-018": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-019": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-020": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-021": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-022": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-023": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-024": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-025": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-026": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-027": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-028": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-029": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-030": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-031": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-032": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-033": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-034": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-035": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-036": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-037": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-038": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-039": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-040": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-041": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-042": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-043": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-044": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-045": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-046": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-047": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-048": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-049": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-050": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-051": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-052": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-053": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-054": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-055": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-056": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-057": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-058": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-059": {
+      "decision": "approved",
+      "outcome": "unchanged",
+      "comment": "Resposta, alternativas ou pares, explicação, linguagem, unicidade e referência reconferidos na auditoria integral."
+    },
+    "por-p1-060": {
+      "decision": "approved",
+      "outcome": "corrected",
+      "comment": "Questão esclarecida durante a auditoria integral; resposta, alternativas ou pares e explicação foram reconferidos contra a fonte."
+    }
+  }
+}

@@ -41,6 +41,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-023` 🟡 Publicar resumos textuais e exercícios do segundo semestre por matéria (Geografia P1 e P2, Matemática T2 e P1, Ciências P1, Inglês P1 e Português P1 publicadas; demais matérias aguardam fontes).
 - `TASK-024` ✅ Validar estrutura, IDs, relações e quantidade de questões.
 - `TASK-060` ✅ Remover a ambiguidade da associação `por-p1-030`: cada palavra recebeu uma pista de significado exclusiva, mantendo a terminação ortográfica, com regressão unitária no banco publicado.
+- `TASK-061` ✅ Auditar integralmente as 420 questões publicadas antes da semana de provas, corrigir dez riscos factuais ou de ambiguidade e manter uma regressão estrutural sobre os sete bancos ativos.
 
 ## F005 — Agenda escolar
 

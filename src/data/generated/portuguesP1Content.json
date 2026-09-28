@@ -1312,7 +1312,7 @@
     {
       "difficulty": "challenging",
       "question": "Associe cada frase com problema de pontuação à revisão correta.",
-      "explanation": "A primeira revisão retira a vírgula entre sujeito e verbo. As demais acrescentam vírgula no vocativo, após expressão inicial e entre itens de uma enumeração.",
+      "explanation": "A primeira revisão retira a vírgula entre sujeito e verbo. As demais acrescentam vírgula no vocativo, depois de uma expressão inicial longa e entre itens de uma enumeração.",
       "sourceRef": {
         "section": "Usos da vírgula",
         "pages": "escopo oficial"
@@ -1327,8 +1327,8 @@
           "right": "Rita, traga a tesoura."
         },
         {
-          "left": "Ontem os alunos ensaiaram.",
-          "right": "Ontem, os alunos ensaiaram."
+          "left": "Depois do recreio e antes da aula de Arte os alunos ensaiaram.",
+          "right": "Depois do recreio e antes da aula de Arte, os alunos ensaiaram."
         },
         {
           "left": "Usamos cola papel e tinta.",

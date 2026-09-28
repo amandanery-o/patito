@@ -45,4 +45,5 @@ Configurações, credenciais e permissões de uso de Edebê e Richmond College a
 - Inglês P1: unidades 5 e 6, 60 questões aprovadas, com leitura e prática separadas.
 - Português P1: leitura e interpretação, terminações de palavras, vírgula, concordância nominal e plural em `-ão`, com 60 questões aprovadas e leitura e prática separadas.
 - A associação `por-p1-030` usa significado e terminação em cada pista, evitando que palavras do mesmo gênero ou com a mesma terminação aceitem mais de uma combinação plausível.
+- Em 28/09/2026, as 420 questões dos sete materiais ativos receberam nova auditoria integral; dez questões foram esclarecidas e a cobertura estrutural passou a abranger todos os bancos publicados.
 - As demais matérias permanecem no estado explícito **Em breve** até concluírem o mesmo pipeline.

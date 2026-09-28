@@ -313,8 +313,8 @@
     },
     {
       "difficulty": "easy",
-      "question": "Veja a frase em inglês: 'They are eating.' Quem está realizando a ação nessa frase?",
-      "explanation": "A palavra 'they' significa 'eles' ou 'elas'. Quando falamos de mais de uma pessoa fazendo algo agora, usamos 'they are' seguido da ação com -ing.",
+      "question": "João e Maria estão almoçando. Na frase 'They are eating', quem está realizando a ação?",
+      "explanation": "Nesta situação, 'they' se refere a João e Maria. Para falar das duas pessoas fazendo algo agora, usamos 'they are' seguido da ação com -ing.",
       "sourceRef": {
         "section": "Actions and questions",
         "pages": "8–9"
@@ -323,7 +323,7 @@
         "Ninguém",
         "Um animal sozinho",
         "Uma pessoa",
-        "Duas ou mais pessoas"
+        "João e Maria"
       ],
       "correctIndex": 3,
       "type": "multipleChoice",
@@ -648,7 +648,7 @@
         "pages": "10–12"
       },
       "options": [
-        "Os verbos com -ing nessas frases não mudam de forma.",
+        "Nenhuma das ações está escrita com -ing.",
         "As três frases usam 'is' com o verbo em -ing.",
         "Cada frase usa um auxiliar diferente: am, is ou are.",
         "Todas as frases falam de ações que aconteceram ontem."
