@@ -17,7 +17,7 @@ describe('getMascotState', () => {
   })
 
   it('conecta os materiais publicados às matérias corretas', () => {
-    expect(SUBJECTS.find((subject) => subject.id === 'matematica').topics).toHaveLength(2)
+    expect(SUBJECTS.find((subject) => subject.id === 'matematica').topics).toHaveLength(3)
     expect(SUBJECTS.find((subject) => subject.id === 'portugues').topics).toHaveLength(1)
     expect(SUBJECTS.find((subject) => subject.id === 'portugues').topics[0].id).toBe('portugues-p1-leitura-lingua')
     expect(SUBJECTS.find((subject) => subject.id === 'historia').topics).toHaveLength(1)

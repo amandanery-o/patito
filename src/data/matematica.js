@@ -1,4 +1,5 @@
 import mathematicsP1Content from './generated/matematicaP1Content.json'
+import mathematicsP2Content from './generated/matematicaP2Content.json'
 import mathematicsT2Content from './generated/matematicaT2Content.json'
 
 export const MATHEMATICS_TOPICS = [
@@ -85,6 +86,57 @@ export const MATHEMATICS_TOPICS = [
             'O valor desconhecido precisa tornar verdadeira a igualdade inteira.',
           ],
           questions: mathematicsP1Content.questions,
+        },
+      ]
+    : []),
+  ...(mathematicsP2Content.status === 'approved'
+    ? [
+        {
+          id: 'matematica-p2-fracoes-decimais-dados',
+          title: 'Revisão P2 — Frações, decimais, tabelas e gráficos',
+          chapter: '9, 10 e 11',
+          reviewLabel: 'Revisão para a P2',
+          summary: mathematicsP2Content.summary,
+          source: mathematicsP2Content.source,
+          summarySections: [
+            {
+              title: 'Frações e partes iguais',
+              text: 'Uma fração representa uma ou mais partes iguais de um inteiro. O numerador mostra quantas partes são consideradas, e o denominador mostra em quantas partes iguais o inteiro foi dividido.',
+            },
+            {
+              title: 'Comparar e calcular com frações',
+              text: 'Frações podem ser representadas em figuras e na reta numérica. Quando os denominadores são iguais, a fração com maior numerador é maior. Para somar ou subtrair frações com denominadores iguais, operamos os numeradores e mantemos o denominador.',
+            },
+            {
+              title: 'Décimos e centésimos',
+              text: 'Décimos e centésimos podem ser escritos como frações ou números decimais. Um décimo é 0,1 e um centésimo é 0,01. Dez centésimos formam um décimo, e dez décimos formam uma unidade.',
+            },
+            {
+              title: 'Ler e comparar decimais',
+              text: 'A vírgula separa a parte inteira da parte decimal. Para comparar números decimais, observamos primeiro a parte inteira e depois décimos e centésimos. Zeros à direita podem não mudar o valor: 0,5 e 0,50 são equivalentes.',
+            },
+            {
+              title: 'Dinheiro e troco',
+              text: 'No sistema monetário brasileiro, cem centavos formam um real. Preços podem ser somados e subtraídos para encontrar o total de uma compra, quanto falta para pagar ou o valor do troco.',
+            },
+            {
+              title: 'Tabelas e variáveis',
+              text: 'Tabelas organizam dados em linhas e colunas. Variáveis numéricas apresentam números como resposta; variáveis categóricas apresentam categorias ou características, como cor ou preferência.',
+            },
+            {
+              title: 'Ler gráficos',
+              text: 'Para interpretar um gráfico, conferimos título, categorias, escala, legenda e fonte. Em um gráfico pictórico, cada figura pode valer mais de uma unidade. As conclusões precisam ser sustentadas pelos dados mostrados.',
+            },
+          ],
+          keyIdeas: [
+            'As partes de uma fração precisam ter o mesmo tamanho.',
+            'Numerador indica as partes consideradas; denominador indica o total de partes iguais.',
+            '0,1 é um décimo; 0,01 é um centésimo.',
+            '0,5 e 0,50 representam o mesmo valor.',
+            'Cem centavos formam um real.',
+            'Título, escala, legenda e fonte ajudam a interpretar gráficos corretamente.',
+          ],
+          questions: mathematicsP2Content.questions,
         },
       ]
     : []),

@@ -59,9 +59,9 @@ test.describe('Estrutura limpa do segundo semestre', () => {
     await expect(page.getByText('1/30 questões', { exact: true })).toBeVisible()
   })
 
-  test('publica T2 e P1 de Matemática com leitura e prática', async ({ page }) => {
+  test('publica T2, P1 e P2 de Matemática com leitura e prática', async ({ page }) => {
     const mathematicsCard = page.getByTestId('subject-matematica')
-    await expect(mathematicsCard.getByText('0 de 2 revisões concluídas', { exact: true })).toBeVisible()
+    await expect(mathematicsCard.getByText('0 de 3 revisões concluídas', { exact: true })).toBeVisible()
     await mathematicsCard.getByRole('button', { name: /Ver materiais/i }).click()
     await expect(page.getByText('T2', { exact: true })).toBeVisible()
     await expect(page.getByText('P1', { exact: true })).toBeVisible()
@@ -69,6 +69,20 @@ test.describe('Estrutura limpa do segundo semestre', () => {
     await expect(page.getByRole('heading', { name: 'Comprimento e perímetro' })).toBeVisible()
     await page.getByRole('button', { name: 'Praticar 30 questões' }).click()
     await expect(page.getByText('Revisão T2 — Grandezas e medidas', { exact: true })).toBeVisible()
+    await expect(page.getByText('1/30 questões', { exact: true })).toBeVisible()
+  })
+
+  test('inicia Matemática P2 após ler o material', async ({ page }) => {
+    await page
+      .getByTestId('subject-matematica')
+      .getByRole('button', { name: /Ver materiais/i })
+      .click()
+    await page
+      .getByRole('button', { name: 'Ler material da Revisão P2 — Frações, decimais, tabelas e gráficos' })
+      .click()
+    await expect(page.getByRole('heading', { name: 'Frações e partes iguais' })).toBeVisible()
+    await page.getByRole('button', { name: 'Praticar 30 questões' }).click()
+    await expect(page.getByText('Revisão P2 — Frações, decimais, tabelas e gráficos', { exact: true })).toBeVisible()
     await expect(page.getByText('1/30 questões', { exact: true })).toBeVisible()
   })
 

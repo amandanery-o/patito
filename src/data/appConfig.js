@@ -23,7 +23,7 @@ export const SUBJECTS = [
     color: 'bg-green-500',
     topics: MATHEMATICS_TOPICS,
     calendarOnly: false,
-    lastUpdated: '2026-08-21',
+    lastUpdated: '2026-09-29',
   },
   {
     id: 'geografia',

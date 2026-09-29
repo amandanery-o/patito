@@ -1,0 +1,1334 @@
+{
+  "status": "approved",
+  "contentId": "matematica-p2-capitulos-9-10-11",
+  "title": "Revisão P2 — Frações, decimais, tabelas e gráficos",
+  "summary": "Revisão dos capítulos 9, 10 e 11: frações, números decimais e tratamento da informação.",
+  "source": {
+    "provider": "edebe",
+    "resourceId": "courseware-250/chapters-9-10-11",
+    "version": "2024"
+  },
+  "generation": {
+    "model": "claude-sonnet-4-6",
+    "promptVersion": "question-batch-v2",
+    "generatedAt": "2026-09-29T17:57:41.692Z",
+    "usage": [
+      {
+        "batch": 1,
+        "input_tokens": 4922,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1634,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 2,
+        "input_tokens": 5211,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1893,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 3,
+        "input_tokens": 5539,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1532,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 4,
+        "input_tokens": 5833,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1733,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 5,
+        "input_tokens": 6139,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1781,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 6,
+        "input_tokens": 6708,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2091,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      }
+    ]
+  },
+  "editorialApproval": {
+    "reviewer": "Agente editorial independente Patito",
+    "reviewerType": "agent",
+    "reviewMethod": "independent-source-check-v5",
+    "reviewedAt": "2026-09-29T18:23:34.333Z",
+    "draftDigest": "b36e45ff7c503b7263c84cb7b113ce765073cad74e4772ce6bd2db42660c071e",
+    "schemaVersion": 1
+  },
+  "publishedAt": "2026-09-29T18:23:50.040Z",
+  "questions": [
+    {
+      "difficulty": "easy",
+      "question": "Uma pizza foi cortada em 4 partes iguais. João comeu 1 dessas partes. Que fração da pizza João comeu?",
+      "explanation": "Quando dividimos um inteiro em 4 partes iguais e consideramos 1 delas, escrevemos a fração 1/4. O número de baixo (denominador) indica em quantas partes iguais o inteiro foi dividido, e o número de cima (numerador) indica quantas partes foram consideradas.",
+      "sourceRef": {
+        "section": "Noções de fração",
+        "pages": "148–153"
+      },
+      "options": [
+        "1/2",
+        "1/3",
+        "1/4",
+        "1/5"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p2-001"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Em uma fração, o denominador indica:",
+      "explanation": "O denominador é o número de baixo da fração e indica em quantas partes iguais o inteiro foi dividido. Já o numerador, o número de cima, indica quantas dessas partes estamos considerando.",
+      "sourceRef": {
+        "section": "Notação de uma fração",
+        "pages": "154–157"
+      },
+      "options": [
+        "Em quantas partes iguais o inteiro foi dividido",
+        "Qual é o tamanho de cada parte",
+        "Quantos inteiros existem",
+        "Quantas partes foram coloridas"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p2-002"
+    },
+    {
+      "difficulty": "easy",
+      "question": "O número decimal 0,1 representa:",
+      "explanation": "O número 0,1 representa um décimo, ou seja, um inteiro dividido em 10 partes iguais, considerando 1 dessas partes. Isso é o mesmo que a fração 1/10.",
+      "sourceRef": {
+        "section": "Números decimais",
+        "pages": "168–169"
+      },
+      "options": [
+        "Um inteiro",
+        "Dez décimos",
+        "Um centésimo",
+        "Um décimo"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p2-003"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma barra de chocolate foi dividida em 8 partes iguais. Ana comeu 3 partes. Como se escreve a fração que representa o que Ana comeu?",
+      "explanation": "O denominador é 8, pois a barra foi dividida em 8 partes iguais. O numerador é 3, pois Ana comeu 3 dessas partes. A fração correta é 3/8.",
+      "sourceRef": {
+        "section": "Notação de uma fração",
+        "pages": "154–157"
+      },
+      "options": [
+        "5/8",
+        "8/3",
+        "3/5",
+        "3/8"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p2-004"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Observe as frações 3/5 e 3/8. Elas têm o mesmo numerador. Qual delas representa uma parte maior do mesmo inteiro?",
+      "explanation": "Quando os numeradores são iguais, a fração com menor denominador representa uma parte maior do inteiro. Como 5 é menor que 8, a fração 3/5 é maior que 3/8.",
+      "sourceRef": {
+        "section": "Comparando frações",
+        "pages": "158–161"
+      },
+      "options": [
+        "3/8, porque 8 é maior que 5",
+        "3/5, porque 5 é menor que 8",
+        "As duas são iguais",
+        "Não é possível comparar"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p2-005"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Em um gráfico de barras, o que o comprimento ou a altura de cada barra representa?",
+      "explanation": "Em gráficos de barras, o comprimento ou a altura de cada barra representa a quantidade de cada categoria. Quanto maior a barra, maior é o valor que ela representa.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      },
+      "options": [
+        "A quantidade de cada categoria",
+        "O nome das categorias",
+        "A fonte dos dados",
+        "O título do gráfico"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p2-006"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma tabela mostrava que 15 alunos preferem futebol e 9 preferem vôlei. Qual é a diferença entre o número de alunos que preferem futebol e os que preferem vôlei?",
+      "explanation": "Para encontrar a diferença entre duas categorias em uma tabela, fazemos uma subtração: 15 − 9 = 6. Portanto, 6 alunos a mais preferem futebol em relação ao vôlei.",
+      "sourceRef": {
+        "section": "Tabelas",
+        "pages": "189"
+      },
+      "options": [
+        "6 alunos",
+        "4 alunos",
+        "24 alunos",
+        "9 alunos"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p2-007"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Marcos tinha 1/6 de uma fita e ganhou mais 3/6 da mesma fita. Que fração da fita Marcos tem agora?",
+      "explanation": "Para somar frações com o mesmo denominador, somamos os numeradores e mantemos o denominador: 1/6 + 3/6 = 4/6. Marcos tem agora 4/6 da fita.",
+      "sourceRef": {
+        "section": "Adição e subtração de frações",
+        "pages": "162–163"
+      },
+      "options": [
+        "2/6",
+        "4/12",
+        "3/6",
+        "4/6"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p2-008"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Relacione cada termo de fração com o que ele representa.",
+      "explanation": "Em uma fração, o numerador é o número de cima e indica quantas partes foram consideradas. O denominador é o número de baixo e indica em quantas partes iguais o inteiro foi dividido. As partes do inteiro precisam ter o mesmo tamanho para que a fração faça sentido.",
+      "sourceRef": {
+        "section": "Notação de uma fração",
+        "pages": "154–157"
+      },
+      "pairs": [
+        {
+          "left": "Numerador",
+          "right": "Indica quantas partes foram consideradas"
+        },
+        {
+          "left": "Denominador",
+          "right": "Indica em quantas partes iguais o inteiro foi dividido"
+        },
+        {
+          "left": "Partes do inteiro",
+          "right": "Precisam ter o mesmo tamanho"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p2-009"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Relacione cada representação decimal com o seu significado.",
+      "explanation": "O número 0,1 equivale a um décimo (1/10); 0,01 equivale a um centésimo (1/100); 0,5 equivale a cinco décimos (5/10), que é o mesmo que meio; e 1,0 equivale a uma unidade inteira. Esses são os valores de posição dos números decimais estudados.",
+      "sourceRef": {
+        "section": "Números decimais",
+        "pages": "168–169"
+      },
+      "pairs": [
+        {
+          "left": "0,1",
+          "right": "Um décimo"
+        },
+        {
+          "left": "0,01",
+          "right": "Um centésimo"
+        },
+        {
+          "left": "0,5",
+          "right": "Cinco décimos"
+        },
+        {
+          "left": "1,0",
+          "right": "Uma unidade inteira"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p2-010"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Na reta numérica, onde fica a fração 1/4 em relação a 0 e 1?",
+      "explanation": "A reta numérica entre 0 e 1 pode ser dividida em partes iguais. Quando dividida em 4 partes iguais, a fração 1/4 fica no primeiro ponto após o 0, ou seja, entre 0 e 1/2.",
+      "sourceRef": {
+        "section": "Noções de fração",
+        "pages": "148–153"
+      },
+      "options": [
+        "Depois do 1",
+        "Exatamente no 1",
+        "Antes do 0",
+        "Entre 0 e 1"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p2-011"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Lara percorreu 2/6 de uma trilha de manhã e 3/6 à tarde. Que fração da trilha ela percorreu no total?",
+      "explanation": "Para somar frações com denominadores iguais, somamos os numeradores e mantemos o denominador: 2/6 + 3/6 = 5/6. Lara percorreu 5/6 da trilha.",
+      "sourceRef": {
+        "section": "Adição e subtração de frações",
+        "pages": "162–163"
+      },
+      "options": [
+        "4/6",
+        "5/12",
+        "5/6",
+        "6/6"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p2-012"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Observe as frações 5/8 e 5/10. Elas têm o mesmo numerador. Qual delas representa uma parte maior do mesmo inteiro?",
+      "explanation": "Quando duas frações têm o mesmo numerador, a que tem o menor denominador representa uma parte maior. Como 8 é menor que 10, a fração 5/8 é maior que 5/10.",
+      "sourceRef": {
+        "section": "Comparando frações",
+        "pages": "158–161"
+      },
+      "options": [
+        "5/10, porque 10 é maior",
+        "5/8, porque 8 é menor",
+        "São iguais, pois o numerador é o mesmo",
+        "Não é possível comparar"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p2-013"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Pedro tinha 7/9 de um rolo de barbante e usou 4/9. Que fração do rolo sobrou?",
+      "explanation": "Para subtrair frações com denominadores iguais, subtraímos os numeradores e mantemos o denominador: 7/9 − 4/9 = 3/9. Sobrou 3/9 do rolo.",
+      "sourceRef": {
+        "section": "Adição e subtração de frações",
+        "pages": "162–163"
+      },
+      "options": [
+        "4/9",
+        "11/9",
+        "3/18",
+        "3/9"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p2-014"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Um número decimal maior que uma unidade tem:",
+      "explanation": "Um número decimal maior que uma unidade possui uma parte inteira diferente de zero e uma parte decimal separadas pela vírgula, como 1,5 ou 2,3.",
+      "sourceRef": {
+        "section": "Números decimais maiores que uma unidade",
+        "pages": "170–171"
+      },
+      "options": [
+        "Parte inteira maior que zero e parte decimal",
+        "Somente números inteiros, sem vírgula",
+        "Apenas parte decimal, sem parte inteira",
+        "Parte inteira igual a zero"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p2-015"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Em um gráfico pictórico, cada símbolo representa 5 alunos. Se uma categoria tem 4 símbolos, quantos alunos ela representa?",
+      "explanation": "Em gráficos pictóricos, multiplicamos o número de símbolos pelo valor que cada um representa. 4 símbolos × 5 alunos = 20 alunos.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      },
+      "options": [
+        "25 alunos",
+        "9 alunos",
+        "4 alunos",
+        "20 alunos"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p2-016"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Uma tabela mostra que 24 alunos preferem leitura, 18 preferem desenho e 12 preferem música. Qual é o total de alunos representados na tabela?",
+      "explanation": "Para encontrar o total, somamos todas as categorias: 24 + 18 + 12 = 54 alunos. Tabelas permitem comparar e somar valores de diferentes categorias.",
+      "sourceRef": {
+        "section": "Tabelas",
+        "pages": "189"
+      },
+      "options": [
+        "42 alunos",
+        "48 alunos",
+        "54 alunos",
+        "60 alunos"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p2-017"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Na reta numérica, os números 0,3 e 0,5 estão entre 0 e 1. Qual afirmação está correta?",
+      "explanation": "0,5 representa cinco décimos e 0,3 representa três décimos. Como 5 décimos é maior que 3 décimos, 0,5 está mais à direita que 0,3 na reta numérica, portanto 0,5 > 0,3.",
+      "sourceRef": {
+        "section": "Números decimais maiores que uma unidade",
+        "pages": "170–171"
+      },
+      "options": [
+        "0,5 é maior que 0,3 porque cinco décimos é mais que três décimos",
+        "0,3 e 0,5 são iguais porque ambos estão entre 0 e 1",
+        "0,5 é menor que 0,3 porque a vírgula muda o valor",
+        "0,3 é maior que 0,5 porque 3 vem antes de 5"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p2-018"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Relacione cada elemento de um gráfico ou tabela com a sua função.",
+      "explanation": "Cada parte de um gráfico ou tabela tem uma função específica: o título informa o assunto, a legenda explica os símbolos ou cores, a escala indica os valores representados e as categorias mostram os grupos comparados.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      },
+      "pairs": [
+        {
+          "left": "Título",
+          "right": "Informa o assunto do gráfico ou tabela"
+        },
+        {
+          "left": "Legenda",
+          "right": "Explica o que cada símbolo ou cor representa"
+        },
+        {
+          "left": "Escala",
+          "right": "Indica os valores numéricos do gráfico"
+        },
+        {
+          "left": "Categorias",
+          "right": "Mostram os grupos que estão sendo comparados"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p2-019"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Relacione cada operação com frações ao seu resultado correto.",
+      "explanation": "Para somar ou subtrair frações com denominadores iguais, operamos apenas os numeradores e mantemos o denominador. Assim: 1/5 + 3/5 = 4/5; 6/8 − 2/8 = 4/8; 2/7 + 4/7 = 6/7; 9/10 − 5/10 = 4/10.",
+      "sourceRef": {
+        "section": "Adição e subtração de frações",
+        "pages": "162–163"
+      },
+      "pairs": [
+        {
+          "left": "1/5 + 3/5",
+          "right": "4/5"
+        },
+        {
+          "left": "6/8 − 2/8",
+          "right": "4/8"
+        },
+        {
+          "left": "2/7 + 4/7",
+          "right": "6/7"
+        },
+        {
+          "left": "9/10 − 5/10",
+          "right": "4/10"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p2-020"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Uma barra de chocolate foi dividida em 10 partes iguais. Carla comeu 3 dessas partes. Qual fração representa o que Carla comeu?",
+      "explanation": "O numerador indica as partes comidas (3) e o denominador indica o total de partes iguais (10). Por isso, a fração é 3/10.",
+      "sourceRef": {
+        "section": "Notação de uma fração",
+        "pages": "154–157"
+      },
+      "options": [
+        "3/10",
+        "10/3",
+        "3/7",
+        "1/3"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p2-021"
+    },
+    {
+      "difficulty": "easy",
+      "question": "O número 0,01 representa:",
+      "explanation": "0,01 é lido como um centésimo, ou seja, uma parte de cem partes iguais do inteiro.",
+      "sourceRef": {
+        "section": "Números decimais",
+        "pages": "168–169"
+      },
+      "options": [
+        "Um centésimo",
+        "Dez décimos",
+        "Uma unidade",
+        "Um décimo"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p2-022"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Em um número decimal, o que a vírgula faz?",
+      "explanation": "A vírgula separa a parte inteira, que fica à esquerda, da parte decimal, que fica à direita.",
+      "sourceRef": {
+        "section": "Números decimais",
+        "pages": "168–169"
+      },
+      "options": [
+        "Multiplica o número por dez",
+        "Indica que o número é uma fração",
+        "Indica que o número é negativo",
+        "Separa a parte inteira da parte decimal"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p2-023"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Quantos centésimos formam um décimo?",
+      "explanation": "Dez centésimos formam um décimo, assim como dez décimos formam uma unidade. Por isso, 0,10 e 0,1 representam o mesmo valor.",
+      "sourceRef": {
+        "section": "Números decimais",
+        "pages": "168–169"
+      },
+      "options": [
+        "Dez",
+        "Cem",
+        "Um",
+        "Cinco"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p2-024"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Numa reta numérica, os números 0,3 e 0,7 estão entre 0 e 1. Qual afirmação está correta?",
+      "explanation": "0,7 representa sete décimos e 0,3 representa três décimos. Como sete é maior que três, 0,7 fica mais à direita e é maior que 0,3.",
+      "sourceRef": {
+        "section": "Números decimais maiores que uma unidade",
+        "pages": "170–171"
+      },
+      "options": [
+        "0,3 é maior que 0,7",
+        "0,3 e 0,7 são iguais",
+        "0,7 é maior que 0,3",
+        "0,7 é menor que 0,3"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p2-025"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma camiseta custa R$ 35,00 e um boné custa R$ 12,50. Quanto custa comprar os dois juntos?",
+      "explanation": "Para somar valores decimais, alinhamos as vírgulas: 35,00 + 12,50 = 47,50. O total é R$ 47,50.",
+      "sourceRef": {
+        "section": "Os números decimais e o real",
+        "pages": "172–177"
+      },
+      "options": [
+        "R$ 47,50",
+        "R$ 48,50",
+        "R$ 46,50",
+        "R$ 47,00"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p2-026"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Com denominadores iguais, como sabemos qual fração é maior?",
+      "explanation": "Quando os denominadores são iguais, basta comparar os numeradores: a fração com o maior numerador é a maior, pois representa mais partes do mesmo inteiro.",
+      "sourceRef": {
+        "section": "Comparando frações",
+        "pages": "158–161"
+      },
+      "options": [
+        "A fração com maior denominador é maior",
+        "A fração com maior numerador é maior",
+        "A fração com menor numerador é maior",
+        "As frações são sempre iguais"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p2-027"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Uma tabela mostra que a turma A tem 18 alunos e a turma B tem 24 alunos. Se cada símbolo de um gráfico pictórico representa 6 alunos, quantos símbolos serão usados para representar a turma B?",
+      "explanation": "Para encontrar o número de símbolos, dividimos o total de alunos pelo valor de cada símbolo: 24 ÷ 6 = 4. A turma B será representada por 4 símbolos.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      },
+      "options": [
+        "4",
+        "3",
+        "6",
+        "5"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p2-028"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Relacione cada número decimal com a sua leitura correta.",
+      "explanation": "0,1 é um décimo (1 parte de 10); 0,01 é um centésimo (1 parte de 100); 0,05 é cinco centésimos; 0,50 é cinquenta centésimos, que equivale a cinco décimos ou meio.",
+      "sourceRef": {
+        "section": "Números decimais",
+        "pages": "168–169"
+      },
+      "pairs": [
+        {
+          "left": "0,1",
+          "right": "Um décimo"
+        },
+        {
+          "left": "0,01",
+          "right": "Um centésimo"
+        },
+        {
+          "left": "0,05",
+          "right": "Cinco centésimos"
+        },
+        {
+          "left": "0,50",
+          "right": "Cinquenta centésimos"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p2-029"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Relacione cada situação de frações ao resultado correto da operação indicada.",
+      "explanation": "Com denominadores iguais, somamos ou subtraímos apenas os numeradores e mantemos o denominador. 2/7 + 3/7 = 5/7; 6/8 − 2/8 = 4/8; 1/5 + 3/5 = 4/5; 5/9 − 1/9 = 4/9.",
+      "sourceRef": {
+        "section": "Adição e subtração de frações",
+        "pages": "162–163"
+      },
+      "pairs": [
+        {
+          "left": "2/7 + 3/7",
+          "right": "5/7"
+        },
+        {
+          "left": "6/8 − 2/8",
+          "right": "4/8"
+        },
+        {
+          "left": "1/5 + 3/5",
+          "right": "4/5"
+        },
+        {
+          "left": "5/9 − 1/9",
+          "right": "4/9"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p2-030"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Cem centavos formam quanto em reais?",
+      "explanation": "O sistema monetário brasileiro estabelece que 100 centavos equivalem a 1 real. Por isso, R$ 1,00 = 100 centavos.",
+      "sourceRef": {
+        "section": "Os números decimais e o real",
+        "pages": "172–177"
+      },
+      "options": [
+        "R$ 1,00",
+        "R$ 10,00",
+        "R$ 0,10",
+        "R$ 0,50"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p2-031"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Qual número decimal representa cinco décimos?",
+      "explanation": "Cinco décimos é escrito como 0,5. O algarismo depois da vírgula indica os décimos, então 0,5 = 5 décimos.",
+      "sourceRef": {
+        "section": "Números decimais",
+        "pages": "168–169"
+      },
+      "options": [
+        "50,0",
+        "0,05",
+        "5,0",
+        "0,50"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p2-032"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Uma tabela tem duas colunas: 'Fruta' e 'Quantidade'. O que a coluna 'Fruta' representa?",
+      "explanation": "A coluna 'Fruta' apresenta categorias ou características, não números. Esse tipo de variável é chamado de variável categórica.",
+      "sourceRef": {
+        "section": "Variáveis",
+        "pages": "188"
+      },
+      "options": [
+        "Uma variável numérica, pois conta as frutas",
+        "Uma variável categórica, pois apresenta características",
+        "Um gráfico de barras",
+        "Uma fração do total"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p2-033"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Joana foi à padaria com R$ 10,00. Ela comprou um pão por R$ 3,50. Quanto ela recebeu de troco?",
+      "explanation": "Para calcular o troco, subtraímos o preço da compra do valor entregue: R$ 10,00 − R$ 3,50 = R$ 6,50. O troco é o que sobra depois da compra.",
+      "sourceRef": {
+        "section": "Troco",
+        "pages": "183"
+      },
+      "options": [
+        "R$ 6,00",
+        "R$ 6,50",
+        "R$ 5,50",
+        "R$ 7,50"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p2-034"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Carlos comprou um caderno por R$ 4,75 e uma borracha por R$ 1,25. Quanto ele gastou no total?",
+      "explanation": "Somando os valores: R$ 4,75 + R$ 1,25 = R$ 6,00. Na adição de decimais, alinhamos as vírgulas e somamos cada ordem.",
+      "sourceRef": {
+        "section": "Os números decimais e o real",
+        "pages": "172–177"
+      },
+      "options": [
+        "R$ 5,90",
+        "R$ 6,10",
+        "R$ 5,00",
+        "R$ 6,00"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p2-035"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Observe os números decimais 0,4 e 0,8. Qual afirmação está correta?",
+      "explanation": "0,8 representa 8 décimos e 0,4 representa 4 décimos. Como 8 > 4, temos que 0,8 é maior que 0,4. Na reta numérica, 0,8 fica mais à direita.",
+      "sourceRef": {
+        "section": "Números decimais maiores que uma unidade",
+        "pages": "170–171"
+      },
+      "options": [
+        "0,8 é menor que 0,4",
+        "0,4 é maior que 0,8",
+        "0,4 e 0,8 são iguais",
+        "0,8 é maior que 0,4"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p2-036"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Um gráfico de barras mostra a quantidade de livros lidos por três turmas: Turma A leu 35 livros, Turma B leu 20 livros e Turma C leu 45 livros. Qual é a diferença entre a turma que leu mais e a que leu menos?",
+      "explanation": "A turma que leu mais foi a C (45 livros) e a que leu menos foi a B (20 livros). A diferença é encontrada por subtração: 45 − 20 = 25 livros.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      },
+      "options": [
+        "15 livros",
+        "20 livros",
+        "25 livros",
+        "30 livros"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p2-037"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Relacione cada situação de compra ao valor correto do troco.",
+      "explanation": "O troco é calculado subtraindo o preço do produto do valor entregue. R$ 5,00 − R$ 2,30 = R$ 2,70; R$ 10,00 − R$ 6,50 = R$ 3,50; R$ 20,00 − R$ 14,80 = R$ 5,20.",
+      "sourceRef": {
+        "section": "Troco",
+        "pages": "183"
+      },
+      "pairs": [
+        {
+          "left": "Entregou R$ 5,00 e pagou R$ 2,30",
+          "right": "Troco de R$ 2,70"
+        },
+        {
+          "left": "Entregou R$ 10,00 e pagou R$ 6,50",
+          "right": "Troco de R$ 3,50"
+        },
+        {
+          "left": "Entregou R$ 20,00 e pagou R$ 14,80",
+          "right": "Troco de R$ 5,20"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p2-038"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Relacione cada valor em reais à sua forma de leitura correta.",
+      "explanation": "No sistema monetário brasileiro, a parte antes da vírgula são os reais e a parte depois são os centavos. Assim: 1,50 = um real e cinquenta centavos; 0,25 = vinte e cinco centavos; 3,07 = três reais e sete centavos.",
+      "sourceRef": {
+        "section": "Os números decimais e o real",
+        "pages": "172–177"
+      },
+      "pairs": [
+        {
+          "left": "R$ 1,50",
+          "right": "Um real e cinquenta centavos"
+        },
+        {
+          "left": "R$ 0,25",
+          "right": "Vinte e cinco centavos"
+        },
+        {
+          "left": "R$ 3,07",
+          "right": "Três reais e sete centavos"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p2-039"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Relacione cada elemento de uma tabela ou gráfico à sua função.",
+      "explanation": "O título informa o assunto representado; a escala indica o valor de cada unidade no eixo; a legenda explica os símbolos ou cores usados; a fonte indica de onde vieram os dados. Esses elementos ajudam a ler e interpretar corretamente as informações.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      },
+      "pairs": [
+        {
+          "left": "Título",
+          "right": "Informa o assunto representado"
+        },
+        {
+          "left": "Escala",
+          "right": "Indica o valor de cada unidade no eixo"
+        },
+        {
+          "left": "Fonte",
+          "right": "Indica de onde vieram os dados"
+        },
+        {
+          "left": "Legenda",
+          "right": "Explica os símbolos ou cores usados"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p2-040"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Uma turma fez uma pesquisa sobre o animal preferido dos alunos. Os resultados foram: cachorro, gato, pássaro, cachorro, gato, cachorro. Esse tipo de dado, que apresenta categorias e não números, é chamado de:",
+      "explanation": "Variáveis categóricas são aquelas cujas respostas são categorias ou características, como nomes de animais. Variáveis numéricas, por outro lado, apresentam números como resposta.",
+      "sourceRef": {
+        "section": "Variáveis",
+        "pages": "188"
+      },
+      "options": [
+        "Variável numérica",
+        "Variável categórica",
+        "Variável decimal",
+        "Variável fracionária"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p2-041"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Uma tabela tem duas colunas: 'Esporte' e 'Número de alunos'. Qual das colunas representa uma variável numérica?",
+      "explanation": "A coluna 'Número de alunos' apresenta números como resposta, por isso é uma variável numérica. A coluna 'Esporte' apresenta categorias, sendo uma variável categórica.",
+      "sourceRef": {
+        "section": "Variáveis",
+        "pages": "188"
+      },
+      "options": [
+        "As duas colunas",
+        "Nenhuma das colunas",
+        "A coluna 'Número de alunos'",
+        "A coluna 'Esporte'"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p2-042"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Uma figura foi dividida em 6 partes iguais e 2 partes estão pintadas. Qual fração representa a parte pintada?",
+      "explanation": "O numerador indica as partes pintadas (2) e o denominador indica o total de partes iguais (6). Por isso, a fração é 2/6.",
+      "sourceRef": {
+        "section": "Notação de uma fração",
+        "pages": "154–157"
+      },
+      "options": [
+        "2/6",
+        "2/4",
+        "6/2",
+        "4/6"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p2-043"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma pesquisa perguntou a idade dos alunos de uma turma. As respostas foram: 9, 10, 9, 10, 10, 9. Esse tipo de dado é chamado de:",
+      "explanation": "Idade é um dado numérico, pois a resposta é sempre um número. Por isso, é classificado como variável numérica.",
+      "sourceRef": {
+        "section": "Variáveis",
+        "pages": "188"
+      },
+      "options": [
+        "Variável de texto",
+        "Variável categórica",
+        "Variável de categoria",
+        "Variável numérica"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p2-044"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Uma tabela mostra a quantidade de livros lidos por quatro alunos: Bia leu 8, Caio leu 5, Duda leu 10 e Fábio leu 7. Qual é o total de livros lidos pelos quatro alunos?",
+      "explanation": "Para encontrar o total, somamos todas as quantidades: 8 + 5 + 10 + 7 = 30 livros. As tabelas permitem comparar e calcular totais com facilidade.",
+      "sourceRef": {
+        "section": "Tabelas",
+        "pages": "189"
+      },
+      "options": [
+        "28",
+        "25",
+        "30",
+        "32"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p2-045"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Num gráfico pictórico, cada figura representa 4 alunos. Uma categoria tem 6 figuras. Quantos alunos essa categoria representa?",
+      "explanation": "Para encontrar o total, multiplicamos o número de figuras pelo valor de cada uma: 6 × 4 = 24 alunos. Em gráficos pictóricos, é sempre necessário verificar quanto cada símbolo representa.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      },
+      "options": [
+        "10",
+        "24",
+        "18",
+        "20"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p2-046"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Uma tabela mostra que a turma do 4º A tem 30 alunos e a do 4º B tem 24 alunos. Em um gráfico pictórico, cada símbolo representa 6 alunos. Quantos símbolos a mais serão usados para representar o 4º A em relação ao 4º B?",
+      "explanation": "O 4º A terá 30 ÷ 6 = 5 símbolos e o 4º B terá 24 ÷ 6 = 4 símbolos. A diferença é 5 − 4 = 1 símbolo a mais para o 4º A.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      },
+      "options": [
+        "6",
+        "1",
+        "2",
+        "3"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p2-047"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada exemplo à sua classificação correta.",
+      "explanation": "Quantidade de irmãos e temperatura são variáveis numéricas: a primeira é uma contagem e a segunda é uma medida. Cor favorita é uma variável categórica, pois apresenta uma característica como resposta.",
+      "sourceRef": {
+        "section": "Variáveis",
+        "pages": "188"
+      },
+      "pairs": [
+        {
+          "left": "Quantidade de irmãos",
+          "right": "Variável numérica expressa por contagem"
+        },
+        {
+          "left": "Temperatura em graus",
+          "right": "Variável numérica expressa por medida"
+        },
+        {
+          "left": "Cor favorita",
+          "right": "Variável categórica expressa por característica"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p2-048"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada fração à sua representação em palavras.",
+      "explanation": "O numerador indica as partes consideradas e o denominador indica em quantas partes iguais o inteiro foi dividido. Assim: 1/4 é um quarto, 3/5 é três quintos, 2/3 é dois terços e 5/8 é cinco oitavos.",
+      "sourceRef": {
+        "section": "Notação de uma fração",
+        "pages": "154–157"
+      },
+      "pairs": [
+        {
+          "left": "1/4",
+          "right": "Um quarto"
+        },
+        {
+          "left": "3/5",
+          "right": "Três quintos"
+        },
+        {
+          "left": "2/3",
+          "right": "Dois terços"
+        },
+        {
+          "left": "5/8",
+          "right": "Cinco oitavos"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p2-049"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Uma tabela mostra os pontos feitos por quatro times em um torneio. Associe cada time à diferença correta de pontos em relação ao time que fez menos pontos. Os dados são: Time Azul: 18 pontos, Time Verde: 12 pontos, Time Amarelo: 20 pontos, Time Vermelho: 15 pontos. O time com menos pontos é o Verde (12).",
+      "explanation": "Para encontrar a diferença de cada time em relação ao Verde (12 pontos): Azul: 18 − 12 = 6; Amarelo: 20 − 12 = 8; Vermelho: 15 − 12 = 3. Tabelas permitem comparar valores por subtração.",
+      "sourceRef": {
+        "section": "Tabelas",
+        "pages": "189"
+      },
+      "pairs": [
+        {
+          "left": "Time Azul",
+          "right": "6 pontos a mais que o Verde"
+        },
+        {
+          "left": "Time Amarelo",
+          "right": "8 pontos a mais que o Verde"
+        },
+        {
+          "left": "Time Vermelho",
+          "right": "3 pontos a mais que o Verde"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p2-050"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Em um gráfico de barras, o que precisamos observar para saber o valor que cada barra representa?",
+      "explanation": "A escala do gráfico de barras indica os valores marcados no eixo, permitindo descobrir a quantidade representada por cada barra. Sem a escala, não conseguimos ler os dados corretamente.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      },
+      "options": [
+        "A legenda das cores",
+        "O nome do autor",
+        "O título do gráfico",
+        "A escala do gráfico"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p2-051"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Um gráfico pictórico usa figuras para representar dados. Para que o leitor entenda quanto cada figura vale, o gráfico precisa ter:",
+      "explanation": "A legenda do gráfico pictórico informa quanto cada símbolo ou figura representa. Sem ela, não é possível saber a quantidade real de cada categoria.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      },
+      "options": [
+        "Uma lista de nomes dos alunos",
+        "Uma tabela ao lado",
+        "Uma legenda que explique o valor de cada símbolo",
+        "Um título em negrito"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p2-052"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Uma fração tem numerador 2 e denominador 5. O que o número 5 indica nessa fração?",
+      "explanation": "O denominador indica em quantas partes iguais o inteiro foi dividido. Nesse caso, o inteiro foi dividido em 5 partes iguais.",
+      "sourceRef": {
+        "section": "Notação de uma fração",
+        "pages": "154–157"
+      },
+      "options": [
+        "Quantas partes foram escolhidas",
+        "Em quantas partes iguais o inteiro foi dividido",
+        "O tamanho de cada parte",
+        "Quantas partes sobraram"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p2-053"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Um gráfico pictórico mostra a quantidade de livros lidos por três turmas. Cada símbolo representa 3 livros. A Turma A tem 5 símbolos, a Turma B tem 4 símbolos e a Turma C tem 3 símbolos. Qual é o total de livros lidos pelas três turmas?",
+      "explanation": "Multiplicamos o número de símbolos de cada turma por 3: Turma A = 5 × 3 = 15, Turma B = 4 × 3 = 12, Turma C = 3 × 3 = 9. Total = 15 + 12 + 9 = 36 livros.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      },
+      "options": [
+        "33 livros",
+        "36 livros",
+        "39 livros",
+        "30 livros"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "mat-p2-054"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Um gráfico de barras mostra a quantidade de alunos em quatro clubes. O clube de xadrez tem 20 alunos, o de leitura tem 35, o de dança tem 25 e o de teatro tem 30. Qual clube tem a maior diferença em relação ao clube de xadrez?",
+      "explanation": "Calculamos a diferença de cada clube em relação ao xadrez (20): leitura = 35 − 20 = 15; dança = 25 − 20 = 5; teatro = 30 − 20 = 10. A maior diferença é do clube de leitura, com 15 alunos a mais.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      },
+      "options": [
+        "Clube de leitura",
+        "Clube de xadrez",
+        "Clube de dança",
+        "Clube de teatro"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "mat-p2-055"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Numa reta numérica, os números 0,2 e 0,6 estão entre 0 e 1. Qual afirmação está correta?",
+      "explanation": "0,6 representa seis décimos e 0,2 representa dois décimos. Como seis décimos é maior que dois décimos, o número 0,6 está mais à direita na reta numérica e é maior que 0,2.",
+      "sourceRef": {
+        "section": "Números decimais maiores que uma unidade",
+        "pages": "170–171"
+      },
+      "options": [
+        "0,6 está mais à esquerda que 0,2 na reta numérica",
+        "0,2 é maior que 0,6",
+        "0,2 e 0,6 representam o mesmo valor",
+        "0,6 é maior que 0,2"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "mat-p2-056"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Uma tabela mostra que 40 alunos foram pesquisados sobre seu esporte favorito. Em um gráfico pictórico, cada símbolo representa 5 alunos. Futebol recebeu 20 votos, natação recebeu 10 votos e basquete recebeu 10 votos. Quantos símbolos serão usados no total para representar todos os esportes?",
+      "explanation": "Dividimos os votos de cada esporte por 5: futebol = 20 ÷ 5 = 4 símbolos; natação = 10 ÷ 5 = 2 símbolos; basquete = 10 ÷ 5 = 2 símbolos. Total = 4 + 2 + 2 = 8 símbolos.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      },
+      "options": [
+        "6 símbolos",
+        "7 símbolos",
+        "8 símbolos",
+        "10 símbolos"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "mat-p2-057"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada elemento de um gráfico ao que ele representa.",
+      "explanation": "O título identifica o assunto do gráfico; a escala indica os valores do eixo numérico; a legenda explica o significado dos símbolos ou cores; as categorias são os grupos representados nas barras ou figuras.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      },
+      "pairs": [
+        {
+          "left": "Título",
+          "right": "Identifica o assunto do gráfico"
+        },
+        {
+          "left": "Escala",
+          "right": "Indica os valores no eixo numérico"
+        },
+        {
+          "left": "Legenda",
+          "right": "Explica o significado dos símbolos ou cores"
+        },
+        {
+          "left": "Categorias",
+          "right": "São os grupos representados no gráfico"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p2-058"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada fração à operação e ao resultado correto.",
+      "explanation": "Para adicionar ou subtrair frações com denominadores iguais, operamos apenas os numeradores e mantemos o denominador. Assim: 2/7 + 3/7 = 5/7; 6/8 − 2/8 = 4/8; 1/5 + 3/5 = 4/5.",
+      "sourceRef": {
+        "section": "Adição e subtração de frações",
+        "pages": "162–163"
+      },
+      "pairs": [
+        {
+          "left": "2/7 + 3/7",
+          "right": "5/7"
+        },
+        {
+          "left": "6/8 − 2/8",
+          "right": "4/8"
+        },
+        {
+          "left": "1/5 + 3/5",
+          "right": "4/5"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p2-059"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada situação de compra ao valor correto do troco recebido.",
+      "explanation": "O troco é calculado subtraindo o preço da compra do valor entregue. R$ 20,00 − R$ 13,50 = R$ 6,50; R$ 10,00 − R$ 7,25 = R$ 2,75; R$ 50,00 − R$ 38,40 = R$ 11,60; R$ 5,00 − R$ 3,80 = R$ 1,20.",
+      "sourceRef": {
+        "section": "Troco",
+        "pages": "183"
+      },
+      "pairs": [
+        {
+          "left": "Pagou R$ 20,00, gastou R$ 13,50",
+          "right": "R$ 6,50"
+        },
+        {
+          "left": "Pagou R$ 10,00, gastou R$ 7,25",
+          "right": "R$ 2,75"
+        },
+        {
+          "left": "Pagou R$ 50,00, gastou R$ 38,40",
+          "right": "R$ 11,60"
+        },
+        {
+          "left": "Pagou R$ 5,00, gastou R$ 3,80",
+          "right": "R$ 1,20"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "mat-p2-060"
+    }
+  ]
+}

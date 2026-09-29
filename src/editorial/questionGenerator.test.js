@@ -43,6 +43,7 @@ describe('gerador editorial', () => {
     ['historia-p1', [9, 10], 'historia-p1-capitulos-9-10', 'historia'],
     ['matematica-t2', [4, 8], 'matematica-t2-capitulos-4-8', 'matematica'],
     ['matematica-p1', [5, 6, 7], 'matematica-p1-capitulos-5-6-7', 'matematica'],
+    ['matematica-p2', [9, 10, 11], 'matematica-p2-capitulos-9-10-11', 'matematica'],
   ])('mantém o recorte oficial de %s', (configurationName, chapters, contentId, subjectId) => {
     const config = getEditorialConfig(configurationName)
     const brief = buildSourceBrief(config.sourceTopics, config.chapters)
