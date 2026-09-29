@@ -1,0 +1,58 @@
+export const HISTORY_SOURCE_TOPICS = [
+  {
+    chapter: 9,
+    title: 'Colonização do Brasil',
+    pages: '86–93',
+    sourceSections: [
+      { title: 'A chegada dos portugueses', pages: '88' },
+      { title: 'Africanos: deslocados à força', pages: '89' },
+      { title: 'A diáspora africana', pages: '90' },
+      { title: 'Palavras brasileiras de origem africana', pages: '91' },
+      { title: 'Quem migrou primeiro às nossas terras?', pages: '92' },
+      { title: 'Registro de viagem', pages: '93' },
+    ],
+    sections: [
+      'Povos originários já viviam no território quando os portugueses chegaram em 1500.',
+      'A exploração colonial afetou os povos originários e usou trabalho escravizado.',
+      'Milhões de africanos foram deslocados à força e escravizados entre os séculos XVI e XIX.',
+      'Sincretismo, fugas e quilombos foram formas de resistência e proteção cultural.',
+      'Povos indígenas e africanos deixaram marcas profundas na sociedade e na língua falada no Brasil.',
+    ],
+    keyIdeas: [
+      'A colonização não representa o início da ocupação humana do território brasileiro.',
+      'Diáspora africana é o deslocamento forçado de africanos para outras regiões do mundo.',
+      'Quilombos eram comunidades organizadas de resistência e proteção.',
+      'A diversidade indígena deve ser reconhecida: existiam muitas etnias e culturas distintas.',
+    ],
+  },
+  {
+    chapter: 10,
+    title: 'Migrações para o Brasil',
+    pages: '95–105',
+    sourceSections: [
+      { title: 'Imigrantes europeus no Brasil', pages: '96' },
+      { title: 'Os alemães', pages: '97' },
+      { title: 'Os italianos', pages: '98' },
+      { title: 'Os ucranianos', pages: '99' },
+      { title: 'Os imigrantes de origem árabe', pages: '100' },
+      { title: 'Os imigrantes japoneses', pages: '101' },
+      { title: 'Por que as pessoas migram atualmente?', pages: '102' },
+      { title: 'O direito de migrar', pages: '103' },
+      { title: 'Registro de viagem', pages: '104–105' },
+    ],
+    sections: [
+      'Guerras, pobreza, falta de terras, trabalho e propaganda estimularam a imigração europeia no século XIX.',
+      'Alemães, italianos e ucranianos formaram comunidades especialmente na Região Sul.',
+      'Sírios e libaneses contribuíram para o comércio e para a culinária brasileira.',
+      'Japoneses chegaram em 1908 e trouxeram conhecimentos, técnicas agrícolas e costumes.',
+      'Migrantes e refugiados continuam chegando ao Brasil por diferentes motivos.',
+      'Migrar e receber tratamento digno são direitos humanos.',
+    ],
+    keyIdeas: [
+      'Imigrantes preservaram tradições e também transformaram a cultura brasileira.',
+      'A imigração italiana relacionou-se às colônias do Sul e ao trabalho nos cafezais paulistas.',
+      'Refugiados deixam seu país diante de ameaças e situações que colocam sua segurança em risco.',
+      'Diferenças culturais devem ser acolhidas com respeito, sem preconceito.',
+    ],
+  },
+]

@@ -1,0 +1,1326 @@
+{
+  "status": "approved",
+  "contentId": "historia-p1-capitulos-9-10",
+  "title": "Revisão P1 — Colonização e migrações para o Brasil",
+  "summary": "Revisão dos capítulos 9 e 10: colonização do Brasil, resistência e migrações para o país.",
+  "source": {
+    "provider": "edebe",
+    "resourceId": "courseware-255/chapters-9-10",
+    "version": "2024"
+  },
+  "generation": {
+    "model": "claude-sonnet-4-6",
+    "promptVersion": "question-batch-v2",
+    "generatedAt": "2026-09-28T20:43:23.441Z",
+    "usage": [
+      {
+        "batch": 1,
+        "input_tokens": 4638,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1887,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 2,
+        "input_tokens": 4941,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2049,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 3,
+        "input_tokens": 5382,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2056,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 4,
+        "input_tokens": 5810,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1951,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 5,
+        "input_tokens": 6214,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 1792,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      },
+      {
+        "batch": 6,
+        "input_tokens": 6561,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "output_tokens": 2180,
+        "service_tier": "standard",
+        "inference_geo": "global",
+        "stopReason": "end_turn"
+      }
+    ]
+  },
+  "editorialApproval": {
+    "reviewer": "Agente editorial independente Patito",
+    "reviewerType": "agent",
+    "reviewMethod": "independent-source-check-v5",
+    "reviewedAt": "2026-09-29T09:36:47.510Z",
+    "draftDigest": "f7e5a8b02385c20226908f8a6b901e0ba515623ca1f6d49511ef4475f3f40930",
+    "schemaVersion": 1
+  },
+  "publishedAt": "2026-09-29T11:41:26.935Z",
+  "questions": [
+    {
+      "difficulty": "easy",
+      "question": "Em que ano os portugueses chegaram ao território que hoje chamamos de Brasil?",
+      "explanation": "Os portugueses chegaram ao território brasileiro em 1500. Esse é o marco da chegada europeia, mas os povos originários já viviam nessas terras muito antes disso.",
+      "sourceRef": {
+        "section": "A chegada dos portugueses",
+        "pages": "88"
+      },
+      "options": [
+        "Em 1400",
+        "Em 1500",
+        "Em 1600",
+        "Em 1700"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "his-p1-001"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Quando os portugueses chegaram ao Brasil em 1500, o que encontraram nessas terras?",
+      "explanation": "O território já era habitado por povos originários, também chamados de povos indígenas. A colonização não representa o início da ocupação humana do Brasil.",
+      "sourceRef": {
+        "section": "A chegada dos portugueses",
+        "pages": "88"
+      },
+      "options": [
+        "Apenas animais selvagens e florestas",
+        "Povos originários que já viviam nessas terras",
+        "Colonizadores espanhóis que chegaram antes deles",
+        "Terras completamente vazias e desabitadas"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "his-p1-002"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Como se chama o deslocamento forçado de africanos para outras regiões do mundo durante os séculos XVI a XIX?",
+      "explanation": "Esse deslocamento forçado é chamado de diáspora africana. Milhões de africanos foram retirados de seus países e escravizados em outros continentes, incluindo o Brasil.",
+      "sourceRef": {
+        "section": "A diáspora africana",
+        "pages": "90"
+      },
+      "options": [
+        "Imigração europeia",
+        "Êxodo rural",
+        "Migração voluntária",
+        "Diáspora africana"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "his-p1-003"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Durante a colonização, o que aconteceu com muitos povos originários que já viviam no território brasileiro?",
+      "explanation": "A exploração colonial atingiu os povos originários: muitos perderam suas terras e foram submetidos ao trabalho forçado. Eles já viviam no território antes da chegada dos portugueses.",
+      "sourceRef": {
+        "section": "A chegada dos portugueses",
+        "pages": "88"
+      },
+      "options": [
+        "Receberam novas terras dos colonizadores",
+        "Foram todos levados voluntariamente para a Europa",
+        "Perderam terras e muitos foram submetidos ao trabalho forçado",
+        "Passaram a governar o território junto com os portugueses"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "his-p1-004"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual foi um dos efeitos da colonização portuguesa sobre os povos originários do Brasil?",
+      "explanation": "A colonização afetou profundamente os povos originários: eles foram explorados, perderam suas terras e muitos foram submetidos ao trabalho forçado. Isso causou grandes sofrimentos a essas populações.",
+      "sourceRef": {
+        "section": "A chegada dos portugueses",
+        "pages": "88"
+      },
+      "options": [
+        "Os povos originários passaram a governar junto com os portugueses",
+        "Os povos originários foram respeitados e tiveram suas terras preservadas",
+        "Os povos originários sofreram exploração e perderam suas terras",
+        "Os povos originários migraram voluntariamente para a Europa"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "his-p1-005"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Os quilombos foram comunidades formadas durante o período colonial. O que melhor descreve o papel dos quilombos?",
+      "explanation": "Os quilombos eram comunidades organizadas por africanos escravizados que conseguiam fugir. Eles representavam uma forma de resistência e de proteção cultural diante da escravidão.",
+      "sourceRef": {
+        "section": "A diáspora africana",
+        "pages": "90"
+      },
+      "options": [
+        "Eram comunidades de resistência e proteção formadas por africanos escravizados que fugiam",
+        "Eram acampamentos militares usados pelos colonizadores",
+        "Eram escolas criadas para ensinar a língua portuguesa aos indígenas",
+        "Eram aldeias criadas pelos portugueses para guardar riquezas"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "his-p1-006"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Por que é importante reconhecer que existiam muitas etnias e culturas indígenas diferentes no Brasil?",
+      "explanation": "Antes e depois da chegada dos portugueses, o território brasileiro era habitado por uma grande diversidade de povos indígenas, cada um com sua própria língua, cultura e modo de vida. Tratá-los como um grupo único apaga essa riqueza.",
+      "sourceRef": {
+        "section": "Quem migrou primeiro às nossas terras?",
+        "pages": "92"
+      },
+      "options": [
+        "Porque cada etnia tinha sua própria língua, cultura e modo de vida",
+        "Porque os indígenas chegaram ao Brasil junto com os portugueses",
+        "Porque todos os povos indígenas falavam a mesma língua",
+        "Porque havia apenas dois grupos indígenas no Brasil"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "his-p1-007"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia o trecho a seguir e responda:\n\n\"Os africanos escravizados criaram formas de manter vivas suas tradições, mesmo em condições muito difíceis. Uma dessas formas foi o sincretismo.\"\n\nO que o sincretismo representa nesse contexto?",
+      "explanation": "O sincretismo foi uma forma de resistência cultural: os africanos escravizados misturavam elementos de suas próprias tradições com elementos da cultura imposta pelos colonizadores, conseguindo assim preservar parte de sua identidade e cultura.",
+      "sourceRef": {
+        "section": "A diáspora africana",
+        "pages": "90"
+      },
+      "options": [
+        "A criação de uma nova língua africana falada apenas nos quilombos",
+        "A proibição total das tradições africanas pelos colonizadores",
+        "A mistura de elementos culturais africanos com os da cultura imposta, como forma de preservar tradições",
+        "O abandono completo das tradições africanas para adotar os costumes europeus"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "his-p1-008"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada grupo de imigrantes à região ou atividade com a qual ficou mais relacionado no Brasil, conforme o que você estudou.",
+      "explanation": "Cada grupo de imigrantes deixou marcas em diferentes regiões e atividades: alemães, italianos e ucranianos formaram comunidades na Região Sul; os japoneses trouxeram técnicas agrícolas e chegaram em 1908; sírios e libaneses contribuíram para o comércio e a culinária brasileira.",
+      "sourceRef": {
+        "section": "Imigrantes europeus no Brasil",
+        "pages": "96"
+      },
+      "pairs": [
+        {
+          "left": "Alemães, italianos e ucranianos",
+          "right": "Formaram comunidades na Região Sul do Brasil"
+        },
+        {
+          "left": "Japoneses",
+          "right": "Trouxeram técnicas agrícolas e chegaram em 1908"
+        },
+        {
+          "left": "Sírios e libaneses",
+          "right": "Contribuíram para o comércio e a culinária brasileira"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "his-p1-009"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada conceito estudado no capítulo sobre a colonização do Brasil à sua descrição correta.",
+      "explanation": "Esses conceitos ajudam a compreender a resistência africana durante a colonização: a diáspora foi um deslocamento forçado, os quilombos eram comunidades de resistência, o sincretismo ajudava a proteger tradições e as fugas enfrentavam a escravização.",
+      "sourceRef": {
+        "section": "A diáspora africana",
+        "pages": "90"
+      },
+      "pairs": [
+        {
+          "left": "Diáspora africana",
+          "right": "Deslocamento forçado de africanos para outras regiões do mundo"
+        },
+        {
+          "left": "Quilombos",
+          "right": "Comunidades organizadas de resistência formadas por africanos escravizados"
+        },
+        {
+          "left": "Sincretismo",
+          "right": "Mistura de tradições culturais e religiosas como forma de proteção cultural"
+        },
+        {
+          "left": "Fugas",
+          "right": "Uma das formas de resistência à escravização"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "his-p1-010"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Os africanos escravizados foram trazidos ao Brasil à força durante a colonização. Como chamamos esse deslocamento forçado de africanos para outras regiões do mundo?",
+      "explanation": "A diáspora africana é o nome dado ao deslocamento forçado de milhões de africanos para outras regiões do mundo, especialmente entre os séculos XVI e XIX. Eles não escolheram partir — foram obrigados a deixar suas terras e famílias.",
+      "sourceRef": {
+        "section": "A diáspora africana",
+        "pages": "90"
+      },
+      "options": [
+        "Sincretismo",
+        "Quilombo",
+        "Migração voluntária",
+        "Diáspora africana"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "his-p1-011"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Durante a colonização do Brasil, os africanos escravizados foram obrigados a trabalhar sem receber salário e sem poder escolher onde viver. Qual palavra descreve essa situação?",
+      "explanation": "A escravização é a situação em que uma pessoa é tratada como propriedade de outra, sendo obrigada a trabalhar sem liberdade e sem remuneração. Milhões de africanos foram escravizados durante a colonização do Brasil.",
+      "sourceRef": {
+        "section": "A diáspora africana",
+        "pages": "90"
+      },
+      "options": [
+        "Diáspora",
+        "Imigração",
+        "Escravização",
+        "Sincretismo"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "his-p1-012"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Os imigrantes japoneses chegaram ao Brasil em 1908. O que eles trouxeram que contribuiu para a agricultura brasileira?",
+      "explanation": "Os imigrantes japoneses trouxeram conhecimentos e técnicas agrícolas que enriqueceram a produção no Brasil, além de costumes e tradições que fazem parte da cultura brasileira até hoje.",
+      "sourceRef": {
+        "section": "Os imigrantes japoneses",
+        "pages": "101"
+      },
+      "options": [
+        "Técnicas de navegação marítima",
+        "Conhecimentos e técnicas agrícolas",
+        "Métodos de extração de minério",
+        "Tradições de pesca oceânica"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "his-p1-013"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Os africanos escravizados no Brasil criaram estratégias para preservar suas culturas mesmo em condições muito difíceis. Uma dessas estratégias foi a formação de quilombos. O que eram os quilombos?",
+      "explanation": "Os quilombos eram comunidades organizadas por africanos escravizados que conseguiam fugir. Nesses espaços, eles podiam viver com mais liberdade e proteger suas tradições culturais, sendo uma importante forma de resistência.",
+      "sourceRef": {
+        "section": "A diáspora africana",
+        "pages": "90"
+      },
+      "options": [
+        "Comunidades organizadas de resistência e proteção formadas por africanos escravizados",
+        "Mercados onde africanos eram vendidos como escravizados",
+        "Aldeias indígenas que acolhiam africanos fugitivos",
+        "Navios usados para transportar africanos ao Brasil"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "his-p1-014"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "A língua portuguesa falada no Brasil tem palavras que vieram do continente africano. O que isso nos mostra sobre a presença africana no Brasil?",
+      "explanation": "A presença de palavras de origem africana no português brasileiro mostra que os africanos escravizados deixaram marcas profundas na cultura e na língua do Brasil, mesmo tendo sido trazidos à força.",
+      "sourceRef": {
+        "section": "Palavras brasileiras de origem africana",
+        "pages": "91"
+      },
+      "options": [
+        "Que os portugueses aprenderam africano antes de vir ao Brasil",
+        "Que os povos indígenas falavam línguas africanas",
+        "Que os africanos vieram ao Brasil como turistas",
+        "Que os africanos deixaram marcas profundas na cultura e na língua brasileira"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "his-p1-015"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Muitos imigrantes europeus vieram ao Brasil no século XIX. Quais foram os principais motivos que os levaram a deixar seus países de origem?",
+      "explanation": "Guerras, pobreza, falta de terras e de trabalho foram os principais motivos que fizeram muitos europeus deixarem seus países e virem ao Brasil em busca de melhores condições de vida.",
+      "sourceRef": {
+        "section": "Imigrantes europeus no Brasil",
+        "pages": "96"
+      },
+      "options": [
+        "Interesse em aprender a língua portuguesa",
+        "Desejo de conhecer a cultura indígena brasileira",
+        "Guerras, pobreza, falta de terras e de trabalho",
+        "Convite do governo brasileiro para explorar riquezas"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "his-p1-016"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Os imigrantes sírios e libaneses chegaram ao Brasil e contribuíram de formas importantes para a sociedade brasileira. Em quais áreas sua contribuição foi mais destacada?",
+      "explanation": "Os imigrantes de origem árabe, como sírios e libaneses, contribuíram especialmente para o comércio e para a culinária brasileira, trazendo produtos, receitas e práticas comerciais que enriqueceram a cultura do país.",
+      "sourceRef": {
+        "section": "Os imigrantes de origem árabe",
+        "pages": "100"
+      },
+      "options": [
+        "Na pesca e na navegação",
+        "No comércio e na culinária",
+        "Na mineração e na construção",
+        "Na música e na dança"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "his-p1-017"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia o trecho a seguir:\n\n\"Milhões de africanos foram retirados de suas terras à força e levados para trabalhar em outros continentes. Mesmo assim, conseguiram preservar parte de suas culturas.\"\n\nQual das situações abaixo mostra africanos preservando sua cultura durante a escravização?",
+      "explanation": "A fuga e a formação de quilombos foram formas de resistência que permitiram aos africanos escravizados preservar suas tradições e viver com mais liberdade. O sincretismo também foi uma estratégia cultural de preservação. Essas ações mostram que, mesmo em condições muito difíceis, os africanos mantiveram vivas suas culturas.",
+      "sourceRef": {
+        "section": "A diáspora africana",
+        "pages": "90"
+      },
+      "options": [
+        "Fugir e formar quilombos para manter suas tradições",
+        "Aceitar as ordens dos colonizadores sem resistência",
+        "Voltar voluntariamente para a África após a escravização",
+        "Aprender a língua portuguesa e abandonar seus costumes"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "his-p1-018"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada grupo de imigrantes à sua principal característica ou contribuição no Brasil, conforme o que você estudou.",
+      "explanation": "Cada grupo de imigrantes trouxe contribuições específicas: alemães, italianos e ucranianos formaram comunidades no Sul; sírios e libaneses se destacaram no comércio; japoneses trouxeram técnicas agrícolas e chegaram em 1908.",
+      "sourceRef": {
+        "section": "Imigrantes europeus no Brasil",
+        "pages": "96"
+      },
+      "pairs": [
+        {
+          "left": "Imigrantes japoneses",
+          "right": "Chegaram em 1908 e trouxeram técnicas agrícolas"
+        },
+        {
+          "left": "Sírios e libaneses",
+          "right": "Contribuíram para o comércio e a culinária"
+        },
+        {
+          "left": "Alemães, italianos e ucranianos",
+          "right": "Formaram comunidades na Região Sul"
+        },
+        {
+          "left": "Imigrantes italianos",
+          "right": "Trabalharam nos cafezais paulistas"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "his-p1-019"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada conceito relacionado à escravização e à diáspora africana à sua descrição correta.",
+      "explanation": "A diáspora africana foi o deslocamento forçado de africanos para outras regiões do mundo. Os quilombos eram comunidades de resistência. O sincretismo foi uma forma de preservar tradições culturais. O deslocamento forçado é o ato de obrigar pessoas a deixar suas terras contra a vontade.",
+      "sourceRef": {
+        "section": "A diáspora africana",
+        "pages": "90"
+      },
+      "pairs": [
+        {
+          "left": "Diáspora africana",
+          "right": "Deslocamento forçado de africanos para outras regiões do mundo"
+        },
+        {
+          "left": "Quilombo",
+          "right": "Comunidade organizada de resistência formada por africanos escravizados"
+        },
+        {
+          "left": "Sincretismo",
+          "right": "Mistura de tradições culturais como forma de preservar a cultura africana"
+        },
+        {
+          "left": "Deslocamento forçado",
+          "right": "Quando pessoas são obrigadas a deixar suas terras contra a vontade"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "his-p1-020"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Os africanos escravizados no Brasil criaram uma forma de resistência cultural misturando suas crenças com elementos da religião católica. Como chamamos essa mistura de tradições religiosas e culturais?",
+      "explanation": "Sincretismo é a mistura de elementos de culturas ou religiões diferentes. Os africanos escravizados usaram o sincretismo para preservar suas crenças mesmo sendo obrigados a seguir a religião dos colonizadores.",
+      "sourceRef": {
+        "section": "A diáspora africana",
+        "pages": "90"
+      },
+      "options": [
+        "Diáspora",
+        "Sincretismo",
+        "Quilombo",
+        "Colonização"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "his-p1-021"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Durante a colonização do Brasil, muitos africanos escravizados fugiram e formaram comunidades onde viviam com liberdade e organizavam sua própria vida. Como essas comunidades eram chamadas?",
+      "explanation": "Os quilombos eram comunidades formadas por africanos escravizados que fugiam do trabalho forçado. Nessas comunidades, eles podiam viver com mais liberdade e preservar sua cultura.",
+      "sourceRef": {
+        "section": "A diáspora africana",
+        "pages": "90"
+      },
+      "options": [
+        "Fazendas coloniais",
+        "Quilombos",
+        "Missões jesuítas",
+        "Aldeias indígenas"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "his-p1-022"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Os imigrantes alemães, italianos e ucranianos que chegaram ao Brasil no século XIX se estabeleceram principalmente em qual região do país?",
+      "explanation": "Os imigrantes europeus, como alemães, italianos e ucranianos, formaram comunidades especialmente na Região Sul do Brasil, onde fundaram cidades e preservaram suas tradições.",
+      "sourceRef": {
+        "section": "Imigrantes europeus no Brasil",
+        "pages": "96"
+      },
+      "options": [
+        "Região Centro-Oeste",
+        "Região Sul",
+        "Região Norte",
+        "Região Nordeste"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "his-p1-023"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Os povos indígenas e os africanos escravizados deixaram muitas marcas na cultura brasileira. Uma dessas marcas está na língua portuguesa falada no Brasil. O que isso significa?",
+      "explanation": "Muitas palavras usadas no português do Brasil têm origem em línguas indígenas ou africanas. Isso mostra que esses povos influenciaram profundamente a cultura e a língua do país, mesmo tendo sofrido muito durante a colonização.",
+      "sourceRef": {
+        "section": "Palavras brasileiras de origem africana",
+        "pages": "91"
+      },
+      "options": [
+        "Que os africanos e indígenas esqueceram suas línguas de origem",
+        "Que os portugueses ensinaram suas palavras aos indígenas e africanos",
+        "Que indígenas e africanos contribuíram com palavras que usamos até hoje",
+        "Que o português falado no Brasil é igual ao de Portugal"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "his-p1-024"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Durante a colonização, os africanos escravizados resistiram de diferentes formas para preservar sua cultura. Qual das situações abaixo é um exemplo de resistência cultural?",
+      "explanation": "Formar quilombos foi uma forma de resistência: os africanos escravizados fugiam, criavam comunidades livres e mantinham vivas suas tradições e costumes. O sincretismo também foi outra forma de resistência cultural.",
+      "sourceRef": {
+        "section": "Africanos: deslocados à força",
+        "pages": "89"
+      },
+      "options": [
+        "Aceitar todas as ordens dos colonizadores sem questionar",
+        "Abandonar completamente suas tradições e costumes",
+        "Formar quilombos e praticar o sincretismo para preservar sua cultura",
+        "Aprender a língua portuguesa e esquecer as línguas africanas"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "his-p1-025"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Os imigrantes sírios e libaneses chegaram ao Brasil e contribuíram de formas importantes para a sociedade. Em quais áreas sua contribuição foi mais destacada?",
+      "explanation": "Os imigrantes de origem árabe, como sírios e libaneses, se destacaram no comércio e também influenciaram a culinária brasileira, trazendo pratos e ingredientes de sua cultura.",
+      "sourceRef": {
+        "section": "Os imigrantes de origem árabe",
+        "pages": "100"
+      },
+      "options": [
+        "No comércio e na culinária",
+        "Na mineração e na pecuária",
+        "Na construção de ferrovias e portos",
+        "Na pesca e na navegação"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "his-p1-026"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Muitos europeus deixaram seus países no século XIX para vir ao Brasil. Quais eram os principais motivos que os levavam a emigrar?",
+      "explanation": "Guerras, pobreza, falta de terras e de trabalho foram os principais motivos que levaram muitos europeus a deixar seus países e buscar uma vida melhor no Brasil.",
+      "sourceRef": {
+        "section": "Imigrantes europeus no Brasil",
+        "pages": "96"
+      },
+      "options": [
+        "Convite do governo brasileiro para ensinar novas línguas",
+        "Interesse em explorar o pau-brasil e outros recursos naturais",
+        "Desejo de conhecer a cultura indígena brasileira",
+        "Guerras, pobreza e falta de terras e trabalho em seus países"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "his-p1-027"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "A colonização portuguesa afetou profundamente os povos que já viviam no Brasil. Ao mesmo tempo, esses povos deixaram marcas importantes na cultura brasileira. O que melhor explica essa relação?",
+      "explanation": "Mesmo sofrendo com a colonização, os povos originários resistiram e preservaram parte de suas culturas. Suas contribuições aparecem na língua, nos costumes e em outros aspectos da cultura brasileira, mostrando que a história do Brasil é formada por muitos povos.",
+      "sourceRef": {
+        "section": "Quem migrou primeiro às nossas terras?",
+        "pages": "92"
+      },
+      "options": [
+        "A colonização foi um processo pacífico que beneficiou todos os povos envolvidos",
+        "Os povos originários desapareceram completamente após a chegada dos portugueses",
+        "Os portugueses adotaram integralmente a cultura indígena e abandonaram a sua",
+        "Os povos originários sofreram com a colonização, mas suas culturas influenciaram a sociedade brasileira"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "his-p1-028"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada forma de resistência ou herança cultural à sua descrição correta, conforme o que você estudou sobre a colonização do Brasil.",
+      "explanation": "Os quilombos eram comunidades de resistência formadas por africanos escravizados que fugiam. O sincretismo foi a mistura de tradições religiosas e culturais usada para preservar crenças africanas. As palavras de origem africana mostram a influência dos africanos na língua portuguesa do Brasil. As heranças indígenas são os costumes e contribuições dos povos originários que permanecem na cultura brasileira.",
+      "sourceRef": {
+        "section": "Africanos: deslocados à força",
+        "pages": "89"
+      },
+      "pairs": [
+        {
+          "left": "Quilombo",
+          "right": "Comunidade formada por africanos escravizados que buscavam liberdade"
+        },
+        {
+          "left": "Sincretismo",
+          "right": "Mistura de tradições culturais e religiosas para preservar crenças africanas"
+        },
+        {
+          "left": "Palavras de origem africana",
+          "right": "Contribuição dos africanos para a língua portuguesa falada no Brasil"
+        },
+        {
+          "left": "Heranças indígenas",
+          "right": "Costumes e contribuições dos povos originários presentes na cultura brasileira"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "his-p1-029"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada grupo de imigrantes à sua principal característica ou contribuição no Brasil, conforme o que você estudou no capítulo sobre migrações.",
+      "explanation": "Os alemães, italianos e ucranianos formaram comunidades na Região Sul. Os japoneses chegaram em 1908 e trouxeram técnicas agrícolas. Os sírios e libaneses se destacaram no comércio e na culinária. Conhecer essas contribuições ajuda a entender como diferentes culturas formaram a sociedade brasileira.",
+      "sourceRef": {
+        "section": "Imigrantes europeus no Brasil",
+        "pages": "96"
+      },
+      "pairs": [
+        {
+          "left": "Imigrantes alemães, italianos e ucranianos",
+          "right": "Formaram comunidades principalmente na Região Sul do Brasil"
+        },
+        {
+          "left": "Imigrantes japoneses",
+          "right": "Trouxeram técnicas agrícolas e chegaram ao Brasil em 1908"
+        },
+        {
+          "left": "Imigrantes sírios e libaneses",
+          "right": "Contribuíram para o comércio e para a culinária brasileira"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "his-p1-030"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Os imigrantes alemães chegaram ao Brasil no século XIX. Em qual região do país eles se estabeleceram principalmente?",
+      "explanation": "Os alemães, assim como os italianos e ucranianos, formaram comunidades especialmente na Região Sul do Brasil, onde fundaram colônias e preservaram seus costumes.",
+      "sourceRef": {
+        "section": "Os alemães",
+        "pages": "97"
+      },
+      "options": [
+        "Região Sul",
+        "Região Centro-Oeste",
+        "Região Norte",
+        "Região Nordeste"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "his-p1-031"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Os imigrantes italianos que vieram ao Brasil no século XIX trabalharam em dois lugares principais. Quais foram eles?",
+      "explanation": "Os italianos se estabeleceram nas colônias do Sul do Brasil e também trabalharam nos cafezais do estado de São Paulo, contribuindo muito para a agricultura brasileira.",
+      "sourceRef": {
+        "section": "Os italianos",
+        "pages": "98"
+      },
+      "options": [
+        "Nas fazendas de algodão do Centro-Oeste e nas colônias do Norte",
+        "Nas minas de ouro do Nordeste e nas fazendas do Norte",
+        "Nas colônias do Sul e nos cafezais de São Paulo",
+        "Nas plantações de cana do Nordeste e nas cidades do Sudeste"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "his-p1-032"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Os imigrantes ucranianos chegaram ao Brasil e trouxeram suas tradições. Em qual região brasileira eles se instalaram principalmente?",
+      "explanation": "Os ucranianos, assim como alemães e italianos, se estabeleceram principalmente na Região Sul do Brasil, onde formaram comunidades e mantiveram vivos seus costumes e tradições.",
+      "sourceRef": {
+        "section": "Os ucranianos",
+        "pages": "99"
+      },
+      "options": [
+        "Região Norte",
+        "Região Nordeste",
+        "Região Sudeste",
+        "Região Sul"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "his-p1-033"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "No século XIX, muitos europeus deixaram seus países para vir ao Brasil. Qual das situações abaixo representa um motivo que os levava a emigrar?",
+      "explanation": "Entre os principais motivos que levaram europeus a emigrar estavam guerras, pobreza, falta de terras e a busca por trabalho. Esses fatores tornavam a vida em seus países muito difícil.",
+      "sourceRef": {
+        "section": "Imigrantes europeus no Brasil",
+        "pages": "96"
+      },
+      "options": [
+        "A falta de terras e de trabalho em seus países de origem",
+        "O desejo de aprender a língua portuguesa",
+        "A abundância de ouro encontrada no Brasil",
+        "A vontade de conhecer as praias brasileiras"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "his-p1-034"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Os imigrantes alemães que vieram ao Brasil preservaram muitas de suas tradições. Qual das situações abaixo mostra isso?",
+      "explanation": "Os imigrantes preservaram suas tradições ao formar comunidades onde mantinham seus costumes, língua e festas. Isso mostra que, mesmo em um novo país, os imigrantes cuidaram de sua identidade cultural.",
+      "sourceRef": {
+        "section": "Os alemães",
+        "pages": "97"
+      },
+      "options": [
+        "Voltaram para a Alemanha após alguns anos no Brasil",
+        "Proibiram seus filhos de aprender o português",
+        "Abandonaram completamente seus costumes para se adaptar ao Brasil",
+        "Formaram comunidades onde mantiveram seus costumes e tradições"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "his-p1-035"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Os imigrantes italianos contribuíram para a cultura brasileira de várias formas. Qual das opções abaixo é uma contribuição dos italianos ao Brasil?",
+      "explanation": "Os imigrantes italianos trouxeram seus conhecimentos, costumes e tradições, que se misturaram à cultura brasileira. Eles contribuíram especialmente para a agricultura e para a formação cultural das regiões onde se estabeleceram.",
+      "sourceRef": {
+        "section": "Os italianos",
+        "pages": "98"
+      },
+      "options": [
+        "O desenvolvimento da pesca no litoral do Nordeste",
+        "A introdução do cultivo do arroz no Nordeste",
+        "Conhecimentos, costumes e tradições que enriqueceram a cultura brasileira",
+        "A construção das primeiras estradas no Norte do Brasil"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "his-p1-036"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia o trecho abaixo e responda:\n\n\"Muitos europeus deixaram seus países no século XIX por causa de guerras, pobreza e falta de terras. Ao chegarem ao Brasil, formaram comunidades e preservaram suas tradições, ao mesmo tempo em que contribuíram para a cultura brasileira.\"\n\nO que esse trecho nos mostra sobre a imigração europeia no século XIX?",
+      "explanation": "O trecho mostra que a imigração foi motivada por dificuldades nos países de origem e que os imigrantes, ao chegarem ao Brasil, não abandonaram sua cultura: preservaram suas tradições e, ao mesmo tempo, contribuíram para transformar a cultura brasileira.",
+      "sourceRef": {
+        "section": "Imigrantes europeus no Brasil",
+        "pages": "96"
+      },
+      "options": [
+        "Os europeus vieram ao Brasil apenas para enriquecer e depois voltaram para seus países",
+        "Os imigrantes vieram por dificuldades em seus países e, ao se estabelecerem, preservaram suas culturas e enriqueceram a cultura brasileira",
+        "Os europeus foram trazidos à força para trabalhar nas fazendas brasileiras",
+        "Os imigrantes europeus abandonaram todas as suas tradições para se tornar brasileiros"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "his-p1-037"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada grupo de imigrantes europeus ao que o material conta sobre eles no Brasil.",
+      "explanation": "Cada grupo de imigrantes europeus teve características próprias no Brasil: os alemães formaram colônias no Sul, os italianos trabalharam nas colônias do Sul e nos cafezais de São Paulo, e os ucranianos também se estabeleceram na Região Sul, preservando suas tradições.",
+      "sourceRef": {
+        "section": "Os alemães",
+        "pages": "97"
+      },
+      "pairs": [
+        {
+          "left": "Alemães",
+          "right": "Formaram colônias principalmente na Região Sul"
+        },
+        {
+          "left": "Italianos",
+          "right": "Trabalharam nas colônias do Sul e nos cafezais de São Paulo"
+        },
+        {
+          "left": "Ucranianos",
+          "right": "Instalaram-se na Região Sul e preservaram seus costumes e tradições"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "his-p1-038"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada motivo à explicação correta sobre por que os europeus emigraram para o Brasil no século XIX.",
+      "explanation": "Os europeus emigraram por diferentes razões: guerras tornavam a vida perigosa, a pobreza dificultava a sobrevivência, a falta de terras impedia o trabalho no campo e a propaganda apresentava o Brasil como um lugar de oportunidades.",
+      "sourceRef": {
+        "section": "Imigrantes europeus no Brasil",
+        "pages": "96"
+      },
+      "pairs": [
+        {
+          "left": "Guerras",
+          "right": "Tornavam a vida perigosa nos países de origem"
+        },
+        {
+          "left": "Pobreza",
+          "right": "Dificultava a sobrevivência das famílias"
+        },
+        {
+          "left": "Falta de terras",
+          "right": "Impedia que as pessoas trabalhassem no campo"
+        },
+        {
+          "left": "Propaganda",
+          "right": "Apresentava o Brasil como lugar de oportunidades"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "his-p1-039"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada grupo de imigrantes à região ou ao trabalho com que ficou mais relacionado no Brasil, conforme o que você estudou.",
+      "explanation": "Os imigrantes europeus se estabeleceram em regiões e atividades específicas: alemães e ucranianos na Região Sul, e os italianos tanto no Sul quanto nos cafezais paulistas, contribuindo de formas diferentes para o desenvolvimento do Brasil.",
+      "sourceRef": {
+        "section": "Os italianos",
+        "pages": "98"
+      },
+      "pairs": [
+        {
+          "left": "Italianos no Sudeste",
+          "right": "Trabalho nos cafezais de São Paulo"
+        },
+        {
+          "left": "Alemães",
+          "right": "Colônias na Região Sul"
+        },
+        {
+          "left": "Ucranianos",
+          "right": "Comunidades na Região Sul com preservação de tradições"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "his-p1-040"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Os imigrantes sírios e libaneses chegaram ao Brasil e se tornaram conhecidos por uma atividade muito importante. Qual era essa atividade?",
+      "explanation": "O material conta que os imigrantes de origem árabe, como sírios e libaneses, ficaram muito conhecidos pelo comércio, percorrendo cidades e vendendo mercadorias.",
+      "sourceRef": {
+        "section": "Os imigrantes de origem árabe",
+        "pages": "100"
+      },
+      "options": [
+        "Pesca artesanal nas regiões costeiras",
+        "Comércio, percorrendo cidades e vendendo mercadorias",
+        "Cultivo de arroz nas lavouras do Sul",
+        "Construção de estradas e ferrovias"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "his-p1-041"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Os imigrantes japoneses chegaram ao Brasil em 1908. De onde eles vieram?",
+      "explanation": "O material informa que os imigrantes japoneses vieram do Japão e chegaram ao Brasil em 1908, trazendo seus costumes e conhecimentos.",
+      "sourceRef": {
+        "section": "Os imigrantes japoneses",
+        "pages": "101"
+      },
+      "options": [
+        "Da Coreia",
+        "Do Japão",
+        "Da Índia",
+        "Da China"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "his-p1-042"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Os imigrantes árabes que vieram ao Brasil eram, em sua maioria, de quais países?",
+      "explanation": "Segundo o material, os imigrantes de origem árabe que chegaram ao Brasil eram principalmente sírios e libaneses.",
+      "sourceRef": {
+        "section": "Os imigrantes de origem árabe",
+        "pages": "100"
+      },
+      "options": [
+        "Iraque e Jordânia",
+        "Arábia Saudita e Iêmen",
+        "Egito e Marrocos",
+        "Síria e Líbano"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "his-p1-043"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Os imigrantes japoneses trouxeram contribuições importantes para a agricultura brasileira. O que o material destaca sobre essa contribuição?",
+      "explanation": "O material aponta que os imigrantes japoneses trouxeram técnicas e conhecimentos agrícolas que contribuíram para o desenvolvimento da agricultura no Brasil.",
+      "sourceRef": {
+        "section": "Os imigrantes japoneses",
+        "pages": "101"
+      },
+      "options": [
+        "Construíram moinhos de vento para irrigar as lavouras",
+        "Introduziram a criação de gado no sertão nordestino",
+        "Trouxeram técnicas e conhecimentos agrícolas que ajudaram a desenvolver a agricultura",
+        "Ensinaram os brasileiros a pescar em alto mar"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "his-p1-044"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual situação mostra uma contribuição dos imigrantes de origem árabe para a culinária brasileira?",
+      "explanation": "Os imigrantes sírios e libaneses trouxeram costumes e receitas que passaram a fazer parte da culinária brasileira.",
+      "sourceRef": {
+        "section": "Os imigrantes de origem árabe",
+        "pages": "100"
+      },
+      "options": [
+        "A proibição de receitas trazidas de outros países",
+        "A presença de receitas e costumes de origem árabe na alimentação",
+        "O abandono de todos os costumes culinários de origem",
+        "A substituição de toda a culinária brasileira por uma única tradição"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "his-p1-045"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Os imigrantes japoneses que chegaram ao Brasil em 1908 preservaram muitas de suas tradições. Qual das situações abaixo mostra isso?",
+      "explanation": "O material destaca que os imigrantes japoneses mantiveram seus costumes e tradições culturais no Brasil, como festas, culinária e práticas culturais típicas do Japão.",
+      "sourceRef": {
+        "section": "Os imigrantes japoneses",
+        "pages": "101"
+      },
+      "options": [
+        "Mantiveram festas, culinária e tradições culturais japonesas no Brasil",
+        "Proibiram seus filhos de aprender a língua portuguesa",
+        "Voltaram ao Japão após alguns anos no Brasil",
+        "Abandonaram completamente seus costumes para se adaptar ao Brasil"
+      ],
+      "correctIndex": 0,
+      "type": "multipleChoice",
+      "id": "his-p1-046"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Os imigrantes árabes e japoneses chegaram ao Brasil em momentos diferentes e contribuíram de formas distintas para a sociedade brasileira. O que essas duas histórias têm em comum?",
+      "explanation": "Tanto os imigrantes árabes quanto os japoneses preservaram suas tradições culturais ao mesmo tempo em que contribuíram para a cultura e a economia brasileira, mostrando que a imigração enriquece a sociedade.",
+      "sourceRef": {
+        "section": "Os imigrantes de origem árabe",
+        "pages": "100"
+      },
+      "options": [
+        "Ambos chegaram ao Brasil no mesmo período, no século XIX",
+        "Ambos se estabeleceram principalmente na Região Sul do Brasil",
+        "Ambos vieram ao Brasil exclusivamente para trabalhar na lavoura de café",
+        "Ambos preservaram suas tradições e contribuíram para a cultura e a economia brasileira"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "his-p1-047"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada grupo de imigrantes à contribuição ou característica que o material destaca sobre eles no Brasil.",
+      "explanation": "O material apresenta as contribuições específicas de cada grupo: os japoneses trouxeram técnicas agrícolas, os sírios e libaneses se destacaram no comércio, e os italianos trabalharam nas colônias do Sul e nos cafezais paulistas.",
+      "sourceRef": {
+        "section": "Os imigrantes japoneses",
+        "pages": "101"
+      },
+      "pairs": [
+        {
+          "left": "Imigrantes japoneses",
+          "right": "Trouxeram técnicas agrícolas e seus costumes ao Brasil"
+        },
+        {
+          "left": "Imigrantes sírios e libaneses",
+          "right": "Ficaram conhecidos pelo comércio e contribuíram para a culinária"
+        },
+        {
+          "left": "Imigrantes italianos",
+          "right": "Trabalharam nas colônias do Sul e nos cafezais de São Paulo"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "his-p1-048"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada elemento ao que o material apresenta sobre os imigrantes de origem árabe no Brasil.",
+      "explanation": "Sírios e libaneses são grupos de origem árabe destacados no material. Eles contribuíram especialmente para o comércio e para a culinária brasileira.",
+      "sourceRef": {
+        "section": "Os imigrantes de origem árabe",
+        "pages": "100"
+      },
+      "pairs": [
+        {
+          "left": "Sírios e libaneses",
+          "right": "Grupos de imigrantes de origem árabe destacados no material"
+        },
+        {
+          "left": "Comércio",
+          "right": "Atividade econômica em que muitos desses imigrantes se destacaram"
+        },
+        {
+          "left": "Culinária",
+          "right": "Parte da cultura brasileira que recebeu contribuições desses imigrantes"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "his-p1-049"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada informação ao grupo de imigrantes correto, conforme o que você estudou no capítulo sobre migrações para o Brasil.",
+      "explanation": "O material informa que os japoneses chegaram ao Brasil em 1908, que os sírios e libaneses percorriam cidades como comerciantes e que os ucranianos se instalaram principalmente na Região Sul, preservando suas tradições.",
+      "sourceRef": {
+        "section": "Os imigrantes japoneses",
+        "pages": "101"
+      },
+      "pairs": [
+        {
+          "left": "Chegaram ao Brasil em 1908 vindos do Japão",
+          "right": "Imigrantes japoneses"
+        },
+        {
+          "left": "Percorriam cidades vendendo mercadorias",
+          "right": "Imigrantes sírios e libaneses"
+        },
+        {
+          "left": "Instalaram-se principalmente na Região Sul e preservaram suas tradições",
+          "right": "Imigrantes ucranianos"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "his-p1-050"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Atualmente, muitas pessoas deixam seus países e vêm para o Brasil. Qual é um dos motivos que leva as pessoas a migrarem nos dias de hoje?",
+      "explanation": "O material mostra que as pessoas migram atualmente por diferentes motivos, como guerras, perseguições, pobreza e busca por melhores condições de vida. Migrar é uma resposta a situações difíceis que as pessoas enfrentam em seus países de origem.",
+      "sourceRef": {
+        "section": "Por que as pessoas migram atualmente?",
+        "pages": "102"
+      },
+      "options": [
+        "Para conhecer as praias e paisagens do Brasil",
+        "Para participar de festivais culturais brasileiros",
+        "Para aprender a falar português como língua estrangeira",
+        "Para fugir de guerras, perseguições ou situações de perigo"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "his-p1-051"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Como chamamos as pessoas que são obrigadas a deixar seu país por causa de guerras ou situações que colocam sua segurança em risco?",
+      "explanation": "Refugiados são pessoas que precisam deixar seu país diante de ameaças graves à sua segurança, como guerras e perseguições. Elas não escolhem sair por vontade própria, mas sim por necessidade de proteção.",
+      "sourceRef": {
+        "section": "Por que as pessoas migram atualmente?",
+        "pages": "102"
+      },
+      "options": [
+        "Comerciantes",
+        "Colonizadores",
+        "Refugiados",
+        "Exploradores"
+      ],
+      "correctIndex": 2,
+      "type": "multipleChoice",
+      "id": "his-p1-052"
+    },
+    {
+      "difficulty": "easy",
+      "question": "O material que você estudou fala sobre o direito de migrar. O que esse direito significa?",
+      "explanation": "O direito de migrar significa que toda pessoa tem o direito de se deslocar e de receber tratamento digno ao chegar a outro país. Esse é um direito humano reconhecido.",
+      "sourceRef": {
+        "section": "O direito de migrar",
+        "pages": "103"
+      },
+      "options": [
+        "Apenas pessoas ricas podem se mudar para outro país",
+        "Migrar e receber tratamento digno são direitos de todas as pessoas",
+        "Somente quem fala o idioma do país pode entrar nele",
+        "Cada país pode proibir qualquer pessoa de entrar em seu território"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "his-p1-053"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Leia o trecho abaixo e responda:\n\n\"Ana chegou ao Brasil vinda de outro país. Ela não escolheu sair de sua terra: foi obrigada a partir porque havia uma guerra em sua cidade e sua família corria perigo.\"\n\nCom base no que você estudou, como chamamos pessoas como Ana?",
+      "explanation": "Ana é uma refugiada, pois deixou seu país não por escolha, mas porque sua segurança estava em risco por causa de uma guerra. Refugiados são pessoas que fogem de situações de perigo e ameaça.",
+      "sourceRef": {
+        "section": "Por que as pessoas migram atualmente?",
+        "pages": "102"
+      },
+      "options": [
+        "Imigrante voluntária",
+        "Refugiada",
+        "Exploradora",
+        "Colonizadora"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "his-p1-054"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Quando migrantes e refugiados chegam ao Brasil, como eles devem ser tratados, segundo o que você estudou?",
+      "explanation": "O material destaca que as diferenças culturais devem ser acolhidas com respeito e sem preconceito. Receber tratamento digno é um direito humano de todo migrante e refugiado.",
+      "sourceRef": {
+        "section": "O direito de migrar",
+        "pages": "103"
+      },
+      "options": [
+        "Com desconfiança, pois são desconhecidos",
+        "Com distância, para preservar a cultura local",
+        "Com indiferença, pois eles devem se adaptar sozinhos",
+        "Com respeito e acolhimento, sem preconceito"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "his-p1-055"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Qual é a diferença entre um migrante e um refugiado, segundo o material estudado?",
+      "explanation": "O migrante se desloca em busca de melhores condições de vida, enquanto o refugiado é obrigado a deixar seu país por causa de ameaças graves à sua segurança, como guerras e perseguições. Os dois têm direito a tratamento digno.",
+      "sourceRef": {
+        "section": "Por que as pessoas migram atualmente?",
+        "pages": "102"
+      },
+      "options": [
+        "O migrante e o refugiado são a mesma coisa, apenas com nomes diferentes",
+        "O migrante vem de países ricos e o refugiado vem de países pobres",
+        "O migrante foge de guerras e o refugiado busca trabalho",
+        "O migrante se desloca em busca de melhores condições, enquanto o refugiado foge de situações de perigo"
+      ],
+      "correctIndex": 3,
+      "type": "multipleChoice",
+      "id": "his-p1-056"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Leia o trecho abaixo e responda:\n\n\"Muitas pessoas chegam ao Brasil fugindo de guerras, perseguições e situações de perigo. Ao chegarem, precisam ser acolhidas com respeito e dignidade.\"\n\nO que esse trecho nos ensina sobre o acolhimento de refugiados?",
+      "explanation": "O trecho mostra que acolher refugiados com respeito e dignidade é uma obrigação, pois migrar e receber tratamento digno são direitos humanos. O acolhimento é uma forma de reconhecer a humanidade de cada pessoa, independentemente de sua origem.",
+      "sourceRef": {
+        "section": "O direito de migrar",
+        "pages": "103"
+      },
+      "options": [
+        "Que os refugiados devem ser aceitos apenas se falarem o idioma do país",
+        "Que acolher com respeito e dignidade é um dever, pois migrar é um direito humano",
+        "Que o Brasil só deve receber refugiados em situações de guerra mundial",
+        "Que os refugiados precisam provar que merecem ser acolhidos antes de entrar no país"
+      ],
+      "correctIndex": 1,
+      "type": "multipleChoice",
+      "id": "his-p1-057"
+    },
+    {
+      "difficulty": "intermediate",
+      "question": "Associe cada palavra ou expressão ao seu significado correto, conforme o que você estudou sobre migrações atuais e direitos.",
+      "explanation": "O material apresenta esses conceitos ao tratar das migrações atuais: refugiado é quem foge de situações de perigo; migrante é quem se desloca em busca de melhores condições; acolhimento é receber com respeito e dignidade; direito de migrar é o direito humano de se deslocar e ser tratado com dignidade.",
+      "sourceRef": {
+        "section": "O direito de migrar",
+        "pages": "103"
+      },
+      "pairs": [
+        {
+          "left": "Refugiado",
+          "right": "Pessoa que foge de guerras ou perseguições para se proteger"
+        },
+        {
+          "left": "Migrante",
+          "right": "Pessoa que se desloca em busca de melhores condições de vida"
+        },
+        {
+          "left": "Acolhimento",
+          "right": "Receber pessoas com respeito e sem preconceito"
+        },
+        {
+          "left": "Direito de migrar",
+          "right": "Direito humano de se deslocar e receber tratamento digno"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "his-p1-058"
+    },
+    {
+      "difficulty": "easy",
+      "question": "Associe cada motivo à situação que pode levar uma pessoa a migrar atualmente, conforme o que você estudou.",
+      "explanation": "O material mostra que as pessoas migram por diferentes motivos: guerras, perseguições, pobreza e busca por melhores condições de vida. Cada um desses motivos corresponde a uma situação diferente vivida pelos migrantes e refugiados.",
+      "sourceRef": {
+        "section": "Por que as pessoas migram atualmente?",
+        "pages": "102"
+      },
+      "pairs": [
+        {
+          "left": "Guerra",
+          "right": "Conflito armado que coloca a vida das pessoas em perigo"
+        },
+        {
+          "left": "Perseguição",
+          "right": "Situação em que uma pessoa é ameaçada por causa de suas crenças ou origem"
+        },
+        {
+          "left": "Pobreza",
+          "right": "Falta de condições básicas de vida, como alimentação e moradia"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "his-p1-059"
+    },
+    {
+      "difficulty": "challenging",
+      "question": "Associe cada conceito estudado nos capítulos 9 e 10 à sua descrição correta.",
+      "explanation": "Esses conceitos aparecem ao longo dos dois capítulos estudados: a diáspora africana foi o deslocamento forçado de africanos; os quilombos eram comunidades de resistência; o sincretismo foi a mistura de tradições culturais e religiosas; o acolhimento é a forma respeitosa de receber migrantes e refugiados.",
+      "sourceRef": {
+        "section": "O direito de migrar",
+        "pages": "103"
+      },
+      "pairs": [
+        {
+          "left": "Diáspora africana",
+          "right": "Deslocamento forçado de africanos para outras regiões do mundo"
+        },
+        {
+          "left": "Quilombos",
+          "right": "Comunidades organizadas de resistência formadas por africanos escravizados"
+        },
+        {
+          "left": "Sincretismo",
+          "right": "Mistura de tradições culturais e religiosas de diferentes povos"
+        },
+        {
+          "left": "Acolhimento",
+          "right": "Receber migrantes e refugiados com respeito e dignidade"
+        }
+      ],
+      "type": "matchColumns",
+      "id": "his-p1-060"
+    }
+  ]
+}

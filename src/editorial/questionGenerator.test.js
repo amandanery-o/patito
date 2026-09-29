@@ -40,13 +40,14 @@ describe('gerador editorial', () => {
   })
 
   it.each([
-    ['matematica-t2', [4, 8], 'matematica-t2-capitulos-4-8'],
-    ['matematica-p1', [5, 6, 7], 'matematica-p1-capitulos-5-6-7'],
-  ])('mantém o recorte oficial de %s', (configurationName, chapters, contentId) => {
+    ['historia-p1', [9, 10], 'historia-p1-capitulos-9-10', 'historia'],
+    ['matematica-t2', [4, 8], 'matematica-t2-capitulos-4-8', 'matematica'],
+    ['matematica-p1', [5, 6, 7], 'matematica-p1-capitulos-5-6-7', 'matematica'],
+  ])('mantém o recorte oficial de %s', (configurationName, chapters, contentId, subjectId) => {
     const config = getEditorialConfig(configurationName)
     const brief = buildSourceBrief(config.sourceTopics, config.chapters)
     expect(brief.map((item) => item.chapter)).toEqual(chapters)
-    expect(config).toMatchObject({ subjectId: 'matematica', contentId })
+    expect(config).toMatchObject({ subjectId, contentId })
   })
 
   it('valida quantidade e distribuição de formatos', () => {

@@ -20,5 +20,7 @@ describe('getMascotState', () => {
     expect(SUBJECTS.find((subject) => subject.id === 'matematica').topics).toHaveLength(2)
     expect(SUBJECTS.find((subject) => subject.id === 'portugues').topics).toHaveLength(1)
     expect(SUBJECTS.find((subject) => subject.id === 'portugues').topics[0].id).toBe('portugues-p1-leitura-lingua')
+    expect(SUBJECTS.find((subject) => subject.id === 'historia').topics).toHaveLength(1)
+    expect(SUBJECTS.find((subject) => subject.id === 'historia').topics[0].id).toBe('historia-p1-colonizacao-migracoes')
   })
 })

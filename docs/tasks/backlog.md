@@ -88,7 +88,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-051` ✅ Implementar etapa explícita de revisão e aprovação antes da publicação.
 - `TASK-052` ✅ Generalizar o catálogo editorial de Geografia para configurações por matéria e prova.
 - `TASK-053` ✅ Publicar Matemática T2 e P1 seguindo o roteiro editorial completo (120 questões aprovadas, resumos publicados e fluxo validado na UI).
-- `TASK-054` ⬜ Publicar História P1 seguindo o roteiro editorial completo.
+- `TASK-054` ✅ Publicar História P1 seguindo o roteiro editorial completo.
 - `TASK-055` ✅ Publicar Inglês P1 seguindo o roteiro editorial completo (unidades 5 e 6, resumo, 60 questões aprovadas e revisão independente).
 - `TASK-056` ✅ Publicar Português P1 seguindo o roteiro editorial completo (escopo oficial, resumo, 60 questões aprovadas e revisão independente).
 - `TASK-057` ✅ Publicar Ciências P1 seguindo o roteiro editorial completo (capítulos 8 e 9, resumo, 60 questões aprovadas e revisão independente).

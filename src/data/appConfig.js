@@ -4,6 +4,7 @@ import { MATHEMATICS_TOPICS } from './matematica'
 import { SCIENCE_TOPICS } from './ciencias'
 import { ENGLISH_TOPICS } from './ingles'
 import { PORTUGUESE_TOPICS } from './portugues'
+import { HISTORY_TOPICS } from './historia'
 
 export const SUBJECTS = [
   {
@@ -56,9 +57,9 @@ export const SUBJECTS = [
     name: 'História',
     icon: '📜',
     color: 'bg-amber-700',
-    topics: [],
+    topics: HISTORY_TOPICS,
     calendarOnly: false,
-    lastUpdated: null,
+    lastUpdated: '2026-09-29',
   },
   {
     id: 'ensino-religioso',

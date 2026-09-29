@@ -1,10 +1,33 @@
 import { GEOGRAPHY_SOURCE_TOPICS } from './geography-source-briefs.mjs'
 import { MATHEMATICS_SOURCE_TOPICS } from './mathematics-source-briefs.mjs'
+import { HISTORY_SOURCE_TOPICS } from './history-source-briefs.mjs'
 import { SCIENCE_SOURCE_TOPICS } from './science-source-briefs.mjs'
 import { ENGLISH_SOURCE_TOPICS } from './english-source-briefs.mjs'
 import { PORTUGUESE_SOURCE_TOPICS } from './portuguese-source-briefs.mjs'
 
 export const EDITORIAL_CONFIGS = {
+  'historia-p1': {
+    assessmentName: 'P1',
+    subject: 'História',
+    subjectId: 'historia',
+    chapters: [9, 10],
+    contentId: 'historia-p1-capitulos-9-10',
+    questionPrefix: 'his-p1',
+    title: 'Revisão P1 — Colonização e migrações para o Brasil',
+    summary: 'Revisão dos capítulos 9 e 10: colonização do Brasil, resistência e migrações para o país.',
+    source: { provider: 'edebe', resourceId: 'courseware-255/chapters-9-10', version: '2024' },
+    sourceTopics: HISTORY_SOURCE_TOPICS,
+    publicationOutput: 'src/data/generated/historiaP1Content.json',
+    contentScope: 'capítulo 9 — colonização do Brasil; capítulo 10 — migrações para o Brasil',
+    batches: [
+      ['chegada dos portugueses', 'povos originários', 'pau-brasil', 'efeitos da colonização'],
+      ['escravização de africanos', 'diáspora africana', 'deslocamento forçado'],
+      ['resistência', 'sincretismo', 'quilombos', 'heranças culturais indígenas e africanas'],
+      ['imigração europeia', 'motivos', 'alemães', 'italianos', 'ucranianos'],
+      ['imigrantes árabes', 'imigrantes japoneses', 'contribuições culturais e econômicas'],
+      ['migrações atuais', 'migrantes', 'refugiados', 'direito de migrar', 'acolhimento'],
+    ],
+  },
   'portugues-p1': {
     assessmentName: 'P1',
     subject: 'Língua Portuguesa',
