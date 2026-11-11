@@ -105,4 +105,4 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 
 ## F011 — Continuação organizada da tela inicial
 
-- `TASK-067` 🟡 Reorganizar somente a área abaixo das aulas de hoje: agrupar outros lembretes em um cartão que abre a Agenda, mostrar matérias com material numa grade compacta e recolher matérias em preparação.
+- `TASK-067` ✅ Reorganizar somente a área abaixo das aulas de hoje: agrupar outros lembretes em um cartão que abre a Agenda, mostrar matérias com material numa grade compacta e recolher matérias em preparação. Formatação, lint, build, prévia responsiva e domínio público conferidos.
