@@ -11,6 +11,7 @@ import Mascot from './components/Mascot'
 import BottomNav from './components/BottomNav'
 import TopicTrail from './components/TopicTrail'
 import HomeworkView from './components/HomeworkView'
+import NovemberExamSpotlight from './components/NovemberExamSpotlight'
 import ProblemReportModal from './components/ProblemReportModal'
 import ContentReview from './components/ContentReview'
 import { useProgress } from './hooks/useProgress'
@@ -110,6 +111,16 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
   const schoolEvents = useSchoolEvents(Boolean(session?.user?.id), e2e ? e2eSchoolEventsRepository : undefined)
   const exams = schoolEvents.events
   const upcomingExams = upcomingSchoolEvents(exams, 7)
+  const novemberExamKeys = new Set(
+    STUDY_SUBJECTS.flatMap((subject) =>
+      subject.topics
+        .filter((topic) => topic.reviewLabel === 'NOVEMBRO' && topic.examDate)
+        .map((topic) => `${subject.id}:${topic.examDate}`),
+    ),
+  )
+  const otherUpcomingExams = upcomingExams.filter(
+    (exam) => !(exam.type === 'prova' && novemberExamKeys.has(`${exam.subject}:${exam.date}`)),
+  )
 
   const { addReport } = useReports(session?.user?.id, e2e ? e2eProblemReportRepository : undefined)
   const [showReportForm, setShowReportForm] = useState(false)
@@ -321,6 +332,15 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
             </p>
           </div>
 
+          <NovemberExamSpotlight
+            subjects={STUDY_SUBJECTS}
+            onSelect={(subject, topic) => {
+              setSelectedSubject(subject)
+              setSelectedTopic(topic)
+              setView(VIEWS.REVIEW)
+            }}
+          />
+
           {/* Aulas de hoje */}
           {(() => {
             const todayDay = new Date().getDay()
@@ -379,9 +399,9 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
           })()}
 
           {/* Alertas de provas */}
-          {upcomingExams.length > 0 && (
+          {otherUpcomingExams.length > 0 && (
             <div className="space-y-2">
-              {upcomingExams.slice(0, 3).map((exam) => {
+              {otherUpcomingExams.slice(0, 3).map((exam) => {
                 const days = daysUntil(exam.date)
                 const subj = SUBJECTS.find((s) => s.id === exam.subject)
                 const isProva = exam.type === 'prova'

@@ -2,71 +2,70 @@
 
 ## Estado
 
-Decisão confirmada pela mantenedora em 09/11/2026; implementação local concluída. A nomenclatura P2/P3 fica fora das chamadas de estudo de novembro.
+Conteúdo de novembro publicado em produção em 11/11/2026. O destaque das avaliações na tela inicial está em implementação. A mantenedora confirmou que o foco deve ficar nas provas de novembro; avaliações já ocorridas ficam recolhidas nessa mesma seção e continuam acessíveis para revisão.
 
 ## Requisitos relacionados
 
-`REQ-014`, `REQ-022`, `REQ-045`–`REQ-048`, `REQ-067`–`REQ-071`, `REQ-073`, `REQ-076` (proposto)
+`REQ-014`, `REQ-022`, `REQ-036`–`REQ-039`, `REQ-045`–`REQ-048`, `REQ-067`–`REQ-071`, `REQ-073`, `REQ-076`–`REQ-077`
 
 ## Resultado para o aluno
 
-O aluno encontra, em cada matéria, a revisão da avaliação de novembro sem precisar entender rótulos conflitantes como P2 e P3. Cada material mostra matéria, data confirmada e conteúdos cobrados.
+O aluno encontra a revisão de novembro dentro da matéria correspondente, sem precisar entender rótulos conflitantes como P2 e P3. A tela inicial destaca as provas do mês e permite abrir diretamente cada revisão publicada.
 
-## Escopo proposto
+## Escopo
 
-- Adicionar na matéria um cartão chamado **Prova de novembro — [matéria]** e uma etiqueta **NOVEMBRO**.
-- Manter o padrão atual de duas ações: **Ler material** e **Praticar 30 questões**.
-- Reutilizar a matéria como ponto de entrada, sem criar uma nova área geral concorrente com Agenda e matérias.
-- A Agenda continua mostrando a data oficial disponível. O cartão de revisão não afirma uma data que a escola ainda não confirmou.
-- Manter cartões sem material completo em **Em preparação**; não iniciar prática sem banco aprovado.
-- Preservar o histórico editorial dos materiais anteriores, mas não deixar conteúdo fora do escopo atual acessível como revisão de novembro.
+- Cada matéria apresenta um cartão **Prova de novembro — [matéria]**, com etiqueta **NOVEMBRO**, data confirmada e duas ações: **Ler material** e **Praticar 30 questões**.
+- A tela inicial mostra uma seção em destaque **Provas de novembro**, ordenada por data, com acesso direto às revisões publicadas.
+- Provas já realizadas aparecem recolhidas em **Já aconteceram**, somente dentro do grupo de novembro, e continuam acessíveis para revisão.
+- A Agenda oficial continua mostrando eventos e datas da escola; ela não é substituída pelo destaque de estudos.
+- Materiais sem banco aprovado permanecem em **Em preparação** e não iniciam prática.
+- Não incluir Educação Física no banco de revisão: sua avaliação é prática e acompanhada em aula.
+
+## Materiais publicados
+
+| Matéria    | Data       | Conteúdo                              |
+| ---------- | ---------- | ------------------------------------- |
+| Português  | 12/11/2026 | Escopo registrado nas fontes da Edebê |
+| Inglês     | 13/11/2026 | Unidades 7 e 8 do Richmond            |
+| Geografia  | 16/11/2026 | Capítulos 10 e 11                     |
+| Matemática | 17/11/2026 | Capítulos 9, 10 e 11                  |
+| Ciências   | 18/11/2026 | Capítulos 10 e 11                     |
+| História   | 19/11/2026 | Capítulos 11 e 12                     |
+
+Cada material publicado tem resumo, fonte e 60 questões aprovadas. As datas foram verificadas na versão pública; Geografia permanece em 16/11 e Matemática foi atualizada para 17/11.
 
 ## Regras e dados
 
-- A classificação de novembro é uma forma de navegação do Patito; os números oficiais da avaliação podem permanecer nas fontes e nos registros editoriais, sem aparecer como rótulo nos cartões de estudo.
-- Matéria, conteúdo e data vêm do calendário escolar versionado. Quando a data não estiver confirmada, a interface não a inventa.
-- Cada cartão aponta para material, fonte e questões da avaliação daquela matéria.
+- “Novembro” é uma forma de navegação do Patito. Os números oficiais da avaliação podem permanecer nas fontes e registros editoriais, sem aparecer como rótulo nos cartões de estudo.
+- Matéria, conteúdo e data vêm das fontes versionadas e do calendário escolar. Quando a data não está confirmada, a interface não a inventa.
+- O destaque usa os materiais publicados da matéria como destino. Datas passadas não removem nem arquivam o conteúdo.
 - O progresso conta somente revisões publicadas e usa IDs novos quando o escopo do material muda, evitando misturar tentativas antigas com um banco novo.
-- Conteúdo publicado continua igual para toda a turma e segue o pipeline de fonte, resumo, 60 questões, revisão e aprovação editorial.
-- Dados de aluno e permissões não mudam. O conteúdo continua centralizado; progresso individual segue associado ao aluno no Supabase.
+- Dados do aluno e permissões não mudam. O conteúdo é igual para toda a turma; progresso individual continua associado ao aluno no Supabase.
 - A experiência exige conexão, como as demais revisões do Patito.
 
 ## Critérios de aceite
 
 - A revisão de novembro aparece dentro da matéria correspondente e usa linguagem simples sem P2/P3 no cartão.
-- Matemática apresenta o material aprovado dos capítulos 9, 10 e 11 e usa a data atualizada de 17/11.
-- Português, Inglês, Geografia, Ciências e História têm materiais aprovados localmente, com escopo confirmado; as datas do calendário aparecem somente quando confirmadas. A publicação externa ainda não foi feita.
-- Geografia tem material aprovado localmente para os capítulos 10 e 11 e exibe a data de 16/11 do cronograma escolar.
-- Ciências e História têm materiais aprovados localmente para os capítulos 10–11 e 11–12, respectivamente.
-- Cartões listam somente capítulos/unidades confirmados pela fonte escolar atual.
-- A data só aparece como confirmada quando há fonte escolar para ela.
-- Sem resumo ou banco aprovado, a avaliação fica em **Em preparação** e não inicia sessão.
-- Conteúdo com escopo substituído não aparece como material de novembro.
-- Materiais completos oferecem leitura, prática, retomada, conclusão e progresso sem misturar sessões antigas.
-- A navegação funciona em tela pequena e os botões têm nomes acessíveis.
+- A tela inicial destaca as provas de novembro em ordem de data e oferece acesso direto aos materiais publicados.
+- Datas passadas deixam de aparecer como próximas e ficam recolhidas em **Já aconteceram**, com botão para rever o material.
+- A Agenda mantém todos os compromissos oficiais e suas datas, sem confundir o calendário com o arquivo de estudos.
+- Cada cartão usa apenas capítulos/unidades confirmados pelas fontes escolares atuais.
+- Materiais publicados oferecem leitura, prática, retomada, conclusão e progresso sem misturar sessões antigas.
+- A navegação funciona em tela pequena e os controles têm nomes acessíveis.
 
-## Dependências e bloqueios atuais
+## Dependências e rollout
 
-- Matemática tem banco aprovado para capítulos 9, 10 e 11.
-- Português (12/11) tem 60 questões revisadas e aprovadas localmente, baseadas nas páginas confirmadas na Edebê.
-- Inglês (13/11) tem 60 questões revisadas e aprovadas localmente, baseadas nas unidades 7 e 8 do Richmond.
-- Ciências (18/11) e História (19/11) têm fontes conferidas e materiais aprovados localmente.
-- Ciências P2 e História P2 ainda precisam de fonte editorial dos capítulos indicados no calendário.
-- Geografia para novembro está aprovada localmente para os capítulos 10 e 11 e usa 16/11, data mantida do cronograma escolar quando o comunicado de 30/10 atualizou o conteúdo. O banco anterior de capítulos 11 e 12 está fora da experiência ativa.
-- Educação Física tem avaliação de novembro, mas o calendário descreve habilidades práticas acompanhadas em aula. Não criar um banco de questões sem orientação docente apropriada.
-
-## Observabilidade e rollout
-
-- Revisar a fonte, a lista de matérias e os estados de preparação antes de publicar.
-- Publicar os materiais disponíveis sem marcar como pronta uma prova cujo conteúdo esteja incompleto.
-- Após publicação, confirmar no site que cada botão abre a revisão da matéria certa e que a Agenda mantém a proveniência das datas.
+- Materiais e datas de todas as seis provas estão publicados na Vercel e ligados ao Supabase já existente.
+- O destaque é uma mudança somente de interface; não requer alteração de schema ou de permissões.
+- Validar em tela pequena, inclusive o acesso a materiais cuja data já passou.
 
 ## Não objetivos
 
 - Renomear retroativamente provas P1 ou alterar o histórico de avaliações.
 - Criar notas, resultados ou comparação de desempenho.
 - Automatizar acesso a portais escolares ou livros sem permissão e mecanismo oficial.
+- Remover materiais do histórico editorial ou do banco de conteúdo depois que uma prova passar.
 
-## Questões abertas
+## Decisão de escopo
 
-1. Nenhuma pendência editorial de conteúdo ou data para Geografia.
+- O foco atual são as provas de novembro. O grupo **Já aconteceram** abrange somente essas avaliações; não arquiva os outros eventos da Agenda.

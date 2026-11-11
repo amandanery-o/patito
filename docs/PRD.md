@@ -121,6 +121,7 @@ Não existirão perfis de responsável, professor, coordenador ou administrador 
 - `REQ-057` Utilizar somente texto nos resumos de conteúdo nesta versão.
 - `REQ-071` Apresentar o material de revisão como uma área explícita, separando claramente as ações de ler o resumo e praticar questões, sem repetir os capítulos cobertos como etapas concorrentes; indicadores de progresso devem contar revisões publicadas, nunca estruturas internas ou capítulos ocultos.
 - `REQ-076` Organizar os materiais de avaliação de novembro por matéria, usando o rótulo “Prova de novembro” nas chamadas de estudo sem depender de P2/P3.
+- `REQ-077` Dar destaque às provas do mês vigente na tela inicial, com datas e acesso direto às revisões publicadas.
 
 ### Erros e suporte
 
