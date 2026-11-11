@@ -1,0 +1,1234 @@
+{
+  "status": "approved",
+  "contentId": "historia-novembro-2026",
+  "title": "Prova de novembro — História",
+  "summary": "Revisão dos capítulos 11 e 12: migrações internas, tropeirismo e diversidade da sociedade brasileira atual.",
+  "summarySections": [
+    {
+      "title": "Migrações dentro do Brasil",
+      "text": "Migração interna é o deslocamento dentro do próprio país. Tropeiros transportavam mercadorias e animais entre regiões e ajudavam a conectar caminhos, comércio e culturas. A industrialização e a urbanização ampliaram cidades e oportunidades de trabalho."
+    },
+    {
+      "title": "Mudanças e trajetórias",
+      "text": "No século XX, muitas pessoas migraram entre regiões brasileiras por motivos diversos, como procurar trabalho e oportunidades ou enfrentar dificuldades no lugar de origem. Cada trajetória é própria e envolve desafios de mudança e adaptação."
+    },
+    {
+      "title": "A sociedade brasileira atual",
+      "text": "A sociedade brasileira é formada por grupos e culturas diversos. Povos indígenas e africanos têm muitas histórias e tradições; o país também recebe migrantes de diferentes lugares. Pessoas refugiadas podem precisar deixar seu país por ameaças ou condições difíceis e têm direito a acolhimento e respeito."
+    }
+  ],
+  "keyIdeas": [
+    "Migração interna é o deslocamento dentro do mesmo país.",
+    "Tropeiros ligavam regiões por caminhos de transporte e comércio.",
+    "Industrialização e urbanização contribuíram para o crescimento das cidades e mudanças de trabalho.",
+    "As pessoas migram por motivos variados; não se deve generalizar suas trajetórias.",
+    "A sociedade brasileira tem diversidade indígena, africana e migrante.",
+    "Pessoas refugiadas precisam de respeito e acolhimento."
+  ],
+  "source": {
+    "provider": "edebe",
+    "resourceId": "courseware-255/chapters-11-12/pages-106-127",
+    "version": "2024-11"
+  },
+  "generation": {
+    "authoringMethod": "Codex in-session",
+    "promptVersion": "question-batch-v2",
+    "generatedAt": "2026-11-11T11:41:18.265Z"
+  },
+  "editorialApproval": {
+    "reviewer": "Agente editorial independente Patito",
+    "reviewerType": "agent",
+    "reviewMethod": "authorized-source-map-question-by-question+full-second-read-v1",
+    "reviewedAt": "2026-11-11T19:30:00-03:00",
+    "draftDigest": "ff0699ca4bcc8d3dccaf8386906c3bd1debb982c441833633aa648a406edc6ed",
+    "schemaVersion": 1
+  },
+  "publishedAt": "2026-11-11T22:19:55.545Z",
+  "questions": [
+    {
+      "id": "historia-novembro-2026-001",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que é migração interna?",
+      "options": [
+        "Mudança obrigatória para outro planeta.",
+        "Viagem turística sem mudança de residência.",
+        "Mudança de país para outro continente.",
+        "Mudança de lugar que ocorre dentro do mesmo país, estado ou município."
+      ],
+      "correctIndex": 3,
+      "explanation": "Migração interna acontece dentro do mesmo país, estado ou município.",
+      "sourceRef": {
+        "section": "Migrações internas",
+        "pages": "108"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-002",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual situação é um exemplo de migração interna?",
+      "options": [
+        "Um grupo cruza o oceano para morar em outro país.",
+        "Uma turma visita um museu no mesmo bairro.",
+        "Uma família muda de um estado brasileiro para outro.",
+        "Uma pessoa viaja por uma tarde e volta para casa."
+      ],
+      "correctIndex": 2,
+      "explanation": "A mudança entre estados do mesmo país é interna.",
+      "sourceRef": {
+        "section": "Migrações internas",
+        "pages": "108"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-003",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Quem eram os tropeiros descritos no capítulo?",
+      "options": [
+        "Pescadores que cruzavam somente rios.",
+        "Pessoas que conduziam animais e transportavam produtos por caminhos.",
+        "Astrônomos que estudavam as fases da Lua.",
+        "Professores que criavam mapas escolares."
+      ],
+      "correctIndex": 1,
+      "explanation": "Tropeiros conduziam animais e transportavam produtos por caminhos.",
+      "sourceRef": {
+        "section": "Tropeirismo: caminhos, transporte e comércio",
+        "pages": "108–109"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-004",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Por que os tropeiros percorriam longas distâncias?",
+      "options": [
+        "Para impedir qualquer comércio entre regiões.",
+        "Para transportar produtos e ligar áreas de produção, mineração e comércio.",
+        "Para medir o tamanho do território.",
+        "Para organizar calendários culturais."
+      ],
+      "correctIndex": 1,
+      "explanation": "Os caminhos ligavam mineração, criação de animais e comércio.",
+      "sourceRef": {
+        "section": "Tropeirismo: caminhos, transporte e comércio",
+        "pages": "108–109"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-005",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Que animais aparecem associados ao tropeirismo?",
+      "options": [
+        "Mulas e gado.",
+        "Pinguins e baleias.",
+        "Girafas e camelos.",
+        "Tartarugas e golfinhos."
+      ],
+      "correctIndex": 0,
+      "explanation": "O capítulo cita o transporte de gado e mulas.",
+      "sourceRef": {
+        "section": "Tropeirismo: caminhos, transporte e comércio",
+        "pages": "108–109"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-006",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Como os caminhos dos tropeiros influenciaram as regiões?",
+      "options": [
+        "Impediram todo contato entre comunidades.",
+        "Criaram as fases da Lua.",
+        "Substituíram os rios.",
+        "Facilitaram a circulação de mercadorias e culturas."
+      ],
+      "correctIndex": 3,
+      "explanation": "O tropeirismo contribuiu para a circulação de mercadorias e culturas.",
+      "sourceRef": {
+        "section": "Tropeirismo: caminhos, transporte e comércio",
+        "pages": "108–109"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-007",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O transporte de ouro, gado e outros produtos mostra que o tropeirismo",
+      "options": [
+        "ocorria somente dentro das casas.",
+        "não envolvia deslocamento.",
+        "estava ligado à circulação econômica entre regiões.",
+        "era uma forma de medir o tempo."
+      ],
+      "correctIndex": 2,
+      "explanation": "Tropeiros transportavam mercadorias por longas distâncias.",
+      "sourceRef": {
+        "section": "Tropeirismo: caminhos, transporte e comércio",
+        "pages": "108–109"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-008",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "O que é urbanização?",
+      "options": [
+        "Criação de caminhos apenas rurais.",
+        "Diminuição de toda atividade urbana.",
+        "Crescimento e transformação das cidades.",
+        "Mudança das fases da Lua."
+      ],
+      "correctIndex": 2,
+      "explanation": "Urbanização é o crescimento e a transformação das cidades.",
+      "sourceRef": {
+        "section": "Industrialização e urbanização",
+        "pages": "110–111"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-009",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Como a industrialização pode influenciar migrações?",
+      "options": [
+        "Ela faz todas as famílias mudarem ao mesmo tempo.",
+        "A ampliação de empregos nas cidades pode atrair pessoas.",
+        "Ela impede que existam empregos.",
+        "Ela transforma migração em viagem espacial."
+      ],
+      "correctIndex": 1,
+      "explanation": "A industrialização ampliou empregos e atraiu pessoas para centros urbanos.",
+      "sourceRef": {
+        "section": "Industrialização e urbanização",
+        "pages": "110–111"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-010",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Por que alguém pode migrar para uma cidade?",
+      "options": [
+        "Para buscar trabalho ou outras oportunidades.",
+        "Porque todas as pessoas têm o mesmo motivo.",
+        "Porque ninguém pode permanecer no lugar de origem.",
+        "Somente para visitar um monumento."
+      ],
+      "correctIndex": 0,
+      "explanation": "A busca por trabalho e oportunidades aparece entre os motivos de migração.",
+      "sourceRef": {
+        "section": "Industrialização e urbanização",
+        "pages": "110–111"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-011",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual movimento é uma migração entre países, e não uma migração interna?",
+      "options": [
+        "Mudar de um município brasileiro para outro.",
+        "Mudar de um estado brasileiro para outro.",
+        "Mudar de um país para outro.",
+        "Mudar de uma região do Brasil para outra."
+      ],
+      "correctIndex": 2,
+      "explanation": "Mudança entre países é internacional; migração interna ocorre dentro do mesmo país.",
+      "sourceRef": {
+        "section": "Migrações internas",
+        "pages": "108"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-012",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Os caminhos dos tropeiros contribuíram para",
+      "options": [
+        "isolar toda comunidade.",
+        "impedir o transporte de produtos.",
+        "apagar a história local.",
+        "conectar regiões e favorecer trocas."
+      ],
+      "correctIndex": 3,
+      "explanation": "Rotas ajudaram a circular pessoas, mercadorias e culturas.",
+      "sourceRef": {
+        "section": "Tropeirismo: caminhos, transporte e comércio",
+        "pages": "108–109"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-013",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que a palavra “trajetória” pode significar numa história de migração?",
+      "options": [
+        "Uma fase da Lua.",
+        "Uma lista fixa de cidades iguais.",
+        "O caminho e as experiências vividas ao longo do deslocamento.",
+        "A medida do peso de uma mercadoria."
+      ],
+      "correctIndex": 2,
+      "explanation": "O capítulo aborda percursos e desafios de quem deixa seu lugar de origem.",
+      "sourceRef": {
+        "section": "Relatos e desafios das migrações",
+        "pages": "113–115"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-014",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Por que os motivos de migração não são iguais para todos?",
+      "options": [
+        "Porque todos migram na mesma data.",
+        "Cada pessoa e família vive circunstâncias diferentes.",
+        "Porque só existe um motivo possível.",
+        "Porque ninguém decide mudar de lugar."
+      ],
+      "correctIndex": 1,
+      "explanation": "A fonte alerta para não generalizar a experiência das pessoas migrantes.",
+      "sourceRef": {
+        "section": "Relatos e desafios das migrações",
+        "pages": "113–115"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-015",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Ao estudar um relato de migração, é importante",
+      "options": [
+        "considerar o contexto e respeitar a experiência de quem conta.",
+        "dizer que a história vale para todas as famílias.",
+        "ignorar as dificuldades da mudança.",
+        "inventar motivos não mencionados."
+      ],
+      "correctIndex": 0,
+      "explanation": "O capítulo usa relatos para abordar desafios de trajetórias particulares.",
+      "sourceRef": {
+        "section": "Relatos e desafios das migrações",
+        "pages": "113–115"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-016",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que é uma migração entre regiões do Brasil?",
+      "options": [
+        "Deslocamento interno de uma região brasileira para outra.",
+        "Mudança do Brasil para outro país.",
+        "Uma mudança das fases da Lua.",
+        "Uma viagem sem deslocamento."
+      ],
+      "correctIndex": 0,
+      "explanation": "Migrações internas podem acontecer entre regiões do mesmo país.",
+      "sourceRef": {
+        "section": "Migrações internas",
+        "pages": "108"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-017",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "O capítulo menciona deslocamentos do Sertão nordestino para quais regiões?",
+      "options": [
+        "Somente para países europeus.",
+        "Somente para a região Norte.",
+        "Para fora do planeta.",
+        "Sul, Sudeste e Centro-Oeste."
+      ],
+      "correctIndex": 3,
+      "explanation": "O capítulo apresenta deslocamentos para Sul, Sudeste e Centro-Oeste.",
+      "sourceRef": {
+        "section": "Migrações do Sertão nordestino",
+        "pages": "112–113"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-018",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Que fator aparece entre os motivos desses deslocamentos?",
+      "options": [
+        "A troca das estações do ano.",
+        "A proibição de viver nas cidades.",
+        "Busca por trabalho e oportunidades.",
+        "Uma regra que obriga todas as famílias a mudar."
+      ],
+      "correctIndex": 2,
+      "explanation": "A busca por trabalho e oportunidades é um fator citado.",
+      "sourceRef": {
+        "section": "Migrações do Sertão nordestino",
+        "pages": "112–113"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-019",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Como a seca pode aparecer na história de uma migração?",
+      "options": [
+        "Como um fenômeno que ocorre apenas em cidades.",
+        "Como uma dificuldade que, junto a outros fatores, pode influenciar a mudança.",
+        "Como a única causa de toda migração.",
+        "Como um motivo para todas as pessoas deixarem o país."
+      ],
+      "correctIndex": 1,
+      "explanation": "A fonte cita a seca entre vários fatores, sem reduzi-la a causa única.",
+      "sourceRef": {
+        "section": "Migrações do Sertão nordestino",
+        "pages": "112–113"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-020",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual afirmação evita um estereótipo sobre pessoas migrantes?",
+      "options": [
+        "Toda mudança acontece por escolha igual.",
+        "As experiências e os motivos de cada pessoa podem ser diferentes.",
+        "Toda pessoa migrante tem a mesma história.",
+        "Migrantes não têm conhecimentos ou cultura."
+      ],
+      "correctIndex": 1,
+      "explanation": "A fonte recomenda não generalizar a experiência de quem migra.",
+      "sourceRef": {
+        "section": "Relatos e desafios das migrações",
+        "pages": "113–115"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-021",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que pode ser um desafio ao mudar de região?",
+      "options": [
+        "Adaptar-se a um novo lugar e reconstruir a vida.",
+        "Fazer a Terra parar de girar.",
+        "Eliminar a história do lugar de origem.",
+        "Deixar de ter direitos."
+      ],
+      "correctIndex": 0,
+      "explanation": "O capítulo aborda os desafios de deixar o lugar de origem e recomeçar.",
+      "sourceRef": {
+        "section": "Relatos e desafios das migrações",
+        "pages": "113–115"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-022",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que pode mudar com a urbanização?",
+      "options": [
+        "A luz própria da Lua.",
+        "A duração de um ano.",
+        "A história dos tropeiros no passado.",
+        "O crescimento e as atividades das cidades."
+      ],
+      "correctIndex": 3,
+      "explanation": "A urbanização ampliou e transformou as cidades.",
+      "sourceRef": {
+        "section": "Industrialização e urbanização",
+        "pages": "110–111"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-023",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual relação o capítulo estabelece entre indústria e cidade?",
+      "options": [
+        "Indústria e migração não têm nenhuma relação.",
+        "A indústria reduz toda circulação de mercadorias.",
+        "Atividades industriais e empregos podem atrair pessoas para centros urbanos.",
+        "A indústria impede a existência de cidades."
+      ],
+      "correctIndex": 2,
+      "explanation": "Industrialização e urbanização ampliaram empregos e transformaram cidades.",
+      "sourceRef": {
+        "section": "Industrialização e urbanização",
+        "pages": "110–111"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-024",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que relatos de migração ajudam a conhecer?",
+      "options": [
+        "Substituem todo estudo histórico.",
+        "Permitem julgar quem pode migrar.",
+        "Experiências e desafios de pessoas em deslocamento.",
+        "Provam que todas as histórias são iguais."
+      ],
+      "correctIndex": 2,
+      "explanation": "Os relatos ajudam a conhecer diferentes desafios vividos por migrantes.",
+      "sourceRef": {
+        "section": "Relatos e desafios das migrações",
+        "pages": "113–115"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-025",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que pode acontecer quando migrantes chegam a uma comunidade?",
+      "options": [
+        "A troca cultural entre quem chega e as pessoas do lugar.",
+        "Todas as pessoas passam a ter a mesma história.",
+        "A comunidade perde necessariamente sua cultura.",
+        "As pessoas deixam de se relacionar."
+      ],
+      "correctIndex": 0,
+      "explanation": "O capítulo cita trocas culturais entre migrantes recentes e comunidades locais.",
+      "sourceRef": {
+        "section": "Migrações recentes de bolivianos e haitianos",
+        "pages": "122"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-026",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "Uma mudança de município para outro no mesmo estado é",
+      "options": [
+        "uma migração interna.",
+        "uma migração internacional.",
+        "uma mudança de país.",
+        "uma viagem ao exterior."
+      ],
+      "correctIndex": 0,
+      "explanation": "Deslocamentos dentro do país, estado ou município são migrações internas.",
+      "sourceRef": {
+        "section": "Migrações internas",
+        "pages": "108"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-027",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que se deve evitar ao explicar a migração de uma família?",
+      "options": [
+        "Reconhecer que existem fatores econômicos e pessoais.",
+        "Considerar o contexto histórico.",
+        "Ouvir as pessoas envolvidas.",
+        "Supor um motivo sem conhecer sua história."
+      ],
+      "correctIndex": 3,
+      "explanation": "O capítulo alerta para não generalizar ou inventar razões individuais.",
+      "sourceRef": {
+        "section": "Relatos e desafios das migrações",
+        "pages": "113–115"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-028",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Que motivo aparece entre os fatores de migração para centros urbanos?",
+      "options": [
+        "Todas as mudanças são iguais e obrigatórias.",
+        "Ninguém pode escolher um destino.",
+        "Busca por empregos e oportunidades.",
+        "Migrações não mudam comunidades."
+      ],
+      "correctIndex": 2,
+      "explanation": "A industrialização ampliou empregos e atraiu pessoas às cidades.",
+      "sourceRef": {
+        "section": "Industrialização e urbanização",
+        "pages": "110–111"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-029",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "O que o capítulo cita sobre migrantes bolivianos e haitianos?",
+      "options": [
+        "São exemplos de migrações recentes para o Brasil e de trocas culturais.",
+        "Todos chegaram na mesma época e têm a mesma história.",
+        "Não se relacionam à sociedade brasileira atual.",
+        "São exemplos de migrações entre municípios brasileiros."
+      ],
+      "correctIndex": 0,
+      "explanation": "A fonte menciona essas migrações recentes e a troca cultural com comunidades locais.",
+      "sourceRef": {
+        "section": "Migrações recentes de bolivianos e haitianos",
+        "pages": "122"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-030",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que pode significar reconstruir a vida em outro lugar?",
+      "options": [
+        "Mudar os limites do país.",
+        "Organizar a vida novamente após a mudança.",
+        "Esquecer todos os direitos.",
+        "Repetir a história exatamente igual."
+      ],
+      "correctIndex": 1,
+      "explanation": "O capítulo aborda desafios de deixar a origem e recomeçar em outro lugar.",
+      "sourceRef": {
+        "section": "Relatos e desafios das migrações",
+        "pages": "113–115"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-031",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Como é descrita a sociedade brasileira atual?",
+      "options": [
+        "Diversa, formada por pessoas e culturas com diferentes histórias.",
+        "Igual em todos os lugares e sem migrações.",
+        "Formada por apenas um grupo cultural.",
+        "Sem relação com acontecimentos do passado."
+      ],
+      "correctIndex": 0,
+      "explanation": "O capítulo destaca a diversidade e as diferentes trajetórias da população.",
+      "sourceRef": {
+        "section": "Diversidade da sociedade brasileira",
+        "pages": "116–117"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-032",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual frase reconhece a diversidade indígena?",
+      "options": [
+        "Existem muitos povos, línguas e modos de vida indígenas.",
+        "Todos os indígenas têm a mesma história.",
+        "Povos indígenas não vivem nas cidades.",
+        "Não há povos indígenas no Brasil atual."
+      ],
+      "correctIndex": 0,
+      "explanation": "A fonte apresenta muitas etnias e modos de vida indígenas.",
+      "sourceRef": {
+        "section": "Povos indígenas: diversidade e migrações",
+        "pages": "118–119"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-033",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que se pode afirmar sobre culturas africanas trazidas ao Brasil?",
+      "options": [
+        "Todos os povos africanos falavam uma única língua.",
+        "Nenhuma tradição africana influenciou a sociedade.",
+        "A cultura africana desapareceu completamente.",
+        "Povos africanos tinham diferentes culturas e histórias."
+      ],
+      "correctIndex": 3,
+      "explanation": "O capítulo destaca a diversidade entre povos e culturas africanas.",
+      "sourceRef": {
+        "section": "Povos africanos e culturas afro-brasileiras",
+        "pages": "120–121"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-034",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Iorubás e malês são apresentados como",
+      "options": [
+        "regiões de um único país europeu.",
+        "categorias de trabalho urbano.",
+        "exemplos distintos de grupos e tradições africanas.",
+        "dois nomes para fases da Lua."
+      ],
+      "correctIndex": 2,
+      "explanation": "A fonte cita tradições iorubás e malês como exemplos distintos.",
+      "sourceRef": {
+        "section": "Povos africanos e culturas afro-brasileiras",
+        "pages": "120–121"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-035",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "Como a cultura afro-brasileira pode ser entendida?",
+      "options": [
+        "Como uma cultura que não muda com o tempo.",
+        "Como manifestações formadas pelo contato de elementos africanos e brasileiros.",
+        "Como uma cultura sem relação com povos africanos.",
+        "Como uma prática igual para todas as pessoas."
+      ],
+      "correctIndex": 1,
+      "explanation": "A fonte descreve manifestações culturais formadas por elementos diversos.",
+      "sourceRef": {
+        "section": "Povos africanos e culturas afro-brasileiras",
+        "pages": "120–121"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-036",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que o capítulo conta sobre migrações bolivianas e haitianas?",
+      "options": [
+        "Foram viagens internas entre municípios do mesmo estado.",
+        "São exemplos de migrações recentes para o Brasil.",
+        "Todos os migrantes chegaram na mesma época.",
+        "São exemplos de migrações que nunca ocorreram."
+      ],
+      "correctIndex": 1,
+      "explanation": "O capítulo menciona migrações recentes de bolivianos e haitianos.",
+      "sourceRef": {
+        "section": "Migrações recentes de bolivianos e haitianos",
+        "pages": "122"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-037",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que é uma pessoa refugiada, de modo geral?",
+      "options": [
+        "Alguém que deixa seu país diante de ameaças à segurança ou à sobrevivência.",
+        "Alguém que viaja por lazer por poucos dias.",
+        "Uma pessoa que nunca muda de lugar.",
+        "Alguém que só troca de escola."
+      ],
+      "correctIndex": 0,
+      "explanation": "O capítulo relaciona refúgio a ameaças e dificuldades para sobreviver.",
+      "sourceRef": {
+        "section": "Refúgio, acolhimento e recomeço",
+        "pages": "123"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-038",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Como uma comunidade pode receber pessoas refugiadas?",
+      "options": [
+        "Com exclusão por sua origem.",
+        "Exigindo que esqueçam sua língua e história.",
+        "Impedindo que tenham acesso a direitos.",
+        "Com respeito, acolhimento e condições para recomeçar."
+      ],
+      "correctIndex": 3,
+      "explanation": "A fonte destaca acolhimento, respeito e condições para recomeçar.",
+      "sourceRef": {
+        "section": "Refúgio, acolhimento e recomeço",
+        "pages": "123"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-039",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que caracteriza o refúgio, conforme o capítulo?",
+      "options": [
+        "Uma viagem temporária por lazer.",
+        "Uma mudança que ocorre somente dentro de uma cidade.",
+        "Deixar o próprio país diante de situações que ameaçam a segurança ou dificultam sobreviver.",
+        "Uma migração sempre motivada por estudo."
+      ],
+      "correctIndex": 2,
+      "explanation": "Refúgio envolve deixar o país diante de ameaças ou condições difíceis de sobrevivência.",
+      "sourceRef": {
+        "section": "Refúgio, acolhimento e recomeço",
+        "pages": "123"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-040",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que histórias familiares podem ajudar a perceber?",
+      "options": [
+        "Que as famílias têm sempre a mesma trajetória.",
+        "Que trajetórias pessoais podem se relacionar com processos históricos do país.",
+        "Que mudanças de lugar não têm causas.",
+        "Que a história nacional não muda."
+      ],
+      "correctIndex": 1,
+      "explanation": "A fonte relaciona histórias familiares a processos históricos, como trabalho e deslocamentos.",
+      "sourceRef": {
+        "section": "Histórias familiares e processos históricos",
+        "pages": "124–127"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-041",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "O que histórias familiares podem mostrar?",
+      "options": [
+        "Que migrar não tem causas.",
+        "Como trajetórias de pessoas se relacionam com mudanças históricas e sociais.",
+        "Que todas as famílias viveram a mesma coisa.",
+        "Que a história do Brasil não muda."
+      ],
+      "correctIndex": 1,
+      "explanation": "Histórias pessoais podem se conectar a processos históricos.",
+      "sourceRef": {
+        "section": "Histórias familiares e processos históricos",
+        "pages": "124–127"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-042",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que a expressão “sociedade diversa” significa?",
+      "options": [
+        "Existem pessoas e grupos com diferentes identidades e trajetórias.",
+        "Todas as pessoas têm os mesmos costumes e origens.",
+        "Só há uma forma correta de viver.",
+        "As culturas não têm história."
+      ],
+      "correctIndex": 0,
+      "explanation": "Diversidade reconhece diferentes grupos e trajetórias.",
+      "sourceRef": {
+        "section": "Diversidade da sociedade brasileira",
+        "pages": "116–117"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-043",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual atitude é adequada ao estudar grupos migrantes?",
+      "options": [
+        "Atribuir uma característica a todas as pessoas do grupo.",
+        "Fazer suposições sobre a vida de cada migrante.",
+        "Tratar a origem como motivo de desrespeito.",
+        "Usar informações da fonte e evitar generalizações."
+      ],
+      "correctIndex": 3,
+      "explanation": "O capítulo orienta a tratar grupos e trajetórias sem estereótipos.",
+      "sourceRef": {
+        "section": "Diversidade da sociedade brasileira; Migrações recentes de bolivianos e haitianos; Refúgio, acolhimento e recomeço",
+        "pages": "116–123"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-044",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "O que é importante para pessoas refugiadas que precisam recomeçar?",
+      "options": [
+        "Serem impedidas de participar da comunidade.",
+        "Abandonarem todos os seus direitos.",
+        "Serem julgadas apenas por sua origem.",
+        "Receber acolhimento, respeito e condições para recomeçar."
+      ],
+      "correctIndex": 3,
+      "explanation": "A fonte aponta essas necessidades para pessoas refugiadas.",
+      "sourceRef": {
+        "section": "Refúgio, acolhimento e recomeço",
+        "pages": "123"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-045",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Por que a sociedade brasileira atual reúne diferentes histórias e culturas?",
+      "options": [
+        "Porque migrações nunca ocorreram.",
+        "Porque cultura não muda com deslocamentos.",
+        "Diferentes povos e trajetórias contribuíram para sua formação.",
+        "Porque todas as pessoas nasceram na mesma cidade."
+      ],
+      "correctIndex": 2,
+      "explanation": "A fonte relaciona diversidade atual às trajetórias de diferentes povos.",
+      "sourceRef": {
+        "section": "Diversidade da sociedade brasileira",
+        "pages": "116–117"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-046",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Associe cada conceito à descrição.",
+      "pairs": [
+        {
+          "left": "Migração interna",
+          "right": "Deslocamento dentro do mesmo país, estado ou município."
+        },
+        {
+          "left": "Tropeiros",
+          "right": "Pessoas que transportavam animais e produtos."
+        },
+        {
+          "left": "Tropeirismo",
+          "right": "Ligava áreas de mineração, criação de animais e comércio."
+        }
+      ],
+      "explanation": "Cada conceito corresponde à descrição indicada no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Migrações internas e tropeirismo",
+        "pages": "108–109"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-047",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada processo ou fator à descrição.",
+      "pairs": [
+        {
+          "left": "Industrialização",
+          "right": "Ampliação de empregos em centros urbanos."
+        },
+        {
+          "left": "Urbanização",
+          "right": "Crescimento e transformação das cidades."
+        },
+        {
+          "left": "Busca por oportunidades",
+          "right": "Um motivo que pode atrair pessoas para cidades."
+        }
+      ],
+      "explanation": "Cada conceito corresponde à descrição indicada no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Industrialização e urbanização",
+        "pages": "110–111"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-048",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada grupo ou cultura à informação.",
+      "pairs": [
+        {
+          "left": "Povos indígenas",
+          "right": "Incluem diferentes etnias e modos de vida."
+        },
+        {
+          "left": "Tradições iorubás e malês",
+          "right": "Exemplos distintos citados no capítulo."
+        },
+        {
+          "left": "Cultura afro-brasileira",
+          "right": "Reúne elementos africanos e brasileiros."
+        }
+      ],
+      "explanation": "Cada conceito corresponde à descrição indicada no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Povos indígenas: diversidade e migrações; Povos africanos e culturas afro-brasileiras",
+        "pages": "118–121"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-049",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada grupo ou processo à explicação.",
+      "pairs": [
+        {
+          "left": "Bolivianos e haitianos",
+          "right": "Exemplos de migrações recentes para o Brasil."
+        },
+        {
+          "left": "Troca cultural",
+          "right": "Pode ocorrer entre quem chega e a comunidade local."
+        },
+        {
+          "left": "Sociedade brasileira atual",
+          "right": "É formada por grupos e culturas diversos."
+        }
+      ],
+      "explanation": "Cada conceito corresponde à descrição indicada no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Diversidade da sociedade brasileira e migrações recentes",
+        "pages": "116–122"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-050",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada termo sobre refúgio à descrição.",
+      "pairs": [
+        {
+          "left": "Pessoa refugiada",
+          "right": "Deixa o país diante de ameaças ou risco à sobrevivência."
+        },
+        {
+          "left": "Acolhimento",
+          "right": "Receber com respeito e apoio."
+        },
+        {
+          "left": "Recomeço",
+          "right": "Ter condições para reconstruir a vida em segurança."
+        }
+      ],
+      "explanation": "Cada conceito corresponde à descrição indicada no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Refúgio, acolhimento e recomeço",
+        "pages": "123"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-051",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Associe cada aspecto familiar ou histórico à ideia.",
+      "pairs": [
+        {
+          "left": "Histórias familiares",
+          "right": "Podem se relacionar a processos históricos do país."
+        },
+        {
+          "left": "Busca por trabalho",
+          "right": "Um motivo ligado a trajetórias de migração."
+        },
+        {
+          "left": "Mudanças climáticas",
+          "right": "Um processo relacionado a deslocamentos familiares."
+        }
+      ],
+      "explanation": "Cada conceito corresponde à descrição indicada no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Histórias familiares e processos históricos",
+        "pages": "124–127"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-052",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada atividade do tropeirismo à relação descrita.",
+      "pairs": [
+        {
+          "left": "Transporte de mercadorias",
+          "right": "Ligava regiões e atividades econômicas."
+        },
+        {
+          "left": "Condução de mulas e gado",
+          "right": "Fazia parte do trabalho dos tropeiros."
+        },
+        {
+          "left": "Caminhos dos tropeiros",
+          "right": "Favoreciam a circulação de culturas."
+        }
+      ],
+      "explanation": "Cada conceito corresponde à descrição indicada no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Tropeirismo: caminhos, transporte e comércio",
+        "pages": "108–109"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-053",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada fator ou região à informação correspondente.",
+      "pairs": [
+        {
+          "left": "Sertão nordestino",
+          "right": "Região de onde partiram migrações citadas."
+        },
+        {
+          "left": "Seca",
+          "right": "Um dos fatores que podem influenciar deslocamentos."
+        },
+        {
+          "left": "Sul, Sudeste e Centro-Oeste",
+          "right": "Regiões de destino citadas no capítulo."
+        }
+      ],
+      "explanation": "Cada conceito corresponde à descrição indicada no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Migrações do Sertão nordestino",
+        "pages": "112–113"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-054",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada tradição ou conceito à descrição.",
+      "pairs": [
+        {
+          "left": "Povos africanos",
+          "right": "Tinham diferentes culturas e histórias."
+        },
+        {
+          "left": "Tradições iorubás e malês",
+          "right": "Exemplos citados pelo capítulo."
+        },
+        {
+          "left": "Cultura afro-brasileira",
+          "right": "Manifestações com elementos africanos e brasileiros."
+        }
+      ],
+      "explanation": "Cada conceito corresponde à descrição indicada no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Povos africanos e culturas afro-brasileiras",
+        "pages": "120–121"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-055",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada mudança ou fator à descrição.",
+      "pairs": [
+        {
+          "left": "Mudança do Sertão para outra região brasileira",
+          "right": "Exemplo de migração interna."
+        },
+        {
+          "left": "Seca",
+          "right": "Fator que pode influenciar deslocamentos."
+        },
+        {
+          "left": "Busca por trabalho",
+          "right": "Motivo mencionado para migrar."
+        }
+      ],
+      "explanation": "Cada conceito corresponde à descrição indicada no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Migrações internas; Migrações do Sertão nordestino",
+        "pages": "108, 112–113"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-056",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Associe cada mudança urbana ao efeito indicado.",
+      "pairs": [
+        {
+          "left": "Industrialização",
+          "right": "Ampliou empregos nas cidades."
+        },
+        {
+          "left": "Urbanização",
+          "right": "Transformou e ampliou centros urbanos."
+        },
+        {
+          "left": "Migração para centros urbanos",
+          "right": "Pode ocorrer em busca de trabalho e oportunidades."
+        }
+      ],
+      "explanation": "Cada conceito corresponde à descrição indicada no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Industrialização e urbanização",
+        "pages": "110–111"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-057",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada exemplo à relação com a história familiar.",
+      "pairs": [
+        {
+          "left": "Histórias familiares",
+          "right": "Podem revelar ligações com processos históricos."
+        },
+        {
+          "left": "Busca por trabalho",
+          "right": "Pode estar ligada à decisão de mudar de região."
+        },
+        {
+          "left": "Deslocamentos entre regiões",
+          "right": "Fazem parte de trajetórias da sociedade brasileira."
+        }
+      ],
+      "explanation": "Cada conceito corresponde à descrição indicada no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Histórias familiares e processos históricos",
+        "pages": "124–127"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-058",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada conceito à sua descrição.",
+      "pairs": [
+        {
+          "left": "Migração interna",
+          "right": "Mudança dentro do mesmo país, estado ou município."
+        },
+        {
+          "left": "Tropeiros",
+          "right": "Transportavam mercadorias e animais por longas distâncias."
+        },
+        {
+          "left": "Tropeirismo",
+          "right": "Conectava comércio, mineração e criação de animais."
+        }
+      ],
+      "explanation": "Cada conceito corresponde à descrição indicada no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Migrações internas e tropeirismo",
+        "pages": "108–109"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-059",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada necessidade ligada ao refúgio à descrição.",
+      "pairs": [
+        {
+          "left": "Segurança",
+          "right": "Pode estar ameaçada antes de a pessoa deixar seu país."
+        },
+        {
+          "left": "Acolhimento",
+          "right": "Deve incluir respeito à pessoa que chega."
+        },
+        {
+          "left": "Condições para recomeçar",
+          "right": "São importantes para reconstruir a vida."
+        }
+      ],
+      "explanation": "Cada conceito corresponde à descrição indicada no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Refúgio, acolhimento e recomeço",
+        "pages": "123"
+      }
+    },
+    {
+      "id": "historia-novembro-2026-060",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada grupo ou conceito à informação correspondente.",
+      "pairs": [
+        {
+          "left": "Povos indígenas",
+          "right": "Reúnem muitas etnias e modos de vida."
+        },
+        {
+          "left": "Povos africanos",
+          "right": "Tinham culturas e histórias diversas."
+        },
+        {
+          "left": "Sociedade brasileira atual",
+          "right": "Inclui trajetórias e culturas variadas."
+        }
+      ],
+      "explanation": "Cada conceito corresponde à descrição indicada no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Diversidade da sociedade brasileira; Povos indígenas: diversidade e migrações; Povos africanos e culturas afro-brasileiras",
+        "pages": "116–121"
+      }
+    }
+  ]
+}

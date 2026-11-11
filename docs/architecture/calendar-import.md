@@ -46,4 +46,6 @@ O PDF original não entra no Git. O manifesto guarda seu hash para comprovar exa
 
 O comunicado da professora de 17/09/2026 substitui três datas do PDF original. A transcrição está em `docs/sources/correcao-provas-p1-2026-09-17.md`; o manifesto `calendar-turma-43-2026-s2-v2.json` mantém os 27 eventos e registra o SHA-256 da imagem recebida, sem copiar a imagem com dados pessoais para o Git. Somente os três eventos alterados recebem `source_file` e `source_version` novos. Os demais mantêm a proveniência do PDF.
 
+O comunicado de 30/10 atualiza o conteúdo de Geografia para os capítulos 10 e 11, sem alterar a data de 16/11 do cronograma. A mantenedora confirmou em 11/11 que a data permanece válida. A atualização de conteúdo foi aplicada ao Supabase. Em 10/11, a mantenedora informou que Matemática será em 17/11; o manifesto `v4` e a correção transacional registram essa nova data, preservando o conteúdo dos capítulos 9, 10 e 11. A correção também foi aplicada ao Supabase.
+
 `supabase/seed.sql` representa o estado completo para uma instalação nova. Em um banco já publicado, aplicar `supabase/corrections/2026-09-17-provas-p1.sql` em uma única transação. Ele altera os três registros existentes, preserva seus UUIDs e aborta se o estado anterior não corresponder ao esperado. Confirmar as três novas datas em `school_events` após a aplicação.

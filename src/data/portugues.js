@@ -1,7 +1,8 @@
 import portugueseP1Content from './generated/portuguesP1Content.json'
+import portugueseNovemberContent from './generated/portuguesNovembroContent.json'
 
-export const PORTUGUESE_TOPICS =
-  portugueseP1Content.status === 'approved'
+export const PORTUGUESE_TOPICS = [
+  ...(portugueseP1Content.status === 'approved'
     ? [
         {
           id: 'portugues-p1-leitura-lingua',
@@ -48,4 +49,34 @@ export const PORTUGUESE_TOPICS =
           questions: portugueseP1Content.questions,
         },
       ]
-    : []
+    : []),
+  ...(portugueseNovemberContent.status === 'approved'
+    ? [
+        {
+          id: portugueseNovemberContent.contentId,
+          title: portugueseNovemberContent.title,
+          reviewLabel: 'NOVEMBRO',
+          chapter: '9, 10 e 12',
+          examDate: '2026-11-12',
+          examContent:
+            'Leitura e interpretação; concordância verbal; pronomes possessivos; palavras terminadas em IZAR/ISAR; uso dos porquês; H inicial.',
+          summary: portugueseNovemberContent.summary,
+          summarySections: portugueseNovemberContent.summarySections,
+          keyIdeas: portugueseNovemberContent.keyIdeas,
+          source: portugueseNovemberContent.source,
+          questions: portugueseNovemberContent.questions,
+        },
+      ]
+    : [
+        {
+          id: 'portugues-novembro-2026',
+          title: 'Prova de novembro — Português',
+          reviewLabel: 'NOVEMBRO',
+          examDate: '2026-11-12',
+          examContent:
+            'Leitura e interpretação; concordância verbal; pronomes possessivos; palavras terminadas em IZAR/ISAR; uso dos porquês; H inicial.',
+          source: { provider: 'school-calendar', resourceId: 'turma-43-2026-s2-v1', version: '2026-11-09' },
+          questions: [],
+        },
+      ]),
+]

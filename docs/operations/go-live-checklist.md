@@ -6,7 +6,7 @@ O código local está pronto e testado. Os itens abaixo dependem de decisão edi
 
 - Projeto Supabase remoto criado, schema aplicado e RLS validado.
 - Calendário oficial com 27 eventos publicado.
-- Geografia P1 e P2 aprovadas e publicadas.
+- Geografia P1 aprovada e publicada; a revisão antiga de capítulos 11 e 12 foi retirada da experiência ativa após o comunicado de 30/10. A revisão de novembro usa capítulos 10 e 11 e mostra a data de 16/11 do cronograma escolar, confirmada pela mantenedora em 11/11.
 - Matemática T2 e P1 aprovadas e publicadas, com 60 questões por material.
 - Login, perfil, calendário, Temas, sessão e ranking validados remotamente.
 - Produção Vercel publicada em `https://patito-mauve.vercel.app`, conectada ao Supabase.

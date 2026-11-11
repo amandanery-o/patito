@@ -32,7 +32,7 @@ export const SUBJECTS = [
     color: 'bg-orange-500',
     topics: GEOGRAPHY_TOPICS,
     calendarOnly: false,
-    lastUpdated: '2026-08-20',
+    lastUpdated: '2026-11-09',
   },
   {
     id: 'ingles',

@@ -2,9 +2,9 @@ import { describe, expect, it } from 'vitest'
 import { GEOGRAPHY_TOPICS } from './geografia'
 
 describe('conteúdos de Geografia', () => {
-  it('mantém os conteúdos do segundo semestre rastreáveis à Edebê', () => {
-    expect(GEOGRAPHY_TOPICS.map((topic) => topic.chapter)).toEqual([7, 8, '7 e 8', 11, 12, '11 e 12'])
-    for (const topic of GEOGRAPHY_TOPICS) {
+  it('mantém os materiais aprovados do segundo semestre rastreáveis à Edebê', () => {
+    expect(GEOGRAPHY_TOPICS.map((topic) => topic.chapter)).toEqual([7, 8, '7 e 8', '10 e 11'])
+    for (const topic of GEOGRAPHY_TOPICS.filter((topic) => topic.source.provider === 'edebe')) {
       expect(topic.source.provider).toBe('edebe')
       expect(topic.source.resourceId).toMatch(/^courseware-252(?:-|\/)/)
       expect(topic.summarySections.length).toBeGreaterThanOrEqual(3)
@@ -19,10 +19,12 @@ describe('conteúdos de Geografia', () => {
     expect(p1.questions.filter((question) => question.type === 'matchColumns')).toHaveLength(15)
   })
 
-  it('publica a revisão da P2 somente com o lote completo e aprovado', () => {
-    const p2 = GEOGRAPHY_TOPICS.find((topic) => topic.id === 'geografia-p2-populacao-migracoes')
-    expect(p2.questions).toHaveLength(60)
-    expect(p2.questions.filter((question) => question.type === 'multipleChoice')).toHaveLength(45)
-    expect(p2.questions.filter((question) => question.type === 'matchColumns')).toHaveLength(15)
+  it('publica a revisão de novembro com a data do calendário escolar', () => {
+    const november = GEOGRAPHY_TOPICS.find((topic) => topic.id === 'geografia-novembro-2026')
+    expect(november.reviewLabel).toBe('NOVEMBRO')
+    expect(november.chapter).toBe('10 e 11')
+    expect(november.questions).toHaveLength(60)
+    expect(november.examDate).toBe('2026-11-16')
+    expect(november.datePending).toBeUndefined()
   })
 })

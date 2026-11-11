@@ -1,7 +1,8 @@
 import englishP1Content from './generated/inglesP1Content.json'
+import englishNovemberContent from './generated/inglesNovembroContent.json'
 
-export const ENGLISH_TOPICS =
-  englishP1Content.status === 'approved'
+export const ENGLISH_TOPICS = [
+  ...(englishP1Content.status === 'approved'
     ? [
         {
           id: 'ingles-p1-acoes-horas',
@@ -47,4 +48,33 @@ export const ENGLISH_TOPICS =
           questions: englishP1Content.questions,
         },
       ]
-    : []
+    : []),
+  ...(englishNovemberContent.status === 'approved'
+    ? [
+        {
+          id: englishNovemberContent.contentId,
+          title: englishNovemberContent.title,
+          reviewLabel: 'NOVEMBRO',
+          chapter: 'unidades 7 e 8',
+          examDate: '2026-11-13',
+          examContent: 'Unidade 7 — Eating Out; unidade 8 — Wild Nature.',
+          summary: englishNovemberContent.summary,
+          summarySections: englishNovemberContent.summarySections,
+          keyIdeas: englishNovemberContent.keyIdeas,
+          source: englishNovemberContent.source,
+          questions: englishNovemberContent.questions,
+        },
+      ]
+    : [
+        {
+          id: 'ingles-novembro-2026',
+          title: 'Prova de novembro — Inglês',
+          reviewLabel: 'NOVEMBRO',
+          chapter: 'unidades 7 e 8',
+          examDate: '2026-11-13',
+          examContent: 'Unidade 7 — Eating Out; unidade 8 — Wild Nature.',
+          source: { provider: 'school-calendar', resourceId: 'turma-43-2026-s2-v1', version: '2026-11-09' },
+          questions: [],
+        },
+      ]),
+]

@@ -31,6 +31,8 @@ function approvedContent(overrides = {}) {
     subjectId: 'geografia',
     title: 'Revisão P2',
     summary: 'População e migrações.',
+    summarySections: [{ title: 'População', text: 'Resumo.' }],
+    keyIdeas: ['A população se distribui pelo território.'],
     source: { provider: 'edebe', resourceId: 'courseware-252/chapters-11-12', version: '2024' },
     generation: { model: 'configured-model', promptVersion: 'question-batch-v2' },
     status: 'approved',
@@ -50,6 +52,8 @@ describe('publicação editorial de Geografia', () => {
       editorialApproval: { reviewer: 'Amanda' },
     })
     expect(publication.questions).toHaveLength(60)
+    expect(publication.summarySections).toEqual([{ title: 'População', text: 'Resumo.' }])
+    expect(publication.keyIdeas).toEqual(['A população se distribui pelo território.'])
   })
 
   it('recusa rascunho ou conteúdo sem aprovação auditável', () => {

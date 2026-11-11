@@ -1,7 +1,7 @@
 # PRD — Patito
 
 Status: Draft v1 — pronto para decomposição  
-Última atualização: 2026-08-20
+Última atualização: 2026-11-09
 
 ## 1. Visão
 
@@ -120,6 +120,7 @@ Não existirão perfis de responsável, professor, coordenador ou administrador 
 - `REQ-048` Manter relação explícita entre resumo, livro/conteúdo e conjunto de questões.
 - `REQ-057` Utilizar somente texto nos resumos de conteúdo nesta versão.
 - `REQ-071` Apresentar o material de revisão como uma área explícita, separando claramente as ações de ler o resumo e praticar questões, sem repetir os capítulos cobertos como etapas concorrentes; indicadores de progresso devem contar revisões publicadas, nunca estruturas internas ou capítulos ocultos.
+- `REQ-076` Organizar os materiais de avaliação de novembro por matéria, usando o rótulo “Prova de novembro” nas chamadas de estudo sem depender de P2/P3.
 
 ### Erros e suporte
 
@@ -160,7 +161,7 @@ Não existirão perfis de responsável, professor, coordenador ou administrador 
 
 ### Materiais publicados em 22/09/2026
 
-Geografia P1/P2, Matemática T2/P1, Ciências P1, Inglês P1 e Português P1 seguem o fluxo de leitura e prática separadas. Ciências P1 cobre os capítulos 8 e 9 do Nautas 4º ano; Inglês P1 cobre as unidades 5 e 6 de Go Primary 4; Português P1 cobre leitura, ortografia, vírgula, concordância nominal e plural em `-ão`. Cada material tem resumo próprio e 60 questões aprovadas por revisão independente. Em 28/09/2026, as 420 questões ativas receberam uma nova auditoria integral de gabarito, clareza, explicação, associação e fonte, registrada em `docs/operations/auditoria-editorial-2026-09-28.md`. História ainda depende da conclusão de sua fonte e do mesmo processo editorial.
+Geografia P1, Matemática T2/P1, Ciências P1, Inglês P1 e Português P1 seguem o fluxo de leitura e prática separadas. Ciências P1 cobre os capítulos 8 e 9 do Nautas 4º ano; Inglês P1 cobre as unidades 5 e 6 de Go Primary 4; Português P1 cobre leitura, ortografia, vírgula, concordância nominal e plural em `-ão`. Cada material ativo tem resumo próprio e 60 questões aprovadas por revisão independente. O material antigo de Geografia P2 (capítulos 11 e 12) foi retirado da experiência após o comunicado de 30/10/2026, que informa uma P3 sobre os capítulos 10 e 11. A revisão P3 aguarda a conferência do capítulo 10. Em 28/09/2026, os sete bancos então ativos (420 questões) receberam auditoria integral de gabarito, clareza, explicação, associação e fonte, registrada em `docs/operations/auditoria-editorial-2026-09-28.md`; seis materiais, com 360 questões, permanecem ativos. História ainda depende da conclusão de sua fonte e do mesmo processo editorial.
 
 ## 8. Dados que precisam ser preservados
 
@@ -213,6 +214,8 @@ Não serão usadas métricas comerciais.
 - O acesso sem senha elimina o fluxo de recuperação de senha.
 - O ranking contabiliza até 60 questões e duas sessões concluídas por dia, sem limitar o uso adicional.
 - Issues de problemas nunca incluem o nome ou identificação da criança.
+- Materiais das avaliações de novembro aparecem dentro de cada matéria com o rótulo **Prova de novembro**, sem P2/P3 nos cartões de estudo.
+- Datas exibidas nos cartões de novembro precisam estar confirmadas no calendário escolar; matérias sem banco editorial aprovado ficam em preparação.
 - Não há vidas, streak, níveis, relatórios ou flashcards.
 - O conteúdo ativo deve corresponder ao segundo semestre.
 - A nova versão começa com dados acadêmicos e progresso limpos; o primeiro semestre permanece apenas no histórico do Git.

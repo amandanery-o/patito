@@ -7,11 +7,23 @@ function chapterNumbers(value) {
 }
 
 function assessmentName(topic) {
+  if (topic.displayLabel) return topic.displayLabel
+  if (topic.reviewLabel === 'NOVEMBRO') return 'NOVEMBRO'
   return (
     topic.reviewLabel?.match(/[PT]\d/i)?.[0]?.toUpperCase() ||
     topic.title.match(/[PT]\d/i)?.[0]?.toUpperCase() ||
     'Revisão'
   )
+}
+
+function examDateLabel(date) {
+  if (!date) return ''
+  const [year, month, day] = date.split('-').map(Number)
+  return new Intl.DateTimeFormat('pt-BR', {
+    day: 'numeric',
+    month: 'long',
+    timeZone: 'UTC',
+  }).format(new Date(Date.UTC(year, month - 1, day)))
 }
 
 function sourceDescription(topic) {
@@ -59,6 +71,11 @@ export default function TopicTrail({ subject, topics, getTopicProgress, onStart,
                       </span>
                       <h3 className="mt-2 text-xl font-extrabold leading-tight text-gray-900">{topic.title}</h3>
                       <p className="mt-1 text-sm text-gray-500">{sourceDescription(topic)}</p>
+                      {topic.examDate && (
+                        <p className="mt-1 text-sm font-semibold text-gray-600">
+                          Prova em {examDateLabel(topic.examDate)}
+                        </p>
+                      )}
                     </div>
                     <span className="text-3xl" aria-hidden="true">
                       {completed ? '✅' : '📚'}
@@ -103,7 +120,14 @@ export default function TopicTrail({ subject, topics, getTopicProgress, onStart,
             {preparing.map((topic) => (
               <div key={topic.id} className="rounded-2xl border-2 border-yellow-100 bg-yellow-50 p-4">
                 <p className="font-extrabold text-yellow-800">{topic.title}</p>
-                <p className="mt-1 text-xs text-yellow-700">Material e questões chegando em breve 🐥</p>
+                {topic.examContent && <p className="mt-1 text-sm text-yellow-800">{topic.examContent}</p>}
+                {topic.examDate && (
+                  <p className="mt-1 text-sm font-semibold text-yellow-800">Prova em {examDateLabel(topic.examDate)}</p>
+                )}
+                {topic.datePending && (
+                  <p className="mt-1 text-sm font-semibold text-yellow-800">Data da prova a confirmar pela escola.</p>
+                )}
+                <p className="mt-2 text-xs text-yellow-700">Este material está sendo preparado 🐥</p>
               </div>
             ))}
           </div>

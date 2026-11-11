@@ -1,7 +1,8 @@
 import historyP1Content from './generated/historiaP1Content.json'
+import historyNovemberContent from './generated/historiaNovembroContent.json'
 
-export const HISTORY_TOPICS =
-  historyP1Content.status === 'approved'
+export const HISTORY_TOPICS = [
+  ...(historyP1Content.status === 'approved'
     ? [
         {
           id: 'historia-p1-colonizacao-migracoes',
@@ -51,4 +52,37 @@ export const HISTORY_TOPICS =
           questions: historyP1Content.questions,
         },
       ]
-    : []
+    : []),
+  ...(historyNovemberContent.status === 'approved'
+    ? [
+        {
+          id: historyNovemberContent.contentId,
+          title: historyNovemberContent.title,
+          reviewLabel: 'NOVEMBRO',
+          chapter: '11 e 12',
+          examDate: '2026-11-19',
+          examContent: 'Migrações dentro do Brasil e a sociedade brasileira atual.',
+          summary: historyNovemberContent.summary,
+          summarySections: historyNovemberContent.summarySections,
+          keyIdeas: historyNovemberContent.keyIdeas,
+          source: historyNovemberContent.source,
+          questions: historyNovemberContent.questions,
+        },
+      ]
+    : [
+        {
+          id: 'historia-novembro-2026',
+          title: 'Prova de novembro — História',
+          reviewLabel: 'NOVEMBRO',
+          chapter: '11 e 12',
+          examDate: '2026-11-19',
+          examContent: 'Migrações dentro do Brasil e a sociedade brasileira atual.',
+          source: {
+            provider: 'school-calendar',
+            resourceId: 'turma-43-2026-s2-v1',
+            version: '2026-11-09',
+          },
+          questions: [],
+        },
+      ]),
+]

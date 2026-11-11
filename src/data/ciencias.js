@@ -1,7 +1,8 @@
 import scienceP1Content from './generated/cienciasP1Content.json'
+import scienceNovemberContent from './generated/cienciasNovembroContent.json'
 
-export const SCIENCE_TOPICS =
-  scienceP1Content.status === 'approved'
+export const SCIENCE_TOPICS = [
+  ...(scienceP1Content.status === 'approved'
     ? [
         {
           id: 'ciencias-p1-transformacoes',
@@ -47,4 +48,37 @@ export const SCIENCE_TOPICS =
           questions: scienceP1Content.questions,
         },
       ]
-    : []
+    : []),
+  ...(scienceNovemberContent.status === 'approved'
+    ? [
+        {
+          id: scienceNovemberContent.contentId,
+          title: scienceNovemberContent.title,
+          reviewLabel: 'NOVEMBRO',
+          chapter: '10 e 11',
+          examDate: '2026-11-18',
+          examContent: 'Caminhos da matéria e da energia; os astros e o tempo.',
+          summary: scienceNovemberContent.summary,
+          summarySections: scienceNovemberContent.summarySections,
+          keyIdeas: scienceNovemberContent.keyIdeas,
+          source: scienceNovemberContent.source,
+          questions: scienceNovemberContent.questions,
+        },
+      ]
+    : [
+        {
+          id: 'ciencias-novembro-2026',
+          title: 'Prova de novembro — Ciências',
+          reviewLabel: 'NOVEMBRO',
+          chapter: '10 e 11',
+          examDate: '2026-11-18',
+          examContent: 'Caminhos da matéria e da energia; os astros e o tempo.',
+          source: {
+            provider: 'school-calendar',
+            resourceId: 'turma-43-2026-s2-v1',
+            version: '2026-11-09',
+          },
+          questions: [],
+        },
+      ]),
+]

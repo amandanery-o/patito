@@ -43,6 +43,13 @@ describe('validateEditorialContent', () => {
     expect(validateEditorialContent(content())).toEqual({ valid: true, errors: [], warnings: [] })
   })
 
+  it('aceita autoria documentada sem API de modelo', () => {
+    const result = validateEditorialContent(
+      content({ generation: { authoringMethod: 'Codex in-session', promptVersion: 'question-batch-v2' } }),
+    )
+    expect(result.valid).toBe(true)
+  })
+
   it('impede publicação com banco menor que 60', () => {
     const result = validateEditorialContent(content({ questions: [question(1)] }))
     expect(result.valid).toBe(false)

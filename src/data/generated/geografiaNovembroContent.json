@@ -1,0 +1,1233 @@
+{
+  "status": "approved",
+  "contentId": "geografia-novembro-2026",
+  "title": "Prova de novembro — Geografia",
+  "summary": "Revisão dos capítulos 10 e 11: diversidade da população brasileira, formação cultural, distribuição populacional e características demográficas.",
+  "summarySections": [
+    {
+      "title": "Diversidade da população brasileira",
+      "text": "A população do Brasil reúne povos de diferentes origens, histórias e culturas. Povos indígenas são originários e diversos; povos africanos foram trazidos à força durante a escravização, e seus descendentes mantêm e transformam culturas. Também houve migrações europeias e asiáticas em diferentes períodos."
+    },
+    {
+      "title": "Território, trabalho e cultura",
+      "text": "Povos indígenas vivem em áreas rurais e urbanas e pertencem a muitas etnias e línguas. Comunidades quilombolas têm trajetórias ligadas à resistência à escravização e à relação com seus territórios. Populações ribeirinhas e extrativistas podem desenvolver atividades sustentáveis que valorizam conhecimentos tradicionais."
+    },
+    {
+      "title": "Distribuição e características da população",
+      "text": "O Censo reúne informações para conhecer a população e sua distribuição. A população não se distribui igualmente pelo território; indicadores ajudam a compreender características demográficas e condições de vida. Leia dados sempre considerando a fonte e o que eles medem."
+    }
+  ],
+  "keyIdeas": [
+    "O Brasil é formado por grupos com trajetórias e culturas diversas.",
+    "Povos indígenas são originários e não formam um grupo único.",
+    "Quilombos e comunidades quilombolas estão ligados à resistência, à liberdade e à ancestralidade.",
+    "Bioeconomia sustentável pode gerar renda e contribuir para conservar a natureza.",
+    "O Censo e os indicadores ajudam a estudar a população, sem reduzir pessoas a números."
+  ],
+  "source": {
+    "provider": "edebe",
+    "resourceId": "courseware-252/chapters-10-11/pages-98-117",
+    "version": "2024-11"
+  },
+  "generation": {
+    "authoringMethod": "Codex in-session",
+    "promptVersion": "question-batch-v2",
+    "generatedAt": "2026-11-11T11:41:18.265Z"
+  },
+  "editorialApproval": {
+    "reviewer": "Agente editorial independente Patito",
+    "reviewerType": "agent",
+    "reviewMethod": "authorized-source-map-question-by-question+full-second-read-v1",
+    "reviewedAt": "2026-11-11T11:40:00-03:00",
+    "draftDigest": "a763ddcdbb0d5ca6b85f691b279e9cda626bbe27c744d21a8d4f58351e9468b1",
+    "schemaVersion": 1
+  },
+  "publishedAt": "2026-11-11T11:49:13.297Z",
+  "questions": [
+    {
+      "id": "geografia-novembro-2026-001",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que caracteriza a formação da população brasileira?",
+      "options": [
+        "Uma única origem e costumes iguais em todo o país.",
+        "Somente pessoas que nasceram nas capitais.",
+        "A ausência de migrações ao longo da história.",
+        "Diferentes origens, histórias e culturas."
+      ],
+      "correctIndex": 3,
+      "explanation": "A população reúne grupos com diferentes origens e trajetórias.",
+      "sourceRef": {
+        "section": "Diversidade da população brasileira",
+        "pages": "98–100"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-002",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Por que os povos indígenas são chamados de povos originários?",
+      "options": [
+        "Porque vivem somente em florestas isoladas.",
+        "Porque falam uma única língua.",
+        "Porque já viviam nestas terras antes da colonização europeia.",
+        "Porque chegaram todos ao Brasil no século XX."
+      ],
+      "correctIndex": 2,
+      "explanation": "Povos indígenas são originários e têm diferentes povos e histórias.",
+      "sourceRef": {
+        "section": "Povos indígenas",
+        "pages": "100–101"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-003",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual afirmação respeita a diversidade dos povos indígenas?",
+      "options": [
+        "Todos têm a mesma história e os mesmos costumes.",
+        "Existem muitas etnias, línguas e formas de viver.",
+        "Todos pertencem à mesma etnia e falam a mesma língua.",
+        "Todos vivem apenas em aldeias distantes das cidades."
+      ],
+      "correctIndex": 1,
+      "explanation": "O capítulo destaca diferentes etnias e línguas e presença rural e urbana.",
+      "sourceRef": {
+        "section": "Povos indígenas",
+        "pages": "100–101"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-004",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Como ocorreu a chegada de muitos africanos ao Brasil durante a escravização?",
+      "options": [
+        "Por escolha livre de trabalho assalariado.",
+        "Por deslocamento forçado, com violência e perda da liberdade.",
+        "Por viagens voluntárias de turismo.",
+        "Por intercâmbio escolar organizado pelo governo."
+      ],
+      "correctIndex": 1,
+      "explanation": "A escravização envolveu deslocamento forçado de populações africanas.",
+      "sourceRef": {
+        "section": "População afro-brasileira",
+        "pages": "102"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-005",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "O que a preservação de práticas culturais africanas pode representar nesse contexto?",
+      "options": [
+        "Uma forma de resistência e continuidade cultural.",
+        "O desaparecimento completo de toda cultura.",
+        "A prova de que todas as pessoas tinham a mesma origem.",
+        "A obrigação de abandonar tradições."
+      ],
+      "correctIndex": 0,
+      "explanation": "A fonte relaciona práticas culturais à resistência.",
+      "sourceRef": {
+        "section": "População afro-brasileira",
+        "pages": "102"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-006",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual descrição combina com a história de comunidades quilombolas?",
+      "options": [
+        "Grupos formados apenas por comerciantes europeus.",
+        "Povoados criados para separar pessoas por profissão.",
+        "Comunidades sem relação com história ou ancestralidade.",
+        "Comunidades ligadas à resistência à escravização e à busca por liberdade."
+      ],
+      "correctIndex": 3,
+      "explanation": "Comunidades quilombolas estão ligadas à resistência e à busca por liberdade.",
+      "sourceRef": {
+        "section": "Comunidades quilombolas",
+        "pages": "103–104"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-007",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Por que a relação com a terra é importante para muitas comunidades quilombolas?",
+      "options": [
+        "Porque a terra serve apenas para dividir municípios.",
+        "Porque a ancestralidade não tem relação com o território.",
+        "Porque território, memória e práticas culturais podem estar relacionados.",
+        "Porque todas precisam abandonar suas tradições."
+      ],
+      "correctIndex": 2,
+      "explanation": "A fonte relaciona território, tradições e ancestralidade.",
+      "sourceRef": {
+        "section": "Comunidades quilombolas",
+        "pages": "103–104"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-008",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "O que o capítulo mostra sobre migrações europeias e asiáticas?",
+      "options": [
+        "Foram as únicas migrações da história brasileira.",
+        "Não tiveram relação com a formação da população.",
+        "Aconteceram em diferentes períodos e envolveram grupos variados.",
+        "Todos os grupos chegaram ao mesmo tempo e pelo mesmo motivo."
+      ],
+      "correctIndex": 2,
+      "explanation": "Diferentes grupos migraram para o Brasil em períodos diversos.",
+      "sourceRef": {
+        "section": "Migrações europeias e asiáticas",
+        "pages": "105"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-009",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que se pode afirmar sobre a formação cultural brasileira?",
+      "options": [
+        "Ela deixou de mudar depois da colonização.",
+        "Ela reúne contribuições e histórias de muitos povos.",
+        "Ela surgiu de um único povo sem contatos.",
+        "Ela é igual em todas as regiões."
+      ],
+      "correctIndex": 1,
+      "explanation": "A diversidade cultural relaciona-se a diferentes povos e trajetórias.",
+      "sourceRef": {
+        "section": "Diversidade da população brasileira",
+        "pages": "98–105"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-010",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Ao estudar um grupo populacional, qual atitude é adequada?",
+      "options": [
+        "Reconhecer sua diversidade e evitar generalizações.",
+        "Atribuir um único costume a todas as pessoas.",
+        "Supor que todos vivem da mesma maneira.",
+        "Ignorar a história do grupo."
+      ],
+      "correctIndex": 0,
+      "explanation": "A fonte alerta para a diversidade dos povos e de suas trajetórias.",
+      "sourceRef": {
+        "section": "Diversidade da população brasileira",
+        "pages": "98–105"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-011",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "O que a diversidade de línguas indígenas indica?",
+      "options": [
+        "Todos os povos indígenas usam uma mesma língua.",
+        "As línguas existem somente em livros antigos.",
+        "Nenhuma língua indígena é usada atualmente.",
+        "Há diferentes povos e línguas indígenas no Brasil."
+      ],
+      "correctIndex": 3,
+      "explanation": "O capítulo destaca a diversidade de etnias e línguas.",
+      "sourceRef": {
+        "section": "Povos indígenas",
+        "pages": "100–101"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-012",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que é possível afirmar sobre a presença indígena no território brasileiro?",
+      "options": [
+        "Ocorre somente em uma região.",
+        "Povos indígenas não vivem em municípios.",
+        "A população indígena está ausente das cidades.",
+        "Há indígenas em áreas rurais e urbanas."
+      ],
+      "correctIndex": 3,
+      "explanation": "A fonte registra presença indígena em áreas rurais e urbanas.",
+      "sourceRef": {
+        "section": "Povos indígenas",
+        "pages": "100–101"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-013",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "A palavra “ancestralidade” se relaciona a",
+      "options": [
+        "uma medida de distância entre cidades.",
+        "uma lista de produtos vendidos.",
+        "histórias e vínculos com gerações anteriores.",
+        "uma previsão do tempo para amanhã."
+      ],
+      "correctIndex": 2,
+      "explanation": "A fonte liga comunidades quilombolas à ancestralidade africana.",
+      "sourceRef": {
+        "section": "Comunidades quilombolas",
+        "pages": "103–104"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-014",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Por que é inadequado dizer que todos os povos africanos tinham os mesmos costumes?",
+      "options": [
+        "Porque a história não registra povos diferentes.",
+        "Porque havia diferentes povos, culturas e trajetórias na África.",
+        "Porque nenhuma cultura africana chegou ao Brasil.",
+        "Porque costumes nunca mudam."
+      ],
+      "correctIndex": 1,
+      "explanation": "A fonte destaca diferentes origens e práticas culturais.",
+      "sourceRef": {
+        "section": "População afro-brasileira",
+        "pages": "102"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-015",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Uma linha do tempo sobre a população ajuda a",
+      "options": [
+        "organizar acontecimentos de diferentes períodos.",
+        "medir a temperatura das cidades.",
+        "mostrar a altura das montanhas.",
+        "substituir todas as fontes históricas."
+      ],
+      "correctIndex": 0,
+      "explanation": "O capítulo apresenta uma linha do tempo com períodos da história do país.",
+      "sourceRef": {
+        "section": "Censo 2022 e linha do tempo",
+        "pages": "108–109"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-016",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Para que servem os dados do Censo mencionados no capítulo?",
+      "options": [
+        "Para reunir informações que ajudam a conhecer a população.",
+        "Para escolher os costumes de cada família.",
+        "Para prever a profissão de cada criança.",
+        "Para medir somente o tamanho dos rios."
+      ],
+      "correctIndex": 0,
+      "explanation": "O capítulo usa dados do Censo 2022 para observar a população.",
+      "sourceRef": {
+        "section": "Censo 2022: população por cor ou raça",
+        "pages": "108–109"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-017",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "O que significa dizer que a população está distribuída de forma desigual?",
+      "options": [
+        "Que todos os lugares têm exatamente a mesma população.",
+        "Que os habitantes mudam de lugar todos os dias.",
+        "Que não existem pessoas em áreas rurais.",
+        "Que há lugares com mais habitantes e outros com menos."
+      ],
+      "correctIndex": 3,
+      "explanation": "A população brasileira ocupa o território de modo desigual.",
+      "sourceRef": {
+        "section": "Distribuição da população brasileira",
+        "pages": "112–113"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-018",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Quais fatores ajudam a explicar diferenças na distribuição da população?",
+      "options": [
+        "A colonização, os transportes, o clima e a oferta de trabalho.",
+        "A cor dos mapas e o tamanho das páginas.",
+        "A opinião de uma única pessoa.",
+        "A ordem alfabética dos municípios."
+      ],
+      "correctIndex": 0,
+      "explanation": "A fonte cita fatores históricos, naturais e ligados ao trabalho.",
+      "sourceRef": {
+        "section": "Distribuição da população brasileira",
+        "pages": "112–113"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-019",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Densidade demográfica e quantidade total de habitantes significam a mesma coisa?",
+      "options": [
+        "Sim; as duas expressões indicam exatamente a mesma medida.",
+        "Não; densidade é a média de habitantes por quilômetro quadrado.",
+        "Sim; densidade conta somente pessoas que trabalham.",
+        "Não; densidade é a quantidade de municípios."
+      ],
+      "correctIndex": 1,
+      "explanation": "Densidade demográfica é uma média por quilômetro quadrado, não o total de habitantes.",
+      "sourceRef": {
+        "section": "Demografia e indicadores",
+        "pages": "110–111"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-020",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "O que é um indicador demográfico?",
+      "options": [
+        "Um nome dado a uma estrada.",
+        "Uma informação usada para estudar características da população.",
+        "Uma regra que define a cultura de uma família.",
+        "Um instrumento para medir chuva."
+      ],
+      "correctIndex": 1,
+      "explanation": "Indicadores ajudam a estudar características das populações.",
+      "sourceRef": {
+        "section": "Demografia e indicadores",
+        "pages": "110–111"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-021",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual destes é um exemplo de indicador demográfico citado no capítulo?",
+      "options": [
+        "Taxa de natalidade.",
+        "Altura de uma montanha.",
+        "Preço de um produto.",
+        "Distância entre duas escolas."
+      ],
+      "correctIndex": 0,
+      "explanation": "A fonte cita taxa de natalidade entre os indicadores demográficos.",
+      "sourceRef": {
+        "section": "Demografia e indicadores",
+        "pages": "110–111"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-022",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Uma atividade econômica sustentável ligada ao uso responsável da natureza pode",
+      "options": [
+        "exigir que se destrua a floresta inteira.",
+        "impedir qualquer atividade local.",
+        "eliminar os conhecimentos tradicionais.",
+        "gerar renda e apoiar a conservação ambiental."
+      ],
+      "correctIndex": 3,
+      "explanation": "O capítulo relaciona bioeconomia, renda e conservação.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-023",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "O que é extrativismo no contexto dos produtos da natureza?",
+      "options": [
+        "Movimento da Terra em torno do Sol.",
+        "Construção de calendários.",
+        "Coleta ou aproveitamento de recursos naturais.",
+        "Criação de números para o Censo."
+      ],
+      "correctIndex": 2,
+      "explanation": "A fonte trata do aproveitamento de produtos da natureza.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-024",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Como conhecimentos tradicionais podem contribuir para a bioeconomia?",
+      "options": [
+        "Garantem que nenhum recurso tenha limite.",
+        "São sempre iguais em todos os lugares.",
+        "Orientam formas de usar recursos locais com conhecimento e cuidado.",
+        "Substituem todas as leis ambientais."
+      ],
+      "correctIndex": 2,
+      "explanation": "A bioeconomia valoriza conhecimentos tradicionais e o uso sustentável.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-025",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que o Censo 2022 permite observar no capítulo?",
+      "options": [
+        "A opinião política de todas as crianças.",
+        "Dados da população, incluindo categorias de cor ou raça.",
+        "Os costumes de cada indivíduo em detalhes.",
+        "O futuro número de habitantes de cada casa."
+      ],
+      "correctIndex": 1,
+      "explanation": "A fonte cita dados populacionais por cor ou raça.",
+      "sourceRef": {
+        "section": "Censo 2022: população por cor ou raça",
+        "pages": "108–109"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-026",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "Como devem ser interpretadas categorias de cor ou raça em dados populacionais?",
+      "options": [
+        "Como categorias de dados, sem usá-las para definir o valor de uma pessoa.",
+        "Como rótulos que definem o valor de cada pessoa.",
+        "Como prova de que só existem dois grupos.",
+        "Como descrição completa da cultura de alguém."
+      ],
+      "correctIndex": 0,
+      "explanation": "Categorias ajudam a observar dados; não descrevem toda a identidade de cada pessoa.",
+      "sourceRef": {
+        "section": "Censo 2022: população por cor ou raça",
+        "pages": "108–109"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-027",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Quais atividades aparecem com maior presença nas cidades, segundo o capítulo?",
+      "options": [
+        "Somente atividades do setor primário.",
+        "Somente tarefas domésticas.",
+        "Atividades dos setores secundário e terciário.",
+        "Nenhuma atividade de trabalho."
+      ],
+      "correctIndex": 2,
+      "explanation": "A fonte relaciona cidades a maior presença dos setores secundário e terciário.",
+      "sourceRef": {
+        "section": "População e trabalho",
+        "pages": "114"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-028",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que o capítulo apresenta sobre populações ribeirinhas e extrativistas?",
+      "options": [
+        "Podem desenvolver bioeconomia ligada ao uso sustentável de produtos naturais.",
+        "Não têm conhecimentos ou práticas culturais.",
+        "Vivem obrigatoriamente em grandes capitais.",
+        "Trabalham somente em fábricas."
+      ],
+      "correctIndex": 0,
+      "explanation": "A fonte liga essas populações à bioeconomia da sociobiodiversidade.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-029",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "O uso sustentável de produtos da natureza procura",
+      "options": [
+        "impedir que comunidades tenham renda.",
+        "substituir a floresta por uma cidade.",
+        "aproveitar recursos considerando também sua conservação.",
+        "retirar todos os recursos sem cuidado."
+      ],
+      "correctIndex": 2,
+      "explanation": "A bioeconomia pode combinar renda e conservação ambiental.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-030",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual atividade é mais presente no campo, segundo o capítulo?",
+      "options": [
+        "Comércio e serviços.",
+        "Atividades do setor primário.",
+        "Somente trabalhos domésticos.",
+        "Atividades do setor terciário."
+      ],
+      "correctIndex": 1,
+      "explanation": "A fonte associa o setor primário a maior presença no campo.",
+      "sourceRef": {
+        "section": "População e trabalho",
+        "pages": "114"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-031",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que caracteriza populações extrativistas no conteúdo estudado?",
+      "options": [
+        "Podem obter produtos por meio do uso de recursos da natureza.",
+        "Trabalham somente com dados digitais.",
+        "Nunca interagem com o ambiente.",
+        "Vivem obrigatoriamente em desertos."
+      ],
+      "correctIndex": 0,
+      "explanation": "A fonte aborda populações extrativistas e produtos naturais.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-032",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "O que caracteriza uma prática sustentável?",
+      "options": [
+        "Considera o uso cuidadoso dos recursos e seus efeitos no ambiente.",
+        "Usa recursos sem limite e sem planejamento.",
+        "Busca renda sem considerar consequências.",
+        "Impede qualquer conhecimento comunitário."
+      ],
+      "correctIndex": 0,
+      "explanation": "O capítulo relaciona sustentabilidade a uso responsável e conservação.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-033",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Por que a bioeconomia pode apoiar comunidades locais?",
+      "options": [
+        "Porque elimina a necessidade de cuidar da natureza.",
+        "Porque torna iguais todas as comunidades.",
+        "Porque substitui os produtos locais por importados.",
+        "Pode valorizar conhecimentos e criar oportunidades de renda."
+      ],
+      "correctIndex": 3,
+      "explanation": "A fonte relaciona bioeconomia a conhecimentos tradicionais e renda.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-034",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual exemplo combina com o aproveitamento da sociobiodiversidade?",
+      "options": [
+        "Desmatar uma área para retirar um único produto.",
+        "Proibir a população local de trabalhar.",
+        "Usar produtos locais da natureza de modo sustentável.",
+        "Ignorar os saberes das comunidades."
+      ],
+      "correctIndex": 2,
+      "explanation": "Sociobiodiversidade relaciona recursos naturais a conhecimentos sociais.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-035",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "O que a bioeconomia busca conciliar no exemplo estudado?",
+      "options": [
+        "Um preço obrigatório para todos os produtos.",
+        "Uso de produtos naturais, conhecimentos tradicionais, renda e conservação.",
+        "A eliminação de toda atividade econômica.",
+        "A substituição das comunidades por empresas."
+      ],
+      "correctIndex": 1,
+      "explanation": "A fonte descreve esse equilíbrio entre saberes, renda e conservação.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-036",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Uma atividade econômica ligada a produtos florestais pode contribuir para",
+      "options": [
+        "a mudança de todas as comunidades para cidades.",
+        "a valorização de atividades locais, com cuidado ambiental.",
+        "a eliminação de toda vegetação.",
+        "o desaparecimento de conhecimentos locais."
+      ],
+      "correctIndex": 1,
+      "explanation": "O capítulo relaciona atividade econômica e conservação.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-037",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual pergunta ajuda a analisar se uma prática é sustentável?",
+      "options": [
+        "Como o uso do recurso afeta o ambiente e a comunidade?",
+        "Qual grupo deve perder seus direitos?",
+        "Como impedir qualquer atividade local?",
+        "Qual pessoa é mais importante que as outras?"
+      ],
+      "correctIndex": 0,
+      "explanation": "A análise considera recursos, ambiente e comunidades envolvidas.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-038",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual combinação corresponde ao conteúdo sobre trabalho e lugar?",
+      "options": [
+        "No campo, predominam comércio e serviços; nas cidades, o setor primário.",
+        "No campo, predominam atividades do setor primário; nas cidades, setores secundário e terciário.",
+        "Todas as pessoas têm a mesma ocupação em qualquer lugar.",
+        "As cidades não têm atividades de trabalho."
+      ],
+      "correctIndex": 1,
+      "explanation": "A fonte apresenta essas diferenças de presença entre campo e cidades.",
+      "sourceRef": {
+        "section": "População e trabalho",
+        "pages": "114"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-039",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O capítulo relaciona oportunidades e remuneração no trabalho a diferenças de",
+      "options": [
+        "raça e gênero.",
+        "estação do ano e temperatura.",
+        "tamanho das casas.",
+        "idioma de cada município."
+      ],
+      "correctIndex": 0,
+      "explanation": "A fonte discute desigualdades de oportunidade e remuneração relacionadas à raça e ao gênero.",
+      "sourceRef": {
+        "section": "Desigualdades no trabalho",
+        "pages": "116"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-040",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "O que caracteriza o trabalho formal segundo o capítulo?",
+      "options": [
+        "É um trabalho sem registro e sem direitos.",
+        "É um trabalho que não tem nenhuma regra.",
+        "Pode ter registro, salário fixo e direitos.",
+        "É sempre realizado dentro de casa."
+      ],
+      "correctIndex": 2,
+      "explanation": "A fonte relaciona trabalho formal a registro e direitos.",
+      "sourceRef": {
+        "section": "Trabalho formal e informal",
+        "pages": "115"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-041",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "O que a densidade demográfica representa?",
+      "options": [
+        "A média de habitantes por quilômetro quadrado.",
+        "A quantidade de trabalhos em uma cidade.",
+        "A soma de todos os municípios.",
+        "A distância de uma casa até a escola."
+      ],
+      "correctIndex": 0,
+      "explanation": "Essa é a definição de densidade demográfica indicada na fonte.",
+      "sourceRef": {
+        "section": "Demografia e indicadores",
+        "pages": "110–111"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-042",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Como o conhecimento local pode ser valorizado em atividades sustentáveis?",
+      "options": [
+        "Considerando práticas e saberes desenvolvidos pelas comunidades.",
+        "Apagando os saberes e impondo um padrão único.",
+        "Separando as pessoas dos recursos naturais.",
+        "Trocando todos os produtos por um só."
+      ],
+      "correctIndex": 0,
+      "explanation": "A fonte destaca os conhecimentos tradicionais e locais.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-043",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Por que a conservação ambiental importa para a bioeconomia?",
+      "options": [
+        "Porque nenhuma pessoa pode usar produtos naturais.",
+        "Porque a renda é sempre incompatível com conservação.",
+        "Porque os recursos naturais não podem acabar.",
+        "Porque a atividade depende da natureza e deve considerar sua continuidade."
+      ],
+      "correctIndex": 3,
+      "explanation": "Conservação e uso sustentável fazem parte do conceito apresentado.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-044",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "O que os indicadores demográficos ajudam a estudar?",
+      "options": [
+        "O tamanho, a distribuição e as características de uma população.",
+        "A cor favorita de cada morador.",
+        "O preço de produtos de uma loja.",
+        "A previsão do tempo de todos os municípios."
+      ],
+      "correctIndex": 0,
+      "explanation": "A fonte define demografia por esses aspectos da população.",
+      "sourceRef": {
+        "section": "Demografia e indicadores",
+        "pages": "110–111"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-045",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Que atitude demonstra respeito ao estudar diferentes grupos?",
+      "options": [
+        "Usar um estereótipo como explicação.",
+        "Ignorar vínculos com território e cultura.",
+        "Ouvir suas histórias sem tratar uma experiência como regra para todos.",
+        "Afirmar que todos têm a mesma identidade."
+      ],
+      "correctIndex": 2,
+      "explanation": "O capítulo destaca diversidade e recomenda evitar generalizações.",
+      "sourceRef": {
+        "section": "Diversidade da população brasileira",
+        "pages": "98–105"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-046",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Associe cada grupo ou conceito à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "Povos originários",
+          "right": "Povos indígenas."
+        },
+        {
+          "left": "Comunidades quilombolas",
+          "right": "Resistência à escravização e busca por liberdade."
+        },
+        {
+          "left": "Migrações europeias e asiáticas",
+          "right": "Chegadas de grupos em diferentes períodos."
+        }
+      ],
+      "explanation": "Cada conceito é relacionado à explicação correspondente no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Diversidade da população brasileira",
+        "pages": "98–105"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-047",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada conceito demográfico à explicação.",
+      "pairs": [
+        {
+          "left": "Demografia",
+          "right": "Estudo do tamanho, distribuição e características da população."
+        },
+        {
+          "left": "Densidade demográfica",
+          "right": "Média de habitantes por quilômetro quadrado."
+        },
+        {
+          "left": "Taxa de natalidade",
+          "right": "Exemplo de indicador demográfico."
+        }
+      ],
+      "explanation": "Cada conceito é relacionado à explicação correspondente no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Demografia e indicadores",
+        "pages": "110–111"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-048",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada parte da história afro-brasileira à explicação.",
+      "pairs": [
+        {
+          "left": "Deslocamento forçado",
+          "right": "Chegada de muitos africanos durante a escravização."
+        },
+        {
+          "left": "Preservação de práticas culturais",
+          "right": "Forma de resistência e continuidade cultural."
+        },
+        {
+          "left": "Comunidades quilombolas",
+          "right": "Grupos ligados à resistência e à busca por liberdade."
+        }
+      ],
+      "explanation": "Cada conceito é relacionado à explicação correspondente no conteúdo estudado.",
+      "sourceRef": {
+        "section": "População afro-brasileira e comunidades quilombolas",
+        "pages": "102–104"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-049",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada característica à ideia correspondente.",
+      "pairs": [
+        {
+          "left": "Ancestralidade",
+          "right": "Vínculos com gerações anteriores."
+        },
+        {
+          "left": "Território quilombola",
+          "right": "Pode se relacionar a memória e práticas culturais."
+        },
+        {
+          "left": "Povos indígenas",
+          "right": "Diversidade de etnias e línguas."
+        }
+      ],
+      "explanation": "Cada conceito é relacionado à explicação correspondente no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Comunidades quilombolas e povos indígenas",
+        "pages": "100–104"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-050",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada informação histórica à descrição.",
+      "pairs": [
+        {
+          "left": "Censo 2022",
+          "right": "Dados da população por cor ou raça."
+        },
+        {
+          "left": "Linha do tempo",
+          "right": "Acontecimentos de diferentes períodos."
+        },
+        {
+          "left": "Migrações europeias e asiáticas",
+          "right": "Movimentos de grupos em períodos diversos."
+        }
+      ],
+      "explanation": "Cada conceito é relacionado à explicação correspondente no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Censo 2022 e linha do tempo",
+        "pages": "105, 108–109"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-051",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Associe cada setor de trabalho ao lugar de maior presença indicado.",
+      "pairs": [
+        {
+          "left": "Setor primário",
+          "right": "Maior presença no campo."
+        },
+        {
+          "left": "Setores secundário e terciário",
+          "right": "Maior presença nas cidades."
+        },
+        {
+          "left": "População e trabalho",
+          "right": "Relação entre atividades e lugares."
+        }
+      ],
+      "explanation": "Cada conceito é relacionado à explicação correspondente no conteúdo estudado.",
+      "sourceRef": {
+        "section": "População e trabalho",
+        "pages": "114"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-052",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada termo à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "Populações ribeirinhas",
+          "right": "Grupos ligados a modos de vida próximos a rios."
+        },
+        {
+          "left": "Populações extrativistas",
+          "right": "Grupos que aproveitam produtos da natureza."
+        },
+        {
+          "left": "Sociobiodiversidade",
+          "right": "Relação entre diversidade natural e conhecimentos sociais."
+        }
+      ],
+      "explanation": "Cada conceito é relacionado à explicação correspondente no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-053",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada fator ou conceito à explicação.",
+      "pairs": [
+        {
+          "left": "Distribuição desigual",
+          "right": "Há lugares com mais habitantes e outros com menos."
+        },
+        {
+          "left": "Transportes",
+          "right": "Um dos fatores que ajudam a explicar a distribuição."
+        },
+        {
+          "left": "Oferta de trabalho",
+          "right": "Um fator relacionado à ocupação dos lugares."
+        }
+      ],
+      "explanation": "Cada conceito é relacionado à explicação correspondente no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Distribuição da população brasileira",
+        "pages": "112–113"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-054",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada ideia da bioeconomia à sua função.",
+      "pairs": [
+        {
+          "left": "Produtos da natureza",
+          "right": "Podem ser usados de modo sustentável."
+        },
+        {
+          "left": "Conhecimentos tradicionais",
+          "right": "Ajudam a orientar o uso de recursos locais."
+        },
+        {
+          "left": "Conservação ambiental",
+          "right": "Busca cuidar das florestas e dos recursos."
+        }
+      ],
+      "explanation": "Cada conceito é relacionado à explicação correspondente no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-055",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada forma de trabalho à característica indicada.",
+      "pairs": [
+        {
+          "left": "Trabalho formal",
+          "right": "Pode envolver registro e direitos."
+        },
+        {
+          "left": "Trabalho informal",
+          "right": "Não oferece as mesmas garantias do formal."
+        },
+        {
+          "left": "Salário fixo",
+          "right": "Uma característica mencionada para o trabalho formal."
+        }
+      ],
+      "explanation": "Cada conceito é relacionado à explicação correspondente no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Trabalho formal e informal",
+        "pages": "115"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-056",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Associe cada desigualdade à dimensão estudada.",
+      "pairs": [
+        {
+          "left": "Desigualdades no trabalho",
+          "right": "Diferenças de oportunidades e remuneração."
+        },
+        {
+          "left": "Raça e gênero",
+          "right": "Fatores relacionados às desigualdades citadas."
+        },
+        {
+          "left": "Direitos e oportunidades",
+          "right": "Devem valer para todas as pessoas."
+        }
+      ],
+      "explanation": "Cada conceito é relacionado à explicação correspondente no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Desigualdades no trabalho; Direitos e trabalho doméstico",
+        "pages": "116–117"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-057",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada proteção ou responsabilidade à explicação.",
+      "pairs": [
+        {
+          "left": "Trabalho forçado",
+          "right": "É crime."
+        },
+        {
+          "left": "Trabalho infantil abaixo da idade permitida",
+          "right": "É proibido."
+        },
+        {
+          "left": "Tarefas domésticas",
+          "right": "Devem ser divididas de maneira justa na família."
+        }
+      ],
+      "explanation": "Cada conceito é relacionado à explicação correspondente no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Direitos e trabalho doméstico",
+        "pages": "117"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-058",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada noção à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "Quantidade total de habitantes",
+          "right": "Número de habitantes de uma população."
+        },
+        {
+          "left": "Densidade demográfica",
+          "right": "Média de habitantes por quilômetro quadrado."
+        },
+        {
+          "left": "Taxa de natalidade",
+          "right": "Exemplo de indicador demográfico."
+        }
+      ],
+      "explanation": "Cada conceito é relacionado à explicação correspondente no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Demografia e indicadores",
+        "pages": "110–111"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-059",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada forma de trabalho ou situação à descrição.",
+      "pairs": [
+        {
+          "left": "Trabalho formal",
+          "right": "Pode envolver registro e direitos."
+        },
+        {
+          "left": "Trabalho informal",
+          "right": "Não oferece as mesmas garantias do formal."
+        },
+        {
+          "left": "Desigualdades no trabalho",
+          "right": "Podem afetar oportunidades e remuneração."
+        }
+      ],
+      "explanation": "Cada conceito é relacionado à explicação correspondente no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Trabalho formal e informal; Desigualdades no trabalho",
+        "pages": "115–116"
+      }
+    },
+    {
+      "id": "geografia-novembro-2026-060",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada ideia ao efeito ou objetivo correspondente.",
+      "pairs": [
+        {
+          "left": "Bioeconomia",
+          "right": "Pode gerar renda e valorizar conhecimentos tradicionais."
+        },
+        {
+          "left": "Populações ribeirinhas",
+          "right": "Grupos ligados a modos de vida próximos a rios."
+        },
+        {
+          "left": "Populações extrativistas",
+          "right": "Grupos que aproveitam produtos da natureza."
+        }
+      ],
+      "explanation": "Cada conceito é relacionado à explicação correspondente no conteúdo estudado.",
+      "sourceRef": {
+        "section": "Populações ribeirinhas e extrativistas; bioeconomia da sociobiodiversidade",
+        "pages": "106–107"
+      }
+    }
+  ]
+}

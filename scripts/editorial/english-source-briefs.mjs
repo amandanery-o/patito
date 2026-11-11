@@ -45,3 +45,46 @@ export const ENGLISH_SOURCE_TOPICS = [
     ],
   },
 ]
+
+export const ENGLISH_NOVEMBER_SOURCE_TOPICS = [
+  {
+    chapter: 7,
+    title: 'Unit 7 — Eating Out',
+    pages: 'Student’s Book 52–58',
+    sourceSections: [
+      { title: 'Eating Out: food, drinks and restaurant language', pages: '52–58' },
+      { title: 'Prices, numbers and there is/there are', pages: '52–58' },
+    ],
+    sections: [
+      'The unit covers food and drink vocabulary and simple restaurant situations.',
+      'Use How much is ...? to ask the price of one item; provide any price needed in the question itself.',
+      'The unit practices numbers from 70 to 100, and there is/there are with singular and plural items.',
+      'Use original short exchanges. Do not reproduce the textbook dialogue or rely on its pictures or audio.',
+    ],
+    keyIdeas: [
+      'Use How much is ...? to ask how much one item costs.',
+      'Read the written price in the prompt; do not depend on audio.',
+      'There is goes with one item; there are goes with more than one.',
+    ],
+  },
+  {
+    chapter: 8,
+    title: 'Unit 8 — Wild Nature',
+    pages: 'Student’s Book 74–80',
+    sourceSections: [
+      { title: 'Wild Nature and outdoor activities', pages: '74–80' },
+      { title: 'Vacation wishes and actions', pages: '74–80' },
+    ],
+    sections: [
+      'The unit works with nature and outdoor activity vocabulary, including visiting glaciers, climbing volcanoes, sailing on rivers, swimming near waterfalls, exploring caves and hiking in forests.',
+      'Use I’d like to ... to express a desired activity or vacation plan.',
+      'Questions about actions happening now use is/are with a verb ending in -ing, within the forms presented in the unit.',
+      'Write original text-based questions that do not require the textbook illustrations or audio.',
+    ],
+    keyIdeas: [
+      'Recognize the unit’s nature and outdoor activity vocabulary.',
+      'I’d like to ... expresses an activity someone wants to do.',
+      'Use is/are plus an -ing verb to describe an action in progress.',
+    ],
+  },
+]

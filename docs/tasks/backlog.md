@@ -39,11 +39,12 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 
 - `TASK-021` ✅ Remover conteúdo do primeiro semestre e olimpíadas da experiência ativa, preservando recuperação pelo histórico do Git.
 - `TASK-022` ✅ Definir schema de livro, conteúdo, resumo e questões.
-- `TASK-023` 🟡 Publicar resumos textuais e exercícios do segundo semestre por matéria (Geografia P1 e P2, Matemática T2 e P1, Ciências P1, Inglês P1 e Português P1 publicadas; demais matérias aguardam fontes).
+- `TASK-023` 🟡 Publicar resumos textuais e exercícios do segundo semestre por matéria (Geografia P1, Matemática T2 e P1, Ciências P1, Inglês P1 e Português P1 publicados; Português, Inglês, Geografia, Ciências e História de novembro aprovados localmente).
 - `TASK-024` ✅ Validar estrutura, IDs, relações e quantidade de questões.
 - `TASK-060` ✅ Remover a ambiguidade da associação `por-p1-030`: cada palavra recebeu uma pista de significado exclusiva, mantendo a terminação ortográfica, com regressão unitária no banco publicado.
-- `TASK-061` ✅ Auditar integralmente as 420 questões publicadas antes da semana de provas, corrigir dez riscos factuais ou de ambiguidade e manter uma regressão estrutural sobre os sete bancos ativos.
+- `TASK-061` ✅ Auditar integralmente os sete bancos históricos (420 questões), corrigir dez riscos factuais ou de ambiguidade e manter uma regressão estrutural. Após retirar Geografia P2 da experiência ativa, seis materiais e 360 questões permanecem ativos até a publicação da P3.
 - `TASK-062` ✅ Publicar Matemática P2 seguindo o roteiro editorial completo (capítulos 9, 10 e 11, resumo, 60 questões aprovadas e revisão independente).
+- `TASK-063` ✅ Atualizar Geografia conforme o comunicado de 30/10: escopo dos capítulos 10–11 registrado, fontes conferidas, material antigo de capítulos 11–12 retirado da experiência ativa e novo resumo e 60 questões aprovados localmente. Mantida a data de 16/11 do cronograma escolar.
 
 ## F005 — Agenda escolar
 
@@ -93,3 +94,9 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-055` ✅ Publicar Inglês P1 seguindo o roteiro editorial completo (unidades 5 e 6, resumo, 60 questões aprovadas e revisão independente).
 - `TASK-056` ✅ Publicar Português P1 seguindo o roteiro editorial completo (escopo oficial, resumo, 60 questões aprovadas e revisão independente).
 - `TASK-057` ✅ Publicar Ciências P1 seguindo o roteiro editorial completo (capítulos 8 e 9, resumo, 60 questões aprovadas e revisão independente).
+
+## F010 — Revisões para as provas de novembro
+
+- `TASK-064` ✅ Criar cartões de revisão de novembro dentro de cada matéria, sem rótulos P2/P3, mostrando datas confirmadas e mantendo avaliações sem banco aprovado em preparação. Geografia, Ciências e História têm bancos aprovados localmente; Geografia mostra 16/11 do cronograma escolar.
+
+- `TASK-065` ✅ Atualizar Matemática para 17/11 com base na informação da mantenedora de 10/11; versionar o manifesto v4 e aplicar correção transacional no Supabase, preservando o escopo dos capítulos 9, 10 e 11.

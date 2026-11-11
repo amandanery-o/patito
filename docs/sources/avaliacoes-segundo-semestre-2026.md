@@ -23,12 +23,14 @@ Este documento é a transcrição normalizada usada pelo calendário do Patito. 
 | 05–09/10 | Educação Física   | Trabalho T2 |  2,0 | Esportes coletivos e pré-desportivos; características, regras, sistemas, estrutura e modelo de jogo                                                      |
 | 09/10    | Língua Inglesa    | Trabalho T2 |  2,0 | Atividade em língua inglesa realizada em sala                                                                                                            |
 | 09–13/11 | Educação Física   | Prova P2    |  3,0 | Evolução motora, participação, integração, rendimento, autonomia e destreza nas atividades                                                               |
-| 10/11    | Matemática        | Prova P2    |  3,0 | Frações, números decimais, tabelas e gráficos — capítulos 9, 10 e 11                                                                                     |
+| 17/11    | Matemática        | Prova P2    |  3,0 | Frações, números decimais, tabelas e gráficos — capítulos 9, 10 e 11                                                                                     |
 | 12/11    | Língua Portuguesa | Prova P2    |  3,0 | Leitura e interpretação; concordância verbal (p. 166); pronomes possessivos (p. 180); IZAR/ISAR (p. 182); porquês (p. 214); H inicial (p. 216)           |
 | 13/11    | Língua Inglesa    | Prova P2    |  3,0 | Unidades 7 e 8                                                                                                                                           |
-| 16/11    | Geografia         | Prova P2    |  3,0 | Características da população brasileira e fluxos migratórios — capítulos 11 e 12                                                                         |
+| 16/11    | Geografia         | Prova P3    |  3,0 | População brasileira e características da população brasileira — capítulos 10 e 11                                                                       |
 | 18/11    | Ciências          | Prova P2    |  3,0 | Caminhos da matéria e da energia; os astros e o tempo — capítulos 10 e 11                                                                                |
 | 19/11    | História          | Prova P2    |  3,0 | Migrações dentro do Brasil e a sociedade brasileira atual — capítulos 11 e 12                                                                            |
+
+O comunicado de 30/10 atualizou o conteúdo da prova de Geografia para os capítulos 10 e 11; a data de 16/11 do cronograma escolar foi mantida. Levar livro e caderno em 03/11 era apenas para uma atividade.
 
 ## Recuperações
 

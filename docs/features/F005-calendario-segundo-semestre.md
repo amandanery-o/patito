@@ -28,3 +28,7 @@ O aluno consulta provas, trabalhos e outros compromissos na **Agenda escolar**, 
 ## Correção de 17/09/2026
 
 O comunicado à Turma 43 altera três provas P1: Matemática de 22/09 para 02/10, Geografia de 21/09 para 05/10 e História de 24/09 para 08/10. Conteúdo, peso e tipo permanecem os do cronograma anterior. O manifesto `v2` registra somente essas três alterações, e a correção SQL preserva os UUIDs dos eventos existentes.
+
+## Atualização de Geografia em 30/10/2026
+
+Comunicado posterior informa Geografia P3, capítulos 10 e 11. A data de 16/11 permanece conforme o cronograma escolar, confirmado pela mantenedora em 11/11; o comunicado de 30/10 atualizou somente o conteúdo. O pedido para levar livro e caderno em 03/11 é uma atividade, não uma data de prova. A correção de conteúdo está em `supabase/corrections/2026-10-30-geografia-p3.sql`.

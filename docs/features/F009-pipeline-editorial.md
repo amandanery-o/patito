@@ -6,7 +6,7 @@
 
 ## Resultado
 
-O pipeline transforma fontes autorizadas em conteúdo e calendário validados, usando agentes editoriais sem expor credenciais no sistema web. A mantenedora é acionada somente quando o revisor independente não consegue resolver uma dúvida com segurança.
+O pipeline transforma fontes autorizadas em conteúdo e calendário validados, usando agentes editoriais sem expor credenciais no sistema web. A autoria padrão acontece no fluxo ativo do Codex a partir das fontes verificadas; uma API externa é opcional e depende de autorização explícita da mantenedora. A mantenedora é acionada quando o revisor independente não consegue resolver uma dúvida com segurança.
 
 ## Fontes previstas
 
@@ -22,6 +22,8 @@ O pipeline transforma fontes autorizadas em conteúdo e calendário validados, u
 - A origem e a versão de cada lote são registradas.
 - A IA produz rascunhos estruturados de resumo, questões, respostas, explicações e referências ao trecho de origem.
 - O agente autor e o agente revisor exercem papéis separados.
+- A geração local com API da Anthropic é opcional, não requisito do pipeline; seu uso pode gerar cobrança separada e exige autorização explícita.
+- A assinatura ChatGPT/Codex não é usada como credencial por scripts locais. Quando não houver autorização para API, o rascunho é redigido no fluxo ativo do Codex e salvo antes da revisão.
 - O agente autor nunca publica diretamente; validação automática e aprovação auditável do revisor independente são obrigatórias.
 - O revisor corrige problemas sustentados pela fonte e escala somente dúvidas que não podem ser resolvidas com alta confiança.
 - Um conteúdo aprovado contém ao menos 60 questões e cada sessão consome aproximadamente 30.
@@ -35,7 +37,7 @@ O pipeline transforma fontes autorizadas em conteúdo e calendário validados, u
 - Cada conteúdo publicado mantém origem, data e versão.
 - Nenhuma credencial aparece no bundle, logs públicos ou repositório.
 - O pipeline pode ser repetido sem duplicar eventos ou conteúdos.
-- Cada questão mantém referência à seção de origem, modelo usado e versão do prompt.
+- Cada questão mantém referência à seção de origem e o registro real do método de autoria; modelo/provedor e versão do prompt são registrados quando aplicáveis.
 - Uma nova prova chega à UI como uma unidade completa de material, prática e progresso compreensível para a criança.
 
 ## Dependências externas

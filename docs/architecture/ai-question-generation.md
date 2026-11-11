@@ -1,29 +1,31 @@
-# Geração editorial de questões com Claude
+# Autoria e geração editorial de questões
 
-O gerador roda apenas na máquina da mantenedora. A API do Claude não é chamada pelo navegador e a chave nunca recebe o prefixo `VITE_`.
+O fluxo padrão redige o rascunho no trabalho ativo do Codex, com base nas fontes autorizadas, e salva o resultado no repositório para revisão. Esse caminho não chama uma API externa.
+
+O gerador local descrito abaixo é uma opção técnica para quando Amanda solicitar explicitamente o uso da API da Anthropic. Essa API pode consumir créditos cobrados separadamente. A assinatura do ChatGPT/Codex não fornece uma chave de API para scripts locais. Nunca invoque o gerador externo por padrão.
 
 ## Fluxo
 
-O procedimento completo e genérico para uma nova matéria está em [`docs/operations/next-subject-playbook.md`](../operations/next-subject-playbook.md). Este documento detalha a etapa técnica de geração com Claude.
+O procedimento completo e genérico para uma nova matéria está em [`docs/operations/next-subject-playbook.md`](../operations/next-subject-playbook.md). Os passos abaixo descrevem o caminho técnico opcional da API da Anthropic.
 
 1. Os capítulos autorizados são lidos e resumidos editorialmente.
-2. O script envia somente o mapa conceitual, sem dados ou respostas de alunos.
-3. Claude produz seis lotes estruturados de 10 questões usando JSON Schema.
+2. No caminho opcional da API, o script envia somente o mapa conceitual, sem dados ou respostas de alunos.
+3. No caminho de API autorizado, Claude produz seis lotes estruturados de 10 questões usando JSON Schema.
 4. Cada lote aprovado é salvo como checkpoint para permitir retomada após uma falha de rede.
 5. O script exige o total de 45 questões de múltipla escolha e 15 de associação.
 6. O validador verifica formatos, explicações, referências, alternativas, associações e IDs.
 7. O resultado é salvo em `editorial/drafts/`, diretório ignorado pelo Git.
-8. Um agente revisor independente confere conteúdo, alternativas, respostas, explicações e referências; dúvidas sem solução segura são escaladas à mantenedora.
+8. O agente `.claude/agents/editorial-reviewer.md`, independente do autor, confere conteúdo, alternativas, respostas, explicações e referências; dúvidas sem solução segura são escaladas à mantenedora.
 9. O comando de aprovação registra o parecer auditável e publica somente as questões validadas em `src/data/generated/`.
 
 Os prompts são artefatos editoriais versionados:
 
-- `scripts/editorial/prompts/question-author-system-v1.md`: papel, princípios pedagógicos, proibições e checklist do Claude;
+- `scripts/editorial/prompts/question-author-system-v1.md`: papel, princípios pedagógicos, proibições e checklist do agente autor;
 - `scripts/editorial/prompts/question-batch-v2.md`: modelo genérico para qualquer matéria, com escopo, quantidades, dificuldade, focos, habilidades curriculares e material de cada lote.
 
 Alterações de prompt exigem uma nova versão e nova geração; não se modifica silenciosamente o prompt de um lote já produzido.
 
-## Configuração local
+## Configuração local — somente para API explicitamente autorizada
 
 Crie o arquivo local `.env.editorial`, que é ignorado pelo Git:
 

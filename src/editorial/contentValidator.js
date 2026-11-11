@@ -51,7 +51,8 @@ export function validateEditorialContent(content) {
   if (!PROVIDERS.has(content.source?.provider)) errors.push('source.provider deve ser edebe ou richmond')
   if (!hasText(content.source?.resourceId)) errors.push('source.resourceId é obrigatório')
   if (!hasText(content.source?.version)) errors.push('source.version é obrigatória')
-  if (!hasText(content.generation?.model)) errors.push('generation.model é obrigatório')
+  if (!hasText(content.generation?.model) && !hasText(content.generation?.authoringMethod))
+    errors.push('generation.model ou generation.authoringMethod é obrigatório')
   if (!hasText(content.generation?.promptVersion)) errors.push('generation.promptVersion é obrigatória')
   if (!['draft', 'approved'].includes(content.status)) errors.push('status deve ser draft ou approved')
 

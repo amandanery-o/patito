@@ -2,7 +2,7 @@ import { GEOGRAPHY_SOURCE_TOPICS } from './geography-source-briefs.mjs'
 import { MATHEMATICS_SOURCE_TOPICS } from './mathematics-source-briefs.mjs'
 import { HISTORY_SOURCE_TOPICS } from './history-source-briefs.mjs'
 import { SCIENCE_SOURCE_TOPICS } from './science-source-briefs.mjs'
-import { ENGLISH_SOURCE_TOPICS } from './english-source-briefs.mjs'
+import { ENGLISH_SOURCE_TOPICS, ENGLISH_NOVEMBER_SOURCE_TOPICS } from './english-source-briefs.mjs'
 import { PORTUGUESE_SOURCE_TOPICS } from './portuguese-source-briefs.mjs'
 
 export const EDITORIAL_CONFIGS = {
@@ -86,6 +86,66 @@ export const EDITORIAL_CONFIGS = {
       ],
     ],
   },
+  'portugues-novembro': {
+    assessmentName: 'prova de novembro',
+    subject: 'Língua Portuguesa',
+    subjectId: 'portugues',
+    chapters: [9, 10, 12],
+    contentId: 'portugues-novembro-2026',
+    questionPrefix: 'por-nov-2026',
+    title: 'Prova de novembro — Português',
+    summary:
+      'Revisão de leitura e interpretação, concordância verbal, pronomes possessivos, terminações -izar/-isar, uso dos porquês e H inicial.',
+    source: {
+      provider: 'edebe',
+      resourceId: 'courseware-253/chapters-9-10-12/pages-156-183-214-217',
+      version: '2024',
+    },
+    sourceTopics: PORTUGUESE_SOURCE_TOPICS,
+    publicationOutput: 'src/data/generated/portuguesNovembroContent.json',
+    contentScope:
+      'capítulo 9 — leitura, interpretação e concordância verbal; capítulo 10 — pronomes possessivos e terminações -izar/-isar; capítulo 12 — uso dos porquês e H inicial',
+    batches: [
+      [
+        'SOMENTE leitura e interpretação de textos autorais curtos',
+        'informação explícita e inferência simples sustentada pelo texto',
+        'assunto, fato, opinião, tese, argumento e conclusão',
+        'cada texto completo deve estar no enunciado; não reutilizar texto do livro',
+      ],
+      [
+        'SOMENTE concordância verbal',
+        'relação entre sujeito e verbo em pessoa e número',
+        'singular e plural em frases originais e claras',
+        'não cobrar conjugação avançada ou exceções fora da fonte',
+      ],
+      [
+        'SOMENTE pronomes possessivos',
+        'reconhecer posse e referência ao substantivo',
+        'concordância em gênero e número com o nome',
+        'usar frases próprias, sem depender de tirinhas ou imagens',
+      ],
+      [
+        'SOMENTE terminações -izar e -isar',
+        'observar se a palavra primitiva tem s na última sílaba',
+        'aplicações diretas com palavras seguras da fonte',
+        'não sugerir que a regra determina palavras cuja origem não é conhecida',
+      ],
+      [
+        'SOMENTE uso dos porquês',
+        'porque explicativo',
+        'por que como por qual motivo',
+        'por quê no final de pergunta',
+        'porquê como substantivo',
+        'contextos originais com uma única forma correta',
+      ],
+      [
+        'SOMENTE H inicial',
+        'h inicial sem som',
+        'grafia convencional em vocabulário conhecido e presente na fonte',
+        'não cobrar palavras que não aparecem na fonte ou no mapa editorial',
+      ],
+    ],
+  },
   'ingles-p1': {
     assessmentName: 'P1',
     subject: 'Inglês',
@@ -122,6 +182,109 @@ export const EDITORIAL_CONFIGS = {
       ['movie ticket', 'movie', 'date', 'time', 'seat number'],
       ['What time is it?', "It's", "o'clock", 'written digital times'],
       ['a.m.', 'p.m.', 'noon', 'midnight', 'time and actions'],
+    ],
+  },
+  'ingles-novembro': {
+    assessmentName: 'prova de novembro',
+    subject: 'Inglês',
+    subjectId: 'ingles',
+    chapters: [7, 8],
+    contentId: 'ingles-novembro-2026',
+    questionPrefix: 'eng-nov-2026',
+    title: 'Prova de novembro — Inglês',
+    summary: 'Revisão das unidades 7 e 8: Eating Out e Wild Nature.',
+    source: { provider: 'richmond', resourceId: 'go-primary-4/digital-book/units-7-8', version: 'cycle-2026' },
+    sourceTopics: ENGLISH_NOVEMBER_SOURCE_TOPICS,
+    publicationOutput: 'src/data/generated/inglesNovembroContent.json',
+    contentScope: 'unidade 7 — Eating Out; unidade 8 — Wild Nature',
+    batches: [
+      ['food and drinks', 'restaurant situations', 'polite requests'],
+      ['How much is ...?', 'prices', 'numbers 70–100'],
+      ['there is', 'there are', 'singular and plural items'],
+      ['nature vocabulary', 'outdoor activities', 'vacation destinations'],
+      ["I'd like to ...", 'vacation plans', 'activities someone wants to do'],
+      ['is/are + -ing', 'actions in progress', 'questions about what someone is doing'],
+    ],
+  },
+  'geografia-novembro': {
+    assessmentName: 'prova de novembro',
+    subject: 'Geografia',
+    subjectId: 'geografia',
+    chapters: [10, 11],
+    contentId: 'geografia-novembro-2026',
+    questionPrefix: 'geo-nov-2026',
+    title: 'Prova de novembro — Geografia',
+    summary:
+      'Revisão dos capítulos 10 e 11: diversidade da população brasileira, povos e culturas, distribuição populacional e características demográficas.',
+    source: {
+      provider: 'edebe',
+      resourceId: 'courseware-252/chapters-10-11/pages-98-117',
+      version: '2024',
+    },
+    sourceTopics: GEOGRAPHY_SOURCE_TOPICS,
+    publicationOutput: 'src/data/generated/geografiaNovembroContent.json',
+    contentScope: 'capítulo 10 — população brasileira; capítulo 11 — características da população brasileira',
+    batches: [
+      ['diversidade dos povos e culturas que formam a população brasileira'],
+      ['povos originários, povos afro-brasileiros e trajetórias históricas'],
+      ['migrações europeias e asiáticas e contribuições culturais'],
+      ['populações ribeirinhas, extrativismo e bioeconomia sustentável'],
+      ['Censo, cor ou raça e leitura responsável de dados populacionais'],
+      ['indicadores demográficos, distribuição populacional e trabalho'],
+    ],
+  },
+  'ciencias-novembro': {
+    assessmentName: 'prova de novembro',
+    subject: 'Ciências',
+    subjectId: 'ciencias',
+    chapters: [10, 11],
+    contentId: 'ciencias-novembro-2026',
+    questionPrefix: 'cie-nov-2026',
+    title: 'Prova de novembro — Ciências',
+    summary:
+      'Revisão dos capítulos 10 e 11: ciclos da matéria e da água, fluxo de energia, movimentos da Terra, fases da Lua e calendários.',
+    source: {
+      provider: 'edebe',
+      resourceId: 'courseware-249/chapters-10-11/pages-98-117',
+      version: '2024',
+    },
+    sourceTopics: SCIENCE_SOURCE_TOPICS,
+    publicationOutput: 'src/data/generated/cienciasNovembroContent.json',
+    contentScope: 'capítulo 10 — caminhos da matéria e da energia; capítulo 11 — os astros e o tempo',
+    batches: [
+      ['cadeias alimentares, transferência de matéria e energia'],
+      ['ciclos da matéria, decomposição e compostagem'],
+      ['fluxo de energia e fonte solar'],
+      ['ciclo da água, evaporação e condensação'],
+      ['rotação, translação e alternância de dia e noite'],
+      ['fases da Lua, observação dos astros e calendários culturais'],
+    ],
+  },
+  'historia-novembro': {
+    assessmentName: 'prova de novembro',
+    subject: 'História',
+    subjectId: 'historia',
+    chapters: [11, 12],
+    contentId: 'historia-novembro-2026',
+    questionPrefix: 'his-nov-2026',
+    title: 'Prova de novembro — História',
+    summary:
+      'Revisão dos capítulos 11 e 12: migrações dentro do Brasil, tropeirismo e diversidade da sociedade brasileira atual.',
+    source: {
+      provider: 'edebe',
+      resourceId: 'courseware-255/chapters-11-12/pages-106-127',
+      version: '2024',
+    },
+    sourceTopics: HISTORY_SOURCE_TOPICS,
+    publicationOutput: 'src/data/generated/historiaNovembroContent.json',
+    contentScope: 'capítulo 11 — migrações dentro do Brasil; capítulo 12 — a sociedade brasileira atual',
+    batches: [
+      ['migrações internas e seus diferentes motivos'],
+      ['tropeirismo, caminhos, comércio e circulação cultural'],
+      ['industrialização, urbanização e busca por trabalho'],
+      ['migrações do Sertão nordestino e desafios dos deslocamentos'],
+      ['diversidade dos povos indígenas e afro-brasileiros'],
+      ['migrações contemporâneas, refúgio, direitos e acolhimento'],
     ],
   },
   'ciencias-p1': {

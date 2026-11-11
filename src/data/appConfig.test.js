@@ -18,9 +18,13 @@ describe('getMascotState', () => {
 
   it('conecta os materiais publicados às matérias corretas', () => {
     expect(SUBJECTS.find((subject) => subject.id === 'matematica').topics).toHaveLength(3)
-    expect(SUBJECTS.find((subject) => subject.id === 'portugues').topics).toHaveLength(1)
-    expect(SUBJECTS.find((subject) => subject.id === 'portugues').topics[0].id).toBe('portugues-p1-leitura-lingua')
-    expect(SUBJECTS.find((subject) => subject.id === 'historia').topics).toHaveLength(1)
-    expect(SUBJECTS.find((subject) => subject.id === 'historia').topics[0].id).toBe('historia-p1-colonizacao-migracoes')
+    expect(SUBJECTS.find((subject) => subject.id === 'portugues').topics.map(({ id }) => id)).toEqual([
+      'portugues-p1-leitura-lingua',
+      'portugues-novembro-2026',
+    ])
+    expect(SUBJECTS.find((subject) => subject.id === 'historia').topics.map(({ id }) => id)).toEqual([
+      'historia-p1-colonizacao-migracoes',
+      'historia-novembro-2026',
+    ])
   })
 })

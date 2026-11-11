@@ -15,6 +15,14 @@ Patito is a Portuguese-language study PWA for fourth-grade students. It provides
 - `docs/operations/next-subject-playbook.md` is the mandatory end-to-end procedure for publishing each new subject or assessment.
 - `.claude/agents/editorial-reviewer.md` defines the reusable independent reviewer; keep authoring and review as separate roles.
 
+### Editorial authoring and API costs
+
+- Default to drafting educational content in the active Codex work session from the verified source notes, then save the draft in the repository. This workflow does not call the Anthropic API.
+- The local Anthropic generator is an optional convenience, not a project requirement. Do not invoke it, or any other paid external model API, unless Amanda explicitly asks to use that API and understands that it may incur separate charges.
+- A ChatGPT/Codex subscription is not an API credential for local scripts. Never try to route a script through the user's ChatGPT account; author in the active session instead.
+- In either authoring path, keep the author and `.claude/agents/editorial-reviewer.md` as independent logical roles. The reviewer must inspect the saved draft against the authorized sources and produce the required audit manifest before publication.
+- Record the actual authoring method and model/provider when known. Do not claim API generation or invent model metadata for a draft authored in-session.
+
 Do not invent unresolved product behavior. Record meaningful unknowns in the relevant PRD or feature under “Open questions”.
 
 ## Commands

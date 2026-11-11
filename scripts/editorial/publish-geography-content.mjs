@@ -18,6 +18,8 @@ export function buildEditorialPublication(approved, config, publishedAt = new Da
     contentId: approved.id,
     title: approved.title,
     summary: approved.summary,
+    summarySections: approved.summarySections,
+    keyIdeas: approved.keyIdeas,
     source: approved.source,
     generation: approved.generation,
     editorialApproval: approved.editorialApproval,

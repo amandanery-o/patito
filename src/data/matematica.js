@@ -93,9 +93,10 @@ export const MATHEMATICS_TOPICS = [
     ? [
         {
           id: 'matematica-p2-fracoes-decimais-dados',
-          title: 'Revisão P2 — Frações, decimais, tabelas e gráficos',
+          title: 'Prova de novembro — Matemática',
           chapter: '9, 10 e 11',
-          reviewLabel: 'Revisão para a P2',
+          reviewLabel: 'NOVEMBRO',
+          examDate: '2026-11-17',
           summary: mathematicsP2Content.summary,
           source: mathematicsP2Content.source,
           summarySections: [

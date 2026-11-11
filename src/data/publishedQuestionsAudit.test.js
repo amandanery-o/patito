@@ -20,11 +20,14 @@ const questions = banks.flat()
 const byId = new Map(questions.map((question) => [question.id, question]))
 
 describe('auditoria das questões publicadas', () => {
-  it('cobre os sete bancos e as 420 questões ativas', () => {
+  it('preserva a auditoria dos sete bancos históricos e conta as questões ainda ativas', () => {
     expect(banks).toHaveLength(7)
     expect(banks.every((bank) => bank.length === 60)).toBe(true)
     expect(questions).toHaveLength(420)
     expect(new Set(questions.map(({ id }) => id)).size).toBe(420)
+
+    const activeQuestions = banks.filter((bank) => bank !== geographyP2.questions).flat()
+    expect(activeQuestions).toHaveLength(360)
   })
 
   it('mantém alternativas e associações estruturalmente inequívocas', () => {

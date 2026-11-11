@@ -1,0 +1,1248 @@
+{
+  "status": "approved",
+  "contentId": "portugues-novembro-2026",
+  "title": "Prova de novembro — Português",
+  "summary": "Revisão de leitura e interpretação, concordância verbal, pronomes possessivos, terminações -izar/-isar, uso dos porquês e H inicial.",
+  "summarySections": [
+    {
+      "title": "Leitura e interpretação",
+      "text": "Leia com atenção e procure no texto as pistas que sustentam sua resposta. Em um artigo de opinião, a tese apresenta o ponto de vista do autor, os argumentos dão razões para apoiá-lo e a conclusão encerra o texto. Diferencie fatos que podem ser conferidos de opiniões, que mostram uma avaliação ou ponto de vista."
+    },
+    {
+      "title": "Concordância verbal",
+      "text": "O verbo combina com o sujeito em número e pessoa: “A criança lê” e “As crianças leem”. Para revisar, localize quem pratica a ação e observe se o sujeito está no singular ou no plural."
+    },
+    {
+      "title": "Pronomes possessivos",
+      "text": "Pronomes como meu, minha, seu e nossas indicam a quem algo pertence. Eles acompanham um substantivo e combinam com ele: “meu caderno”, “minha mochila”, “nossas ideias”."
+    },
+    {
+      "title": "Palavras terminadas em -izar e -isar",
+      "text": "Observe a palavra de origem. Nos exemplos estudados, análise forma analisar e economia forma economizar. A presença de s na última sílaba da palavra primitiva ajuda a escolher entre -isar e -izar; para palavras novas, confirme a grafia em uma fonte confiável."
+    },
+    {
+      "title": "Uso dos porquês",
+      "text": "Use porque, junto e sem acento, para explicar; por que, separado e sem acento, com sentido de “por qual motivo”; por quê, separado e com acento, no fim de uma pergunta ou sozinho; e porquê, junto e com acento, como substantivo, muitas vezes acompanhado de artigo: “o porquê”."
+    },
+    {
+      "title": "H inicial",
+      "text": "O h no início das palavras não representa som, mas faz parte da grafia convencional. A seção apresenta palavras como hino, hipopótamo, hibisco, habilidade e humano. Observe a escrita correta, mesmo quando não ouvimos o h."
+    }
+  ],
+  "keyIdeas": [
+    "Toda resposta de interpretação precisa ter apoio no texto apresentado.",
+    "Fato pode ser verificado; opinião expressa um ponto de vista.",
+    "Tese, argumentos e conclusão têm funções diferentes em um artigo de opinião.",
+    "O verbo combina com o sujeito em pessoa e número.",
+    "O possessivo indica posse e concorda com o substantivo que acompanha.",
+    "Use os exemplos da fonte para comparar -izar e -isar.",
+    "Escolha o porquê pelo sentido e pela posição na frase.",
+    "O h inicial não é pronunciado, mas deve ser escrito nas palavras estudadas."
+  ],
+  "source": {
+    "provider": "edebe",
+    "resourceId": "courseware-253/chapters-9-10-12/pages-156-183-214-217",
+    "version": "2024"
+  },
+  "generation": {
+    "authoringMethod": "Codex in-session",
+    "promptVersion": "question-batch-v2",
+    "generatedAt": "2026-11-10T00:00:00-03:00"
+  },
+  "editorialApproval": {
+    "reviewer": "Agente editorial independente Patito",
+    "reviewerType": "agent",
+    "reviewMethod": "authorized-source-map-question-by-question+full-second-read-v1",
+    "reviewedAt": "2026-11-10T21:00:00.000Z",
+    "draftDigest": "94cb79e5f9294414dc9efb97a1c29ac050320bd018bf957beddcb1bc6a217e82",
+    "schemaVersion": 1
+  },
+  "publishedAt": "2026-11-10T22:17:03.997Z",
+  "questions": [
+    {
+      "id": "por-nov-2026-001",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Leia: “A biblioteca da escola abre durante o recreio. Muitos alunos escolhem livros para ler em casa.” Qual informação aparece claramente?",
+      "options": [
+        "A biblioteca abre durante o recreio.",
+        "Todos os alunos leem no recreio.",
+        "A escola empresta brinquedos.",
+        "Os livros ficam sempre em casa."
+      ],
+      "correctIndex": 0,
+      "explanation": "Essa informação está escrita diretamente no trecho.",
+      "sourceRef": {
+        "section": "Artigo de opinião",
+        "pages": "156–159"
+      }
+    },
+    {
+      "id": "por-nov-2026-002",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Em um artigo de opinião, o que é a tese?",
+      "options": [
+        "A ideia ou o ponto de vista que o autor defende.",
+        "Uma lista de palavras difíceis.",
+        "O nome de quem publicou o texto.",
+        "Uma informação que aparece somente em imagem."
+      ],
+      "correctIndex": 0,
+      "explanation": "A tese apresenta o ponto de vista defendido pelo autor.",
+      "sourceRef": {
+        "section": "Artigo de opinião",
+        "pages": "156–159"
+      }
+    },
+    {
+      "id": "por-nov-2026-003",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Leia: “A escola deveria ter mais árvores no pátio. Elas fariam sombra e deixariam o espaço mais agradável.” Qual frase apresenta um argumento?",
+      "options": [
+        "A escola deveria ter mais árvores no pátio.",
+        "Elas fariam sombra.",
+        "Este texto tem duas frases.",
+        "O pátio fica na escola."
+      ],
+      "correctIndex": 1,
+      "explanation": "O argumento oferece uma razão para apoiar o ponto de vista.",
+      "sourceRef": {
+        "section": "Artigo de opinião",
+        "pages": "156–159"
+      }
+    },
+    {
+      "id": "por-nov-2026-004",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Leia: “Na minha opinião, toda turma deveria cuidar de uma planta. A atividade ensina responsabilidade. Além disso, os alunos observam o crescimento da planta. Por isso, cuidar de plantas na escola é uma boa ideia.” Qual trecho funciona como conclusão?",
+      "options": [
+        "Na minha opinião, toda turma deveria cuidar de uma planta.",
+        "A atividade ensina responsabilidade.",
+        "Além disso, os alunos observam o crescimento da planta.",
+        "Por isso, cuidar de plantas na escola é uma boa ideia."
+      ],
+      "correctIndex": 3,
+      "explanation": "A conclusão fecha o texto e retoma a ideia defendida.",
+      "sourceRef": {
+        "section": "Artigo de opinião",
+        "pages": "156–159"
+      }
+    },
+    {
+      "id": "por-nov-2026-005",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Leia: “A turma organizou uma feira de troca de livros na sexta-feira. Cada estudante levou um livro que já havia lido.” Qual é o assunto principal?",
+      "options": [
+        "Uma feira de troca de livros organizada pela turma.",
+        "Uma competição de leitura na sexta-feira.",
+        "A compra de livros novos para a turma.",
+        "Uma visita a uma biblioteca pública."
+      ],
+      "correctIndex": 0,
+      "explanation": "As frases tratam da feira em que os estudantes trocaram livros.",
+      "sourceRef": {
+        "section": "Artigo de opinião",
+        "pages": "156–159"
+      }
+    },
+    {
+      "id": "por-nov-2026-006",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Leia: “O clube de leitura se reúne toda quarta-feira. Depois do encontro, Lara costuma levar um livro para casa.” O que Lara costuma fazer depois do encontro?",
+      "options": [
+        "Levar um livro para casa.",
+        "Organizar o encontro do clube.",
+        "Escrever todos os livros do clube.",
+        "Visitar a biblioteca somente nas férias."
+      ],
+      "correctIndex": 0,
+      "explanation": "O texto informa diretamente que Lara costuma levar um livro para casa depois do encontro.",
+      "sourceRef": {
+        "section": "Artigo de opinião",
+        "pages": "156–159"
+      }
+    },
+    {
+      "id": "por-nov-2026-007",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Leia: “Os estudantes fizeram cartazes e convidaram as famílias. No sábado, muitas pessoas visitaram a mostra de trabalhos.” Qual informação é um fato verificável?",
+      "options": [
+        "A mostra aconteceu no sábado.",
+        "A mostra foi a atividade mais bonita do ano.",
+        "Toda família adorou a mostra.",
+        "Os cartazes eram os melhores da cidade."
+      ],
+      "correctIndex": 0,
+      "explanation": "A data pode ser conferida; as outras opções são avaliações ou generalizações.",
+      "sourceRef": {
+        "section": "Artigo de opinião",
+        "pages": "156–159"
+      }
+    },
+    {
+      "id": "por-nov-2026-008",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual frase expressa uma opinião?",
+      "options": [
+        "A sala tem quatro janelas.",
+        "A aula começou às oito horas.",
+        "Na minha opinião, ler em grupo é muito divertido.",
+        "A turma tem vinte estudantes."
+      ],
+      "correctIndex": 2,
+      "explanation": "“Na minha opinião” mostra um ponto de vista pessoal.",
+      "sourceRef": {
+        "section": "Artigo de opinião",
+        "pages": "156–159"
+      }
+    },
+    {
+      "id": "por-nov-2026-009",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "Leia: “O parque fica perto da escola. Por isso, a turma pode caminhar até lá.” O que “Por isso” indica?",
+      "options": [
+        "Uma conclusão ligada à informação anterior.",
+        "O nome de um personagem.",
+        "Uma pergunta sobre o parque.",
+        "Uma informação sem relação com a primeira frase."
+      ],
+      "correctIndex": 0,
+      "explanation": "A expressão liga a possibilidade de caminhar à proximidade do parque.",
+      "sourceRef": {
+        "section": "Artigo de opinião",
+        "pages": "156–159"
+      }
+    },
+    {
+      "id": "por-nov-2026-010",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual é a função dos argumentos em um artigo de opinião?",
+      "options": [
+        "Apresentar razões que apoiam a tese.",
+        "Substituir o título do texto.",
+        "Indicar sempre o lugar onde foi escrito.",
+        "Contar uma história sem relação com a ideia defendida."
+      ],
+      "correctIndex": 0,
+      "explanation": "Os argumentos explicam por que o autor defende determinada ideia.",
+      "sourceRef": {
+        "section": "Artigo de opinião",
+        "pages": "156–159"
+      }
+    },
+    {
+      "id": "por-nov-2026-011",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Complete: “A menina ____ um livro antes de dormir.”",
+      "options": [
+        "leem",
+        "lê",
+        "leram",
+        "lendo"
+      ],
+      "correctIndex": 1,
+      "explanation": "O sujeito está no singular; o verbo também fica no singular.",
+      "sourceRef": {
+        "section": "Concordância verbal",
+        "pages": "166–167"
+      }
+    },
+    {
+      "id": "por-nov-2026-012",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Complete: “Os alunos ____ no pátio durante o recreio.”",
+      "options": [
+        "brinca",
+        "brincou",
+        "brincam",
+        "brincava"
+      ],
+      "correctIndex": 2,
+      "explanation": "O sujeito está no plural; a forma adequada é “brincam”.",
+      "sourceRef": {
+        "section": "Concordância verbal",
+        "pages": "166–167"
+      }
+    },
+    {
+      "id": "por-nov-2026-013",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual frase apresenta concordância entre sujeito e verbo?",
+      "options": [
+        "As crianças desenha.",
+        "A turma estudam.",
+        "Os colegas escrevem.",
+        "O menino leem."
+      ],
+      "correctIndex": 2,
+      "explanation": "“Os colegas” está no plural e combina com “escrevem”.",
+      "sourceRef": {
+        "section": "Concordância verbal",
+        "pages": "166–167"
+      }
+    },
+    {
+      "id": "por-nov-2026-014",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Troque “A professora explica a tarefa” por “As professoras ____ a tarefa”.",
+      "options": [
+        "explica",
+        "explicam",
+        "explicou",
+        "explicar"
+      ],
+      "correctIndex": 1,
+      "explanation": "Ao passar o sujeito para o plural, o verbo também vai para o plural.",
+      "sourceRef": {
+        "section": "Concordância verbal",
+        "pages": "166–167"
+      }
+    },
+    {
+      "id": "por-nov-2026-015",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "Complete: “Meu irmão e eu ____ música no caminho.”",
+      "options": [
+        "escuta",
+        "escutamos",
+        "escutam",
+        "escutou"
+      ],
+      "correctIndex": 1,
+      "explanation": "“Meu irmão e eu” corresponde a “nós”; usamos “escutamos”.",
+      "sourceRef": {
+        "section": "Concordância verbal",
+        "pages": "166–167"
+      }
+    },
+    {
+      "id": "por-nov-2026-016",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "Qual opção completa: “A turma ____ para a apresentação; depois, os estudantes ____ no palco.”",
+      "options": [
+        "ensaiam / apresenta",
+        "ensaia / apresentam",
+        "ensaiam / apresentam",
+        "ensaia / apresenta"
+      ],
+      "correctIndex": 1,
+      "explanation": "“A turma” é singular; “os estudantes” é plural.",
+      "sourceRef": {
+        "section": "Concordância verbal",
+        "pages": "166–167"
+      }
+    },
+    {
+      "id": "por-nov-2026-017",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Em “As flores crescem no jardim”, qual é o sujeito?",
+      "options": [
+        "No jardim.",
+        "As flores.",
+        "Crescem.",
+        "Jardim."
+      ],
+      "correctIndex": 1,
+      "explanation": "“As flores” pratica a ação; o verbo concorda no plural.",
+      "sourceRef": {
+        "section": "Concordância verbal",
+        "pages": "166–167"
+      }
+    },
+    {
+      "id": "por-nov-2026-018",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual frase está correta?",
+      "options": [
+        "Vocês participa da atividade.",
+        "Nós participamos da atividade.",
+        "Eu participam da atividade.",
+        "Ela participamos da atividade."
+      ],
+      "correctIndex": 1,
+      "explanation": "“Nós” combina com “participamos”.",
+      "sourceRef": {
+        "section": "Concordância verbal",
+        "pages": "166–167"
+      }
+    },
+    {
+      "id": "por-nov-2026-019",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Na frase “Marina guardou seu caderno”, qual palavra indica posse?",
+      "options": [
+        "Marina",
+        "guardou",
+        "seu",
+        "caderno"
+      ],
+      "correctIndex": 2,
+      "explanation": "“Seu” é pronome possessivo.",
+      "sourceRef": {
+        "section": "Pronomes possessivos",
+        "pages": "180–181"
+      }
+    },
+    {
+      "id": "por-nov-2026-020",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Complete: “Eu trouxe ____ lanche.”",
+      "options": [
+        "meu",
+        "minha",
+        "meus",
+        "minhas"
+      ],
+      "correctIndex": 0,
+      "explanation": "“Lanche” é masculino singular: “meu lanche”.",
+      "sourceRef": {
+        "section": "Pronomes possessivos",
+        "pages": "180–181"
+      }
+    },
+    {
+      "id": "por-nov-2026-021",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Complete: “Ana e Bia organizaram ____ mochilas.”",
+      "options": [
+        "seu",
+        "sua",
+        "suas",
+        "nosso"
+      ],
+      "correctIndex": 2,
+      "explanation": "“Mochilas” é feminino plural; “suas” concorda com o substantivo.",
+      "sourceRef": {
+        "section": "Pronomes possessivos",
+        "pages": "180–181"
+      }
+    },
+    {
+      "id": "por-nov-2026-022",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual frase usa o possessivo de acordo com o substantivo?",
+      "options": [
+        "Meus mochila está limpa.",
+        "Nossa caderno sumiu.",
+        "Minhas ideias estão no papel.",
+        "Seu livros estão na mesa."
+      ],
+      "correctIndex": 2,
+      "explanation": "“Minhas” está no feminino plural, assim como “ideias”.",
+      "sourceRef": {
+        "section": "Pronomes possessivos",
+        "pages": "180–181"
+      }
+    },
+    {
+      "id": "por-nov-2026-023",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "Na frase “Pedro emprestou seus lápis a Caio”, a que palavra “seus” se refere?",
+      "options": [
+        "Aos lápis que Pedro emprestou.",
+        "À mesa onde estavam os lápis.",
+        "À ação de emprestar.",
+        "À escola de Caio."
+      ],
+      "correctIndex": 0,
+      "explanation": "O possessivo acompanha “lápis” e indica posse.",
+      "sourceRef": {
+        "section": "Pronomes possessivos",
+        "pages": "180–181"
+      }
+    },
+    {
+      "id": "por-nov-2026-024",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Complete: “Nós terminamos ____ cartaz.”",
+      "options": [
+        "nosso",
+        "nossa",
+        "nossos",
+        "nossas"
+      ],
+      "correctIndex": 0,
+      "explanation": "“Cartaz” é masculino singular; “nosso” concorda com ele.",
+      "sourceRef": {
+        "section": "Pronomes possessivos",
+        "pages": "180–181"
+      }
+    },
+    {
+      "id": "por-nov-2026-025",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual grupo contém somente pronomes possessivos?",
+      "options": [
+        "meu, sua, nossas",
+        "casa, lápis, bola",
+        "eu, ela, vocês",
+        "este, aquela, isso"
+      ],
+      "correctIndex": 0,
+      "explanation": "As palavras “meu”, “sua” e “nossas” indicam posse.",
+      "sourceRef": {
+        "section": "Pronomes possessivos",
+        "pages": "180–181"
+      }
+    },
+    {
+      "id": "por-nov-2026-026",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "A palavra “análise” tem s na última sílaba. Qual verbo relacionado está escrito corretamente?",
+      "options": [
+        "analisar",
+        "analizar",
+        "analiser",
+        "analizar-se"
+      ],
+      "correctIndex": 0,
+      "explanation": "A forma apresentada é “analisar”: análise → analisar.",
+      "sourceRef": {
+        "section": "Palavras com terminações -izar e -isar",
+        "pages": "182–183"
+      }
+    },
+    {
+      "id": "por-nov-2026-027",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "A palavra “economia” não tem s na última sílaba. Qual verbo relacionado está escrito corretamente?",
+      "options": [
+        "economisar",
+        "economizar",
+        "economiser",
+        "economisar-se"
+      ],
+      "correctIndex": 1,
+      "explanation": "A forma estudada é “economizar”.",
+      "sourceRef": {
+        "section": "Palavras com terminações -izar e -isar",
+        "pages": "182–183"
+      }
+    },
+    {
+      "id": "por-nov-2026-028",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "Qual observação ajuda a escolher entre -izar e -isar nos exemplos estudados?",
+      "options": [
+        "Observar se a palavra primitiva tem s na última sílaba.",
+        "Escolher sempre -isar depois de qualquer vogal.",
+        "Usar -izar somente no plural.",
+        "Trocar toda letra s por z."
+      ],
+      "correctIndex": 0,
+      "explanation": "A orientação é comparar a palavra primitiva e observar a última sílaba.",
+      "sourceRef": {
+        "section": "Palavras com terminações -izar e -isar",
+        "pages": "182–183"
+      }
+    },
+    {
+      "id": "por-nov-2026-029",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Complete: análise → ____; economia → ____.",
+      "options": [
+        "analisar; economizar",
+        "analizar; economisar",
+        "analisar; economisar",
+        "analizar; economizar"
+      ],
+      "correctIndex": 0,
+      "explanation": "As formas corretas dos exemplos são “analisar” e “economizar”.",
+      "sourceRef": {
+        "section": "Palavras com terminações -izar e -isar",
+        "pages": "182–183"
+      }
+    },
+    {
+      "id": "por-nov-2026-030",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Complete: “Levei o casaco ____ estava frio.”",
+      "options": [
+        "por que",
+        "por quê",
+        "porque",
+        "porquê"
+      ],
+      "correctIndex": 2,
+      "explanation": "“Porque” junto e sem acento introduz uma explicação.",
+      "sourceRef": {
+        "section": "Uso dos porquês",
+        "pages": "214–215"
+      }
+    },
+    {
+      "id": "por-nov-2026-031",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Complete: “____ você chegou mais cedo?”",
+      "options": [
+        "Por que",
+        "Porque",
+        "Por quê",
+        "Porquê"
+      ],
+      "correctIndex": 0,
+      "explanation": "Na pergunta, “por que” equivale a “por qual motivo”.",
+      "sourceRef": {
+        "section": "Uso dos porquês",
+        "pages": "214–215"
+      }
+    },
+    {
+      "id": "por-nov-2026-032",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Complete: “Você saiu mais cedo por ____?”",
+      "options": [
+        "porque",
+        "porquê",
+        "por quê",
+        "por que"
+      ],
+      "correctIndex": 2,
+      "explanation": "No fim da pergunta, usamos “por quê”, separado e com acento.",
+      "sourceRef": {
+        "section": "Uso dos porquês",
+        "pages": "214–215"
+      }
+    },
+    {
+      "id": "por-nov-2026-033",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Complete: “Quero entender o ____ dessa mudança.”",
+      "options": [
+        "porque",
+        "por que",
+        "por quê",
+        "porquê"
+      ],
+      "correctIndex": 3,
+      "explanation": "“Porquê” é substantivo e vem acompanhado do artigo “o”.",
+      "sourceRef": {
+        "section": "Uso dos porquês",
+        "pages": "214–215"
+      }
+    },
+    {
+      "id": "por-nov-2026-034",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual frase usa “por que” com sentido de “por qual motivo”?",
+      "options": [
+        "Não fui porque estava doente.",
+        "Por que a janela está aberta?",
+        "O porquê da visita ficou claro.",
+        "Você chegou tarde por quê?"
+      ],
+      "correctIndex": 1,
+      "explanation": "Na pergunta, “por que” equivale a “por qual motivo”.",
+      "sourceRef": {
+        "section": "Uso dos porquês",
+        "pages": "214–215"
+      }
+    },
+    {
+      "id": "por-nov-2026-035",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual frase usa “porque” para explicar uma razão?",
+      "options": [
+        "Quero saber por que choveu.",
+        "Por quê você saiu?",
+        "Levei guarda-chuva porque o céu estava escuro.",
+        "Ainda não descobri o porquê."
+      ],
+      "correctIndex": 2,
+      "explanation": "A segunda parte explica o motivo de levar o guarda-chuva.",
+      "sourceRef": {
+        "section": "Uso dos porquês",
+        "pages": "214–215"
+      }
+    },
+    {
+      "id": "por-nov-2026-036",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "Em “Não entendi por que a história terminou assim”, “por que” pode ser trocado por:",
+      "options": [
+        "por qual motivo",
+        "por essa explicação",
+        "o motivo",
+        "por isso"
+      ],
+      "correctIndex": 0,
+      "explanation": "Em pergunta indireta, “por que” tem sentido de “por qual motivo”.",
+      "sourceRef": {
+        "section": "Uso dos porquês",
+        "pages": "214–215"
+      }
+    },
+    {
+      "id": "por-nov-2026-037",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "Complete: “A reunião foi adiada ____ faltou energia. Ninguém explicou o ____ do atraso.”",
+      "options": [
+        "por que / porque",
+        "porque / porquê",
+        "por quê / por que",
+        "porquê / por quê"
+      ],
+      "correctIndex": 1,
+      "explanation": "“Porque” explica; “o porquê” é substantivo acompanhado de artigo.",
+      "sourceRef": {
+        "section": "Uso dos porquês",
+        "pages": "214–215"
+      }
+    },
+    {
+      "id": "por-nov-2026-038",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "Qual opção está correta?",
+      "options": [
+        "Não sei por quê a aula acabou.",
+        "Não sei por que a aula acabou.",
+        "Não sei porque a aula acabou?",
+        "Não sei o por que da aula."
+      ],
+      "correctIndex": 1,
+      "explanation": "Na pergunta indireta, com sentido de “por qual motivo”, usamos “por que”.",
+      "sourceRef": {
+        "section": "Uso dos porquês",
+        "pages": "214–215"
+      }
+    },
+    {
+      "id": "por-nov-2026-039",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual destas palavras começa com h?",
+      "options": [
+        "ino",
+        "hino",
+        "inoh",
+        "nino"
+      ],
+      "correctIndex": 1,
+      "explanation": "“Hino” aparece como exemplo de palavra com h inicial.",
+      "sourceRef": {
+        "section": "H inicial",
+        "pages": "216–217"
+      }
+    },
+    {
+      "id": "por-nov-2026-040",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual palavra está escrita como no vocabulário da seção?",
+      "options": [
+        "hipopótamo",
+        "ipopótamo",
+        "hipopotamo",
+        "ipopotamo"
+      ],
+      "correctIndex": 0,
+      "explanation": "A grafia apresentada é “hipopótamo”, com h inicial e acento.",
+      "sourceRef": {
+        "section": "H inicial",
+        "pages": "216–217"
+      }
+    },
+    {
+      "id": "por-nov-2026-041",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual opção apresenta a grafia correta da palavra estudada?",
+      "options": [
+        "ibisco",
+        "hibisco",
+        "hibiscu",
+        "ibiscu"
+      ],
+      "correctIndex": 1,
+      "explanation": "“Hibisco” aparece na seção com h inicial.",
+      "sourceRef": {
+        "section": "H inicial",
+        "pages": "216–217"
+      }
+    },
+    {
+      "id": "por-nov-2026-042",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual palavra está escrita corretamente?",
+      "options": [
+        "abilidade",
+        "habilidade",
+        "habilida-de",
+        "abilidadeh"
+      ],
+      "correctIndex": 1,
+      "explanation": "A grafia convencional apresentada é “habilidade”, com h inicial.",
+      "sourceRef": {
+        "section": "H inicial",
+        "pages": "216–217"
+      }
+    },
+    {
+      "id": "por-nov-2026-043",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual opção apresenta a grafia correta da palavra “humano”?",
+      "options": [
+        "humano",
+        "umano",
+        "humanno",
+        "umanoh"
+      ],
+      "correctIndex": 0,
+      "explanation": "A palavra do vocabulário estudado é escrita “humano”, com h inicial.",
+      "sourceRef": {
+        "section": "H inicial",
+        "pages": "216–217"
+      }
+    },
+    {
+      "id": "por-nov-2026-044",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual afirmação está de acordo com a explicação da seção?",
+      "options": [
+        "O h inicial representa sempre o som de /r/.",
+        "O h inicial não representa som.",
+        "Toda palavra que começa com vogal recebe h.",
+        "O h inicial deve ser retirado de todas as palavras."
+      ],
+      "correctIndex": 1,
+      "explanation": "A seção ensina que o h inicial não representa som.",
+      "sourceRef": {
+        "section": "H inicial",
+        "pages": "216–217"
+      }
+    },
+    {
+      "id": "por-nov-2026-045",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "Qual par mostra a grafia correta e uma forma incorreta?",
+      "options": [
+        "homem / omem",
+        "omem / homem",
+        "hino / hino",
+        "humano / humano"
+      ],
+      "correctIndex": 0,
+      "explanation": "“Homem” é a grafia correta; “omem” aparece como forma incorreta.",
+      "sourceRef": {
+        "section": "H inicial",
+        "pages": "216–217"
+      }
+    },
+    {
+      "id": "por-nov-2026-046",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe cada parte do artigo de opinião à sua função.",
+      "pairs": [
+        {
+          "left": "Tese",
+          "right": "Apresenta o ponto de vista defendido."
+        },
+        {
+          "left": "Argumento",
+          "right": "Oferece uma razão para apoiar a tese."
+        },
+        {
+          "left": "Conclusão",
+          "right": "Encerra o texto."
+        }
+      ],
+      "explanation": "A tese apresenta a posição, os argumentos oferecem razões para apoiá-la e a conclusão fecha o texto.",
+      "sourceRef": {
+        "section": "Artigo de opinião",
+        "pages": "156–159"
+      }
+    },
+    {
+      "id": "por-nov-2026-047",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Associe cada conceito à sua descrição.",
+      "pairs": [
+        {
+          "left": "Fato",
+          "right": "Informação que pode ser verificada."
+        },
+        {
+          "left": "Opinião",
+          "right": "Ponto de vista ou avaliação."
+        },
+        {
+          "left": "Argumento",
+          "right": "Razão que apoia uma tese."
+        }
+      ],
+      "explanation": "Fatos podem ser verificados, opiniões expressam pontos de vista e argumentos oferecem razões para apoiar uma tese.",
+      "sourceRef": {
+        "section": "Artigo de opinião",
+        "pages": "156–159"
+      }
+    },
+    {
+      "id": "por-nov-2026-048",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe o sujeito à forma verbal que combina com ele.",
+      "pairs": [
+        {
+          "left": "A criança",
+          "right": "lê"
+        },
+        {
+          "left": "As crianças",
+          "right": "leem"
+        },
+        {
+          "left": "Nós",
+          "right": "estudamos"
+        }
+      ],
+      "explanation": "O verbo combina com o sujeito em número e pessoa.",
+      "sourceRef": {
+        "section": "Concordância verbal",
+        "pages": "166–167"
+      }
+    },
+    {
+      "id": "por-nov-2026-049",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Associe cada grupo de sujeitos à forma adequada.",
+      "pairs": [
+        {
+          "left": "O aluno",
+          "right": "escreve"
+        },
+        {
+          "left": "Os alunos",
+          "right": "escrevem"
+        },
+        {
+          "left": "Eu e minha irmã",
+          "right": "brincamos"
+        }
+      ],
+      "explanation": "A forma verbal varia conforme o sujeito.",
+      "sourceRef": {
+        "section": "Concordância verbal",
+        "pages": "166–167"
+      }
+    },
+    {
+      "id": "por-nov-2026-050",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe o substantivo à forma possessiva que concorda com ele.",
+      "pairs": [
+        {
+          "left": "caderno",
+          "right": "meu"
+        },
+        {
+          "left": "mochila",
+          "right": "minha"
+        },
+        {
+          "left": "ideias",
+          "right": "minhas"
+        }
+      ],
+      "explanation": "O possessivo indica posse e combina com o substantivo.",
+      "sourceRef": {
+        "section": "Pronomes possessivos",
+        "pages": "180–181"
+      }
+    },
+    {
+      "id": "por-nov-2026-051",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Associe cada possessivo ao substantivo que combina com ele.",
+      "pairs": [
+        {
+          "left": "nossa",
+          "right": "turma"
+        },
+        {
+          "left": "nossos",
+          "right": "livros"
+        },
+        {
+          "left": "suas",
+          "right": "canetas"
+        }
+      ],
+      "explanation": "As formas variam para concordar com o substantivo.",
+      "sourceRef": {
+        "section": "Pronomes possessivos",
+        "pages": "180–181"
+      }
+    },
+    {
+      "id": "por-nov-2026-052",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Associe a palavra de origem ao verbo dos exemplos.",
+      "pairs": [
+        {
+          "left": "análise",
+          "right": "analisar"
+        },
+        {
+          "left": "economia",
+          "right": "economizar"
+        },
+        {
+          "left": "Palavra de origem com s na última sílaba",
+          "right": "Ajuda a escolher -isar nos exemplos estudados."
+        }
+      ],
+      "explanation": "A seção apresenta análise/analisar e economia/economizar e orienta a observar a palavra primitiva.",
+      "sourceRef": {
+        "section": "Palavras com terminações -izar e -isar",
+        "pages": "182–183"
+      }
+    },
+    {
+      "id": "por-nov-2026-053",
+      "type": "matchColumns",
+      "difficulty": "challenging",
+      "question": "Associe a terminação à pista de escrita.",
+      "pairs": [
+        {
+          "left": "-isar",
+          "right": "A palavra primitiva tem s na última sílaba."
+        },
+        {
+          "left": "-izar",
+          "right": "A palavra primitiva não tem s na última sílaba."
+        },
+        {
+          "left": "Palavra primitiva",
+          "right": "É comparada antes de escolher a terminação."
+        }
+      ],
+      "explanation": "A dica compara a palavra de origem e a presença de s na última sílaba.",
+      "sourceRef": {
+        "section": "Palavras com terminações -izar e -isar",
+        "pages": "182–183"
+      }
+    },
+    {
+      "id": "por-nov-2026-054",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Associe a forma ao uso estudado.",
+      "pairs": [
+        {
+          "left": "porque",
+          "right": "Introduz uma explicação."
+        },
+        {
+          "left": "por que",
+          "right": "Equivale a “por qual motivo”."
+        },
+        {
+          "left": "por quê",
+          "right": "Pode aparecer no fim de pergunta."
+        }
+      ],
+      "explanation": "O sentido e a posição ajudam a escolher a forma correta.",
+      "sourceRef": {
+        "section": "Uso dos porquês",
+        "pages": "214–215"
+      }
+    },
+    {
+      "id": "por-nov-2026-055",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Associe a forma à sua característica.",
+      "pairs": [
+        {
+          "left": "porquê",
+          "right": "Substantivo que pode vir com artigo."
+        },
+        {
+          "left": "porque",
+          "right": "Escrito junto e sem acento."
+        },
+        {
+          "left": "por quê",
+          "right": "Escrito separado e com acento."
+        }
+      ],
+      "explanation": "Cada forma tem grafia e função próprias.",
+      "sourceRef": {
+        "section": "Uso dos porquês",
+        "pages": "214–215"
+      }
+    },
+    {
+      "id": "por-nov-2026-056",
+      "type": "matchColumns",
+      "difficulty": "challenging",
+      "question": "Associe a frase à forma que a completa.",
+      "pairs": [
+        {
+          "left": "“____ você saiu?”",
+          "right": "Por que"
+        },
+        {
+          "left": "“Saí ____ estava tarde.”",
+          "right": "porque"
+        },
+        {
+          "left": "“Você saiu ____?”",
+          "right": "por quê"
+        }
+      ],
+      "explanation": "A pergunta inicial usa por que; a explicação usa porque; no fim da pergunta, por quê.",
+      "sourceRef": {
+        "section": "Uso dos porquês",
+        "pages": "214–215"
+      }
+    },
+    {
+      "id": "por-nov-2026-057",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Associe a palavra à observação correta.",
+      "pairs": [
+        {
+          "left": "hino",
+          "right": "Tem h inicial."
+        },
+        {
+          "left": "humano",
+          "right": "Tem h inicial não pronunciado."
+        },
+        {
+          "left": "hipopótamo",
+          "right": "Tem h inicial e acento agudo."
+        }
+      ],
+      "explanation": "Essas palavras aparecem no vocabulário estudado.",
+      "sourceRef": {
+        "section": "H inicial",
+        "pages": "216–217"
+      }
+    },
+    {
+      "id": "por-nov-2026-058",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Associe a forma incorreta à grafia correta.",
+      "pairs": [
+        {
+          "left": "omem",
+          "right": "homem"
+        },
+        {
+          "left": "élice",
+          "right": "hélice"
+        },
+        {
+          "left": "armonia",
+          "right": "harmonia"
+        }
+      ],
+      "explanation": "A seção contrasta essas escritas para mostrar o h na grafia convencional.",
+      "sourceRef": {
+        "section": "H inicial",
+        "pages": "216–217"
+      }
+    },
+    {
+      "id": "por-nov-2026-059",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Associe a pergunta de leitura à informação procurada.",
+      "pairs": [
+        {
+          "left": "Qual é o assunto?",
+          "right": "Tema tratado no texto."
+        },
+        {
+          "left": "O que aconteceu?",
+          "right": "Informação ou acontecimento apresentado."
+        },
+        {
+          "left": "O que o autor defende?",
+          "right": "Ponto de vista ou tese."
+        }
+      ],
+      "explanation": "As perguntas observam tema, informações e ponto de vista.",
+      "sourceRef": {
+        "section": "Artigo de opinião",
+        "pages": "156–159"
+      }
+    },
+    {
+      "id": "por-nov-2026-060",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Associe cada frase ao número do sujeito.",
+      "pairs": [
+        {
+          "left": "A criança lê.",
+          "right": "Sujeito no singular."
+        },
+        {
+          "left": "As crianças leem.",
+          "right": "Sujeito no plural."
+        },
+        {
+          "left": "Nós lemos.",
+          "right": "Primeira pessoa do plural."
+        }
+      ],
+      "explanation": "A concordância verbal acompanha o sujeito em número e pessoa.",
+      "sourceRef": {
+        "section": "Concordância verbal",
+        "pages": "166–167"
+      }
+    }
+  ]
+}

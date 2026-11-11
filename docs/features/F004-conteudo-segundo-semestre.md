@@ -38,7 +38,8 @@ Configurações, credenciais e permissões de uso de Edebê e Richmond College a
 
 ## Implementação publicada
 
-- Geografia P1 e P2: capítulos 7–8 e 11–12.
+- Geografia P1: capítulos 7–8, com material e questões aprovados.
+- O comunicado da professora de 30/10/2026 atualizou o escopo de Geografia para os capítulos 10 e 11. O banco antigo de capítulos 11–12 foi retirado da experiência ativa; o novo material de novembro foi aprovado localmente após conferir as fontes e revisar o banco. A data de 16/11 do cronograma escolar permanece válida.
 - Matemática T2: capítulos 4 e 8, 60 questões aprovadas.
 - Matemática P1: capítulos 5, 6 e 7, 60 questões aprovadas.
 - Ciências P1: capítulos 8 e 9, 60 questões aprovadas, com leitura e prática separadas.

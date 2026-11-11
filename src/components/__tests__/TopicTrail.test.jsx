@@ -28,6 +28,14 @@ const workReview = {
   chapter: '4 e 8',
 }
 
+const novemberReview = {
+  ...review,
+  id: 'geografia-novembro-2026',
+  title: 'Prova de novembro — Geografia',
+  reviewLabel: 'NOVEMBRO',
+  examDate: '2026-11-16',
+}
+
 describe('TopicTrail', () => {
   it('separa leitura e prática sem repetir capítulos cobertos', () => {
     const onStart = vi.fn()
@@ -63,5 +71,19 @@ describe('TopicTrail', () => {
       />,
     )
     expect(screen.getByText('T2')).toBeInTheDocument()
+  })
+
+  it('mostra o selo NOVEMBRO e a data confirmada no material', () => {
+    render(
+      <TopicTrail
+        subject={{ id: 'geografia' }}
+        topics={[novemberReview]}
+        getTopicProgress={() => ({ completed: false })}
+        onStart={() => {}}
+        onReview={() => {}}
+      />,
+    )
+    expect(screen.getByText('NOVEMBRO')).toBeInTheDocument()
+    expect(screen.getByText('Prova em 16 de novembro')).toBeInTheDocument()
   })
 })

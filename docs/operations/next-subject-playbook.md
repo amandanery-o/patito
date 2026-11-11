@@ -1,16 +1,15 @@
 # Roteiro editorial para as próximas matérias
 
-Este é o procedimento obrigatório para publicar qualquer novo material de prova no Patito. Geografia P1 e P2 são a implementação de referência, mas scripts e identificadores novos devem ser genéricos para matéria, prova e fonte.
+Este é o procedimento obrigatório para publicar qualquer novo material de prova no Patito. Geografia P1 e a revisão P2 histórica são exemplos de referência; a P2 foi retirada da experiência ativa após a atualização do escopo para P3. Scripts e identificadores novos devem ser genéricos para matéria, prova e fonte.
 
 ## Ordem recomendada
 
 A prioridade acompanha a primeira prova ainda sem material publicado. Matemática T2 e P1 foram concluídas em 21/08/2026 e permanecem como implementação de referência:
 
-1. Inglês P1 — unidades 5 e 6 — prova em 25/09/2026.
-2. Português P1 — tópicos e páginas do calendário — prova em 28/09/2026.
-3. Ciências P1 — capítulos 8 e 9 — prova em 30/09/2026.
-4. História P1 — capítulos 9 e 10 — prova em 08/10/2026, conforme comunicado de 17/09.
-5. Demais trabalhos e materiais P2, em ordem de data.
+1. Geografia — capítulos 10 e 11 — material aprovado localmente em 11/11/2026; prova em 16/11 conforme cronograma escolar.
+2. Ciências — capítulos 10 e 11 — material aprovado localmente em 11/11/2026.
+3. História — capítulos 11 e 12 — material aprovado localmente em 11/11/2026.
+4. Demais avaliações sem material, em ordem de data.
 
 Se a fonte autorizada de uma matéria não estiver disponível, o agente registra o bloqueio e avança para a próxima fonte disponível. Não inventa conteúdo nem usa páginas não conferidas.
 
@@ -25,7 +24,7 @@ Cada prova publicada precisa formar uma única unidade de **Material de revisão
 - banco mínimo de 60 questões aprovadas;
 - alvo de 45 questões de múltipla escolha e 15 associações;
 - referência de seção e página em cada questão;
-- registro do modelo, versão do prompt, data, hash e aprovação editorial.
+- registro do método de autoria e, quando aplicável, modelo/provedor, versão do prompt, data, hash e aprovação editorial.
 
 O texto integral do livro, imagens protegidas, credenciais, cookies e dados do aluno não entram no Git nem são enviados ao aplicativo.
 
@@ -55,9 +54,11 @@ O texto integral do livro, imagens protegidas, credenciais, cookies e dados do a
 
 ### 4. Gerar o rascunho de questões
 
-- Usar os prompts versionados em `scripts/editorial/prompts/`.
-- Enviar ao modelo somente o mapa conceitual autorizado, nunca dados de alunos.
-- Gerar em lotes retomáveis e manter IDs estáveis por matéria e prova.
+- Por padrão, redigir as questões no fluxo ativo do Codex a partir do mapa conceitual autorizado e salvar o rascunho no repo. Esse caminho não chama uma API externa.
+- Os prompts versionados em `scripts/editorial/prompts/` podem orientar a autoria nos dois caminhos.
+- O gerador local com API da Anthropic é opcional. Só usar após pedido explícito da mantenedora, pois pode consumir créditos cobrados separadamente; a assinatura do ChatGPT/Codex não é uma credencial para esse script.
+- Se a mantenedora autorizar uma API, enviar somente o mapa conceitual autorizado, nunca dados de alunos, e registrar provedor, modelo e versão do prompt.
+- Em qualquer caminho, gerar em lotes retomáveis e manter IDs estáveis por matéria e prova.
 - Distribuir alternativas corretas sem padrão previsível.
 - Rejeitar questões ambíguas, discursivas, dependentes de imagem ausente ou de memorização não prevista.
 
@@ -67,7 +68,7 @@ O texto integral do livro, imagens protegidas, credenciais, cookies e dados do a
 - O revisor pode corrigir problemas sustentados claramente pela fonte.
 - Dúvidas sem solução segura bloqueiam a questão e são escaladas à mantenedora.
 - A aprovação é auditável e vinculada ao hash exato do rascunho.
-- Autor e revisor não são o mesmo agente lógico.
+- Autor e revisor não são o mesmo agente lógico. Usar `.claude/agents/editorial-reviewer.md` como agente revisor independente do rascunho salvo.
 
 ### 6. Publicar na experiência infantil
 

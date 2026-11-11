@@ -1,0 +1,1244 @@
+{
+  "status": "approved",
+  "contentId": "ingles-novembro-2026",
+  "title": "Prova de novembro — Inglês",
+  "summary": "Revisão das unidades 7 (Eating Out) e 8 (Wild Nature): pedidos e preços em restaurante, números de 70 a 100, there is/there are, natureza, atividades ao ar livre, I’d like to e ações em andamento.",
+  "summarySections": [
+    {
+      "title": "Eating Out — unidade 7",
+      "text": "Use “How much is ...?” para perguntar o preço de um item e “Can I have ..., please?” para fazer um pedido educado. Leia os valores escritos no enunciado. Use “there is” para um item e “there are” para dois ou mais. Revise os números de 70 a 100."
+    },
+    {
+      "title": "Wild Nature — unidade 8",
+      "text": "Reconheça glacier (geleira), volcano (vulcão), river (rio), waterfall (cachoeira), cave (caverna) e forest (floresta). “I’d like to ...” expressa uma atividade desejada."
+    },
+    {
+      "title": "Ações acontecendo agora",
+      "text": "Para falar de uma ação em andamento, use “is” ou “are” com verbo terminado em -ing. Use “is” com he/she e “are” com they."
+    }
+  ],
+  "keyIdeas": [
+    "“How much is ...?” pergunta o preço de um item.",
+    "“There is” acompanha um item; “there are” acompanha mais de um.",
+    "“I’d like to” expressa uma atividade desejada e vem seguido do verbo em sua forma base.",
+    "Use is ou are + verbo terminado em -ing para ações acontecendo agora."
+  ],
+  "source": {
+    "provider": "richmond",
+    "resourceId": "Go Primary 4 Digital Book BR/unit-7-pages-52-58/unit-8-pages-74-80",
+    "version": "2026-11-10"
+  },
+  "generation": {
+    "authoringMethod": "Codex in-session",
+    "promptVersion": "question-batch-v2",
+    "generatedAt": "2026-11-11T10:00:00-03:00"
+  },
+  "editorialApproval": {
+    "reviewer": "Agente editorial independente Patito",
+    "reviewerType": "agent",
+    "reviewMethod": "authorized-source-map-question-by-question+full-second-read-v1",
+    "reviewedAt": "2026-11-11T11:00:00-03:00",
+    "draftDigest": "d51c6b158a0bf59f81e580cdce44458a99ba7bdafcaebc12311bb40df978d732",
+    "schemaVersion": 1
+  },
+  "publishedAt": "2026-11-11T11:24:38.339Z",
+  "questions": [
+    {
+      "id": "eng-nov-2026-001",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "The menu lists a price of seventy-two. Which number represents it?",
+      "options": [
+        "72",
+        "71",
+        "73",
+        "82"
+      ],
+      "correctIndex": 0,
+      "explanation": "Seventy-two is written as 72.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-002",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "The menu lists a price of seventy-six. Which number represents it?",
+      "options": [
+        "75",
+        "76",
+        "77",
+        "86"
+      ],
+      "correctIndex": 1,
+      "explanation": "Seventy-six is written as 76.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-003",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "The menu lists a price of seventy-eight. Which number represents it?",
+      "options": [
+        "77",
+        "79",
+        "78",
+        "88"
+      ],
+      "correctIndex": 2,
+      "explanation": "Seventy-eight is written as 78.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-004",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "The menu lists a price of eighty. Which number represents it?",
+      "options": [
+        "79",
+        "81",
+        "90",
+        "80"
+      ],
+      "correctIndex": 3,
+      "explanation": "Eighty is written as 80.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-005",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "The menu lists a price of eighty-four. Which number represents it?",
+      "options": [
+        "84",
+        "83",
+        "85",
+        "94"
+      ],
+      "correctIndex": 0,
+      "explanation": "Eighty-four is written as 84.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-006",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "The menu lists a price of eighty-eight. Which number represents it?",
+      "options": [
+        "87",
+        "88",
+        "89",
+        "98"
+      ],
+      "correctIndex": 1,
+      "explanation": "Eighty-eight is written as 88.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-007",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "The menu lists a price of ninety. Which number represents it?",
+      "options": [
+        "89",
+        "91",
+        "90",
+        "100"
+      ],
+      "correctIndex": 2,
+      "explanation": "Ninety is written as 90.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-008",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "The menu lists a price of ninety-two. Which number represents it?",
+      "options": [
+        "91",
+        "93",
+        "102",
+        "92"
+      ],
+      "correctIndex": 3,
+      "explanation": "Ninety-two is written as 92.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-009",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "The menu lists a price of ninety-five. Which number represents it?",
+      "options": [
+        "95",
+        "94",
+        "96",
+        "105"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ninety-five is written as 95.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-010",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "The menu lists a price of one hundred. Which number represents it?",
+      "options": [
+        "99",
+        "100",
+        "101",
+        "90"
+      ],
+      "correctIndex": 1,
+      "explanation": "One hundred is written as 100.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-011",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "There ___ one apple on the table.",
+      "options": [
+        "are",
+        "am",
+        "is",
+        "be"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use “there is” with one item.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-012",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "There ___ one sandwich on the table.",
+      "options": [
+        "are",
+        "am",
+        "be",
+        "is"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use “there is” with one item.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-013",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "There ___ one cup on the table.",
+      "options": [
+        "is",
+        "are",
+        "am",
+        "be"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use “there is” with one item.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-014",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "There ___ one orange on the table.",
+      "options": [
+        "are",
+        "is",
+        "am",
+        "be"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use “there is” with one item.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-015",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "There ___ one cake on the table.",
+      "options": [
+        "are",
+        "am",
+        "is",
+        "be"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use “there is” with one item.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-016",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "There ___ one glass on the table.",
+      "options": [
+        "are",
+        "am",
+        "be",
+        "is"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use “there is” with one item.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-017",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "There ___ one banana on the table.",
+      "options": [
+        "is",
+        "are",
+        "am",
+        "be"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use “there is” with one item.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-018",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "There ___ one cookie on the table.",
+      "options": [
+        "are",
+        "is",
+        "am",
+        "be"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use “there is” with one item.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-019",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "There ___ three cookies on the table.",
+      "options": [
+        "is",
+        "am",
+        "are",
+        "be"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use “there are” with more than one item.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-020",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "There ___ three glasses on the table.",
+      "options": [
+        "is",
+        "am",
+        "be",
+        "are"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use “there are” with more than one item.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-021",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "There ___ three bananas on the table.",
+      "options": [
+        "are",
+        "is",
+        "am",
+        "be"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use “there are” with more than one item.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-022",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "There ___ three apples on the table.",
+      "options": [
+        "is",
+        "are",
+        "am",
+        "be"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use “there are” with more than one item.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-023",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "There ___ three sandwiches on the table.",
+      "options": [
+        "is",
+        "am",
+        "are",
+        "be"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use “there are” with more than one item.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-024",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "There ___ three cups on the table.",
+      "options": [
+        "is",
+        "am",
+        "be",
+        "are"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use “there are” with more than one item.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-025",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "There ___ three oranges on the table.",
+      "options": [
+        "are",
+        "is",
+        "am",
+        "be"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use “there are” with more than one item.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-026",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Which question asks the price of one item?",
+      "options": [
+        "How many soups are on the menu?",
+        "How much is the soup?",
+        "Where is the soup?",
+        "What is in the soup?"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use the clue provided in the sentence.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-027",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Choose a polite restaurant request.",
+      "options": [
+        "Give water now.",
+        "Water you give?",
+        "Can I have some water, please?",
+        "I water have."
+      ],
+      "correctIndex": 2,
+      "explanation": "Use the clue provided in the sentence.",
+      "sourceRef": {
+        "section": "Eating Out: food, drinks and restaurant language",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-028",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Tea costs 72 and juice costs 84. Which costs more?",
+      "options": [
+        "The tea",
+        "They cost the same",
+        "The menu has no prices",
+        "The juice"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use the clue provided in the sentence.",
+      "sourceRef": {
+        "section": "Eating Out: food, drinks and restaurant language",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-029",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "A menu lists the meal at 70. How can you answer “How much is the meal?”",
+      "options": [
+        "It costs 70.",
+        "There are seventy meals.",
+        "The meal is at seven o’clock.",
+        "I’d like to sail."
+      ],
+      "correctIndex": 0,
+      "explanation": "The question asks for the price of one item; the menu lists 70.",
+      "sourceRef": {
+        "section": "Eating Out: food, drinks and restaurant language",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-030",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Cake costs 80 and fruit costs 73. Which is cheaper?",
+      "options": [
+        "The cake",
+        "The fruit",
+        "They cost the same",
+        "Neither has a price"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use the clue provided in the sentence.",
+      "sourceRef": {
+        "section": "Eating Out: food, drinks and restaurant language",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-031",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Complete: “I’d like ___ sail on the river.”",
+      "options": [
+        "is",
+        "are",
+        "to",
+        "-ing"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use the unit vocabulary or the stated grammar pattern.",
+      "sourceRef": {
+        "section": "Vacation wishes and actions",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-032",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Complete: “She ___ exploring a cave now.”",
+      "options": [
+        "are",
+        "am",
+        "be",
+        "is"
+      ],
+      "correctIndex": 3,
+      "explanation": "Use the unit vocabulary or the stated grammar pattern.",
+      "sourceRef": {
+        "section": "Vacation wishes and actions",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-033",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Complete: “They are ___ in the forest.”",
+      "options": [
+        "hiking",
+        "hike",
+        "hikes",
+        "hiked"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use the unit vocabulary or the stated grammar pattern.",
+      "sourceRef": {
+        "section": "Wild Nature and outdoor activities",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-034",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Complete: “What ___ she doing?”",
+      "options": [
+        "are",
+        "is",
+        "am",
+        "be"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use the unit vocabulary or the stated grammar pattern.",
+      "sourceRef": {
+        "section": "Vacation wishes and actions",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-035",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Complete: “What are they ___?”",
+      "options": [
+        "do",
+        "does",
+        "doing",
+        "did"
+      ],
+      "correctIndex": 2,
+      "explanation": "Use the unit vocabulary or the stated grammar pattern.",
+      "sourceRef": {
+        "section": "Vacation wishes and actions",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-036",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Which activity is connected with a glacier in the unit?",
+      "options": [
+        "Visit a glacier.",
+        "Climb a volcano.",
+        "Swim near a waterfall.",
+        "Hike in a forest."
+      ],
+      "correctIndex": 0,
+      "explanation": "The unit includes visiting glaciers as an outdoor activity.",
+      "sourceRef": {
+        "section": "Wild Nature and outdoor activities",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-037",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Which activity matches a volcano?",
+      "options": [
+        "Visit a glacier.",
+        "Sail on a river.",
+        "Climb a volcano.",
+        "Swim near a waterfall."
+      ],
+      "correctIndex": 2,
+      "explanation": "Use the unit vocabulary or the stated grammar pattern.",
+      "sourceRef": {
+        "section": "Wild Nature and outdoor activities",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-038",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Which one is a natural place?",
+      "options": [
+        "A restaurant bill",
+        "A waterfall",
+        "A movie ticket",
+        "A menu"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use the unit vocabulary or the stated grammar pattern.",
+      "sourceRef": {
+        "section": "Wild Nature and outdoor activities",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-039",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Which activity would take place in a cave?",
+      "options": [
+        "Climb a volcano.",
+        "Hike in a forest.",
+        "Visit a glacier.",
+        "Explore a cave."
+      ],
+      "correctIndex": 3,
+      "explanation": "Use the unit vocabulary or the stated grammar pattern.",
+      "sourceRef": {
+        "section": "Wild Nature and outdoor activities",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-040",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Which activity matches a river?",
+      "options": [
+        "Explore a cave.",
+        "Sail on a river.",
+        "Climb a volcano.",
+        "Visit a glacier."
+      ],
+      "correctIndex": 1,
+      "explanation": "Use the unit vocabulary or the stated grammar pattern.",
+      "sourceRef": {
+        "section": "Wild Nature and outdoor activities",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-041",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Which activity matches a forest?",
+      "options": [
+        "Swim near a waterfall.",
+        "Climb a volcano.",
+        "Hike in a forest.",
+        "Sail on a river."
+      ],
+      "correctIndex": 2,
+      "explanation": "Use the unit vocabulary or the stated grammar pattern.",
+      "sourceRef": {
+        "section": "Wild Nature and outdoor activities",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-042",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Complete: “I’d like to ___ a glacier.”",
+      "options": [
+        "visiting",
+        "visit",
+        "visits",
+        "visited"
+      ],
+      "correctIndex": 1,
+      "explanation": "Use the unit vocabulary or the stated grammar pattern.",
+      "sourceRef": {
+        "section": "Vacation wishes and actions",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-043",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Which sentence expresses a vacation wish?",
+      "options": [
+        "I’d like to hiking in the forest.",
+        "I’d like hiking in the forest.",
+        "I’d like to hike in the forest.",
+        "I’d to like hike in the forest."
+      ],
+      "correctIndex": 2,
+      "explanation": "Use the unit vocabulary or the stated grammar pattern.",
+      "sourceRef": {
+        "section": "Vacation wishes and actions",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-044",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Choose the correct sentence about an action happening now.",
+      "options": [
+        "He are sailing on the river.",
+        "He is sail on the river.",
+        "He sailing is the river.",
+        "He is sailing on the river."
+      ],
+      "correctIndex": 3,
+      "explanation": "Use the unit vocabulary or the stated grammar pattern.",
+      "sourceRef": {
+        "section": "Vacation wishes and actions",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-045",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Complete: “The children are ___ near the waterfall.”",
+      "options": [
+        "swimming",
+        "swim",
+        "swims",
+        "swam"
+      ],
+      "correctIndex": 0,
+      "explanation": "Use the unit vocabulary or the stated grammar pattern.",
+      "sourceRef": {
+        "section": "Vacation wishes and actions",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-046",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada item à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "How much is ...?",
+          "right": "Ask the price of one item."
+        },
+        {
+          "left": "There is",
+          "right": "One item."
+        },
+        {
+          "left": "There are",
+          "right": "More than one item."
+        },
+        {
+          "left": "seventy-eight",
+          "right": "78."
+        }
+      ],
+      "explanation": "Confira o vocabulário, a estrutura ou o número indicado em cada par.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-047",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada item à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "eighty-four",
+          "right": "84."
+        },
+        {
+          "left": "ninety-two",
+          "right": "92."
+        },
+        {
+          "left": "one hundred",
+          "right": "100."
+        },
+        {
+          "left": "Can I have ...?",
+          "right": "A polite request."
+        }
+      ],
+      "explanation": "Confira o vocabulário, a estrutura ou o número indicado em cada par.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are; Eating Out: food, drinks and restaurant language",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-048",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada item à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "How much is the tea?",
+          "right": "Ask for its price."
+        },
+        {
+          "left": "There is a sandwich.",
+          "right": "One sandwich."
+        },
+        {
+          "left": "There are two apples.",
+          "right": "Two apples."
+        }
+      ],
+      "explanation": "Confira o vocabulário, a estrutura ou o número indicado em cada par.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-049",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada item à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "seventy-six",
+          "right": "76."
+        },
+        {
+          "left": "eighty-eight",
+          "right": "88."
+        },
+        {
+          "left": "ninety-five",
+          "right": "95."
+        }
+      ],
+      "explanation": "Confira o vocabulário, a estrutura ou o número indicado em cada par.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-050",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada item à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "a menu price",
+          "right": "80 for a cake."
+        },
+        {
+          "left": "How much is the cake?",
+          "right": "Ask the cake’s cost."
+        },
+        {
+          "left": "There are two cups.",
+          "right": "Plural items."
+        }
+      ],
+      "explanation": "Confira o vocabulário, a estrutura ou o número indicado em cada par.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-051",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada item à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "one orange",
+          "right": "There is an orange."
+        },
+        {
+          "left": "three glasses",
+          "right": "There are three glasses."
+        },
+        {
+          "left": "a polite order",
+          "right": "Can I have some juice, please?"
+        }
+      ],
+      "explanation": "Confira o vocabulário, a estrutura ou o número indicado em cada par.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are; Eating Out: food, drinks and restaurant language",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-052",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada item à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "glacier",
+          "right": "visit a glacier."
+        },
+        {
+          "left": "volcano",
+          "right": "A place someone may climb."
+        },
+        {
+          "left": "waterfall",
+          "right": "A place near which someone may swim."
+        }
+      ],
+      "explanation": "Confira o vocabulário, a estrutura ou o número indicado em cada par.",
+      "sourceRef": {
+        "section": "Wild Nature and outdoor activities",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-053",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada item à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "sail",
+          "right": "on a river."
+        },
+        {
+          "left": "explore",
+          "right": "a cave."
+        },
+        {
+          "left": "hike",
+          "right": "in a forest."
+        },
+        {
+          "left": "visit",
+          "right": "a glacier."
+        }
+      ],
+      "explanation": "Confira o vocabulário, a estrutura ou o número indicado em cada par.",
+      "sourceRef": {
+        "section": "Wild Nature and outdoor activities",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-054",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada item à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "I’d like to",
+          "right": "a vacation wish."
+        },
+        {
+          "left": "is + verb-ing",
+          "right": "Action now with he or she."
+        },
+        {
+          "left": "are + verb-ing",
+          "right": "Action now with they."
+        }
+      ],
+      "explanation": "Confira o vocabulário, a estrutura ou o número indicado em cada par.",
+      "sourceRef": {
+        "section": "Vacation wishes and actions",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-055",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada item à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "What is she doing?",
+          "right": "Ask what one girl or woman is doing."
+        },
+        {
+          "left": "What are they doing?",
+          "right": "Ask about more than one person."
+        },
+        {
+          "left": "He is climbing.",
+          "right": "One person, action now."
+        }
+      ],
+      "explanation": "Confira o vocabulário, a estrutura ou o número indicado em cada par.",
+      "sourceRef": {
+        "section": "Vacation wishes and actions",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-056",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada item à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "swim",
+          "right": "near a waterfall."
+        },
+        {
+          "left": "climb",
+          "right": "a volcano."
+        },
+        {
+          "left": "sail",
+          "right": "on a river."
+        }
+      ],
+      "explanation": "Confira o vocabulário, a estrutura ou o número indicado em cada par.",
+      "sourceRef": {
+        "section": "Wild Nature and outdoor activities",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-057",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada item à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "I’d like to visit",
+          "right": "a glacier."
+        },
+        {
+          "left": "I’d like to explore",
+          "right": "a cave."
+        },
+        {
+          "left": "I’d like to hike",
+          "right": "in a forest."
+        }
+      ],
+      "explanation": "Confira o vocabulário, a estrutura ou o número indicado em cada par.",
+      "sourceRef": {
+        "section": "Vacation wishes and actions",
+        "pages": "74–80"
+      }
+    },
+    {
+      "id": "eng-nov-2026-058",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada item à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "72",
+          "right": "seventy-two."
+        },
+        {
+          "left": "90",
+          "right": "ninety."
+        },
+        {
+          "left": "100",
+          "right": "one hundred."
+        }
+      ],
+      "explanation": "Confira o vocabulário, a estrutura ou o número indicado em cada par.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-059",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada item à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "one item",
+          "right": "there is."
+        },
+        {
+          "left": "several items",
+          "right": "there are."
+        },
+        {
+          "left": "ask a price",
+          "right": "How much is ...?"
+        }
+      ],
+      "explanation": "Confira o vocabulário, a estrutura ou o número indicado em cada par.",
+      "sourceRef": {
+        "section": "Prices, numbers and there is/there are",
+        "pages": "52–58"
+      }
+    },
+    {
+      "id": "eng-nov-2026-060",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada item à descrição correspondente.",
+      "pairs": [
+        {
+          "left": "She is exploring.",
+          "right": "One person, action happening now."
+        },
+        {
+          "left": "They are hiking.",
+          "right": "More than one, action happening now."
+        },
+        {
+          "left": "I’d like to sail.",
+          "right": "A desired activity."
+        }
+      ],
+      "explanation": "Confira o vocabulário, a estrutura ou o número indicado em cada par.",
+      "sourceRef": {
+        "section": "Vacation wishes and actions",
+        "pages": "74–80"
+      }
+    }
+  ]
+}
