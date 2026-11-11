@@ -2,7 +2,7 @@
 
 ## Estado
 
-Conteúdo de novembro publicado em produção em 11/11/2026. O destaque das avaliações na tela inicial está em implementação. A mantenedora confirmou que o foco deve ficar nas provas de novembro; avaliações já ocorridas ficam recolhidas nessa mesma seção e continuam acessíveis para revisão.
+Conteúdo e destaque de novembro publicados em produção em 11/11/2026. A mantenedora confirmou que o foco deve ficar nas provas de novembro; avaliações já ocorridas ficam recolhidas nessa mesma seção e continuam acessíveis para revisão.
 
 ## Requisitos relacionados
 
@@ -57,7 +57,7 @@ Cada material publicado tem resumo, fonte e 60 questões aprovadas. As datas for
 
 - Materiais e datas de todas as seis provas estão publicados na Vercel e ligados ao Supabase já existente.
 - O destaque é uma mudança somente de interface; não requer alteração de schema ou de permissões.
-- Validar em tela pequena, inclusive o acesso a materiais cuja data já passou.
+- Validado em tela pequena na prévia, com abertura direta do resumo de Português; publicação de produção conferida no domínio oficial.
 
 ## Não objetivos
 
