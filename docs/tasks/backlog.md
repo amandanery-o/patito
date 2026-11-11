@@ -102,3 +102,7 @@ Status: em implementação contínua. Itens com `✅` possuem evidência no cód
 - `TASK-065` ✅ Atualizar Matemática para 17/11 com base na informação da mantenedora de 10/11; versionar o manifesto v4 e aplicar correção transacional no Supabase, preservando o escopo dos capítulos 9, 10 e 11.
 
 - `TASK-066` ✅ Destacar as provas de novembro na tela inicial, ordenar as próximas por data e manter as já realizadas recolhidas em **Já aconteceram**, com acesso para rever o material; não incluir outros eventos da Agenda. Build, lint e formatação aprovados; prévia pequena e domínio de produção conferidos.
+
+## F011 — Continuação organizada da tela inicial
+
+- `TASK-067` 🟡 Reorganizar somente a área abaixo das aulas de hoje: agrupar outros lembretes em um cartão que abre a Agenda, mostrar matérias com material numa grade compacta e recolher matérias em preparação.

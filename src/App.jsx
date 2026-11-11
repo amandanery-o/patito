@@ -3,7 +3,6 @@ import Header from './components/Header'
 import Onboarding from './components/Onboarding'
 import LoginScreen from './components/LoginScreen'
 import { useAuth } from './contexts/AuthContext'
-import SubjectCard from './components/SubjectCard'
 import ExerciseCard from './components/ExerciseCard'
 import ResultScreen from './components/ResultScreen'
 import CalendarIcon from './components/CalendarIcon'
@@ -12,6 +11,7 @@ import BottomNav from './components/BottomNav'
 import TopicTrail from './components/TopicTrail'
 import HomeworkView from './components/HomeworkView'
 import NovemberExamSpotlight from './components/NovemberExamSpotlight'
+import HomeStudyGrid from './components/HomeStudyGrid'
 import ProblemReportModal from './components/ProblemReportModal'
 import ContentReview from './components/ContentReview'
 import { useProgress } from './hooks/useProgress'
@@ -303,12 +303,8 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
 
   if (view === VIEWS.HOME) {
     const { mood, message } = getMascotState(user.name, upcomingExams.length)
-    const TODAY_MS = Date.now()
-    const NEW_THRESHOLD_DAYS = 7
     const hasStudyContent = (subject) =>
       subject.topics.some((topic) => topic.questions.length > 0 || topic.summarySections?.length > 0)
-    const isNew = (s) =>
-      s.lastUpdated && (TODAY_MS - parseLocalDate(s.lastUpdated).getTime()) / 86400000 <= NEW_THRESHOLD_DAYS
 
     const subjectsWithContent = STUDY_SUBJECTS.filter(hasStudyContent).sort((a, b) => {
       if (a.lastUpdated && b.lastUpdated)
@@ -318,6 +314,11 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
       return 0
     })
     const subjectsComingSoon = STUDY_SUBJECTS.filter((subject) => !hasStudyContent(subject))
+    const nextAgendaEvent = otherUpcomingExams[0]
+    const nextAgendaSubject = nextAgendaEvent
+      ? SUBJECTS.find((subject) => subject.id === nextAgendaEvent.subject)
+      : null
+    const nextAgendaDays = nextAgendaEvent ? daysUntil(nextAgendaEvent.date) : null
 
     return (
       <div className="min-h-screen bg-gray-50 pb-20">
@@ -398,70 +399,50 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
             )
           })()}
 
-          {/* Alertas de provas */}
-          {otherUpcomingExams.length > 0 && (
-            <div className="space-y-2">
-              {otherUpcomingExams.slice(0, 3).map((exam) => {
-                const days = daysUntil(exam.date)
-                const subj = SUBJECTS.find((s) => s.id === exam.subject)
-                const isProva = exam.type === 'prova'
-                const canStudy = isProva && subj && !subj.calendarOnly
-
-                return (
-                  <button
-                    key={exam.id}
-                    onClick={() => {
-                      if (!canStudy) return
-                      setSelectedSubject(subj)
-                      setView(VIEWS.SUBJECT)
-                    }}
-                    className={`w-full bg-blue-50 border border-blue-200 rounded-2xl p-3 flex items-center gap-3 text-left transition-all
-                      ${canStudy ? 'active:scale-95 hover:bg-blue-100 hover:border-blue-300' : 'cursor-default'}`}
-                  >
-                    <CalendarIcon size="sm" date={exam.endDate || exam.date} />
-                    <p className="text-sm font-bold text-blue-800 flex-1">
-                      {examAlertText(exam, subj?.name || exam.subject, days)}
-                    </p>
-                    {canStudy && <span className="text-blue-400 text-xl font-bold">›</span>}
-                  </button>
-                )
-              })}
-            </div>
+          {/* Próximo compromisso fora das provas de novembro já destacadas acima */}
+          {nextAgendaEvent && (
+            <button
+              type="button"
+              onClick={() => setView(VIEWS.CALENDAR)}
+              aria-label="Abrir Agenda escolar"
+              className="flex w-full items-center gap-3 rounded-2xl border border-blue-100 bg-blue-50 p-3 text-left transition hover:bg-blue-100 active:scale-[0.99]"
+            >
+              <CalendarIcon size="sm" date={nextAgendaEvent.endDate || nextAgendaEvent.date} />
+              <span className="min-w-0 flex-1">
+                <span className="block text-xs font-extrabold uppercase tracking-wide text-blue-600">
+                  Próxima data da Agenda
+                </span>
+                <span className="mt-0.5 block text-sm font-bold text-blue-900">
+                  {examAlertText(nextAgendaEvent, nextAgendaSubject?.name || nextAgendaEvent.subject, nextAgendaDays)}
+                </span>
+                {otherUpcomingExams.length > 1 && (
+                  <span className="mt-1 block text-xs font-semibold text-blue-700">
+                    + {otherUpcomingExams.length - 1} outras datas próximas
+                  </span>
+                )}
+              </span>
+              <span className="shrink-0 text-xl font-bold text-blue-400" aria-hidden="true">
+                ›
+              </span>
+            </button>
           )}
 
-          {/* Matérias com conteúdo */}
-          {subjectsWithContent.length > 0 && (
-            <div className="space-y-3">
-              {subjectsWithContent.map((subject) => {
-                const reviewMaterials = subject.topics.filter(
-                  (topic) => topic.questions.length > 0 && topic.summarySections?.length,
-                )
-                const completed = reviewMaterials.filter(
-                  (topic) => getTopicProgress(subject.id, topic.id).completed,
-                ).length
-                const total = reviewMaterials.length
-                const progress = { completed, total, percent: total ? Math.round((completed / total) * 100) : 0 }
-                return (
-                  <SubjectCard
-                    key={subject.id}
-                    subject={subject}
-                    progress={progress}
-                    isNew={isNew(subject)}
-                    onClick={() => {
-                      setSelectedSubject(subject)
-                      setView(VIEWS.SUBJECT)
-                    }}
-                  />
-                )
-              })}
-            </div>
-          )}
+          <HomeStudyGrid
+            subjects={subjectsWithContent}
+            getTopicProgress={getTopicProgress}
+            onSelect={(subject) => {
+              setSelectedSubject(subject)
+              setView(VIEWS.SUBJECT)
+            }}
+          />
 
-          {/* Em breve — chips horizontais */}
+          {/* Matérias sem material ficam disponíveis, mas sem disputar o foco principal */}
           {subjectsComingSoon.length > 0 && (
-            <div className="space-y-2">
-              <h2 className="font-extrabold text-gray-700 text-sm uppercase tracking-wide">Em breve</h2>
-              <div className="flex gap-2 overflow-x-auto pb-1 -mx-1 px-1 scrollbar-hide">
+            <details className="rounded-2xl border border-gray-100 bg-white p-3 shadow-sm">
+              <summary className="cursor-pointer list-none text-sm font-extrabold text-gray-600">
+                Matérias em preparação ({subjectsComingSoon.length})
+              </summary>
+              <div className="mt-3 flex flex-wrap gap-2">
                 {subjectsComingSoon.map((s) => (
                   <div key={s.id} className="subject-chip shrink-0">
                     <span>{s.icon}</span>
@@ -469,7 +450,7 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
                   </div>
                 ))}
               </div>
-            </div>
+            </details>
           )}
 
           <button
