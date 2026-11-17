@@ -4,6 +4,7 @@ import { HISTORY_SOURCE_TOPICS } from './history-source-briefs.mjs'
 import { SCIENCE_SOURCE_TOPICS } from './science-source-briefs.mjs'
 import { ENGLISH_SOURCE_TOPICS, ENGLISH_NOVEMBER_SOURCE_TOPICS } from './english-source-briefs.mjs'
 import { PORTUGUESE_SOURCE_TOPICS } from './portuguese-source-briefs.mjs'
+import { NOVEMBER_SOURCE_TOPICS } from './november-source-briefs.mjs'
 
 export const EDITORIAL_CONFIGS = {
   'historia-p1': {
@@ -420,6 +421,23 @@ export const EDITORIAL_CONFIGS = {
       ['migrações internacionais', 'causas das migrações', 'diversidade cultural'],
     ],
   },
+}
+
+for (const [subject, base] of [
+  ['matematica', 'matematica-p2'],
+  ['ciencias', 'ciencias-novembro'],
+  ['historia', 'historia-novembro'],
+]) {
+  const original = EDITORIAL_CONFIGS[base]
+  EDITORIAL_CONFIGS[`${subject}-intensivao-novembro`] = {
+    ...original,
+    assessmentName: 'intensivão de novembro',
+    contentId: `${subject}-intensivao-novembro-2026`,
+    questionPrefix: `${subject}-intensivao-novembro-2026`,
+    title: `Intensivão — ${original.subject}`,
+    sourceTopics: NOVEMBER_SOURCE_TOPICS[subject] || original.sourceTopics,
+    publicationOutput: `src/data/generated/${subject}IntensivaoNovembroContent.json`,
+  }
 }
 
 export function getEditorialConfig(name) {

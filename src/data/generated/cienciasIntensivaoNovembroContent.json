@@ -1,0 +1,1238 @@
+{
+  "status": "approved",
+  "contentId": "ciencias-intensivao-novembro-2026",
+  "title": "Intensivão — Ciências",
+  "summary": "Revisão dos capítulos 10 e 11: ciclos da matéria e da água, fluxo de energia, movimentos da Terra, fases da Lua e calendários.",
+  "summarySections": [
+    {
+      "title": "Matéria e energia nos ecossistemas",
+      "text": "Nas cadeias alimentares, matéria e energia passam entre organismos. A matéria circula e pode retornar ao solo com a decomposição. A energia chega principalmente do Sol, é capturada pelos produtores e segue pela cadeia, diminuindo a cada nível."
+    },
+    {
+      "title": "Água e aproveitamento de alimentos",
+      "text": "A água circula na natureza e pode evaporar e condensar. A compostagem usa decompositores para transformar restos orgânicos em adubo, devolvendo matéria ao solo. Práticas sustentáveis podem reduzir desperdício e impactos."
+    },
+    {
+      "title": "Astros e marcação do tempo",
+      "text": "A rotação da Terra dura cerca de 24 horas e explica dia e noite; a translação ao redor do Sol dura aproximadamente um ano. A Lua é iluminada pelo Sol e apresenta fases em um ciclo. Sociedades diferentes usam calendários e observações dos astros para marcar o tempo."
+    }
+  ],
+  "keyIdeas": [
+    "A matéria circula e pode retornar aos produtores por meio da decomposição.",
+    "A energia tem origem no Sol e flui em uma direção pela cadeia alimentar.",
+    "Evaporação e condensação são mudanças envolvidas no ciclo da água.",
+    "A rotação da Terra causa a alternância entre dia e noite; a translação dura cerca de um ano.",
+    "A Lua não produz luz própria: vemos sua parte iluminada pelo Sol.",
+    "Calendários de diferentes culturas organizam a passagem do tempo."
+  ],
+  "source": {
+    "provider": "edebe",
+    "resourceId": "courseware-249/chapters-10-11/pages-98-117",
+    "version": "2024"
+  },
+  "generation": {
+    "authoringMethod": "Codex in-session",
+    "promptVersion": "intensivao-novembro-v1",
+    "generatedAt": "2026-11-17T11:42:54.306Z"
+  },
+  "editorialApproval": {
+    "reviewer": "Codex independent editorial reviewer /root/review_science",
+    "reviewerType": "agent",
+    "reviewMethod": "independent-source-question-by-question-two-pass-v1",
+    "reviewedAt": "2026-11-17T11:45:03.050Z",
+    "draftDigest": "4e1eb4d57ca881682a892828f88ecd79475b72404aa91f59e14427c9de90d739",
+    "schemaVersion": 1
+  },
+  "publishedAt": "2026-11-17T12:04:50.211Z",
+  "questions": [
+    {
+      "id": "ciencias-intensivao-novembro-2026-001",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Leia a sequência: capim → gafanhoto → sapo. Nela, o gafanhoto recebe alimento diretamente de quem?",
+      "options": [
+        "Do sapo.",
+        "Do solo, sem comer o capim.",
+        "Do capim.",
+        "Da Lua."
+      ],
+      "correctIndex": 2,
+      "explanation": "A seta liga o alimento ao organismo que o consome: o gafanhoto come o capim.",
+      "sourceRef": {
+        "section": "Cadeias alimentares e transferência de matéria",
+        "pages": "98–102"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-002",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Na cadeia folhas → lagarta → pássaro, o que a seta entre lagarta e pássaro indica?",
+      "options": [
+        "A passagem de matéria e energia pela alimentação.",
+        "A volta da energia para o Sol.",
+        "A transformação da lagarta em pássaro.",
+        "O nascimento das folhas."
+      ],
+      "correctIndex": 0,
+      "explanation": "Ao comer a lagarta, o pássaro recebe matéria e energia do alimento.",
+      "sourceRef": {
+        "section": "Cadeias alimentares e transferência de matéria",
+        "pages": "98–102"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-003",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Uma planta capta energia do Sol e serve de alimento para um animal. Qual é seu papel nessa cadeia?",
+      "options": [
+        "Consumidor do animal.",
+        "Decompositor do Sol.",
+        "Satélite natural.",
+        "Produtor."
+      ],
+      "correctIndex": 3,
+      "explanation": "A planta é produtora e introduz energia solar na cadeia alimentar.",
+      "sourceRef": {
+        "section": "Cadeias alimentares e transferência de matéria; Fluxo de energia na cadeia alimentar",
+        "pages": "98–103"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-004",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Uma criança diz: “Ao comer, um animal recebe só energia, sem matéria”. Como corrigir a frase?",
+      "options": [
+        "O alimento transfere só matéria.",
+        "O alimento transfere matéria e energia.",
+        "A matéria passa apenas do animal para o Sol.",
+        "A energia nunca passa pela alimentação."
+      ],
+      "correctIndex": 1,
+      "explanation": "O alimento fornece tanto matéria quanto energia ao consumidor.",
+      "sourceRef": {
+        "section": "Cadeias alimentares e transferência de matéria",
+        "pages": "98–102"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-005",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Em uma cadeia, uma planta é comida por um coelho, que é comido por um predador. Qual ordem representa a alimentação descrita?",
+      "options": [
+        "Predador → planta → coelho.",
+        "Planta → coelho → predador.",
+        "Coelho → predador → planta.",
+        "Planta → predador → coelho."
+      ],
+      "correctIndex": 1,
+      "explanation": "As setas acompanham a passagem do alimento da planta ao coelho e deste ao predador.",
+      "sourceRef": {
+        "section": "Cadeias alimentares e transferência de matéria",
+        "pages": "98–102"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-006",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Capim → grilo → ave é uma cadeia. Se estudamos como o alimento chega à ave, qual ligação precisamos observar?",
+      "options": [
+        "A ave alimenta o capim com luz.",
+        "O capim come a ave.",
+        "O grilo produz luz para a ave.",
+        "O grilo serve de alimento à ave."
+      ],
+      "correctIndex": 3,
+      "explanation": "A ave recebe matéria e energia ao consumir o grilo.",
+      "sourceRef": {
+        "section": "Cadeias alimentares e transferência de matéria",
+        "pages": "98–102"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-007",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Folhas caem e são decompostas. Por que esse processo participa de um ciclo?",
+      "options": [
+        "A matéria pode voltar ao ambiente e ser utilizada pelos produtores.",
+        "A matéria deixa de existir.",
+        "A energia retorna inteira ao Sol.",
+        "As folhas precisam continuar intactas."
+      ],
+      "correctIndex": 0,
+      "explanation": "A decomposição ajuda a devolver matéria ao ambiente, permitindo sua circulação.",
+      "sourceRef": {
+        "section": "Ciclo da matéria e decomposição",
+        "pages": "102–104"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-008",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Um cartaz mostra matéria passando por planta, animal e decompositores. Qual ligação completa a ideia de ciclo?",
+      "options": [
+        "O desaparecimento de toda a matéria.",
+        "A passagem da Terra para a Lua.",
+        "O retorno de matéria ao ambiente e aos produtores.",
+        "A produção de luz pelos animais."
+      ],
+      "correctIndex": 2,
+      "explanation": "A matéria pode retornar ao ambiente e ser novamente aproveitada pelos produtores.",
+      "sourceRef": {
+        "section": "Ciclo da matéria e decomposição",
+        "pages": "102–104"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-009",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Por que decompositores não devem ficar de fora de uma explicação sobre o caminho da matéria?",
+      "options": [
+        "Eles impedem a existência de produtores.",
+        "Eles fazem a matéria aparecer do nada.",
+        "Eles transformam toda a matéria em Sol.",
+        "Eles transformam restos e ajudam a devolver matéria ao ambiente."
+      ],
+      "correctIndex": 3,
+      "explanation": "Decompositores participam da reciclagem da matéria nos ecossistemas.",
+      "sourceRef": {
+        "section": "Ciclo da matéria e decomposição",
+        "pages": "102–104"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-010",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Ao comparar matéria e energia, qual frase explica corretamente a matéria?",
+      "options": [
+        "Só pode seguir um caminho sem retorno.",
+        "Nunca está presente nos alimentos.",
+        "Pode circular entre seres vivos e ambiente.",
+        "É sempre igual à luz do Sol."
+      ],
+      "correctIndex": 2,
+      "explanation": "A matéria circula e pode voltar aos produtores com a participação dos decompositores.",
+      "sourceRef": {
+        "section": "Ciclo da matéria e decomposição",
+        "pages": "102–104"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-011",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Restos de um organismo foram decompostos. Qual conclusão é adequada?",
+      "options": [
+        "Toda a matéria desapareceu.",
+        "A matéria foi transformada e pode continuar circulando.",
+        "A decomposição interrompe todos os ciclos.",
+        "Toda a matéria virou luz da Lua."
+      ],
+      "correctIndex": 1,
+      "explanation": "Decompor não significa fazer a matéria desaparecer: ela continua nos ciclos naturais.",
+      "sourceRef": {
+        "section": "Ciclo da matéria e decomposição",
+        "pages": "102–104"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-012",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Planta → inseto → ave: de onde vem a energia inicialmente capturada pela planta?",
+      "options": [
+        "Do Sol.",
+        "Da ave ao final da cadeia.",
+        "Da Lua, que produz luz.",
+        "Do inseto antes de nascer."
+      ],
+      "correctIndex": 0,
+      "explanation": "Os produtores capturam energia solar, que segue pela alimentação.",
+      "sourceRef": {
+        "section": "Fluxo de energia na cadeia alimentar",
+        "pages": "103"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-013",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Em uma cadeia alimentar, por que não se espera a mesma energia disponível em todos os níveis?",
+      "options": [
+        "Toda a energia volta ao produtor em cada etapa.",
+        "Cada consumidor cria um novo Sol.",
+        "Parte da energia é liberada para o ambiente em cada nível.",
+        "A energia aumenta sem nenhuma fonte."
+      ],
+      "correctIndex": 2,
+      "explanation": "Ao longo da cadeia, parte da energia é liberada para o ambiente e a quantidade disponível diminui.",
+      "sourceRef": {
+        "section": "Fluxo de energia na cadeia alimentar",
+        "pages": "103"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-014",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual desenho descrito em palavras combina com o fluxo de energia?",
+      "options": [
+        "Um círculo que devolve toda a energia ao produtor.",
+        "Um caminho que segue dos produtores aos consumidores e libera energia no ambiente.",
+        "Uma linha que começa na Lua e termina dentro do Sol.",
+        "Uma sequência sem produtores e sem fonte de energia."
+      ],
+      "correctIndex": 1,
+      "explanation": "A energia segue um fluxo unidirecional; ela não faz o mesmo ciclo da matéria.",
+      "sourceRef": {
+        "section": "Fluxo de energia na cadeia alimentar",
+        "pages": "103"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-015",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Lia escreveu: “A energia faz o mesmo ciclo que a matéria”. Qual ajuste ela deve fazer?",
+      "options": [
+        "A energia circula e a matéria desaparece.",
+        "As duas sempre retornam inteiras ao produtor.",
+        "Nem matéria nem energia passam pelos alimentos.",
+        "A matéria circula; a energia segue um fluxo e parte é liberada no ambiente."
+      ],
+      "correctIndex": 3,
+      "explanation": "É importante distinguir o ciclo da matéria do fluxo de energia.",
+      "sourceRef": {
+        "section": "Ciclo da matéria e fluxo de energia",
+        "pages": "102–104"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-016",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Na sequência planta → herbívoro → carnívoro, qual afirmação respeita o fluxo de energia?",
+      "options": [
+        "A energia disponível tende a diminuir ao longo da sequência.",
+        "O carnívoro devolve toda a energia à planta.",
+        "A energia aumenta a cada alimentação sem outra fonte.",
+        "A planta não recebe energia de nenhuma fonte."
+      ],
+      "correctIndex": 0,
+      "explanation": "Em cada nível, parte da energia é liberada para o ambiente.",
+      "sourceRef": {
+        "section": "Fluxo de energia na cadeia alimentar",
+        "pages": "103"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-017",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "A água líquida passa para o estado de vapor durante o ciclo da água. Que mudança ocorreu?",
+      "options": [
+        "Condensação.",
+        "Decomposição.",
+        "Evaporação.",
+        "Rotação."
+      ],
+      "correctIndex": 2,
+      "explanation": "Na evaporação, a água líquida passa para o estado gasoso.",
+      "sourceRef": {
+        "section": "Ciclo da água: evaporação e condensação",
+        "pages": "100–101"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-018",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Vapor de água forma pequenas gotas líquidas. Como se chama essa mudança?",
+      "options": [
+        "Condensação.",
+        "Evaporação.",
+        "Translação.",
+        "Compostagem."
+      ],
+      "correctIndex": 0,
+      "explanation": "Condensação é a passagem do estado gasoso para o líquido.",
+      "sourceRef": {
+        "section": "Ciclo da água: evaporação e condensação",
+        "pages": "100–101"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-019",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Uma poça diminuiu porque parte da água virou vapor. A água simplesmente deixou de existir?",
+      "options": [
+        "Sim; evaporação destrói a água.",
+        "Sim; toda água vira energia solar.",
+        "Não; transformou-se obrigatoriamente em terra.",
+        "Não; passou para o estado gasoso e continua no ciclo."
+      ],
+      "correctIndex": 3,
+      "explanation": "A evaporação muda o estado da água, que continua circulando na natureza.",
+      "sourceRef": {
+        "section": "Ciclo da água: evaporação e condensação",
+        "pages": "100–101"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-020",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual sequência descreve duas mudanças possíveis no ciclo da água?",
+      "options": [
+        "Líquido → desaparecimento → pedra.",
+        "Líquido → vapor → líquido.",
+        "Vapor → luz → alimento.",
+        "Líquido → rotação → ano."
+      ],
+      "correctIndex": 1,
+      "explanation": "A água pode evaporar e depois condensar, voltando ao estado líquido.",
+      "sourceRef": {
+        "section": "Ciclo da água: evaporação e condensação",
+        "pages": "100–101"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-021",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Na composteira cuidada por adultos, restos orgânicos viram adubo. Quem participa dessa transformação?",
+      "options": [
+        "Astros.",
+        "Decompositores.",
+        "Somente consumidores que produzem luz.",
+        "A Lua por meio de suas fases."
+      ],
+      "correctIndex": 1,
+      "explanation": "Decompositores transformam os restos orgânicos na compostagem.",
+      "sourceRef": {
+        "section": "Compostagem e retorno da matéria ao solo",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-022",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Como o adubo produzido por compostagem se liga ao caminho da matéria?",
+      "options": [
+        "Devolve toda a energia ao Sol.",
+        "Faz a matéria sair de todos os ciclos.",
+        "Impede que plantas usem matéria do ambiente.",
+        "Ajuda a devolver matéria ao solo e aos produtores."
+      ],
+      "correctIndex": 3,
+      "explanation": "A compostagem favorece o retorno da matéria ao solo e sua utilização pelos produtores.",
+      "sourceRef": {
+        "section": "Compostagem e retorno da matéria ao solo",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-023",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Uma turma quer estudar compostagem. Qual plano combina aprendizagem e cuidado?",
+      "options": [
+        "Observar uma composteira com acompanhamento de um adulto.",
+        "Manipular qualquer resíduo sozinho.",
+        "Mexer em equipamentos desconhecidos sem orientação.",
+        "Misturar resíduos perigosos para testar."
+      ],
+      "correctIndex": 0,
+      "explanation": "Atividades com resíduos e equipamentos precisam de orientação adulta.",
+      "sourceRef": {
+        "section": "Compostagem e retorno da matéria ao solo",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-024",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Uma família busca aproveitar melhor os alimentos com segurança. Qual objetivo combina com essa ideia?",
+      "options": [
+        "Aumentar a quantidade de alimento descartado.",
+        "Eliminar todos os produtores.",
+        "Reduzir desperdícios.",
+        "Interromper o ciclo da água."
+      ],
+      "correctIndex": 2,
+      "explanation": "O aproveitamento dos alimentos pode reduzir o desperdício e os impactos no ambiente.",
+      "sourceRef": {
+        "section": "Agricultura sustentável e aproveitamento de alimentos",
+        "pages": "104–105"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-025",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual dupla reúne ações ligadas a diminuir impactos ambientais na produção e no consumo de alimentos?",
+      "options": [
+        "Desperdício maior e descarte sem cuidado.",
+        "Mais desperdício e abandono do solo.",
+        "Descarte de alimentos aproveitáveis e poluição.",
+        "Agricultura sustentável e redução do desperdício."
+      ],
+      "correctIndex": 3,
+      "explanation": "Práticas sustentáveis e bom aproveitamento dos alimentos ajudam a reduzir impactos.",
+      "sourceRef": {
+        "section": "Agricultura sustentável e aproveitamento de alimentos",
+        "pages": "104–105"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-026",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Um lugar passa do dia para a noite enquanto a Terra gira. Qual movimento explica isso?",
+      "options": [
+        "Translação ao redor da Lua.",
+        "Condensação.",
+        "Rotação.",
+        "Decomposição."
+      ],
+      "correctIndex": 2,
+      "explanation": "A rotação muda a posição de cada lugar em relação à iluminação solar.",
+      "sourceRef": {
+        "section": "Movimentos da Terra: rotação e translação",
+        "pages": "112–113"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-027",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Se uma parte da Terra está voltada para o Sol, como é esse período nessa parte?",
+      "options": [
+        "Noite em todos os casos.",
+        "Dia.",
+        "Um ano completo.",
+        "Lua nova obrigatoriamente."
+      ],
+      "correctIndex": 1,
+      "explanation": "A parte voltada para o Sol recebe sua iluminação e tem dia.",
+      "sourceRef": {
+        "section": "Movimentos da Terra: rotação e translação",
+        "pages": "112–113"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-028",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Um modelo mostra a Terra girando em torno de si mesma. Qual duração aproximada representa uma volta?",
+      "options": [
+        "24 horas.",
+        "Um ano.",
+        "Um mês de calendário.",
+        "100 anos."
+      ],
+      "correctIndex": 0,
+      "explanation": "Uma rotação da Terra dura aproximadamente 24 horas.",
+      "sourceRef": {
+        "section": "Movimentos da Terra: rotação e translação",
+        "pages": "112–113"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-029",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Outro modelo mostra a Terra dando uma volta ao redor do Sol. Qual duração aproximada deve ser indicada?",
+      "options": [
+        "Uma hora.",
+        "24 horas.",
+        "Um ano.",
+        "Uma semana."
+      ],
+      "correctIndex": 2,
+      "explanation": "A translação da Terra ao redor do Sol dura aproximadamente um ano.",
+      "sourceRef": {
+        "section": "Movimentos da Terra: rotação e translação",
+        "pages": "112–113"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-030",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual comparação evita confundir os movimentos da Terra?",
+      "options": [
+        "Rotação: volta ao redor do Sol; translação: giro em torno de si.",
+        "Rotação: giro em torno de si; translação: volta ao redor do Sol.",
+        "Rotação e translação são mudanças de estado da água.",
+        "Rotação e translação são dois nomes da fase cheia."
+      ],
+      "correctIndex": 1,
+      "explanation": "A rotação se relaciona a dia e noite; a translação é a volta anual ao redor do Sol.",
+      "sourceRef": {
+        "section": "Movimentos da Terra: rotação e translação",
+        "pages": "112–113"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-031",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Uma criança diz que ano e dia têm a mesma duração. Qual par corrige essa ideia?",
+      "options": [
+        "Dia: uma translação; ano: uma rotação.",
+        "Dia: uma fase da Lua; ano: uma semana.",
+        "Dia e ano: sempre 24 horas.",
+        "Dia: cerca de 24 horas; ano: cerca de uma volta da Terra ao redor do Sol."
+      ],
+      "correctIndex": 3,
+      "explanation": "Rotação e translação têm durações diferentes: cerca de 24 horas e de um ano.",
+      "sourceRef": {
+        "section": "Movimentos da Terra: rotação e translação",
+        "pages": "112–113"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-032",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Ao observar a Lua brilhando, qual explicação deve entrar no caderno?",
+      "options": [
+        "Vemos a luz do Sol que ilumina a Lua.",
+        "A Lua produz toda a própria luz.",
+        "A Terra para de girar para iluminar a Lua.",
+        "A luz surge porque a Lua vira Sol."
+      ],
+      "correctIndex": 0,
+      "explanation": "A Lua é iluminada pelo Sol; ela não produz luz própria.",
+      "sourceRef": {
+        "section": "Fases da Lua e luz solar",
+        "pages": "114–115"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-033",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Depois da fase crescente, qual das quatro fases principais vem na sequência estudada?",
+      "options": [
+        "Nova, antes de completar o ciclo.",
+        "Minguante, pulando a cheia.",
+        "Cheia.",
+        "Rotação."
+      ],
+      "correctIndex": 2,
+      "explanation": "A sequência principal é nova, crescente, cheia e minguante.",
+      "sourceRef": {
+        "section": "Fases da Lua e luz solar",
+        "pages": "114–115"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-034",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Após a fase minguante, qual fase principal inicia novamente a sequência?",
+      "options": [
+        "Nova.",
+        "Cheia.",
+        "Translação.",
+        "Evaporação."
+      ],
+      "correctIndex": 0,
+      "explanation": "As fases se repetem em ciclo: depois da minguante, volta a nova.",
+      "sourceRef": {
+        "section": "Fases da Lua e luz solar",
+        "pages": "114–115"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-035",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Por que a aparência da Lua muda ao longo das fases?",
+      "options": [
+        "A Lua liga e desliga uma luz própria.",
+        "A Lua se transforma em um planeta diferente a cada noite.",
+        "A Terra deixa de existir durante a fase nova.",
+        "Muda a parte iluminada pelo Sol que vemos da Terra."
+      ],
+      "correctIndex": 3,
+      "explanation": "As fases correspondem às mudanças na porção iluminada que observamos.",
+      "sourceRef": {
+        "section": "Fases da Lua e luz solar",
+        "pages": "114–115"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-036",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Uma lista mistura “nova, crescente, cheia, minguante e rotação”. Qual termo deve sair da lista de fases?",
+      "options": [
+        "Crescente.",
+        "Rotação.",
+        "Minguante.",
+        "Cheia."
+      ],
+      "correctIndex": 1,
+      "explanation": "Rotação é um movimento, enquanto nova, crescente, cheia e minguante são fases da Lua.",
+      "sourceRef": {
+        "section": "Fases da Lua e luz solar",
+        "pages": "114–115"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-037",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Uma comunidade marca períodos do ano pelas colheitas. Qual atitude respeita essa forma de calendário?",
+      "options": [
+        "Dizer que só existe uma forma válida de marcar o tempo.",
+        "Reconhecer sua ligação com a vida e os conhecimentos da comunidade.",
+        "Proibir formas diferentes de organizar o ano.",
+        "Concluir que a comunidade não percebe a passagem do tempo."
+      ],
+      "correctIndex": 1,
+      "explanation": "Diferentes culturas organizam o tempo de acordo com seus conhecimentos e atividades.",
+      "sourceRef": {
+        "section": "Calendários e formas culturais de marcar o tempo",
+        "pages": "116–117"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-038",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual função um calendário gregoriano e uma marcação do ano ligada a colheitas podem compartilhar?",
+      "options": [
+        "Produzir energia solar.",
+        "Mudar a órbita da Terra.",
+        "Criar as fases da Lua.",
+        "Organizar a passagem do tempo."
+      ],
+      "correctIndex": 3,
+      "explanation": "Calendários são formas culturais de organizar períodos de tempo.",
+      "sourceRef": {
+        "section": "Calendários e formas culturais de marcar o tempo",
+        "pages": "116–117"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-039",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "No calendário, dias, semanas, meses e anos ajudam a quê?",
+      "options": [
+        "Organizar e localizar períodos de tempo.",
+        "Aumentar a energia de uma cadeia alimentar.",
+        "Fazer água condensar.",
+        "Impedir a rotação da Terra."
+      ],
+      "correctIndex": 0,
+      "explanation": "Essas divisões ajudam a organizar o tempo e as atividades.",
+      "sourceRef": {
+        "section": "Calendários e formas culturais de marcar o tempo",
+        "pages": "116–117"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-040",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Por que observar fenômenos que se repetem no céu pode ajudar a marcar o tempo?",
+      "options": [
+        "Os astros impedem os dias de passar.",
+        "Cada observação elimina uma noite.",
+        "A regularidade permite reconhecer ciclos.",
+        "Os ciclos acontecem sem qualquer repetição."
+      ],
+      "correctIndex": 2,
+      "explanation": "A repetição dos movimentos e aspectos dos astros ajuda a reconhecer a passagem do tempo.",
+      "sourceRef": {
+        "section": "Observação dos astros e passagem do tempo",
+        "pages": "109–111"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-041",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Povos diferentes observam o Cruzeiro do Sul e outros astros. O que isso mostra?",
+      "options": [
+        "Que apenas um povo observa o céu.",
+        "Que os astros pertencem a uma única cultura.",
+        "Que olhar o céu substitui toda forma de conhecimento.",
+        "Que a observação do céu participa de diferentes conhecimentos sobre o tempo."
+      ],
+      "correctIndex": 3,
+      "explanation": "Diferentes povos desenvolveram conhecimentos a partir da observação dos astros.",
+      "sourceRef": {
+        "section": "Observação dos astros e passagem do tempo",
+        "pages": "109–111"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-042",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Um aluno desenhou a matéria chegando ao consumidor e parando ali para sempre. O que falta considerar?",
+      "options": [
+        "A ausência de matéria no alimento.",
+        "O desaparecimento de todos os produtores.",
+        "A decomposição e o retorno da matéria ao ambiente.",
+        "A transformação de matéria em calendário."
+      ],
+      "correctIndex": 2,
+      "explanation": "A matéria não para para sempre no consumidor: a decomposição permite seu retorno ao ambiente.",
+      "sourceRef": {
+        "section": "Ciclo da matéria e decomposição",
+        "pages": "102–104"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-043",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "No caderno, duas setas ligam água líquida e vapor. Qual legenda corresponde à seta que volta do vapor ao líquido?",
+      "options": [
+        "Evaporação.",
+        "Condensação.",
+        "Translação.",
+        "Alimentação."
+      ],
+      "correctIndex": 1,
+      "explanation": "Quando vapor volta ao estado líquido, ocorre condensação.",
+      "sourceRef": {
+        "section": "Ciclo da água: evaporação e condensação",
+        "pages": "100–101"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-044",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Se uma atividade quer explicar a sucessão de dias e noites, qual modelo é o mais adequado?",
+      "options": [
+        "Uma Terra girando em torno de si diante de uma fonte de luz.",
+        "Uma Terra parada e sem fonte de luz.",
+        "Somente uma lista de colheitas.",
+        "Somente uma composteira."
+      ],
+      "correctIndex": 0,
+      "explanation": "O giro diante da luz representa a rotação e a mudança das partes iluminadas da Terra.",
+      "sourceRef": {
+        "section": "Movimentos da Terra: rotação e translação",
+        "pages": "112–113"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-045",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Dois calendários organizam o ano de formas diferentes. Qual conclusão evita uma comparação injusta?",
+      "options": [
+        "Um povo que usa colheitas não sabe marcar o tempo.",
+        "Todos os calendários precisam ter origem idêntica.",
+        "Eles podem expressar conhecimentos e necessidades de culturas diferentes.",
+        "Somente quem usa o gregoriano percebe ciclos."
+      ],
+      "correctIndex": 2,
+      "explanation": "A diversidade de calendários acompanha a diversidade dos conhecimentos culturais.",
+      "sourceRef": {
+        "section": "Calendários e formas culturais de marcar o tempo",
+        "pages": "116–117"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-046",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Ligue cada organismo ao papel descrito na cadeia capim → gafanhoto → sapo.",
+      "pairs": [
+        {
+          "left": "Capim",
+          "right": "Produtor dessa cadeia"
+        },
+        {
+          "left": "Gafanhoto",
+          "right": "Come o capim"
+        },
+        {
+          "left": "Sapo",
+          "right": "Come o gafanhoto"
+        }
+      ],
+      "explanation": "As relações alimentares ligam produtor e consumidores.",
+      "sourceRef": {
+        "section": "Cadeias alimentares e transferência de matéria",
+        "pages": "98–102"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-047",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Na sequência folhas → lagarta → ave, relacione cada ligação ao alimento recebido.",
+      "pairs": [
+        {
+          "left": "Lagarta",
+          "right": "Recebe alimento das folhas"
+        },
+        {
+          "left": "Ave",
+          "right": "Recebe alimento da lagarta"
+        },
+        {
+          "left": "Planta das folhas",
+          "right": "Capta energia solar como produtora"
+        }
+      ],
+      "explanation": "As setas representam a passagem de matéria e energia pela alimentação.",
+      "sourceRef": {
+        "section": "Cadeias alimentares e transferência de matéria; Fluxo de energia na cadeia alimentar",
+        "pages": "98–103"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-048",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Relacione cada elemento à sua participação no ecossistema.",
+      "pairs": [
+        {
+          "left": "Matéria",
+          "right": "Pode circular e retornar aos produtores"
+        },
+        {
+          "left": "Energia",
+          "right": "Segue um fluxo com liberação para o ambiente"
+        },
+        {
+          "left": "Decompositores",
+          "right": "Transformam restos orgânicos"
+        }
+      ],
+      "explanation": "A matéria circula, a energia flui e decompositores transformam restos.",
+      "sourceRef": {
+        "section": "Ciclo da matéria e fluxo de energia",
+        "pages": "102–104"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-049",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione os elementos do caminho da energia às suas descrições.",
+      "pairs": [
+        {
+          "left": "Sol",
+          "right": "Fonte inicial de energia capturada pelos produtores"
+        },
+        {
+          "left": "Produtor",
+          "right": "Organismo que capta energia solar"
+        },
+        {
+          "left": "Ambiente",
+          "right": "Recebe parte da energia liberada em cada nível"
+        }
+      ],
+      "explanation": "A energia entra pela ação dos produtores e parte é liberada no ambiente.",
+      "sourceRef": {
+        "section": "Fluxo de energia na cadeia alimentar",
+        "pages": "103"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-050",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Ligue cada descrição à etapa correspondente do ciclo da água.",
+      "pairs": [
+        {
+          "left": "Água líquida virando vapor",
+          "right": "Evaporação"
+        },
+        {
+          "left": "Vapor formando gotas",
+          "right": "Condensação"
+        },
+        {
+          "left": "Água que circula e muda de estado",
+          "right": "Ciclo da água"
+        }
+      ],
+      "explanation": "Evaporação e condensação fazem parte da circulação da água.",
+      "sourceRef": {
+        "section": "Ciclo da água: evaporação e condensação",
+        "pages": "100–101"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-051",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione os elementos de uma compostagem acompanhada por adultos.",
+      "pairs": [
+        {
+          "left": "Restos de alimentos",
+          "right": "Material orgânico a transformar"
+        },
+        {
+          "left": "Decompositores",
+          "right": "Participantes da transformação dos restos"
+        },
+        {
+          "left": "Adubo",
+          "right": "Resultado que ajuda a devolver matéria ao solo"
+        }
+      ],
+      "explanation": "A compostagem aproveita restos orgânicos e favorece o retorno da matéria ao solo.",
+      "sourceRef": {
+        "section": "Compostagem e retorno da matéria ao solo",
+        "pages": "106–107"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-052",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Ligue cada prática ao foco indicado.",
+      "pairs": [
+        {
+          "left": "Aproveitar melhor os alimentos",
+          "right": "Reduzir desperdício no consumo"
+        },
+        {
+          "left": "Compostar restos orgânicos",
+          "right": "Obter adubo com ação de decompositores"
+        },
+        {
+          "left": "Agricultura sustentável",
+          "right": "Diminuir impactos na produção agrícola"
+        }
+      ],
+      "explanation": "São práticas ligadas ao cuidado com alimentos e ambiente, com focos diferentes.",
+      "sourceRef": {
+        "section": "Agricultura sustentável, aproveitamento de alimentos e compostagem",
+        "pages": "104–107"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-053",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione os movimentos e a duração pedida.",
+      "pairs": [
+        {
+          "left": "Terra gira em torno de si",
+          "right": "Rotação"
+        },
+        {
+          "left": "Terra percorre o caminho ao redor do Sol",
+          "right": "Translação"
+        },
+        {
+          "left": "Tempo aproximado de uma rotação",
+          "right": "24 horas"
+        }
+      ],
+      "explanation": "Rotação dura cerca de 24 horas; translação é o movimento ao redor do Sol.",
+      "sourceRef": {
+        "section": "Movimentos da Terra: rotação e translação",
+        "pages": "112–113"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-054",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada situação à explicação correspondente.",
+      "pairs": [
+        {
+          "left": "Lugar voltado para o Sol",
+          "right": "Está no período de dia"
+        },
+        {
+          "left": "Lugar na face oposta ao Sol",
+          "right": "Está no período de noite"
+        },
+        {
+          "left": "Uma volta da Terra ao redor do Sol",
+          "right": "Dura aproximadamente um ano"
+        }
+      ],
+      "explanation": "Dia e noite dependem da iluminação solar; o ano se liga à translação.",
+      "sourceRef": {
+        "section": "Movimentos da Terra: rotação e translação",
+        "pages": "112–113"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-055",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Na sequência das quatro fases principais, ligue cada fase à próxima.",
+      "pairs": [
+        {
+          "left": "Nova",
+          "right": "Crescente"
+        },
+        {
+          "left": "Crescente",
+          "right": "Cheia"
+        },
+        {
+          "left": "Cheia",
+          "right": "Minguante"
+        },
+        {
+          "left": "Minguante",
+          "right": "Nova"
+        }
+      ],
+      "explanation": "As fases principais se sucedem e formam um ciclo.",
+      "sourceRef": {
+        "section": "Fases da Lua e luz solar",
+        "pages": "114–115"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-056",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada elemento à descrição correta sobre a Lua.",
+      "pairs": [
+        {
+          "left": "Sol",
+          "right": "Ilumina a Lua"
+        },
+        {
+          "left": "Lua",
+          "right": "Não produz luz própria"
+        },
+        {
+          "left": "Fases",
+          "right": "Mudanças na parte iluminada que vemos"
+        }
+      ],
+      "explanation": "A Lua é iluminada pelo Sol, e observamos diferentes porções dessa parte iluminada.",
+      "sourceRef": {
+        "section": "Fases da Lua e luz solar",
+        "pages": "114–115"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-057",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Na aula, Ana anotou dias, semanas, meses e anos; Beto anotou colheitas no Xingu; Caio anotou respeito às diferentes formas de marcar o tempo. Relacione cada criança ao assunto de sua anotação.",
+      "pairs": [
+        {
+          "left": "Ana",
+          "right": "Divisões usadas para organizar o tempo"
+        },
+        {
+          "left": "Beto",
+          "right": "Marcação do ano ligada à atividade agrícola"
+        },
+        {
+          "left": "Caio",
+          "right": "Diversidade cultural dos calendários"
+        }
+      ],
+      "explanation": "Ana anotou divisões do tempo; Beto, a ligação com colheitas; Caio, o respeito à diversidade cultural.",
+      "sourceRef": {
+        "section": "Calendários e formas culturais de marcar o tempo",
+        "pages": "116–117"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-058",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Relacione cada anotação ao assunto a revisar.",
+      "pairs": [
+        {
+          "left": "Nova, crescente, cheia e minguante",
+          "right": "Fases da Lua"
+        },
+        {
+          "left": "Dia e noite",
+          "right": "Rotação da Terra"
+        },
+        {
+          "left": "Organização de dias, semanas e meses",
+          "right": "Calendários"
+        }
+      ],
+      "explanation": "Cada anotação se liga a um conceito diferente sobre astros e tempo.",
+      "sourceRef": {
+        "section": "Fases da Lua e luz solar; Rotação da Terra e alternância entre dia e noite; Calendários e formas culturais de marcar o tempo",
+        "pages": "112–117"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-059",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Ligue as observações aos processos estudados.",
+      "pairs": [
+        {
+          "left": "Vapor se torna água líquida",
+          "right": "Condensação"
+        },
+        {
+          "left": "Água líquida passa a vapor",
+          "right": "Evaporação"
+        },
+        {
+          "left": "Restos orgânicos se transformam em adubo",
+          "right": "Compostagem"
+        }
+      ],
+      "explanation": "Duas observações tratam de estados da água; a outra trata do aproveitamento de restos orgânicos.",
+      "sourceRef": {
+        "section": "Ciclo da água: evaporação e condensação; Compostagem e retorno da matéria ao solo",
+        "pages": "100–101, 106–107"
+      }
+    },
+    {
+      "id": "ciencias-intensivao-novembro-2026-060",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Relacione cada descrição ao conceito mais específico.",
+      "pairs": [
+        {
+          "left": "Matéria passando entre seres vivos e ambiente",
+          "right": "Ciclo da matéria"
+        },
+        {
+          "left": "Transformação natural de restos de organismos",
+          "right": "Decomposição"
+        },
+        {
+          "left": "Aproveitamento orientado de restos orgânicos para obter adubo",
+          "right": "Compostagem"
+        }
+      ],
+      "explanation": "A compostagem aproveita a decomposição para devolver matéria ao solo.",
+      "sourceRef": {
+        "section": "Ciclo da matéria e decomposição; Compostagem e retorno da matéria ao solo",
+        "pages": "102–104, 106–107"
+      }
+    }
+  ]
+}

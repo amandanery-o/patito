@@ -20,10 +20,10 @@ function getNovemberAssessments(subjects, today) {
 
   const upcoming = currentMonthAssessments
     .filter(({ topic }) => daysUntil(topic.examDate, today) >= 0)
-    .sort((a, b) => parseLocalDate(a.topic.examDate) - parseLocalDate(b.topic.examDate))
+    .sort((a, b) => parseLocalDate(a.topic.examDate).getTime() - parseLocalDate(b.topic.examDate).getTime())
   const past = currentMonthAssessments
     .filter(({ topic }) => daysUntil(topic.examDate, today) < 0)
-    .sort((a, b) => parseLocalDate(b.topic.examDate) - parseLocalDate(a.topic.examDate))
+    .sort((a, b) => parseLocalDate(b.topic.examDate).getTime() - parseLocalDate(a.topic.examDate).getTime())
 
   return { upcoming, past }
 }

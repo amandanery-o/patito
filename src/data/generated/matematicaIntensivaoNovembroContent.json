@@ -1,0 +1,1234 @@
+{
+  "status": "approved",
+  "contentId": "matematica-intensivao-novembro-2026",
+  "title": "Intensivão — Matemática",
+  "summary": "Revisão dos capítulos 9, 10 e 11: frações, números decimais e tratamento da informação.",
+  "summarySections": [
+    {
+      "title": "Frações: o tamanho das partes importa",
+      "text": "Uma fração representa partes iguais de um inteiro. O denominador indica o total de partes iguais; o numerador, quantas consideramos. Compare frações usando o mesmo inteiro. Com denominadores iguais, some ou subtraia os numeradores e mantenha o denominador."
+    },
+    {
+      "title": "Decimais e dinheiro",
+      "text": "A vírgula separa a parte inteira da decimal. A primeira casa indica décimos e a segunda, centésimos. 0,5 e 0,50 têm o mesmo valor. Ao calcular, alinhe as casas. Em reais, use duas casas para os centavos: R$ 3,05 são três reais e cinco centavos. Troco é o valor pago menos o preço."
+    },
+    {
+      "title": "Tabelas e gráficos",
+      "text": "Leia o título, as categorias, a escala, a legenda e a fonte. Uma figura pode representar várias unidades. Some para obter totais e subtraia para comparar quantidades. Variáveis numéricas indicam números; categóricas indicam categorias, como fruta preferida. Tire conclusões apenas sobre os dados apresentados."
+    }
+  ],
+  "keyIdeas": [
+    "As partes de um inteiro devem ser iguais para representar frações.",
+    "Compare frações do mesmo inteiro.",
+    "Em somas e subtrações com denominadores iguais, mantenha o denominador.",
+    "Dez centésimos formam um décimo; dez décimos formam uma unidade.",
+    "Em dinheiro, confira reais, centavos, total e troco.",
+    "Leia a escala e a legenda antes de contar símbolos ou comparar barras."
+  ],
+  "source": {
+    "provider": "edebe",
+    "resourceId": "courseware-250/chapters-9-10-11",
+    "version": "2024"
+  },
+  "generation": {
+    "authoringMethod": "Codex in-session",
+    "promptVersion": "intensivao-novembro-v1",
+    "generatedAt": "2026-11-17T11:45:38.490Z"
+  },
+  "editorialApproval": {
+    "reviewer": "Codex independent editorial reviewer /root/review_science",
+    "reviewerType": "agent",
+    "reviewMethod": "independent-source-question-by-question-recalculation-two-pass-v1",
+    "reviewedAt": "2026-11-17T11:47:31.072Z",
+    "draftDigest": "be3ca14c46da860d8ac8106f20e81fbf42ae2c076acae8619167717a2a078f9f",
+    "schemaVersion": 1
+  },
+  "publishedAt": "2026-11-17T12:04:50.289Z",
+  "questions": [
+    {
+      "id": "matematica-intensivao-novembro-2026-001",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Uma fita foi dividida em 9 partes iguais. Quatro partes foram pintadas. Que fração da fita foi pintada?",
+      "options": [
+        "9/4",
+        "5/9",
+        "4/9",
+        "4/5"
+      ],
+      "correctIndex": 2,
+      "explanation": "O inteiro tem 9 partes iguais e 4 foram pintadas: 4/9.",
+      "sourceRef": {
+        "section": "Noções de fração",
+        "pages": "148–153"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-002",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Uma barra foi cortada em 4 pedaços de tamanhos diferentes. Por que não basta chamar cada pedaço de 1/4?",
+      "options": [
+        "Porque os quatro pedaços precisariam ter tamanhos iguais.",
+        "Porque toda fração precisa de dez partes.",
+        "Porque o numerador deve ser maior que o denominador.",
+        "Porque não se pode representar uma barra por frações."
+      ],
+      "correctIndex": 0,
+      "explanation": "Para representar quartos do mesmo inteiro, as quatro partes devem ser iguais.",
+      "sourceRef": {
+        "section": "Noções de fração",
+        "pages": "148–153"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-003",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Em 5/12 de uma figura dividida em partes iguais, o número 12 indica o quê?",
+      "options": [
+        "O número de partes consideradas.",
+        "O número de inteiros completos.",
+        "A soma das partes com a figura.",
+        "O total de partes iguais do inteiro."
+      ],
+      "correctIndex": 3,
+      "explanation": "O denominador informa em quantas partes iguais o inteiro foi dividido.",
+      "sourceRef": {
+        "section": "Notação de uma fração",
+        "pages": "154–157"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-004",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Na fração 7/10, qual número é o numerador?",
+      "options": [
+        "10",
+        "7",
+        "3",
+        "17"
+      ],
+      "correctIndex": 1,
+      "explanation": "O numerador é o número acima do traço: 7.",
+      "sourceRef": {
+        "section": "Notação de uma fração",
+        "pages": "154–157"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-005",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Como lemos a fração 3/8?",
+      "options": [
+        "Oito terços.",
+        "Três oitavos.",
+        "Três décimos.",
+        "Oito décimos."
+      ],
+      "correctIndex": 1,
+      "explanation": "O numerador 3 indica três partes e o denominador 8 indica oitavos.",
+      "sourceRef": {
+        "section": "Notação de uma fração",
+        "pages": "154–157"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-006",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "O intervalo de 0 a 1 foi dividido em 6 partes iguais por marcas. Que fração fica na segunda marca depois do zero?",
+      "options": [
+        "6/2",
+        "2/5",
+        "4/6",
+        "2/6"
+      ],
+      "correctIndex": 3,
+      "explanation": "Cada intervalo vale 1/6. Dois intervalos a partir do zero correspondem a 2/6.",
+      "sourceRef": {
+        "section": "Notação de uma fração",
+        "pages": "154–157"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-007",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Duas fitas iguais foram divididas em 7 partes iguais cada. Uma tem 5/7 pintados; a outra, 3/7. Qual tem maior parte pintada?",
+      "options": [
+        "A de 5/7.",
+        "A de 3/7.",
+        "As duas têm a mesma parte.",
+        "Não é possível comparar partes do mesmo inteiro."
+      ],
+      "correctIndex": 0,
+      "explanation": "Com o mesmo denominador e inteiros iguais, comparamos os numeradores: 5 é maior que 3.",
+      "sourceRef": {
+        "section": "Comparando frações",
+        "pages": "158–161"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-008",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Duas pizzas iguais: Joana comeu 1/3 de uma e Caio comeu 1/6 da outra. Quem comeu maior parte?",
+      "options": [
+        "Caio.",
+        "Os dois comeram a mesma parte.",
+        "Joana.",
+        "Não há informação sobre o tamanho das pizzas."
+      ],
+      "correctIndex": 2,
+      "explanation": "No mesmo inteiro, dividir em três partes gera partes maiores que dividir em seis.",
+      "sourceRef": {
+        "section": "Comparando frações",
+        "pages": "158–161"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-009",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual ordem vai da menor para a maior fração, considerando o mesmo inteiro?",
+      "options": [
+        "8/9, 5/9, 2/9",
+        "5/9, 2/9, 8/9",
+        "2/9, 8/9, 5/9",
+        "2/9, 5/9, 8/9"
+      ],
+      "correctIndex": 3,
+      "explanation": "Com denominadores iguais, a ordem acompanha os numeradores: 2, 5 e 8.",
+      "sourceRef": {
+        "section": "Comparando frações",
+        "pages": "158–161"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-010",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Uma trilha foi dividida em 11 trechos iguais. Bia percorreu 3/11 e depois mais 5/11. Que fração percorreu ao todo?",
+      "options": [
+        "8/22",
+        "2/11",
+        "8/11",
+        "5/11"
+      ],
+      "correctIndex": 2,
+      "explanation": "Somamos os numeradores e mantemos o denominador: 3/11 + 5/11 = 8/11.",
+      "sourceRef": {
+        "section": "Adição e subtração de frações",
+        "pages": "162–165"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-011",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "De 9/12 de uma folha, foram usados 4/12. Qual fração da folha sobrou dessa parte?",
+      "options": [
+        "13/12",
+        "5/12",
+        "5/24",
+        "4/8"
+      ],
+      "correctIndex": 1,
+      "explanation": "9/12 − 4/12 = 5/12: subtraímos os numeradores, mantendo as partes em doze avos.",
+      "sourceRef": {
+        "section": "Adição e subtração de frações",
+        "pages": "162–165"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-012",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Rui calculou 2/7 + 4/7 e escreveu 6/14. Qual correção deve fazer?",
+      "options": [
+        "Manter o denominador 7 e escrever 6/7.",
+        "Manter o numerador 2 e escrever 2/14.",
+        "Somar somente os denominadores e escrever 4/14.",
+        "Trocar o sinal de adição por multiplicação."
+      ],
+      "correctIndex": 0,
+      "explanation": "As partes continuam sendo sétimos; somente a quantidade delas é somada.",
+      "sourceRef": {
+        "section": "Adição e subtração de frações",
+        "pages": "162–165"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-013",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual fração falta em 3/10 + ___ = 9/10?",
+      "options": [
+        "12/10",
+        "6/20",
+        "6/10",
+        "3/10"
+      ],
+      "correctIndex": 2,
+      "explanation": "De nove décimos retiramos três décimos: faltam seis décimos.",
+      "sourceRef": {
+        "section": "Adição e subtração de frações",
+        "pages": "162–165"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-014",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Uma figura tem 8 partes iguais, e todas foram coloridas. Qual fração representa a figura inteira colorida?",
+      "options": [
+        "1/8",
+        "8/8",
+        "0/8",
+        "8/1"
+      ],
+      "correctIndex": 1,
+      "explanation": "Oito das oito partes representam o inteiro completo.",
+      "sourceRef": {
+        "section": "Noções de fração",
+        "pages": "148–153"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-015",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Uma faixa tem 10 partes iguais. Se 6 partes foram pintadas, qual fração falta pintar?",
+      "options": [
+        "6/10",
+        "10/4",
+        "4/6",
+        "4/10"
+      ],
+      "correctIndex": 3,
+      "explanation": "O inteiro é 10/10; 10/10 − 6/10 = 4/10.",
+      "sourceRef": {
+        "section": "Adição e subtração de frações",
+        "pages": "162–165"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-016",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual número decimal corresponde a 7/10?",
+      "options": [
+        "0,7",
+        "0,07",
+        "7,0",
+        "0,17"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sete décimos são escritos como 0,7.",
+      "sourceRef": {
+        "section": "Números decimais",
+        "pages": "168–169"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-017",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual fração com denominador 100 corresponde a 0,36?",
+      "options": [
+        "36/10",
+        "3/100",
+        "36/100",
+        "100/36"
+      ],
+      "correctIndex": 2,
+      "explanation": "A segunda casa decimal é a dos centésimos: 0,36 são 36 centésimos.",
+      "sourceRef": {
+        "section": "Números decimais",
+        "pages": "168–169"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-018",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual dupla representa o mesmo valor?",
+      "options": [
+        "0,4 e 0,40",
+        "0,4 e 0,04",
+        "0,4 e 4,0",
+        "0,40 e 0,44"
+      ],
+      "correctIndex": 0,
+      "explanation": "Quatro décimos correspondem a quarenta centésimos; o zero final não altera o valor.",
+      "sourceRef": {
+        "section": "Números decimais",
+        "pages": "168–169"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-019",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Em 6,28, qual é a parte inteira?",
+      "options": [
+        "28",
+        "2",
+        "8",
+        "6"
+      ],
+      "correctIndex": 3,
+      "explanation": "A parte à esquerda da vírgula é a parte inteira.",
+      "sourceRef": {
+        "section": "Números decimais maiores que uma unidade",
+        "pages": "170–171"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-020",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual decomposição corresponde a 4,53?",
+      "options": [
+        "4 + 0,05 + 0,3",
+        "4 + 0,5 + 0,03",
+        "4 + 5 + 3",
+        "0,4 + 0,5 + 0,03"
+      ],
+      "correctIndex": 1,
+      "explanation": "4,53 possui quatro inteiros, cinco décimos e três centésimos.",
+      "sourceRef": {
+        "section": "Números decimais maiores que uma unidade",
+        "pages": "170–171"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-021",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual número é maior: 2,45 ou 2,5?",
+      "options": [
+        "2,45, porque tem mais algarismos.",
+        "2,5, pois equivale a 2,50.",
+        "São iguais.",
+        "2,45, porque 45 é maior que 5 sem considerar as casas."
+      ],
+      "correctIndex": 1,
+      "explanation": "Podemos comparar 2,45 e 2,50: cinquenta centésimos são mais que quarenta e cinco.",
+      "sourceRef": {
+        "section": "Cálculos e comparação de valores",
+        "pages": "178–181"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-022",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual é o resultado de 3,25 + 1,40?",
+      "options": [
+        "4,29",
+        "3,65",
+        "5,65",
+        "4,65"
+      ],
+      "correctIndex": 3,
+      "explanation": "Somamos inteiros e centésimos nas mesmas posições: 3,25 + 1,40 = 4,65.",
+      "sourceRef": {
+        "section": "Cálculos e comparação de valores",
+        "pages": "178–181"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-023",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Qual é o resultado de 7,80 − 2,35?",
+      "options": [
+        "5,45",
+        "5,55",
+        "4,45",
+        "10,15"
+      ],
+      "correctIndex": 0,
+      "explanation": "Subtraindo os valores por suas posições, obtemos 5,45.",
+      "sourceRef": {
+        "section": "Cálculos e comparação de valores",
+        "pages": "178–181"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-024",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Uma moeda de 50 centavos e uma de 25 centavos somam qual valor?",
+      "options": [
+        "R$ 0,55",
+        "R$ 7,50",
+        "R$ 0,75",
+        "R$ 0,25"
+      ],
+      "correctIndex": 2,
+      "explanation": "50 + 25 = 75 centavos, ou R$ 0,75.",
+      "sourceRef": {
+        "section": "Os números decimais e o real",
+        "pages": "172–177"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-025",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Uma etiqueta mostra R$ 9,06. Qual leitura está correta?",
+      "options": [
+        "Nove reais e sessenta centavos.",
+        "Noventa e seis reais.",
+        "Seis reais e nove centavos.",
+        "Nove reais e seis centavos."
+      ],
+      "correctIndex": 3,
+      "explanation": "Os dois algarismos depois da vírgula representam os centavos: 06 são seis centavos.",
+      "sourceRef": {
+        "section": "Os números decimais e o real",
+        "pages": "172–177"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-026",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Lara pagou R$ 20,00 por um livro de R$ 13,75. Qual deve ser o troco?",
+      "options": [
+        "R$ 7,25",
+        "R$ 6,75",
+        "R$ 6,25",
+        "R$ 33,75"
+      ],
+      "correctIndex": 2,
+      "explanation": "20,00 − 13,75 = 6,25.",
+      "sourceRef": {
+        "section": "Preços, troco e situações-problema",
+        "pages": "182–185"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-027",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Um lápis custa R$ 2,80 e uma borracha R$ 1,65. Quanto custam juntos?",
+      "options": [
+        "R$ 3,45",
+        "R$ 4,45",
+        "R$ 4,35",
+        "R$ 1,15"
+      ],
+      "correctIndex": 1,
+      "explanation": "Somamos os preços: 2,80 + 1,65 = 4,45.",
+      "sourceRef": {
+        "section": "Preços, troco e situações-problema",
+        "pages": "182–185"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-028",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Um caderno custa R$ 8,40. Pedro tem R$ 5,75. Quanto falta?",
+      "options": [
+        "R$ 2,65",
+        "R$ 3,35",
+        "R$ 14,15",
+        "R$ 2,75"
+      ],
+      "correctIndex": 0,
+      "explanation": "Calculamos a diferença: 8,40 − 5,75 = 2,65.",
+      "sourceRef": {
+        "section": "Preços, troco e situações-problema",
+        "pages": "182–185"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-029",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual número fica entre 1,2 e 1,4 na reta numérica?",
+      "options": [
+        "1,5",
+        "1,1",
+        "1,3",
+        "2,3"
+      ],
+      "correctIndex": 2,
+      "explanation": "1,3 é maior que 1,2 e menor que 1,4.",
+      "sourceRef": {
+        "section": "Números decimais maiores que uma unidade",
+        "pages": "170–171"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-030",
+      "type": "multipleChoice",
+      "difficulty": "challenging",
+      "question": "Rafa comprou dois itens: R$ 6,20 e R$ 3,45. Pagou com R$ 10,00. Qual foi o troco?",
+      "options": [
+        "R$ 0,45",
+        "R$ 0,35",
+        "R$ 1,35",
+        "R$ 9,65"
+      ],
+      "correctIndex": 1,
+      "explanation": "Os itens custaram 9,65. De 10,00 retiramos 9,65 e restam 0,35.",
+      "sourceRef": {
+        "section": "Preços, troco e situações-problema",
+        "pages": "182–185"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-031",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Uma pesquisa perguntou quantos livros cada aluno leu. A variável é de que tipo?",
+      "options": [
+        "Categórica, como uma cor preferida.",
+        "Uma legenda sem dados.",
+        "Um título de gráfico.",
+        "Numérica."
+      ],
+      "correctIndex": 3,
+      "explanation": "A quantidade de livros é registrada por números.",
+      "sourceRef": {
+        "section": "Variáveis",
+        "pages": "188"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-032",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Qual pergunta coleta uma variável categórica?",
+      "options": [
+        "Qual é sua fruta preferida?",
+        "Quantos lápis há no estojo?",
+        "Quantos livros você leu?",
+        "Quantas pessoas vieram hoje?"
+      ],
+      "correctIndex": 0,
+      "explanation": "A fruta preferida identifica uma categoria; as outras perguntas pedem quantidades.",
+      "sourceRef": {
+        "section": "Variáveis",
+        "pages": "188"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-033",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Livros emprestados: segunda 12; terça 17; quarta 9. Em qual dia houve mais empréstimos?",
+      "options": [
+        "Segunda-feira.",
+        "Quarta-feira.",
+        "Terça-feira.",
+        "Nos três dias igualmente."
+      ],
+      "correctIndex": 2,
+      "explanation": "Comparando 12, 17 e 9, o maior número é 17, na terça-feira.",
+      "sourceRef": {
+        "section": "Tabelas",
+        "pages": "189"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-034",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Votos para uma atividade: desenho 8; leitura 6; jogo 11. Qual é o total de votos?",
+      "options": [
+        "25",
+        "19",
+        "22",
+        "14"
+      ],
+      "correctIndex": 0,
+      "explanation": "8 + 6 + 11 = 25 votos.",
+      "sourceRef": {
+        "section": "Tabelas",
+        "pages": "189"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-035",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Frutas escolhidas: maçã 14; banana 9; pera 7. Quantos votos a maçã recebeu a mais que a banana?",
+      "options": [
+        "23",
+        "7",
+        "4",
+        "5"
+      ],
+      "correctIndex": 3,
+      "explanation": "A diferença é 14 − 9 = 5 votos.",
+      "sourceRef": {
+        "section": "Tabelas",
+        "pages": "189"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-036",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Em uma tabela, a coluna “Turma” mostra A, B e C; a coluna “Livros” mostra 10, 15 e 12, nessa ordem. Quantos livros correspondem à turma B?",
+      "options": [
+        "10",
+        "15",
+        "12",
+        "37"
+      ],
+      "correctIndex": 1,
+      "explanation": "A segunda linha associa a turma B a 15 livros.",
+      "sourceRef": {
+        "section": "Tabelas",
+        "pages": "189"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-037",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Em um gráfico pictórico, cada estrela representa 4 livros. Uma categoria tem 3 estrelas. Quantos livros ela representa?",
+      "options": [
+        "7",
+        "12",
+        "3",
+        "4"
+      ],
+      "correctIndex": 1,
+      "explanation": "Multiplicamos a quantidade de símbolos pelo valor de cada um: 3 × 4 = 12.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-038",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Um gráfico usa cada desenho de bola para representar 5 votos. Quantas bolas inteiras representam 20 votos?",
+      "options": [
+        "5",
+        "15",
+        "25",
+        "4"
+      ],
+      "correctIndex": 3,
+      "explanation": "20 ÷ 5 = 4 desenhos de bola.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-039",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Uma barra chega à terceira marca acima do zero. As marcas são 0, 5, 10, 15 e 20. Qual valor a barra indica?",
+      "options": [
+        "15",
+        "3",
+        "10",
+        "20"
+      ],
+      "correctIndex": 0,
+      "explanation": "Contando as marcas acima do zero: primeira 5, segunda 10, terceira 15.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-040",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Dois gráficos usam estrelas: no primeiro cada estrela vale 2; no segundo vale 5. Por que três estrelas não significam o mesmo total nos dois?",
+      "options": [
+        "Porque três nunca é igual a três.",
+        "Porque símbolos não podem representar números.",
+        "Porque as legendas atribuem valores diferentes a cada estrela.",
+        "Porque o título sempre vale mais que os dados."
+      ],
+      "correctIndex": 2,
+      "explanation": "No primeiro, 3 × 2 = 6; no segundo, 3 × 5 = 15. É preciso ler a legenda.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-041",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "A tabela mostra: azul 6 votos, verde 10 e amarelo 4. Que alturas de barras representam esses dados, nessa ordem?",
+      "options": [
+        "10, 6 e 4",
+        "4, 10 e 6",
+        "6, 4 e 10",
+        "6, 10 e 4"
+      ],
+      "correctIndex": 3,
+      "explanation": "Cada barra deve preservar o valor da categoria correspondente.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-042",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Uma biblioteca registrou 6, 9 e 12 empréstimos em três dias seguidos. Que mudança ocorreu de um dia para o seguinte?",
+      "options": [
+        "Diminuiu 3 em cada passagem.",
+        "Ficou sempre em 9.",
+        "Aumentou 3 empréstimos em cada passagem.",
+        "Dobrou em todas as passagens."
+      ],
+      "correctIndex": 2,
+      "explanation": "9 − 6 = 3 e 12 − 9 = 3: houve aumento de três empréstimos por passagem.",
+      "sourceRef": {
+        "section": "Análise de dados e tendências",
+        "pages": "194–195"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-043",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Uma tabela mostra 18 visitantes na segunda e 12 na terça. Qual conclusão é sustentada pelos dados?",
+      "options": [
+        "Na quarta haverá exatamente 6 visitantes.",
+        "Houve 6 visitantes a menos na terça.",
+        "Todos os visitantes voltaram na terça.",
+        "A terça teve o dobro de visitantes."
+      ],
+      "correctIndex": 1,
+      "explanation": "18 − 12 = 6. Os dados não informam o futuro nem a identidade dos visitantes.",
+      "sourceRef": {
+        "section": "Análise de dados e tendências",
+        "pages": "194–195"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-044",
+      "type": "multipleChoice",
+      "difficulty": "easy",
+      "question": "Um gráfico tem desenhos, mas a legenda não informa quanto vale cada desenho. O que falta para calcular os totais com segurança?",
+      "options": [
+        "O valor representado por cada desenho.",
+        "A cor favorita de quem fez o gráfico.",
+        "O nome de todos os alunos.",
+        "A ordem alfabética dos títulos."
+      ],
+      "correctIndex": 0,
+      "explanation": "Sem o valor de cada símbolo, não é possível transformar a quantidade de desenhos em total.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-045",
+      "type": "multipleChoice",
+      "difficulty": "intermediate",
+      "question": "Uma tabela tem suco 13 votos e água 16 votos. Qual afirmação está correta?",
+      "options": [
+        "Suco recebeu 3 votos a mais que água.",
+        "Os dois receberam 29 votos cada.",
+        "Água recebeu 3 votos a mais que suco.",
+        "Água recebeu o dobro dos votos de suco."
+      ],
+      "correctIndex": 2,
+      "explanation": "16 − 13 = 3 votos a mais para água.",
+      "sourceRef": {
+        "section": "Tabelas",
+        "pages": "189"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-046",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Ligue as frações às leituras.",
+      "pairs": [
+        {
+          "left": "2/5",
+          "right": "Dois quintos"
+        },
+        {
+          "left": "4/7",
+          "right": "Quatro sétimos"
+        },
+        {
+          "left": "5/9",
+          "right": "Cinco nonos"
+        }
+      ],
+      "explanation": "O denominador dá o nome das partes; o numerador informa a quantidade.",
+      "sourceRef": {
+        "section": "Notação de uma fração",
+        "pages": "154–157"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-047",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Cada inteiro foi dividido em partes iguais. Ligue a descrição à fração correspondente.",
+      "pairs": [
+        {
+          "left": "3 de 10 partes",
+          "right": "3/10"
+        },
+        {
+          "left": "5 de 8 partes",
+          "right": "5/8"
+        },
+        {
+          "left": "2 de 6 partes",
+          "right": "2/6"
+        }
+      ],
+      "explanation": "A fração registra partes consideradas sobre o total de partes iguais.",
+      "sourceRef": {
+        "section": "Noções de fração",
+        "pages": "148–153"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-048",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Resolva e ligue cada soma de frações ao resultado.",
+      "pairs": [
+        {
+          "left": "1/6 + 3/6",
+          "right": "4/6"
+        },
+        {
+          "left": "2/9 + 5/9",
+          "right": "7/9"
+        },
+        {
+          "left": "3/10 + 2/10",
+          "right": "5/10"
+        }
+      ],
+      "explanation": "Com denominadores iguais, somamos os numeradores e conservamos o denominador.",
+      "sourceRef": {
+        "section": "Adição e subtração de frações",
+        "pages": "162–165"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-049",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Ligue cada subtração de frações ao resultado.",
+      "pairs": [
+        {
+          "left": "7/8 − 2/8",
+          "right": "5/8"
+        },
+        {
+          "left": "9/10 − 6/10",
+          "right": "3/10"
+        },
+        {
+          "left": "6/7 − 2/7",
+          "right": "4/7"
+        }
+      ],
+      "explanation": "Subtraímos os numeradores sem mudar o tamanho das partes.",
+      "sourceRef": {
+        "section": "Adição e subtração de frações",
+        "pages": "162–165"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-050",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Complete as comparações do mesmo inteiro com o sinal correto.",
+      "pairs": [
+        {
+          "left": "3/8 ___ 5/8",
+          "right": "<"
+        },
+        {
+          "left": "7/9 ___ 2/9",
+          "right": ">"
+        },
+        {
+          "left": "4/6 ___ 4/6",
+          "right": "="
+        }
+      ],
+      "explanation": "Com denominadores iguais, comparamos os numeradores; frações idênticas têm valores iguais.",
+      "sourceRef": {
+        "section": "Comparando frações",
+        "pages": "158–161"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-051",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Ligue cada fração decimal à sua escrita com vírgula.",
+      "pairs": [
+        {
+          "left": "9/10",
+          "right": "0,9"
+        },
+        {
+          "left": "9/100",
+          "right": "0,09"
+        },
+        {
+          "left": "47/100",
+          "right": "0,47"
+        }
+      ],
+      "explanation": "Décimos usam a primeira casa decimal; centésimos usam a segunda.",
+      "sourceRef": {
+        "section": "Números decimais",
+        "pages": "168–169"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-052",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Ligue cada decomposição ao número correspondente.",
+      "pairs": [
+        {
+          "left": "2 + 0,6 + 0,04",
+          "right": "2,64"
+        },
+        {
+          "left": "5 + 0,02",
+          "right": "5,02"
+        },
+        {
+          "left": "7 + 0,3",
+          "right": "7,3"
+        }
+      ],
+      "explanation": "Somamos a parte inteira aos décimos e centésimos indicados.",
+      "sourceRef": {
+        "section": "Números decimais maiores que uma unidade",
+        "pages": "170–171"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-053",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Relacione o valor em centavos à escrita em reais.",
+      "pairs": [
+        {
+          "left": "85 centavos",
+          "right": "R$ 0,85"
+        },
+        {
+          "left": "150 centavos",
+          "right": "R$ 1,50"
+        },
+        {
+          "left": "205 centavos",
+          "right": "R$ 2,05"
+        }
+      ],
+      "explanation": "Cem centavos formam um real; os dois algarismos finais indicam centavos.",
+      "sourceRef": {
+        "section": "Os números decimais e o real",
+        "pages": "172–177"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-054",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Calcule e relacione cada operação decimal.",
+      "pairs": [
+        {
+          "left": "2,50 + 1,25",
+          "right": "3,75"
+        },
+        {
+          "left": "6,40 − 2,10",
+          "right": "4,30"
+        },
+        {
+          "left": "0,65 + 0,25",
+          "right": "0,90"
+        }
+      ],
+      "explanation": "Alinhamos as casas decimais antes de somar ou subtrair.",
+      "sourceRef": {
+        "section": "Cálculos e comparação de valores",
+        "pages": "178–181"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-055",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Todos pagaram com R$ 10,00. Ligue o preço ao troco correto.",
+      "pairs": [
+        {
+          "left": "Preço de R$ 6,70",
+          "right": "Troco de R$ 3,30"
+        },
+        {
+          "left": "Preço de R$ 8,25",
+          "right": "Troco de R$ 1,75"
+        },
+        {
+          "left": "Preço de R$ 4,90",
+          "right": "Troco de R$ 5,10"
+        }
+      ],
+      "explanation": "Em cada compra, troco = 10,00 − preço.",
+      "sourceRef": {
+        "section": "Preços, troco e situações-problema",
+        "pages": "182–185"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-056",
+      "type": "matchColumns",
+      "difficulty": "easy",
+      "question": "Na tabela: turma A, 8 livros; turma B, 13 livros; turma C, 10 livros. Relacione.",
+      "pairs": [
+        {
+          "left": "Turma A",
+          "right": "8 livros"
+        },
+        {
+          "left": "Turma B",
+          "right": "13 livros"
+        },
+        {
+          "left": "Turma C",
+          "right": "10 livros"
+        }
+      ],
+      "explanation": "Cada linha associa uma turma à quantidade correspondente.",
+      "sourceRef": {
+        "section": "Tabelas",
+        "pages": "189"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-057",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Cada quadrado de um gráfico vale 3 votos. Ligue a quantidade de quadrados ao total.",
+      "pairs": [
+        {
+          "left": "2 quadrados",
+          "right": "6 votos"
+        },
+        {
+          "left": "4 quadrados",
+          "right": "12 votos"
+        },
+        {
+          "left": "5 quadrados",
+          "right": "15 votos"
+        }
+      ],
+      "explanation": "Multiplicamos o número de quadrados por 3, conforme a legenda.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-058",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Ligue cada elemento de um gráfico à sua função.",
+      "pairs": [
+        {
+          "left": "Título",
+          "right": "Apresenta o assunto"
+        },
+        {
+          "left": "Escala",
+          "right": "Mostra os valores usados para medir as barras"
+        },
+        {
+          "left": "Legenda pictórica",
+          "right": "Informa o valor de cada desenho"
+        }
+      ],
+      "explanation": "Título, escala e legenda ajudam a interpretar o gráfico corretamente.",
+      "sourceRef": {
+        "section": "Gráficos de barras e pictóricos",
+        "pages": "190–193"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-059",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Na pesquisa: bicicleta 12 votos, caminhada 8 e patins 5. Relacione cada cálculo ao resultado.",
+      "pairs": [
+        {
+          "left": "Total das três opções",
+          "right": "25 votos"
+        },
+        {
+          "left": "Diferença entre bicicleta e caminhada",
+          "right": "4 votos"
+        },
+        {
+          "left": "Caminhada e patins juntos",
+          "right": "13 votos"
+        }
+      ],
+      "explanation": "12 + 8 + 5 = 25; 12 − 8 = 4; 8 + 5 = 13.",
+      "sourceRef": {
+        "section": "Tabelas",
+        "pages": "189"
+      }
+    },
+    {
+      "id": "matematica-intensivao-novembro-2026-060",
+      "type": "matchColumns",
+      "difficulty": "intermediate",
+      "question": "Compare as duas contagens de cada registro e ligue à mudança.",
+      "pairs": [
+        {
+          "left": "Passou de 5 para 9",
+          "right": "Aumento de 4"
+        },
+        {
+          "left": "Passou de 12 para 7",
+          "right": "Diminuição de 5"
+        },
+        {
+          "left": "Passou de 8 para 8",
+          "right": "Sem mudança"
+        }
+      ],
+      "explanation": "A diferença entre as contagens mostra aumento, diminuição ou estabilidade.",
+      "sourceRef": {
+        "section": "Análise de dados e tendências",
+        "pages": "194–195"
+      }
+    }
+  ]
+}

@@ -1,3 +1,5 @@
+import { e2eStudyRepository } from './e2eStudyRepository'
+
 const HOMEWORK_STORAGE_KEY = 'patito_e2e_homework'
 
 function loadHomework() {
@@ -42,6 +44,6 @@ export const e2eHomeworkRepository = {
   },
 }
 
-export const e2eProgressRepository = { configured: false }
+export const e2eProgressRepository = { configured: true, list: e2eStudyRepository.listProgress }
 export const e2eSchoolEventsRepository = { list: async () => [] }
 export const e2eProblemReportRepository = { submit: async () => ({ accepted: true }) }

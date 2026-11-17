@@ -2,6 +2,10 @@
 
 Status: em implementação contínua. Itens com `✅` possuem evidência no código e nos testes; bloqueios externos permanecem explícitos.
 
+## F012 — Intensivão de novembro
+
+- `TASK-068` ✅ Implementado e validado localmente, publicação em andamento: criar e revisar 180 questões novas de Matemática, Ciências e História; publicar duas rodadas de 30 por matéria dentro do material existente, com progresso e retomada isolados. Áreas: pipeline editorial, dados, TopicTrail, ContentReview, testes e relatórios. Aceite: bancos auditáveis, rodadas sem sobreposição, jornada de retomada/conclusão, gates verdes. Depende de F003/F009/F010; sem migração ou exclusão de histórico.
+
 ## F000 — Engineering Harness
 
 - `TASK-001` ✅ Adicionar type checking para JavaScript/React e script `typecheck`.

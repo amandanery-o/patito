@@ -1,5 +1,7 @@
 # Mapa de features
 
+- [F012 — Intensivão de novembro](F012-intensivao-novembro.md): questões novas para as três provas restantes, no cartão existente.
+
 | Prioridade | Feature                                       | Resultado esperado                                                   | Dependências |
 | ---------- | --------------------------------------------- | -------------------------------------------------------------------- | ------------ |
 | 0          | `F000` Engineering Harness                    | Mudanças verificáveis e rastreáveis                                  | —            |

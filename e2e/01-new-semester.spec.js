@@ -8,7 +8,9 @@ test.describe('Estrutura limpa do segundo semestre', () => {
   })
 
   test('mostra as sete matérias regulares e separa as que estão em preparação', async ({ page }) => {
-    await expect(page.getByRole('heading', { name: 'Em breve' })).toBeVisible()
+    await expect(page.getByText('Matérias em preparação (1)', { exact: true })).toBeVisible()
+    await expect(page.getByText('Ens. Religioso', { exact: true })).not.toBeVisible()
+    await page.getByText('Matérias em preparação (1)', { exact: true }).click()
     for (const subject of [
       'Português',
       'Matemática',
@@ -18,7 +20,11 @@ test.describe('Estrutura limpa do segundo semestre', () => {
       'História',
       'Ens. Religioso',
     ]) {
-      await expect(page.getByText(subject, { exact: true }).first()).toBeVisible()
+      const area =
+        subject === 'Ens. Religioso'
+          ? page.locator('details').filter({ hasText: 'Matérias em preparação' })
+          : page.getByRole('region', { name: 'Estude uma matéria' })
+      await expect(area.getByText(subject, { exact: true })).toBeVisible()
     }
   })
 
@@ -28,8 +34,8 @@ test.describe('Estrutura limpa do segundo semestre', () => {
 
   test('publica as revisões aprovadas de Geografia', async ({ page }) => {
     const geographyCard = page.getByTestId('subject-geografia')
-    await expect(geographyCard.getByText('0 de 2 revisões concluídas', { exact: true })).toBeVisible()
-    await geographyCard.getByRole('button', { name: /Ver materiais/i }).click()
+    await expect(geographyCard).toHaveAccessibleName(/0 de 2 revisões concluídas/)
+    await geographyCard.click()
     await expect(page.getByRole('heading', { name: 'Material de revisão' })).toBeVisible()
     await expect(page.getByRole('button', { name: /Ler material da Revisão P1/i })).toBeVisible()
     await expect(page.getByRole('button', { name: /Praticar Revisão P1/i })).toBeVisible()
@@ -42,20 +48,14 @@ test.describe('Estrutura limpa do segundo semestre', () => {
   })
 
   test('inicia uma sessão de 30 questões da prova de novembro de Geografia', async ({ page }) => {
-    await page
-      .getByTestId('subject-geografia')
-      .getByRole('button', { name: /Ver materiais/i })
-      .click()
+    await page.getByTestId('subject-geografia').click()
     await page.getByRole('button', { name: /Praticar Prova de novembro — Geografia/i }).click()
     await expect(page.getByText('Prova de novembro — Geografia', { exact: true })).toBeVisible()
     await expect(page.getByText('1/30 questões', { exact: true })).toBeVisible()
   })
 
   test('inicia uma sessão de 30 questões da P1 de Geografia', async ({ page }) => {
-    await page
-      .getByTestId('subject-geografia')
-      .getByRole('button', { name: /Ver materiais/i })
-      .click()
+    await page.getByTestId('subject-geografia').click()
     await page.getByRole('button', { name: /Praticar Revisão P1 — Espaços rural e urbano/i }).click()
     await expect(page.getByText('Revisão P1 — Espaços rural e urbano', { exact: true })).toBeVisible()
     await expect(page.getByText('1/30 questões', { exact: true })).toBeVisible()
@@ -63,8 +63,8 @@ test.describe('Estrutura limpa do segundo semestre', () => {
 
   test('publica T2, P1 e novembro de Matemática com leitura e prática', async ({ page }) => {
     const mathematicsCard = page.getByTestId('subject-matematica')
-    await expect(mathematicsCard.getByText('0 de 3 revisões concluídas', { exact: true })).toBeVisible()
-    await mathematicsCard.getByRole('button', { name: /Ver materiais/i }).click()
+    await expect(mathematicsCard).toHaveAccessibleName(/0 de 3 revisões concluídas/)
+    await mathematicsCard.click()
     await expect(page.getByText('T2', { exact: true })).toBeVisible()
     await expect(page.getByText('P1', { exact: true })).toBeVisible()
     await page.getByRole('button', { name: 'Ler material da Revisão T2 — Grandezas e medidas' }).click()
@@ -75,10 +75,7 @@ test.describe('Estrutura limpa do segundo semestre', () => {
   })
 
   test('inicia Matemática de novembro após ler o material', async ({ page }) => {
-    await page
-      .getByTestId('subject-matematica')
-      .getByRole('button', { name: /Ver materiais/i })
-      .click()
+    await page.getByTestId('subject-matematica').click()
     await page.getByRole('button', { name: 'Ler material da Prova de novembro — Matemática' }).click()
     await expect(page.getByRole('heading', { name: 'Frações e partes iguais' })).toBeVisible()
     await page.getByRole('button', { name: 'Praticar 30 questões' }).click()
@@ -88,8 +85,8 @@ test.describe('Estrutura limpa do segundo semestre', () => {
 
   test('publica Ciências P1 com leitura e prática separadas', async ({ page }) => {
     const scienceCard = page.getByTestId('subject-ciencias')
-    await expect(scienceCard.getByText('0 de 2 revisões concluídas', { exact: true })).toBeVisible()
-    await scienceCard.getByRole('button', { name: /Ver materiais/i }).click()
+    await expect(scienceCard).toHaveAccessibleName(/0 de 2 revisões concluídas/)
+    await scienceCard.click()
     await page.getByRole('button', { name: 'Ler material da Revisão P1 — Transformações dos materiais' }).click()
     await expect(page.getByRole('heading', { name: 'Transformações físicas e químicas' })).toBeVisible()
     await page.getByRole('button', { name: 'Praticar 30 questões' }).click()
@@ -99,8 +96,8 @@ test.describe('Estrutura limpa do segundo semestre', () => {
 
   test('publica Inglês P1 com leitura e prática separadas', async ({ page }) => {
     const englishCard = page.getByTestId('subject-ingles')
-    await expect(englishCard.getByText('0 de 2 revisões concluídas', { exact: true })).toBeVisible()
-    await englishCard.getByRole('button', { name: /Ver materiais/i }).click()
+    await expect(englishCard).toHaveAccessibleName(/0 de 2 revisões concluídas/)
+    await englishCard.click()
     await page.getByRole('button', { name: 'Ler material da Revisão P1 — Ações e horas' }).click()
     await expect(page.getByRole('heading', { name: 'O que alguém está fazendo?' })).toBeVisible()
     await page.getByRole('button', { name: 'Praticar 30 questões' }).click()
@@ -110,8 +107,8 @@ test.describe('Estrutura limpa do segundo semestre', () => {
 
   test('publica Português P1 com leitura e prática separadas', async ({ page }) => {
     const portugueseCard = page.getByTestId('subject-portugues')
-    await expect(portugueseCard.getByText('0 de 2 revisões concluídas', { exact: true })).toBeVisible()
-    await portugueseCard.getByRole('button', { name: /Ver materiais/i }).click()
+    await expect(portugueseCard).toHaveAccessibleName(/0 de 2 revisões concluídas/)
+    await portugueseCard.click()
     await page.getByRole('button', { name: 'Ler material da Revisão P1 — Leitura e língua em uso' }).click()
     await expect(page.getByRole('heading', { name: 'Ler e encontrar pistas' })).toBeVisible()
     await page.getByRole('button', { name: 'Praticar 30 questões' }).click()
@@ -121,8 +118,8 @@ test.describe('Estrutura limpa do segundo semestre', () => {
 
   test('publica História P1 com leitura e prática separadas', async ({ page }) => {
     const historyCard = page.getByTestId('subject-historia')
-    await expect(historyCard.getByText('0 de 2 revisões concluídas', { exact: true })).toBeVisible()
-    await historyCard.getByRole('button', { name: /Ver materiais/i }).click()
+    await expect(historyCard).toHaveAccessibleName(/0 de 2 revisões concluídas/)
+    await historyCard.click()
     await page
       .getByRole('button', { name: 'Ler material da Revisão P1 — Colonização e migrações para o Brasil' })
       .click()
@@ -145,7 +142,7 @@ test.describe('Estrutura limpa do segundo semestre', () => {
 
     for (const [subjectId, title, date, section] of reviews) {
       const subjectCard = page.getByTestId(`subject-${subjectId}`)
-      await subjectCard.getByRole('button', { name: /Ver materiais/i }).click()
+      await subjectCard.click()
       await expect(page.getByText('NOVEMBRO', { exact: true })).toBeVisible()
       await expect(page.getByText(`Prova em ${date}`, { exact: true })).toBeVisible()
       await page.getByRole('button', { name: `Ler material da ${title}` }).click()

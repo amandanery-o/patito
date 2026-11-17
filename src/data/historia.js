@@ -1,5 +1,6 @@
 import historyP1Content from './generated/historiaP1Content.json'
 import historyNovemberContent from './generated/historiaNovembroContent.json'
+import historyIntensive from './generated/historiaIntensivaoNovembroContent.json'
 
 export const HISTORY_TOPICS = [
   ...(historyP1Content.status === 'approved'
@@ -67,6 +68,7 @@ export const HISTORY_TOPICS = [
           keyIdeas: historyNovemberContent.keyIdeas,
           source: historyNovemberContent.source,
           questions: historyNovemberContent.questions,
+          intensive: historyIntensive,
         },
       ]
     : [

@@ -37,6 +37,29 @@ const novemberReview = {
 }
 
 describe('TopicTrail', () => {
+  it('mantém o intensivão no cartão e distingue progresso das rodadas e da revisão', () => {
+    const onStart = vi.fn()
+    const topic = {
+      ...novemberReview,
+      intensive: { status: 'approved', contentId: 'intensive', title: 'Intensivão', questions: review.questions },
+    }
+    render(
+      <TopicTrail
+        subject={{ id: 'geografia' }}
+        topics={[topic]}
+        getTopicProgress={(_, id) => ({ completed: id === 'intensive-rodada-1' })}
+        onStart={onStart}
+        onReview={() => {}}
+      />,
+    )
+    expect(screen.getAllByRole('article')).toHaveLength(1)
+    expect(screen.getAllByText('✓ Concluída · refazer')).toHaveLength(1)
+    expect(screen.getByRole('button', { name: /Ler material/ })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /^Praticar / })).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: /Intensivão.*rodada 2/ }))
+    expect(onStart.mock.calls[0][0].id).toBe('intensive-rodada-2')
+    expect(onStart.mock.calls[0][0].questions).toHaveLength(30)
+  })
   it('separa leitura e prática sem repetir capítulos cobertos', () => {
     const onStart = vi.fn()
     const onReview = vi.fn()

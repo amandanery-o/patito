@@ -1,3 +1,5 @@
+import IntensivePractice from './IntensivePractice'
+
 function chapterNumbers(value) {
   return (
     String(value || '')
@@ -105,6 +107,11 @@ export default function TopicTrail({ subject, topics, getTopicProgress, onStart,
                     Praticar 30 questões
                   </button>
                 </div>
+                <IntensivePractice
+                  topic={topic}
+                  onStart={onStart}
+                  isCompleted={(id) => getTopicProgress(subject.id, id).completed}
+                />
               </article>
             )
           })}

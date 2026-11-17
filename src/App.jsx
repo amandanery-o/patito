@@ -278,6 +278,8 @@ function AppInner({ updateProfileName, signOut, session, profile }) {
         topic={selectedTopic}
         onBack={() => setView(VIEWS.SUBJECT)}
         onStart={() => startSession(selectedSubject, selectedTopic)}
+        onIntensiveStart={(topic) => startSession(selectedSubject, topic)}
+        isCompleted={(id) => getTopicProgress(selectedSubject.id, id).completed}
       />
     )
   }

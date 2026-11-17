@@ -1,5 +1,6 @@
 import mathematicsP1Content from './generated/matematicaP1Content.json'
 import mathematicsP2Content from './generated/matematicaP2Content.json'
+import mathematicsIntensive from './generated/matematicaIntensivaoNovembroContent.json'
 import mathematicsT2Content from './generated/matematicaT2Content.json'
 
 export const MATHEMATICS_TOPICS = [
@@ -138,6 +139,7 @@ export const MATHEMATICS_TOPICS = [
             'Título, escala, legenda e fonte ajudam a interpretar gráficos corretamente.',
           ],
           questions: mathematicsP2Content.questions,
+          intensive: mathematicsIntensive,
         },
       ]
     : []),

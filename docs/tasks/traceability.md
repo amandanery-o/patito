@@ -1,5 +1,9 @@
 # Matriz de rastreabilidade
 
+| Requisito | Feature | Task     | Cobertura de aceite                                                         | Status                                                 |
+| --------- | ------- | -------- | --------------------------------------------------------------------------- | ------------------------------------------------------ |
+| REQ-079   | F012    | TASK-068 | Bancos editoriais, rodadas sem sobreposição, UI e E2E de retomada/conclusão | 155 testes e 19 E2E aprovados; publicação em andamento |
+
 | Requisitos                          | Feature          | Tasks                               | Cobertura de aceite                                                                                     | Status                                                                                                                                                                                            |
 | ----------------------------------- | ---------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | REQ-001–004, 006, 008–009           | F001, F003, F004 | TASK-005–009, 016–024               | Unitários, PostgreSQL e E2E                                                                             | Fluxos prontos; conteúdos restantes aguardam fontes                                                                                                                                               |

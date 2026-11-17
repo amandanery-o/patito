@@ -123,6 +123,7 @@ Não existirão perfis de responsável, professor, coordenador ou administrador 
 - `REQ-076` Organizar os materiais de avaliação de novembro por matéria, usando o rótulo “Prova de novembro” nas chamadas de estudo sem depender de P2/P3.
 - `REQ-077` Dar destaque às provas do mês vigente na tela inicial, com datas e acesso direto às revisões publicadas.
 - `REQ-078` Depois do calendário de aulas do dia, organizar o restante da tela inicial em blocos compactos e sem alertas duplicados: próximo compromisso, matérias para estudar e matérias em preparação recolhidas.
+- `REQ-079` Oferecer um intensivão para Matemática, Ciências e História em novembro, com 60 questões novas por matéria, revisão independente e duas rodadas de 30 sem sobreposição dentro do cartão da prova. Preservar os bancos e o progresso anteriores; cada rodada tem retomada e conclusão próprias.
 
 ### Erros e suporte
 

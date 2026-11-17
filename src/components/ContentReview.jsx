@@ -1,6 +1,7 @@
 import Mascot from './Mascot'
+import IntensivePractice from './IntensivePractice'
 
-export default function ContentReview({ topic, onBack, onStart }) {
+export default function ContentReview({ topic, onBack, onStart, onIntensiveStart, isCompleted }) {
   const hasQuestions = topic.questions.length > 0
 
   return (
@@ -56,6 +57,7 @@ export default function ContentReview({ topic, onBack, onStart }) {
             As questões deste capítulo estão sendo preparadas. 🐥
           </div>
         )}
+        {onIntensiveStart && <IntensivePractice topic={topic} onStart={onIntensiveStart} isCompleted={isCompleted} />}
       </main>
     </div>
   )

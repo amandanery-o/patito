@@ -1,5 +1,6 @@
 import scienceP1Content from './generated/cienciasP1Content.json'
 import scienceNovemberContent from './generated/cienciasNovembroContent.json'
+import scienceIntensive from './generated/cienciasIntensivaoNovembroContent.json'
 
 export const SCIENCE_TOPICS = [
   ...(scienceP1Content.status === 'approved'
@@ -63,6 +64,7 @@ export const SCIENCE_TOPICS = [
           keyIdeas: scienceNovemberContent.keyIdeas,
           source: scienceNovemberContent.source,
           questions: scienceNovemberContent.questions,
+          intensive: scienceIntensive,
         },
       ]
     : [

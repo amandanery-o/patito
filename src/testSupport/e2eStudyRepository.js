@@ -13,6 +13,25 @@ function nextVersion(session) {
 }
 
 export const e2eStudyRepository = {
+  async listProgress(userId) {
+    const rows = new Map()
+    for (const session of load().sessions) {
+      if (session.user_id !== userId || session.status !== 'completed') continue
+      const row = rows.get(session.content_id) || {
+        subject_id: session.subject_id,
+        content_id: session.content_id,
+        sessions_completed: 0,
+        questions_answered: 0,
+        last_studied_at: null,
+      }
+      row.sessions_completed += 1
+      row.questions_answered += session.current_index
+      row.last_studied_at = session.completed_at
+      rows.set(session.content_id, row)
+    }
+    return [...rows.values()]
+  },
+
   async findOpenSession(contentId) {
     return load().sessions.find((session) => session.content_id === contentId && session.status !== 'completed') || null
   },
