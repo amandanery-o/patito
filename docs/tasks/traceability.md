@@ -1,8 +1,8 @@
 # Matriz de rastreabilidade
 
-| Requisito | Feature | Task     | Cobertura de aceite                                                         | Status                                                 |
-| --------- | ------- | -------- | --------------------------------------------------------------------------- | ------------------------------------------------------ |
-| REQ-079   | F012    | TASK-068 | Bancos editoriais, rodadas sem sobreposição, UI e E2E de retomada/conclusão | 155 testes e 19 E2E aprovados; publicação em andamento |
+| Requisito | Feature | Task     | Cobertura de aceite                                                         | Status                                                                                             |
+| --------- | ------- | -------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| REQ-079   | F012    | TASK-068 | Bancos editoriais, rodadas sem sobreposição, UI e E2E de retomada/conclusão | Publicado em 17/11/2026; 155 testes e 19 E2E aprovados; 180 questões conferidas no domínio público |
 
 | Requisitos                          | Feature          | Tasks                               | Cobertura de aceite                                                                                     | Status                                                                                                                                                                                            |
 | ----------------------------------- | ---------------- | ----------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

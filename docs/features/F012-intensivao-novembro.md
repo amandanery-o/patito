@@ -2,7 +2,7 @@
 
 ## Estado e requisitos
 
-Implementado e validado localmente em 17/11/2026; publicação em andamento. `REQ-079` → `TASK-068`. A mantenedora confirmou que Matemática ainda não aconteceu e deve entrar no intensivão.
+Publicado em produção em 17/11/2026, no commit de implementação `bb61393`. As 180 questões e os três hashes de aprovação foram conferidos no bundle servido por https://patito-mauve.vercel.app. `REQ-079` → `TASK-068`. A mantenedora confirmou que Matemática ainda não aconteceu e deve entrar no intensivão.
 
 ## Resultado e escopo
 

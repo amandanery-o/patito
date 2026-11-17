@@ -4,6 +4,8 @@ O Patito está publicado em produção. Os itens abaixo dependem de decisão edi
 
 ## Concluído
 
+- Intensivão de Matemática, Ciências e História publicado em 17/11/2026: 180 questões novas aprovadas, duas rodadas de 30 por matéria e progresso separado. Domínio público conferido; 155 testes e 19 E2E aprovados localmente.
+
 - Projeto Supabase remoto criado, schema aplicado e RLS validado.
 - Calendário oficial com 27 eventos publicado.
 - Geografia P1 aprovada e publicada; a revisão antiga de capítulos 11 e 12 foi retirada da experiência ativa após o comunicado de 30/10. A revisão de novembro usa capítulos 10 e 11 e mostra a data de 16/11 do cronograma escolar, confirmada pela mantenedora em 11/11.
